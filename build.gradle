@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+jar.baseName = 'com.strongdm.api'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+        }
+    }
+}
+
+repositories {
+    maven { // The google mirror is less flaky than mavenCentral()
+        url "https://maven-central.storage-download.googleapis.com/repos/central/data/" }
+    mavenCentral()
+    mavenLocal()
+}
+
+def grpcVersion = '1.25.0'
+def protobufVersion = '3.10.0'
+def protocVersion = protobufVersion
+
+dependencies {
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
+    compileOnly "javax.annotation:javax.annotation-api:1.2"
+    runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+version = '1.0'
