@@ -8,6 +8,8 @@ import com.strongdm.api.v1.plumbing.Spec.*;
 
 import com.strongdm.api.v1.plumbing.NodesPlumbing.*;
 
+import com.strongdm.api.v1.plumbing.RolesPlumbing.*;
+
 public class Plumbing {
 
     public static com.strongdm.api.v1.CreateResponseMetadata createResponseMetadataToPorcelain(CreateResponseMetadata plumbing) {
@@ -118,69 +120,11 @@ public class Plumbing {
             .collect(Collectors.toList());
     }
 
-    public static com.strongdm.api.v1.BatchUpdateResponseMetadata batchUpdateResponseMetadataToPorcelain(BatchUpdateResponseMetadata plumbing) {
-        com.strongdm.api.v1.BatchUpdateResponseMetadata porcelain = new com.strongdm.api.v1.BatchUpdateResponseMetadata();
-        porcelain.setFound(plumbing.getFound());
-        porcelain.setAffected(plumbing.getAffected());
-        return porcelain;
-    }
-
-    public static BatchUpdateResponseMetadata batchUpdateResponseMetadataToPlumbing(com.strongdm.api.v1.BatchUpdateResponseMetadata porcelain) {
-        if (porcelain == null) {
-            return null;
-        }
-        BatchUpdateResponseMetadata.Builder builder = BatchUpdateResponseMetadata.newBuilder();
-        builder.setFound(porcelain.getFound());
-        builder.setAffected(porcelain.getAffected());
-        return builder.build();
-    }
-
-    public static List<com.strongdm.api.v1.BatchUpdateResponseMetadata> repeatedBatchUpdateResponseMetadataToPorcelain(Collection<BatchUpdateResponseMetadata> plumbings) {
-        return plumbings.stream()
-            .map(plumbing -> batchUpdateResponseMetadataToPorcelain(plumbing))
-            .collect(Collectors.toList());
-    }
-
-    public static List<BatchUpdateResponseMetadata> repeatedBatchUpdateResponseMetadataToPlumbing(Collection<com.strongdm.api.v1.BatchUpdateResponseMetadata> porcelains) {
-        return porcelains.stream()
-            .map(porcelain -> batchUpdateResponseMetadataToPlumbing(porcelain))
-            .collect(Collectors.toList());
-    }
-
-    public static com.strongdm.api.v1.BatchDeleteResponseMetadata batchDeleteResponseMetadataToPorcelain(BatchDeleteResponseMetadata plumbing) {
-        com.strongdm.api.v1.BatchDeleteResponseMetadata porcelain = new com.strongdm.api.v1.BatchDeleteResponseMetadata();
-        porcelain.setFound(plumbing.getFound());
-        porcelain.setAffected(plumbing.getAffected());
-        return porcelain;
-    }
-
-    public static BatchDeleteResponseMetadata batchDeleteResponseMetadataToPlumbing(com.strongdm.api.v1.BatchDeleteResponseMetadata porcelain) {
-        if (porcelain == null) {
-            return null;
-        }
-        BatchDeleteResponseMetadata.Builder builder = BatchDeleteResponseMetadata.newBuilder();
-        builder.setFound(porcelain.getFound());
-        builder.setAffected(porcelain.getAffected());
-        return builder.build();
-    }
-
-    public static List<com.strongdm.api.v1.BatchDeleteResponseMetadata> repeatedBatchDeleteResponseMetadataToPorcelain(Collection<BatchDeleteResponseMetadata> plumbings) {
-        return plumbings.stream()
-            .map(plumbing -> batchDeleteResponseMetadataToPorcelain(plumbing))
-            .collect(Collectors.toList());
-    }
-
-    public static List<BatchDeleteResponseMetadata> repeatedBatchDeleteResponseMetadataToPlumbing(Collection<com.strongdm.api.v1.BatchDeleteResponseMetadata> porcelains) {
-        return porcelains.stream()
-            .map(porcelain -> batchDeleteResponseMetadataToPlumbing(porcelain))
-            .collect(Collectors.toList());
-    }
-
     public static com.strongdm.api.v1.NodeCreateResponse nodeCreateResponseToPorcelain(NodeCreateResponse plumbing) {
         com.strongdm.api.v1.NodeCreateResponse porcelain = new com.strongdm.api.v1.NodeCreateResponse();
         porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-        porcelain.setNodes(Plumbing.repeatedNodeToPorcelain(plumbing.getNodesList()));
-        porcelain.setTokens(Plumbing.repeatedTokenToPorcelain(plumbing.getTokensList()));
+        porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
+        porcelain.setToken(Plumbing.tokenToPorcelain(plumbing.getToken()));
         return porcelain;
     }
 
@@ -192,8 +136,12 @@ public class Plumbing {
         if (porcelain.getMeta() != null) {
             builder.setMeta(Plumbing.createResponseMetadataToPlumbing(porcelain.getMeta()));
         }
-        builder.addAllNodes(Plumbing.repeatedNodeToPlumbing(porcelain.getNodes()));
-        builder.addAllTokens(Plumbing.repeatedTokenToPlumbing(porcelain.getTokens()));
+        if (porcelain.getNode() != null) {
+            builder.setNode(Plumbing.nodeToPlumbing(porcelain.getNode()));
+        }
+        if (porcelain.getToken() != null) {
+            builder.setToken(Plumbing.tokenToPlumbing(porcelain.getToken()));
+        }
         return builder.build();
     }
 
@@ -301,91 +249,6 @@ public class Plumbing {
     public static List<NodeDeleteResponse> repeatedNodeDeleteResponseToPlumbing(Collection<com.strongdm.api.v1.NodeDeleteResponse> porcelains) {
         return porcelains.stream()
             .map(porcelain -> nodeDeleteResponseToPlumbing(porcelain))
-            .collect(Collectors.toList());
-    }
-
-    public static com.strongdm.api.v1.NodeListResponse nodeListResponseToPorcelain(NodeListResponse plumbing) {
-        com.strongdm.api.v1.NodeListResponse porcelain = new com.strongdm.api.v1.NodeListResponse();
-        return porcelain;
-    }
-
-    public static NodeListResponse nodeListResponseToPlumbing(com.strongdm.api.v1.NodeListResponse porcelain) {
-        if (porcelain == null) {
-            return null;
-        }
-        NodeListResponse.Builder builder = NodeListResponse.newBuilder();
-        return builder.build();
-    }
-
-    public static List<com.strongdm.api.v1.NodeListResponse> repeatedNodeListResponseToPorcelain(Collection<NodeListResponse> plumbings) {
-        return plumbings.stream()
-            .map(plumbing -> nodeListResponseToPorcelain(plumbing))
-            .collect(Collectors.toList());
-    }
-
-    public static List<NodeListResponse> repeatedNodeListResponseToPlumbing(Collection<com.strongdm.api.v1.NodeListResponse> porcelains) {
-        return porcelains.stream()
-            .map(porcelain -> nodeListResponseToPlumbing(porcelain))
-            .collect(Collectors.toList());
-    }
-
-    public static com.strongdm.api.v1.NodeBatchUpdateResponse nodeBatchUpdateResponseToPorcelain(NodeBatchUpdateResponse plumbing) {
-        com.strongdm.api.v1.NodeBatchUpdateResponse porcelain = new com.strongdm.api.v1.NodeBatchUpdateResponse();
-        porcelain.setMeta(Plumbing.batchUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
-        porcelain.setNodes(Plumbing.repeatedNodeToPorcelain(plumbing.getNodesList()));
-        return porcelain;
-    }
-
-    public static NodeBatchUpdateResponse nodeBatchUpdateResponseToPlumbing(com.strongdm.api.v1.NodeBatchUpdateResponse porcelain) {
-        if (porcelain == null) {
-            return null;
-        }
-        NodeBatchUpdateResponse.Builder builder = NodeBatchUpdateResponse.newBuilder();
-        if (porcelain.getMeta() != null) {
-            builder.setMeta(Plumbing.batchUpdateResponseMetadataToPlumbing(porcelain.getMeta()));
-        }
-        builder.addAllNodes(Plumbing.repeatedNodeToPlumbing(porcelain.getNodes()));
-        return builder.build();
-    }
-
-    public static List<com.strongdm.api.v1.NodeBatchUpdateResponse> repeatedNodeBatchUpdateResponseToPorcelain(Collection<NodeBatchUpdateResponse> plumbings) {
-        return plumbings.stream()
-            .map(plumbing -> nodeBatchUpdateResponseToPorcelain(plumbing))
-            .collect(Collectors.toList());
-    }
-
-    public static List<NodeBatchUpdateResponse> repeatedNodeBatchUpdateResponseToPlumbing(Collection<com.strongdm.api.v1.NodeBatchUpdateResponse> porcelains) {
-        return porcelains.stream()
-            .map(porcelain -> nodeBatchUpdateResponseToPlumbing(porcelain))
-            .collect(Collectors.toList());
-    }
-
-    public static com.strongdm.api.v1.NodeBatchDeleteResponse nodeBatchDeleteResponseToPorcelain(NodeBatchDeleteResponse plumbing) {
-        com.strongdm.api.v1.NodeBatchDeleteResponse porcelain = new com.strongdm.api.v1.NodeBatchDeleteResponse();
-        porcelain.setMeta(Plumbing.batchDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
-        return porcelain;
-    }
-
-    public static NodeBatchDeleteResponse nodeBatchDeleteResponseToPlumbing(com.strongdm.api.v1.NodeBatchDeleteResponse porcelain) {
-        if (porcelain == null) {
-            return null;
-        }
-        NodeBatchDeleteResponse.Builder builder = NodeBatchDeleteResponse.newBuilder();
-        if (porcelain.getMeta() != null) {
-            builder.setMeta(Plumbing.batchDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
-        }
-        return builder.build();
-    }
-
-    public static List<com.strongdm.api.v1.NodeBatchDeleteResponse> repeatedNodeBatchDeleteResponseToPorcelain(Collection<NodeBatchDeleteResponse> plumbings) {
-        return plumbings.stream()
-            .map(plumbing -> nodeBatchDeleteResponseToPorcelain(plumbing))
-            .collect(Collectors.toList());
-    }
-
-    public static List<NodeBatchDeleteResponse> repeatedNodeBatchDeleteResponseToPlumbing(Collection<com.strongdm.api.v1.NodeBatchDeleteResponse> porcelains) {
-        return porcelains.stream()
-            .map(porcelain -> nodeBatchDeleteResponseToPlumbing(porcelain))
             .collect(Collectors.toList());
     }
 
@@ -535,6 +398,171 @@ public class Plumbing {
     public static List<Token> repeatedTokenToPlumbing(Collection<com.strongdm.api.v1.Token> porcelains) {
         return porcelains.stream()
             .map(porcelain -> tokenToPlumbing(porcelain))
+            .collect(Collectors.toList());
+    }
+
+    public static com.strongdm.api.v1.RoleCreateResponse roleCreateResponseToPorcelain(RoleCreateResponse plumbing) {
+        com.strongdm.api.v1.RoleCreateResponse porcelain = new com.strongdm.api.v1.RoleCreateResponse();
+        porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
+        porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
+        return porcelain;
+    }
+
+    public static RoleCreateResponse roleCreateResponseToPlumbing(com.strongdm.api.v1.RoleCreateResponse porcelain) {
+        if (porcelain == null) {
+            return null;
+        }
+        RoleCreateResponse.Builder builder = RoleCreateResponse.newBuilder();
+        if (porcelain.getMeta() != null) {
+            builder.setMeta(Plumbing.createResponseMetadataToPlumbing(porcelain.getMeta()));
+        }
+        if (porcelain.getRole() != null) {
+            builder.setRole(Plumbing.roleToPlumbing(porcelain.getRole()));
+        }
+        return builder.build();
+    }
+
+    public static List<com.strongdm.api.v1.RoleCreateResponse> repeatedRoleCreateResponseToPorcelain(Collection<RoleCreateResponse> plumbings) {
+        return plumbings.stream()
+            .map(plumbing -> roleCreateResponseToPorcelain(plumbing))
+            .collect(Collectors.toList());
+    }
+
+    public static List<RoleCreateResponse> repeatedRoleCreateResponseToPlumbing(Collection<com.strongdm.api.v1.RoleCreateResponse> porcelains) {
+        return porcelains.stream()
+            .map(porcelain -> roleCreateResponseToPlumbing(porcelain))
+            .collect(Collectors.toList());
+    }
+
+    public static com.strongdm.api.v1.RoleGetResponse roleGetResponseToPorcelain(RoleGetResponse plumbing) {
+        com.strongdm.api.v1.RoleGetResponse porcelain = new com.strongdm.api.v1.RoleGetResponse();
+        porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
+        porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
+        return porcelain;
+    }
+
+    public static RoleGetResponse roleGetResponseToPlumbing(com.strongdm.api.v1.RoleGetResponse porcelain) {
+        if (porcelain == null) {
+            return null;
+        }
+        RoleGetResponse.Builder builder = RoleGetResponse.newBuilder();
+        if (porcelain.getMeta() != null) {
+            builder.setMeta(Plumbing.getResponseMetadataToPlumbing(porcelain.getMeta()));
+        }
+        if (porcelain.getRole() != null) {
+            builder.setRole(Plumbing.roleToPlumbing(porcelain.getRole()));
+        }
+        return builder.build();
+    }
+
+    public static List<com.strongdm.api.v1.RoleGetResponse> repeatedRoleGetResponseToPorcelain(Collection<RoleGetResponse> plumbings) {
+        return plumbings.stream()
+            .map(plumbing -> roleGetResponseToPorcelain(plumbing))
+            .collect(Collectors.toList());
+    }
+
+    public static List<RoleGetResponse> repeatedRoleGetResponseToPlumbing(Collection<com.strongdm.api.v1.RoleGetResponse> porcelains) {
+        return porcelains.stream()
+            .map(porcelain -> roleGetResponseToPlumbing(porcelain))
+            .collect(Collectors.toList());
+    }
+
+    public static com.strongdm.api.v1.RoleUpdateResponse roleUpdateResponseToPorcelain(RoleUpdateResponse plumbing) {
+        com.strongdm.api.v1.RoleUpdateResponse porcelain = new com.strongdm.api.v1.RoleUpdateResponse();
+        porcelain.setMeta(Plumbing.updateResponseMetadataToPorcelain(plumbing.getMeta()));
+        porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
+        return porcelain;
+    }
+
+    public static RoleUpdateResponse roleUpdateResponseToPlumbing(com.strongdm.api.v1.RoleUpdateResponse porcelain) {
+        if (porcelain == null) {
+            return null;
+        }
+        RoleUpdateResponse.Builder builder = RoleUpdateResponse.newBuilder();
+        if (porcelain.getMeta() != null) {
+            builder.setMeta(Plumbing.updateResponseMetadataToPlumbing(porcelain.getMeta()));
+        }
+        if (porcelain.getRole() != null) {
+            builder.setRole(Plumbing.roleToPlumbing(porcelain.getRole()));
+        }
+        return builder.build();
+    }
+
+    public static List<com.strongdm.api.v1.RoleUpdateResponse> repeatedRoleUpdateResponseToPorcelain(Collection<RoleUpdateResponse> plumbings) {
+        return plumbings.stream()
+            .map(plumbing -> roleUpdateResponseToPorcelain(plumbing))
+            .collect(Collectors.toList());
+    }
+
+    public static List<RoleUpdateResponse> repeatedRoleUpdateResponseToPlumbing(Collection<com.strongdm.api.v1.RoleUpdateResponse> porcelains) {
+        return porcelains.stream()
+            .map(porcelain -> roleUpdateResponseToPlumbing(porcelain))
+            .collect(Collectors.toList());
+    }
+
+    public static com.strongdm.api.v1.RoleDeleteResponse roleDeleteResponseToPorcelain(RoleDeleteResponse plumbing) {
+        com.strongdm.api.v1.RoleDeleteResponse porcelain = new com.strongdm.api.v1.RoleDeleteResponse();
+        porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
+        return porcelain;
+    }
+
+    public static RoleDeleteResponse roleDeleteResponseToPlumbing(com.strongdm.api.v1.RoleDeleteResponse porcelain) {
+        if (porcelain == null) {
+            return null;
+        }
+        RoleDeleteResponse.Builder builder = RoleDeleteResponse.newBuilder();
+        if (porcelain.getMeta() != null) {
+            builder.setMeta(Plumbing.deleteResponseMetadataToPlumbing(porcelain.getMeta()));
+        }
+        return builder.build();
+    }
+
+    public static List<com.strongdm.api.v1.RoleDeleteResponse> repeatedRoleDeleteResponseToPorcelain(Collection<RoleDeleteResponse> plumbings) {
+        return plumbings.stream()
+            .map(plumbing -> roleDeleteResponseToPorcelain(plumbing))
+            .collect(Collectors.toList());
+    }
+
+    public static List<RoleDeleteResponse> repeatedRoleDeleteResponseToPlumbing(Collection<com.strongdm.api.v1.RoleDeleteResponse> porcelains) {
+        return porcelains.stream()
+            .map(porcelain -> roleDeleteResponseToPlumbing(porcelain))
+            .collect(Collectors.toList());
+    }
+
+    public static com.strongdm.api.v1.Role roleToPorcelain(Role plumbing) {
+        com.strongdm.api.v1.Role porcelain = new com.strongdm.api.v1.Role();
+        porcelain.setId(plumbing.getId());
+        porcelain.setName(plumbing.getName());
+        porcelain.setComposite(plumbing.getComposite());
+        porcelain.setRoles(Plumbing.repeatedRoleToPorcelain(plumbing.getRolesList()));
+        return porcelain;
+    }
+
+    public static Role roleToPlumbing(com.strongdm.api.v1.Role porcelain) {
+        if (porcelain == null) {
+            return null;
+        }
+        Role.Builder builder = Role.newBuilder();
+        if (porcelain.getId() != null) {
+            builder.setId(porcelain.getId());
+        }
+        if (porcelain.getName() != null) {
+            builder.setName(porcelain.getName());
+        }
+        builder.setComposite(porcelain.getComposite());
+        builder.addAllRoles(Plumbing.repeatedRoleToPlumbing(porcelain.getRoles()));
+        return builder.build();
+    }
+
+    public static List<com.strongdm.api.v1.Role> repeatedRoleToPorcelain(Collection<Role> plumbings) {
+        return plumbings.stream()
+            .map(plumbing -> roleToPorcelain(plumbing))
+            .collect(Collectors.toList());
+    }
+
+    public static List<Role> repeatedRoleToPlumbing(Collection<com.strongdm.api.v1.Role> porcelains) {
+        return porcelains.stream()
+            .map(porcelain -> roleToPlumbing(porcelain))
             .collect(Collectors.toList());
     }
 

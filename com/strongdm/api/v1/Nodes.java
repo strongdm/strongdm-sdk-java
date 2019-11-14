@@ -17,6 +17,9 @@ import com.strongdm.api.v1.plumbing.PageIterator;
 import com.strongdm.api.v1.plumbing.NodesGrpc;
 import com.strongdm.api.v1.plumbing.NodesPlumbing;
 
+import com.strongdm.api.v1.plumbing.RolesGrpc;
+import com.strongdm.api.v1.plumbing.RolesPlumbing;
+
 // Nodes are proxies in strongDM responsible to communicate with servers
 // (relays) and clients (gateways).
 public class Nodes {
@@ -27,9 +30,9 @@ public class Nodes {
     }
     
     // Create registers a new node.
-    public NodeCreateResponse create(Collection<Node> nodes) throws BaseException {
+    public NodeCreateResponse create(Node node) throws BaseException {
         NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
-        builder.addAllNodes(Plumbing.repeatedNodeToPlumbing(nodes));
+        builder.setNode(Plumbing.nodeToPlumbing(node));
         NodesPlumbing.NodeCreateRequest req = builder.build();
         NodesPlumbing.NodeCreateResponse plumbingResponse;
         try {
@@ -84,11 +87,13 @@ public class Nodes {
     }
     
     // List is a batched Get call.
-    public NodeListResponse list(String filter) throws BaseException {
+    public Iterable<Node> list(String filter) throws BaseException {
         NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
         builder.setFilter(filter);
 
-        NodeListResponse resp = new NodeListResponse();
+        ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
+        metaBuilder.setLimit(25);
+        builder.setMeta(metaBuilder);
 
         Supplier<PageResult<Node> > pageFetcher = () -> {
             // Note: this closure captures and reuses the builder to set the next page
@@ -99,47 +104,18 @@ public class Nodes {
 
             List<Node> page =
                 Plumbing.repeatedNodeToPorcelain(plumbingResponse.getNodesList());
-            boolean hasNextPage = plumbingResponse.getMeta().getNextPage() != "";
 
-            ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
-            metaBuilder.setPage(plumbingResponse.getMeta().getNextPage());
+            boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
+            metaBuilder.setCursor(plumbingResponse.getMeta().getNextCursor());
             builder.setMeta(metaBuilder);
 
-            return new PageResult<Node>(page, hasNextPage);
+            return new PageResult<Node>(page, hasNextCursor);
         };
 
         Iterator<Node> iterator = new PageIterator<>(pageFetcher);
 
-        resp.setNodes(() -> iterator);
-        return resp;
-    }
-    
-    // BatchUpdate is a batched Update call.
-    public NodeBatchUpdateResponse batchUpdate(Collection<Node> nodes) throws BaseException {
-        NodesPlumbing.NodeBatchUpdateRequest.Builder builder = NodesPlumbing.NodeBatchUpdateRequest.newBuilder();
-        builder.addAllNodes(Plumbing.repeatedNodeToPlumbing(nodes));
-        NodesPlumbing.NodeBatchUpdateRequest req = builder.build();
-        NodesPlumbing.NodeBatchUpdateResponse plumbingResponse;
-        try {
-            plumbingResponse = this.stub.batchUpdate(req);
-        } catch(Exception e) {
-            throw Plumbing.exceptionToPorcelain(e);
-        }
-        return Plumbing.nodeBatchUpdateResponseToPorcelain(plumbingResponse);
-    }
-    
-    // BatchDelete is a batched Delete call.
-    public NodeBatchDeleteResponse batchDelete(Collection<String> ids) throws BaseException {
-        NodesPlumbing.NodeBatchDeleteRequest.Builder builder = NodesPlumbing.NodeBatchDeleteRequest.newBuilder();
-        builder.addAllIds(ids);
-        NodesPlumbing.NodeBatchDeleteRequest req = builder.build();
-        NodesPlumbing.NodeBatchDeleteResponse plumbingResponse;
-        try {
-            plumbingResponse = this.stub.batchDelete(req);
-        } catch(Exception e) {
-            throw Plumbing.exceptionToPorcelain(e);
-        }
-        return Plumbing.nodeBatchDeleteResponseToPorcelain(plumbingResponse);
+        return () -> iterator;
     }
     
 }
+

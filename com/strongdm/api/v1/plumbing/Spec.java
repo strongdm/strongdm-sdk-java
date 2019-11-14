@@ -7488,2001 +7488,33 @@ public final class Spec {
 
   }
 
-  public interface BatchUpdateRequestMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.BatchUpdateRequestMetadata)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * <pre>
-   * BatchUpdateRequestMetadata
-   * </pre>
-   *
-   * Protobuf type {@code v1.BatchUpdateRequestMetadata}
-   */
-  public  static final class BatchUpdateRequestMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.BatchUpdateRequestMetadata)
-      BatchUpdateRequestMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use BatchUpdateRequestMetadata.newBuilder() to construct.
-    private BatchUpdateRequestMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private BatchUpdateRequestMetadata() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BatchUpdateRequestMetadata();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private BatchUpdateRequestMetadata(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateRequestMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateRequestMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * BatchUpdateRequestMetadata
-     * </pre>
-     *
-     * Protobuf type {@code v1.BatchUpdateRequestMetadata}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.BatchUpdateRequestMetadata)
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateRequestMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateRequestMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateRequestMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata build() {
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata buildPartial() {
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata result = new com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata other) {
-        if (other == com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.BatchUpdateRequestMetadata)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.BatchUpdateRequestMetadata)
-    private static final com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata();
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<BatchUpdateRequestMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<BatchUpdateRequestMetadata>() {
-      @java.lang.Override
-      public BatchUpdateRequestMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchUpdateRequestMetadata(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<BatchUpdateRequestMetadata> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BatchUpdateRequestMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Spec.BatchUpdateRequestMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface BatchUpdateResponseMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.BatchUpdateResponseMetadata)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-     * @return The found.
-     */
-    long getFound();
-
-    /**
-     * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    long getAffected();
-  }
-  /**
-   * <pre>
-   * BatchUpdateResponseMetadata
-   * </pre>
-   *
-   * Protobuf type {@code v1.BatchUpdateResponseMetadata}
-   */
-  public  static final class BatchUpdateResponseMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.BatchUpdateResponseMetadata)
-      BatchUpdateResponseMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use BatchUpdateResponseMetadata.newBuilder() to construct.
-    private BatchUpdateResponseMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private BatchUpdateResponseMetadata() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BatchUpdateResponseMetadata();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private BatchUpdateResponseMetadata(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              found_ = input.readInt64();
-              break;
-            }
-            case 16: {
-
-              affected_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateResponseMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateResponseMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata.Builder.class);
-    }
-
-    public static final int FOUND_FIELD_NUMBER = 1;
-    private long found_;
-    /**
-     * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-     * @return The found.
-     */
-    public long getFound() {
-      return found_;
-    }
-
-    public static final int AFFECTED_FIELD_NUMBER = 2;
-    private long affected_;
-    /**
-     * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    public long getAffected() {
-      return affected_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (found_ != 0L) {
-        output.writeInt64(1, found_);
-      }
-      if (affected_ != 0L) {
-        output.writeInt64(2, affected_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (found_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, found_);
-      }
-      if (affected_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, affected_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata) obj;
-
-      if (getFound()
-          != other.getFound()) return false;
-      if (getAffected()
-          != other.getAffected()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FOUND_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFound());
-      hash = (37 * hash) + AFFECTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAffected());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * BatchUpdateResponseMetadata
-     * </pre>
-     *
-     * Protobuf type {@code v1.BatchUpdateResponseMetadata}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.BatchUpdateResponseMetadata)
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateResponseMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateResponseMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        found_ = 0L;
-
-        affected_ = 0L;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchUpdateResponseMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata build() {
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata buildPartial() {
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata(this);
-        result.found_ = found_;
-        result.affected_ = affected_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata other) {
-        if (other == com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata.getDefaultInstance()) return this;
-        if (other.getFound() != 0L) {
-          setFound(other.getFound());
-        }
-        if (other.getAffected() != 0L) {
-          setAffected(other.getAffected());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private long found_ ;
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @return The found.
-       */
-      public long getFound() {
-        return found_;
-      }
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The found to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFound(long value) {
-        
-        found_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFound() {
-        
-        found_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long affected_ ;
-      /**
-       * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-       * @return The affected.
-       */
-      public long getAffected() {
-        return affected_;
-      }
-      /**
-       * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The affected to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAffected(long value) {
-        
-        affected_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAffected() {
-        
-        affected_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.BatchUpdateResponseMetadata)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.BatchUpdateResponseMetadata)
-    private static final com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata();
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<BatchUpdateResponseMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<BatchUpdateResponseMetadata>() {
-      @java.lang.Override
-      public BatchUpdateResponseMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchUpdateResponseMetadata(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<BatchUpdateResponseMetadata> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BatchUpdateResponseMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Spec.BatchUpdateResponseMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface BatchDeleteRequestMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.BatchDeleteRequestMetadata)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * <pre>
-   * BatchDeleteRequestMetadata
-   * </pre>
-   *
-   * Protobuf type {@code v1.BatchDeleteRequestMetadata}
-   */
-  public  static final class BatchDeleteRequestMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.BatchDeleteRequestMetadata)
-      BatchDeleteRequestMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use BatchDeleteRequestMetadata.newBuilder() to construct.
-    private BatchDeleteRequestMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private BatchDeleteRequestMetadata() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BatchDeleteRequestMetadata();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private BatchDeleteRequestMetadata(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteRequestMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteRequestMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * BatchDeleteRequestMetadata
-     * </pre>
-     *
-     * Protobuf type {@code v1.BatchDeleteRequestMetadata}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.BatchDeleteRequestMetadata)
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteRequestMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteRequestMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteRequestMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata build() {
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata buildPartial() {
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata result = new com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata other) {
-        if (other == com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.BatchDeleteRequestMetadata)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.BatchDeleteRequestMetadata)
-    private static final com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata();
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<BatchDeleteRequestMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<BatchDeleteRequestMetadata>() {
-      @java.lang.Override
-      public BatchDeleteRequestMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchDeleteRequestMetadata(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<BatchDeleteRequestMetadata> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BatchDeleteRequestMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Spec.BatchDeleteRequestMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface BatchDeleteResponseMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.BatchDeleteResponseMetadata)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-     * @return The found.
-     */
-    long getFound();
-
-    /**
-     * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    long getAffected();
-  }
-  /**
-   * <pre>
-   * BatchDeleteResponseMetadata
-   * </pre>
-   *
-   * Protobuf type {@code v1.BatchDeleteResponseMetadata}
-   */
-  public  static final class BatchDeleteResponseMetadata extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.BatchDeleteResponseMetadata)
-      BatchDeleteResponseMetadataOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use BatchDeleteResponseMetadata.newBuilder() to construct.
-    private BatchDeleteResponseMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private BatchDeleteResponseMetadata() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BatchDeleteResponseMetadata();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private BatchDeleteResponseMetadata(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              found_ = input.readInt64();
-              break;
-            }
-            case 16: {
-
-              affected_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteResponseMetadata_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteResponseMetadata_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata.Builder.class);
-    }
-
-    public static final int FOUND_FIELD_NUMBER = 1;
-    private long found_;
-    /**
-     * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-     * @return The found.
-     */
-    public long getFound() {
-      return found_;
-    }
-
-    public static final int AFFECTED_FIELD_NUMBER = 2;
-    private long affected_;
-    /**
-     * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    public long getAffected() {
-      return affected_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (found_ != 0L) {
-        output.writeInt64(1, found_);
-      }
-      if (affected_ != 0L) {
-        output.writeInt64(2, affected_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (found_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, found_);
-      }
-      if (affected_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, affected_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata) obj;
-
-      if (getFound()
-          != other.getFound()) return false;
-      if (getAffected()
-          != other.getAffected()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FOUND_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFound());
-      hash = (37 * hash) + AFFECTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAffected());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * BatchDeleteResponseMetadata
-     * </pre>
-     *
-     * Protobuf type {@code v1.BatchDeleteResponseMetadata}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.BatchDeleteResponseMetadata)
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteResponseMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteResponseMetadata_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        found_ = 0L;
-
-        affected_ = 0L;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_BatchDeleteResponseMetadata_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata build() {
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata buildPartial() {
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata(this);
-        result.found_ = found_;
-        result.affected_ = affected_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata other) {
-        if (other == com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata.getDefaultInstance()) return this;
-        if (other.getFound() != 0L) {
-          setFound(other.getFound());
-        }
-        if (other.getAffected() != 0L) {
-          setAffected(other.getAffected());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private long found_ ;
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @return The found.
-       */
-      public long getFound() {
-        return found_;
-      }
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The found to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFound(long value) {
-        
-        found_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFound() {
-        
-        found_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private long affected_ ;
-      /**
-       * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-       * @return The affected.
-       */
-      public long getAffected() {
-        return affected_;
-      }
-      /**
-       * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The affected to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAffected(long value) {
-        
-        affected_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 affected = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAffected() {
-        
-        affected_ = 0L;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.BatchDeleteResponseMetadata)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.BatchDeleteResponseMetadata)
-    private static final com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata();
-    }
-
-    public static com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<BatchDeleteResponseMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<BatchDeleteResponseMetadata>() {
-      @java.lang.Override
-      public BatchDeleteResponseMetadata parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BatchDeleteResponseMetadata(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<BatchDeleteResponseMetadata> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BatchDeleteResponseMetadata> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Spec.BatchDeleteResponseMetadata getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ListRequestMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.ListRequestMetadata)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string page = 1;</code>
-     * @return The page.
+     * <code>string cursor = 1;</code>
+     * @return The cursor.
      */
-    java.lang.String getPage();
+    java.lang.String getCursor();
     /**
-     * <code>string page = 1;</code>
-     * @return The bytes for page.
+     * <code>string cursor = 1;</code>
+     * @return The bytes for cursor.
      */
     com.google.protobuf.ByteString
-        getPageBytes();
+        getCursorBytes();
+
+    /**
+     * <code>int32 page = 2;</code>
+     * @return The page.
+     */
+    int getPage();
+
+    /**
+     * <code>int32 limit = 3;</code>
+     * @return The limit.
+     */
+    int getLimit();
   }
   /**
    * <pre>
@@ -9501,7 +7533,7 @@ public final class Spec {
       super(builder);
     }
     private ListRequestMetadata() {
-      page_ = "";
+      cursor_ = "";
     }
 
     @java.lang.Override
@@ -9537,7 +7569,17 @@ public final class Spec {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              page_ = s;
+              cursor_ = s;
+              break;
+            }
+            case 16: {
+
+              page_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              limit_ = input.readInt32();
               break;
             }
             default: {
@@ -9572,40 +7614,60 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.class, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder.class);
     }
 
-    public static final int PAGE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object page_;
+    public static final int CURSOR_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cursor_;
     /**
-     * <code>string page = 1;</code>
-     * @return The page.
+     * <code>string cursor = 1;</code>
+     * @return The cursor.
      */
-    public java.lang.String getPage() {
-      java.lang.Object ref = page_;
+    public java.lang.String getCursor() {
+      java.lang.Object ref = cursor_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        page_ = s;
+        cursor_ = s;
         return s;
       }
     }
     /**
-     * <code>string page = 1;</code>
-     * @return The bytes for page.
+     * <code>string cursor = 1;</code>
+     * @return The bytes for cursor.
      */
     public com.google.protobuf.ByteString
-        getPageBytes() {
-      java.lang.Object ref = page_;
+        getCursorBytes() {
+      java.lang.Object ref = cursor_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        page_ = b;
+        cursor_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int PAGE_FIELD_NUMBER = 2;
+    private int page_;
+    /**
+     * <code>int32 page = 2;</code>
+     * @return The page.
+     */
+    public int getPage() {
+      return page_;
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 3;
+    private int limit_;
+    /**
+     * <code>int32 limit = 3;</code>
+     * @return The limit.
+     */
+    public int getLimit() {
+      return limit_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9622,8 +7684,14 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, page_);
+      if (!getCursorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cursor_);
+      }
+      if (page_ != 0) {
+        output.writeInt32(2, page_);
+      }
+      if (limit_ != 0) {
+        output.writeInt32(3, limit_);
       }
       unknownFields.writeTo(output);
     }
@@ -9634,8 +7702,16 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, page_);
+      if (!getCursorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cursor_);
+      }
+      if (page_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, page_);
+      }
+      if (limit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, limit_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9652,8 +7728,12 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata) obj;
 
-      if (!getPage()
-          .equals(other.getPage())) return false;
+      if (!getCursor()
+          .equals(other.getCursor())) return false;
+      if (getPage()
+          != other.getPage()) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9665,8 +7745,12 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURSOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCursor().hashCode();
       hash = (37 * hash) + PAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getPage().hashCode();
+      hash = (53 * hash) + getPage();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getLimit();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9804,7 +7888,11 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        page_ = "";
+        cursor_ = "";
+
+        page_ = 0;
+
+        limit_ = 0;
 
         return this;
       }
@@ -9832,7 +7920,9 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata result = new com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata(this);
+        result.cursor_ = cursor_;
         result.page_ = page_;
+        result.limit_ = limit_;
         onBuilt();
         return result;
       }
@@ -9881,9 +7971,15 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance()) return this;
-        if (!other.getPage().isEmpty()) {
-          page_ = other.page_;
+        if (!other.getCursor().isEmpty()) {
+          cursor_ = other.cursor_;
           onChanged();
+        }
+        if (other.getPage() != 0) {
+          setPage(other.getPage());
+        }
+        if (other.getLimit() != 0) {
+          setLimit(other.getLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9914,78 +8010,138 @@ public final class Spec {
         return this;
       }
 
-      private java.lang.Object page_ = "";
+      private java.lang.Object cursor_ = "";
       /**
-       * <code>string page = 1;</code>
-       * @return The page.
+       * <code>string cursor = 1;</code>
+       * @return The cursor.
        */
-      public java.lang.String getPage() {
-        java.lang.Object ref = page_;
+      public java.lang.String getCursor() {
+        java.lang.Object ref = cursor_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          page_ = s;
+          cursor_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string page = 1;</code>
-       * @return The bytes for page.
+       * <code>string cursor = 1;</code>
+       * @return The bytes for cursor.
        */
       public com.google.protobuf.ByteString
-          getPageBytes() {
-        java.lang.Object ref = page_;
+          getCursorBytes() {
+        java.lang.Object ref = cursor_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          page_ = b;
+          cursor_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string page = 1;</code>
-       * @param value The page to set.
+       * <code>string cursor = 1;</code>
+       * @param value The cursor to set.
        * @return This builder for chaining.
        */
-      public Builder setPage(
+      public Builder setCursor(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        page_ = value;
+        cursor_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string page = 1;</code>
+       * <code>string cursor = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPage() {
+      public Builder clearCursor() {
         
-        page_ = getDefaultInstance().getPage();
+        cursor_ = getDefaultInstance().getCursor();
         onChanged();
         return this;
       }
       /**
-       * <code>string page = 1;</code>
-       * @param value The bytes for page to set.
+       * <code>string cursor = 1;</code>
+       * @param value The bytes for cursor to set.
        * @return This builder for chaining.
        */
-      public Builder setPageBytes(
+      public Builder setCursorBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
+        cursor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int page_ ;
+      /**
+       * <code>int32 page = 2;</code>
+       * @return The page.
+       */
+      public int getPage() {
+        return page_;
+      }
+      /**
+       * <code>int32 page = 2;</code>
+       * @param value The page to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPage(int value) {
+        
         page_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 page = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPage() {
+        
+        page_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int limit_ ;
+      /**
+       * <code>int32 limit = 3;</code>
+       * @return The limit.
+       */
+      public int getLimit() {
+        return limit_;
+      }
+      /**
+       * <code>int32 limit = 3;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(int value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 limit = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0;
         onChanged();
         return this;
       }
@@ -10047,16 +8203,16 @@ public final class Spec {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string next_page = 1;</code>
-     * @return The nextPage.
+     * <code>string next_cursor = 1;</code>
+     * @return The nextCursor.
      */
-    java.lang.String getNextPage();
+    java.lang.String getNextCursor();
     /**
-     * <code>string next_page = 1;</code>
-     * @return The bytes for nextPage.
+     * <code>string next_cursor = 1;</code>
+     * @return The bytes for nextCursor.
      */
     com.google.protobuf.ByteString
-        getNextPageBytes();
+        getNextCursorBytes();
 
     /**
      * <code>int64 found = 2;</code>
@@ -10081,7 +8237,7 @@ public final class Spec {
       super(builder);
     }
     private ListResponseMetadata() {
-      nextPage_ = "";
+      nextCursor_ = "";
     }
 
     @java.lang.Override
@@ -10117,7 +8273,7 @@ public final class Spec {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              nextPage_ = s;
+              nextCursor_ = s;
               break;
             }
             case 16: {
@@ -10157,36 +8313,36 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder.class);
     }
 
-    public static final int NEXT_PAGE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object nextPage_;
+    public static final int NEXT_CURSOR_FIELD_NUMBER = 1;
+    private volatile java.lang.Object nextCursor_;
     /**
-     * <code>string next_page = 1;</code>
-     * @return The nextPage.
+     * <code>string next_cursor = 1;</code>
+     * @return The nextCursor.
      */
-    public java.lang.String getNextPage() {
-      java.lang.Object ref = nextPage_;
+    public java.lang.String getNextCursor() {
+      java.lang.Object ref = nextCursor_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        nextPage_ = s;
+        nextCursor_ = s;
         return s;
       }
     }
     /**
-     * <code>string next_page = 1;</code>
-     * @return The bytes for nextPage.
+     * <code>string next_cursor = 1;</code>
+     * @return The bytes for nextCursor.
      */
     public com.google.protobuf.ByteString
-        getNextPageBytes() {
-      java.lang.Object ref = nextPage_;
+        getNextCursorBytes() {
+      java.lang.Object ref = nextCursor_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        nextPage_ = b;
+        nextCursor_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -10217,8 +8373,8 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNextPageBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nextPage_);
+      if (!getNextCursorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nextCursor_);
       }
       if (found_ != 0L) {
         output.writeInt64(2, found_);
@@ -10232,8 +8388,8 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNextPageBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nextPage_);
+      if (!getNextCursorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nextCursor_);
       }
       if (found_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -10254,8 +8410,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata) obj;
 
-      if (!getNextPage()
-          .equals(other.getNextPage())) return false;
+      if (!getNextCursor()
+          .equals(other.getNextCursor())) return false;
       if (getFound()
           != other.getFound()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -10269,8 +8425,8 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NEXT_PAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getNextPage().hashCode();
+      hash = (37 * hash) + NEXT_CURSOR_FIELD_NUMBER;
+      hash = (53 * hash) + getNextCursor().hashCode();
       hash = (37 * hash) + FOUND_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getFound());
@@ -10411,7 +8567,7 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        nextPage_ = "";
+        nextCursor_ = "";
 
         found_ = 0L;
 
@@ -10441,7 +8597,7 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata(this);
-        result.nextPage_ = nextPage_;
+        result.nextCursor_ = nextCursor_;
         result.found_ = found_;
         onBuilt();
         return result;
@@ -10491,8 +8647,8 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance()) return this;
-        if (!other.getNextPage().isEmpty()) {
-          nextPage_ = other.nextPage_;
+        if (!other.getNextCursor().isEmpty()) {
+          nextCursor_ = other.nextCursor_;
           onChanged();
         }
         if (other.getFound() != 0L) {
@@ -10527,78 +8683,78 @@ public final class Spec {
         return this;
       }
 
-      private java.lang.Object nextPage_ = "";
+      private java.lang.Object nextCursor_ = "";
       /**
-       * <code>string next_page = 1;</code>
-       * @return The nextPage.
+       * <code>string next_cursor = 1;</code>
+       * @return The nextCursor.
        */
-      public java.lang.String getNextPage() {
-        java.lang.Object ref = nextPage_;
+      public java.lang.String getNextCursor() {
+        java.lang.Object ref = nextCursor_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          nextPage_ = s;
+          nextCursor_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string next_page = 1;</code>
-       * @return The bytes for nextPage.
+       * <code>string next_cursor = 1;</code>
+       * @return The bytes for nextCursor.
        */
       public com.google.protobuf.ByteString
-          getNextPageBytes() {
-        java.lang.Object ref = nextPage_;
+          getNextCursorBytes() {
+        java.lang.Object ref = nextCursor_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          nextPage_ = b;
+          nextCursor_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string next_page = 1;</code>
-       * @param value The nextPage to set.
+       * <code>string next_cursor = 1;</code>
+       * @param value The nextCursor to set.
        * @return This builder for chaining.
        */
-      public Builder setNextPage(
+      public Builder setNextCursor(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        nextPage_ = value;
+        nextCursor_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string next_page = 1;</code>
+       * <code>string next_cursor = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNextPage() {
+      public Builder clearNextCursor() {
         
-        nextPage_ = getDefaultInstance().getNextPage();
+        nextCursor_ = getDefaultInstance().getNextCursor();
         onChanged();
         return this;
       }
       /**
-       * <code>string next_page = 1;</code>
-       * @param value The bytes for nextPage to set.
+       * <code>string next_cursor = 1;</code>
+       * @param value The bytes for nextCursor to set.
        * @return This builder for chaining.
        */
-      public Builder setNextPageBytes(
+      public Builder setNextCursorBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        nextPage_ = value;
+        nextCursor_ = value;
         onChanged();
         return this;
       }
@@ -10761,26 +8917,6 @@ public final class Spec {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_DeleteResponseMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_BatchUpdateRequestMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_BatchUpdateRequestMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_BatchUpdateResponseMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_BatchUpdateResponseMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_BatchDeleteRequestMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_BatchDeleteRequestMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_BatchDeleteResponseMetadata_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_BatchDeleteResponseMetadata_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_ListRequestMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10823,24 +8959,18 @@ public final class Spec {
       "ata\022\034\n\010affected\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005" +
       "\250\363\263\007\001\"\027\n\025DeleteRequestMetadata\"B\n\026Delete" +
       "ResponseMetadata\022\034\n\010affected\030\001 \001(\003B\n\362\370\263\007" +
-      "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\034\n\032BatchUpdateRequest" +
-      "Metadata\"b\n\033BatchUpdateResponseMetadata\022" +
-      "\031\n\005found\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010affected\030\002" +
-      " \001(\003B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\034\n\032BatchDel" +
-      "eteRequestMetadata\"b\n\033BatchDeleteRespons" +
-      "eMetadata\022\031\n\005found\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010" +
-      "affected\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"#" +
-      "\n\023ListRequestMetadata\022\014\n\004page\030\001 \001(\t\"8\n\024L" +
-      "istResponseMetadata\022\021\n\tnext_page\030\001 \001(\t\022\r" +
-      "\n\005found\030\002 \001(\003B\257\002\n\034com.strongdm.api.v1.pl" +
-      "umbing\222A\215\002\022\260\001\n\034gRPC/JSON Gateway Tech Sp" +
-      "ike\022;an exploration of how it feels to u" +
-      "se the gRPC JSON gateway\"N\n\022gRPC-Gateway" +
-      " spike\022\"https://www.strongdm.com/docs/ap" +
-      "i/\032\024support@strongdm.com2\0031.0\032\020app.stron" +
-      "gdm.comrF\n!Learn more about the strongDM" +
-      " API\022!https://www.strongdm.com/docs/apib" +
-      "\006proto3"
+      "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMetadat" +
+      "a\022\016\n\006cursor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit" +
+      "\030\003 \001(\005\":\n\024ListResponseMetadata\022\023\n\013next_c" +
+      "ursor\030\001 \001(\t\022\r\n\005found\030\002 \001(\003B\257\002\n\034com.stron" +
+      "gdm.api.v1.plumbing\222A\215\002\022\260\001\n\034gRPC/JSON Ga" +
+      "teway Tech Spike\022;an exploration of how " +
+      "it feels to use the gRPC JSON gateway\"N\n" +
+      "\022gRPC-Gateway spike\022\"https://www.strongd" +
+      "m.com/docs/api/\032\024support@strongdm.com2\0031" +
+      ".0\032\020app.strongdm.comrF\n!Learn more about" +
+      " the strongDM API\022!https://www.strongdm." +
+      "com/docs/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10938,42 +9068,18 @@ public final class Spec {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DeleteResponseMetadata_descriptor,
         new java.lang.String[] { "Affected", });
-    internal_static_v1_BatchUpdateRequestMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_v1_BatchUpdateRequestMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_BatchUpdateRequestMetadata_descriptor,
-        new java.lang.String[] { });
-    internal_static_v1_BatchUpdateResponseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_v1_BatchUpdateResponseMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_BatchUpdateResponseMetadata_descriptor,
-        new java.lang.String[] { "Found", "Affected", });
-    internal_static_v1_BatchDeleteRequestMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_v1_BatchDeleteRequestMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_BatchDeleteRequestMetadata_descriptor,
-        new java.lang.String[] { });
-    internal_static_v1_BatchDeleteResponseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(18);
-    internal_static_v1_BatchDeleteResponseMetadata_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_BatchDeleteResponseMetadata_descriptor,
-        new java.lang.String[] { "Found", "Affected", });
     internal_static_v1_ListRequestMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_v1_ListRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ListRequestMetadata_descriptor,
-        new java.lang.String[] { "Page", });
+        new java.lang.String[] { "Cursor", "Page", "Limit", });
     internal_static_v1_ListResponseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_v1_ListResponseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ListResponseMetadata_descriptor,
-        new java.lang.String[] { "NextPage", "Found", });
+        new java.lang.String[] { "NextCursor", "Found", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Swagger);

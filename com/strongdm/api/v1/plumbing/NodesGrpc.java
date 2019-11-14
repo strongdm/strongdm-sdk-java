@@ -186,68 +186,6 @@ public final class NodesGrpc {
     return getListMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest,
-      com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse> getBatchUpdateMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "BatchUpdate",
-      requestType = com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest.class,
-      responseType = com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest,
-      com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse> getBatchUpdateMethod() {
-    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse> getBatchUpdateMethod;
-    if ((getBatchUpdateMethod = NodesGrpc.getBatchUpdateMethod) == null) {
-      synchronized (NodesGrpc.class) {
-        if ((getBatchUpdateMethod = NodesGrpc.getBatchUpdateMethod) == null) {
-          NodesGrpc.getBatchUpdateMethod = getBatchUpdateMethod =
-              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchUpdate"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NodesMethodDescriptorSupplier("BatchUpdate"))
-              .build();
-        }
-      }
-    }
-    return getBatchUpdateMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest,
-      com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse> getBatchDeleteMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "BatchDelete",
-      requestType = com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest.class,
-      responseType = com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest,
-      com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse> getBatchDeleteMethod() {
-    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse> getBatchDeleteMethod;
-    if ((getBatchDeleteMethod = NodesGrpc.getBatchDeleteMethod) == null) {
-      synchronized (NodesGrpc.class) {
-        if ((getBatchDeleteMethod = NodesGrpc.getBatchDeleteMethod) == null) {
-          NodesGrpc.getBatchDeleteMethod = getBatchDeleteMethod =
-              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchDelete"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NodesMethodDescriptorSupplier("BatchDelete"))
-              .build();
-        }
-      }
-    }
-    return getBatchDeleteMethod;
-  }
-
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -329,26 +267,6 @@ public final class NodesGrpc {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
-    /**
-     * <pre>
-     * BatchUpdate is a batched Update call.
-     * </pre>
-     */
-    public void batchUpdate(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBatchUpdateMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * BatchDelete is a batched Delete call.
-     * </pre>
-     */
-    public void batchDelete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBatchDeleteMethod(), responseObserver);
-    }
-
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -386,20 +304,6 @@ public final class NodesGrpc {
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest,
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse>(
                   this, METHODID_LIST)))
-          .addMethod(
-            getBatchUpdateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest,
-                com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse>(
-                  this, METHODID_BATCH_UPDATE)))
-          .addMethod(
-            getBatchDeleteMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest,
-                com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse>(
-                  this, METHODID_BATCH_DELETE)))
           .build();
     }
   }
@@ -480,28 +384,6 @@ public final class NodesGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * BatchUpdate is a batched Update call.
-     * </pre>
-     */
-    public void batchUpdate(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getBatchUpdateMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * BatchDelete is a batched Delete call.
-     * </pre>
-     */
-    public void batchDelete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
@@ -574,26 +456,6 @@ public final class NodesGrpc {
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse list(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * BatchUpdate is a batched Update call.
-     * </pre>
-     */
-    public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse batchUpdate(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getBatchUpdateMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * BatchDelete is a batched Delete call.
-     * </pre>
-     */
-    public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse batchDelete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getBatchDeleteMethod(), getCallOptions(), request);
     }
   }
 
@@ -673,28 +535,6 @@ public final class NodesGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * BatchUpdate is a batched Update call.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse> batchUpdate(
-        com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getBatchUpdateMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * BatchDelete is a batched Delete call.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse> batchDelete(
-        com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getBatchDeleteMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_CREATE = 0;
@@ -702,8 +542,6 @@ public final class NodesGrpc {
   private static final int METHODID_UPDATE = 2;
   private static final int METHODID_DELETE = 3;
   private static final int METHODID_LIST = 4;
-  private static final int METHODID_BATCH_UPDATE = 5;
-  private static final int METHODID_BATCH_DELETE = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -741,14 +579,6 @@ public final class NodesGrpc {
         case METHODID_LIST:
           serviceImpl.list((com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse>) responseObserver);
-          break;
-        case METHODID_BATCH_UPDATE:
-          serviceImpl.batchUpdate((com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateRequest) request,
-              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchUpdateResponse>) responseObserver);
-          break;
-        case METHODID_BATCH_DELETE:
-          serviceImpl.batchDelete((com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteRequest) request,
-              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeBatchDeleteResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -816,8 +646,6 @@ public final class NodesGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListMethod())
-              .addMethod(getBatchUpdateMethod())
-              .addMethod(getBatchDeleteMethod())
               .build();
         }
       }

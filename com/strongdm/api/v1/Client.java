@@ -15,13 +15,21 @@ public class Client {
     }
 
     
+    private final Roles roles;
+
+    public Roles roles() {
+        return this.roles;
+    }
+
+    
     public Client(String host, int port) throws BaseException {
-        ManagedChannel channel;
         try {
-            channel = ManagedChannelBuilder.forAddress(host, port)
+            ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port)
                 .usePlaintext() // Disable TLS for now
                 .build();
             this.nodes = new Nodes(channel);
+            this.roles = new Roles(channel);
+            
         } catch(Exception e) {
             throw Plumbing.exceptionToPorcelain(e);
         }

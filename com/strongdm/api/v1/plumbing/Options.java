@@ -10,6 +10,7 @@ public final class Options {
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.oneofOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
   }
 
   public static void registerAllExtensions(
@@ -2095,6 +2096,572 @@ public final class Options {
 
   }
 
+  public interface ServiceOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ServiceOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string main_noun = 1941400;</code>
+     * @return The mainNoun.
+     */
+    java.lang.String getMainNoun();
+    /**
+     * <code>string main_noun = 1941400;</code>
+     * @return The bytes for mainNoun.
+     */
+    com.google.protobuf.ByteString
+        getMainNounBytes();
+  }
+  /**
+   * Protobuf type {@code v1.ServiceOptions}
+   */
+  public  static final class ServiceOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ServiceOptions)
+      ServiceOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServiceOptions.newBuilder() to construct.
+    private ServiceOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServiceOptions() {
+      mainNoun_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServiceOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ServiceOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 15531202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mainNoun_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.Options.ServiceOptions.class, com.strongdm.api.v1.plumbing.Options.ServiceOptions.Builder.class);
+    }
+
+    public static final int MAIN_NOUN_FIELD_NUMBER = 1941400;
+    private volatile java.lang.Object mainNoun_;
+    /**
+     * <code>string main_noun = 1941400;</code>
+     * @return The mainNoun.
+     */
+    public java.lang.String getMainNoun() {
+      java.lang.Object ref = mainNoun_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mainNoun_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string main_noun = 1941400;</code>
+     * @return The bytes for mainNoun.
+     */
+    public com.google.protobuf.ByteString
+        getMainNounBytes() {
+      java.lang.Object ref = mainNoun_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mainNoun_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMainNounBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941400, mainNoun_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMainNounBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941400, mainNoun_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.ServiceOptions)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.Options.ServiceOptions other = (com.strongdm.api.v1.plumbing.Options.ServiceOptions) obj;
+
+      if (!getMainNoun()
+          .equals(other.getMainNoun())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAIN_NOUN_FIELD_NUMBER;
+      hash = (53 * hash) + getMainNoun().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.ServiceOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.ServiceOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ServiceOptions)
+        com.strongdm.api.v1.plumbing.Options.ServiceOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.Options.ServiceOptions.class, com.strongdm.api.v1.plumbing.Options.ServiceOptions.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.Options.ServiceOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mainNoun_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.ServiceOptions build() {
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.ServiceOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions result = new com.strongdm.api.v1.plumbing.Options.ServiceOptions(this);
+        result.mainNoun_ = mainNoun_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.ServiceOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.ServiceOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.ServiceOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance()) return this;
+        if (!other.getMainNoun().isEmpty()) {
+          mainNoun_ = other.mainNoun_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.ServiceOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object mainNoun_ = "";
+      /**
+       * <code>string main_noun = 1941400;</code>
+       * @return The mainNoun.
+       */
+      public java.lang.String getMainNoun() {
+        java.lang.Object ref = mainNoun_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mainNoun_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string main_noun = 1941400;</code>
+       * @return The bytes for mainNoun.
+       */
+      public com.google.protobuf.ByteString
+          getMainNounBytes() {
+        java.lang.Object ref = mainNoun_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mainNoun_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string main_noun = 1941400;</code>
+       * @param value The mainNoun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMainNoun(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mainNoun_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string main_noun = 1941400;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMainNoun() {
+        
+        mainNoun_ = getDefaultInstance().getMainNoun();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string main_noun = 1941400;</code>
+       * @param value The bytes for mainNoun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMainNounBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mainNoun_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ServiceOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ServiceOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.ServiceOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.ServiceOptions();
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ServiceOptions>
+        PARSER = new com.google.protobuf.AbstractParser<ServiceOptions>() {
+      @java.lang.Override
+      public ServiceOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ServiceOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServiceOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServiceOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public static final int FIELD_OPTIONS_FIELD_NUMBER = 1941390;
   /**
    * <code>extend .google.protobuf.FieldOptions { ... }</code>
@@ -2128,6 +2695,17 @@ public final class Options {
           .newFileScopedGeneratedExtension(
         com.strongdm.api.v1.plumbing.Options.OneofOptions.class,
         com.strongdm.api.v1.plumbing.Options.OneofOptions.getDefaultInstance());
+  public static final int SERVICE_OPTIONS_FIELD_NUMBER = 1941401;
+  /**
+   * <code>extend .google.protobuf.ServiceOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.ServiceOptions,
+      com.strongdm.api.v1.plumbing.Options.ServiceOptions> serviceOptions = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions.class,
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance());
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_FieldOptions_descriptor;
   private static final 
@@ -2143,6 +2721,11 @@ public final class Options {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_OneofOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_ServiceOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ServiceOptions_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2158,14 +2741,17 @@ public final class Options {
       "as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010" +
       "\"L\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t" +
       "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\010\"$" +
-      "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t:H\n\r" +
-      "field_options\022\035.google.protobuf.FieldOpt" +
-      "ions\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017messag" +
-      "e_options\022\037.google.protobuf.MessageOptio" +
-      "ns\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_" +
-      "options\022\035.google.protobuf.OneofOptions\030\205" +
-      "\277v \001(\0132\020.v1.OneofOptionsB\036\n\034com.strongdm" +
-      ".api.v1.plumbingb\006proto3"
+      "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016" +
+      "ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rf" +
+      "ield_options\022\035.google.protobuf.FieldOpti" +
+      "ons\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message" +
+      "_options\022\037.google.protobuf.MessageOption" +
+      "s\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_o" +
+      "ptions\022\035.google.protobuf.OneofOptions\030\205\277" +
+      "v \001(\0132\020.v1.OneofOptions:N\n\017service_optio" +
+      "ns\022\037.google.protobuf.ServiceOptions\030\231\277v " +
+      "\001(\0132\022.v1.ServiceOptionsB\036\n\034com.strongdm." +
+      "api.v1.plumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2190,9 +2776,16 @@ public final class Options {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_OneofOptions_descriptor,
         new java.lang.String[] { "ModelName", });
+    internal_static_v1_ServiceOptions_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_ServiceOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ServiceOptions_descriptor,
+        new java.lang.String[] { "MainNoun", });
     fieldOptions.internalInit(descriptor.getExtensions().get(0));
     messageOptions.internalInit(descriptor.getExtensions().get(1));
     oneofOptions.internalInit(descriptor.getExtensions().get(2));
+    serviceOptions.internalInit(descriptor.getExtensions().get(3));
     com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 
