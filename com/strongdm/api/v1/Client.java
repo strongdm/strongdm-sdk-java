@@ -22,13 +22,13 @@ public class Client {
     }
 
     
-    public Client(String host, int port) throws BaseException {
+    public Client(String host, int port, String apiKey) throws BaseException {
         try {
             ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port)
                 .usePlaintext() // Disable TLS for now
                 .build();
-            this.nodes = new Nodes(channel);
-            this.roles = new Roles(channel);
+            this.nodes = new Nodes(channel, apiKey);
+            this.roles = new Roles(channel, apiKey);
             
         } catch(Exception e) {
             throw Plumbing.exceptionToPorcelain(e);

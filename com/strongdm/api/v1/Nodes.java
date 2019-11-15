@@ -25,8 +25,9 @@ import com.strongdm.api.v1.plumbing.RolesPlumbing;
 public class Nodes {
     private final NodesGrpc.NodesBlockingStub stub;
 
-    public Nodes(ManagedChannel channel) {
-        this.stub = NodesGrpc.newBlockingStub(channel);
+    public Nodes(ManagedChannel channel, String apiKey) {
+        JwtCallCredential callCredential = new JwtCallCredential(apiKey);
+        this.stub = NodesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
     }
     
     // Create registers a new node.

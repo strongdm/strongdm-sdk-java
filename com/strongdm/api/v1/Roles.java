@@ -24,8 +24,9 @@ import com.strongdm.api.v1.plumbing.RolesPlumbing;
 public class Roles {
     private final RolesGrpc.RolesBlockingStub stub;
 
-    public Roles(ManagedChannel channel) {
-        this.stub = RolesGrpc.newBlockingStub(channel);
+    public Roles(ManagedChannel channel, String apiKey) {
+        JwtCallCredential callCredential = new JwtCallCredential(apiKey);
+        this.stub = RolesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
     }
     
     // Create registers a new role.
