@@ -21,16 +21,17 @@ public class PageIterator<T> implements Iterator<T> {
 
     // Checks if the next element exists
     public boolean hasNext() {
-        return this.index < this.page.size() - 1 || this.hasNextPage;
+        return this.index < this.page.size() || this.hasNextPage;
     }
 
     // moves the cursor/iterator to next element
     public T next() {
         // TODO: remove this eventually
         // System.out.printf(">>> iterator.next: index=%d hasNextPage=%b\n", this.index, this.hasNextPage);
-        if (this.index < this.page.size() - 1) {
+        if (this.index < this.page.size()) {
+            T gotten = this.page.get(this.index);  
             this.index++;
-            return this.page.get(this.index);
+            return gotten;
         }
 
         // reached end
