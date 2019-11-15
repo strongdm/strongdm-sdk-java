@@ -21,7 +21,7 @@ public class PageIterator<T> implements Iterator<T> {
 
     // Checks if the next element exists
     public boolean hasNext() {
-        return this.index < this.page.size() || this.hasNextPage;
+        return this.index < this.page.size()|| this.hasNextPage;
     }
 
     // moves the cursor/iterator to next element
