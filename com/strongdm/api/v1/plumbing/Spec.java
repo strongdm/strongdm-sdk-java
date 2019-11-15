@@ -4233,12 +4233,6 @@ public final class Spec {
   public interface CreateResponseMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.CreateResponseMetadata)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    long getAffected();
   }
   /**
    * <pre>
@@ -4289,11 +4283,6 @@ public final class Spec {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              affected_ = input.readInt64();
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4326,16 +4315,6 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder.class);
     }
 
-    public static final int AFFECTED_FIELD_NUMBER = 1;
-    private long affected_;
-    /**
-     * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    public long getAffected() {
-      return affected_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4350,9 +4329,6 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (affected_ != 0L) {
-        output.writeInt64(1, affected_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -4362,10 +4338,6 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (affected_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, affected_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4381,8 +4353,6 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata) obj;
 
-      if (getAffected()
-          != other.getAffected()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4394,9 +4364,6 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AFFECTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAffected());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4534,8 +4501,6 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        affected_ = 0L;
-
         return this;
       }
 
@@ -4562,7 +4527,6 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata(this);
-        result.affected_ = affected_;
         onBuilt();
         return result;
       }
@@ -4611,9 +4575,6 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance()) return this;
-        if (other.getAffected() != 0L) {
-          setAffected(other.getAffected());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4640,36 +4601,6 @@ public final class Spec {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private long affected_ ;
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @return The affected.
-       */
-      public long getAffected() {
-        return affected_;
-      }
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The affected to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAffected(long value) {
-        
-        affected_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAffected() {
-        
-        affected_ = 0L;
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -5154,12 +5085,6 @@ public final class Spec {
   public interface GetResponseMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.GetResponseMetadata)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-     * @return The found.
-     */
-    long getFound();
   }
   /**
    * <pre>
@@ -5210,11 +5135,6 @@ public final class Spec {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              found_ = input.readInt64();
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5247,16 +5167,6 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder.class);
     }
 
-    public static final int FOUND_FIELD_NUMBER = 1;
-    private long found_;
-    /**
-     * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-     * @return The found.
-     */
-    public long getFound() {
-      return found_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5271,9 +5181,6 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (found_ != 0L) {
-        output.writeInt64(1, found_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -5283,10 +5190,6 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (found_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, found_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5302,8 +5205,6 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata) obj;
 
-      if (getFound()
-          != other.getFound()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5315,9 +5216,6 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FOUND_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFound());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5455,8 +5353,6 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        found_ = 0L;
-
         return this;
       }
 
@@ -5483,7 +5379,6 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata(this);
-        result.found_ = found_;
         onBuilt();
         return result;
       }
@@ -5532,9 +5427,6 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance()) return this;
-        if (other.getFound() != 0L) {
-          setFound(other.getFound());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5561,36 +5453,6 @@ public final class Spec {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private long found_ ;
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @return The found.
-       */
-      public long getFound() {
-        return found_;
-      }
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The found to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFound(long value) {
-        
-        found_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 found = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFound() {
-        
-        found_ = 0L;
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -6075,12 +5937,6 @@ public final class Spec {
   public interface UpdateResponseMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.UpdateResponseMetadata)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    long getAffected();
   }
   /**
    * <pre>
@@ -6131,11 +5987,6 @@ public final class Spec {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              affected_ = input.readInt64();
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6168,16 +6019,6 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder.class);
     }
 
-    public static final int AFFECTED_FIELD_NUMBER = 1;
-    private long affected_;
-    /**
-     * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    public long getAffected() {
-      return affected_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6192,9 +6033,6 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (affected_ != 0L) {
-        output.writeInt64(1, affected_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -6204,10 +6042,6 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (affected_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, affected_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6223,8 +6057,6 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata) obj;
 
-      if (getAffected()
-          != other.getAffected()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6236,9 +6068,6 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AFFECTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAffected());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6376,8 +6205,6 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        affected_ = 0L;
-
         return this;
       }
 
@@ -6404,7 +6231,6 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata(this);
-        result.affected_ = affected_;
         onBuilt();
         return result;
       }
@@ -6453,9 +6279,6 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance()) return this;
-        if (other.getAffected() != 0L) {
-          setAffected(other.getAffected());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6482,36 +6305,6 @@ public final class Spec {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private long affected_ ;
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @return The affected.
-       */
-      public long getAffected() {
-        return affected_;
-      }
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The affected to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAffected(long value) {
-        
-        affected_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAffected() {
-        
-        affected_ = 0L;
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -6996,12 +6789,6 @@ public final class Spec {
   public interface DeleteResponseMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.DeleteResponseMetadata)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    long getAffected();
   }
   /**
    * <pre>
@@ -7052,11 +6839,6 @@ public final class Spec {
             case 0:
               done = true;
               break;
-            case 8: {
-
-              affected_ = input.readInt64();
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7089,16 +6871,6 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.class, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder.class);
     }
 
-    public static final int AFFECTED_FIELD_NUMBER = 1;
-    private long affected_;
-    /**
-     * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-     * @return The affected.
-     */
-    public long getAffected() {
-      return affected_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7113,9 +6885,6 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (affected_ != 0L) {
-        output.writeInt64(1, affected_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -7125,10 +6894,6 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (affected_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, affected_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7144,8 +6909,6 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata) obj;
 
-      if (getAffected()
-          != other.getAffected()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7157,9 +6920,6 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + AFFECTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getAffected());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7297,8 +7057,6 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        affected_ = 0L;
-
         return this;
       }
 
@@ -7325,7 +7083,6 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata(this);
-        result.affected_ = affected_;
         onBuilt();
         return result;
       }
@@ -7374,9 +7131,6 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance()) return this;
-        if (other.getAffected() != 0L) {
-          setAffected(other.getAffected());
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -7403,36 +7157,6 @@ public final class Spec {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-
-      private long affected_ ;
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @return The affected.
-       */
-      public long getAffected() {
-        return affected_;
-      }
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The affected to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAffected(long value) {
-        
-        affected_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 affected = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAffected() {
-        
-        affected_ = 0L;
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -8215,10 +7939,10 @@ public final class Spec {
         getNextCursorBytes();
 
     /**
-     * <code>int64 found = 2;</code>
+     * <code>int32 found = 2;</code>
      * @return The found.
      */
-    long getFound();
+    int getFound();
   }
   /**
    * <pre>
@@ -8278,7 +8002,7 @@ public final class Spec {
             }
             case 16: {
 
-              found_ = input.readInt64();
+              found_ = input.readInt32();
               break;
             }
             default: {
@@ -8350,12 +8074,12 @@ public final class Spec {
     }
 
     public static final int FOUND_FIELD_NUMBER = 2;
-    private long found_;
+    private int found_;
     /**
-     * <code>int64 found = 2;</code>
+     * <code>int32 found = 2;</code>
      * @return The found.
      */
-    public long getFound() {
+    public int getFound() {
       return found_;
     }
 
@@ -8376,8 +8100,8 @@ public final class Spec {
       if (!getNextCursorBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nextCursor_);
       }
-      if (found_ != 0L) {
-        output.writeInt64(2, found_);
+      if (found_ != 0) {
+        output.writeInt32(2, found_);
       }
       unknownFields.writeTo(output);
     }
@@ -8391,9 +8115,9 @@ public final class Spec {
       if (!getNextCursorBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nextCursor_);
       }
-      if (found_ != 0L) {
+      if (found_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, found_);
+          .computeInt32Size(2, found_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8428,8 +8152,7 @@ public final class Spec {
       hash = (37 * hash) + NEXT_CURSOR_FIELD_NUMBER;
       hash = (53 * hash) + getNextCursor().hashCode();
       hash = (37 * hash) + FOUND_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFound());
+      hash = (53 * hash) + getFound();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8569,7 +8292,7 @@ public final class Spec {
         super.clear();
         nextCursor_ = "";
 
-        found_ = 0L;
+        found_ = 0;
 
         return this;
       }
@@ -8651,7 +8374,7 @@ public final class Spec {
           nextCursor_ = other.nextCursor_;
           onChanged();
         }
-        if (other.getFound() != 0L) {
+        if (other.getFound() != 0) {
           setFound(other.getFound());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8759,32 +8482,32 @@ public final class Spec {
         return this;
       }
 
-      private long found_ ;
+      private int found_ ;
       /**
-       * <code>int64 found = 2;</code>
+       * <code>int32 found = 2;</code>
        * @return The found.
        */
-      public long getFound() {
+      public int getFound() {
         return found_;
       }
       /**
-       * <code>int64 found = 2;</code>
+       * <code>int32 found = 2;</code>
        * @param value The found to set.
        * @return This builder for chaining.
        */
-      public Builder setFound(long value) {
+      public Builder setFound(int value) {
         
         found_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int64 found = 2;</code>
+       * <code>int32 found = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearFound() {
         
-        found_ = 0L;
+        found_ = 0;
         onChanged();
         return this;
       }
@@ -8951,26 +8674,23 @@ public final class Spec {
       "-\n\rInternalError:\034\372\370\263\007\027\242\363\263\007\rInternalErro" +
       "r\260\363\263\007\001\"/\n\016RateLimitError:\035\372\370\263\007\030\242\363\263\007\016Rate" +
       "LimitError\260\363\263\007\001\"\027\n\025CreateRequestMetadata" +
-      "\"B\n\026CreateResponseMetadata\022\034\n\010affected\030\001" +
-      " \001(\003B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetReque" +
-      "stMetadata\"<\n\023GetResponseMetadata\022\031\n\005fou" +
-      "nd\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025Upda" +
-      "teRequestMetadata\"B\n\026UpdateResponseMetad" +
-      "ata\022\034\n\010affected\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005" +
-      "\250\363\263\007\001\"\027\n\025DeleteRequestMetadata\"B\n\026Delete" +
-      "ResponseMetadata\022\034\n\010affected\030\001 \001(\003B\n\362\370\263\007" +
-      "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMetadat" +
-      "a\022\016\n\006cursor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit" +
-      "\030\003 \001(\005\":\n\024ListResponseMetadata\022\023\n\013next_c" +
-      "ursor\030\001 \001(\t\022\r\n\005found\030\002 \001(\003B\257\002\n\034com.stron" +
-      "gdm.api.v1.plumbing\222A\215\002\022\260\001\n\034gRPC/JSON Ga" +
-      "teway Tech Spike\022;an exploration of how " +
-      "it feels to use the gRPC JSON gateway\"N\n" +
-      "\022gRPC-Gateway spike\022\"https://www.strongd" +
-      "m.com/docs/api/\032\024support@strongdm.com2\0031" +
-      ".0\032\020app.strongdm.comrF\n!Learn more about" +
-      " the strongDM API\022!https://www.strongdm." +
-      "com/docs/apib\006proto3"
+      "\"$\n\026CreateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024" +
+      "\n\022GetRequestMetadata\"!\n\023GetResponseMetad" +
+      "ata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025UpdateRequestMetadata" +
+      "\"$\n\026UpdateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027" +
+      "\n\025DeleteRequestMetadata\"$\n\026DeleteRespons" +
+      "eMetadata:\n\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMeta" +
+      "data\022\016\n\006cursor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005li" +
+      "mit\030\003 \001(\005\":\n\024ListResponseMetadata\022\023\n\013nex" +
+      "t_cursor\030\001 \001(\t\022\r\n\005found\030\002 \001(\005B\257\002\n\034com.st" +
+      "rongdm.api.v1.plumbing\222A\215\002\022\260\001\n\034gRPC/JSON" +
+      " Gateway Tech Spike\022;an exploration of h" +
+      "ow it feels to use the gRPC JSON gateway" +
+      "\"N\n\022gRPC-Gateway spike\022\"https://www.stro" +
+      "ngdm.com/docs/api/\032\024support@strongdm.com" +
+      "2\0031.0\032\020app.strongdm.comrF\n!Learn more ab" +
+      "out the strongDM API\022!https://www.strong" +
+      "dm.com/docs/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9031,7 +8751,7 @@ public final class Spec {
     internal_static_v1_CreateResponseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_CreateResponseMetadata_descriptor,
-        new java.lang.String[] { "Affected", });
+        new java.lang.String[] { });
     internal_static_v1_GetRequestMetadata_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_v1_GetRequestMetadata_fieldAccessorTable = new
@@ -9043,7 +8763,7 @@ public final class Spec {
     internal_static_v1_GetResponseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GetResponseMetadata_descriptor,
-        new java.lang.String[] { "Found", });
+        new java.lang.String[] { });
     internal_static_v1_UpdateRequestMetadata_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_v1_UpdateRequestMetadata_fieldAccessorTable = new
@@ -9055,7 +8775,7 @@ public final class Spec {
     internal_static_v1_UpdateResponseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_UpdateResponseMetadata_descriptor,
-        new java.lang.String[] { "Affected", });
+        new java.lang.String[] { });
     internal_static_v1_DeleteRequestMetadata_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_v1_DeleteRequestMetadata_fieldAccessorTable = new
@@ -9067,7 +8787,7 @@ public final class Spec {
     internal_static_v1_DeleteResponseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DeleteResponseMetadata_descriptor,
-        new java.lang.String[] { "Affected", });
+        new java.lang.String[] { });
     internal_static_v1_ListRequestMetadata_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_v1_ListRequestMetadata_fieldAccessorTable = new

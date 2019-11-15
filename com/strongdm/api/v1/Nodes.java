@@ -59,9 +59,8 @@ public class Nodes {
     }
     
     // Update patches a node by ID.
-    public NodeUpdateResponse update(String id, Node node) throws BaseException {
+    public NodeUpdateResponse update(Node node) throws BaseException {
         NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
-        builder.setId(id);
         builder.setNode(Plumbing.nodeToPlumbing(node));
         NodesPlumbing.NodeUpdateRequest req = builder.build();
         NodesPlumbing.NodeUpdateResponse plumbingResponse;

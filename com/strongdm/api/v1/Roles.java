@@ -58,9 +58,8 @@ public class Roles {
     }
     
     // Update patches a Role by ID.
-    public RoleUpdateResponse update(String id, Role role) throws BaseException {
+    public RoleUpdateResponse update(Role role) throws BaseException {
         RolesPlumbing.RoleUpdateRequest.Builder builder = RolesPlumbing.RoleUpdateRequest.newBuilder();
-        builder.setId(id);
         builder.setRole(Plumbing.roleToPlumbing(role));
         RolesPlumbing.RoleUpdateRequest req = builder.build();
         RolesPlumbing.RoleUpdateResponse plumbingResponse;

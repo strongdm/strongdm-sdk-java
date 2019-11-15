@@ -14,7 +14,6 @@ public class Plumbing {
 
     public static com.strongdm.api.v1.CreateResponseMetadata createResponseMetadataToPorcelain(CreateResponseMetadata plumbing) {
         com.strongdm.api.v1.CreateResponseMetadata porcelain = new com.strongdm.api.v1.CreateResponseMetadata();
-        porcelain.setAffected(plumbing.getAffected());
         return porcelain;
     }
 
@@ -23,7 +22,6 @@ public class Plumbing {
             return null;
         }
         CreateResponseMetadata.Builder builder = CreateResponseMetadata.newBuilder();
-        builder.setAffected(porcelain.getAffected());
         return builder.build();
     }
 
@@ -41,7 +39,6 @@ public class Plumbing {
 
     public static com.strongdm.api.v1.GetResponseMetadata getResponseMetadataToPorcelain(GetResponseMetadata plumbing) {
         com.strongdm.api.v1.GetResponseMetadata porcelain = new com.strongdm.api.v1.GetResponseMetadata();
-        porcelain.setFound(plumbing.getFound());
         return porcelain;
     }
 
@@ -50,7 +47,6 @@ public class Plumbing {
             return null;
         }
         GetResponseMetadata.Builder builder = GetResponseMetadata.newBuilder();
-        builder.setFound(porcelain.getFound());
         return builder.build();
     }
 
@@ -68,7 +64,6 @@ public class Plumbing {
 
     public static com.strongdm.api.v1.UpdateResponseMetadata updateResponseMetadataToPorcelain(UpdateResponseMetadata plumbing) {
         com.strongdm.api.v1.UpdateResponseMetadata porcelain = new com.strongdm.api.v1.UpdateResponseMetadata();
-        porcelain.setAffected(plumbing.getAffected());
         return porcelain;
     }
 
@@ -77,7 +72,6 @@ public class Plumbing {
             return null;
         }
         UpdateResponseMetadata.Builder builder = UpdateResponseMetadata.newBuilder();
-        builder.setAffected(porcelain.getAffected());
         return builder.build();
     }
 
@@ -95,7 +89,6 @@ public class Plumbing {
 
     public static com.strongdm.api.v1.DeleteResponseMetadata deleteResponseMetadataToPorcelain(DeleteResponseMetadata plumbing) {
         com.strongdm.api.v1.DeleteResponseMetadata porcelain = new com.strongdm.api.v1.DeleteResponseMetadata();
-        porcelain.setAffected(plumbing.getAffected());
         return porcelain;
     }
 
@@ -104,7 +97,6 @@ public class Plumbing {
             return null;
         }
         DeleteResponseMetadata.Builder builder = DeleteResponseMetadata.newBuilder();
-        builder.setAffected(porcelain.getAffected());
         return builder.build();
     }
 

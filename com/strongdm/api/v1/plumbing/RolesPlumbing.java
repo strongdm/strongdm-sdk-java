@@ -3292,12 +3292,12 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -3459,7 +3459,7 @@ public final class RolesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -3475,7 +3475,7 @@ public final class RolesPlumbing {
       }
     }
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -4003,7 +4003,7 @@ public final class RolesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -4019,7 +4019,7 @@ public final class RolesPlumbing {
         }
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -4036,7 +4036,7 @@ public final class RolesPlumbing {
         }
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -4051,7 +4051,7 @@ public final class RolesPlumbing {
         return this;
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -4061,7 +4061,7 @@ public final class RolesPlumbing {
         return this;
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -9486,43 +9486,43 @@ public final class RolesPlumbing {
       "\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"t\n\017RoleGetRespons" +
       "e\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadata" +
       "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"x\n\021RoleUpdateReques" +
+      "\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021RoleUpdateReques" +
       "t\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetada" +
-      "ta\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\003 \001(\013" +
-      "2\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"z\n\022RoleUpdateResp" +
-      "onse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateResponseMe" +
-      "tadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.Ro" +
-      "leB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDelete" +
-      "Request\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequest" +
-      "Metadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"V\n\022Role" +
-      "DeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delete" +
-      "ResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001" +
-      "\"T\n\017RoleListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.L" +
-      "istRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\"_\n\020RoleListResponse\022&\n\004meta\030\001 \001(\013" +
-      "2\030.v1.ListResponseMetadata\022#\n\005roles\030\002 \003(" +
-      "\0132\010.v1.RoleB\n\362\370\263\007\005\270\363\263\007\001\"\225\002\n\004Role\022\035\n\002id\030\001" +
-      " \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362" +
-      "\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\022+\n\tcomposite\030\003 \001(\010B\030\362" +
-      "\370\263\007\023\242\363\263\007\tComposite\260\363\263\007\001\022-\n\005roles\030\004 \003(\0132\010" +
-      ".v1.RoleB\024\362\370\263\007\017\242\363\263\007\005Roles\260\363\263\007\001:o\372\370\263\007\005\250\363\263" +
-      "\007\001\222Ab*:\n\007A Role.\022/https://www.strongdm.c" +
-      "om/docs/api/entities#Role2$\022\"{ \"id\": \"7\"" +
-      ", \"name\": \"happy-goat\"}2\362\003\n\005Roles\022\245\001\n\006Cr" +
-      "eate\022\025.v1.RoleCreateRequest\032\026.v1.RoleCre" +
-      "ateResponse\"l\202\323\344\223\002\016\"\t/v1/roles:\001*\222AU\"S\n\030" +
-      "Learn how to make a Role\0227https://www.st" +
-      "rongdm.com/docs/api/services/Roles#Creat" +
-      "e\022F\n\003Get\022\022.v1.RoleGetRequest\032\023.v1.RoleGe" +
-      "tResponse\"\026\202\323\344\223\002\020\022\016/v1/roles/{id}\022R\n\006Upd" +
-      "ate\022\025.v1.RoleUpdateRequest\032\026.v1.RoleUpda" +
-      "teResponse\"\031\202\323\344\223\002\023\032\016/v1/roles/{id}:\001*\022O\n" +
-      "\006Delete\022\025.v1.RoleDeleteRequest\032\026.v1.Role" +
-      "DeleteResponse\"\026\202\323\344\223\002\020*\016/v1/roles/{id}\022D" +
-      "\n\004List\022\023.v1.RoleListRequest\032\024.v1.RoleLis" +
-      "tResponse\"\021\202\323\344\223\002\013\022\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004" +
-      "RoleB-\n\034com.strongdm.api.v1.plumbingB\rRo" +
-      "lesPlumbingb\006proto3"
+      "ta\022\n\n\002id\030\002 \001(\t\022\"\n\004role\030\003 \001(\0132\010.v1.RoleB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\"z\n\022RoleUpdateResponse\0224\n\004meta" +
+      "\030\001 \001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDeleteRequest\022\'\n\004m" +
+      "eta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002" +
+      "id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"V\n\022RoleDeleteRespon" +
+      "se\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMeta" +
+      "dataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleList" +
+      "Request\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMe" +
+      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"_\n\020Ro" +
+      "leListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRe" +
+      "sponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.RoleB" +
+      "\n\362\370\263\007\005\270\363\263\007\001\"\225\002\n\004Role\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242" +
+      "\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Nam" +
+      "e\260\363\263\007\001\022+\n\tcomposite\030\003 \001(\010B\030\362\370\263\007\023\242\363\263\007\tCom" +
+      "posite\260\363\263\007\001\022-\n\005roles\030\004 \003(\0132\010.v1.RoleB\024\362\370" +
+      "\263\007\017\242\363\263\007\005Roles\260\363\263\007\001:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A R" +
+      "ole.\022/https://www.strongdm.com/docs/api/" +
+      "entities#Role2$\022\"{ \"id\": \"7\", \"name\": \"h" +
+      "appy-goat\"}2\362\003\n\005Roles\022\245\001\n\006Create\022\025.v1.Ro" +
+      "leCreateRequest\032\026.v1.RoleCreateResponse\"" +
+      "l\202\323\344\223\002\016\"\t/v1/roles:\001*\222AU\"S\n\030Learn how to" +
+      " make a Role\0227https://www.strongdm.com/d" +
+      "ocs/api/services/Roles#Create\022F\n\003Get\022\022.v" +
+      "1.RoleGetRequest\032\023.v1.RoleGetResponse\"\026\202" +
+      "\323\344\223\002\020\022\016/v1/roles/{id}\022R\n\006Update\022\025.v1.Rol" +
+      "eUpdateRequest\032\026.v1.RoleUpdateResponse\"\031" +
+      "\202\323\344\223\002\023\032\016/v1/roles/{id}:\001*\022O\n\006Delete\022\025.v1" +
+      ".RoleDeleteRequest\032\026.v1.RoleDeleteRespon" +
+      "se\"\026\202\323\344\223\002\020*\016/v1/roles/{id}\022D\n\004List\022\023.v1." +
+      "RoleListRequest\032\024.v1.RoleListResponse\"\021\202" +
+      "\323\344\223\002\013\022\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com." +
+      "strongdm.api.v1.plumbingB\rRolesPlumbingb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

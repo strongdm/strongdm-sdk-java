@@ -3492,12 +3492,12 @@ public final class NodesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -3659,7 +3659,7 @@ public final class NodesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -3675,7 +3675,7 @@ public final class NodesPlumbing {
       }
     }
     /**
-     * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string id = 2;</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -4203,7 +4203,7 @@ public final class NodesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -4219,7 +4219,7 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -4236,7 +4236,7 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -4251,7 +4251,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -4261,7 +4261,7 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string id = 2;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -11946,50 +11946,50 @@ public final class NodesPlumbing {
       "\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"t\n\017NodeGetResponse" +
       "\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB" +
       "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"x\n\021NodeUpdateRequest" +
+      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021NodeUpdateRequest" +
       "\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetadat" +
-      "a\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\003 \001(\0132" +
-      "\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"z\n\022NodeUpdateRespo" +
-      "nse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateResponseMet" +
-      "adataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.Nod" +
-      "eB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteR" +
-      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestM" +
-      "etadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"V\n\022NodeD" +
-      "eleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteR" +
-      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"" +
-      "T\n\017NodeListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.Li" +
-      "stRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\"_\n\020NodeListResponse\022&\n\004meta\030\001 \001(\0132" +
-      "\030.v1.ListResponseMetadata\022#\n\005nodes\030\002 \003(\013" +
-      "2\010.v1.NodeB\n\362\370\263\007\005\270\363\263\007\001\"\313\001\n\004Node\022\032\n\005relay" +
-      "\030\001 \001(\0132\t.v1.RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v" +
-      "1.GatewayH\000:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A node.\022/h" +
-      "ttps://www.strongdm.com/docs/api/entitie" +
-      "s#Node2$\022\"{ \"id\": \"7\", \"name\": \"happy-go" +
-      "at\"}B\026\n\004node\022\016\252\370\263\007\t\242\370\263\007\004Node\"^\n\005Relay\022\035\n" +
-      "\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001" +
-      "(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250" +
-      "\363\263\007\001\"\314\001\n\007Gateway\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002" +
-      "ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263" +
-      "\007\001\0226\n\016listen_address\030\003 \001(\tB\036\362\370\263\007\031\242\363\263\007\nLi" +
-      "stenAddr\250\363\263\007\001\260\363\263\007\001\0222\n\014bind_address\030\004 \001(\t" +
-      "B\034\362\370\263\007\027\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263" +
-      "\007\004Node\250\363\263\007\001\"F\n\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022\031\n\005token\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363" +
-      "\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Create\022\025.v1.NodeCreate" +
-      "Request\032\026.v1.NodeCreateResponse\"l\202\323\344\223\002\016\"" +
-      "\t/v1/nodes:\001*\222AU\"S\n\030Learn how to make a " +
-      "Node\0227https://www.strongdm.com/docs/api/" +
-      "services/Nodes#Create\022F\n\003Get\022\022.v1.NodeGe" +
-      "tRequest\032\023.v1.NodeGetResponse\"\026\202\323\344\223\002\020\022\016/" +
-      "v1/nodes/{id}\022R\n\006Update\022\025.v1.NodeUpdateR" +
-      "equest\032\026.v1.NodeUpdateResponse\"\031\202\323\344\223\002\023\032\016" +
-      "/v1/nodes/{id}:\001*\022O\n\006Delete\022\025.v1.NodeDel" +
-      "eteRequest\032\026.v1.NodeDeleteResponse\"\026\202\323\344\223" +
-      "\002\020*\016/v1/nodes/{id}\022D\n\004List\022\023.v1.NodeList" +
-      "Request\032\024.v1.NodeListResponse\"\021\202\323\344\223\002\013\022\t/" +
-      "v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004NodeB-\n\034com.strongdm" +
-      ".api.v1.plumbingB\rNodesPlumbingb\006proto3"
+      "a\022\n\n\002id\030\002 \001(\t\022\"\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\"z\n\022NodeUpdateResponse\0224\n\004meta\030" +
+      "\001 \001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007" +
+      "\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteRequest\022\'\n\004me" +
+      "ta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002i" +
+      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"V\n\022NodeDeleteRespons" +
+      "e\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetad" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeListR" +
+      "equest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMet" +
+      "adata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"_\n\020Nod" +
+      "eListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRes" +
+      "ponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.NodeB\n" +
+      "\362\370\263\007\005\270\363\263\007\001\"\313\001\n\004Node\022\032\n\005relay\030\001 \001(\0132\t.v1." +
+      "RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v1.GatewayH\000:" +
+      "o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A node.\022/https://www.s" +
+      "trongdm.com/docs/api/entities#Node2$\022\"{ " +
+      "\"id\": \"7\", \"name\": \"happy-goat\"}B\026\n\004node" +
+      "\022\016\252\370\263\007\t\242\370\263\007\004Node\"^\n\005Relay\022\035\n\002id\030\001 \001(\tB\021\362" +
+      "\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263" +
+      "\007\004Name\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\314\001\n\007Gat" +
+      "eway\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004n" +
+      "ame\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\0226\n\016listen" +
+      "_address\030\003 \001(\tB\036\362\370\263\007\031\242\363\263\007\nListenAddr\250\363\263\007" +
+      "\001\260\363\263\007\001\0222\n\014bind_address\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010" +
+      "BindAddr\250\363\263\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"" +
+      "F\n\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005toke" +
+      "n\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\362\003\n\005Node" +
+      "s\022\245\001\n\006Create\022\025.v1.NodeCreateRequest\032\026.v1" +
+      ".NodeCreateResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001" +
+      "*\222AU\"S\n\030Learn how to make a Node\0227https:" +
+      "//www.strongdm.com/docs/api/services/Nod" +
+      "es#Create\022F\n\003Get\022\022.v1.NodeGetRequest\032\023.v" +
+      "1.NodeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id" +
+      "}\022R\n\006Update\022\025.v1.NodeUpdateRequest\032\026.v1." +
+      "NodeUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{i" +
+      "d}:\001*\022O\n\006Delete\022\025.v1.NodeDeleteRequest\032\026" +
+      ".v1.NodeDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/node" +
+      "s/{id}\022D\n\004List\022\023.v1.NodeListRequest\032\024.v1" +
+      ".NodeListResponse\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371" +
+      "\263\007\t\302\371\263\007\004NodeB-\n\034com.strongdm.api.v1.plum" +
+      "bingB\rNodesPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
