@@ -584,7 +584,7 @@ public class Plumbing {
                 }
                 if (any.is(com.strongdm.api.v1.plumbing.Spec.PermissionError.class)) {
                     com.strongdm.api.v1.plumbing.Spec.PermissionError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.PermissionError.class);
-                    return new com.strongdm.api.v1.PermissionException(e.getMessage(), plumbing.getPermission(), plumbing.getEntitiesList());
+                    return new com.strongdm.api.v1.PermissionException(e.getMessage());
                 }
                 if (any.is(com.strongdm.api.v1.plumbing.Spec.InternalError.class)) {
                     com.strongdm.api.v1.plumbing.Spec.InternalError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.InternalError.class);

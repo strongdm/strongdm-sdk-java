@@ -8,18 +8,7 @@ import java.util.ArrayList;
 public final class PermissionException extends BaseException {
     static final long serialVersionUID = 1;
 
-    private final String permission;
-    public String getPermission() {
-        return this.permission;
-    }
-    private final ArrayList<String> entities;
-    public List<String> getEntities() {
-        return this.entities;
-    }
-
-    public PermissionException(String errorMessage, String permission, Collection<String> entities) {
+    public PermissionException(String errorMessage) {
         super(errorMessage);
-        this.permission = permission;
-        this.entities = new ArrayList<String>(entities);
     }
 }

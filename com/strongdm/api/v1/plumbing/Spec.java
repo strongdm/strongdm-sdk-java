@@ -2161,43 +2161,6 @@ public final class Spec {
   public interface PermissionErrorOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.PermissionError)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-     * @return The permission.
-     */
-    java.lang.String getPermission();
-    /**
-     * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for permission.
-     */
-    com.google.protobuf.ByteString
-        getPermissionBytes();
-
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @return A list containing the entities.
-     */
-    java.util.List<java.lang.String>
-        getEntitiesList();
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @return The count of entities.
-     */
-    int getEntitiesCount();
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The entities at the given index.
-     */
-    java.lang.String getEntities(int index);
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the entities at the given index.
-     */
-    com.google.protobuf.ByteString
-        getEntitiesBytes(int index);
   }
   /**
    * <pre>
@@ -2216,8 +2179,6 @@ public final class Spec {
       super(builder);
     }
     private PermissionError() {
-      permission_ = "";
-      entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -2240,7 +2201,6 @@ public final class Spec {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2251,21 +2211,6 @@ public final class Spec {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              permission_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                entities_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              entities_.add(s);
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2281,9 +2226,6 @@ public final class Spec {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          entities_ = entities_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2301,77 +2243,6 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.PermissionError.class, com.strongdm.api.v1.plumbing.Spec.PermissionError.Builder.class);
     }
 
-    public static final int PERMISSION_FIELD_NUMBER = 1;
-    private volatile java.lang.Object permission_;
-    /**
-     * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-     * @return The permission.
-     */
-    public java.lang.String getPermission() {
-      java.lang.Object ref = permission_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        permission_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for permission.
-     */
-    public com.google.protobuf.ByteString
-        getPermissionBytes() {
-      java.lang.Object ref = permission_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        permission_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ENTITIES_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList entities_;
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @return A list containing the entities.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getEntitiesList() {
-      return entities_;
-    }
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @return The count of entities.
-     */
-    public int getEntitiesCount() {
-      return entities_.size();
-    }
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The entities at the given index.
-     */
-    public java.lang.String getEntities(int index) {
-      return entities_.get(index);
-    }
-    /**
-     * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the entities at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getEntitiesBytes(int index) {
-      return entities_.getByteString(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2386,12 +2257,6 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPermissionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, permission_);
-      }
-      for (int i = 0; i < entities_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, entities_.getRaw(i));
-      }
       unknownFields.writeTo(output);
     }
 
@@ -2401,17 +2266,6 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPermissionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, permission_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < entities_.size(); i++) {
-          dataSize += computeStringSizeNoTag(entities_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getEntitiesList().size();
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2427,10 +2281,6 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.PermissionError other = (com.strongdm.api.v1.plumbing.Spec.PermissionError) obj;
 
-      if (!getPermission()
-          .equals(other.getPermission())) return false;
-      if (!getEntitiesList()
-          .equals(other.getEntitiesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2442,12 +2292,6 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PERMISSION_FIELD_NUMBER;
-      hash = (53 * hash) + getPermission().hashCode();
-      if (getEntitiesCount() > 0) {
-        hash = (37 * hash) + ENTITIES_FIELD_NUMBER;
-        hash = (53 * hash) + getEntitiesList().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2585,10 +2429,6 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        permission_ = "";
-
-        entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -2615,13 +2455,6 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.PermissionError buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.PermissionError result = new com.strongdm.api.v1.plumbing.Spec.PermissionError(this);
-        int from_bitField0_ = bitField0_;
-        result.permission_ = permission_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          entities_ = entities_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.entities_ = entities_;
         onBuilt();
         return result;
       }
@@ -2670,20 +2503,6 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.PermissionError other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.PermissionError.getDefaultInstance()) return this;
-        if (!other.getPermission().isEmpty()) {
-          permission_ = other.permission_;
-          onChanged();
-        }
-        if (!other.entities_.isEmpty()) {
-          if (entities_.isEmpty()) {
-            entities_ = other.entities_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureEntitiesIsMutable();
-            entities_.addAll(other.entities_);
-          }
-          onChanged();
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2710,193 +2529,6 @@ public final class Spec {
             mergeFrom(parsedMessage);
           }
         }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object permission_ = "";
-      /**
-       * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-       * @return The permission.
-       */
-      public java.lang.String getPermission() {
-        java.lang.Object ref = permission_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          permission_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for permission.
-       */
-      public com.google.protobuf.ByteString
-          getPermissionBytes() {
-        java.lang.Object ref = permission_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          permission_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The permission to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPermission(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        permission_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPermission() {
-        
-        permission_ = getDefaultInstance().getPermission();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string permission = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for permission to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPermissionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        permission_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureEntitiesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          entities_ = new com.google.protobuf.LazyStringArrayList(entities_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @return A list containing the entities.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getEntitiesList() {
-        return entities_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @return The count of entities.
-       */
-      public int getEntitiesCount() {
-        return entities_.size();
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @param index The index of the element to return.
-       * @return The entities at the given index.
-       */
-      public java.lang.String getEntities(int index) {
-        return entities_.get(index);
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the entities at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getEntitiesBytes(int index) {
-        return entities_.getByteString(index);
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @param index The index to set the value at.
-       * @param value The entities to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEntities(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEntitiesIsMutable();
-        entities_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The entities to add.
-       * @return This builder for chaining.
-       */
-      public Builder addEntities(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEntitiesIsMutable();
-        entities_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @param values The entities to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllEntities(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureEntitiesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, entities_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEntities() {
-        entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes of the entities to add.
-       * @return This builder for chaining.
-       */
-      public Builder addEntitiesBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureEntitiesIsMutable();
-        entities_.add(value);
-        onChanged();
         return this;
       }
       @java.lang.Override
@@ -7229,12 +6861,20 @@ public final class Spec {
         getCursorBytes();
 
     /**
+     * <pre>
+     * using int32 so JSON is marshalled numerically
+     * </pre>
+     *
      * <code>int32 page = 2;</code>
      * @return The page.
      */
     int getPage();
 
     /**
+     * <pre>
+     * using int32 so JSON is marshalled numerically
+     * </pre>
+     *
      * <code>int32 limit = 3;</code>
      * @return The limit.
      */
@@ -7377,6 +7017,10 @@ public final class Spec {
     public static final int PAGE_FIELD_NUMBER = 2;
     private int page_;
     /**
+     * <pre>
+     * using int32 so JSON is marshalled numerically
+     * </pre>
+     *
      * <code>int32 page = 2;</code>
      * @return The page.
      */
@@ -7387,6 +7031,10 @@ public final class Spec {
     public static final int LIMIT_FIELD_NUMBER = 3;
     private int limit_;
     /**
+     * <pre>
+     * using int32 so JSON is marshalled numerically
+     * </pre>
+     *
      * <code>int32 limit = 3;</code>
      * @return The limit.
      */
@@ -7812,6 +7460,10 @@ public final class Spec {
 
       private int page_ ;
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 page = 2;</code>
        * @return The page.
        */
@@ -7819,6 +7471,10 @@ public final class Spec {
         return page_;
       }
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 page = 2;</code>
        * @param value The page to set.
        * @return This builder for chaining.
@@ -7830,6 +7486,10 @@ public final class Spec {
         return this;
       }
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 page = 2;</code>
        * @return This builder for chaining.
        */
@@ -7842,6 +7502,10 @@ public final class Spec {
 
       private int limit_ ;
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 limit = 3;</code>
        * @return The limit.
        */
@@ -7849,6 +7513,10 @@ public final class Spec {
         return limit_;
       }
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 limit = 3;</code>
        * @param value The limit to set.
        * @return This builder for chaining.
@@ -7860,6 +7528,10 @@ public final class Spec {
         return this;
       }
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 limit = 3;</code>
        * @return This builder for chaining.
        */
@@ -7939,6 +7611,10 @@ public final class Spec {
         getNextCursorBytes();
 
     /**
+     * <pre>
+     * using int32 so JSON is marshalled numerically
+     * </pre>
+     *
      * <code>int32 found = 2;</code>
      * @return The found.
      */
@@ -8076,6 +7752,10 @@ public final class Spec {
     public static final int FOUND_FIELD_NUMBER = 2;
     private int found_;
     /**
+     * <pre>
+     * using int32 so JSON is marshalled numerically
+     * </pre>
+     *
      * <code>int32 found = 2;</code>
      * @return The found.
      */
@@ -8484,6 +8164,10 @@ public final class Spec {
 
       private int found_ ;
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 found = 2;</code>
        * @return The found.
        */
@@ -8491,6 +8175,10 @@ public final class Spec {
         return found_;
       }
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 found = 2;</code>
        * @param value The found to set.
        * @return This builder for chaining.
@@ -8502,6 +8190,10 @@ public final class Spec {
         return this;
       }
       /**
+       * <pre>
+       * using int32 so JSON is marshalled numerically
+       * </pre>
+       *
        * <code>int32 found = 2;</code>
        * @return This builder for chaining.
        */
@@ -8667,30 +8359,28 @@ public final class Spec {
       "\370\263\007\027\242\363\263\007\rNotFoundError\260\363\263\007\001\"1\n\017BadReques" +
       "tError:\036\372\370\263\007\031\242\363\263\007\017BadRequestError\260\363\263\007\001\"9" +
       "\n\023AuthenticationError:\"\372\370\263\007\035\242\363\263\007\023Authent" +
-      "icationError\260\363\263\007\001\"\213\001\n\017PermissionError\022-\n" +
-      "\npermission\030\001 \001(\tB\031\362\370\263\007\024\242\363\263\007\nPermission\260" +
-      "\363\263\007\001\022)\n\010entities\030\002 \003(\tB\027\362\370\263\007\022\242\363\263\007\010Entiti" +
-      "es\260\363\263\007\001:\036\372\370\263\007\031\242\363\263\007\017PermissionError\260\363\263\007\001\"" +
-      "-\n\rInternalError:\034\372\370\263\007\027\242\363\263\007\rInternalErro" +
-      "r\260\363\263\007\001\"/\n\016RateLimitError:\035\372\370\263\007\030\242\363\263\007\016Rate" +
-      "LimitError\260\363\263\007\001\"\027\n\025CreateRequestMetadata" +
-      "\"$\n\026CreateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024" +
-      "\n\022GetRequestMetadata\"!\n\023GetResponseMetad" +
-      "ata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025UpdateRequestMetadata" +
-      "\"$\n\026UpdateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027" +
-      "\n\025DeleteRequestMetadata\"$\n\026DeleteRespons" +
-      "eMetadata:\n\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMeta" +
-      "data\022\016\n\006cursor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005li" +
-      "mit\030\003 \001(\005\":\n\024ListResponseMetadata\022\023\n\013nex" +
-      "t_cursor\030\001 \001(\t\022\r\n\005found\030\002 \001(\005B\257\002\n\034com.st" +
-      "rongdm.api.v1.plumbing\222A\215\002\022\260\001\n\034gRPC/JSON" +
-      " Gateway Tech Spike\022;an exploration of h" +
-      "ow it feels to use the gRPC JSON gateway" +
-      "\"N\n\022gRPC-Gateway spike\022\"https://www.stro" +
-      "ngdm.com/docs/api/\032\024support@strongdm.com" +
-      "2\0031.0\032\020app.strongdm.comrF\n!Learn more ab" +
-      "out the strongDM API\022!https://www.strong" +
-      "dm.com/docs/apib\006proto3"
+      "icationError\260\363\263\007\001\"1\n\017PermissionError:\036\372\370" +
+      "\263\007\031\242\363\263\007\017PermissionError\260\363\263\007\001\"-\n\rInternal" +
+      "Error:\034\372\370\263\007\027\242\363\263\007\rInternalError\260\363\263\007\001\"/\n\016R" +
+      "ateLimitError:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260" +
+      "\363\263\007\001\"\027\n\025CreateRequestMetadata\"$\n\026CreateR" +
+      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetReques" +
+      "tMetadata\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250" +
+      "\363\263\007\001\"\027\n\025UpdateRequestMetadata\"$\n\026UpdateR" +
+      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteReq" +
+      "uestMetadata\"$\n\026DeleteResponseMetadata:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMetadata\022\016\n\006cur" +
+      "sor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":" +
+      "\n\024ListResponseMetadata\022\023\n\013next_cursor\030\001 " +
+      "\001(\t\022\r\n\005found\030\002 \001(\005B\257\002\n\034com.strongdm.api." +
+      "v1.plumbing\222A\215\002\022\260\001\n\034gRPC/JSON Gateway Te" +
+      "ch Spike\022;an exploration of how it feels" +
+      " to use the gRPC JSON gateway\"N\n\022gRPC-Ga" +
+      "teway spike\022\"https://www.strongdm.com/do" +
+      "cs/api/\032\024support@strongdm.com2\0031.0\032\020app." +
+      "strongdm.comrF\n!Learn more about the str" +
+      "ongDM API\022!https://www.strongdm.com/docs" +
+      "/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8727,7 +8417,7 @@ public final class Spec {
     internal_static_v1_PermissionError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_PermissionError_descriptor,
-        new java.lang.String[] { "Permission", "Entities", });
+        new java.lang.String[] { });
     internal_static_v1_InternalError_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_v1_InternalError_fieldAccessorTable = new
