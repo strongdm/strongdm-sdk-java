@@ -526,7 +526,6 @@ public class Plumbing {
         porcelain.setId(plumbing.getId());
         porcelain.setName(plumbing.getName());
         porcelain.setComposite(plumbing.getComposite());
-        porcelain.setRoles(Plumbing.repeatedRoleToPorcelain(plumbing.getRolesList()));
         return porcelain;
     }
 
@@ -542,7 +541,6 @@ public class Plumbing {
             builder.setName(porcelain.getName());
         }
         builder.setComposite(porcelain.getComposite());
-        builder.addAllRoles(Plumbing.repeatedRoleToPlumbing(porcelain.getRoles()));
         return builder.build();
     }
 

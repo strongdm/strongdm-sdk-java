@@ -4,6 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
 
-// UpdateResponseMetadata
+// UpdateResponseMetadata is reserved for future use.
 public class UpdateResponseMetadata {
 }

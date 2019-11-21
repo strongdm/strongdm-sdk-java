@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
 
-// Role is a domain object --
+// A Role grants users access to a set of resources. Composite roles have no
+// resource associations of their own, but instead grant access to the combined
+// resources of their child roles.
 public class Role {
-
+    // Unique identifier of the role.
     private String id;
     public String getId() {
         return this.id;
@@ -15,7 +17,7 @@ public class Role {
         this.id = in;
         return this;
     }
-
+    // Unique human-readable name of the role.
     private String name;
     public String getName() {
         return this.name;
@@ -24,48 +26,13 @@ public class Role {
         this.name = in;
         return this;
     }
-
+    // True if the role is a composite role.
     private boolean composite;
     public boolean getComposite() {
         return this.composite;
     }
     public Role setComposite(boolean in) {
         this.composite = in;
-        return this;
-    }
-
-    private ArrayList<Role> roles = new ArrayList<Role>();
-    public List<Role> getRoles() {
-        return this.roles;
-    }
-    public Role getRoles(int index) {
-        return this.roles.get(index);
-    }
-    public int getRolesCount() {
-        return this.roles.size();
-    }
-    public Role setRoles(int index, Role v) {
-        this.roles.set(index, v);
-        return this;
-    }
-    public Role removeRoles(int index) {
-        this.roles.remove(index);
-        return this;
-    }
-    public Role addRoles(Role v) {
-        this.roles.add(v);
-        return this;
-    }
-    public Role addAllRoles(Collection<Role> v) {
-        this.roles.addAll(v);
-        return this;
-    }
-    public Role setRoles(Collection<Role> in) {
-        this.roles = new ArrayList<>(in);
-        return this;
-    }
-    public Role clearRoles() {
-        this.roles.clear();
         return this;
     }
 }

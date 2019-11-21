@@ -20,7 +20,11 @@ import com.strongdm.api.v1.plumbing.NodesPlumbing;
 import com.strongdm.api.v1.plumbing.RolesGrpc;
 import com.strongdm.api.v1.plumbing.RolesPlumbing;
 
-// Roles are
+// Roles are tools for controlling user access to resources. Each role holds a
+// list of resources which they grant access to. Composite roles are a special
+// type of role which have no resource associations of their own, but instead
+// grant access to the combined resources associated with a set of child roles.
+// Each user can be a member of one role or composite role.
 public class Roles {
     private final RolesGrpc.RolesBlockingStub stub;
 
@@ -85,14 +89,12 @@ public class Roles {
         return Plumbing.roleDeleteResponseToPorcelain(plumbingResponse);
     }
     
-    // List is a batched Get call.
+    // List gets a list of Roles matching a given set of criteria.
     public Iterable<Role> list(String filter) throws BaseException {
         RolesPlumbing.RoleListRequest.Builder builder = RolesPlumbing.RoleListRequest.newBuilder();
         builder.setFilter(filter);
 
-        ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
-        metaBuilder.setLimit(25);
-        builder.setMeta(metaBuilder);
+        builder.setMeta(ListRequestMetadata.newBuilder());
 
         Supplier<PageResult<Role> > pageFetcher = () -> {
             // Note: this closure captures and reuses the builder to set the next page
@@ -105,8 +107,7 @@ public class Roles {
                 Plumbing.repeatedRoleToPorcelain(plumbingResponse.getRolesList());
 
             boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
-            metaBuilder.setCursor(plumbingResponse.getMeta().getNextCursor());
-            builder.setMeta(metaBuilder);
+            builder.setMeta(ListRequestMetadata.newBuilder().setCursor(plumbingResponse.getMeta().getNextCursor()));
 
             return new PageResult<Role>(page, hasNextCursor);
         };

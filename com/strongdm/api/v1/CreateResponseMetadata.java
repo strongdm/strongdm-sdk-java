@@ -4,6 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
 
-// CreateResponseMetadata
+// CreateResponseMetadata is reserved for future use.
 public class CreateResponseMetadata {
 }

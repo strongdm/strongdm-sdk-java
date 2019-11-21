@@ -91,9 +91,7 @@ public class Nodes {
         NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
         builder.setFilter(filter);
 
-        ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
-        metaBuilder.setLimit(25);
-        builder.setMeta(metaBuilder);
+        builder.setMeta(ListRequestMetadata.newBuilder());
 
         Supplier<PageResult<Node> > pageFetcher = () -> {
             // Note: this closure captures and reuses the builder to set the next page
@@ -106,8 +104,7 @@ public class Nodes {
                 Plumbing.repeatedNodeToPorcelain(plumbingResponse.getNodesList());
 
             boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
-            metaBuilder.setCursor(plumbingResponse.getMeta().getNextCursor());
-            builder.setMeta(metaBuilder);
+            builder.setMeta(ListRequestMetadata.newBuilder().setCursor(plumbingResponse.getMeta().getNextCursor()));
 
             return new PageResult<Node>(page, hasNextCursor);
         };

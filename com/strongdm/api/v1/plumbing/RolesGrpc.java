@@ -17,7 +17,11 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Roles are
+ * Roles are tools for controlling user access to resources. Each role holds a
+ * list of resources which they grant access to. Composite roles are a special
+ * type of role which have no resource associations of their own, but instead
+ * grant access to the combined resources associated with a set of child roles.
+ * Each user can be a member of one role or composite role.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -210,7 +214,11 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are
+   * Roles are tools for controlling user access to resources. Each role holds a
+   * list of resources which they grant access to. Composite roles are a special
+   * type of role which have no resource associations of their own, but instead
+   * grant access to the combined resources associated with a set of child roles.
+   * Each user can be a member of one role or composite role.
    * </pre>
    */
   public static abstract class RolesImplBase implements io.grpc.BindableService {
@@ -257,7 +265,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
     public void list(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request,
@@ -308,7 +316,11 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are
+   * Roles are tools for controlling user access to resources. Each role holds a
+   * list of resources which they grant access to. Composite roles are a special
+   * type of role which have no resource associations of their own, but instead
+   * grant access to the combined resources associated with a set of child roles.
+   * Each user can be a member of one role or composite role.
    * </pre>
    */
   public static final class RolesStub extends io.grpc.stub.AbstractStub<RolesStub> {
@@ -373,7 +385,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
     public void list(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request,
@@ -385,7 +397,11 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are
+   * Roles are tools for controlling user access to resources. Each role holds a
+   * list of resources which they grant access to. Composite roles are a special
+   * type of role which have no resource associations of their own, but instead
+   * grant access to the combined resources associated with a set of child roles.
+   * Each user can be a member of one role or composite role.
    * </pre>
    */
   public static final class RolesBlockingStub extends io.grpc.stub.AbstractStub<RolesBlockingStub> {
@@ -446,7 +462,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse list(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request) {
@@ -457,7 +473,11 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are
+   * Roles are tools for controlling user access to resources. Each role holds a
+   * list of resources which they grant access to. Composite roles are a special
+   * type of role which have no resource associations of their own, but instead
+   * grant access to the combined resources associated with a set of child roles.
+   * Each user can be a member of one role or composite role.
    * </pre>
    */
   public static final class RolesFutureStub extends io.grpc.stub.AbstractStub<RolesFutureStub> {
@@ -522,7 +542,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse> list(
