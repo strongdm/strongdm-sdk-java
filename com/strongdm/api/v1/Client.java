@@ -2,7 +2,8 @@
 package com.strongdm.api.v1;
 
 import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
+import io.grpc.netty.NettyChannelBuilder;
+import io.grpc.netty.GrpcSslContexts;
 import io.grpc.StatusRuntimeException;
 import com.strongdm.api.v1.plumbing.Plumbing;
 
@@ -24,9 +25,14 @@ public class Client {
     
     public Client(String host, int port, String apiKey) throws BaseException {
         try {
-            ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port)
-                .usePlaintext() // Disable TLS for now
-                .build();
+            NettyChannelBuilder builder = NettyChannelBuilder.forAddress(host, port);
+            if (port == 443) {
+                builder = builder.useTransportSecurity().
+                    sslContext(GrpcSslContexts.forClient());
+            } else { 
+                builder = builder.usePlaintext();
+            }
+            ManagedChannel channel = builder.build();
             this.nodes = new Nodes(channel, apiKey);
             this.roles = new Roles(channel, apiKey);
             
