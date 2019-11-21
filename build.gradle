@@ -4,6 +4,8 @@ plugins {
 
 jar.baseName = 'com.strongdm.api'
 
+// for more info on sourceset annotations:
+// https://docs.gradle.org/current/userguide/building_java_projects.html#sec:compile
 sourceSets {
     main {
         java {
@@ -23,11 +25,13 @@ def grpcVersion = '1.25.0'
 def protobufVersion = '3.10.0'
 def protocVersion = protobufVersion
 
+// for more info on dependency annotations:
+// https://docs.gradle.org/current/userguide/building_java_projects.html#sec:java_dependency_management_overview
 dependencies {
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-stub:${grpcVersion}"
+    implementation "io.grpc:grpc-netty:${grpcVersion}"
     compileOnly "javax.annotation:javax.annotation-api:1.2"
-    runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
 }
 
 sourceCompatibility = '1.8'
