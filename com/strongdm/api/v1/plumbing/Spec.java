@@ -19,23 +19,16 @@ public final class Spec {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The entity.
      */
-    java.util.List<java.lang.String>
-        getEntitiesList();
+    java.lang.String getEntity();
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    int getEntitiesCount();
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    java.lang.String getEntities(int index);
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for entity.
      */
     com.google.protobuf.ByteString
-        getEntitiesBytes(int index);
+        getEntityBytes();
   }
   /**
    * <pre>
@@ -54,7 +47,14 @@ public final class Spec {
       super(builder);
     }
     private AlreadyExistsError() {
-      entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      entity_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AlreadyExistsError();
     }
 
     @java.lang.Override
@@ -70,7 +70,6 @@ public final class Spec {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -83,15 +82,12 @@ public final class Spec {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                entities_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              entities_.add(s);
+
+              entity_ = s;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -105,9 +101,6 @@ public final class Spec {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          entities_ = entities_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -125,33 +118,40 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError.class, com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError.Builder.class);
     }
 
-    public static final int ENTITIES_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList entities_;
+    public static final int ENTITY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object entity_;
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The entity.
      */
-    public com.google.protobuf.ProtocolStringList
-        getEntitiesList() {
-      return entities_;
+    public java.lang.String getEntity() {
+      java.lang.Object ref = entity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entity_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    public int getEntitiesCount() {
-      return entities_.size();
-    }
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    public java.lang.String getEntities(int index) {
-      return entities_.get(index);
-    }
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for entity.
      */
     public com.google.protobuf.ByteString
-        getEntitiesBytes(int index) {
-      return entities_.getByteString(index);
+        getEntityBytes() {
+      java.lang.Object ref = entity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -168,8 +168,8 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < entities_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entities_.getRaw(i));
+      if (!getEntityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entity_);
       }
       unknownFields.writeTo(output);
     }
@@ -180,13 +180,8 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < entities_.size(); i++) {
-          dataSize += computeStringSizeNoTag(entities_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getEntitiesList().size();
+      if (!getEntityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entity_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -203,11 +198,10 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError other = (com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError) obj;
 
-      boolean result = true;
-      result = result && getEntitiesList()
-          .equals(other.getEntitiesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getEntity()
+          .equals(other.getEntity())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -217,10 +211,8 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getEntitiesCount() > 0) {
-        hash = (37 * hash) + ENTITIES_FIELD_NUMBER;
-        hash = (53 * hash) + getEntitiesList().hashCode();
-      }
+      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getEntity().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -358,8 +350,8 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        entity_ = "";
+
         return this;
       }
 
@@ -386,47 +378,42 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError result = new com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          entities_ = entities_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.entities_ = entities_;
+        result.entity_ = entity_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -440,14 +427,8 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError.getDefaultInstance()) return this;
-        if (!other.entities_.isEmpty()) {
-          if (entities_.isEmpty()) {
-            entities_ = other.entities_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureEntitiesIsMutable();
-            entities_.addAll(other.entities_);
-          }
+        if (!other.getEntity().isEmpty()) {
+          entity_ = other.entity_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -478,105 +459,86 @@ public final class Spec {
         }
         return this;
       }
-      private int bitField0_;
 
-      private com.google.protobuf.LazyStringList entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureEntitiesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          entities_ = new com.google.protobuf.LazyStringArrayList(entities_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+      private java.lang.Object entity_ = "";
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @return The entity.
        */
-      public com.google.protobuf.ProtocolStringList
-          getEntitiesList() {
-        return entities_.getUnmodifiableView();
+      public java.lang.String getEntity() {
+        java.lang.Object ref = entity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          entity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public int getEntitiesCount() {
-        return entities_.size();
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public java.lang.String getEntities(int index) {
-        return entities_.get(index);
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for entity.
        */
       public com.google.protobuf.ByteString
-          getEntitiesBytes(int index) {
-        return entities_.getByteString(index);
+          getEntityBytes() {
+        java.lang.Object ref = entity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The entity to set.
+       * @return This builder for chaining.
        */
-      public Builder setEntities(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEntitiesIsMutable();
-        entities_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder addEntities(
+      public Builder setEntity(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureEntitiesIsMutable();
-        entities_.add(value);
+  
+        entity_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
-      public Builder addAllEntities(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureEntitiesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, entities_);
+      public Builder clearEntity() {
+        
+        entity_ = getDefaultInstance().getEntity();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for entity to set.
+       * @return This builder for chaining.
        */
-      public Builder clearEntities() {
-        entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder addEntitiesBytes(
+      public Builder setEntityBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureEntitiesIsMutable();
-        entities_.add(value);
+        
+        entity_ = value;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -631,23 +593,16 @@ public final class Spec {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The entity.
      */
-    java.util.List<java.lang.String>
-        getEntitiesList();
+    java.lang.String getEntity();
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    int getEntitiesCount();
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    java.lang.String getEntities(int index);
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for entity.
      */
     com.google.protobuf.ByteString
-        getEntitiesBytes(int index);
+        getEntityBytes();
   }
   /**
    * <pre>
@@ -666,7 +621,14 @@ public final class Spec {
       super(builder);
     }
     private NotFoundError() {
-      entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      entity_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NotFoundError();
     }
 
     @java.lang.Override
@@ -682,7 +644,6 @@ public final class Spec {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -695,15 +656,12 @@ public final class Spec {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                entities_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              entities_.add(s);
+
+              entity_ = s;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -717,9 +675,6 @@ public final class Spec {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          entities_ = entities_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -737,33 +692,40 @@ public final class Spec {
               com.strongdm.api.v1.plumbing.Spec.NotFoundError.class, com.strongdm.api.v1.plumbing.Spec.NotFoundError.Builder.class);
     }
 
-    public static final int ENTITIES_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList entities_;
+    public static final int ENTITY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object entity_;
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The entity.
      */
-    public com.google.protobuf.ProtocolStringList
-        getEntitiesList() {
-      return entities_;
+    public java.lang.String getEntity() {
+      java.lang.Object ref = entity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        entity_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    public int getEntitiesCount() {
-      return entities_.size();
-    }
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-     */
-    public java.lang.String getEntities(int index) {
-      return entities_.get(index);
-    }
-    /**
-     * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for entity.
      */
     public com.google.protobuf.ByteString
-        getEntitiesBytes(int index) {
-      return entities_.getByteString(index);
+        getEntityBytes() {
+      java.lang.Object ref = entity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -780,8 +742,8 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < entities_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entities_.getRaw(i));
+      if (!getEntityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entity_);
       }
       unknownFields.writeTo(output);
     }
@@ -792,13 +754,8 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < entities_.size(); i++) {
-          dataSize += computeStringSizeNoTag(entities_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getEntitiesList().size();
+      if (!getEntityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entity_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -815,11 +772,10 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.NotFoundError other = (com.strongdm.api.v1.plumbing.Spec.NotFoundError) obj;
 
-      boolean result = true;
-      result = result && getEntitiesList()
-          .equals(other.getEntitiesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getEntity()
+          .equals(other.getEntity())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -829,10 +785,8 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getEntitiesCount() > 0) {
-        hash = (37 * hash) + ENTITIES_FIELD_NUMBER;
-        hash = (53 * hash) + getEntitiesList().hashCode();
-      }
+      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getEntity().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -970,8 +924,8 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        entity_ = "";
+
         return this;
       }
 
@@ -998,47 +952,42 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Spec.NotFoundError buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.NotFoundError result = new com.strongdm.api.v1.plumbing.Spec.NotFoundError(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          entities_ = entities_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.entities_ = entities_;
+        result.entity_ = entity_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1052,14 +1001,8 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.NotFoundError other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.NotFoundError.getDefaultInstance()) return this;
-        if (!other.entities_.isEmpty()) {
-          if (entities_.isEmpty()) {
-            entities_ = other.entities_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureEntitiesIsMutable();
-            entities_.addAll(other.entities_);
-          }
+        if (!other.getEntity().isEmpty()) {
+          entity_ = other.entity_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1090,105 +1033,86 @@ public final class Spec {
         }
         return this;
       }
-      private int bitField0_;
 
-      private com.google.protobuf.LazyStringList entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureEntitiesIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          entities_ = new com.google.protobuf.LazyStringArrayList(entities_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+      private java.lang.Object entity_ = "";
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @return The entity.
        */
-      public com.google.protobuf.ProtocolStringList
-          getEntitiesList() {
-        return entities_.getUnmodifiableView();
+      public java.lang.String getEntity() {
+        java.lang.Object ref = entity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          entity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public int getEntitiesCount() {
-        return entities_.size();
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public java.lang.String getEntities(int index) {
-        return entities_.get(index);
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for entity.
        */
       public com.google.protobuf.ByteString
-          getEntitiesBytes(int index) {
-        return entities_.getByteString(index);
+          getEntityBytes() {
+        java.lang.Object ref = entity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The entity to set.
+       * @return This builder for chaining.
        */
-      public Builder setEntities(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEntitiesIsMutable();
-        entities_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder addEntities(
+      public Builder setEntity(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureEntitiesIsMutable();
-        entities_.add(value);
+  
+        entity_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
-      public Builder addAllEntities(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureEntitiesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, entities_);
+      public Builder clearEntity() {
+        
+        entity_ = getDefaultInstance().getEntity();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for entity to set.
+       * @return This builder for chaining.
        */
-      public Builder clearEntities() {
-        entities_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string entities = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder addEntitiesBytes(
+      public Builder setEntityBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureEntitiesIsMutable();
-        entities_.add(value);
+        
+        entity_ = value;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1262,6 +1186,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BadRequestError();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1285,7 +1216,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1354,9 +1285,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.BadRequestError other = (com.strongdm.api.v1.plumbing.Spec.BadRequestError) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1535,35 +1465,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1608,7 +1538,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1682,6 +1612,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuthenticationError();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1705,7 +1642,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1774,9 +1711,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.AuthenticationError other = (com.strongdm.api.v1.plumbing.Spec.AuthenticationError) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1955,35 +1891,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2028,7 +1964,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2102,6 +2038,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PermissionError();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2125,7 +2068,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2194,9 +2137,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.PermissionError other = (com.strongdm.api.v1.plumbing.Spec.PermissionError) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2375,35 +2317,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2448,7 +2390,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2522,6 +2464,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InternalError();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2545,7 +2494,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2614,9 +2563,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.InternalError other = (com.strongdm.api.v1.plumbing.Spec.InternalError) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2795,35 +2743,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2868,7 +2816,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2942,6 +2890,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RateLimitError();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2965,7 +2920,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3034,9 +2989,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.RateLimitError other = (com.strongdm.api.v1.plumbing.Spec.RateLimitError) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3215,35 +3169,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3288,7 +3242,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3362,6 +3316,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateRequestMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3385,7 +3346,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3454,9 +3415,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3635,35 +3595,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3708,7 +3668,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3782,6 +3742,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateResponseMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3805,7 +3772,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3874,9 +3841,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4055,35 +4021,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4128,7 +4094,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4202,6 +4168,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRequestMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4225,7 +4198,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4294,9 +4267,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4475,35 +4447,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4548,7 +4520,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4622,6 +4594,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetResponseMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4645,7 +4624,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4714,9 +4693,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4895,35 +4873,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4968,7 +4946,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5042,6 +5020,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateRequestMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5065,7 +5050,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5134,9 +5119,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5315,35 +5299,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5388,7 +5372,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5462,6 +5446,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateResponseMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5485,7 +5476,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5554,9 +5545,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5735,35 +5725,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5808,7 +5798,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5882,6 +5872,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRequestMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5905,7 +5902,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5974,9 +5971,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6155,35 +6151,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6228,7 +6224,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6302,6 +6298,13 @@ public final class Spec {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteResponseMetadata();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6325,7 +6328,7 @@ public final class Spec {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6394,9 +6397,8 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6575,35 +6577,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6648,7 +6650,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6710,6 +6712,7 @@ public final class Spec {
      * </pre>
      *
      * <code>string cursor = 1;</code>
+     * @return The cursor.
      */
     java.lang.String getCursor();
     /**
@@ -6720,6 +6723,7 @@ public final class Spec {
      * </pre>
      *
      * <code>string cursor = 1;</code>
+     * @return The bytes for cursor.
      */
     com.google.protobuf.ByteString
         getCursorBytes();
@@ -6731,6 +6735,7 @@ public final class Spec {
      * </pre>
      *
      * <code>int32 page = 2;</code>
+     * @return The page.
      */
     int getPage();
 
@@ -6741,6 +6746,7 @@ public final class Spec {
      * </pre>
      *
      * <code>int32 limit = 3;</code>
+     * @return The limit.
      */
     int getLimit();
   }
@@ -6764,8 +6770,13 @@ public final class Spec {
     }
     private ListRequestMetadata() {
       cursor_ = "";
-      page_ = 0;
-      limit_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListRequestMetadata();
     }
 
     @java.lang.Override
@@ -6781,7 +6792,6 @@ public final class Spec {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6809,7 +6819,7 @@ public final class Spec {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6850,13 +6860,14 @@ public final class Spec {
      * </pre>
      *
      * <code>string cursor = 1;</code>
+     * @return The cursor.
      */
     public java.lang.String getCursor() {
       java.lang.Object ref = cursor_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         cursor_ = s;
@@ -6871,12 +6882,13 @@ public final class Spec {
      * </pre>
      *
      * <code>string cursor = 1;</code>
+     * @return The bytes for cursor.
      */
     public com.google.protobuf.ByteString
         getCursorBytes() {
       java.lang.Object ref = cursor_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         cursor_ = b;
@@ -6895,6 +6907,7 @@ public final class Spec {
      * </pre>
      *
      * <code>int32 page = 2;</code>
+     * @return The page.
      */
     public int getPage() {
       return page_;
@@ -6909,6 +6922,7 @@ public final class Spec {
      * </pre>
      *
      * <code>int32 limit = 3;</code>
+     * @return The limit.
      */
     public int getLimit() {
       return limit_;
@@ -6972,15 +6986,14 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata other = (com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata) obj;
 
-      boolean result = true;
-      result = result && getCursor()
-          .equals(other.getCursor());
-      result = result && (getPage()
-          == other.getPage());
-      result = result && (getLimit()
-          == other.getLimit());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getCursor()
+          .equals(other.getCursor())) return false;
+      if (getPage()
+          != other.getPage()) return false;
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7176,35 +7189,35 @@ public final class Spec {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7266,6 +7279,7 @@ public final class Spec {
        * </pre>
        *
        * <code>string cursor = 1;</code>
+       * @return The cursor.
        */
       public java.lang.String getCursor() {
         java.lang.Object ref = cursor_;
@@ -7287,12 +7301,13 @@ public final class Spec {
        * </pre>
        *
        * <code>string cursor = 1;</code>
+       * @return The bytes for cursor.
        */
       public com.google.protobuf.ByteString
           getCursorBytes() {
         java.lang.Object ref = cursor_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           cursor_ = b;
@@ -7309,13 +7324,15 @@ public final class Spec {
        * </pre>
        *
        * <code>string cursor = 1;</code>
+       * @param value The cursor to set.
+       * @return This builder for chaining.
        */
       public Builder setCursor(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         cursor_ = value;
         onChanged();
         return this;
@@ -7328,9 +7345,10 @@ public final class Spec {
        * </pre>
        *
        * <code>string cursor = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCursor() {
-
+        
         cursor_ = getDefaultInstance().getCursor();
         onChanged();
         return this;
@@ -7343,6 +7361,8 @@ public final class Spec {
        * </pre>
        *
        * <code>string cursor = 1;</code>
+       * @param value The bytes for cursor to set.
+       * @return This builder for chaining.
        */
       public Builder setCursorBytes(
           com.google.protobuf.ByteString value) {
@@ -7350,7 +7370,7 @@ public final class Spec {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         cursor_ = value;
         onChanged();
         return this;
@@ -7364,6 +7384,7 @@ public final class Spec {
        * </pre>
        *
        * <code>int32 page = 2;</code>
+       * @return The page.
        */
       public int getPage() {
         return page_;
@@ -7375,9 +7396,11 @@ public final class Spec {
        * </pre>
        *
        * <code>int32 page = 2;</code>
+       * @param value The page to set.
+       * @return This builder for chaining.
        */
       public Builder setPage(int value) {
-
+        
         page_ = value;
         onChanged();
         return this;
@@ -7389,9 +7412,10 @@ public final class Spec {
        * </pre>
        *
        * <code>int32 page = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPage() {
-
+        
         page_ = 0;
         onChanged();
         return this;
@@ -7405,6 +7429,7 @@ public final class Spec {
        * </pre>
        *
        * <code>int32 limit = 3;</code>
+       * @return The limit.
        */
       public int getLimit() {
         return limit_;
@@ -7416,9 +7441,11 @@ public final class Spec {
        * </pre>
        *
        * <code>int32 limit = 3;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
        */
       public Builder setLimit(int value) {
-
+        
         limit_ = value;
         onChanged();
         return this;
@@ -7430,9 +7457,10 @@ public final class Spec {
        * </pre>
        *
        * <code>int32 limit = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLimit() {
-
+        
         limit_ = 0;
         onChanged();
         return this;
@@ -7440,7 +7468,7 @@ public final class Spec {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7502,6 +7530,7 @@ public final class Spec {
      * </pre>
      *
      * <code>string next_cursor = 1;</code>
+     * @return The nextCursor.
      */
     java.lang.String getNextCursor();
     /**
@@ -7512,6 +7541,7 @@ public final class Spec {
      * </pre>
      *
      * <code>string next_cursor = 1;</code>
+     * @return The bytes for nextCursor.
      */
     com.google.protobuf.ByteString
         getNextCursorBytes();
@@ -7522,9 +7552,10 @@ public final class Spec {
      * Note that this value may change between page requests.
      * </pre>
      *
-     * <code>int32 found = 2;</code>
+     * <code>int32 total = 2;</code>
+     * @return The total.
      */
-    int getFound();
+    int getTotal();
   }
   /**
    * <pre>
@@ -7545,7 +7576,13 @@ public final class Spec {
     }
     private ListResponseMetadata() {
       nextCursor_ = "";
-      found_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListResponseMetadata();
     }
 
     @java.lang.Override
@@ -7561,7 +7598,6 @@ public final class Spec {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7580,11 +7616,11 @@ public final class Spec {
             }
             case 16: {
 
-              found_ = input.readInt32();
+              total_ = input.readInt32();
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7625,13 +7661,14 @@ public final class Spec {
      * </pre>
      *
      * <code>string next_cursor = 1;</code>
+     * @return The nextCursor.
      */
     public java.lang.String getNextCursor() {
       java.lang.Object ref = nextCursor_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         nextCursor_ = s;
@@ -7646,12 +7683,13 @@ public final class Spec {
      * </pre>
      *
      * <code>string next_cursor = 1;</code>
+     * @return The bytes for nextCursor.
      */
     public com.google.protobuf.ByteString
         getNextCursorBytes() {
       java.lang.Object ref = nextCursor_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nextCursor_ = b;
@@ -7661,18 +7699,19 @@ public final class Spec {
       }
     }
 
-    public static final int FOUND_FIELD_NUMBER = 2;
-    private int found_;
+    public static final int TOTAL_FIELD_NUMBER = 2;
+    private int total_;
     /**
      * <pre>
      * The total count of all entities matching the criteria of a list request.
      * Note that this value may change between page requests.
      * </pre>
      *
-     * <code>int32 found = 2;</code>
+     * <code>int32 total = 2;</code>
+     * @return The total.
      */
-    public int getFound() {
-      return found_;
+    public int getTotal() {
+      return total_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7692,8 +7731,8 @@ public final class Spec {
       if (!getNextCursorBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nextCursor_);
       }
-      if (found_ != 0) {
-        output.writeInt32(2, found_);
+      if (total_ != 0) {
+        output.writeInt32(2, total_);
       }
       unknownFields.writeTo(output);
     }
@@ -7707,9 +7746,9 @@ public final class Spec {
       if (!getNextCursorBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nextCursor_);
       }
-      if (found_ != 0) {
+      if (total_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, found_);
+          .computeInt32Size(2, total_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7726,13 +7765,12 @@ public final class Spec {
       }
       com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata other = (com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata) obj;
 
-      boolean result = true;
-      result = result && getNextCursor()
-          .equals(other.getNextCursor());
-      result = result && (getFound()
-          == other.getFound());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNextCursor()
+          .equals(other.getNextCursor())) return false;
+      if (getTotal()
+          != other.getTotal()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7744,8 +7782,8 @@ public final class Spec {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NEXT_CURSOR_FIELD_NUMBER;
       hash = (53 * hash) + getNextCursor().hashCode();
-      hash = (37 * hash) + FOUND_FIELD_NUMBER;
-      hash = (53 * hash) + getFound();
+      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + getTotal();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7886,7 +7924,7 @@ public final class Spec {
         super.clear();
         nextCursor_ = "";
 
-        found_ = 0;
+        total_ = 0;
 
         return this;
       }
@@ -7915,42 +7953,42 @@ public final class Spec {
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata buildPartial() {
         com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata result = new com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata(this);
         result.nextCursor_ = nextCursor_;
-        result.found_ = found_;
+        result.total_ = total_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7968,8 +8006,8 @@ public final class Spec {
           nextCursor_ = other.nextCursor_;
           onChanged();
         }
-        if (other.getFound() != 0) {
-          setFound(other.getFound());
+        if (other.getTotal() != 0) {
+          setTotal(other.getTotal());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8009,6 +8047,7 @@ public final class Spec {
        * </pre>
        *
        * <code>string next_cursor = 1;</code>
+       * @return The nextCursor.
        */
       public java.lang.String getNextCursor() {
         java.lang.Object ref = nextCursor_;
@@ -8030,12 +8069,13 @@ public final class Spec {
        * </pre>
        *
        * <code>string next_cursor = 1;</code>
+       * @return The bytes for nextCursor.
        */
       public com.google.protobuf.ByteString
           getNextCursorBytes() {
         java.lang.Object ref = nextCursor_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           nextCursor_ = b;
@@ -8052,13 +8092,15 @@ public final class Spec {
        * </pre>
        *
        * <code>string next_cursor = 1;</code>
+       * @param value The nextCursor to set.
+       * @return This builder for chaining.
        */
       public Builder setNextCursor(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         nextCursor_ = value;
         onChanged();
         return this;
@@ -8071,9 +8113,10 @@ public final class Spec {
        * </pre>
        *
        * <code>string next_cursor = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNextCursor() {
-
+        
         nextCursor_ = getDefaultInstance().getNextCursor();
         onChanged();
         return this;
@@ -8086,6 +8129,8 @@ public final class Spec {
        * </pre>
        *
        * <code>string next_cursor = 1;</code>
+       * @param value The bytes for nextCursor to set.
+       * @return This builder for chaining.
        */
       public Builder setNextCursorBytes(
           com.google.protobuf.ByteString value) {
@@ -8093,23 +8138,24 @@ public final class Spec {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         nextCursor_ = value;
         onChanged();
         return this;
       }
 
-      private int found_ ;
+      private int total_ ;
       /**
        * <pre>
        * The total count of all entities matching the criteria of a list request.
        * Note that this value may change between page requests.
        * </pre>
        *
-       * <code>int32 found = 2;</code>
+       * <code>int32 total = 2;</code>
+       * @return The total.
        */
-      public int getFound() {
-        return found_;
+      public int getTotal() {
+        return total_;
       }
       /**
        * <pre>
@@ -8117,11 +8163,13 @@ public final class Spec {
        * Note that this value may change between page requests.
        * </pre>
        *
-       * <code>int32 found = 2;</code>
+       * <code>int32 total = 2;</code>
+       * @param value The total to set.
+       * @return This builder for chaining.
        */
-      public Builder setFound(int value) {
-
-        found_ = value;
+      public Builder setTotal(int value) {
+        
+        total_ = value;
         onChanged();
         return this;
       }
@@ -8131,18 +8179,19 @@ public final class Spec {
        * Note that this value may change between page requests.
        * </pre>
        *
-       * <code>int32 found = 2;</code>
+       * <code>int32 total = 2;</code>
+       * @return This builder for chaining.
        */
-      public Builder clearFound() {
-
-        found_ = 0;
+      public Builder clearTotal() {
+        
+        total_ = 0;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8194,87 +8243,87 @@ public final class Spec {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AlreadyExistsError_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AlreadyExistsError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_NotFoundError_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_NotFoundError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_BadRequestError_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_BadRequestError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AuthenticationError_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AuthenticationError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_PermissionError_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_PermissionError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_InternalError_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_InternalError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_RateLimitError_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RateLimitError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_CreateRequestMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_CreateRequestMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_CreateResponseMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_CreateResponseMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_GetRequestMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_GetRequestMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_GetResponseMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_GetResponseMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_UpdateRequestMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_UpdateRequestMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_UpdateResponseMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_UpdateResponseMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_DeleteRequestMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_DeleteRequestMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_DeleteResponseMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_DeleteResponseMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_ListRequestMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_ListRequestMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_ListResponseMetadata_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_ListResponseMetadata_fieldAccessorTable;
 
@@ -8287,63 +8336,53 @@ public final class Spec {
   static {
     java.lang.String[] descriptorData = {
       "\n\nspec.proto\022\002v1\032\roptions.proto\032,protoc-" +
-      "gen-swagger/options/annotations.proto\"b\n" +
-      "\022AlreadyExistsError\022)\n\010entities\030\001 \003(\tB\027\362" +
-      "\370\263\007\022\242\363\263\007\010Entities\260\363\263\007\001:!\372\370\263\007\034\242\363\263\007\022Alread" +
-      "yExistsError\260\363\263\007\001\"X\n\rNotFoundError\022)\n\010en" +
-      "tities\030\001 \003(\tB\027\362\370\263\007\022\242\363\263\007\010Entities\260\363\263\007\001:\034\372" +
-      "\370\263\007\027\242\363\263\007\rNotFoundError\260\363\263\007\001\"1\n\017BadReques" +
-      "tError:\036\372\370\263\007\031\242\363\263\007\017BadRequestError\260\363\263\007\001\"9" +
-      "\n\023AuthenticationError:\"\372\370\263\007\035\242\363\263\007\023Authent" +
-      "icationError\260\363\263\007\001\"1\n\017PermissionError:\036\372\370" +
-      "\263\007\031\242\363\263\007\017PermissionError\260\363\263\007\001\"-\n\rInternal" +
-      "Error:\034\372\370\263\007\027\242\363\263\007\rInternalError\260\363\263\007\001\"/\n\016R" +
-      "ateLimitError:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260" +
-      "\363\263\007\001\"\027\n\025CreateRequestMetadata\"$\n\026CreateR" +
-      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetReques" +
-      "tMetadata\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"\027\n\025UpdateRequestMetadata\"$\n\026UpdateR" +
-      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteReq" +
-      "uestMetadata\"$\n\026DeleteResponseMetadata:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMetadata\022\016\n\006cur" +
-      "sor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":" +
-      "\n\024ListResponseMetadata\022\023\n\013next_cursor\030\001 " +
-      "\001(\t\022\r\n\005found\030\002 \001(\005B\257\002\n\034com.strongdm.api." +
-      "v1.plumbing\222A\215\002\022\260\001\n\034gRPC/JSON Gateway Te" +
-      "ch Spike\022;an exploration of how it feels" +
-      " to use the gRPC JSON gateway\"N\n\022gRPC-Ga" +
-      "teway spike\022\"https://www.strongdm.com/do" +
-      "cs/api/\032\024support@strongdm.com2\0031.0\032\020app." +
-      "strongdm.comrF\n!Learn more about the str" +
-      "ongDM API\022!https://www.strongdm.com/docs" +
-      "/apib\006proto3"
+      "gen-swagger/options/annotations.proto\"^\n" +
+      "\022AlreadyExistsError\022%\n\006entity\030\001 \001(\tB\025\362\370\263" +
+      "\007\020\242\363\263\007\006Entity\260\363\263\007\001:!\372\370\263\007\034\242\363\263\007\022AlreadyExi" +
+      "stsError\260\363\263\007\001\"T\n\rNotFoundError\022%\n\006entity" +
+      "\030\001 \001(\tB\025\362\370\263\007\020\242\363\263\007\006Entity\260\363\263\007\001:\034\372\370\263\007\027\242\363\263\007" +
+      "\rNotFoundError\260\363\263\007\001\"1\n\017BadRequestError:\036" +
+      "\372\370\263\007\031\242\363\263\007\017BadRequestError\260\363\263\007\001\"9\n\023Authen" +
+      "ticationError:\"\372\370\263\007\035\242\363\263\007\023AuthenticationE" +
+      "rror\260\363\263\007\001\"1\n\017PermissionError:\036\372\370\263\007\031\242\363\263\007\017" +
+      "PermissionError\260\363\263\007\001\"-\n\rInternalError:\034\372" +
+      "\370\263\007\027\242\363\263\007\rInternalError\260\363\263\007\001\"/\n\016RateLimit" +
+      "Error:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260\363\263\007\001\"\027\n\025" +
+      "CreateRequestMetadata\"$\n\026CreateResponseM" +
+      "etadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRequestMetadat" +
+      "a\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025" +
+      "UpdateRequestMetadata\"$\n\026UpdateResponseM" +
+      "etadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMeta" +
+      "data\"$\n\026DeleteResponseMetadata:\n\372\370\263\007\005\250\363\263" +
+      "\007\001\"B\n\023ListRequestMetadata\022\016\n\006cursor\030\001 \001(" +
+      "\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024ListRe" +
+      "sponseMetadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005t" +
+      "otal\030\002 \001(\005B\363\001\n\034com.strongdm.api.v1.plumb" +
+      "ing\222A\321\001\022u\n\010StrongDM\022\036The infrastructure " +
+      "access API.\"D\n\010StrongDM\022\"https://www.str" +
+      "ongdm.com/docs/api/\032\024support@strongdm.co" +
+      "m2\0031.0\032\020api.strongdm.comrF\n!Learn more a" +
+      "bout the strongDM API\022!https://www.stron" +
+      "gdm.com/docs/apib\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
-        }, assigner);
+        });
     internal_static_v1_AlreadyExistsError_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_v1_AlreadyExistsError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AlreadyExistsError_descriptor,
-        new java.lang.String[] { "Entities", });
+        new java.lang.String[] { "Entity", });
     internal_static_v1_NotFoundError_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_NotFoundError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_NotFoundError_descriptor,
-        new java.lang.String[] { "Entities", });
+        new java.lang.String[] { "Entity", });
     internal_static_v1_BadRequestError_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_BadRequestError_fieldAccessorTable = new
@@ -8433,7 +8472,7 @@ public final class Spec {
     internal_static_v1_ListResponseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ListResponseMetadata_descriptor,
-        new java.lang.String[] { "NextCursor", "Found", });
+        new java.lang.String[] { "NextCursor", "Total", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Swagger);

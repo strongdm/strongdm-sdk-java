@@ -3,6 +3,7 @@ package com.strongdm.api.v1.plumbing;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Collection;
+import com.google.rpc.Code;
 
 import com.strongdm.api.v1.plumbing.Spec.*;
 
@@ -116,7 +117,7 @@ public class Plumbing {
         com.strongdm.api.v1.NodeCreateResponse porcelain = new com.strongdm.api.v1.NodeCreateResponse();
         porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
         porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
-        porcelain.setToken(Plumbing.tokenToPorcelain(plumbing.getToken()));
+        porcelain.setToken(plumbing.getToken());
         return porcelain;
     }
 
@@ -132,7 +133,7 @@ public class Plumbing {
             builder.setNode(Plumbing.nodeToPlumbing(porcelain.getNode()));
         }
         if (porcelain.getToken() != null) {
-            builder.setToken(Plumbing.tokenToPlumbing(porcelain.getToken()));
+            builder.setToken(porcelain.getToken());
         }
         return builder.build();
     }
@@ -360,39 +361,6 @@ public class Plumbing {
             .collect(Collectors.toList());
     }
 
-    public static com.strongdm.api.v1.Token tokenToPorcelain(Token plumbing) {
-        com.strongdm.api.v1.Token porcelain = new com.strongdm.api.v1.Token();
-        porcelain.setId(plumbing.getId());
-        porcelain.setToken(plumbing.getToken());
-        return porcelain;
-    }
-
-    public static Token tokenToPlumbing(com.strongdm.api.v1.Token porcelain) {
-        if (porcelain == null) {
-            return null;
-        }
-        Token.Builder builder = Token.newBuilder();
-        if (porcelain.getId() != null) {
-            builder.setId(porcelain.getId());
-        }
-        if (porcelain.getToken() != null) {
-            builder.setToken(porcelain.getToken());
-        }
-        return builder.build();
-    }
-
-    public static List<com.strongdm.api.v1.Token> repeatedTokenToPorcelain(Collection<Token> plumbings) {
-        return plumbings.stream()
-            .map(plumbing -> tokenToPorcelain(plumbing))
-            .collect(Collectors.toList());
-    }
-
-    public static List<Token> repeatedTokenToPlumbing(Collection<com.strongdm.api.v1.Token> porcelains) {
-        return porcelains.stream()
-            .map(porcelain -> tokenToPlumbing(porcelain))
-            .collect(Collectors.toList());
-    }
-
     public static com.strongdm.api.v1.RoleCreateResponse roleCreateResponseToPorcelain(RoleCreateResponse plumbing) {
         com.strongdm.api.v1.RoleCreateResponse porcelain = new com.strongdm.api.v1.RoleCreateResponse();
         porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
@@ -566,11 +534,11 @@ public class Plumbing {
             for (com.google.protobuf.Any any : status.getDetailsList()) {
                 if (any.is(com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError.class)) {
                     com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError.class);
-                    return new com.strongdm.api.v1.AlreadyExistsException(e.getMessage(), plumbing.getEntitiesList());
+                    return new com.strongdm.api.v1.AlreadyExistsException(e.getMessage(), plumbing.getEntity());
                 }
                 if (any.is(com.strongdm.api.v1.plumbing.Spec.NotFoundError.class)) {
                     com.strongdm.api.v1.plumbing.Spec.NotFoundError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.NotFoundError.class);
-                    return new com.strongdm.api.v1.NotFoundException(e.getMessage(), plumbing.getEntitiesList());
+                    return new com.strongdm.api.v1.NotFoundException(e.getMessage(), plumbing.getEntity());
                 }
                 if (any.is(com.strongdm.api.v1.plumbing.Spec.BadRequestError.class)) {
                     com.strongdm.api.v1.plumbing.Spec.BadRequestError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.BadRequestError.class);
@@ -594,6 +562,10 @@ public class Plumbing {
                 }
             }
         } catch (com.google.protobuf.InvalidProtocolBufferException anyParseException) {
+        }
+
+        if (status.getCode() == Code.DEADLINE_EXCEEDED_VALUE) {
+            return new com.strongdm.api.v1.TimeoutException(e.getMessage());
         }
 
         return new com.strongdm.api.v1.RpcException(e.getMessage(), status.getCode());

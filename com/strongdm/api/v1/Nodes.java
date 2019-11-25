@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.function.Supplier;
+import java.util.concurrent.TimeUnit;
 import io.grpc.ManagedChannel;
 
 import com.strongdm.api.v1.plumbing.Plumbing;
@@ -24,11 +25,23 @@ import com.strongdm.api.v1.plumbing.RolesPlumbing;
 // (relays) and clients (gateways).
 public class Nodes {
     private final NodesGrpc.NodesBlockingStub stub;
+    private final Client parent;
 
-    public Nodes(ManagedChannel channel, String apiKey) {
+    public Nodes(ManagedChannel channel, String apiKey, Client client) {
         JwtCallCredential callCredential = new JwtCallCredential(apiKey);
         this.stub = NodesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
+        this.parent = client;
     }
+
+    private Nodes(NodesGrpc.NodesBlockingStub stub, Client client) {
+        this.stub = stub;
+        this.parent = client;
+    }
+
+    public Nodes withDeadlineAfter(long duration, TimeUnit units) {
+        return new Nodes(this.stub.withDeadlineAfter(duration, units), this.parent);
+    }
+
     
     // Create registers a new node.
     public NodeCreateResponse create(Node node) throws BaseException {
@@ -91,7 +104,12 @@ public class Nodes {
         NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
         builder.setFilter(filter);
 
-        builder.setMeta(ListRequestMetadata.newBuilder());
+        ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
+        Object pageSizeOption = this.parent.testOptions.get("PageSize");
+        if (pageSizeOption instanceof Integer) {
+            metaBuilder.setLimit((int)pageSizeOption);
+        }
+        builder.setMeta(metaBuilder);
 
         Supplier<PageResult<Node> > pageFetcher = () -> {
             // Note: this closure captures and reuses the builder to set the next page
@@ -115,4 +133,3 @@ public class Nodes {
     }
     
 }
-

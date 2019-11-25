@@ -1,6 +1,8 @@
 
 package com.strongdm.api.v1;
 
+import java.util.Map;
+import java.util.HashMap;
 import io.grpc.ManagedChannel;
 import io.grpc.netty.NettyChannelBuilder;
 import io.grpc.netty.GrpcSslContexts;
@@ -14,30 +16,32 @@ public class Client {
     public Nodes nodes() {
         return this.nodes;
     }
-
     
     private final Roles roles;
 
     public Roles roles() {
         return this.roles;
     }
-
     
+
     public Client(String host, int port, String apiKey) throws BaseException {
         try {
             NettyChannelBuilder builder = NettyChannelBuilder.forAddress(host, port);
             if (port == 443) {
                 builder = builder.useTransportSecurity().
-                    sslContext(GrpcSslContexts.forClient());
+                    sslContext(GrpcSslContexts.forClient().build());
             } else { 
                 builder = builder.usePlaintext();
             }
             ManagedChannel channel = builder.build();
-            this.nodes = new Nodes(channel, apiKey);
-            this.roles = new Roles(channel, apiKey);
+            this.nodes = new Nodes(channel, apiKey, this);
+            this.roles = new Roles(channel, apiKey, this);
             
         } catch(Exception e) {
             throw Plumbing.exceptionToPorcelain(e);
         }
+        this.testOptions = new HashMap<String, Object>();
     }
+
+    protected Map<String, Object> testOptions;
 }

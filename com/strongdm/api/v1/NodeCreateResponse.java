@@ -26,11 +26,11 @@ public class NodeCreateResponse {
         return this;
     }
 
-    private Token token;
-    public Token getToken() {
+    private String token;
+    public String getToken() {
         return this.token;
     }
-    public NodeCreateResponse setToken(Token in) {
+    public NodeCreateResponse setToken(String in) {
         this.token = in;
         return this;
     }

@@ -24,21 +24,25 @@ public final class Options {
 
     /**
      * <code>string name = 1941300;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1941300;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>bool sql_nullable = 1941301;</code>
+     * @return The sqlNullable.
      */
     boolean getSqlNullable();
 
     /**
      * <code>bool expose_as_porcelain = 1941302;</code>
+     * @return The exposeAsPorcelain.
      */
     boolean getExposeAsPorcelain();
 
@@ -51,6 +55,7 @@ public final class Options {
      * </pre>
      *
      * <code>bool iterable = 1941303;</code>
+     * @return The iterable.
      */
     boolean getIterable();
   }
@@ -68,9 +73,13 @@ public final class Options {
     }
     private FieldOptions() {
       name_ = "";
-      sqlNullable_ = false;
-      exposeAsPorcelain_ = false;
-      iterable_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FieldOptions();
     }
 
     @java.lang.Override
@@ -86,7 +95,6 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -119,7 +127,7 @@ public final class Options {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -154,6 +162,7 @@ public final class Options {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1941300;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -169,6 +178,7 @@ public final class Options {
     }
     /**
      * <code>string name = 1941300;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -188,6 +198,7 @@ public final class Options {
     private boolean sqlNullable_;
     /**
      * <code>bool sql_nullable = 1941301;</code>
+     * @return The sqlNullable.
      */
     public boolean getSqlNullable() {
       return sqlNullable_;
@@ -197,6 +208,7 @@ public final class Options {
     private boolean exposeAsPorcelain_;
     /**
      * <code>bool expose_as_porcelain = 1941302;</code>
+     * @return The exposeAsPorcelain.
      */
     public boolean getExposeAsPorcelain() {
       return exposeAsPorcelain_;
@@ -213,6 +225,7 @@ public final class Options {
      * </pre>
      *
      * <code>bool iterable = 1941303;</code>
+     * @return The iterable.
      */
     public boolean getIterable() {
       return iterable_;
@@ -283,17 +296,16 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.FieldOptions other = (com.strongdm.api.v1.plumbing.Options.FieldOptions) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getSqlNullable()
-          == other.getSqlNullable());
-      result = result && (getExposeAsPorcelain()
-          == other.getExposeAsPorcelain());
-      result = result && (getIterable()
-          == other.getIterable());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getSqlNullable()
+          != other.getSqlNullable()) return false;
+      if (getExposeAsPorcelain()
+          != other.getExposeAsPorcelain()) return false;
+      if (getIterable()
+          != other.getIterable()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -491,35 +503,35 @@ public final class Options {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -578,6 +590,7 @@ public final class Options {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1941300;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -593,6 +606,7 @@ public final class Options {
       }
       /**
        * <code>string name = 1941300;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -609,6 +623,8 @@ public final class Options {
       }
       /**
        * <code>string name = 1941300;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -622,6 +638,7 @@ public final class Options {
       }
       /**
        * <code>string name = 1941300;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -631,6 +648,8 @@ public final class Options {
       }
       /**
        * <code>string name = 1941300;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -647,12 +666,15 @@ public final class Options {
       private boolean sqlNullable_ ;
       /**
        * <code>bool sql_nullable = 1941301;</code>
+       * @return The sqlNullable.
        */
       public boolean getSqlNullable() {
         return sqlNullable_;
       }
       /**
        * <code>bool sql_nullable = 1941301;</code>
+       * @param value The sqlNullable to set.
+       * @return This builder for chaining.
        */
       public Builder setSqlNullable(boolean value) {
         
@@ -662,6 +684,7 @@ public final class Options {
       }
       /**
        * <code>bool sql_nullable = 1941301;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSqlNullable() {
         
@@ -673,12 +696,15 @@ public final class Options {
       private boolean exposeAsPorcelain_ ;
       /**
        * <code>bool expose_as_porcelain = 1941302;</code>
+       * @return The exposeAsPorcelain.
        */
       public boolean getExposeAsPorcelain() {
         return exposeAsPorcelain_;
       }
       /**
        * <code>bool expose_as_porcelain = 1941302;</code>
+       * @param value The exposeAsPorcelain to set.
+       * @return This builder for chaining.
        */
       public Builder setExposeAsPorcelain(boolean value) {
         
@@ -688,6 +714,7 @@ public final class Options {
       }
       /**
        * <code>bool expose_as_porcelain = 1941302;</code>
+       * @return This builder for chaining.
        */
       public Builder clearExposeAsPorcelain() {
         
@@ -706,6 +733,7 @@ public final class Options {
        * </pre>
        *
        * <code>bool iterable = 1941303;</code>
+       * @return The iterable.
        */
       public boolean getIterable() {
         return iterable_;
@@ -719,6 +747,8 @@ public final class Options {
        * </pre>
        *
        * <code>bool iterable = 1941303;</code>
+       * @param value The iterable to set.
+       * @return This builder for chaining.
        */
       public Builder setIterable(boolean value) {
         
@@ -735,6 +765,7 @@ public final class Options {
        * </pre>
        *
        * <code>bool iterable = 1941303;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIterable() {
         
@@ -745,7 +776,7 @@ public final class Options {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -801,21 +832,25 @@ public final class Options {
 
     /**
      * <code>string model_name = 1941300;</code>
+     * @return The modelName.
      */
     java.lang.String getModelName();
     /**
      * <code>string model_name = 1941300;</code>
+     * @return The bytes for modelName.
      */
     com.google.protobuf.ByteString
         getModelNameBytes();
 
     /**
      * <code>bool porcelain = 1941301;</code>
+     * @return The porcelain.
      */
     boolean getPorcelain();
 
     /**
      * <code>bool error = 1941302;</code>
+     * @return The error.
      */
     boolean getError();
   }
@@ -833,8 +868,13 @@ public final class Options {
     }
     private MessageOptions() {
       modelName_ = "";
-      porcelain_ = false;
-      error_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageOptions();
     }
 
     @java.lang.Override
@@ -850,7 +890,6 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -878,7 +917,7 @@ public final class Options {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -913,6 +952,7 @@ public final class Options {
     private volatile java.lang.Object modelName_;
     /**
      * <code>string model_name = 1941300;</code>
+     * @return The modelName.
      */
     public java.lang.String getModelName() {
       java.lang.Object ref = modelName_;
@@ -928,6 +968,7 @@ public final class Options {
     }
     /**
      * <code>string model_name = 1941300;</code>
+     * @return The bytes for modelName.
      */
     public com.google.protobuf.ByteString
         getModelNameBytes() {
@@ -947,6 +988,7 @@ public final class Options {
     private boolean porcelain_;
     /**
      * <code>bool porcelain = 1941301;</code>
+     * @return The porcelain.
      */
     public boolean getPorcelain() {
       return porcelain_;
@@ -956,6 +998,7 @@ public final class Options {
     private boolean error_;
     /**
      * <code>bool error = 1941302;</code>
+     * @return The error.
      */
     public boolean getError() {
       return error_;
@@ -1019,15 +1062,14 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.MessageOptions other = (com.strongdm.api.v1.plumbing.Options.MessageOptions) obj;
 
-      boolean result = true;
-      result = result && getModelName()
-          .equals(other.getModelName());
-      result = result && (getPorcelain()
-          == other.getPorcelain());
-      result = result && (getError()
-          == other.getError());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getModelName()
+          .equals(other.getModelName())) return false;
+      if (getPorcelain()
+          != other.getPorcelain()) return false;
+      if (getError()
+          != other.getError()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1219,35 +1261,35 @@ public final class Options {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1303,6 +1345,7 @@ public final class Options {
       private java.lang.Object modelName_ = "";
       /**
        * <code>string model_name = 1941300;</code>
+       * @return The modelName.
        */
       public java.lang.String getModelName() {
         java.lang.Object ref = modelName_;
@@ -1318,6 +1361,7 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941300;</code>
+       * @return The bytes for modelName.
        */
       public com.google.protobuf.ByteString
           getModelNameBytes() {
@@ -1334,6 +1378,8 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941300;</code>
+       * @param value The modelName to set.
+       * @return This builder for chaining.
        */
       public Builder setModelName(
           java.lang.String value) {
@@ -1347,6 +1393,7 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941300;</code>
+       * @return This builder for chaining.
        */
       public Builder clearModelName() {
         
@@ -1356,6 +1403,8 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941300;</code>
+       * @param value The bytes for modelName to set.
+       * @return This builder for chaining.
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1372,12 +1421,15 @@ public final class Options {
       private boolean porcelain_ ;
       /**
        * <code>bool porcelain = 1941301;</code>
+       * @return The porcelain.
        */
       public boolean getPorcelain() {
         return porcelain_;
       }
       /**
        * <code>bool porcelain = 1941301;</code>
+       * @param value The porcelain to set.
+       * @return This builder for chaining.
        */
       public Builder setPorcelain(boolean value) {
         
@@ -1387,6 +1439,7 @@ public final class Options {
       }
       /**
        * <code>bool porcelain = 1941301;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPorcelain() {
         
@@ -1398,12 +1451,15 @@ public final class Options {
       private boolean error_ ;
       /**
        * <code>bool error = 1941302;</code>
+       * @return The error.
        */
       public boolean getError() {
         return error_;
       }
       /**
        * <code>bool error = 1941302;</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
        */
       public Builder setError(boolean value) {
         
@@ -1413,6 +1469,7 @@ public final class Options {
       }
       /**
        * <code>bool error = 1941302;</code>
+       * @return This builder for chaining.
        */
       public Builder clearError() {
         
@@ -1423,7 +1480,7 @@ public final class Options {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1479,10 +1536,12 @@ public final class Options {
 
     /**
      * <code>string model_name = 1941380;</code>
+     * @return The modelName.
      */
     java.lang.String getModelName();
     /**
      * <code>string model_name = 1941380;</code>
+     * @return The bytes for modelName.
      */
     com.google.protobuf.ByteString
         getModelNameBytes();
@@ -1504,6 +1563,13 @@ public final class Options {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OneofOptions();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1516,7 +1582,6 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1534,7 +1599,7 @@ public final class Options {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1569,6 +1634,7 @@ public final class Options {
     private volatile java.lang.Object modelName_;
     /**
      * <code>string model_name = 1941380;</code>
+     * @return The modelName.
      */
     public java.lang.String getModelName() {
       java.lang.Object ref = modelName_;
@@ -1584,6 +1650,7 @@ public final class Options {
     }
     /**
      * <code>string model_name = 1941380;</code>
+     * @return The bytes for modelName.
      */
     public com.google.protobuf.ByteString
         getModelNameBytes() {
@@ -1643,11 +1710,10 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.OneofOptions other = (com.strongdm.api.v1.plumbing.Options.OneofOptions) obj;
 
-      boolean result = true;
-      result = result && getModelName()
-          .equals(other.getModelName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getModelName()
+          .equals(other.getModelName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1827,35 +1893,35 @@ public final class Options {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1905,6 +1971,7 @@ public final class Options {
       private java.lang.Object modelName_ = "";
       /**
        * <code>string model_name = 1941380;</code>
+       * @return The modelName.
        */
       public java.lang.String getModelName() {
         java.lang.Object ref = modelName_;
@@ -1920,6 +1987,7 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941380;</code>
+       * @return The bytes for modelName.
        */
       public com.google.protobuf.ByteString
           getModelNameBytes() {
@@ -1936,6 +2004,8 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941380;</code>
+       * @param value The modelName to set.
+       * @return This builder for chaining.
        */
       public Builder setModelName(
           java.lang.String value) {
@@ -1949,6 +2019,7 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941380;</code>
+       * @return This builder for chaining.
        */
       public Builder clearModelName() {
         
@@ -1958,6 +2029,8 @@ public final class Options {
       }
       /**
        * <code>string model_name = 1941380;</code>
+       * @param value The bytes for modelName to set.
+       * @return This builder for chaining.
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1973,7 +2046,7 @@ public final class Options {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2029,10 +2102,12 @@ public final class Options {
 
     /**
      * <code>string main_noun = 1941400;</code>
+     * @return The mainNoun.
      */
     java.lang.String getMainNoun();
     /**
      * <code>string main_noun = 1941400;</code>
+     * @return The bytes for mainNoun.
      */
     com.google.protobuf.ByteString
         getMainNounBytes();
@@ -2054,6 +2129,13 @@ public final class Options {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServiceOptions();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2066,7 +2148,6 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2084,7 +2165,7 @@ public final class Options {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2119,6 +2200,7 @@ public final class Options {
     private volatile java.lang.Object mainNoun_;
     /**
      * <code>string main_noun = 1941400;</code>
+     * @return The mainNoun.
      */
     public java.lang.String getMainNoun() {
       java.lang.Object ref = mainNoun_;
@@ -2134,6 +2216,7 @@ public final class Options {
     }
     /**
      * <code>string main_noun = 1941400;</code>
+     * @return The bytes for mainNoun.
      */
     public com.google.protobuf.ByteString
         getMainNounBytes() {
@@ -2193,11 +2276,10 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.ServiceOptions other = (com.strongdm.api.v1.plumbing.Options.ServiceOptions) obj;
 
-      boolean result = true;
-      result = result && getMainNoun()
-          .equals(other.getMainNoun());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getMainNoun()
+          .equals(other.getMainNoun())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2377,35 +2459,35 @@ public final class Options {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2455,6 +2537,7 @@ public final class Options {
       private java.lang.Object mainNoun_ = "";
       /**
        * <code>string main_noun = 1941400;</code>
+       * @return The mainNoun.
        */
       public java.lang.String getMainNoun() {
         java.lang.Object ref = mainNoun_;
@@ -2470,6 +2553,7 @@ public final class Options {
       }
       /**
        * <code>string main_noun = 1941400;</code>
+       * @return The bytes for mainNoun.
        */
       public com.google.protobuf.ByteString
           getMainNounBytes() {
@@ -2486,6 +2570,8 @@ public final class Options {
       }
       /**
        * <code>string main_noun = 1941400;</code>
+       * @param value The mainNoun to set.
+       * @return This builder for chaining.
        */
       public Builder setMainNoun(
           java.lang.String value) {
@@ -2499,6 +2585,7 @@ public final class Options {
       }
       /**
        * <code>string main_noun = 1941400;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMainNoun() {
         
@@ -2508,6 +2595,8 @@ public final class Options {
       }
       /**
        * <code>string main_noun = 1941400;</code>
+       * @param value The bytes for mainNoun to set.
+       * @return This builder for chaining.
        */
       public Builder setMainNounBytes(
           com.google.protobuf.ByteString value) {
@@ -2523,7 +2612,7 @@ public final class Options {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2664,19 +2753,11 @@ public final class Options {
       "\001(\0132\022.v1.ServiceOptionsB\036\n\034com.strongdm." +
       "api.v1.plumbingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
-        }, assigner);
+        });
     internal_static_v1_FieldOptions_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_v1_FieldOptions_fieldAccessorTable = new

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.function.Supplier;
+import java.util.concurrent.TimeUnit;
 import io.grpc.ManagedChannel;
 
 import com.strongdm.api.v1.plumbing.Plumbing;
@@ -27,11 +28,23 @@ import com.strongdm.api.v1.plumbing.RolesPlumbing;
 // Each user can be a member of one role or composite role.
 public class Roles {
     private final RolesGrpc.RolesBlockingStub stub;
+    private final Client parent;
 
-    public Roles(ManagedChannel channel, String apiKey) {
+    public Roles(ManagedChannel channel, String apiKey, Client client) {
         JwtCallCredential callCredential = new JwtCallCredential(apiKey);
         this.stub = RolesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
+        this.parent = client;
     }
+
+    private Roles(RolesGrpc.RolesBlockingStub stub, Client client) {
+        this.stub = stub;
+        this.parent = client;
+    }
+
+    public Roles withDeadlineAfter(long duration, TimeUnit units) {
+        return new Roles(this.stub.withDeadlineAfter(duration, units), this.parent);
+    }
+
     
     // Create registers a new role.
     public RoleCreateResponse create(Role role) throws BaseException {
@@ -94,7 +107,12 @@ public class Roles {
         RolesPlumbing.RoleListRequest.Builder builder = RolesPlumbing.RoleListRequest.newBuilder();
         builder.setFilter(filter);
 
-        builder.setMeta(ListRequestMetadata.newBuilder());
+        ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
+        Object pageSizeOption = this.parent.testOptions.get("PageSize");
+        if (pageSizeOption instanceof Integer) {
+            metaBuilder.setLimit((int)pageSizeOption);
+        }
+        builder.setMeta(metaBuilder);
 
         Supplier<PageResult<Role> > pageFetcher = () -> {
             // Note: this closure captures and reuses the builder to set the next page

@@ -8,13 +8,13 @@ import java.util.ArrayList;
 public final class NotFoundException extends BaseException {
     static final long serialVersionUID = 1;
 
-    private final ArrayList<String> entities;
-    public List<String> getEntities() {
-        return this.entities;
+    private final String entity;
+    public String getEntity() {
+        return this.entity;
     }
 
-    public NotFoundException(String errorMessage, Collection<String> entities) {
+    public NotFoundException(String errorMessage, String entity) {
         super(errorMessage);
-        this.entities = new ArrayList<String>(entities);
+        this.entity = entity;
     }
 }

@@ -24,6 +24,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -32,6 +33,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta();
     /**
@@ -49,6 +51,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
@@ -57,6 +60,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
@@ -90,6 +94,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleCreateRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -102,7 +113,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -140,7 +150,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -179,6 +189,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -189,6 +200,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
@@ -212,6 +224,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
@@ -222,6 +235,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
       return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
@@ -289,19 +303,18 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasRole() == other.hasRole());
+      if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        result = result && getRole()
-            .equals(other.getRole());
+        if (!getRole()
+            .equals(other.getRole())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -512,35 +525,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -589,7 +602,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
       /**
@@ -598,6 +611,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -608,6 +622,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -742,7 +757,7 @@ public final class RolesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_ = null;
+      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
@@ -751,6 +766,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
@@ -761,6 +777,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
@@ -897,7 +914,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -957,6 +974,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -965,6 +983,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta();
     /**
@@ -982,6 +1001,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
@@ -990,6 +1010,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
@@ -1022,6 +1043,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleCreateResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1034,7 +1062,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1072,7 +1099,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1111,6 +1138,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -1121,6 +1149,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
@@ -1144,6 +1173,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
@@ -1154,6 +1184,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
       return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
@@ -1221,19 +1252,18 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasRole() == other.hasRole());
+      if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        result = result && getRole()
-            .equals(other.getRole());
+        if (!getRole()
+            .equals(other.getRole())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1443,35 +1473,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1520,7 +1550,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
       /**
@@ -1529,6 +1559,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -1539,6 +1570,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -1673,7 +1705,7 @@ public final class RolesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_ = null;
+      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
@@ -1682,6 +1714,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
@@ -1692,6 +1725,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
@@ -1828,7 +1862,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1888,6 +1922,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -1896,6 +1931,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta();
     /**
@@ -1913,6 +1949,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -1921,6 +1958,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -1946,6 +1984,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleGetRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1958,7 +2003,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1989,7 +2033,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2028,6 +2072,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -2038,6 +2083,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
@@ -2061,6 +2107,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -2080,6 +2127,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -2146,16 +2194,15 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2354,35 +2401,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2432,7 +2479,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder> metaBuilder_;
       /**
@@ -2441,6 +2488,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -2451,6 +2499,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -2592,6 +2641,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2611,6 +2661,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2631,6 +2682,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2648,6 +2701,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2661,6 +2715,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2676,7 +2732,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2736,6 +2792,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -2744,6 +2801,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta();
     /**
@@ -2761,6 +2819,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
@@ -2769,6 +2828,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
@@ -2800,6 +2860,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleGetResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2812,7 +2879,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2850,7 +2916,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2889,6 +2955,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -2899,6 +2966,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
@@ -2922,6 +2990,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
@@ -2932,6 +3001,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
       return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
@@ -2999,19 +3069,18 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasRole() == other.hasRole());
+      if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        result = result && getRole()
-            .equals(other.getRole());
+        if (!getRole()
+            .equals(other.getRole())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3220,35 +3289,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3297,7 +3366,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder> metaBuilder_;
       /**
@@ -3306,6 +3375,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -3316,6 +3386,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -3450,7 +3521,7 @@ public final class RolesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_ = null;
+      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
@@ -3459,6 +3530,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
@@ -3469,6 +3541,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
@@ -3605,7 +3678,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3665,6 +3738,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -3673,6 +3747,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta();
     /**
@@ -3690,6 +3765,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -3698,6 +3774,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -3708,6 +3785,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
@@ -3716,6 +3794,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
@@ -3749,6 +3828,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleUpdateRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3761,7 +3847,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3805,7 +3890,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3844,6 +3929,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -3854,6 +3940,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
@@ -3877,6 +3964,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -3896,6 +3984,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -3919,6 +4008,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
@@ -3929,6 +4019,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
       return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
@@ -4002,21 +4093,20 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasRole() == other.hasRole());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        result = result && getRole()
-            .equals(other.getRole());
+        if (!getRole()
+            .equals(other.getRole())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4231,35 +4321,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4312,7 +4402,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
       /**
@@ -4321,6 +4411,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -4331,6 +4422,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -4472,6 +4564,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -4491,6 +4584,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -4511,6 +4605,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -4528,6 +4624,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -4541,6 +4638,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4554,7 +4653,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_ = null;
+      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
@@ -4563,6 +4662,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
@@ -4573,6 +4673,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+       * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
@@ -4709,7 +4810,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4769,6 +4870,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -4777,6 +4879,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta();
     /**
@@ -4794,6 +4897,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
@@ -4802,6 +4906,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
@@ -4834,6 +4939,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleUpdateResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4846,7 +4958,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4884,7 +4995,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4923,6 +5034,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -4933,6 +5045,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
@@ -4956,6 +5069,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
@@ -4966,6 +5080,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
       return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
@@ -5033,19 +5148,18 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasRole() == other.hasRole());
+      if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        result = result && getRole()
-            .equals(other.getRole());
+        if (!getRole()
+            .equals(other.getRole())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5255,35 +5369,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5332,7 +5446,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
       /**
@@ -5341,6 +5455,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -5351,6 +5466,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -5485,7 +5601,7 @@ public final class RolesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_ = null;
+      private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
@@ -5494,6 +5610,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
@@ -5504,6 +5621,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
@@ -5640,7 +5758,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5700,6 +5818,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -5708,6 +5827,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta();
     /**
@@ -5725,6 +5845,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -5733,6 +5854,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -5758,6 +5880,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleDeleteRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5770,7 +5899,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5801,7 +5929,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5840,6 +5968,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -5850,6 +5979,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
@@ -5873,6 +6003,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -5892,6 +6023,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -5958,16 +6090,15 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6166,35 +6297,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6244,7 +6375,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder> metaBuilder_;
       /**
@@ -6253,6 +6384,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -6263,6 +6395,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -6404,6 +6537,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -6423,6 +6557,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -6443,6 +6578,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -6460,6 +6597,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -6473,6 +6611,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6488,7 +6628,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6548,6 +6688,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -6556,6 +6697,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta();
     /**
@@ -6587,6 +6729,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleDeleteResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6599,7 +6748,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6624,7 +6772,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6663,6 +6811,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -6673,6 +6822,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
@@ -6733,14 +6883,13 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6934,35 +7083,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7008,7 +7157,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder> metaBuilder_;
       /**
@@ -7017,6 +7166,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -7027,6 +7177,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -7163,7 +7314,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7223,6 +7374,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -7231,6 +7383,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta();
     /**
@@ -7248,6 +7401,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
@@ -7256,6 +7410,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -7281,6 +7436,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleListRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -7293,7 +7455,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7324,7 +7485,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7363,6 +7524,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -7373,6 +7535,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
@@ -7396,6 +7559,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
      */
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
@@ -7415,6 +7579,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
      */
     public com.google.protobuf.ByteString
         getFilterBytes() {
@@ -7481,16 +7646,15 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7689,35 +7853,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7767,7 +7931,7 @@ public final class RolesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> metaBuilder_;
       /**
@@ -7776,6 +7940,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -7786,6 +7951,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -7927,6 +8093,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -7946,6 +8113,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -7966,6 +8134,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -7983,6 +8153,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -7996,6 +8167,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -8011,7 +8184,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8071,6 +8244,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
@@ -8079,6 +8253,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta();
     /**
@@ -8156,6 +8331,13 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RoleListResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -8193,16 +8375,16 @@ public final class RolesPlumbing {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 roles_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.RolesPlumbing.Role>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               roles_.add(
                   input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8216,7 +8398,7 @@ public final class RolesPlumbing {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           roles_ = java.util.Collections.unmodifiableList(roles_);
         }
         this.unknownFields = unknownFields.build();
@@ -8236,7 +8418,6 @@ public final class RolesPlumbing {
               com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
     /**
@@ -8245,6 +8426,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
@@ -8255,6 +8437,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
@@ -8377,16 +8560,15 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getRolesList()
-          .equals(other.getRolesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getRolesList()
+          .equals(other.getRolesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8551,7 +8733,7 @@ public final class RolesPlumbing {
         }
         if (rolesBuilder_ == null) {
           roles_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           rolesBuilder_.clear();
         }
@@ -8582,57 +8764,55 @@ public final class RolesPlumbing {
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse buildPartial() {
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
           result.meta_ = metaBuilder_.build();
         }
         if (rolesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             roles_ = java.util.Collections.unmodifiableList(roles_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.roles_ = roles_;
         } else {
           result.roles_ = rolesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8653,7 +8833,7 @@ public final class RolesPlumbing {
           if (!other.roles_.isEmpty()) {
             if (roles_.isEmpty()) {
               roles_ = other.roles_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureRolesIsMutable();
               roles_.addAll(other.roles_);
@@ -8666,7 +8846,7 @@ public final class RolesPlumbing {
               rolesBuilder_.dispose();
               rolesBuilder_ = null;
               roles_ = other.roles_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               rolesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getRolesFieldBuilder() : null;
@@ -8705,7 +8885,7 @@ public final class RolesPlumbing {
       }
       private int bitField0_;
 
-      private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> metaBuilder_;
       /**
@@ -8714,6 +8894,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
@@ -8724,6 +8905,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -8861,9 +9043,9 @@ public final class RolesPlumbing {
       private java.util.List<com.strongdm.api.v1.plumbing.RolesPlumbing.Role> roles_ =
         java.util.Collections.emptyList();
       private void ensureRolesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           roles_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.RolesPlumbing.Role>(roles_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -9057,7 +9239,7 @@ public final class RolesPlumbing {
       public Builder clearRoles() {
         if (rolesBuilder_ == null) {
           roles_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           rolesBuilder_.clear();
@@ -9162,7 +9344,7 @@ public final class RolesPlumbing {
           rolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
                   roles_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           roles_ = null;
@@ -9172,7 +9354,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9232,6 +9414,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
@@ -9240,6 +9423,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -9250,6 +9434,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -9258,6 +9443,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -9268,6 +9454,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+     * @return The composite.
      */
     boolean getComposite();
   }
@@ -9292,7 +9479,13 @@ public final class RolesPlumbing {
     private Role() {
       id_ = "";
       name_ = "";
-      composite_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Role();
     }
 
     @java.lang.Override
@@ -9308,7 +9501,6 @@ public final class RolesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9337,7 +9529,7 @@ public final class RolesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9376,6 +9568,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -9395,6 +9588,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -9418,6 +9612,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -9437,6 +9632,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -9460,6 +9656,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+     * @return The composite.
      */
     public boolean getComposite() {
       return composite_;
@@ -9522,15 +9719,14 @@ public final class RolesPlumbing {
       }
       com.strongdm.api.v1.plumbing.RolesPlumbing.Role other = (com.strongdm.api.v1.plumbing.RolesPlumbing.Role) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && (getComposite()
-          == other.getComposite());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getComposite()
+          != other.getComposite()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9727,35 +9923,35 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9816,6 +10012,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -9835,6 +10032,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -9855,6 +10053,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -9872,6 +10072,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -9885,6 +10086,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9905,6 +10108,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9924,6 +10128,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9944,6 +10149,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9961,6 +10168,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9974,6 +10182,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9994,6 +10204,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       * @return The composite.
        */
       public boolean getComposite() {
         return composite_;
@@ -10004,6 +10215,8 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The composite to set.
+       * @return This builder for chaining.
        */
       public Builder setComposite(boolean value) {
         
@@ -10017,6 +10230,7 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearComposite() {
         
@@ -10027,7 +10241,7 @@ public final class RolesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10190,22 +10404,14 @@ public final class RolesPlumbing {
       "/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com.strongd" +
       "m.api.v1.plumbingB\rRolesPlumbingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
-        }, assigner);
+        });
     internal_static_v1_RoleCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_v1_RoleCreateRequest_fieldAccessorTable = new

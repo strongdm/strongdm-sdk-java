@@ -20,10 +20,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta();
     /**
@@ -33,10 +35,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
@@ -66,6 +70,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeCreateRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -78,7 +89,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -116,7 +126,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -151,12 +161,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
     /**
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
@@ -172,12 +184,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     public boolean hasNode() {
       return node_ != null;
     }
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
@@ -241,19 +255,18 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasNode() == other.hasNode());
+      if (hasNode() != other.hasNode()) return false;
       if (hasNode()) {
-        result = result && getNode()
-            .equals(other.getNode());
+        if (!getNode()
+            .equals(other.getNode())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -464,35 +477,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -541,17 +554,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -658,17 +673,19 @@ public final class NodesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_ = null;
+      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the node field is set.
        */
       public boolean hasNode() {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return The node.
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
         if (nodeBuilder_ == null) {
@@ -777,7 +794,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -833,10 +850,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta();
     /**
@@ -846,10 +865,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
@@ -858,17 +879,16 @@ public final class NodesPlumbing {
     com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder();
 
     /**
-     * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+     * @return The token.
      */
-    boolean hasToken();
+    java.lang.String getToken();
     /**
-     * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for token.
      */
-    com.strongdm.api.v1.plumbing.NodesPlumbing.Token getToken();
-    /**
-     * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.NodesPlumbing.TokenOrBuilder getTokenOrBuilder();
+    com.google.protobuf.ByteString
+        getTokenBytes();
   }
   /**
    * <pre>
@@ -888,6 +908,14 @@ public final class NodesPlumbing {
       super(builder);
     }
     private NodeCreateResponse() {
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeCreateResponse();
     }
 
     @java.lang.Override
@@ -903,7 +931,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -941,20 +968,13 @@ public final class NodesPlumbing {
               break;
             }
             case 26: {
-              com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder subBuilder = null;
-              if (token_ != null) {
-                subBuilder = token_.toBuilder();
-              }
-              token_ = input.readMessage(com.strongdm.api.v1.plumbing.NodesPlumbing.Token.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(token_);
-                token_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              token_ = s;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -989,12 +1009,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
     /**
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
@@ -1010,12 +1032,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     public boolean hasNode() {
       return node_ != null;
     }
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
@@ -1028,24 +1052,39 @@ public final class NodesPlumbing {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 3;
-    private com.strongdm.api.v1.plumbing.NodesPlumbing.Token token_;
+    private volatile java.lang.Object token_;
     /**
-     * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+     * @return The token.
      */
-    public boolean hasToken() {
-      return token_ != null;
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for token.
      */
-    public com.strongdm.api.v1.plumbing.NodesPlumbing.Token getToken() {
-      return token_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Token.getDefaultInstance() : token_;
-    }
-    /**
-     * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
-     */
-    public com.strongdm.api.v1.plumbing.NodesPlumbing.TokenOrBuilder getTokenOrBuilder() {
-      return getToken();
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1068,8 +1107,8 @@ public final class NodesPlumbing {
       if (node_ != null) {
         output.writeMessage(2, getNode());
       }
-      if (token_ != null) {
-        output.writeMessage(3, getToken());
+      if (!getTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
       }
       unknownFields.writeTo(output);
     }
@@ -1088,9 +1127,8 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNode());
       }
-      if (token_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getToken());
+      if (!getTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1107,24 +1145,20 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasNode() == other.hasNode());
+      if (hasNode() != other.hasNode()) return false;
       if (hasNode()) {
-        result = result && getNode()
-            .equals(other.getNode());
+        if (!getNode()
+            .equals(other.getNode())) return false;
       }
-      result = result && (hasToken() == other.hasToken());
-      if (hasToken()) {
-        result = result && getToken()
-            .equals(other.getToken());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1142,10 +1176,8 @@ public final class NodesPlumbing {
         hash = (37 * hash) + NODE_FIELD_NUMBER;
         hash = (53 * hash) + getNode().hashCode();
       }
-      if (hasToken()) {
-        hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-        hash = (53 * hash) + getToken().hashCode();
-      }
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1296,12 +1328,8 @@ public final class NodesPlumbing {
           node_ = null;
           nodeBuilder_ = null;
         }
-        if (tokenBuilder_ == null) {
-          token_ = null;
-        } else {
-          token_ = null;
-          tokenBuilder_ = null;
-        }
+        token_ = "";
+
         return this;
       }
 
@@ -1338,46 +1366,42 @@ public final class NodesPlumbing {
         } else {
           result.node_ = nodeBuilder_.build();
         }
-        if (tokenBuilder_ == null) {
-          result.token_ = token_;
-        } else {
-          result.token_ = tokenBuilder_.build();
-        }
+        result.token_ = token_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1397,8 +1421,9 @@ public final class NodesPlumbing {
         if (other.hasNode()) {
           mergeNode(other.getNode());
         }
-        if (other.hasToken()) {
-          mergeToken(other.getToken());
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1429,17 +1454,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -1546,17 +1573,19 @@ public final class NodesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_ = null;
+      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the node field is set.
        */
       public boolean hasNode() {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return The node.
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
         if (nodeBuilder_ == null) {
@@ -1663,126 +1692,85 @@ public final class NodesPlumbing {
         return nodeBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.NodesPlumbing.Token token_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.NodesPlumbing.Token, com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.TokenOrBuilder> tokenBuilder_;
+      private java.lang.Object token_ = "";
       /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+       * @return The token.
        */
-      public boolean hasToken() {
-        return tokenBuilder_ != null || token_ != null;
-      }
-      /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.NodesPlumbing.Token getToken() {
-        if (tokenBuilder_ == null) {
-          return token_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Token.getDefaultInstance() : token_;
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
         } else {
-          return tokenBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for token.
        */
-      public Builder setToken(com.strongdm.api.v1.plumbing.NodesPlumbing.Token value) {
-        if (tokenBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          token_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
         } else {
-          tokenBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
        */
       public Builder setToken(
-          com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder builderForValue) {
-        if (tokenBuilder_ == null) {
-          token_ = builderForValue.build();
-          onChanged();
-        } else {
-          tokenBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        token_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeToken(com.strongdm.api.v1.plumbing.NodesPlumbing.Token value) {
-        if (tokenBuilder_ == null) {
-          if (token_ != null) {
-            token_ =
-              com.strongdm.api.v1.plumbing.NodesPlumbing.Token.newBuilder(token_).mergeFrom(value).buildPartial();
-          } else {
-            token_ = value;
-          }
-          onChanged();
-        } else {
-          tokenBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearToken() {
-        if (tokenBuilder_ == null) {
-          token_ = null;
-          onChanged();
-        } else {
-          token_ = null;
-          tokenBuilder_ = null;
-        }
-
+        
+        token_ = getDefaultInstance().getToken();
+        onChanged();
         return this;
       }
       /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string token = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
        */
-      public com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder getTokenBuilder() {
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        token_ = value;
         onChanged();
-        return getTokenFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.NodesPlumbing.TokenOrBuilder getTokenOrBuilder() {
-        if (tokenBuilder_ != null) {
-          return tokenBuilder_.getMessageOrBuilder();
-        } else {
-          return token_ == null ?
-              com.strongdm.api.v1.plumbing.NodesPlumbing.Token.getDefaultInstance() : token_;
-        }
-      }
-      /**
-       * <code>.v1.Token token = 3 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.NodesPlumbing.Token, com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.TokenOrBuilder> 
-          getTokenFieldBuilder() {
-        if (tokenBuilder_ == null) {
-          tokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.NodesPlumbing.Token, com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.TokenOrBuilder>(
-                  getToken(),
-                  getParentForChildren(),
-                  isClean());
-          token_ = null;
-        }
-        return tokenBuilder_;
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1838,10 +1826,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta();
     /**
@@ -1851,10 +1841,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -1880,6 +1872,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeGetRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1892,7 +1891,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1923,7 +1921,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1958,12 +1956,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_;
     /**
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
@@ -1979,6 +1979,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -1994,6 +1995,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -2060,16 +2062,15 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2268,35 +2269,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2346,17 +2347,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.GetRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -2466,6 +2469,7 @@ public final class NodesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2481,6 +2485,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2497,6 +2502,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2510,6 +2517,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2519,6 +2527,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2534,7 +2544,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2590,10 +2600,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta();
     /**
@@ -2603,10 +2615,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
@@ -2634,6 +2648,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeGetResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2646,7 +2667,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2684,7 +2704,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2719,12 +2739,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_;
     /**
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
@@ -2740,12 +2762,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     public boolean hasNode() {
       return node_ != null;
     }
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
@@ -2809,19 +2833,18 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasNode() == other.hasNode());
+      if (hasNode() != other.hasNode()) return false;
       if (hasNode()) {
-        result = result && getNode()
-            .equals(other.getNode());
+        if (!getNode()
+            .equals(other.getNode())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3030,35 +3053,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3107,17 +3130,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -3224,17 +3249,19 @@ public final class NodesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_ = null;
+      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the node field is set.
        */
       public boolean hasNode() {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return The node.
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
         if (nodeBuilder_ == null) {
@@ -3343,7 +3370,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3399,10 +3426,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta();
     /**
@@ -3412,20 +3441,24 @@ public final class NodesPlumbing {
 
     /**
      * <code>string id = 2;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
@@ -3455,6 +3488,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeUpdateRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3467,7 +3507,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3511,7 +3550,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3546,12 +3585,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
     /**
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
@@ -3567,6 +3608,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 2;</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -3582,6 +3624,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -3601,12 +3644,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     public boolean hasNode() {
       return node_ != null;
     }
     /**
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
@@ -3676,21 +3721,20 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getId()
-          .equals(other.getId());
-      result = result && (hasNode() == other.hasNode());
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasNode() != other.hasNode()) return false;
       if (hasNode()) {
-        result = result && getNode()
-            .equals(other.getNode());
+        if (!getNode()
+            .equals(other.getNode())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3905,35 +3949,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3986,17 +4030,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -4106,6 +4152,7 @@ public final class NodesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 2;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -4121,6 +4168,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -4137,6 +4185,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -4150,6 +4200,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -4159,6 +4210,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4172,17 +4225,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_ = null;
+      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the node field is set.
        */
       public boolean hasNode() {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
+       * @return The node.
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
         if (nodeBuilder_ == null) {
@@ -4291,7 +4346,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4347,10 +4402,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta();
     /**
@@ -4360,10 +4417,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
@@ -4392,6 +4451,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeUpdateResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4404,7 +4470,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4442,7 +4507,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4477,12 +4542,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
     /**
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
@@ -4498,12 +4565,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the node field is set.
      */
     public boolean hasNode() {
       return node_ != null;
     }
     /**
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+     * @return The node.
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
@@ -4567,19 +4636,18 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && (hasNode() == other.hasNode());
+      if (hasNode() != other.hasNode()) return false;
       if (hasNode()) {
-        result = result && getNode()
-            .equals(other.getNode());
+        if (!getNode()
+            .equals(other.getNode())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4789,35 +4857,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4866,17 +4934,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -4983,17 +5053,19 @@ public final class NodesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_ = null;
+      private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the node field is set.
        */
       public boolean hasNode() {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
+       * @return The node.
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
         if (nodeBuilder_ == null) {
@@ -5102,7 +5174,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5158,10 +5230,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta();
     /**
@@ -5171,10 +5245,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -5200,6 +5276,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeDeleteRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5212,7 +5295,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5243,7 +5325,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5278,12 +5360,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_;
     /**
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
@@ -5299,6 +5383,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -5314,6 +5399,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -5380,16 +5466,15 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5588,35 +5673,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5666,17 +5751,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -5786,6 +5873,7 @@ public final class NodesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -5801,6 +5889,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -5817,6 +5906,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -5830,6 +5921,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -5839,6 +5931,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5854,7 +5948,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5910,10 +6004,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta();
     /**
@@ -5941,6 +6037,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeDeleteResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5953,7 +6056,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5978,7 +6080,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6013,12 +6115,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_;
     /**
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
@@ -6075,14 +6179,13 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6276,35 +6379,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -6350,17 +6453,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -6469,7 +6574,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6525,10 +6630,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta();
     /**
@@ -6538,10 +6645,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
      */
     java.lang.String getFilter();
     /**
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
@@ -6567,6 +6676,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeListRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -6579,7 +6695,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6610,7 +6725,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6645,12 +6760,14 @@ public final class NodesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
     /**
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
@@ -6666,6 +6783,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object filter_;
     /**
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
      */
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
@@ -6681,6 +6799,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
      */
     public com.google.protobuf.ByteString
         getFilterBytes() {
@@ -6747,16 +6866,15 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getFilter()
-          .equals(other.getFilter());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6955,35 +7073,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7033,17 +7151,19 @@ public final class NodesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -7153,6 +7273,7 @@ public final class NodesPlumbing {
       private java.lang.Object filter_ = "";
       /**
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
@@ -7168,6 +7289,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
           getFilterBytes() {
@@ -7184,6 +7306,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilter(
           java.lang.String value) {
@@ -7197,6 +7321,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearFilter() {
         
@@ -7206,6 +7331,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
        */
       public Builder setFilterBytes(
           com.google.protobuf.ByteString value) {
@@ -7221,7 +7348,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7277,10 +7404,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta();
     /**
@@ -7334,6 +7463,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NodeListResponse();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -7371,16 +7507,16 @@ public final class NodesPlumbing {
               break;
             }
             case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 nodes_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.NodesPlumbing.Node>();
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000001;
               }
               nodes_.add(
                   input.readMessage(com.strongdm.api.v1.plumbing.NodesPlumbing.Node.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7394,7 +7530,7 @@ public final class NodesPlumbing {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           nodes_ = java.util.Collections.unmodifiableList(nodes_);
         }
         this.unknownFields = unknownFields.build();
@@ -7414,17 +7550,18 @@ public final class NodesPlumbing {
               com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse.class, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
     /**
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
@@ -7523,16 +7660,15 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse other = (com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse) obj;
 
-      boolean result = true;
-      result = result && (hasMeta() == other.hasMeta());
+      if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        result = result && getMeta()
-            .equals(other.getMeta());
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
       }
-      result = result && getNodesList()
-          .equals(other.getNodesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNodesList()
+          .equals(other.getNodesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7697,7 +7833,7 @@ public final class NodesPlumbing {
         }
         if (nodesBuilder_ == null) {
           nodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           nodesBuilder_.clear();
         }
@@ -7728,57 +7864,55 @@ public final class NodesPlumbing {
       public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse buildPartial() {
         com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse result = new com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
           result.meta_ = metaBuilder_.build();
         }
         if (nodesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             nodes_ = java.util.Collections.unmodifiableList(nodes_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.nodes_ = nodes_;
         } else {
           result.nodes_ = nodesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -7799,7 +7933,7 @@ public final class NodesPlumbing {
           if (!other.nodes_.isEmpty()) {
             if (nodes_.isEmpty()) {
               nodes_ = other.nodes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureNodesIsMutable();
               nodes_.addAll(other.nodes_);
@@ -7812,7 +7946,7 @@ public final class NodesPlumbing {
               nodesBuilder_.dispose();
               nodesBuilder_ = null;
               nodes_ = other.nodes_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               nodesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNodesFieldBuilder() : null;
@@ -7851,17 +7985,19 @@ public final class NodesPlumbing {
       }
       private int bitField0_;
 
-      private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_ = null;
+      private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> metaBuilder_;
       /**
        * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
        * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
@@ -7971,9 +8107,9 @@ public final class NodesPlumbing {
       private java.util.List<com.strongdm.api.v1.plumbing.NodesPlumbing.Node> nodes_ =
         java.util.Collections.emptyList();
       private void ensureNodesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           nodes_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.NodesPlumbing.Node>(nodes_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -8123,7 +8259,7 @@ public final class NodesPlumbing {
       public Builder clearNodes() {
         if (nodesBuilder_ == null) {
           nodes_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           nodesBuilder_.clear();
@@ -8200,7 +8336,7 @@ public final class NodesPlumbing {
           nodesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder>(
                   nodes_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           nodes_ = null;
@@ -8210,7 +8346,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8266,10 +8402,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.Relay relay = 1;</code>
+     * @return Whether the relay field is set.
      */
     boolean hasRelay();
     /**
      * <code>.v1.Relay relay = 1;</code>
+     * @return The relay.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Relay getRelay();
     /**
@@ -8279,10 +8417,12 @@ public final class NodesPlumbing {
 
     /**
      * <code>.v1.Gateway gateway = 2;</code>
+     * @return Whether the gateway field is set.
      */
     boolean hasGateway();
     /**
      * <code>.v1.Gateway gateway = 2;</code>
+     * @return The gateway.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway getGateway();
     /**
@@ -8312,6 +8452,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Node();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -8324,7 +8471,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8364,7 +8510,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8398,7 +8544,8 @@ public final class NodesPlumbing {
     private int nodeCase_ = 0;
     private java.lang.Object node_;
     public enum NodeCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       RELAY(1),
       GATEWAY(2),
       NODE_NOT_SET(0);
@@ -8407,6 +8554,8 @@ public final class NodesPlumbing {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -8436,12 +8585,14 @@ public final class NodesPlumbing {
     public static final int RELAY_FIELD_NUMBER = 1;
     /**
      * <code>.v1.Relay relay = 1;</code>
+     * @return Whether the relay field is set.
      */
     public boolean hasRelay() {
       return nodeCase_ == 1;
     }
     /**
      * <code>.v1.Relay relay = 1;</code>
+     * @return The relay.
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Relay getRelay() {
       if (nodeCase_ == 1) {
@@ -8462,12 +8613,14 @@ public final class NodesPlumbing {
     public static final int GATEWAY_FIELD_NUMBER = 2;
     /**
      * <code>.v1.Gateway gateway = 2;</code>
+     * @return Whether the gateway field is set.
      */
     public boolean hasGateway() {
       return nodeCase_ == 2;
     }
     /**
      * <code>.v1.Gateway gateway = 2;</code>
+     * @return The gateway.
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway getGateway() {
       if (nodeCase_ == 2) {
@@ -8537,24 +8690,21 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.Node other = (com.strongdm.api.v1.plumbing.NodesPlumbing.Node) obj;
 
-      boolean result = true;
-      result = result && getNodeCase().equals(
-          other.getNodeCase());
-      if (!result) return false;
+      if (!getNodeCase().equals(other.getNodeCase())) return false;
       switch (nodeCase_) {
         case 1:
-          result = result && getRelay()
-              .equals(other.getRelay());
+          if (!getRelay()
+              .equals(other.getRelay())) return false;
           break;
         case 2:
-          result = result && getGateway()
-              .equals(other.getGateway());
+          if (!getGateway()
+              .equals(other.getGateway())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8762,35 +8912,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -8865,12 +9015,14 @@ public final class NodesPlumbing {
           com.strongdm.api.v1.plumbing.NodesPlumbing.Relay, com.strongdm.api.v1.plumbing.NodesPlumbing.Relay.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.RelayOrBuilder> relayBuilder_;
       /**
        * <code>.v1.Relay relay = 1;</code>
+       * @return Whether the relay field is set.
        */
       public boolean hasRelay() {
         return nodeCase_ == 1;
       }
       /**
        * <code>.v1.Relay relay = 1;</code>
+       * @return The relay.
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Relay getRelay() {
         if (relayBuilder_ == null) {
@@ -9001,12 +9153,14 @@ public final class NodesPlumbing {
           com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway, com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.GatewayOrBuilder> gatewayBuilder_;
       /**
        * <code>.v1.Gateway gateway = 2;</code>
+       * @return Whether the gateway field is set.
        */
       public boolean hasGateway() {
         return nodeCase_ == 2;
       }
       /**
        * <code>.v1.Gateway gateway = 2;</code>
+       * @return The gateway.
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway getGateway() {
         if (gatewayBuilder_ == null) {
@@ -9135,7 +9289,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9191,20 +9345,24 @@ public final class NodesPlumbing {
 
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -9231,6 +9389,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Relay();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -9243,7 +9408,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9267,7 +9431,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -9302,6 +9466,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -9317,6 +9482,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -9336,6 +9502,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -9351,6 +9518,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -9416,13 +9584,12 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.Relay other = (com.strongdm.api.v1.plumbing.NodesPlumbing.Relay) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9611,35 +9778,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -9693,6 +9860,7 @@ public final class NodesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -9708,6 +9876,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -9724,6 +9893,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -9737,6 +9908,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -9746,6 +9918,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9762,6 +9936,7 @@ public final class NodesPlumbing {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9777,6 +9952,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9793,6 +9969,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -9806,6 +9984,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -9815,6 +9994,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9830,7 +10011,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9886,40 +10067,48 @@ public final class NodesPlumbing {
 
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The listenAddress.
      */
     java.lang.String getListenAddress();
     /**
      * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for listenAddress.
      */
     com.google.protobuf.ByteString
         getListenAddressBytes();
 
     /**
      * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bindAddress.
      */
     java.lang.String getBindAddress();
     /**
      * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for bindAddress.
      */
     com.google.protobuf.ByteString
         getBindAddressBytes();
@@ -9948,6 +10137,13 @@ public final class NodesPlumbing {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Gateway();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -9960,7 +10156,6 @@ public final class NodesPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9996,7 +10191,7 @@ public final class NodesPlumbing {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -10031,6 +10226,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -10046,6 +10242,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -10065,6 +10262,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -10080,6 +10278,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -10099,6 +10298,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object listenAddress_;
     /**
      * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The listenAddress.
      */
     public java.lang.String getListenAddress() {
       java.lang.Object ref = listenAddress_;
@@ -10114,6 +10314,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for listenAddress.
      */
     public com.google.protobuf.ByteString
         getListenAddressBytes() {
@@ -10133,6 +10334,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object bindAddress_;
     /**
      * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bindAddress.
      */
     public java.lang.String getBindAddress() {
       java.lang.Object ref = bindAddress_;
@@ -10148,6 +10350,7 @@ public final class NodesPlumbing {
     }
     /**
      * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for bindAddress.
      */
     public com.google.protobuf.ByteString
         getBindAddressBytes() {
@@ -10225,17 +10428,16 @@ public final class NodesPlumbing {
       }
       com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway other = (com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getListenAddress()
-          .equals(other.getListenAddress());
-      result = result && getBindAddress()
-          .equals(other.getBindAddress());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getListenAddress()
+          .equals(other.getListenAddress())) return false;
+      if (!getBindAddress()
+          .equals(other.getBindAddress())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -10434,35 +10636,35 @@ public final class NodesPlumbing {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -10524,6 +10726,7 @@ public final class NodesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -10539,6 +10742,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -10555,6 +10759,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -10568,6 +10774,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -10577,6 +10784,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -10593,6 +10802,7 @@ public final class NodesPlumbing {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -10608,6 +10818,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -10624,6 +10835,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -10637,6 +10850,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -10646,6 +10860,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -10662,6 +10878,7 @@ public final class NodesPlumbing {
       private java.lang.Object listenAddress_ = "";
       /**
        * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The listenAddress.
        */
       public java.lang.String getListenAddress() {
         java.lang.Object ref = listenAddress_;
@@ -10677,6 +10894,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for listenAddress.
        */
       public com.google.protobuf.ByteString
           getListenAddressBytes() {
@@ -10693,6 +10911,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The listenAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setListenAddress(
           java.lang.String value) {
@@ -10706,6 +10926,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearListenAddress() {
         
@@ -10715,6 +10936,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for listenAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setListenAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -10731,6 +10954,7 @@ public final class NodesPlumbing {
       private java.lang.Object bindAddress_ = "";
       /**
        * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bindAddress.
        */
       public java.lang.String getBindAddress() {
         java.lang.Object ref = bindAddress_;
@@ -10746,6 +10970,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for bindAddress.
        */
       public com.google.protobuf.ByteString
           getBindAddressBytes() {
@@ -10762,6 +10987,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bindAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setBindAddress(
           java.lang.String value) {
@@ -10775,6 +11002,7 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
        */
       public Builder clearBindAddress() {
         
@@ -10784,6 +11012,8 @@ public final class NodesPlumbing {
       }
       /**
        * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for bindAddress to set.
+       * @return This builder for chaining.
        */
       public Builder setBindAddressBytes(
           com.google.protobuf.ByteString value) {
@@ -10799,7 +11029,7 @@ public final class NodesPlumbing {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -10844,701 +11074,6 @@ public final class NodesPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface TokenOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.Token)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-     */
-    java.lang.String getToken();
-    /**
-     * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-     */
-    com.google.protobuf.ByteString
-        getTokenBytes();
-  }
-  /**
-   * <pre>
-   * Token holds the bearer token used to start up nodes.
-   * </pre>
-   *
-   * Protobuf type {@code v1.Token}
-   */
-  public  static final class Token extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.Token)
-      TokenOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Token.newBuilder() to construct.
-    private Token(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Token() {
-      id_ = "";
-      token_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Token(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              token_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.NodesPlumbing.internal_static_v1_Token_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.NodesPlumbing.internal_static_v1_Token_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.NodesPlumbing.Token.class, com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TOKEN_FIELD_NUMBER = 2;
-    private volatile java.lang.Object token_;
-    /**
-     * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-     */
-    public java.lang.String getToken() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        token_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-     */
-    public com.google.protobuf.ByteString
-        getTokenBytes() {
-      java.lang.Object ref = token_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        token_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!getTokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, token_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!getTokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, token_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.NodesPlumbing.Token)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.NodesPlumbing.Token other = (com.strongdm.api.v1.plumbing.NodesPlumbing.Token) obj;
-
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getToken()
-          .equals(other.getToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getToken().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.NodesPlumbing.Token prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Token holds the bearer token used to start up nodes.
-     * </pre>
-     *
-     * Protobuf type {@code v1.Token}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.Token)
-        com.strongdm.api.v1.plumbing.NodesPlumbing.TokenOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.NodesPlumbing.internal_static_v1_Token_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.NodesPlumbing.internal_static_v1_Token_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.NodesPlumbing.Token.class, com.strongdm.api.v1.plumbing.NodesPlumbing.Token.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.NodesPlumbing.Token.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        token_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.NodesPlumbing.internal_static_v1_Token_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.NodesPlumbing.Token getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.NodesPlumbing.Token.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.NodesPlumbing.Token build() {
-        com.strongdm.api.v1.plumbing.NodesPlumbing.Token result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.NodesPlumbing.Token buildPartial() {
-        com.strongdm.api.v1.plumbing.NodesPlumbing.Token result = new com.strongdm.api.v1.plumbing.NodesPlumbing.Token(this);
-        result.id_ = id_;
-        result.token_ = token_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.NodesPlumbing.Token) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.NodesPlumbing.Token)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.NodesPlumbing.Token other) {
-        if (other == com.strongdm.api.v1.plumbing.NodesPlumbing.Token.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (!other.getToken().isEmpty()) {
-          token_ = other.token_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.NodesPlumbing.Token parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.NodesPlumbing.Token) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object token_ = "";
-      /**
-       * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public java.lang.String getToken() {
-        java.lang.Object ref = token_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          token_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public com.google.protobuf.ByteString
-          getTokenBytes() {
-        java.lang.Object ref = token_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          token_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        token_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearToken() {
-        
-        token_ = getDefaultInstance().getToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        token_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.Token)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.Token)
-    private static final com.strongdm.api.v1.plumbing.NodesPlumbing.Token DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.NodesPlumbing.Token();
-    }
-
-    public static com.strongdm.api.v1.plumbing.NodesPlumbing.Token getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Token>
-        PARSER = new com.google.protobuf.AbstractParser<Token>() {
-      @java.lang.Override
-      public Token parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Token(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Token> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Token> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.NodesPlumbing.Token getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11609,11 +11144,6 @@ public final class NodesPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Gateway_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_Token_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_Token_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11628,76 +11158,66 @@ public final class NodesPlumbing {
       "tations.proto\032\roptions.proto\032\nspec.proto" +
       "\"`\n\021NodeCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
       ".CreateRequestMetadata\022\"\n\004node\030\002 \001(\0132\010.v" +
-      "1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\240\001\n\022NodeCreateRespons" +
+      "1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\225\001\n\022NodeCreateRespons" +
       "e\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetad" +
       "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022$\n\005token\030\003 \001(\0132\t.v1.TokenB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016NodeGetRequest\022" +
-      "$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n" +
-      "\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"t\n\017NodeGetResponse" +
-      "\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021NodeUpdateRequest" +
-      "\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetadat" +
-      "a\022\n\n\002id\030\002 \001(\t\022\"\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\"z\n\022NodeUpdateResponse\0224\n\004meta\030" +
-      "\001 \001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteRequest\022\'\n\004me" +
-      "ta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002i" +
-      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"V\n\022NodeDeleteRespons" +
-      "e\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeListR" +
-      "equest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMet" +
-      "adata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"_\n\020Nod" +
-      "eListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRes" +
-      "ponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.NodeB\n" +
-      "\362\370\263\007\005\270\363\263\007\001\"\313\001\n\004Node\022\032\n\005relay\030\001 \001(\0132\t.v1." +
-      "RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v1.GatewayH\000:" +
-      "o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A node.\022/https://www.s" +
-      "trongdm.com/docs/api/entities#Node2$\022\"{ " +
-      "\"id\": \"7\", \"name\": \"happy-goat\"}B\026\n\004node" +
-      "\022\016\252\370\263\007\t\242\370\263\007\004Node\"^\n\005Relay\022\035\n\002id\030\001 \001(\tB\021\362" +
-      "\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263" +
-      "\007\004Name\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\314\001\n\007Gat" +
-      "eway\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004n" +
-      "ame\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\0226\n\016listen" +
-      "_address\030\003 \001(\tB\036\362\370\263\007\031\242\363\263\007\nListenAddr\250\363\263\007" +
-      "\001\260\363\263\007\001\0222\n\014bind_address\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010" +
-      "BindAddr\250\363\263\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"" +
-      "F\n\005Token\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005toke" +
-      "n\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\362\003\n\005Node" +
-      "s\022\245\001\n\006Create\022\025.v1.NodeCreateRequest\032\026.v1" +
-      ".NodeCreateResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001" +
-      "*\222AU\"S\n\030Learn how to make a Node\0227https:" +
-      "//www.strongdm.com/docs/api/services/Nod" +
-      "es#Create\022F\n\003Get\022\022.v1.NodeGetRequest\032\023.v" +
-      "1.NodeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id" +
-      "}\022R\n\006Update\022\025.v1.NodeUpdateRequest\032\026.v1." +
-      "NodeUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{i" +
-      "d}:\001*\022O\n\006Delete\022\025.v1.NodeDeleteRequest\032\026" +
-      ".v1.NodeDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/node" +
-      "s/{id}\022D\n\004List\022\023.v1.NodeListRequest\032\024.v1" +
-      ".NodeListResponse\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371" +
-      "\263\007\t\302\371\263\007\004NodeB-\n\034com.strongdm.api.v1.plum" +
-      "bingB\rNodesPlumbingb\006proto3"
+      "\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005token\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"N\n\016NodeGetRequest\022$\n\004meta\030\001 \001" +
+      "(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\"t\n\017NodeGetResponse\0221\n\004meta\030\001 " +
+      "\001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"l\n\021NodeUpdateRequest\022\'\n\004meta\030\001 " +
+      "\001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002 \001" +
+      "(\t\022\"\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"z" +
+      "\n\022NodeUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1." +
+      "UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004no" +
+      "de\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263" +
+      "\007\001\"T\n\021NodeDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031." +
+      "v1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\"V\n\022NodeDeleteResponse\0224\n\004meta\030\001" +
+      " \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeListRequest\022%\n\004m" +
+      "eta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fi" +
+      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"_\n\020NodeListRespon" +
+      "se\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetada" +
+      "ta\022#\n\005nodes\030\002 \003(\0132\010.v1.NodeB\n\362\370\263\007\005\270\363\263\007\001\"" +
+      "\313\001\n\004Node\022\032\n\005relay\030\001 \001(\0132\t.v1.RelayH\000\022\036\n\007" +
+      "gateway\030\002 \001(\0132\013.v1.GatewayH\000:o\372\370\263\007\005\250\363\263\007\001" +
+      "\222Ab*:\n\007A node.\022/https://www.strongdm.com" +
+      "/docs/api/entities#Node2$\022\"{ \"id\": \"7\", " +
+      "\"name\": \"happy-goat\"}B\026\n\004node\022\016\252\370\263\007\t\242\370\263\007" +
+      "\004Node\"^\n\005Relay\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID" +
+      "\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001" +
+      ":\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\314\001\n\007Gateway\022\035\n\002id\030" +
+      "\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023" +
+      "\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\0226\n\016listen_address\030\003 " +
+      "\001(\tB\036\362\370\263\007\031\242\363\263\007\nListenAddr\250\363\263\007\001\260\363\263\007\001\0222\n\014b" +
+      "ind_address\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010BindAddr\250\363\263" +
+      "\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245" +
+      "\001\n\006Create\022\025.v1.NodeCreateRequest\032\026.v1.No" +
+      "deCreateResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001*\222A" +
+      "U\"S\n\030Learn how to make a Node\0227https://w" +
+      "ww.strongdm.com/docs/api/services/Nodes#" +
+      "Create\022F\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.N" +
+      "odeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id}\022R" +
+      "\n\006Update\022\025.v1.NodeUpdateRequest\032\026.v1.Nod" +
+      "eUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{id}:" +
+      "\001*\022O\n\006Delete\022\025.v1.NodeDeleteRequest\032\026.v1" +
+      ".NodeDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/nodes/{" +
+      "id}\022D\n\004List\022\023.v1.NodeListRequest\032\024.v1.No" +
+      "deListResponse\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t" +
+      "\302\371\263\007\004NodeB-\n\034com.strongdm.api.v1.plumbin" +
+      "gB\rNodesPlumbingb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
-        }, assigner);
+        });
     internal_static_v1_NodeCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_v1_NodeCreateRequest_fieldAccessorTable = new
@@ -11776,12 +11296,6 @@ public final class NodesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
         new java.lang.String[] { "Id", "Name", "ListenAddress", "BindAddress", });
-    internal_static_v1_Token_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_v1_Token_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_Token_descriptor,
-        new java.lang.String[] { "Id", "Token", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
