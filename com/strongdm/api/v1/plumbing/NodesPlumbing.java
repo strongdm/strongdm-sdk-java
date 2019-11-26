@@ -19,40 +19,63 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      */
     com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * Parameters to define the new Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
+     * <pre>
+     * Parameters to define the new Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
+     * <pre>
+     * Parameters to define the new Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder();
   }
   /**
    * <pre>
-   * NodeCreateRequest specifies what kind of nodes that should be registered in
-   * the organizations fleet. Note that a node must be either a Relay or a
-   * Gateway.
+   * NodeCreateRequest specifies what kind of Node should be registered in the
+   * organizations fleet. Note that a Node must be either a Relay or a Gateway.
    * </pre>
    *
    * Protobuf type {@code v1.NodeCreateRequest}
@@ -160,6 +183,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
@@ -167,6 +194,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
@@ -174,6 +205,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -183,6 +218,10 @@ public final class NodesPlumbing {
     public static final int NODE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
+     * <pre>
+     * Parameters to define the new Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
@@ -190,6 +229,10 @@ public final class NodesPlumbing {
       return node_ != null;
     }
     /**
+     * <pre>
+     * Parameters to define the new Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
@@ -197,6 +240,10 @@ public final class NodesPlumbing {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
     /**
+     * <pre>
+     * Parameters to define the new Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -381,9 +428,8 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeCreateRequest specifies what kind of nodes that should be registered in
-     * the organizations fleet. Note that a node must be either a Relay or a
-     * Gateway.
+     * NodeCreateRequest specifies what kind of Node should be registered in the
+     * organizations fleet. Note that a Node must be either a Relay or a Gateway.
      * </pre>
      *
      * Protobuf type {@code v1.NodeCreateRequest}
@@ -558,6 +604,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        * @return Whether the meta field is set.
        */
@@ -565,6 +615,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        * @return The meta.
        */
@@ -576,6 +630,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata value) {
@@ -592,6 +650,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(
@@ -606,6 +668,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata value) {
@@ -624,6 +690,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       public Builder clearMeta() {
@@ -638,6 +708,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder getMetaBuilder() {
@@ -646,6 +720,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -657,6 +735,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -677,6 +759,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the node field is set.
        */
@@ -684,6 +770,10 @@ public final class NodesPlumbing {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return The node.
        */
@@ -695,6 +785,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -711,6 +805,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(
@@ -725,6 +823,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -743,6 +845,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearNode() {
@@ -757,6 +863,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder getNodeBuilder() {
@@ -765,6 +875,10 @@ public final class NodesPlumbing {
         return getNodeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -776,6 +890,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Parameters to define the new Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -849,41 +967,75 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * The created Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
+     * <pre>
+     * The created Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
+     * <pre>
+     * The created Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder();
 
     /**
+     * <pre>
+     * The auth token generated for the Node. The Node will use this token to
+     * authenticate with the strongDM API.
+     * </pre>
+     *
      * <code>string token = 3 [(.v1.field_options) = { ... }</code>
      * @return The token.
      */
     java.lang.String getToken();
     /**
+     * <pre>
+     * The auth token generated for the Node. The Node will use this token to
+     * authenticate with the strongDM API.
+     * </pre>
+     *
      * <code>string token = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for token.
      */
@@ -892,8 +1044,7 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * NodeCreateResponse reports how the nodes were created in the system. It can
-   * communicate partial successes or failures.
+   * NodeCreateResponse reports how the Nodes were created in the system.
    * </pre>
    *
    * Protobuf type {@code v1.NodeCreateResponse}
@@ -1008,6 +1159,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
@@ -1015,6 +1170,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
@@ -1022,6 +1181,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -1031,6 +1194,10 @@ public final class NodesPlumbing {
     public static final int NODE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
+     * <pre>
+     * The created Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
@@ -1038,6 +1205,10 @@ public final class NodesPlumbing {
       return node_ != null;
     }
     /**
+     * <pre>
+     * The created Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
@@ -1045,6 +1216,10 @@ public final class NodesPlumbing {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
     /**
+     * <pre>
+     * The created Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -1054,6 +1229,11 @@ public final class NodesPlumbing {
     public static final int TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object token_;
     /**
+     * <pre>
+     * The auth token generated for the Node. The Node will use this token to
+     * authenticate with the strongDM API.
+     * </pre>
+     *
      * <code>string token = 3 [(.v1.field_options) = { ... }</code>
      * @return The token.
      */
@@ -1070,6 +1250,11 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The auth token generated for the Node. The Node will use this token to
+     * authenticate with the strongDM API.
+     * </pre>
+     *
      * <code>string token = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for token.
      */
@@ -1275,8 +1460,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeCreateResponse reports how the nodes were created in the system. It can
-     * communicate partial successes or failures.
+     * NodeCreateResponse reports how the Nodes were created in the system.
      * </pre>
      *
      * Protobuf type {@code v1.NodeCreateResponse}
@@ -1458,6 +1642,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return Whether the meta field is set.
        */
@@ -1465,6 +1653,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return The meta.
        */
@@ -1476,6 +1668,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata value) {
@@ -1492,6 +1688,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(
@@ -1506,6 +1706,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata value) {
@@ -1524,6 +1728,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearMeta() {
@@ -1538,6 +1746,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder getMetaBuilder() {
@@ -1546,6 +1758,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -1557,6 +1773,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1577,6 +1797,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the node field is set.
        */
@@ -1584,6 +1808,10 @@ public final class NodesPlumbing {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return The node.
        */
@@ -1595,6 +1823,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -1611,6 +1843,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(
@@ -1625,6 +1861,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -1643,6 +1883,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearNode() {
@@ -1657,6 +1901,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder getNodeBuilder() {
@@ -1665,6 +1913,10 @@ public final class NodesPlumbing {
         return getNodeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -1676,6 +1928,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The created Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1694,6 +1950,11 @@ public final class NodesPlumbing {
 
       private java.lang.Object token_ = "";
       /**
+       * <pre>
+       * The auth token generated for the Node. The Node will use this token to
+       * authenticate with the strongDM API.
+       * </pre>
+       *
        * <code>string token = 3 [(.v1.field_options) = { ... }</code>
        * @return The token.
        */
@@ -1710,6 +1971,11 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The auth token generated for the Node. The Node will use this token to
+       * authenticate with the strongDM API.
+       * </pre>
+       *
        * <code>string token = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for token.
        */
@@ -1727,6 +1993,11 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The auth token generated for the Node. The Node will use this token to
+       * authenticate with the strongDM API.
+       * </pre>
+       *
        * <code>string token = 3 [(.v1.field_options) = { ... }</code>
        * @param value The token to set.
        * @return This builder for chaining.
@@ -1742,6 +2013,11 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The auth token generated for the Node. The Node will use this token to
+       * authenticate with the strongDM API.
+       * </pre>
+       *
        * <code>string token = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -1752,6 +2028,11 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The auth token generated for the Node. The Node will use this token to
+       * authenticate with the strongDM API.
+       * </pre>
+       *
        * <code>string token = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for token to set.
        * @return This builder for chaining.
@@ -1825,26 +2106,46 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      */
     com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * The unique identifier of the Node to retrieve.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The unique identifier of the Node to retrieve.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -1853,7 +2154,7 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * NodeGetRequest specifies which node to retrieve.
+   * NodeGetRequest specifies which Node to retrieve.
    * </pre>
    *
    * Protobuf type {@code v1.NodeGetRequest}
@@ -1955,6 +2256,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
@@ -1962,6 +2267,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return The meta.
      */
@@ -1969,6 +2278,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -1978,6 +2291,10 @@ public final class NodesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The unique identifier of the Node to retrieve.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
@@ -1994,6 +2311,10 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The unique identifier of the Node to retrieve.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -2183,7 +2504,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeGetRequest specifies which node to retrieve.
+     * NodeGetRequest specifies which Node to retrieve.
      * </pre>
      *
      * Protobuf type {@code v1.NodeGetRequest}
@@ -2351,6 +2672,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        * @return Whether the meta field is set.
        */
@@ -2358,6 +2683,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        * @return The meta.
        */
@@ -2369,6 +2698,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata value) {
@@ -2385,6 +2718,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(
@@ -2399,6 +2736,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata value) {
@@ -2417,6 +2758,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       public Builder clearMeta() {
@@ -2431,6 +2776,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder getMetaBuilder() {
@@ -2439,6 +2788,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -2450,6 +2803,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2468,6 +2825,10 @@ public final class NodesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The unique identifier of the Node to retrieve.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @return The id.
        */
@@ -2484,6 +2845,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to retrieve.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @return The bytes for id.
        */
@@ -2501,6 +2866,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to retrieve.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -2516,6 +2885,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to retrieve.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -2526,6 +2899,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to retrieve.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -2599,38 +2976,62 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * The requested Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
+     * <pre>
+     * The requested Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
+     * <pre>
+     * The requested Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder();
   }
   /**
    * <pre>
-   * NodeGetResponse returns a requested node.
+   * NodeGetResponse returns a requested Node.
    * </pre>
    *
    * Protobuf type {@code v1.NodeGetResponse}
@@ -2738,6 +3139,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
@@ -2745,6 +3150,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
@@ -2752,6 +3161,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -2761,6 +3174,10 @@ public final class NodesPlumbing {
     public static final int NODE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
+     * <pre>
+     * The requested Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
@@ -2768,6 +3185,10 @@ public final class NodesPlumbing {
       return node_ != null;
     }
     /**
+     * <pre>
+     * The requested Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
@@ -2775,6 +3196,10 @@ public final class NodesPlumbing {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
     /**
+     * <pre>
+     * The requested Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -2959,7 +3384,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeGetResponse returns a requested node.
+     * NodeGetResponse returns a requested Node.
      * </pre>
      *
      * Protobuf type {@code v1.NodeGetResponse}
@@ -3134,6 +3559,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return Whether the meta field is set.
        */
@@ -3141,6 +3570,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return The meta.
        */
@@ -3152,6 +3585,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata value) {
@@ -3168,6 +3605,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(
@@ -3182,6 +3623,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata value) {
@@ -3200,6 +3645,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearMeta() {
@@ -3214,6 +3663,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder getMetaBuilder() {
@@ -3222,6 +3675,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -3233,6 +3690,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3253,6 +3714,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the node field is set.
        */
@@ -3260,6 +3725,10 @@ public final class NodesPlumbing {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return The node.
        */
@@ -3271,6 +3740,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -3287,6 +3760,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(
@@ -3301,6 +3778,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -3319,6 +3800,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearNode() {
@@ -3333,6 +3818,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder getNodeBuilder() {
@@ -3341,6 +3830,10 @@ public final class NodesPlumbing {
         return getNodeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -3352,6 +3845,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The requested Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3425,26 +3922,50 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * The unique identifier of the Node to update. If an ID is already
+     * specified in the `node` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The unique identifier of the Node to update. If an ID is already
+     * specified in the `node` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      * @return The bytes for id.
      */
@@ -3452,24 +3973,36 @@ public final class NodesPlumbing {
         getIdBytes();
 
     /**
+     * <pre>
+     * Parameters to overwrite the specified Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
+     * <pre>
+     * Parameters to overwrite the specified Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
+     * <pre>
+     * Parameters to overwrite the specified Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder();
   }
   /**
    * <pre>
-   * NodeUpdateRequest identifies a node by ID and provides fields to update on
-   * that node record.
+   * NodeUpdateRequest identifies a Node by ID and provides fields to update on
+   * that Node record.
    * </pre>
    *
    * Protobuf type {@code v1.NodeUpdateRequest}
@@ -3584,6 +4117,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
@@ -3591,6 +4128,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
@@ -3598,6 +4139,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -3607,6 +4152,12 @@ public final class NodesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The unique identifier of the Node to update. If an ID is already
+     * specified in the `node` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      * @return The id.
      */
@@ -3623,6 +4174,12 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The unique identifier of the Node to update. If an ID is already
+     * specified in the `node` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
      * <code>string id = 2;</code>
      * @return The bytes for id.
      */
@@ -3643,6 +4200,10 @@ public final class NodesPlumbing {
     public static final int NODE_FIELD_NUMBER = 3;
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
+     * <pre>
+     * Parameters to overwrite the specified Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
@@ -3650,6 +4211,10 @@ public final class NodesPlumbing {
       return node_ != null;
     }
     /**
+     * <pre>
+     * Parameters to overwrite the specified Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
@@ -3657,6 +4222,10 @@ public final class NodesPlumbing {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
     /**
+     * <pre>
+     * Parameters to overwrite the specified Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -3851,8 +4420,8 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeUpdateRequest identifies a node by ID and provides fields to update on
-     * that node record.
+     * NodeUpdateRequest identifies a Node by ID and provides fields to update on
+     * that Node record.
      * </pre>
      *
      * Protobuf type {@code v1.NodeUpdateRequest}
@@ -4034,6 +4603,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        * @return Whether the meta field is set.
        */
@@ -4041,6 +4614,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        * @return The meta.
        */
@@ -4052,6 +4629,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata value) {
@@ -4068,6 +4649,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(
@@ -4082,6 +4667,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata value) {
@@ -4100,6 +4689,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       public Builder clearMeta() {
@@ -4114,6 +4707,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder getMetaBuilder() {
@@ -4122,6 +4719,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -4133,6 +4734,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4151,6 +4756,12 @@ public final class NodesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The unique identifier of the Node to update. If an ID is already
+       * specified in the `node` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        * @return The id.
        */
@@ -4167,6 +4778,12 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to update. If an ID is already
+       * specified in the `node` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        * @return The bytes for id.
        */
@@ -4184,6 +4801,12 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to update. If an ID is already
+       * specified in the `node` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -4199,6 +4822,12 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to update. If an ID is already
+       * specified in the `node` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        * @return This builder for chaining.
        */
@@ -4209,6 +4838,12 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to update. If an ID is already
+       * specified in the `node` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
        * <code>string id = 2;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -4229,6 +4864,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        * @return Whether the node field is set.
        */
@@ -4236,6 +4875,10 @@ public final class NodesPlumbing {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        * @return The node.
        */
@@ -4247,6 +4890,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -4263,6 +4910,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(
@@ -4277,6 +4928,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -4295,6 +4950,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearNode() {
@@ -4309,6 +4968,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder getNodeBuilder() {
@@ -4317,6 +4980,10 @@ public final class NodesPlumbing {
         return getNodeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -4328,6 +4995,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Parameters to overwrite the specified Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4401,38 +5072,62 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * The updated Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
     boolean hasNode();
     /**
+     * <pre>
+     * The updated Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode();
     /**
+     * <pre>
+     * The updated Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder();
   }
   /**
    * <pre>
-   * NodeUpdateResponse returns the fields of a node after it has been updated by
+   * NodeUpdateResponse returns the fields of a Node after it has been updated by
    * a NodeUpdateRequest.
    * </pre>
    *
@@ -4541,6 +5236,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
@@ -4548,6 +5247,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
@@ -4555,6 +5258,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -4564,6 +5271,10 @@ public final class NodesPlumbing {
     public static final int NODE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.NodesPlumbing.Node node_;
     /**
+     * <pre>
+     * The updated Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
@@ -4571,6 +5282,10 @@ public final class NodesPlumbing {
       return node_ != null;
     }
     /**
+     * <pre>
+     * The updated Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
@@ -4578,6 +5293,10 @@ public final class NodesPlumbing {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
     /**
+     * <pre>
+     * The updated Node.
+     * </pre>
+     *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -4762,7 +5481,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeUpdateResponse returns the fields of a node after it has been updated by
+     * NodeUpdateResponse returns the fields of a Node after it has been updated by
      * a NodeUpdateRequest.
      * </pre>
      *
@@ -4938,6 +5657,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return Whether the meta field is set.
        */
@@ -4945,6 +5668,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return The meta.
        */
@@ -4956,6 +5683,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata value) {
@@ -4972,6 +5703,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(
@@ -4986,6 +5721,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata value) {
@@ -5004,6 +5743,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearMeta() {
@@ -5018,6 +5761,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder getMetaBuilder() {
@@ -5026,6 +5773,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -5037,6 +5788,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5057,6 +5812,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodeBuilder_;
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the node field is set.
        */
@@ -5064,6 +5823,10 @@ public final class NodesPlumbing {
         return nodeBuilder_ != null || node_ != null;
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        * @return The node.
        */
@@ -5075,6 +5838,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -5091,6 +5858,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNode(
@@ -5105,6 +5876,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeNode(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -5123,6 +5898,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearNode() {
@@ -5137,6 +5916,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder getNodeBuilder() {
@@ -5145,6 +5928,10 @@ public final class NodesPlumbing {
         return getNodeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
@@ -5156,6 +5943,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The updated Node.
+       * </pre>
+       *
        * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5229,26 +6020,46 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * The unique identifier of the Node to delete.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * The unique identifier of the Node to delete.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -5257,7 +6068,7 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * NodeDeleteRequest identifies a node by ID to delete.
+   * NodeDeleteRequest identifies a Node by ID to delete.
    * </pre>
    *
    * Protobuf type {@code v1.NodeDeleteRequest}
@@ -5359,6 +6170,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
@@ -5366,6 +6181,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return The meta.
      */
@@ -5373,6 +6192,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -5382,6 +6205,10 @@ public final class NodesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * The unique identifier of the Node to delete.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
@@ -5398,6 +6225,10 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The unique identifier of the Node to delete.
+     * </pre>
+     *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -5587,7 +6418,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeDeleteRequest identifies a node by ID to delete.
+     * NodeDeleteRequest identifies a Node by ID to delete.
      * </pre>
      *
      * Protobuf type {@code v1.NodeDeleteRequest}
@@ -5755,6 +6586,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        * @return Whether the meta field is set.
        */
@@ -5762,6 +6597,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        * @return The meta.
        */
@@ -5773,6 +6612,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata value) {
@@ -5789,6 +6632,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(
@@ -5803,6 +6650,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata value) {
@@ -5821,6 +6672,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       public Builder clearMeta() {
@@ -5835,6 +6690,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder getMetaBuilder() {
@@ -5843,6 +6702,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -5854,6 +6717,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5872,6 +6739,10 @@ public final class NodesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * The unique identifier of the Node to delete.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @return The id.
        */
@@ -5888,6 +6759,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to delete.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @return The bytes for id.
        */
@@ -5905,6 +6780,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to delete.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -5920,6 +6799,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to delete.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -5930,6 +6813,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The unique identifier of the Node to delete.
+       * </pre>
+       *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -6003,23 +6890,35 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta();
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder();
   }
   /**
    * <pre>
-   * NodeDeleteResponse returns information about a node that was deleted.
+   * NodeDeleteResponse returns information about a Node that was deleted.
    * </pre>
    *
    * Protobuf type {@code v1.NodeDeleteResponse}
@@ -6114,6 +7013,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_;
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
@@ -6121,6 +7024,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
@@ -6128,6 +7035,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -6296,7 +7207,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeDeleteResponse returns information about a node that was deleted.
+     * NodeDeleteResponse returns information about a Node that was deleted.
      * </pre>
      *
      * Protobuf type {@code v1.NodeDeleteResponse}
@@ -6457,6 +7368,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return Whether the meta field is set.
        */
@@ -6464,6 +7379,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        * @return The meta.
        */
@@ -6475,6 +7394,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata value) {
@@ -6491,6 +7414,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setMeta(
@@ -6505,6 +7432,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata value) {
@@ -6523,6 +7454,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearMeta() {
@@ -6537,6 +7472,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder getMetaBuilder() {
@@ -6545,6 +7484,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -6556,6 +7499,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6629,26 +7576,46 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta();
     /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      */
     com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for filter.
      */
@@ -6657,7 +7624,7 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * NodeListRequest specifies criteria for retrieving a list of nodes.
+   * NodeListRequest specifies criteria for retrieving a list of Nodes.
    * </pre>
    *
    * Protobuf type {@code v1.NodeListRequest}
@@ -6759,6 +7726,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
     /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
@@ -6766,6 +7737,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return The meta.
      */
@@ -6773,6 +7748,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -6782,6 +7761,10 @@ public final class NodesPlumbing {
     public static final int FILTER_FIELD_NUMBER = 2;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The filter.
      */
@@ -6798,6 +7781,10 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for filter.
      */
@@ -6987,7 +7974,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeListRequest specifies criteria for retrieving a list of nodes.
+     * NodeListRequest specifies criteria for retrieving a list of Nodes.
      * </pre>
      *
      * Protobuf type {@code v1.NodeListRequest}
@@ -7155,6 +8142,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        * @return Whether the meta field is set.
        */
@@ -7162,6 +8153,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        * @return The meta.
        */
@@ -7173,6 +8168,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata value) {
@@ -7189,6 +8188,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       public Builder setMeta(
@@ -7203,6 +8206,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata value) {
@@ -7221,6 +8228,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       public Builder clearMeta() {
@@ -7235,6 +8246,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder getMetaBuilder() {
@@ -7243,6 +8258,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
@@ -7254,6 +8273,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7272,6 +8295,10 @@ public final class NodesPlumbing {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
        * @return The filter.
        */
@@ -7288,6 +8315,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
        * @return The bytes for filter.
        */
@@ -7305,6 +8336,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
        * @param value The filter to set.
        * @return This builder for chaining.
@@ -7320,6 +8355,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -7330,6 +8369,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
@@ -7403,39 +8446,71 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta();
     /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      */
     com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     java.util.List<com.strongdm.api.v1.plumbing.NodesPlumbing.Node> 
         getNodesList();
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNodes(int index);
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     int getNodesCount();
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     java.util.List<? extends com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> 
         getNodesOrBuilderList();
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodesOrBuilder(
@@ -7443,7 +8518,7 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * NodeListResponse returns a list of nodes that meet the criteria of a
+   * NodeListResponse returns a list of Nodes that meet the criteria of a
    * NodeListRequest.
    * </pre>
    *
@@ -7553,6 +8628,10 @@ public final class NodesPlumbing {
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
     /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
@@ -7560,6 +8639,10 @@ public final class NodesPlumbing {
       return meta_ != null;
     }
     /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return The meta.
      */
@@ -7567,6 +8650,10 @@ public final class NodesPlumbing {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
     }
     /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -7576,12 +8663,20 @@ public final class NodesPlumbing {
     public static final int NODES_FIELD_NUMBER = 2;
     private java.util.List<com.strongdm.api.v1.plumbing.NodesPlumbing.Node> nodes_;
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     public java.util.List<com.strongdm.api.v1.plumbing.NodesPlumbing.Node> getNodesList() {
       return nodes_;
     }
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     public java.util.List<? extends com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> 
@@ -7589,18 +8684,30 @@ public final class NodesPlumbing {
       return nodes_;
     }
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     public int getNodesCount() {
       return nodes_.size();
     }
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNodes(int index) {
       return nodes_.get(index);
     }
     /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodesOrBuilder(
@@ -7783,7 +8890,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * NodeListResponse returns a list of nodes that meet the criteria of a
+     * NodeListResponse returns a list of Nodes that meet the criteria of a
      * NodeListRequest.
      * </pre>
      *
@@ -7989,6 +9096,10 @@ public final class NodesPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> metaBuilder_;
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        * @return Whether the meta field is set.
        */
@@ -7996,6 +9107,10 @@ public final class NodesPlumbing {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        * @return The meta.
        */
@@ -8007,6 +9122,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata value) {
@@ -8023,6 +9142,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       public Builder setMeta(
@@ -8037,6 +9160,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata value) {
@@ -8055,6 +9182,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       public Builder clearMeta() {
@@ -8069,6 +9200,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder getMetaBuilder() {
@@ -8077,6 +9212,10 @@ public final class NodesPlumbing {
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
@@ -8088,6 +9227,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8117,6 +9260,10 @@ public final class NodesPlumbing {
           com.strongdm.api.v1.plumbing.NodesPlumbing.Node, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder, com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> nodesBuilder_;
 
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public java.util.List<com.strongdm.api.v1.plumbing.NodesPlumbing.Node> getNodesList() {
@@ -8127,6 +9274,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public int getNodesCount() {
@@ -8137,6 +9288,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNodes(int index) {
@@ -8147,6 +9302,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNodes(
@@ -8164,6 +9323,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setNodes(
@@ -8178,6 +9341,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addNodes(com.strongdm.api.v1.plumbing.NodesPlumbing.Node value) {
@@ -8194,6 +9361,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addNodes(
@@ -8211,6 +9382,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addNodes(
@@ -8225,6 +9400,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addNodes(
@@ -8239,6 +9418,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addAllNodes(
@@ -8254,6 +9437,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearNodes() {
@@ -8267,6 +9454,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder removeNodes(int index) {
@@ -8280,6 +9471,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder getNodesBuilder(
@@ -8287,6 +9482,10 @@ public final class NodesPlumbing {
         return getNodesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodesOrBuilder(
@@ -8297,6 +9496,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public java.util.List<? extends com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> 
@@ -8308,6 +9511,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder addNodesBuilder() {
@@ -8315,6 +9522,10 @@ public final class NodesPlumbing {
             com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance());
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder addNodesBuilder(
@@ -8323,6 +9534,10 @@ public final class NodesPlumbing {
             index, com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance());
       }
       /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
        * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
        */
       public java.util.List<com.strongdm.api.v1.plumbing.NodesPlumbing.Node.Builder> 
@@ -8434,7 +9649,9 @@ public final class NodesPlumbing {
   }
   /**
    * <pre>
-   * Node is a domain object (either a relay or a gateway).
+   * A Node is a proxy in the strongDM network. They come in two flavors: relays,
+   * which communicate with resources, and gateways, which communicate with
+   * clients.
    * </pre>
    *
    * Protobuf type {@code v1.Node}
@@ -8823,7 +10040,9 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Node is a domain object (either a relay or a gateway).
+     * A Node is a proxy in the strongDM network. They come in two flavors: relays,
+     * which communicate with resources, and gateways, which communicate with
+     * clients.
      * </pre>
      *
      * Protobuf type {@code v1.Node}
@@ -9344,11 +10563,19 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -9356,16 +10583,46 @@ public final class NodesPlumbing {
         getIdBytes();
 
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * The current state of the relay. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The state.
+     */
+    java.lang.String getState();
+    /**
+     * <pre>
+     * The current state of the relay. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for state.
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
   }
   /**
    * <pre>
@@ -9386,6 +10643,7 @@ public final class NodesPlumbing {
     private Relay() {
       id_ = "";
       name_ = "";
+      state_ = "";
     }
 
     @java.lang.Override
@@ -9430,6 +10688,12 @@ public final class NodesPlumbing {
               name_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              state_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9465,6 +10729,10 @@ public final class NodesPlumbing {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
@@ -9481,6 +10749,10 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -9501,6 +10773,10 @@ public final class NodesPlumbing {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
@@ -9517,6 +10793,10 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
@@ -9528,6 +10808,52 @@ public final class NodesPlumbing {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object state_;
+    /**
+     * <pre>
+     * The current state of the relay. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The state.
+     */
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The current state of the relay. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for state.
+     */
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9554,6 +10880,9 @@ public final class NodesPlumbing {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
+      if (!getStateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9568,6 +10897,9 @@ public final class NodesPlumbing {
       }
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9588,6 +10920,8 @@ public final class NodesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getState()
+          .equals(other.getState())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9603,6 +10937,8 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9744,6 +11080,8 @@ public final class NodesPlumbing {
 
         name_ = "";
 
+        state_ = "";
+
         return this;
       }
 
@@ -9772,6 +11110,7 @@ public final class NodesPlumbing {
         com.strongdm.api.v1.plumbing.NodesPlumbing.Relay result = new com.strongdm.api.v1.plumbing.NodesPlumbing.Relay(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.state_ = state_;
         onBuilt();
         return result;
       }
@@ -9828,6 +11167,10 @@ public final class NodesPlumbing {
           name_ = other.name_;
           onChanged();
         }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9859,6 +11202,10 @@ public final class NodesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @return The id.
        */
@@ -9875,6 +11222,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @return The bytes for id.
        */
@@ -9892,6 +11243,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -9907,6 +11262,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -9917,6 +11276,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -9935,6 +11298,10 @@ public final class NodesPlumbing {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @return The name.
        */
@@ -9951,6 +11318,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @return The bytes for name.
        */
@@ -9968,6 +11339,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -9983,6 +11358,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -9993,6 +11372,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -10005,6 +11388,107 @@ public final class NodesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object state_ = "";
+      /**
+       * <pre>
+       * The current state of the relay. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The state.
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The current state of the relay. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for state.
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The current state of the relay. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The current state of the relay. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The current state of the relay. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
         onChanged();
         return this;
       }
@@ -10066,11 +11550,19 @@ public final class NodesPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -10078,11 +11570,19 @@ public final class NodesPlumbing {
         getIdBytes();
 
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
@@ -10090,24 +11590,62 @@ public final class NodesPlumbing {
         getNameBytes();
 
     /**
-     * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The current state of the gateway. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The state.
+     */
+    java.lang.String getState();
+    /**
+     * <pre>
+     * The current state of the gateway. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for state.
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+
+    /**
+     * <pre>
+     * The public hostname/port tuple at which the gateway will be accessible to clients.
+     * </pre>
+     *
+     * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
      * @return The listenAddress.
      */
     java.lang.String getListenAddress();
     /**
-     * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The public hostname/port tuple at which the gateway will be accessible to clients.
+     * </pre>
+     *
+     * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for listenAddress.
      */
     com.google.protobuf.ByteString
         getListenAddressBytes();
 
     /**
-     * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The hostname/port tuple which the gateway daemon will bind to.
+     * </pre>
+     *
+     * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
      * @return The bindAddress.
      */
     java.lang.String getBindAddress();
     /**
-     * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The hostname/port tuple which the gateway daemon will bind to.
+     * </pre>
+     *
+     * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for bindAddress.
      */
     com.google.protobuf.ByteString
@@ -10132,6 +11670,7 @@ public final class NodesPlumbing {
     private Gateway() {
       id_ = "";
       name_ = "";
+      state_ = "";
       listenAddress_ = "";
       bindAddress_ = "";
     }
@@ -10181,10 +11720,16 @@ public final class NodesPlumbing {
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              listenAddress_ = s;
+              state_ = s;
               break;
             }
             case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              listenAddress_ = s;
+              break;
+            }
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
               bindAddress_ = s;
@@ -10225,6 +11770,10 @@ public final class NodesPlumbing {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
@@ -10241,6 +11790,10 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * Unique identifier of the Relay.
+     * </pre>
+     *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
@@ -10261,6 +11814,10 @@ public final class NodesPlumbing {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
@@ -10277,6 +11834,10 @@ public final class NodesPlumbing {
       }
     }
     /**
+     * <pre>
+     * Unique human-readable name of the Relay.
+     * </pre>
+     *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
@@ -10294,10 +11855,60 @@ public final class NodesPlumbing {
       }
     }
 
-    public static final int LISTEN_ADDRESS_FIELD_NUMBER = 3;
+    public static final int STATE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object state_;
+    /**
+     * <pre>
+     * The current state of the gateway. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The state.
+     */
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The current state of the gateway. One of: "new", "verifying_restart",
+     * "restarting", "started", "stopped", "dead", "unknown",
+     * </pre>
+     *
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for state.
+     */
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LISTEN_ADDRESS_FIELD_NUMBER = 4;
     private volatile java.lang.Object listenAddress_;
     /**
-     * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The public hostname/port tuple at which the gateway will be accessible to clients.
+     * </pre>
+     *
+     * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
      * @return The listenAddress.
      */
     public java.lang.String getListenAddress() {
@@ -10313,7 +11924,11 @@ public final class NodesPlumbing {
       }
     }
     /**
-     * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The public hostname/port tuple at which the gateway will be accessible to clients.
+     * </pre>
+     *
+     * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for listenAddress.
      */
     public com.google.protobuf.ByteString
@@ -10330,10 +11945,14 @@ public final class NodesPlumbing {
       }
     }
 
-    public static final int BIND_ADDRESS_FIELD_NUMBER = 4;
+    public static final int BIND_ADDRESS_FIELD_NUMBER = 5;
     private volatile java.lang.Object bindAddress_;
     /**
-     * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The hostname/port tuple which the gateway daemon will bind to.
+     * </pre>
+     *
+     * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
      * @return The bindAddress.
      */
     public java.lang.String getBindAddress() {
@@ -10349,7 +11968,11 @@ public final class NodesPlumbing {
       }
     }
     /**
-     * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+     * <pre>
+     * The hostname/port tuple which the gateway daemon will bind to.
+     * </pre>
+     *
+     * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for bindAddress.
      */
     public com.google.protobuf.ByteString
@@ -10386,11 +12009,14 @@ public final class NodesPlumbing {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
+      if (!getStateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
+      }
       if (!getListenAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, listenAddress_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, listenAddress_);
       }
       if (!getBindAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bindAddress_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bindAddress_);
       }
       unknownFields.writeTo(output);
     }
@@ -10407,11 +12033,14 @@ public final class NodesPlumbing {
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
+      if (!getStateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
+      }
       if (!getListenAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, listenAddress_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, listenAddress_);
       }
       if (!getBindAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bindAddress_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bindAddress_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10432,6 +12061,8 @@ public final class NodesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getState()
+          .equals(other.getState())) return false;
       if (!getListenAddress()
           .equals(other.getListenAddress())) return false;
       if (!getBindAddress()
@@ -10451,6 +12082,8 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
       hash = (37 * hash) + LISTEN_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getListenAddress().hashCode();
       hash = (37 * hash) + BIND_ADDRESS_FIELD_NUMBER;
@@ -10596,6 +12229,8 @@ public final class NodesPlumbing {
 
         name_ = "";
 
+        state_ = "";
+
         listenAddress_ = "";
 
         bindAddress_ = "";
@@ -10628,6 +12263,7 @@ public final class NodesPlumbing {
         com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway result = new com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.state_ = state_;
         result.listenAddress_ = listenAddress_;
         result.bindAddress_ = bindAddress_;
         onBuilt();
@@ -10686,6 +12322,10 @@ public final class NodesPlumbing {
           name_ = other.name_;
           onChanged();
         }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
+        }
         if (!other.getListenAddress().isEmpty()) {
           listenAddress_ = other.listenAddress_;
           onChanged();
@@ -10725,6 +12365,10 @@ public final class NodesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @return The id.
        */
@@ -10741,6 +12385,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @return The bytes for id.
        */
@@ -10758,6 +12406,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -10773,6 +12425,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10783,6 +12439,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique identifier of the Relay.
+       * </pre>
+       *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -10801,6 +12461,10 @@ public final class NodesPlumbing {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @return The name.
        */
@@ -10817,6 +12481,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @return The bytes for name.
        */
@@ -10834,6 +12502,10 @@ public final class NodesPlumbing {
         }
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -10849,6 +12521,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10859,6 +12535,10 @@ public final class NodesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * Unique human-readable name of the Relay.
+       * </pre>
+       *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -10875,9 +12555,114 @@ public final class NodesPlumbing {
         return this;
       }
 
+      private java.lang.Object state_ = "";
+      /**
+       * <pre>
+       * The current state of the gateway. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The state.
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The current state of the gateway. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for state.
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The current state of the gateway. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The current state of the gateway. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The current state of the gateway. One of: "new", "verifying_restart",
+       * "restarting", "started", "stopped", "dead", "unknown",
+       * </pre>
+       *
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object listenAddress_ = "";
       /**
-       * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The public hostname/port tuple at which the gateway will be accessible to clients.
+       * </pre>
+       *
+       * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
        * @return The listenAddress.
        */
       public java.lang.String getListenAddress() {
@@ -10893,7 +12678,11 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The public hostname/port tuple at which the gateway will be accessible to clients.
+       * </pre>
+       *
+       * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
        * @return The bytes for listenAddress.
        */
       public com.google.protobuf.ByteString
@@ -10910,7 +12699,11 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The public hostname/port tuple at which the gateway will be accessible to clients.
+       * </pre>
+       *
+       * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
        * @param value The listenAddress to set.
        * @return This builder for chaining.
        */
@@ -10925,7 +12718,11 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The public hostname/port tuple at which the gateway will be accessible to clients.
+       * </pre>
+       *
+       * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearListenAddress() {
@@ -10935,7 +12732,11 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>string listen_address = 3 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The public hostname/port tuple at which the gateway will be accessible to clients.
+       * </pre>
+       *
+       * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for listenAddress to set.
        * @return This builder for chaining.
        */
@@ -10953,7 +12754,11 @@ public final class NodesPlumbing {
 
       private java.lang.Object bindAddress_ = "";
       /**
-       * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The hostname/port tuple which the gateway daemon will bind to.
+       * </pre>
+       *
+       * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
        * @return The bindAddress.
        */
       public java.lang.String getBindAddress() {
@@ -10969,7 +12774,11 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The hostname/port tuple which the gateway daemon will bind to.
+       * </pre>
+       *
+       * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
        * @return The bytes for bindAddress.
        */
       public com.google.protobuf.ByteString
@@ -10986,7 +12795,11 @@ public final class NodesPlumbing {
         }
       }
       /**
-       * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The hostname/port tuple which the gateway daemon will bind to.
+       * </pre>
+       *
+       * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
        * @param value The bindAddress to set.
        * @return This builder for chaining.
        */
@@ -11001,7 +12814,11 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The hostname/port tuple which the gateway daemon will bind to.
+       * </pre>
+       *
+       * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearBindAddress() {
@@ -11011,7 +12828,11 @@ public final class NodesPlumbing {
         return this;
       }
       /**
-       * <code>string bind_address = 4 [(.v1.field_options) = { ... }</code>
+       * <pre>
+       * The hostname/port tuple which the gateway daemon will bind to.
+       * </pre>
+       *
+       * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for bindAddress to set.
        * @return This builder for chaining.
        */
@@ -11187,28 +13008,30 @@ public final class NodesPlumbing {
       "\222Ab*:\n\007A node.\022/https://www.strongdm.com" +
       "/docs/api/entities#Node2$\022\"{ \"id\": \"7\", " +
       "\"name\": \"happy-goat\"}B\026\n\004node\022\016\252\370\263\007\t\242\370\263\007" +
-      "\004Node\"^\n\005Relay\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID" +
-      "\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001" +
-      ":\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\314\001\n\007Gateway\022\035\n\002id\030" +
-      "\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023" +
-      "\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\0226\n\016listen_address\030\003 " +
-      "\001(\tB\036\362\370\263\007\031\242\363\263\007\nListenAddr\250\363\263\007\001\260\363\263\007\001\0222\n\014b" +
-      "ind_address\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010BindAddr\250\363\263" +
-      "\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245" +
-      "\001\n\006Create\022\025.v1.NodeCreateRequest\032\026.v1.No" +
-      "deCreateResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001*\222A" +
-      "U\"S\n\030Learn how to make a Node\0227https://w" +
-      "ww.strongdm.com/docs/api/services/Nodes#" +
-      "Create\022F\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.N" +
-      "odeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id}\022R" +
-      "\n\006Update\022\025.v1.NodeUpdateRequest\032\026.v1.Nod" +
-      "eUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{id}:" +
-      "\001*\022O\n\006Delete\022\025.v1.NodeDeleteRequest\032\026.v1" +
-      ".NodeDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/nodes/{" +
-      "id}\022D\n\004List\022\023.v1.NodeListRequest\032\024.v1.No" +
-      "deListResponse\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t" +
-      "\302\371\263\007\004NodeB-\n\034com.strongdm.api.v1.plumbin" +
-      "gB\rNodesPlumbingb\006proto3"
+      "\004Node\"\210\001\n\005Relay\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002I" +
+      "D\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007" +
+      "\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A" +
+      "\002@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\366\001\n\007Gateway\022\035\n\002" +
+      "id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(" +
+      "\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362" +
+      "\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002@\001\0226\n\016listen_addre" +
+      "ss\030\004 \001(\tB\036\362\370\263\007\031\242\363\263\007\nListenAddr\250\363\263\007\001\260\363\263\007\001" +
+      "\0222\n\014bind_address\030\005 \001(\tB\034\362\370\263\007\027\242\363\263\007\010BindAd" +
+      "dr\250\363\263\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005No" +
+      "des\022\245\001\n\006Create\022\025.v1.NodeCreateRequest\032\026." +
+      "v1.NodeCreateResponse\"l\202\323\344\223\002\016\"\t/v1/nodes" +
+      ":\001*\222AU\"S\n\030Learn how to make a Node\0227http" +
+      "s://www.strongdm.com/docs/api/services/N" +
+      "odes#Create\022F\n\003Get\022\022.v1.NodeGetRequest\032\023" +
+      ".v1.NodeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/nodes/{" +
+      "id}\022R\n\006Update\022\025.v1.NodeUpdateRequest\032\026.v" +
+      "1.NodeUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/" +
+      "{id}:\001*\022O\n\006Delete\022\025.v1.NodeDeleteRequest" +
+      "\032\026.v1.NodeDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/no" +
+      "des/{id}\022D\n\004List\022\023.v1.NodeListRequest\032\024." +
+      "v1.NodeListResponse\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016" +
+      "\312\371\263\007\t\302\371\263\007\004NodeB-\n\034com.strongdm.api.v1.pl" +
+      "umbingB\rNodesPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11289,16 +13112,17 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", });
+        new java.lang.String[] { "Id", "Name", "State", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "ListenAddress", "BindAddress", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
     registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
     registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

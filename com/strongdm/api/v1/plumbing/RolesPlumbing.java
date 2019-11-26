@@ -47,7 +47,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * Parameters to define the new role.
+     * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -56,7 +56,7 @@ public final class RolesPlumbing {
     boolean hasRole();
     /**
      * <pre>
-     * Parameters to define the new role.
+     * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -65,7 +65,7 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
      * <pre>
-     * Parameters to define the new role.
+     * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -220,7 +220,7 @@ public final class RolesPlumbing {
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
      * <pre>
-     * Parameters to define the new role.
+     * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -231,7 +231,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Parameters to define the new role.
+     * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -242,7 +242,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Parameters to define the new role.
+     * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -762,7 +762,7 @@ public final class RolesPlumbing {
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -773,7 +773,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -788,7 +788,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -808,7 +808,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -826,7 +826,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -848,7 +848,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -866,7 +866,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -878,7 +878,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -893,7 +893,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to define the new role.
+       * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -997,7 +997,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * The created role.
+     * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1006,7 +1006,7 @@ public final class RolesPlumbing {
     boolean hasRole();
     /**
      * <pre>
-     * The created role.
+     * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1015,7 +1015,7 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
      * <pre>
-     * The created role.
+     * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1169,7 +1169,7 @@ public final class RolesPlumbing {
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
      * <pre>
-     * The created role.
+     * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1180,7 +1180,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The created role.
+     * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1191,7 +1191,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The created role.
+     * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1710,7 +1710,7 @@ public final class RolesPlumbing {
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1721,7 +1721,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1736,7 +1736,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1756,7 +1756,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1774,7 +1774,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1796,7 +1796,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1814,7 +1814,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1826,7 +1826,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1841,7 +1841,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The created role.
+       * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -1945,7 +1945,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * The unique identifier of the role to retrieve.
+     * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -1954,7 +1954,7 @@ public final class RolesPlumbing {
     java.lang.String getId();
     /**
      * <pre>
-     * The unique identifier of the role to retrieve.
+     * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2103,7 +2103,7 @@ public final class RolesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * The unique identifier of the role to retrieve.
+     * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2123,7 +2123,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The unique identifier of the role to retrieve.
+     * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2637,7 +2637,7 @@ public final class RolesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * The unique identifier of the role to retrieve.
+       * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2657,7 +2657,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to retrieve.
+       * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2678,7 +2678,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to retrieve.
+       * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2697,7 +2697,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to retrieve.
+       * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2711,7 +2711,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to retrieve.
+       * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -2815,7 +2815,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * The requested role.
+     * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -2824,7 +2824,7 @@ public final class RolesPlumbing {
     boolean hasRole();
     /**
      * <pre>
-     * The requested role.
+     * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -2833,7 +2833,7 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
      * <pre>
-     * The requested role.
+     * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -2986,7 +2986,7 @@ public final class RolesPlumbing {
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
      * <pre>
-     * The requested role.
+     * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -2997,7 +2997,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The requested role.
+     * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3008,7 +3008,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The requested role.
+     * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3526,7 +3526,7 @@ public final class RolesPlumbing {
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3537,7 +3537,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3552,7 +3552,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3572,7 +3572,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3590,7 +3590,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3612,7 +3612,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3630,7 +3630,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3642,7 +3642,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3657,7 +3657,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The requested role.
+       * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -3761,7 +3761,9 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * The unique identifier of the role to update.
+     * The unique identifier of the Role to update. If an ID is already
+     * specified in the `role` field, this field is not required. If an ID is
+     * specified in both places, they must match.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -3770,7 +3772,9 @@ public final class RolesPlumbing {
     java.lang.String getId();
     /**
      * <pre>
-     * The unique identifier of the role to update.
+     * The unique identifier of the Role to update. If an ID is already
+     * specified in the `role` field, this field is not required. If an ID is
+     * specified in both places, they must match.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -3781,7 +3785,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * Parameters to overwrite the specified role.
+     * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -3790,7 +3794,7 @@ public final class RolesPlumbing {
     boolean hasRole();
     /**
      * <pre>
-     * Parameters to overwrite the specified role.
+     * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -3799,7 +3803,7 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
      * <pre>
-     * Parameters to overwrite the specified role.
+     * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -3960,7 +3964,9 @@ public final class RolesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * The unique identifier of the role to update.
+     * The unique identifier of the Role to update. If an ID is already
+     * specified in the `role` field, this field is not required. If an ID is
+     * specified in both places, they must match.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -3980,7 +3986,9 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The unique identifier of the role to update.
+     * The unique identifier of the Role to update. If an ID is already
+     * specified in the `role` field, this field is not required. If an ID is
+     * specified in both places, they must match.
      * </pre>
      *
      * <code>string id = 2;</code>
@@ -4004,7 +4012,7 @@ public final class RolesPlumbing {
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
      * <pre>
-     * Parameters to overwrite the specified role.
+     * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4015,7 +4023,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Parameters to overwrite the specified role.
+     * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4026,7 +4034,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Parameters to overwrite the specified role.
+     * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4560,7 +4568,9 @@ public final class RolesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * The unique identifier of the role to update.
+       * The unique identifier of the Role to update. If an ID is already
+       * specified in the `role` field, this field is not required. If an ID is
+       * specified in both places, they must match.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -4580,7 +4590,9 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to update.
+       * The unique identifier of the Role to update. If an ID is already
+       * specified in the `role` field, this field is not required. If an ID is
+       * specified in both places, they must match.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -4601,7 +4613,9 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to update.
+       * The unique identifier of the Role to update. If an ID is already
+       * specified in the `role` field, this field is not required. If an ID is
+       * specified in both places, they must match.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -4620,7 +4634,9 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to update.
+       * The unique identifier of the Role to update. If an ID is already
+       * specified in the `role` field, this field is not required. If an ID is
+       * specified in both places, they must match.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -4634,7 +4650,9 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to update.
+       * The unique identifier of the Role to update. If an ID is already
+       * specified in the `role` field, this field is not required. If an ID is
+       * specified in both places, they must match.
        * </pre>
        *
        * <code>string id = 2;</code>
@@ -4658,7 +4676,7 @@ public final class RolesPlumbing {
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4669,7 +4687,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4684,7 +4702,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4704,7 +4722,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4722,7 +4740,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4744,7 +4762,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4762,7 +4780,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4774,7 +4792,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4789,7 +4807,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Parameters to overwrite the specified role.
+       * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
@@ -4893,7 +4911,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * The updated role.
+     * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -4902,7 +4920,7 @@ public final class RolesPlumbing {
     boolean hasRole();
     /**
      * <pre>
-     * The updated role.
+     * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -4911,7 +4929,7 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
      * <pre>
-     * The updated role.
+     * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5065,7 +5083,7 @@ public final class RolesPlumbing {
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
      * <pre>
-     * The updated role.
+     * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5076,7 +5094,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The updated role.
+     * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5087,7 +5105,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The updated role.
+     * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5606,7 +5624,7 @@ public final class RolesPlumbing {
           com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5617,7 +5635,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5632,7 +5650,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5652,7 +5670,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5670,7 +5688,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5692,7 +5710,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5710,7 +5728,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5722,7 +5740,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5737,7 +5755,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The updated role.
+       * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
@@ -5841,7 +5859,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * The unique identifier of the role to delete.
+     * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -5850,7 +5868,7 @@ public final class RolesPlumbing {
     java.lang.String getId();
     /**
      * <pre>
-     * The unique identifier of the role to delete.
+     * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -5999,7 +6017,7 @@ public final class RolesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * The unique identifier of the role to delete.
+     * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -6019,7 +6037,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * The unique identifier of the role to delete.
+     * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -6533,7 +6551,7 @@ public final class RolesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * The unique identifier of the role to delete.
+       * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -6553,7 +6571,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to delete.
+       * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -6574,7 +6592,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to delete.
+       * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -6593,7 +6611,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to delete.
+       * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -6607,7 +6625,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * The unique identifier of the role to delete.
+       * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
@@ -9410,7 +9428,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * Unique identifier of the role.
+     * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -9419,7 +9437,7 @@ public final class RolesPlumbing {
     java.lang.String getId();
     /**
      * <pre>
-     * Unique identifier of the role.
+     * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -9430,7 +9448,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * Unique human-readable name of the role.
+     * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -9439,7 +9457,7 @@ public final class RolesPlumbing {
     java.lang.String getName();
     /**
      * <pre>
-     * Unique human-readable name of the role.
+     * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -9450,7 +9468,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * True if the role is a composite role.
+     * True if the Role is a composite role.
      * </pre>
      *
      * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
@@ -9564,7 +9582,7 @@ public final class RolesPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Unique identifier of the role.
+     * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -9584,7 +9602,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Unique identifier of the role.
+     * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -9608,7 +9626,7 @@ public final class RolesPlumbing {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Unique human-readable name of the role.
+     * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -9628,7 +9646,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Unique human-readable name of the role.
+     * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -9652,7 +9670,7 @@ public final class RolesPlumbing {
     private boolean composite_;
     /**
      * <pre>
-     * True if the role is a composite role.
+     * True if the Role is a composite role.
      * </pre>
      *
      * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
@@ -10008,7 +10026,7 @@ public final class RolesPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Unique identifier of the role.
+       * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10028,7 +10046,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the role.
+       * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10049,7 +10067,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the role.
+       * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10068,7 +10086,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the role.
+       * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10082,7 +10100,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique identifier of the role.
+       * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10104,7 +10122,7 @@ public final class RolesPlumbing {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Unique human-readable name of the role.
+       * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -10124,7 +10142,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the role.
+       * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -10145,7 +10163,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the role.
+       * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -10164,7 +10182,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the role.
+       * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -10178,7 +10196,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the role.
+       * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -10200,7 +10218,7 @@ public final class RolesPlumbing {
       private boolean composite_ ;
       /**
        * <pre>
-       * True if the role is a composite role.
+       * True if the Role is a composite role.
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
@@ -10211,7 +10229,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * True if the role is a composite role.
+       * True if the Role is a composite role.
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
@@ -10226,7 +10244,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * True if the role is a composite role.
+       * True if the Role is a composite role.
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>

@@ -7,20 +7,22 @@ import java.util.Collection;
 // RoleCreateResponse reports how the Roles were created in the system. It can
 // communicate partial successes or failures.
 public class RoleCreateResponse {
-    // Reserved for future use.
     private CreateResponseMetadata meta;
+    // Reserved for future use.
     public CreateResponseMetadata getMeta() {
         return this.meta;
     }
+    // Reserved for future use.
     public RoleCreateResponse setMeta(CreateResponseMetadata in) {
         this.meta = in;
         return this;
     }
-    // The created role.
     private Role role;
+    // The created Role.
     public Role getRole() {
         return this.role;
     }
+    // The created Role.
     public RoleCreateResponse setRole(Role in) {
         this.role = in;
         return this;

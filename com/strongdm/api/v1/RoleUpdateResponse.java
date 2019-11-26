@@ -7,20 +7,22 @@ import java.util.Collection;
 // RoleUpdateResponse returns the fields of a Role after it has been updated by
 // a RoleUpdateRequest.
 public class RoleUpdateResponse {
-    // Reserved for future use.
     private UpdateResponseMetadata meta;
+    // Reserved for future use.
     public UpdateResponseMetadata getMeta() {
         return this.meta;
     }
+    // Reserved for future use.
     public RoleUpdateResponse setMeta(UpdateResponseMetadata in) {
         this.meta = in;
         return this;
     }
-    // The updated role.
     private Role role;
+    // The updated Role.
     public Role getRole() {
         return this.role;
     }
+    // The updated Role.
     public RoleUpdateResponse setRole(Role in) {
         this.role = in;
         return this;

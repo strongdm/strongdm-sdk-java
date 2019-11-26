@@ -21,11 +21,11 @@ import com.strongdm.api.v1.plumbing.NodesPlumbing;
 import com.strongdm.api.v1.plumbing.RolesGrpc;
 import com.strongdm.api.v1.plumbing.RolesPlumbing;
 
-// Roles are tools for controlling user access to resources. Each role holds a
+// Roles are tools for controlling user access to resources. Each Role holds a
 // list of resources which they grant access to. Composite roles are a special
-// type of role which have no resource associations of their own, but instead
+// type of Role which have no resource associations of their own, but instead
 // grant access to the combined resources associated with a set of child roles.
-// Each user can be a member of one role or composite role.
+// Each user can be a member of one Role or composite role.
 public class Roles {
     private final RolesGrpc.RolesBlockingStub stub;
     private final Client parent;
@@ -41,12 +41,14 @@ public class Roles {
         this.parent = client;
     }
 
+    // This function returns a copy of the Roles service which has
+    // the given deadline set for all method calls.
     public Roles withDeadlineAfter(long duration, TimeUnit units) {
         return new Roles(this.stub.withDeadlineAfter(duration, units), this.parent);
     }
 
     
-    // Create registers a new role.
+    // Create registers a new Role.
     public RoleCreateResponse create(Role role) throws BaseException {
         RolesPlumbing.RoleCreateRequest.Builder builder = RolesPlumbing.RoleCreateRequest.newBuilder();
         builder.setRole(Plumbing.roleToPlumbing(role));
@@ -60,7 +62,7 @@ public class Roles {
         return Plumbing.roleCreateResponseToPorcelain(plumbingResponse);
     }
     
-    // Get reads one role by ID.
+    // Get reads one Role by ID.
     public RoleGetResponse get(String id) throws BaseException {
         RolesPlumbing.RoleGetRequest.Builder builder = RolesPlumbing.RoleGetRequest.newBuilder();
         builder.setId(id);

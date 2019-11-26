@@ -27,6 +27,13 @@ public class Annotations {
   public static final
     com.google.protobuf.GeneratedMessage.GeneratedExtension<
       com.google.protobuf.DescriptorProtos.FieldOptions,
+      com.strongdm.api.v1.plumbing.Options.FieldOptions> openapiv2Field = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        com.strongdm.api.v1.plumbing.Options.FieldOptions.class,
+        com.strongdm.api.v1.plumbing.Options.FieldOptions.getDefaultInstance());
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.FieldOptions,
       com.strongdm.api.v1.plumbing.Options.FieldOptions> openapiv2Swagger = com.google.protobuf.GeneratedMessage
           .newFileScopedGeneratedExtension(
         com.strongdm.api.v1.plumbing.Options.FieldOptions.class,
@@ -41,6 +48,7 @@ public class Annotations {
         });
     openapiv2Operation.internalInit(com.strongdm.api.v1.plumbing.Options.fieldOptions.getDescriptor());
     openapiv2Schema.internalInit(com.strongdm.api.v1.plumbing.Options.fieldOptions.getDescriptor());
+    openapiv2Field.internalInit(com.strongdm.api.v1.plumbing.Options.fieldOptions.getDescriptor());
     openapiv2Swagger.internalInit(com.strongdm.api.v1.plumbing.Options.fieldOptions.getDescriptor());
   }
 }

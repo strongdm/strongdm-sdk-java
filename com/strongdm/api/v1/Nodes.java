@@ -21,8 +21,9 @@ import com.strongdm.api.v1.plumbing.NodesPlumbing;
 import com.strongdm.api.v1.plumbing.RolesGrpc;
 import com.strongdm.api.v1.plumbing.RolesPlumbing;
 
-// Nodes are proxies in strongDM responsible to communicate with servers
-// (relays) and clients (gateways).
+// Nodes are proxies in the strongDM network. They come in two flavors: relays,
+// which communicate with resources, and gateways, which communicate with
+// clients.
 public class Nodes {
     private final NodesGrpc.NodesBlockingStub stub;
     private final Client parent;
@@ -38,12 +39,14 @@ public class Nodes {
         this.parent = client;
     }
 
+    // This function returns a copy of the Nodes service which has
+    // the given deadline set for all method calls.
     public Nodes withDeadlineAfter(long duration, TimeUnit units) {
         return new Nodes(this.stub.withDeadlineAfter(duration, units), this.parent);
     }
 
     
-    // Create registers a new node.
+    // Create registers a new Node.
     public NodeCreateResponse create(Node node) throws BaseException {
         NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
         builder.setNode(Plumbing.nodeToPlumbing(node));
@@ -57,7 +60,7 @@ public class Nodes {
         return Plumbing.nodeCreateResponseToPorcelain(plumbingResponse);
     }
     
-    // Get reads one node by ID.
+    // Get reads one Node by ID.
     public NodeGetResponse get(String id) throws BaseException {
         NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
         builder.setId(id);
@@ -71,7 +74,7 @@ public class Nodes {
         return Plumbing.nodeGetResponseToPorcelain(plumbingResponse);
     }
     
-    // Update patches a node by ID.
+    // Update patches a Node by ID.
     public NodeUpdateResponse update(Node node) throws BaseException {
         NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
         builder.setNode(Plumbing.nodeToPlumbing(node));
@@ -85,7 +88,7 @@ public class Nodes {
         return Plumbing.nodeUpdateResponseToPorcelain(plumbingResponse);
     }
     
-    // Delete removes a node by ID.
+    // Delete removes a Node by ID.
     public NodeDeleteResponse delete(String id) throws BaseException {
         NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
         builder.setId(id);
@@ -99,7 +102,7 @@ public class Nodes {
         return Plumbing.nodeDeleteResponseToPorcelain(plumbingResponse);
     }
     
-    // List is a batched Get call.
+    // List gets a list of Nodes matching a given set of criteria.
     public Iterable<Node> list(String filter) throws BaseException {
         NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
         builder.setFilter(filter);

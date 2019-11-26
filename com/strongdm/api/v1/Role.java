@@ -8,29 +8,32 @@ import java.util.Collection;
 // resource associations of their own, but instead grant access to the combined
 // resources of their child roles.
 public class Role {
-    // Unique identifier of the role.
     private String id;
+    // Unique identifier of the Role.
     public String getId() {
         return this.id;
     }
+    // Unique identifier of the Role.
     public Role setId(String in) {
         this.id = in;
         return this;
     }
-    // Unique human-readable name of the role.
     private String name;
+    // Unique human-readable name of the Role.
     public String getName() {
         return this.name;
     }
+    // Unique human-readable name of the Role.
     public Role setName(String in) {
         this.name = in;
         return this;
     }
-    // True if the role is a composite role.
     private boolean composite;
+    // True if the Role is a composite role.
     public boolean getComposite() {
         return this.composite;
     }
+    // True if the Role is a composite role.
     public Role setComposite(boolean in) {
         this.composite = in;
         return this;

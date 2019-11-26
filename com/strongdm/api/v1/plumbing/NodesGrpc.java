@@ -17,8 +17,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Nodes are proxies in strongDM responsible to communicate with servers
- * (relays) and clients (gateways).
+ * Nodes are proxies in the strongDM network. They come in two flavors: relays,
+ * which communicate with resources, and gateways, which communicate with
+ * clients.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -211,15 +212,16 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes are proxies in strongDM responsible to communicate with servers
-   * (relays) and clients (gateways).
+   * Nodes are proxies in the strongDM network. They come in two flavors: relays,
+   * which communicate with resources, and gateways, which communicate with
+   * clients.
    * </pre>
    */
   public static abstract class NodesImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Create registers a new node.
+     * Create registers a new Node.
      * </pre>
      */
     public void create(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest request,
@@ -229,7 +231,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Get reads one node by ID.
+     * Get reads one Node by ID.
      * </pre>
      */
     public void get(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest request,
@@ -239,7 +241,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a node by ID.
+     * Update patches a Node by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request,
@@ -249,7 +251,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Delete removes a node by ID.
+     * Delete removes a Node by ID.
      * </pre>
      */
     public void delete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest request,
@@ -259,7 +261,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Nodes matching a given set of criteria.
      * </pre>
      */
     public void list(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request,
@@ -310,8 +312,9 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes are proxies in strongDM responsible to communicate with servers
-   * (relays) and clients (gateways).
+   * Nodes are proxies in the strongDM network. They come in two flavors: relays,
+   * which communicate with resources, and gateways, which communicate with
+   * clients.
    * </pre>
    */
   public static final class NodesStub extends io.grpc.stub.AbstractStub<NodesStub> {
@@ -332,7 +335,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Create registers a new node.
+     * Create registers a new Node.
      * </pre>
      */
     public void create(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest request,
@@ -343,7 +346,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Get reads one node by ID.
+     * Get reads one Node by ID.
      * </pre>
      */
     public void get(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest request,
@@ -354,7 +357,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a node by ID.
+     * Update patches a Node by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request,
@@ -365,7 +368,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Delete removes a node by ID.
+     * Delete removes a Node by ID.
      * </pre>
      */
     public void delete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest request,
@@ -376,7 +379,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Nodes matching a given set of criteria.
      * </pre>
      */
     public void list(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request,
@@ -388,8 +391,9 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes are proxies in strongDM responsible to communicate with servers
-   * (relays) and clients (gateways).
+   * Nodes are proxies in the strongDM network. They come in two flavors: relays,
+   * which communicate with resources, and gateways, which communicate with
+   * clients.
    * </pre>
    */
   public static final class NodesBlockingStub extends io.grpc.stub.AbstractStub<NodesBlockingStub> {
@@ -410,7 +414,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Create registers a new node.
+     * Create registers a new Node.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse create(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest request) {
@@ -420,7 +424,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Get reads one node by ID.
+     * Get reads one Node by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse get(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest request) {
@@ -430,7 +434,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a node by ID.
+     * Update patches a Node by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request) {
@@ -440,7 +444,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Delete removes a node by ID.
+     * Delete removes a Node by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse delete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest request) {
@@ -450,7 +454,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Nodes matching a given set of criteria.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse list(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request) {
@@ -461,8 +465,9 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes are proxies in strongDM responsible to communicate with servers
-   * (relays) and clients (gateways).
+   * Nodes are proxies in the strongDM network. They come in two flavors: relays,
+   * which communicate with resources, and gateways, which communicate with
+   * clients.
    * </pre>
    */
   public static final class NodesFutureStub extends io.grpc.stub.AbstractStub<NodesFutureStub> {
@@ -483,7 +488,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Create registers a new node.
+     * Create registers a new Node.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse> create(
@@ -494,7 +499,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Get reads one node by ID.
+     * Get reads one Node by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse> get(
@@ -505,7 +510,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a node by ID.
+     * Update patches a Node by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse> update(
@@ -516,7 +521,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Delete removes a node by ID.
+     * Delete removes a Node by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse> delete(
@@ -527,7 +532,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * List is a batched Get call.
+     * List gets a list of Nodes matching a given set of criteria.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse> list(

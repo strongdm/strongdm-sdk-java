@@ -291,6 +291,7 @@ public class Plumbing {
         com.strongdm.api.v1.Relay porcelain = new com.strongdm.api.v1.Relay();
         porcelain.setId(plumbing.getId());
         porcelain.setName(plumbing.getName());
+        porcelain.setState(plumbing.getState());
         return porcelain;
     }
 
@@ -304,6 +305,9 @@ public class Plumbing {
         }
         if (porcelain.getName() != null) {
             builder.setName(porcelain.getName());
+        }
+        if (porcelain.getState() != null) {
+            builder.setState(porcelain.getState());
         }
         return builder.build();
     }
@@ -324,6 +328,7 @@ public class Plumbing {
         com.strongdm.api.v1.Gateway porcelain = new com.strongdm.api.v1.Gateway();
         porcelain.setId(plumbing.getId());
         porcelain.setName(plumbing.getName());
+        porcelain.setState(plumbing.getState());
         porcelain.setListenAddress(plumbing.getListenAddress());
         porcelain.setBindAddress(plumbing.getBindAddress());
         return porcelain;
@@ -339,6 +344,9 @@ public class Plumbing {
         }
         if (porcelain.getName() != null) {
             builder.setName(porcelain.getName());
+        }
+        if (porcelain.getState() != null) {
+            builder.setState(porcelain.getState());
         }
         if (porcelain.getListenAddress() != null) {
             builder.setListenAddress(porcelain.getListenAddress());
