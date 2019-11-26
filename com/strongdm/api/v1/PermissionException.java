@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.ArrayList;
 
 // PermissionException is used to specify a permissions violation
-public final class PermissionException extends BaseException {
+public final class PermissionException extends RpcException {
     static final long serialVersionUID = 1;
 
     public PermissionException(String errorMessage) {
-        super(errorMessage);
+        super(errorMessage, 7);
     }
 }

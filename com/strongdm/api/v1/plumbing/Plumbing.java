@@ -532,9 +532,9 @@ public class Plumbing {
             .collect(Collectors.toList());
     }
 
-    public static com.strongdm.api.v1.BaseException exceptionToPorcelain(Exception e) {
+    public static com.strongdm.api.v1.RpcException exceptionToPorcelain(Exception e) {
         if (!(e instanceof io.grpc.StatusRuntimeException)) {
-            return new com.strongdm.api.v1.BaseException(e.getMessage());
+            return new com.strongdm.api.v1.RpcException(e.getMessage(), 2); // Unknown
         }
 
         com.google.rpc.Status status = io.grpc.protobuf.StatusProto.fromThrowable(e);

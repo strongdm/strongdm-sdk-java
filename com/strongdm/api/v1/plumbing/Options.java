@@ -849,10 +849,14 @@ public final class Options {
     boolean getPorcelain();
 
     /**
-     * <code>bool error = 1941302;</code>
+     * <pre>
+     * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+     * </pre>
+     *
+     * <code>int32 error = 1941302;</code>
      * @return The error.
      */
-    boolean getError();
+    int getError();
   }
   /**
    * Protobuf type {@code v1.MessageOptions}
@@ -913,7 +917,7 @@ public final class Options {
             }
             case 15530416: {
 
-              error_ = input.readBool();
+              error_ = input.readInt32();
               break;
             }
             default: {
@@ -995,12 +999,16 @@ public final class Options {
     }
 
     public static final int ERROR_FIELD_NUMBER = 1941302;
-    private boolean error_;
+    private int error_;
     /**
-     * <code>bool error = 1941302;</code>
+     * <pre>
+     * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+     * </pre>
+     *
+     * <code>int32 error = 1941302;</code>
      * @return The error.
      */
-    public boolean getError() {
+    public int getError() {
       return error_;
     }
 
@@ -1024,8 +1032,8 @@ public final class Options {
       if (porcelain_ != false) {
         output.writeBool(1941301, porcelain_);
       }
-      if (error_ != false) {
-        output.writeBool(1941302, error_);
+      if (error_ != 0) {
+        output.writeInt32(1941302, error_);
       }
       unknownFields.writeTo(output);
     }
@@ -1043,9 +1051,9 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941301, porcelain_);
       }
-      if (error_ != false) {
+      if (error_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941302, error_);
+          .computeInt32Size(1941302, error_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1085,8 +1093,7 @@ public final class Options {
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPorcelain());
       hash = (37 * hash) + ERROR_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getError());
+      hash = (53 * hash) + getError();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1224,7 +1231,7 @@ public final class Options {
 
         porcelain_ = false;
 
-        error_ = false;
+        error_ = 0;
 
         return this;
       }
@@ -1310,7 +1317,7 @@ public final class Options {
         if (other.getPorcelain() != false) {
           setPorcelain(other.getPorcelain());
         }
-        if (other.getError() != false) {
+        if (other.getError() != 0) {
           setError(other.getError());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1448,32 +1455,44 @@ public final class Options {
         return this;
       }
 
-      private boolean error_ ;
+      private int error_ ;
       /**
-       * <code>bool error = 1941302;</code>
+       * <pre>
+       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+       * </pre>
+       *
+       * <code>int32 error = 1941302;</code>
        * @return The error.
        */
-      public boolean getError() {
+      public int getError() {
         return error_;
       }
       /**
-       * <code>bool error = 1941302;</code>
+       * <pre>
+       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+       * </pre>
+       *
+       * <code>int32 error = 1941302;</code>
        * @param value The error to set.
        * @return This builder for chaining.
        */
-      public Builder setError(boolean value) {
+      public Builder setError(int value) {
         
         error_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool error = 1941302;</code>
+       * <pre>
+       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+       * </pre>
+       *
+       * <code>int32 error = 1941302;</code>
        * @return This builder for chaining.
        */
       public Builder clearError() {
         
-        error_ = false;
+        error_ = 0;
         onChanged();
         return this;
       }
@@ -2740,7 +2759,7 @@ public final class Options {
       "v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose_" +
       "as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010" +
       "\"L\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t" +
-      "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\010\"$" +
+      "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\"$" +
       "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016" +
       "ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rf" +
       "ield_options\022\035.google.protobuf.FieldOpti" +

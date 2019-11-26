@@ -33,7 +33,7 @@ public class Client {
     
 
     // Creates a new strongDM API client. Pass in the API hostname, port, and authentication token.
-    public Client(String host, int port, String apiKey) throws BaseException {
+    public Client(String host, int port, String apiKey) throws RpcException {
         try {
             NettyChannelBuilder builder = NettyChannelBuilder.forAddress(host, port);
             if (port == 443) {

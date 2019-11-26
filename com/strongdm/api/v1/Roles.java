@@ -49,7 +49,7 @@ public class Roles {
 
     
     // Create registers a new Role.
-    public RoleCreateResponse create(Role role) throws BaseException {
+    public RoleCreateResponse create(Role role) throws RpcException {
         RolesPlumbing.RoleCreateRequest.Builder builder = RolesPlumbing.RoleCreateRequest.newBuilder();
         builder.setRole(Plumbing.roleToPlumbing(role));
         RolesPlumbing.RoleCreateRequest req = builder.build();
@@ -63,7 +63,7 @@ public class Roles {
     }
     
     // Get reads one Role by ID.
-    public RoleGetResponse get(String id) throws BaseException {
+    public RoleGetResponse get(String id) throws RpcException {
         RolesPlumbing.RoleGetRequest.Builder builder = RolesPlumbing.RoleGetRequest.newBuilder();
         builder.setId(id);
         RolesPlumbing.RoleGetRequest req = builder.build();
@@ -77,7 +77,7 @@ public class Roles {
     }
     
     // Update patches a Role by ID.
-    public RoleUpdateResponse update(Role role) throws BaseException {
+    public RoleUpdateResponse update(Role role) throws RpcException {
         RolesPlumbing.RoleUpdateRequest.Builder builder = RolesPlumbing.RoleUpdateRequest.newBuilder();
         builder.setRole(Plumbing.roleToPlumbing(role));
         RolesPlumbing.RoleUpdateRequest req = builder.build();
@@ -91,7 +91,7 @@ public class Roles {
     }
     
     // Delete removes a Role by ID.
-    public RoleDeleteResponse delete(String id) throws BaseException {
+    public RoleDeleteResponse delete(String id) throws RpcException {
         RolesPlumbing.RoleDeleteRequest.Builder builder = RolesPlumbing.RoleDeleteRequest.newBuilder();
         builder.setId(id);
         RolesPlumbing.RoleDeleteRequest req = builder.build();
@@ -105,7 +105,7 @@ public class Roles {
     }
     
     // List gets a list of Roles matching a given set of criteria.
-    public Iterable<Role> list(String filter) throws BaseException {
+    public Iterable<Role> list(String filter) throws RpcException {
         RolesPlumbing.RoleListRequest.Builder builder = RolesPlumbing.RoleListRequest.newBuilder();
         builder.setFilter(filter);
 

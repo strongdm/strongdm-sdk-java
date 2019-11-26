@@ -8339,15 +8339,15 @@ public final class Spec {
       "gen-swagger/options/annotations.proto\"^\n" +
       "\022AlreadyExistsError\022%\n\006entity\030\001 \001(\tB\025\362\370\263" +
       "\007\020\242\363\263\007\006Entity\260\363\263\007\001:!\372\370\263\007\034\242\363\263\007\022AlreadyExi" +
-      "stsError\260\363\263\007\001\"T\n\rNotFoundError\022%\n\006entity" +
+      "stsError\260\363\263\007\006\"T\n\rNotFoundError\022%\n\006entity" +
       "\030\001 \001(\tB\025\362\370\263\007\020\242\363\263\007\006Entity\260\363\263\007\001:\034\372\370\263\007\027\242\363\263\007" +
-      "\rNotFoundError\260\363\263\007\001\"1\n\017BadRequestError:\036" +
-      "\372\370\263\007\031\242\363\263\007\017BadRequestError\260\363\263\007\001\"9\n\023Authen" +
+      "\rNotFoundError\260\363\263\007\005\"1\n\017BadRequestError:\036" +
+      "\372\370\263\007\031\242\363\263\007\017BadRequestError\260\363\263\007\003\"9\n\023Authen" +
       "ticationError:\"\372\370\263\007\035\242\363\263\007\023AuthenticationE" +
-      "rror\260\363\263\007\001\"1\n\017PermissionError:\036\372\370\263\007\031\242\363\263\007\017" +
-      "PermissionError\260\363\263\007\001\"-\n\rInternalError:\034\372" +
-      "\370\263\007\027\242\363\263\007\rInternalError\260\363\263\007\001\"/\n\016RateLimit" +
-      "Error:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260\363\263\007\001\"\027\n\025" +
+      "rror\260\363\263\007\020\"1\n\017PermissionError:\036\372\370\263\007\031\242\363\263\007\017" +
+      "PermissionError\260\363\263\007\007\"-\n\rInternalError:\034\372" +
+      "\370\263\007\027\242\363\263\007\rInternalError\260\363\263\007\r\"/\n\016RateLimit" +
+      "Error:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260\363\263\007\010\"\027\n\025" +
       "CreateRequestMetadata\"$\n\026CreateResponseM" +
       "etadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRequestMetadat" +
       "a\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025" +

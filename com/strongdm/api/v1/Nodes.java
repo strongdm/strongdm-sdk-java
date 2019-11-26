@@ -47,7 +47,7 @@ public class Nodes {
 
     
     // Create registers a new Node.
-    public NodeCreateResponse create(Node node) throws BaseException {
+    public NodeCreateResponse create(Node node) throws RpcException {
         NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
         builder.setNode(Plumbing.nodeToPlumbing(node));
         NodesPlumbing.NodeCreateRequest req = builder.build();
@@ -61,7 +61,7 @@ public class Nodes {
     }
     
     // Get reads one Node by ID.
-    public NodeGetResponse get(String id) throws BaseException {
+    public NodeGetResponse get(String id) throws RpcException {
         NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
         builder.setId(id);
         NodesPlumbing.NodeGetRequest req = builder.build();
@@ -75,7 +75,7 @@ public class Nodes {
     }
     
     // Update patches a Node by ID.
-    public NodeUpdateResponse update(Node node) throws BaseException {
+    public NodeUpdateResponse update(Node node) throws RpcException {
         NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
         builder.setNode(Plumbing.nodeToPlumbing(node));
         NodesPlumbing.NodeUpdateRequest req = builder.build();
@@ -89,7 +89,7 @@ public class Nodes {
     }
     
     // Delete removes a Node by ID.
-    public NodeDeleteResponse delete(String id) throws BaseException {
+    public NodeDeleteResponse delete(String id) throws RpcException {
         NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
         builder.setId(id);
         NodesPlumbing.NodeDeleteRequest req = builder.build();
@@ -103,7 +103,7 @@ public class Nodes {
     }
     
     // List gets a list of Nodes matching a given set of criteria.
-    public Iterable<Node> list(String filter) throws BaseException {
+    public Iterable<Node> list(String filter) throws RpcException {
         NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
         builder.setFilter(filter);
 
