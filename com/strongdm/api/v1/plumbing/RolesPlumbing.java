@@ -8326,6 +8326,33 @@ public final class RolesPlumbing {
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRolesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Rate limit information for the token/org.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information for the token/org.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information for the token/org.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
    * <pre>
@@ -8399,6 +8426,19 @@ public final class RolesPlumbing {
               }
               roles_.add(
                   input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -8526,6 +8566,41 @@ public final class RolesPlumbing {
       return roles_.get(index);
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information for the token/org.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information for the token/org.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information for the token/org.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8546,6 +8621,9 @@ public final class RolesPlumbing {
       for (int i = 0; i < roles_.size(); i++) {
         output.writeMessage(2, roles_.get(i));
       }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8562,6 +8640,10 @@ public final class RolesPlumbing {
       for (int i = 0; i < roles_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, roles_.get(i));
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8585,6 +8667,11 @@ public final class RolesPlumbing {
       }
       if (!getRolesList()
           .equals(other.getRolesList())) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8603,6 +8690,10 @@ public final class RolesPlumbing {
       if (getRolesCount() > 0) {
         hash = (37 * hash) + ROLES_FIELD_NUMBER;
         hash = (53 * hash) + getRolesList().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8755,6 +8846,12 @@ public final class RolesPlumbing {
         } else {
           rolesBuilder_.clear();
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -8795,6 +8892,11 @@ public final class RolesPlumbing {
           result.roles_ = roles_;
         } else {
           result.roles_ = rolesBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8872,6 +8974,9 @@ public final class RolesPlumbing {
               rolesBuilder_.addAllMessages(other.roles_);
             }
           }
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9368,6 +9473,161 @@ public final class RolesPlumbing {
           roles_ = null;
         }
         return rolesBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information for the token/org.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10398,29 +10658,31 @@ public final class RolesPlumbing {
       "se\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMeta" +
       "dataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleList" +
       "Request\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMe" +
-      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"_\n\020Ro" +
-      "leListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRe" +
-      "sponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.RoleB" +
-      "\n\362\370\263\007\005\270\363\263\007\001\"\346\001\n\004Role\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242" +
-      "\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Nam" +
-      "e\260\363\263\007\001\022+\n\tcomposite\030\003 \001(\010B\030\362\370\263\007\023\242\363\263\007\tCom" +
-      "posite\260\363\263\007\001:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A Role.\022/h" +
-      "ttps://www.strongdm.com/docs/api/entitie" +
-      "s#Role2$\022\"{ \"id\": \"7\", \"name\": \"happy-go" +
-      "at\"}2\362\003\n\005Roles\022\245\001\n\006Create\022\025.v1.RoleCreat" +
-      "eRequest\032\026.v1.RoleCreateResponse\"l\202\323\344\223\002\016" +
-      "\"\t/v1/roles:\001*\222AU\"S\n\030Learn how to make a" +
-      " Role\0227https://www.strongdm.com/docs/api" +
-      "/services/Roles#Create\022F\n\003Get\022\022.v1.RoleG" +
-      "etRequest\032\023.v1.RoleGetResponse\"\026\202\323\344\223\002\020\022\016" +
-      "/v1/roles/{id}\022R\n\006Update\022\025.v1.RoleUpdate" +
-      "Request\032\026.v1.RoleUpdateResponse\"\031\202\323\344\223\002\023\032" +
-      "\016/v1/roles/{id}:\001*\022O\n\006Delete\022\025.v1.RoleDe" +
-      "leteRequest\032\026.v1.RoleDeleteResponse\"\026\202\323\344" +
-      "\223\002\020*\016/v1/roles/{id}\022D\n\004List\022\023.v1.RoleLis" +
-      "tRequest\032\024.v1.RoleListResponse\"\021\202\323\344\223\002\013\022\t" +
-      "/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com.strongd" +
-      "m.api.v1.plumbingB\rRolesPlumbingb\006proto3"
+      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\212\001\n\020R" +
+      "oleListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
+      "esponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.Role" +
+      "B\n\362\370\263\007\005\270\363\263\007\001\022)\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadata\"\346\001\n\004Role\022\035\n\002id\030\001 \001(\tB\021\362\370" +
+      "\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007" +
+      "\004Name\260\363\263\007\001\022+\n\tcomposite\030\003 \001(\010B\030\362\370\263\007\023\242\363\263\007" +
+      "\tComposite\260\363\263\007\001:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A Role" +
+      ".\022/https://www.strongdm.com/docs/api/ent" +
+      "ities#Role2$\022\"{ \"id\": \"7\", \"name\": \"happ" +
+      "y-goat\"}2\362\003\n\005Roles\022\245\001\n\006Create\022\025.v1.RoleC" +
+      "reateRequest\032\026.v1.RoleCreateResponse\"l\202\323" +
+      "\344\223\002\016\"\t/v1/roles:\001*\222AU\"S\n\030Learn how to ma" +
+      "ke a Role\0227https://www.strongdm.com/docs" +
+      "/api/services/Roles#Create\022F\n\003Get\022\022.v1.R" +
+      "oleGetRequest\032\023.v1.RoleGetResponse\"\026\202\323\344\223" +
+      "\002\020\022\016/v1/roles/{id}\022R\n\006Update\022\025.v1.RoleUp" +
+      "dateRequest\032\026.v1.RoleUpdateResponse\"\031\202\323\344" +
+      "\223\002\023\032\016/v1/roles/{id}:\001*\022O\n\006Delete\022\025.v1.Ro" +
+      "leDeleteRequest\032\026.v1.RoleDeleteResponse\"" +
+      "\026\202\323\344\223\002\020*\016/v1/roles/{id}\022D\n\004List\022\023.v1.Rol" +
+      "eListRequest\032\024.v1.RoleListResponse\"\021\202\323\344\223" +
+      "\002\013\022\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com.str" +
+      "ongdm.api.v1.plumbingB\rRolesPlumbingb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10489,7 +10751,7 @@ public final class RolesPlumbing {
     internal_static_v1_RoleListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RoleListResponse_descriptor,
-        new java.lang.String[] { "Meta", "Roles", });
+        new java.lang.String[] { "Meta", "Roles", "RateLimit", });
     internal_static_v1_Role_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_v1_Role_fieldAccessorTable = new

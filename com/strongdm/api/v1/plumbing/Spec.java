@@ -8241,6 +8241,897 @@ public final class Spec {
 
   }
 
+  public interface RateLimitMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.RateLimitMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * How many total requests the user/token is authorized to make before being
+     * rate limited.
+     * </pre>
+     *
+     * <code>int32 limit = 1;</code>
+     * @return The limit.
+     */
+    int getLimit();
+
+    /**
+     * <pre>
+     * How many remaining requests out of the limit are still avaialable.
+     * </pre>
+     *
+     * <code>int32 remaining = 2;</code>
+     * @return The remaining.
+     */
+    int getRemaining();
+
+    /**
+     * <pre>
+     * The unix time, in seconds, when remaining will be reset to limit. 
+     * </pre>
+     *
+     * <code>int64 reset_time = 3;</code>
+     * @return The resetTime.
+     */
+    long getResetTime();
+
+    /**
+     * <pre>
+     * The bucket this user/token is associated with, which may be shared between
+     * multiple users/tokens. 
+     * </pre>
+     *
+     * <code>string bucket = 4;</code>
+     * @return The bucket.
+     */
+    java.lang.String getBucket();
+    /**
+     * <pre>
+     * The bucket this user/token is associated with, which may be shared between
+     * multiple users/tokens. 
+     * </pre>
+     *
+     * <code>string bucket = 4;</code>
+     * @return The bytes for bucket.
+     */
+    com.google.protobuf.ByteString
+        getBucketBytes();
+  }
+  /**
+   * <pre>
+   * RateLimitMetadata contains information about remaining requests avaialable
+   * to the user over some timeframe. 
+   * </pre>
+   *
+   * Protobuf type {@code v1.RateLimitMetadata}
+   */
+  public  static final class RateLimitMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.RateLimitMetadata)
+      RateLimitMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RateLimitMetadata.newBuilder() to construct.
+    private RateLimitMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RateLimitMetadata() {
+      bucket_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RateLimitMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RateLimitMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              limit_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              remaining_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              resetTime_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bucket_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_RateLimitMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_RateLimitMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.class, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder.class);
+    }
+
+    public static final int LIMIT_FIELD_NUMBER = 1;
+    private int limit_;
+    /**
+     * <pre>
+     * How many total requests the user/token is authorized to make before being
+     * rate limited.
+     * </pre>
+     *
+     * <code>int32 limit = 1;</code>
+     * @return The limit.
+     */
+    public int getLimit() {
+      return limit_;
+    }
+
+    public static final int REMAINING_FIELD_NUMBER = 2;
+    private int remaining_;
+    /**
+     * <pre>
+     * How many remaining requests out of the limit are still avaialable.
+     * </pre>
+     *
+     * <code>int32 remaining = 2;</code>
+     * @return The remaining.
+     */
+    public int getRemaining() {
+      return remaining_;
+    }
+
+    public static final int RESET_TIME_FIELD_NUMBER = 3;
+    private long resetTime_;
+    /**
+     * <pre>
+     * The unix time, in seconds, when remaining will be reset to limit. 
+     * </pre>
+     *
+     * <code>int64 reset_time = 3;</code>
+     * @return The resetTime.
+     */
+    public long getResetTime() {
+      return resetTime_;
+    }
+
+    public static final int BUCKET_FIELD_NUMBER = 4;
+    private volatile java.lang.Object bucket_;
+    /**
+     * <pre>
+     * The bucket this user/token is associated with, which may be shared between
+     * multiple users/tokens. 
+     * </pre>
+     *
+     * <code>string bucket = 4;</code>
+     * @return The bucket.
+     */
+    public java.lang.String getBucket() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucket_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The bucket this user/token is associated with, which may be shared between
+     * multiple users/tokens. 
+     * </pre>
+     *
+     * <code>string bucket = 4;</code>
+     * @return The bytes for bucket.
+     */
+    public com.google.protobuf.ByteString
+        getBucketBytes() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucket_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (limit_ != 0) {
+        output.writeInt32(1, limit_);
+      }
+      if (remaining_ != 0) {
+        output.writeInt32(2, remaining_);
+      }
+      if (resetTime_ != 0L) {
+        output.writeInt64(3, resetTime_);
+      }
+      if (!getBucketBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bucket_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (limit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, limit_);
+      }
+      if (remaining_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, remaining_);
+      }
+      if (resetTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, resetTime_);
+      }
+      if (!getBucketBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bucket_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata other = (com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata) obj;
+
+      if (getLimit()
+          != other.getLimit()) return false;
+      if (getRemaining()
+          != other.getRemaining()) return false;
+      if (getResetTime()
+          != other.getResetTime()) return false;
+      if (!getBucket()
+          .equals(other.getBucket())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getLimit();
+      hash = (37 * hash) + REMAINING_FIELD_NUMBER;
+      hash = (53 * hash) + getRemaining();
+      hash = (37 * hash) + RESET_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getResetTime());
+      hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+      hash = (53 * hash) + getBucket().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RateLimitMetadata contains information about remaining requests avaialable
+     * to the user over some timeframe. 
+     * </pre>
+     *
+     * Protobuf type {@code v1.RateLimitMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.RateLimitMetadata)
+        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_RateLimitMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_RateLimitMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.class, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        limit_ = 0;
+
+        remaining_ = 0;
+
+        resetTime_ = 0L;
+
+        bucket_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.Spec.internal_static_v1_RateLimitMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata build() {
+        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata buildPartial() {
+        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata result = new com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata(this);
+        result.limit_ = limit_;
+        result.remaining_ = remaining_;
+        result.resetTime_ = resetTime_;
+        result.bucket_ = bucket_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata other) {
+        if (other == com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()) return this;
+        if (other.getLimit() != 0) {
+          setLimit(other.getLimit());
+        }
+        if (other.getRemaining() != 0) {
+          setRemaining(other.getRemaining());
+        }
+        if (other.getResetTime() != 0L) {
+          setResetTime(other.getResetTime());
+        }
+        if (!other.getBucket().isEmpty()) {
+          bucket_ = other.bucket_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int limit_ ;
+      /**
+       * <pre>
+       * How many total requests the user/token is authorized to make before being
+       * rate limited.
+       * </pre>
+       *
+       * <code>int32 limit = 1;</code>
+       * @return The limit.
+       */
+      public int getLimit() {
+        return limit_;
+      }
+      /**
+       * <pre>
+       * How many total requests the user/token is authorized to make before being
+       * rate limited.
+       * </pre>
+       *
+       * <code>int32 limit = 1;</code>
+       * @param value The limit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLimit(int value) {
+        
+        limit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How many total requests the user/token is authorized to make before being
+       * rate limited.
+       * </pre>
+       *
+       * <code>int32 limit = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLimit() {
+        
+        limit_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int remaining_ ;
+      /**
+       * <pre>
+       * How many remaining requests out of the limit are still avaialable.
+       * </pre>
+       *
+       * <code>int32 remaining = 2;</code>
+       * @return The remaining.
+       */
+      public int getRemaining() {
+        return remaining_;
+      }
+      /**
+       * <pre>
+       * How many remaining requests out of the limit are still avaialable.
+       * </pre>
+       *
+       * <code>int32 remaining = 2;</code>
+       * @param value The remaining to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemaining(int value) {
+        
+        remaining_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How many remaining requests out of the limit are still avaialable.
+       * </pre>
+       *
+       * <code>int32 remaining = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemaining() {
+        
+        remaining_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long resetTime_ ;
+      /**
+       * <pre>
+       * The unix time, in seconds, when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>int64 reset_time = 3;</code>
+       * @return The resetTime.
+       */
+      public long getResetTime() {
+        return resetTime_;
+      }
+      /**
+       * <pre>
+       * The unix time, in seconds, when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>int64 reset_time = 3;</code>
+       * @param value The resetTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResetTime(long value) {
+        
+        resetTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unix time, in seconds, when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>int64 reset_time = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResetTime() {
+        
+        resetTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bucket_ = "";
+      /**
+       * <pre>
+       * The bucket this user/token is associated with, which may be shared between
+       * multiple users/tokens. 
+       * </pre>
+       *
+       * <code>string bucket = 4;</code>
+       * @return The bucket.
+       */
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The bucket this user/token is associated with, which may be shared between
+       * multiple users/tokens. 
+       * </pre>
+       *
+       * <code>string bucket = 4;</code>
+       * @return The bytes for bucket.
+       */
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The bucket this user/token is associated with, which may be shared between
+       * multiple users/tokens. 
+       * </pre>
+       *
+       * <code>string bucket = 4;</code>
+       * @param value The bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucket(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bucket_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The bucket this user/token is associated with, which may be shared between
+       * multiple users/tokens. 
+       * </pre>
+       *
+       * <code>string bucket = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBucket() {
+        
+        bucket_ = getDefaultInstance().getBucket();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The bucket this user/token is associated with, which may be shared between
+       * multiple users/tokens. 
+       * </pre>
+       *
+       * <code>string bucket = 4;</code>
+       * @param value The bytes for bucket to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucketBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bucket_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.RateLimitMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.RateLimitMetadata)
+    private static final com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata();
+    }
+
+    public static com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RateLimitMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RateLimitMetadata>() {
+      @java.lang.Override
+      public RateLimitMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RateLimitMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RateLimitMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RateLimitMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AlreadyExistsError_descriptor;
   private static final 
@@ -8326,6 +9217,11 @@ public final class Spec {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_ListResponseMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_RateLimitMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RateLimitMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8357,13 +9253,15 @@ public final class Spec {
       "\007\001\"B\n\023ListRequestMetadata\022\016\n\006cursor\030\001 \001(" +
       "\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024ListRe" +
       "sponseMetadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005t" +
-      "otal\030\002 \001(\005B\363\001\n\034com.strongdm.api.v1.plumb" +
-      "ing\222A\321\001\022u\n\010StrongDM\022\036The infrastructure " +
-      "access API.\"D\n\010StrongDM\022\"https://www.str" +
-      "ongdm.com/docs/api/\032\024support@strongdm.co" +
-      "m2\0031.0\032\020api.strongdm.comrF\n!Learn more a" +
-      "bout the strongDM API\022!https://www.stron" +
-      "gdm.com/docs/apib\006proto3"
+      "otal\030\002 \001(\005\"Y\n\021RateLimitMetadata\022\r\n\005limit" +
+      "\030\001 \001(\005\022\021\n\tremaining\030\002 \001(\005\022\022\n\nreset_time\030" +
+      "\003 \001(\003\022\016\n\006bucket\030\004 \001(\tB\363\001\n\034com.strongdm.a" +
+      "pi.v1.plumbing\222A\321\001\022u\n\010StrongDM\022\036The infr" +
+      "astructure access API.\"D\n\010StrongDM\022\"http" +
+      "s://www.strongdm.com/docs/api/\032\024support@" +
+      "strongdm.com2\0031.0\032\020api.strongdm.comrF\n!L" +
+      "earn more about the strongDM API\022!https:" +
+      "//www.strongdm.com/docs/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8473,6 +9371,12 @@ public final class Spec {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ListResponseMetadata_descriptor,
         new java.lang.String[] { "NextCursor", "Total", });
+    internal_static_v1_RateLimitMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_v1_RateLimitMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_RateLimitMetadata_descriptor,
+        new java.lang.String[] { "Limit", "Remaining", "ResetTime", "Bucket", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Swagger);
