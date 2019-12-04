@@ -8251,30 +8251,47 @@ public final class Spec {
      * rate limited.
      * </pre>
      *
-     * <code>int32 limit = 1;</code>
+     * <code>int64 limit = 1;</code>
      * @return The limit.
      */
-    int getLimit();
+    long getLimit();
 
     /**
      * <pre>
      * How many remaining requests out of the limit are still avaialable.
      * </pre>
      *
-     * <code>int32 remaining = 2;</code>
+     * <code>int64 remaining = 2;</code>
      * @return The remaining.
      */
-    int getRemaining();
+    long getRemaining();
 
     /**
      * <pre>
-     * The unix time, in seconds, when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>int64 reset_time = 3;</code>
-     * @return The resetTime.
+     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * @return Whether the resetAt field is set.
      */
-    long getResetTime();
+    boolean hasResetAt();
+    /**
+     * <pre>
+     * The time when remaining will be reset to limit. 
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * @return The resetAt.
+     */
+    com.google.protobuf.Timestamp getResetAt();
+    /**
+     * <pre>
+     * The time when remaining will be reset to limit. 
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getResetAtOrBuilder();
 
     /**
      * <pre>
@@ -8351,17 +8368,25 @@ public final class Spec {
               break;
             case 8: {
 
-              limit_ = input.readInt32();
+              limit_ = input.readInt64();
               break;
             }
             case 16: {
 
-              remaining_ = input.readInt32();
+              remaining_ = input.readInt64();
               break;
             }
-            case 24: {
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (resetAt_ != null) {
+                subBuilder = resetAt_.toBuilder();
+              }
+              resetAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resetAt_);
+                resetAt_ = subBuilder.buildPartial();
+              }
 
-              resetTime_ = input.readInt64();
               break;
             }
             case 34: {
@@ -8403,46 +8428,67 @@ public final class Spec {
     }
 
     public static final int LIMIT_FIELD_NUMBER = 1;
-    private int limit_;
+    private long limit_;
     /**
      * <pre>
      * How many total requests the user/token is authorized to make before being
      * rate limited.
      * </pre>
      *
-     * <code>int32 limit = 1;</code>
+     * <code>int64 limit = 1;</code>
      * @return The limit.
      */
-    public int getLimit() {
+    public long getLimit() {
       return limit_;
     }
 
     public static final int REMAINING_FIELD_NUMBER = 2;
-    private int remaining_;
+    private long remaining_;
     /**
      * <pre>
      * How many remaining requests out of the limit are still avaialable.
      * </pre>
      *
-     * <code>int32 remaining = 2;</code>
+     * <code>int64 remaining = 2;</code>
      * @return The remaining.
      */
-    public int getRemaining() {
+    public long getRemaining() {
       return remaining_;
     }
 
-    public static final int RESET_TIME_FIELD_NUMBER = 3;
-    private long resetTime_;
+    public static final int RESET_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp resetAt_;
     /**
      * <pre>
-     * The unix time, in seconds, when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>int64 reset_time = 3;</code>
-     * @return The resetTime.
+     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * @return Whether the resetAt field is set.
      */
-    public long getResetTime() {
-      return resetTime_;
+    public boolean hasResetAt() {
+      return resetAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time when remaining will be reset to limit. 
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * @return The resetAt.
+     */
+    public com.google.protobuf.Timestamp getResetAt() {
+      return resetAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : resetAt_;
+    }
+    /**
+     * <pre>
+     * The time when remaining will be reset to limit. 
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getResetAtOrBuilder() {
+      return getResetAt();
     }
 
     public static final int BUCKET_FIELD_NUMBER = 4;
@@ -8505,14 +8551,14 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (limit_ != 0) {
-        output.writeInt32(1, limit_);
+      if (limit_ != 0L) {
+        output.writeInt64(1, limit_);
       }
-      if (remaining_ != 0) {
-        output.writeInt32(2, remaining_);
+      if (remaining_ != 0L) {
+        output.writeInt64(2, remaining_);
       }
-      if (resetTime_ != 0L) {
-        output.writeInt64(3, resetTime_);
+      if (resetAt_ != null) {
+        output.writeMessage(3, getResetAt());
       }
       if (!getBucketBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bucket_);
@@ -8526,17 +8572,17 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
-      if (limit_ != 0) {
+      if (limit_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, limit_);
+          .computeInt64Size(1, limit_);
       }
-      if (remaining_ != 0) {
+      if (remaining_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, remaining_);
+          .computeInt64Size(2, remaining_);
       }
-      if (resetTime_ != 0L) {
+      if (resetAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, resetTime_);
+          .computeMessageSize(3, getResetAt());
       }
       if (!getBucketBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bucket_);
@@ -8560,8 +8606,11 @@ public final class Spec {
           != other.getLimit()) return false;
       if (getRemaining()
           != other.getRemaining()) return false;
-      if (getResetTime()
-          != other.getResetTime()) return false;
+      if (hasResetAt() != other.hasResetAt()) return false;
+      if (hasResetAt()) {
+        if (!getResetAt()
+            .equals(other.getResetAt())) return false;
+      }
       if (!getBucket()
           .equals(other.getBucket())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -8576,12 +8625,15 @@ public final class Spec {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + LIMIT_FIELD_NUMBER;
-      hash = (53 * hash) + getLimit();
-      hash = (37 * hash) + REMAINING_FIELD_NUMBER;
-      hash = (53 * hash) + getRemaining();
-      hash = (37 * hash) + RESET_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getResetTime());
+          getLimit());
+      hash = (37 * hash) + REMAINING_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRemaining());
+      if (hasResetAt()) {
+        hash = (37 * hash) + RESET_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getResetAt().hashCode();
+      }
       hash = (37 * hash) + BUCKET_FIELD_NUMBER;
       hash = (53 * hash) + getBucket().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -8722,12 +8774,16 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        limit_ = 0;
+        limit_ = 0L;
 
-        remaining_ = 0;
+        remaining_ = 0L;
 
-        resetTime_ = 0L;
-
+        if (resetAtBuilder_ == null) {
+          resetAt_ = null;
+        } else {
+          resetAt_ = null;
+          resetAtBuilder_ = null;
+        }
         bucket_ = "";
 
         return this;
@@ -8758,7 +8814,11 @@ public final class Spec {
         com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata result = new com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata(this);
         result.limit_ = limit_;
         result.remaining_ = remaining_;
-        result.resetTime_ = resetTime_;
+        if (resetAtBuilder_ == null) {
+          result.resetAt_ = resetAt_;
+        } else {
+          result.resetAt_ = resetAtBuilder_.build();
+        }
         result.bucket_ = bucket_;
         onBuilt();
         return result;
@@ -8808,14 +8868,14 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata other) {
         if (other == com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()) return this;
-        if (other.getLimit() != 0) {
+        if (other.getLimit() != 0L) {
           setLimit(other.getLimit());
         }
-        if (other.getRemaining() != 0) {
+        if (other.getRemaining() != 0L) {
           setRemaining(other.getRemaining());
         }
-        if (other.getResetTime() != 0L) {
-          setResetTime(other.getResetTime());
+        if (other.hasResetAt()) {
+          mergeResetAt(other.getResetAt());
         }
         if (!other.getBucket().isEmpty()) {
           bucket_ = other.bucket_;
@@ -8850,17 +8910,17 @@ public final class Spec {
         return this;
       }
 
-      private int limit_ ;
+      private long limit_ ;
       /**
        * <pre>
        * How many total requests the user/token is authorized to make before being
        * rate limited.
        * </pre>
        *
-       * <code>int32 limit = 1;</code>
+       * <code>int64 limit = 1;</code>
        * @return The limit.
        */
-      public int getLimit() {
+      public long getLimit() {
         return limit_;
       }
       /**
@@ -8869,11 +8929,11 @@ public final class Spec {
        * rate limited.
        * </pre>
        *
-       * <code>int32 limit = 1;</code>
+       * <code>int64 limit = 1;</code>
        * @param value The limit to set.
        * @return This builder for chaining.
        */
-      public Builder setLimit(int value) {
+      public Builder setLimit(long value) {
         
         limit_ = value;
         onChanged();
@@ -8885,26 +8945,26 @@ public final class Spec {
        * rate limited.
        * </pre>
        *
-       * <code>int32 limit = 1;</code>
+       * <code>int64 limit = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
         
-        limit_ = 0;
+        limit_ = 0L;
         onChanged();
         return this;
       }
 
-      private int remaining_ ;
+      private long remaining_ ;
       /**
        * <pre>
        * How many remaining requests out of the limit are still avaialable.
        * </pre>
        *
-       * <code>int32 remaining = 2;</code>
+       * <code>int64 remaining = 2;</code>
        * @return The remaining.
        */
-      public int getRemaining() {
+      public long getRemaining() {
         return remaining_;
       }
       /**
@@ -8912,11 +8972,11 @@ public final class Spec {
        * How many remaining requests out of the limit are still avaialable.
        * </pre>
        *
-       * <code>int32 remaining = 2;</code>
+       * <code>int64 remaining = 2;</code>
        * @param value The remaining to set.
        * @return This builder for chaining.
        */
-      public Builder setRemaining(int value) {
+      public Builder setRemaining(long value) {
         
         remaining_ = value;
         onChanged();
@@ -8927,56 +8987,169 @@ public final class Spec {
        * How many remaining requests out of the limit are still avaialable.
        * </pre>
        *
-       * <code>int32 remaining = 2;</code>
+       * <code>int64 remaining = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearRemaining() {
         
-        remaining_ = 0;
+        remaining_ = 0L;
         onChanged();
         return this;
       }
 
-      private long resetTime_ ;
+      private com.google.protobuf.Timestamp resetAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> resetAtBuilder_;
       /**
        * <pre>
-       * The unix time, in seconds, when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>int64 reset_time = 3;</code>
-       * @return The resetTime.
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * @return Whether the resetAt field is set.
        */
-      public long getResetTime() {
-        return resetTime_;
+      public boolean hasResetAt() {
+        return resetAtBuilder_ != null || resetAt_ != null;
       }
       /**
        * <pre>
-       * The unix time, in seconds, when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>int64 reset_time = 3;</code>
-       * @param value The resetTime to set.
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * @return The resetAt.
        */
-      public Builder setResetTime(long value) {
-        
-        resetTime_ = value;
-        onChanged();
+      public com.google.protobuf.Timestamp getResetAt() {
+        if (resetAtBuilder_ == null) {
+          return resetAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : resetAt_;
+        } else {
+          return resetAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       */
+      public Builder setResetAt(com.google.protobuf.Timestamp value) {
+        if (resetAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resetAt_ = value;
+          onChanged();
+        } else {
+          resetAtBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
        * <pre>
-       * The unix time, in seconds, when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>int64 reset_time = 3;</code>
-       * @return This builder for chaining.
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
        */
-      public Builder clearResetTime() {
-        
-        resetTime_ = 0L;
-        onChanged();
+      public Builder setResetAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (resetAtBuilder_ == null) {
+          resetAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          resetAtBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
+      }
+      /**
+       * <pre>
+       * The time when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       */
+      public Builder mergeResetAt(com.google.protobuf.Timestamp value) {
+        if (resetAtBuilder_ == null) {
+          if (resetAt_ != null) {
+            resetAt_ =
+              com.google.protobuf.Timestamp.newBuilder(resetAt_).mergeFrom(value).buildPartial();
+          } else {
+            resetAt_ = value;
+          }
+          onChanged();
+        } else {
+          resetAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       */
+      public Builder clearResetAt() {
+        if (resetAtBuilder_ == null) {
+          resetAt_ = null;
+          onChanged();
+        } else {
+          resetAt_ = null;
+          resetAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getResetAtBuilder() {
+        
+        onChanged();
+        return getResetAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getResetAtOrBuilder() {
+        if (resetAtBuilder_ != null) {
+          return resetAtBuilder_.getMessageOrBuilder();
+        } else {
+          return resetAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : resetAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time when remaining will be reset to limit. 
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getResetAtFieldBuilder() {
+        if (resetAtBuilder_ == null) {
+          resetAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getResetAt(),
+                  getParentForChildren(),
+                  isClean());
+          resetAt_ = null;
+        }
+        return resetAtBuilder_;
       }
 
       private java.lang.Object bucket_ = "";
@@ -9232,42 +9405,45 @@ public final class Spec {
   static {
     java.lang.String[] descriptorData = {
       "\n\nspec.proto\022\002v1\032\roptions.proto\032,protoc-" +
-      "gen-swagger/options/annotations.proto\"^\n" +
-      "\022AlreadyExistsError\022%\n\006entity\030\001 \001(\tB\025\362\370\263" +
-      "\007\020\242\363\263\007\006Entity\260\363\263\007\001:!\372\370\263\007\034\242\363\263\007\022AlreadyExi" +
-      "stsError\260\363\263\007\006\"T\n\rNotFoundError\022%\n\006entity" +
-      "\030\001 \001(\tB\025\362\370\263\007\020\242\363\263\007\006Entity\260\363\263\007\001:\034\372\370\263\007\027\242\363\263\007" +
-      "\rNotFoundError\260\363\263\007\005\"1\n\017BadRequestError:\036" +
-      "\372\370\263\007\031\242\363\263\007\017BadRequestError\260\363\263\007\003\"9\n\023Authen" +
-      "ticationError:\"\372\370\263\007\035\242\363\263\007\023AuthenticationE" +
-      "rror\260\363\263\007\020\"1\n\017PermissionError:\036\372\370\263\007\031\242\363\263\007\017" +
-      "PermissionError\260\363\263\007\007\"-\n\rInternalError:\034\372" +
-      "\370\263\007\027\242\363\263\007\rInternalError\260\363\263\007\r\"/\n\016RateLimit" +
-      "Error:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260\363\263\007\010\"\027\n\025" +
-      "CreateRequestMetadata\"$\n\026CreateResponseM" +
-      "etadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRequestMetadat" +
-      "a\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025" +
-      "UpdateRequestMetadata\"$\n\026UpdateResponseM" +
-      "etadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMeta" +
-      "data\"$\n\026DeleteResponseMetadata:\n\372\370\263\007\005\250\363\263" +
-      "\007\001\"B\n\023ListRequestMetadata\022\016\n\006cursor\030\001 \001(" +
-      "\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024ListRe" +
-      "sponseMetadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005t" +
-      "otal\030\002 \001(\005\"Y\n\021RateLimitMetadata\022\r\n\005limit" +
-      "\030\001 \001(\005\022\021\n\tremaining\030\002 \001(\005\022\022\n\nreset_time\030" +
-      "\003 \001(\003\022\016\n\006bucket\030\004 \001(\tB\363\001\n\034com.strongdm.a" +
-      "pi.v1.plumbing\222A\321\001\022u\n\010StrongDM\022\036The infr" +
-      "astructure access API.\"D\n\010StrongDM\022\"http" +
-      "s://www.strongdm.com/docs/api/\032\024support@" +
-      "strongdm.com2\0031.0\032\020api.strongdm.comrF\n!L" +
-      "earn more about the strongDM API\022!https:" +
-      "//www.strongdm.com/docs/apib\006proto3"
+      "gen-swagger/options/annotations.proto\032\037g" +
+      "oogle/protobuf/timestamp.proto\"^\n\022Alread" +
+      "yExistsError\022%\n\006entity\030\001 \001(\tB\025\362\370\263\007\020\242\363\263\007\006" +
+      "Entity\260\363\263\007\001:!\372\370\263\007\034\242\363\263\007\022AlreadyExistsErro" +
+      "r\260\363\263\007\006\"T\n\rNotFoundError\022%\n\006entity\030\001 \001(\tB" +
+      "\025\362\370\263\007\020\242\363\263\007\006Entity\260\363\263\007\001:\034\372\370\263\007\027\242\363\263\007\rNotFou" +
+      "ndError\260\363\263\007\005\"1\n\017BadRequestError:\036\372\370\263\007\031\242\363" +
+      "\263\007\017BadRequestError\260\363\263\007\003\"9\n\023Authenticatio" +
+      "nError:\"\372\370\263\007\035\242\363\263\007\023AuthenticationError\260\363\263" +
+      "\007\020\"1\n\017PermissionError:\036\372\370\263\007\031\242\363\263\007\017Permiss" +
+      "ionError\260\363\263\007\007\"-\n\rInternalError:\034\372\370\263\007\027\242\363\263" +
+      "\007\rInternalError\260\363\263\007\r\"/\n\016RateLimitError:\035" +
+      "\372\370\263\007\030\242\363\263\007\016RateLimitError\260\363\263\007\010\"\027\n\025CreateR" +
+      "equestMetadata\"$\n\026CreateResponseMetadata" +
+      ":\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRequestMetadata\"!\n\023Ge" +
+      "tResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025UpdateR" +
+      "equestMetadata\"$\n\026UpdateResponseMetadata" +
+      ":\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMetadata\"$\n" +
+      "\026DeleteResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"B\n\023L" +
+      "istRequestMetadata\022\016\n\006cursor\030\001 \001(\t\022\014\n\004pa" +
+      "ge\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024ListResponseM" +
+      "etadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 " +
+      "\001(\005\"s\n\021RateLimitMetadata\022\r\n\005limit\030\001 \001(\003\022" +
+      "\021\n\tremaining\030\002 \001(\003\022,\n\010reset_at\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022\016\n\006bucket\030\004 \001(\t" +
+      "B\363\001\n\034com.strongdm.api.v1.plumbing\222A\321\001\022u\n" +
+      "\010StrongDM\022\036The infrastructure access API" +
+      ".\"D\n\010StrongDM\022\"https://www.strongdm.com/" +
+      "docs/api/\032\024support@strongdm.com2\0031.0\032\020ap" +
+      "i.strongdm.comrF\n!Learn more about the s" +
+      "trongDM API\022!https://www.strongdm.com/do" +
+      "cs/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_v1_AlreadyExistsError_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9376,7 +9552,7 @@ public final class Spec {
     internal_static_v1_RateLimitMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RateLimitMetadata_descriptor,
-        new java.lang.String[] { "Limit", "Remaining", "ResetTime", "Bucket", });
+        new java.lang.String[] { "Limit", "Remaining", "ResetAt", "Bucket", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Swagger);
@@ -9386,6 +9562,7 @@ public final class Spec {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

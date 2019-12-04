@@ -1021,6 +1021,33 @@ public final class RolesPlumbing {
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
    * <pre>
@@ -1094,6 +1121,19 @@ public final class RolesPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(role_);
                 role_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1200,6 +1240,41 @@ public final class RolesPlumbing {
       return getRole();
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1220,6 +1295,9 @@ public final class RolesPlumbing {
       if (role_ != null) {
         output.writeMessage(2, getRole());
       }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1236,6 +1314,10 @@ public final class RolesPlumbing {
       if (role_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRole());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1262,6 +1344,11 @@ public final class RolesPlumbing {
         if (!getRole()
             .equals(other.getRole())) return false;
       }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1280,6 +1367,10 @@ public final class RolesPlumbing {
       if (hasRole()) {
         hash = (37 * hash) + ROLE_FIELD_NUMBER;
         hash = (53 * hash) + getRole().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1431,6 +1522,12 @@ public final class RolesPlumbing {
           role_ = null;
           roleBuilder_ = null;
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -1466,6 +1563,11 @@ public final class RolesPlumbing {
           result.role_ = role_;
         } else {
           result.role_ = roleBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1520,6 +1622,9 @@ public final class RolesPlumbing {
         }
         if (other.hasRole()) {
           mergeRole(other.getRole());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1858,6 +1963,161 @@ public final class RolesPlumbing {
           role_ = null;
         }
         return roleBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2839,6 +3099,33 @@ public final class RolesPlumbing {
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
    * <pre>
@@ -2911,6 +3198,19 @@ public final class RolesPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(role_);
                 role_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3017,6 +3317,41 @@ public final class RolesPlumbing {
       return getRole();
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3037,6 +3372,9 @@ public final class RolesPlumbing {
       if (role_ != null) {
         output.writeMessage(2, getRole());
       }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3053,6 +3391,10 @@ public final class RolesPlumbing {
       if (role_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRole());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3079,6 +3421,11 @@ public final class RolesPlumbing {
         if (!getRole()
             .equals(other.getRole())) return false;
       }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3097,6 +3444,10 @@ public final class RolesPlumbing {
       if (hasRole()) {
         hash = (37 * hash) + ROLE_FIELD_NUMBER;
         hash = (53 * hash) + getRole().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3247,6 +3598,12 @@ public final class RolesPlumbing {
           role_ = null;
           roleBuilder_ = null;
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -3282,6 +3639,11 @@ public final class RolesPlumbing {
           result.role_ = role_;
         } else {
           result.role_ = roleBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3336,6 +3698,9 @@ public final class RolesPlumbing {
         }
         if (other.hasRole()) {
           mergeRole(other.getRole());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3674,6 +4039,161 @@ public final class RolesPlumbing {
           role_ = null;
         }
         return roleBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4935,6 +5455,33 @@ public final class RolesPlumbing {
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
    * <pre>
@@ -5008,6 +5555,19 @@ public final class RolesPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(role_);
                 role_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5114,6 +5674,41 @@ public final class RolesPlumbing {
       return getRole();
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * @return The rateLimit.
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5134,6 +5729,9 @@ public final class RolesPlumbing {
       if (role_ != null) {
         output.writeMessage(2, getRole());
       }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5150,6 +5748,10 @@ public final class RolesPlumbing {
       if (role_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRole());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5176,6 +5778,11 @@ public final class RolesPlumbing {
         if (!getRole()
             .equals(other.getRole())) return false;
       }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5194,6 +5801,10 @@ public final class RolesPlumbing {
       if (hasRole()) {
         hash = (37 * hash) + ROLE_FIELD_NUMBER;
         hash = (53 * hash) + getRole().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5345,6 +5956,12 @@ public final class RolesPlumbing {
           role_ = null;
           roleBuilder_ = null;
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -5380,6 +5997,11 @@ public final class RolesPlumbing {
           result.role_ = role_;
         } else {
           result.role_ = roleBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5434,6 +6056,9 @@ public final class RolesPlumbing {
         }
         if (other.hasRole()) {
           mergeRole(other.getRole());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5772,6 +6397,161 @@ public final class RolesPlumbing {
           role_ = null;
         }
         return roleBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6726,6 +7506,33 @@ public final class RolesPlumbing {
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
    * <pre>
@@ -6785,6 +7592,19 @@ public final class RolesPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(meta_);
                 meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6856,6 +7676,41 @@ public final class RolesPlumbing {
       return getMeta();
     }
 
+    public static final int RATE_LIMIT_FIELD_NUMBER = 2;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * @return Whether the rateLimit field is set.
+     */
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * @return The rateLimit.
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     */
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6873,6 +7728,9 @@ public final class RolesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
+      if (rateLimit_ != null) {
+        output.writeMessage(2, getRateLimit());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6885,6 +7743,10 @@ public final class RolesPlumbing {
       if (meta_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6906,6 +7768,11 @@ public final class RolesPlumbing {
         if (!getMeta()
             .equals(other.getMeta())) return false;
       }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6920,6 +7787,10 @@ public final class RolesPlumbing {
       if (hasMeta()) {
         hash = (37 * hash) + META_FIELD_NUMBER;
         hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7064,6 +7935,12 @@ public final class RolesPlumbing {
           meta_ = null;
           metaBuilder_ = null;
         }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -7094,6 +7971,11 @@ public final class RolesPlumbing {
           result.meta_ = meta_;
         } else {
           result.meta_ = metaBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7145,6 +8027,9 @@ public final class RolesPlumbing {
         if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.getDefaultInstance()) return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7328,6 +8213,161 @@ public final class RolesPlumbing {
           meta_ = null;
         }
         return metaBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8329,7 +9369,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * Rate limit information for the token/org.
+     * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -8338,7 +9378,7 @@ public final class RolesPlumbing {
     boolean hasRateLimit();
     /**
      * <pre>
-     * Rate limit information for the token/org.
+     * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -8347,7 +9387,7 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
     /**
      * <pre>
-     * Rate limit information for the token/org.
+     * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -8570,7 +9610,7 @@ public final class RolesPlumbing {
     private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
     /**
      * <pre>
-     * Rate limit information for the token/org.
+     * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -8581,7 +9621,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Rate limit information for the token/org.
+     * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -8592,7 +9632,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * Rate limit information for the token/org.
+     * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9480,7 +10520,7 @@ public final class RolesPlumbing {
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9491,7 +10531,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9506,7 +10546,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9526,7 +10566,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9544,7 +10584,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9566,7 +10606,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9584,7 +10624,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9596,7 +10636,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -9611,7 +10651,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * Rate limit information for the token/org.
+       * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
@@ -10638,51 +11678,55 @@ public final class RolesPlumbing {
       "tations.proto\032\roptions.proto\032\nspec.proto" +
       "\"`\n\021RoleCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
       ".CreateRequestMetadata\022\"\n\004role\030\002 \001(\0132\010.v" +
-      "1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"z\n\022RoleCreateResponse" +
-      "\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetada" +
-      "taB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n" +
-      "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016RoleGetRequest" +
-      "\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026" +
-      "\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"t\n\017RoleGetRespons" +
-      "e\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadata" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021RoleUpdateReques" +
-      "t\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetada" +
-      "ta\022\n\n\002id\030\002 \001(\t\022\"\n\004role\030\003 \001(\0132\010.v1.RoleB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\"z\n\022RoleUpdateResponse\0224\n\004meta" +
-      "\030\001 \001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDeleteRequest\022\'\n\004m" +
-      "eta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002" +
-      "id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"V\n\022RoleDeleteRespon" +
-      "se\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMeta" +
-      "dataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleList" +
-      "Request\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMe" +
-      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\212\001\n\020R" +
-      "oleListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
-      "esponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.Role" +
-      "B\n\362\370\263\007\005\270\363\263\007\001\022)\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
-      "teLimitMetadata\"\346\001\n\004Role\022\035\n\002id\030\001 \001(\tB\021\362\370" +
-      "\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007" +
-      "\004Name\260\363\263\007\001\022+\n\tcomposite\030\003 \001(\010B\030\362\370\263\007\023\242\363\263\007" +
-      "\tComposite\260\363\263\007\001:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A Role" +
-      ".\022/https://www.strongdm.com/docs/api/ent" +
-      "ities#Role2$\022\"{ \"id\": \"7\", \"name\": \"happ" +
-      "y-goat\"}2\362\003\n\005Roles\022\245\001\n\006Create\022\025.v1.RoleC" +
-      "reateRequest\032\026.v1.RoleCreateResponse\"l\202\323" +
-      "\344\223\002\016\"\t/v1/roles:\001*\222AU\"S\n\030Learn how to ma" +
-      "ke a Role\0227https://www.strongdm.com/docs" +
-      "/api/services/Roles#Create\022F\n\003Get\022\022.v1.R" +
-      "oleGetRequest\032\023.v1.RoleGetResponse\"\026\202\323\344\223" +
-      "\002\020\022\016/v1/roles/{id}\022R\n\006Update\022\025.v1.RoleUp" +
-      "dateRequest\032\026.v1.RoleUpdateResponse\"\031\202\323\344" +
-      "\223\002\023\032\016/v1/roles/{id}:\001*\022O\n\006Delete\022\025.v1.Ro" +
-      "leDeleteRequest\032\026.v1.RoleDeleteResponse\"" +
-      "\026\202\323\344\223\002\020*\016/v1/roles/{id}\022D\n\004List\022\023.v1.Rol" +
-      "eListRequest\032\024.v1.RoleListResponse\"\021\202\323\344\223" +
-      "\002\013\022\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com.str" +
-      "ongdm.api.v1.plumbingB\rRolesPlumbingb\006pr" +
-      "oto3"
+      "1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\245\001\n\022RoleCreateRespons" +
+      "e\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetad" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022)\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
+      "eLimitMetadata:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016RoleGetReq" +
+      "uest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetada" +
+      "ta\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\237\001\n\017RoleGetRe" +
+      "sponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMet" +
+      "adataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.Rol" +
+      "eB\n\362\370\263\007\005\260\363\263\007\001\022)\n\nrate_limit\030\003 \001(\0132\025.v1.R" +
+      "ateLimitMetadata:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021RoleUpda" +
+      "teRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateReque" +
+      "stMetadata\022\n\n\002id\030\002 \001(\t\022\"\n\004role\030\003 \001(\0132\010.v" +
+      "1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\245\001\n\022RoleUpdateRespons" +
+      "e\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateResponseMetad" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022)\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
+      "eLimitMetadata:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDelete" +
+      "Request\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequest" +
+      "Metadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\201\001\n\022Rol" +
+      "eDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delet" +
+      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022)\n\nrate_li" +
+      "mit\030\002 \001(\0132\025.v1.RateLimitMetadata:\n\372\370\263\007\005\250" +
+      "\363\263\007\001\"T\n\017RoleListRequest\022%\n\004meta\030\001 \001(\0132\027." +
+      "v1.ListRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\"\212\001\n\020RoleListResponse\022&\n\004meta\030" +
+      "\001 \001(\0132\030.v1.ListResponseMetadata\022#\n\005roles" +
+      "\030\002 \003(\0132\010.v1.RoleB\n\362\370\263\007\005\270\363\263\007\001\022)\n\nrate_lim" +
+      "it\030\003 \001(\0132\025.v1.RateLimitMetadata\"\346\001\n\004Role" +
+      "\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030" +
+      "\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\022+\n\tcomposite\030" +
+      "\003 \001(\010B\030\362\370\263\007\023\242\363\263\007\tComposite\260\363\263\007\001:o\372\370\263\007\005\250\363" +
+      "\263\007\001\222Ab*:\n\007A Role.\022/https://www.strongdm." +
+      "com/docs/api/entities#Role2$\022\"{ \"id\": \"7" +
+      "\", \"name\": \"happy-goat\"}2\362\003\n\005Roles\022\245\001\n\006C" +
+      "reate\022\025.v1.RoleCreateRequest\032\026.v1.RoleCr" +
+      "eateResponse\"l\202\323\344\223\002\016\"\t/v1/roles:\001*\222AU\"S\n" +
+      "\030Learn how to make a Role\0227https://www.s" +
+      "trongdm.com/docs/api/services/Roles#Crea" +
+      "te\022F\n\003Get\022\022.v1.RoleGetRequest\032\023.v1.RoleG" +
+      "etResponse\"\026\202\323\344\223\002\020\022\016/v1/roles/{id}\022R\n\006Up" +
+      "date\022\025.v1.RoleUpdateRequest\032\026.v1.RoleUpd" +
+      "ateResponse\"\031\202\323\344\223\002\023\032\016/v1/roles/{id}:\001*\022O" +
+      "\n\006Delete\022\025.v1.RoleDeleteRequest\032\026.v1.Rol" +
+      "eDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/roles/{id}\022" +
+      "D\n\004List\022\023.v1.RoleListRequest\032\024.v1.RoleLi" +
+      "stResponse\"\021\202\323\344\223\002\013\022\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007" +
+      "\004RoleB-\n\034com.strongdm.api.v1.plumbingB\rR" +
+      "olesPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10703,7 +11747,7 @@ public final class RolesPlumbing {
     internal_static_v1_RoleCreateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RoleCreateResponse_descriptor,
-        new java.lang.String[] { "Meta", "Role", });
+        new java.lang.String[] { "Meta", "Role", "RateLimit", });
     internal_static_v1_RoleGetRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_RoleGetRequest_fieldAccessorTable = new
@@ -10715,7 +11759,7 @@ public final class RolesPlumbing {
     internal_static_v1_RoleGetResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RoleGetResponse_descriptor,
-        new java.lang.String[] { "Meta", "Role", });
+        new java.lang.String[] { "Meta", "Role", "RateLimit", });
     internal_static_v1_RoleUpdateRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_RoleUpdateRequest_fieldAccessorTable = new
@@ -10727,7 +11771,7 @@ public final class RolesPlumbing {
     internal_static_v1_RoleUpdateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RoleUpdateResponse_descriptor,
-        new java.lang.String[] { "Meta", "Role", });
+        new java.lang.String[] { "Meta", "Role", "RateLimit", });
     internal_static_v1_RoleDeleteRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_v1_RoleDeleteRequest_fieldAccessorTable = new
@@ -10739,7 +11783,7 @@ public final class RolesPlumbing {
     internal_static_v1_RoleDeleteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RoleDeleteResponse_descriptor,
-        new java.lang.String[] { "Meta", });
+        new java.lang.String[] { "Meta", "RateLimit", });
     internal_static_v1_RoleListRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_v1_RoleListRequest_fieldAccessorTable = new
