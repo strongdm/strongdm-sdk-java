@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import java.util.Collection;
 import com.google.rpc.Code;
 import com.google.protobuf.Timestamp;
+import java.util.Date;
 
 import com.strongdm.api.v1.plumbing.Spec.*;
 
@@ -14,12 +15,14 @@ import com.strongdm.api.v1.plumbing.RolesPlumbing.*;
 
 public class Plumbing {
 
-    public static Timestamp timestampToPlumbing(Timestamp t) {
-        return t;
+    public static Timestamp timestampToPlumbing(Date t) {
+        long ms = t.getTime();
+        return Timestamp.newBuilder().setSeconds(ms / 1000)
+            .setNanos((int) ((ms % 1000) * 1000000)).build();
     }
 
-    public static Timestamp timestampToPorcelain(Timestamp t) {
-        return t;
+    public static Date timestampToPorcelain(Timestamp t) {
+        return new Date(t.getSeconds() * 1000 + t.getNanos() / 1000000);
     }
 
     public static com.strongdm.api.v1.CreateResponseMetadata createResponseMetadataToPorcelain(CreateResponseMetadata plumbing) {

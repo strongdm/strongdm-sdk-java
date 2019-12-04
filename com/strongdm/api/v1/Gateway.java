@@ -3,7 +3,7 @@ package com.strongdm.api.v1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
-import com.google.protobuf.Timestamp;
+import java.util.Date;
 
 // Gateway represents a StrongDM CLI installation running in gateway mode.
 public class Gateway implements Node {
