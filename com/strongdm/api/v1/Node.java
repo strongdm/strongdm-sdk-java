@@ -3,6 +3,7 @@ package com.strongdm.api.v1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import com.google.protobuf.Timestamp;
 
 // A Node is a proxy in the strongDM network. They come in two flavors: relays,
 // which communicate with resources, and gateways, which communicate with

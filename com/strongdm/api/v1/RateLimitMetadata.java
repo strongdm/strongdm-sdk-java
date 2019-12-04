@@ -3,6 +3,7 @@ package com.strongdm.api.v1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import com.google.protobuf.Timestamp;
 
 // RateLimitMetadata contains information about remaining requests avaialable
 // to the user over some timeframe.
@@ -29,13 +30,13 @@ public class RateLimitMetadata {
         this.remaining = in;
         return this;
     }
-    private google.protobuf.Timestamp resetAt;
+    private Timestamp resetAt;
     // The time when remaining will be reset to limit.
-    public google.protobuf.Timestamp getResetAt() {
+    public Timestamp getResetAt() {
         return this.resetAt;
     }
     // The time when remaining will be reset to limit.
-    public RateLimitMetadata setResetAt(google.protobuf.Timestamp in) {
+    public RateLimitMetadata setResetAt(Timestamp in) {
         this.resetAt = in;
         return this;
     }

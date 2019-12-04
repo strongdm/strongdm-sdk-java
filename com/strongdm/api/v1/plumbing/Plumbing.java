@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Collection;
 import com.google.rpc.Code;
+import com.google.protobuf.Timestamp;
 
 import com.strongdm.api.v1.plumbing.Spec.*;
 
@@ -12,6 +13,14 @@ import com.strongdm.api.v1.plumbing.NodesPlumbing.*;
 import com.strongdm.api.v1.plumbing.RolesPlumbing.*;
 
 public class Plumbing {
+
+    public static Timestamp timestampToPlumbing(Timestamp t) {
+        return t;
+    }
+
+    public static Timestamp timestampToPorcelain(Timestamp t) {
+        return t;
+    }
 
     public static com.strongdm.api.v1.CreateResponseMetadata createResponseMetadataToPorcelain(CreateResponseMetadata plumbing) {
         com.strongdm.api.v1.CreateResponseMetadata porcelain = new com.strongdm.api.v1.CreateResponseMetadata();
@@ -117,7 +126,7 @@ public class Plumbing {
         com.strongdm.api.v1.RateLimitMetadata porcelain = new com.strongdm.api.v1.RateLimitMetadata();
         porcelain.setLimit(plumbing.getLimit());
         porcelain.setRemaining(plumbing.getRemaining());
-        porcelain.setResetAt(Plumbing.timestampTimestampToPorcelain(plumbing.getResetAt()));
+        porcelain.setResetAt(Plumbing.timestampToPorcelain(plumbing.getResetAt()));
         porcelain.setBucket(plumbing.getBucket());
         return porcelain;
     }
@@ -130,7 +139,7 @@ public class Plumbing {
         builder.setLimit(porcelain.getLimit());
         builder.setRemaining(porcelain.getRemaining());
         if (porcelain.getResetAt() != null) {
-            builder.setResetAt(Plumbing.timestampTimestampToPlumbing(porcelain.getResetAt()));
+            builder.setResetAt(Plumbing.timestampToPlumbing(porcelain.getResetAt()));
         }
         if (porcelain.getBucket() != null) {
             builder.setBucket(porcelain.getBucket());

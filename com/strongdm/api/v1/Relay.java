@@ -3,6 +3,7 @@ package com.strongdm.api.v1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import com.google.protobuf.Timestamp;
 
 // Relay represents a StrongDM CLI installation running in relay mode.
 public class Relay implements Node {

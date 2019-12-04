@@ -3,6 +3,7 @@ package com.strongdm.api.v1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import com.google.protobuf.Timestamp;
 
 // NodeCreateResponse reports how the Nodes were created in the system.
 public class NodeCreateResponse {

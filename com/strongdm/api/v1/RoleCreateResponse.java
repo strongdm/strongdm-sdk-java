@@ -3,6 +3,7 @@ package com.strongdm.api.v1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import com.google.protobuf.Timestamp;
 
 // RoleCreateResponse reports how the Roles were created in the system. It can
 // communicate partial successes or failures.

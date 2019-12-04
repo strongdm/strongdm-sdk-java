@@ -3,6 +3,7 @@ package com.strongdm.api.v1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
+import com.google.protobuf.Timestamp;
 
 // A Role grants users access to a set of resources. Composite roles have no
 // resource associations of their own, but instead grant access to the combined
