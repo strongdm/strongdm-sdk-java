@@ -27,4 +27,14 @@ public class RoleCreateResponse {
         this.role = in;
         return this;
     }
+    private RateLimitMetadata rateLimit;
+    // Rate limit information.
+    public RateLimitMetadata getRateLimit() {
+        return this.rateLimit;
+    }
+    // Rate limit information.
+    public RoleCreateResponse setRateLimit(RateLimitMetadata in) {
+        this.rateLimit = in;
+        return this;
+    }
 }

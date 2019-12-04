@@ -113,11 +113,37 @@ public class Plumbing {
             .collect(Collectors.toList());
     }
 
+    public static com.strongdm.api.v1.RateLimitMetadata rateLimitMetadataToPorcelain(RateLimitMetadata plumbing) {
+        com.strongdm.api.v1.RateLimitMetadata porcelain = new com.strongdm.api.v1.RateLimitMetadata();
+        return porcelain;
+    }
+
+    public static RateLimitMetadata rateLimitMetadataToPlumbing(com.strongdm.api.v1.RateLimitMetadata porcelain) {
+        if (porcelain == null) {
+            return null;
+        }
+        RateLimitMetadata.Builder builder = RateLimitMetadata.newBuilder();
+        return builder.build();
+    }
+
+    public static List<com.strongdm.api.v1.RateLimitMetadata> repeatedRateLimitMetadataToPorcelain(Collection<RateLimitMetadata> plumbings) {
+        return plumbings.stream()
+            .map(plumbing -> rateLimitMetadataToPorcelain(plumbing))
+            .collect(Collectors.toList());
+    }
+
+    public static List<RateLimitMetadata> repeatedRateLimitMetadataToPlumbing(Collection<com.strongdm.api.v1.RateLimitMetadata> porcelains) {
+        return porcelains.stream()
+            .map(porcelain -> rateLimitMetadataToPlumbing(porcelain))
+            .collect(Collectors.toList());
+    }
+
     public static com.strongdm.api.v1.NodeCreateResponse nodeCreateResponseToPorcelain(NodeCreateResponse plumbing) {
         com.strongdm.api.v1.NodeCreateResponse porcelain = new com.strongdm.api.v1.NodeCreateResponse();
         porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
         porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
         porcelain.setToken(plumbing.getToken());
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -134,6 +160,9 @@ public class Plumbing {
         }
         if (porcelain.getToken() != null) {
             builder.setToken(porcelain.getToken());
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }
@@ -154,6 +183,7 @@ public class Plumbing {
         com.strongdm.api.v1.NodeGetResponse porcelain = new com.strongdm.api.v1.NodeGetResponse();
         porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
         porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -167,6 +197,9 @@ public class Plumbing {
         }
         if (porcelain.getNode() != null) {
             builder.setNode(Plumbing.nodeToPlumbing(porcelain.getNode()));
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }
@@ -187,6 +220,7 @@ public class Plumbing {
         com.strongdm.api.v1.NodeUpdateResponse porcelain = new com.strongdm.api.v1.NodeUpdateResponse();
         porcelain.setMeta(Plumbing.updateResponseMetadataToPorcelain(plumbing.getMeta()));
         porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -200,6 +234,9 @@ public class Plumbing {
         }
         if (porcelain.getNode() != null) {
             builder.setNode(Plumbing.nodeToPlumbing(porcelain.getNode()));
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }
@@ -219,6 +256,7 @@ public class Plumbing {
     public static com.strongdm.api.v1.NodeDeleteResponse nodeDeleteResponseToPorcelain(NodeDeleteResponse plumbing) {
         com.strongdm.api.v1.NodeDeleteResponse porcelain = new com.strongdm.api.v1.NodeDeleteResponse();
         porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -229,6 +267,9 @@ public class Plumbing {
         NodeDeleteResponse.Builder builder = NodeDeleteResponse.newBuilder();
         if (porcelain.getMeta() != null) {
             builder.setMeta(Plumbing.deleteResponseMetadataToPlumbing(porcelain.getMeta()));
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }
@@ -373,6 +414,7 @@ public class Plumbing {
         com.strongdm.api.v1.RoleCreateResponse porcelain = new com.strongdm.api.v1.RoleCreateResponse();
         porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
         porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -386,6 +428,9 @@ public class Plumbing {
         }
         if (porcelain.getRole() != null) {
             builder.setRole(Plumbing.roleToPlumbing(porcelain.getRole()));
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }
@@ -406,6 +451,7 @@ public class Plumbing {
         com.strongdm.api.v1.RoleGetResponse porcelain = new com.strongdm.api.v1.RoleGetResponse();
         porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
         porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -419,6 +465,9 @@ public class Plumbing {
         }
         if (porcelain.getRole() != null) {
             builder.setRole(Plumbing.roleToPlumbing(porcelain.getRole()));
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }
@@ -439,6 +488,7 @@ public class Plumbing {
         com.strongdm.api.v1.RoleUpdateResponse porcelain = new com.strongdm.api.v1.RoleUpdateResponse();
         porcelain.setMeta(Plumbing.updateResponseMetadataToPorcelain(plumbing.getMeta()));
         porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -452,6 +502,9 @@ public class Plumbing {
         }
         if (porcelain.getRole() != null) {
             builder.setRole(Plumbing.roleToPlumbing(porcelain.getRole()));
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }
@@ -471,6 +524,7 @@ public class Plumbing {
     public static com.strongdm.api.v1.RoleDeleteResponse roleDeleteResponseToPorcelain(RoleDeleteResponse plumbing) {
         com.strongdm.api.v1.RoleDeleteResponse porcelain = new com.strongdm.api.v1.RoleDeleteResponse();
         porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
+        porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
         return porcelain;
     }
 
@@ -481,6 +535,9 @@ public class Plumbing {
         RoleDeleteResponse.Builder builder = RoleDeleteResponse.newBuilder();
         if (porcelain.getMeta() != null) {
             builder.setMeta(Plumbing.deleteResponseMetadataToPlumbing(porcelain.getMeta()));
+        }
+        if (porcelain.getRateLimit() != null) {
+            builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
         }
         return builder.build();
     }

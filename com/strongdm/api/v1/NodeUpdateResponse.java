@@ -27,4 +27,14 @@ public class NodeUpdateResponse {
         this.node = in;
         return this;
     }
+    private RateLimitMetadata rateLimit;
+    // Rate limit information.
+    public RateLimitMetadata getRateLimit() {
+        return this.rateLimit;
+    }
+    // Rate limit information.
+    public NodeUpdateResponse setRateLimit(RateLimitMetadata in) {
+        this.rateLimit = in;
+        return this;
+    }
 }

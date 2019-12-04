@@ -9427,16 +9427,16 @@ public final class Spec {
       "istRequestMetadata\022\016\n\006cursor\030\001 \001(\t\022\014\n\004pa" +
       "ge\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024ListResponseM" +
       "etadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 " +
-      "\001(\005\"s\n\021RateLimitMetadata\022\r\n\005limit\030\001 \001(\003\022" +
+      "\001(\005\"\177\n\021RateLimitMetadata\022\r\n\005limit\030\001 \001(\003\022" +
       "\021\n\tremaining\030\002 \001(\003\022,\n\010reset_at\030\003 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022\016\n\006bucket\030\004 \001(\t" +
-      "B\363\001\n\034com.strongdm.api.v1.plumbing\222A\321\001\022u\n" +
-      "\010StrongDM\022\036The infrastructure access API" +
-      ".\"D\n\010StrongDM\022\"https://www.strongdm.com/" +
-      "docs/api/\032\024support@strongdm.com2\0031.0\032\020ap" +
-      "i.strongdm.comrF\n!Learn more about the s" +
-      "trongDM API\022!https://www.strongdm.com/do" +
-      "cs/apib\006proto3"
+      ":\n\372\370\263\007\005\250\363\263\007\001B\363\001\n\034com.strongdm.api.v1.plu" +
+      "mbing\222A\321\001\022u\n\010StrongDM\022\036The infrastructur" +
+      "e access API.\"D\n\010StrongDM\022\"https://www.s" +
+      "trongdm.com/docs/api/\032\024support@strongdm." +
+      "com2\0031.0\032\020api.strongdm.comrF\n!Learn more" +
+      " about the strongDM API\022!https://www.str" +
+      "ongdm.com/docs/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

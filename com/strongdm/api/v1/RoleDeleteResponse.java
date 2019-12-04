@@ -16,4 +16,14 @@ public class RoleDeleteResponse {
         this.meta = in;
         return this;
     }
+    private RateLimitMetadata rateLimit;
+    // Rate limit information.
+    public RateLimitMetadata getRateLimit() {
+        return this.rateLimit;
+    }
+    // Rate limit information.
+    public RoleDeleteResponse setRateLimit(RateLimitMetadata in) {
+        this.rateLimit = in;
+        return this;
+    }
 }

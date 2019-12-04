@@ -1047,7 +1047,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
@@ -1056,7 +1056,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
@@ -1065,7 +1065,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
@@ -1319,7 +1319,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
@@ -1330,7 +1330,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -1341,7 +1341,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
@@ -2162,7 +2162,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
@@ -2173,7 +2173,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -2188,7 +2188,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -2208,7 +2208,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
@@ -2226,7 +2226,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -2248,7 +2248,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearRateLimit() {
         if (rateLimitBuilder_ == null) {
@@ -2266,7 +2266,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
         
@@ -2278,7 +2278,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
         if (rateLimitBuilder_ != null) {
@@ -2293,7 +2293,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 4;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
@@ -3294,7 +3294,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
@@ -3303,7 +3303,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
@@ -3312,7 +3312,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
@@ -3513,7 +3513,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
@@ -3524,7 +3524,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -3535,7 +3535,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
@@ -4238,7 +4238,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
@@ -4249,7 +4249,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -4264,7 +4264,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -4284,7 +4284,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
@@ -4302,7 +4302,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -4324,7 +4324,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearRateLimit() {
         if (rateLimitBuilder_ == null) {
@@ -4342,7 +4342,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
         
@@ -4354,7 +4354,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
         if (rateLimitBuilder_ != null) {
@@ -4369,7 +4369,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
@@ -5650,7 +5650,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
@@ -5659,7 +5659,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
@@ -5668,7 +5668,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
@@ -5870,7 +5870,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
@@ -5881,7 +5881,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -5892,7 +5892,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
@@ -6596,7 +6596,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
@@ -6607,7 +6607,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -6622,7 +6622,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -6642,7 +6642,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
@@ -6660,7 +6660,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -6682,7 +6682,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearRateLimit() {
         if (rateLimitBuilder_ == null) {
@@ -6700,7 +6700,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
         
@@ -6712,7 +6712,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
         if (rateLimitBuilder_ != null) {
@@ -6727,7 +6727,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
@@ -7701,7 +7701,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
@@ -7710,7 +7710,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
@@ -7719,7 +7719,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
@@ -7872,7 +7872,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
@@ -7883,7 +7883,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -7894,7 +7894,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
@@ -8412,7 +8412,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
@@ -8423,7 +8423,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -8438,7 +8438,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -8458,7 +8458,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
@@ -8476,7 +8476,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -8498,7 +8498,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearRateLimit() {
         if (rateLimitBuilder_ == null) {
@@ -8516,7 +8516,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
         
@@ -8528,7 +8528,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
         if (rateLimitBuilder_ != null) {
@@ -8543,7 +8543,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 2;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
@@ -9561,7 +9561,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
@@ -9570,7 +9570,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
@@ -9579,7 +9579,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
@@ -9802,7 +9802,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
@@ -9813,7 +9813,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -9824,7 +9824,7 @@ public final class NodesPlumbing {
      * Rate limit information.
      * </pre>
      *
-     * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
@@ -10712,7 +10712,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
@@ -10723,7 +10723,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
@@ -10738,7 +10738,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -10758,7 +10758,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setRateLimit(
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
@@ -10776,7 +10776,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
         if (rateLimitBuilder_ == null) {
@@ -10798,7 +10798,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearRateLimit() {
         if (rateLimitBuilder_ == null) {
@@ -10816,7 +10816,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
         
@@ -10828,7 +10828,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
         if (rateLimitBuilder_ != null) {
@@ -10843,7 +10843,7 @@ public final class NodesPlumbing {
        * Rate limit information.
        * </pre>
        *
-       * <code>.v1.RateLimitMetadata rate_limit = 3;</code>
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
@@ -14279,65 +14279,66 @@ public final class NodesPlumbing {
       "tations.proto\032\roptions.proto\032\nspec.proto" +
       "\"`\n\021NodeCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
       ".CreateRequestMetadata\022\"\n\004node\030\002 \001(\0132\010.v" +
-      "1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\300\001\n\022NodeCreateRespons" +
+      "1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\314\001\n\022NodeCreateRespons" +
       "e\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetad" +
       "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005token\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005token\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0225" +
       "\n\nrate_limit\030\004 \001(\0132\025.v1.RateLimitMetadat" +
-      "a:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016NodeGetRequest\022$\n\004meta\030" +
-      "\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\"\237\001\n\017NodeGetResponse\0221\n\004met" +
-      "a\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022)\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
-      "ata:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021NodeUpdateRequest\022\'\n\004" +
-      "meta\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n" +
-      "\002id\030\002 \001(\t\022\"\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\"\245\001\n\022NodeUpdateResponse\0224\n\004meta\030\001 \001" +
-      "(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022)" +
-      "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat" +
-      "a:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteRequest\022\'\n\004me" +
-      "ta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002i" +
-      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\201\001\n\022NodeDeleteRespon" +
-      "se\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMeta" +
-      "dataB\n\362\370\263\007\005\260\363\263\007\001\022)\n\nrate_limit\030\002 \001(\0132\025.v" +
-      "1.RateLimitMetadata:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeL" +
-      "istRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListReques" +
-      "tMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\212\001" +
-      "\n\020NodeListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Li" +
-      "stResponseMetadata\022#\n\005nodes\030\002 \003(\0132\010.v1.N" +
-      "odeB\n\362\370\263\007\005\270\363\263\007\001\022)\n\nrate_limit\030\003 \001(\0132\025.v1" +
-      ".RateLimitMetadata\"\313\001\n\004Node\022\032\n\005relay\030\001 \001" +
-      "(\0132\t.v1.RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v1.Ga" +
-      "tewayH\000:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A node.\022/https" +
-      "://www.strongdm.com/docs/api/entities#No" +
-      "de2$\022\"{ \"id\": \"7\", \"name\": \"happy-goat\"}" +
-      "B\026\n\004node\022\016\252\370\263\007\t\242\370\263\007\004Node\"\210\001\n\005Relay\022\035\n\002id" +
-      "\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB" +
-      "\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263" +
-      "\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363" +
-      "\263\007\001\"\366\001\n\007Gateway\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002I" +
-      "D\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007" +
-      "\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A" +
-      "\002@\001\0226\n\016listen_address\030\004 \001(\tB\036\362\370\263\007\031\242\363\263\007\nL" +
-      "istenAddr\250\363\263\007\001\260\363\263\007\001\0222\n\014bind_address\030\005 \001(" +
-      "\tB\034\362\370\263\007\027\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363" +
-      "\263\007\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Create\022\025.v1.N" +
-      "odeCreateRequest\032\026.v1.NodeCreateResponse" +
-      "\"l\202\323\344\223\002\016\"\t/v1/nodes:\001*\222AU\"S\n\030Learn how t" +
-      "o make a Node\0227https://www.strongdm.com/" +
-      "docs/api/services/Nodes#Create\022F\n\003Get\022\022." +
-      "v1.NodeGetRequest\032\023.v1.NodeGetResponse\"\026" +
-      "\202\323\344\223\002\020\022\016/v1/nodes/{id}\022R\n\006Update\022\025.v1.No" +
-      "deUpdateRequest\032\026.v1.NodeUpdateResponse\"" +
-      "\031\202\323\344\223\002\023\032\016/v1/nodes/{id}:\001*\022O\n\006Delete\022\025.v" +
-      "1.NodeDeleteRequest\032\026.v1.NodeDeleteRespo" +
-      "nse\"\026\202\323\344\223\002\020*\016/v1/nodes/{id}\022D\n\004List\022\023.v1" +
-      ".NodeListRequest\032\024.v1.NodeListResponse\"\021" +
-      "\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004NodeB-\n\034com" +
-      ".strongdm.api.v1.plumbingB\rNodesPlumbing" +
-      "b\006proto3"
+      "aB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016NodeGetRequ" +
+      "est\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadat" +
+      "a\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\253\001\n\017NodeGetRes" +
+      "ponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMeta" +
+      "dataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.Node" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"" +
+      "l\n\021NodeUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1." +
+      "UpdateRequestMetadata\022\n\n\002id\030\002 \001(\t\022\"\n\004nod" +
+      "e\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\261\001\n\022NodeUp" +
+      "dateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateRe" +
+      "sponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\013" +
+      "2\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001" +
+      "(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteRequest\022\'\n\004meta\030\001" +
+      " \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\215\001\n\022NodeDeleteResponse\0224" +
+      "\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadata" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"" +
+      "T\n\017NodeListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.Li" +
+      "stRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\"\226\001\n\020NodeListResponse\022&\n\004meta\030\001 \001(\013" +
+      "2\030.v1.ListResponseMetadata\022#\n\005nodes\030\002 \003(" +
+      "\0132\010.v1.NodeB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 " +
+      "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\313" +
+      "\001\n\004Node\022\032\n\005relay\030\001 \001(\0132\t.v1.RelayH\000\022\036\n\007g" +
+      "ateway\030\002 \001(\0132\013.v1.GatewayH\000:o\372\370\263\007\005\250\363\263\007\001\222" +
+      "Ab*:\n\007A node.\022/https://www.strongdm.com/" +
+      "docs/api/entities#Node2$\022\"{ \"id\": \"7\", \"" +
+      "name\": \"happy-goat\"}B\026\n\004node\022\016\252\370\263\007\t\242\370\263\007\004" +
+      "Node\"\210\001\n\005Relay\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID" +
+      "\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001" +
+      "\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002" +
+      "@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\366\001\n\007Gateway\022\035\n\002i" +
+      "d\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\t" +
+      "B\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370" +
+      "\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002@\001\0226\n\016listen_addres" +
+      "s\030\004 \001(\tB\036\362\370\263\007\031\242\363\263\007\nListenAddr\250\363\263\007\001\260\363\263\007\001\022" +
+      "2\n\014bind_address\030\005 \001(\tB\034\362\370\263\007\027\242\363\263\007\010BindAdd" +
+      "r\250\363\263\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005Nod" +
+      "es\022\245\001\n\006Create\022\025.v1.NodeCreateRequest\032\026.v" +
+      "1.NodeCreateResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:" +
+      "\001*\222AU\"S\n\030Learn how to make a Node\0227https" +
+      "://www.strongdm.com/docs/api/services/No" +
+      "des#Create\022F\n\003Get\022\022.v1.NodeGetRequest\032\023." +
+      "v1.NodeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/nodes/{i" +
+      "d}\022R\n\006Update\022\025.v1.NodeUpdateRequest\032\026.v1" +
+      ".NodeUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{" +
+      "id}:\001*\022O\n\006Delete\022\025.v1.NodeDeleteRequest\032" +
+      "\026.v1.NodeDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/nod" +
+      "es/{id}\022D\n\004List\022\023.v1.NodeListRequest\032\024.v" +
+      "1.NodeListResponse\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312" +
+      "\371\263\007\t\302\371\263\007\004NodeB-\n\034com.strongdm.api.v1.plu" +
+      "mbingB\rNodesPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
