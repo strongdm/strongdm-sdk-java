@@ -115,6 +115,10 @@ public class Plumbing {
 
     public static com.strongdm.api.v1.RateLimitMetadata rateLimitMetadataToPorcelain(RateLimitMetadata plumbing) {
         com.strongdm.api.v1.RateLimitMetadata porcelain = new com.strongdm.api.v1.RateLimitMetadata();
+        porcelain.setLimit(plumbing.getLimit());
+        porcelain.setRemaining(plumbing.getRemaining());
+        porcelain.setResetAt(Plumbing.timestampTimestampToPorcelain(plumbing.getResetAt()));
+        porcelain.setBucket(plumbing.getBucket());
         return porcelain;
     }
 
@@ -123,6 +127,14 @@ public class Plumbing {
             return null;
         }
         RateLimitMetadata.Builder builder = RateLimitMetadata.newBuilder();
+        builder.setLimit(porcelain.getLimit());
+        builder.setRemaining(porcelain.getRemaining());
+        if (porcelain.getResetAt() != null) {
+            builder.setResetAt(Plumbing.timestampTimestampToPlumbing(porcelain.getResetAt()));
+        }
+        if (porcelain.getBucket() != null) {
+            builder.setBucket(porcelain.getBucket());
+        }
         return builder.build();
     }
 

@@ -8251,7 +8251,7 @@ public final class Spec {
      * rate limited.
      * </pre>
      *
-     * <code>int64 limit = 1;</code>
+     * <code>int64 limit = 1 [(.v1.field_options) = { ... }</code>
      * @return The limit.
      */
     long getLimit();
@@ -8261,7 +8261,7 @@ public final class Spec {
      * How many remaining requests out of the limit are still avaialable.
      * </pre>
      *
-     * <code>int64 remaining = 2;</code>
+     * <code>int64 remaining = 2 [(.v1.field_options) = { ... }</code>
      * @return The remaining.
      */
     long getRemaining();
@@ -8271,7 +8271,7 @@ public final class Spec {
      * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the resetAt field is set.
      */
     boolean hasResetAt();
@@ -8280,7 +8280,7 @@ public final class Spec {
      * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      * @return The resetAt.
      */
     com.google.protobuf.Timestamp getResetAt();
@@ -8289,7 +8289,7 @@ public final class Spec {
      * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getResetAtOrBuilder();
 
@@ -8299,7 +8299,7 @@ public final class Spec {
      * multiple users/tokens. 
      * </pre>
      *
-     * <code>string bucket = 4;</code>
+     * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
      * @return The bucket.
      */
     java.lang.String getBucket();
@@ -8309,7 +8309,7 @@ public final class Spec {
      * multiple users/tokens. 
      * </pre>
      *
-     * <code>string bucket = 4;</code>
+     * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for bucket.
      */
     com.google.protobuf.ByteString
@@ -8435,7 +8435,7 @@ public final class Spec {
      * rate limited.
      * </pre>
      *
-     * <code>int64 limit = 1;</code>
+     * <code>int64 limit = 1 [(.v1.field_options) = { ... }</code>
      * @return The limit.
      */
     public long getLimit() {
@@ -8449,7 +8449,7 @@ public final class Spec {
      * How many remaining requests out of the limit are still avaialable.
      * </pre>
      *
-     * <code>int64 remaining = 2;</code>
+     * <code>int64 remaining = 2 [(.v1.field_options) = { ... }</code>
      * @return The remaining.
      */
     public long getRemaining() {
@@ -8463,7 +8463,7 @@ public final class Spec {
      * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the resetAt field is set.
      */
     public boolean hasResetAt() {
@@ -8474,7 +8474,7 @@ public final class Spec {
      * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      * @return The resetAt.
      */
     public com.google.protobuf.Timestamp getResetAt() {
@@ -8485,7 +8485,7 @@ public final class Spec {
      * The time when remaining will be reset to limit. 
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+     * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      */
     public com.google.protobuf.TimestampOrBuilder getResetAtOrBuilder() {
       return getResetAt();
@@ -8499,7 +8499,7 @@ public final class Spec {
      * multiple users/tokens. 
      * </pre>
      *
-     * <code>string bucket = 4;</code>
+     * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
      * @return The bucket.
      */
     public java.lang.String getBucket() {
@@ -8520,7 +8520,7 @@ public final class Spec {
      * multiple users/tokens. 
      * </pre>
      *
-     * <code>string bucket = 4;</code>
+     * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for bucket.
      */
     public com.google.protobuf.ByteString
@@ -8917,7 +8917,7 @@ public final class Spec {
        * rate limited.
        * </pre>
        *
-       * <code>int64 limit = 1;</code>
+       * <code>int64 limit = 1 [(.v1.field_options) = { ... }</code>
        * @return The limit.
        */
       public long getLimit() {
@@ -8929,7 +8929,7 @@ public final class Spec {
        * rate limited.
        * </pre>
        *
-       * <code>int64 limit = 1;</code>
+       * <code>int64 limit = 1 [(.v1.field_options) = { ... }</code>
        * @param value The limit to set.
        * @return This builder for chaining.
        */
@@ -8945,7 +8945,7 @@ public final class Spec {
        * rate limited.
        * </pre>
        *
-       * <code>int64 limit = 1;</code>
+       * <code>int64 limit = 1 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
@@ -8961,7 +8961,7 @@ public final class Spec {
        * How many remaining requests out of the limit are still avaialable.
        * </pre>
        *
-       * <code>int64 remaining = 2;</code>
+       * <code>int64 remaining = 2 [(.v1.field_options) = { ... }</code>
        * @return The remaining.
        */
       public long getRemaining() {
@@ -8972,7 +8972,7 @@ public final class Spec {
        * How many remaining requests out of the limit are still avaialable.
        * </pre>
        *
-       * <code>int64 remaining = 2;</code>
+       * <code>int64 remaining = 2 [(.v1.field_options) = { ... }</code>
        * @param value The remaining to set.
        * @return This builder for chaining.
        */
@@ -8987,7 +8987,7 @@ public final class Spec {
        * How many remaining requests out of the limit are still avaialable.
        * </pre>
        *
-       * <code>int64 remaining = 2;</code>
+       * <code>int64 remaining = 2 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearRemaining() {
@@ -9005,7 +9005,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        * @return Whether the resetAt field is set.
        */
       public boolean hasResetAt() {
@@ -9016,7 +9016,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        * @return The resetAt.
        */
       public com.google.protobuf.Timestamp getResetAt() {
@@ -9031,7 +9031,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResetAt(com.google.protobuf.Timestamp value) {
         if (resetAtBuilder_ == null) {
@@ -9051,7 +9051,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResetAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -9069,7 +9069,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeResetAt(com.google.protobuf.Timestamp value) {
         if (resetAtBuilder_ == null) {
@@ -9091,7 +9091,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearResetAt() {
         if (resetAtBuilder_ == null) {
@@ -9109,7 +9109,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getResetAtBuilder() {
         
@@ -9121,7 +9121,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getResetAtOrBuilder() {
         if (resetAtBuilder_ != null) {
@@ -9136,7 +9136,7 @@ public final class Spec {
        * The time when remaining will be reset to limit. 
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp reset_at = 3;</code>
+       * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -9159,7 +9159,7 @@ public final class Spec {
        * multiple users/tokens. 
        * </pre>
        *
-       * <code>string bucket = 4;</code>
+       * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
        * @return The bucket.
        */
       public java.lang.String getBucket() {
@@ -9180,7 +9180,7 @@ public final class Spec {
        * multiple users/tokens. 
        * </pre>
        *
-       * <code>string bucket = 4;</code>
+       * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
        * @return The bytes for bucket.
        */
       public com.google.protobuf.ByteString
@@ -9202,7 +9202,7 @@ public final class Spec {
        * multiple users/tokens. 
        * </pre>
        *
-       * <code>string bucket = 4;</code>
+       * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
        * @param value The bucket to set.
        * @return This builder for chaining.
        */
@@ -9222,7 +9222,7 @@ public final class Spec {
        * multiple users/tokens. 
        * </pre>
        *
-       * <code>string bucket = 4;</code>
+       * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearBucket() {
@@ -9237,7 +9237,7 @@ public final class Spec {
        * multiple users/tokens. 
        * </pre>
        *
-       * <code>string bucket = 4;</code>
+       * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for bucket to set.
        * @return This builder for chaining.
        */
@@ -9427,16 +9427,17 @@ public final class Spec {
       "istRequestMetadata\022\016\n\006cursor\030\001 \001(\t\022\014\n\004pa" +
       "ge\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024ListResponseM" +
       "etadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 " +
-      "\001(\005\"\177\n\021RateLimitMetadata\022\r\n\005limit\030\001 \001(\003\022" +
-      "\021\n\tremaining\030\002 \001(\003\022,\n\010reset_at\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022\016\n\006bucket\030\004 \001(\t" +
-      ":\n\372\370\263\007\005\250\363\263\007\001B\363\001\n\034com.strongdm.api.v1.plu" +
-      "mbing\222A\321\001\022u\n\010StrongDM\022\036The infrastructur" +
-      "e access API.\"D\n\010StrongDM\022\"https://www.s" +
-      "trongdm.com/docs/api/\032\024support@strongdm." +
-      "com2\0031.0\032\020api.strongdm.comrF\n!Learn more" +
-      " about the strongDM API\022!https://www.str" +
-      "ongdm.com/docs/apib\006proto3"
+      "\001(\005\"\257\001\n\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363" +
+      "\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.google.protobuf." +
+      "TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B\363\001\n\034com.strongdm.a" +
+      "pi.v1.plumbing\222A\321\001\022u\n\010StrongDM\022\036The infr" +
+      "astructure access API.\"D\n\010StrongDM\022\"http" +
+      "s://www.strongdm.com/docs/api/\032\024support@" +
+      "strongdm.com2\0031.0\032\020api.strongdm.comrF\n!L" +
+      "earn more about the strongDM API\022!https:" +
+      "//www.strongdm.com/docs/apib\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
