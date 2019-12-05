@@ -647,7 +647,7 @@ public class Plumbing {
                 }
                 if (any.is(com.strongdm.api.v1.plumbing.Spec.RateLimitError.class)) {
                     com.strongdm.api.v1.plumbing.Spec.RateLimitError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.RateLimitError.class);
-                    return new com.strongdm.api.v1.RateLimitException(e.getMessage());
+                    return new com.strongdm.api.v1.RateLimitException(e.getMessage(),  Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
                 }
             }
         } catch (com.google.protobuf.InvalidProtocolBufferException anyParseException) {

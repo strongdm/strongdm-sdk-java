@@ -8,7 +8,13 @@ import java.util.ArrayList;
 public final class RateLimitException extends RpcException {
     static final long serialVersionUID = 1;
 
-    public RateLimitException(String errorMessage) {
+    private final RateLimitMetadata rateLimit;
+    public RateLimitMetadata getRateLimit() {
+        return this.rateLimit;
+    }
+
+    public RateLimitException(String errorMessage, RateLimitMetadata rateLimit) {
         super(errorMessage, 8);
+        this.rateLimit = rateLimit;
     }
 }
