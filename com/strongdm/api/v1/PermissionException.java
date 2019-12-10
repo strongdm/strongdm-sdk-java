@@ -2,9 +2,9 @@ package com.strongdm.api.v1;
 
 // PermissionException is used to specify a permissions violation
 public final class PermissionException extends RpcException {
-    static final long serialVersionUID = 1;
+  static final long serialVersionUID = 1;
 
-    public PermissionException(String errorMessage) {
-        super(errorMessage, 7);
-    }
+  public PermissionException(String errorMessage) {
+    super(errorMessage, 7);
+  }
 }

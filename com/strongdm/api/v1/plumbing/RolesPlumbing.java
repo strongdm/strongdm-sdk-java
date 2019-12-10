@@ -5,38 +5,45 @@ package com.strongdm.api.v1.plumbing;
 
 public final class RolesPlumbing {
   private RolesPlumbing() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistryLite registry) {}
+
+  public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
+    registerAllExtensions((com.google.protobuf.ExtensionRegistryLite) registry);
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-  public interface RoleCreateRequestOrBuilder extends
+  public interface RoleCreateRequestOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleCreateRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -46,24 +53,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
+     *
+     *
      * <pre>
      * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
+     *
+     *
      * <pre>
      * Parameters to define the new Role.
      * </pre>
@@ -73,6 +88,8 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * RoleCreateRequest specifies what kind of Roles that should be registered in
    * the organizations fleet. Note that a Role must be either a Relay or a
@@ -81,30 +98,29 @@ public final class RolesPlumbing {
    *
    * Protobuf type {@code v1.RoleCreateRequest}
    */
-  public  static final class RoleCreateRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleCreateRequest extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleCreateRequest)
       RoleCreateRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleCreateRequest.newBuilder() to construct.
     private RoleCreateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RoleCreateRequest() {
-    }
+
+    private RoleCreateRequest() {}
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleCreateRequest();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleCreateRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -123,89 +139,109 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
-              if (role_ != null) {
-                subBuilder = role_.toBuilder();
+                break;
               }
-              role_ = input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(role_);
-                role_ = subBuilder.buildPartial();
-              }
+            case 18:
+              {
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
+                if (role_ != null) {
+                  subBuilder = role_.toBuilder();
+                }
+                role_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(role_);
+                  role_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateRequest_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleCreateRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateRequest_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleCreateRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -219,28 +255,38 @@ public final class RolesPlumbing {
     public static final int ROLE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
+     *
+     *
      * <pre>
      * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Parameters to define the new Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
-      return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+      return role_ == null
+          ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+          : role_;
     }
     /**
+     *
+     *
      * <pre>
      * Parameters to define the new Role.
      * </pre>
@@ -252,6 +298,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -263,8 +310,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -281,12 +327,10 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (role_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRole());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRole());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -296,22 +340,21 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
       if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        if (!getRole()
-            .equals(other.getRole())) return false;
+        if (!getRole().equals(other.getRole())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -338,87 +381,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
+        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -428,6 +478,8 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleCreateRequest specifies what kind of Roles that should be registered in
      * the organizations fleet. Note that a Role must be either a Relay or a
@@ -436,21 +488,24 @@ public final class RolesPlumbing {
      *
      * Protobuf type {@code v1.RoleCreateRequest}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleCreateRequest)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateRequest_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleCreateRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateRequest_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleCreateRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.newBuilder()
@@ -458,16 +513,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -487,13 +541,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateRequest_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleCreateRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.getDefaultInstance();
       }
 
@@ -508,7 +563,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -527,38 +583,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -566,7 +625,9 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.getDefaultInstance()) return this;
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -592,7 +653,9 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest)
+                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -604,34 +667,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -652,6 +728,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -670,6 +748,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -680,7 +760,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -692,6 +774,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -710,6 +794,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -717,11 +803,13 @@ public final class RolesPlumbing {
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -732,11 +820,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -744,14 +835,17 @@ public final class RolesPlumbing {
        * <code>.v1.CreateRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -759,34 +853,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
+          roleBuilder_;
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
-          return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         } else {
           return roleBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
@@ -807,6 +914,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
@@ -825,6 +934,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
@@ -835,7 +946,9 @@ public final class RolesPlumbing {
         if (roleBuilder_ == null) {
           if (role_ != null) {
             role_ =
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             role_ = value;
           }
@@ -847,6 +960,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
@@ -865,6 +980,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
@@ -872,11 +989,13 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder getRoleBuilder() {
-        
+
         onChanged();
         return getRoleFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
@@ -887,11 +1006,14 @@ public final class RolesPlumbing {
         if (roleBuilder_ != null) {
           return roleBuilder_.getMessageOrBuilder();
         } else {
-          return role_ == null ?
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to define the new Role.
        * </pre>
@@ -899,18 +1021,22 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
           getRoleFieldBuilder() {
         if (roleBuilder_ == null) {
-          roleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
-                  getRole(),
-                  getParentForChildren(),
-                  isClean());
+          roleBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
+                  getRole(), getParentForChildren(), isClean());
           role_ = null;
         }
         return roleBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -923,30 +1049,32 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleCreateRequest)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleCreateRequest)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest();
     }
 
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest
+        getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleCreateRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RoleCreateRequest>() {
-      @java.lang.Override
-      public RoleCreateRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleCreateRequest(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleCreateRequest> PARSER =
+        new com.google.protobuf.AbstractParser<RoleCreateRequest>() {
+          @java.lang.Override
+          public RoleCreateRequest parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleCreateRequest(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleCreateRequest> parser() {
       return PARSER;
@@ -958,35 +1086,44 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest
+        getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleCreateResponseOrBuilder extends
+  public interface RoleCreateResponseOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleCreateResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -996,24 +1133,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
+     *
+     *
      * <pre>
      * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
+     *
+     *
      * <pre>
      * The created Role.
      * </pre>
@@ -1023,24 +1168,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -1050,6 +1203,8 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * RoleCreateResponse reports how the Roles were created in the system. It can
    * communicate partial successes or failures.
@@ -1057,30 +1212,29 @@ public final class RolesPlumbing {
    *
    * Protobuf type {@code v1.RoleCreateResponse}
    */
-  public  static final class RoleCreateResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleCreateResponse extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleCreateResponse)
       RoleCreateResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleCreateResponse.newBuilder() to construct.
     private RoleCreateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RoleCreateResponse() {
-    }
+
+    private RoleCreateResponse() {}
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleCreateResponse();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleCreateResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1099,102 +1253,126 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
-              if (role_ != null) {
-                subBuilder = role_.toBuilder();
+                break;
               }
-              role_ = input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(role_);
-                role_ = subBuilder.buildPartial();
-              }
+            case 18:
+              {
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
+                if (role_ != null) {
+                  subBuilder = role_.toBuilder();
+                }
+                role_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(role_);
+                  role_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 26: {
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
-              if (rateLimit_ != null) {
-                subBuilder = rateLimit_.toBuilder();
+                break;
               }
-              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rateLimit_);
-                rateLimit_ = subBuilder.buildPartial();
-              }
+            case 26:
+              {
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+                if (rateLimit_ != null) {
+                  subBuilder = rateLimit_.toBuilder();
+                }
+                rateLimit_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(rateLimit_);
+                  rateLimit_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateResponse_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleCreateResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateResponse_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleCreateResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -1208,28 +1386,38 @@ public final class RolesPlumbing {
     public static final int ROLE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
+     *
+     *
      * <pre>
      * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The created Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
-      return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+      return role_ == null
+          ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+          : role_;
     }
     /**
+     *
+     *
      * <pre>
      * The created Role.
      * </pre>
@@ -1243,28 +1431,38 @@ public final class RolesPlumbing {
     public static final int RATE_LIMIT_FIELD_NUMBER = 3;
     private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
-      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+      return rateLimit_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+          : rateLimit_;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -1276,6 +1474,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -1287,8 +1486,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -1308,16 +1506,13 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (role_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRole());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRole());
       }
       if (rateLimit_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getRateLimit());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1327,27 +1522,25 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
       if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        if (!getRole()
-            .equals(other.getRole())) return false;
+        if (!getRole().equals(other.getRole())) return false;
       }
       if (hasRateLimit() != other.hasRateLimit()) return false;
       if (hasRateLimit()) {
-        if (!getRateLimit()
-            .equals(other.getRateLimit())) return false;
+        if (!getRateLimit().equals(other.getRateLimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -1378,87 +1571,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
+        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -1468,6 +1668,8 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleCreateResponse reports how the Roles were created in the system. It can
      * communicate partial successes or failures.
@@ -1475,21 +1677,24 @@ public final class RolesPlumbing {
      *
      * Protobuf type {@code v1.RoleCreateResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleCreateResponse)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateResponse_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleCreateResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateResponse_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleCreateResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.newBuilder()
@@ -1497,16 +1702,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -1532,13 +1736,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleCreateResponse_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleCreateResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.getDefaultInstance();
       }
 
@@ -1553,7 +1758,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -1577,46 +1783,52 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse other) {
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -1645,7 +1857,9 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse)
+                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1657,34 +1871,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -1705,6 +1932,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -1723,6 +1952,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -1733,7 +1964,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -1745,6 +1978,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -1763,6 +1998,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -1770,11 +2007,13 @@ public final class RolesPlumbing {
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -1785,11 +2024,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -1797,14 +2039,17 @@ public final class RolesPlumbing {
        * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -1812,34 +2057,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
+          roleBuilder_;
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
-          return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         } else {
           return roleBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
@@ -1860,6 +2118,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
@@ -1878,6 +2138,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
@@ -1888,7 +2150,9 @@ public final class RolesPlumbing {
         if (roleBuilder_ == null) {
           if (role_ != null) {
             role_ =
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             role_ = value;
           }
@@ -1900,6 +2164,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
@@ -1918,6 +2184,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
@@ -1925,11 +2193,13 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder getRoleBuilder() {
-        
+
         onChanged();
         return getRoleFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
@@ -1940,11 +2210,14 @@ public final class RolesPlumbing {
         if (roleBuilder_ != null) {
           return roleBuilder_.getMessageOrBuilder();
         } else {
-          return role_ == null ?
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The created Role.
        * </pre>
@@ -1952,14 +2225,17 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
           getRoleFieldBuilder() {
         if (roleBuilder_ == null) {
-          roleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
-                  getRole(),
-                  getParentForChildren(),
-                  isClean());
+          roleBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
+                  getRole(), getParentForChildren(), isClean());
           role_ = null;
         }
         return roleBuilder_;
@@ -1967,34 +2243,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
+          rateLimitBuilder_;
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
         return rateLimitBuilder_ != null || rateLimit_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
         if (rateLimitBuilder_ == null) {
-          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         } else {
           return rateLimitBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -2015,6 +2304,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -2033,6 +2324,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -2043,7 +2336,9 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ == null) {
           if (rateLimit_ != null) {
             rateLimit_ =
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             rateLimit_ = value;
           }
@@ -2055,6 +2350,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -2073,6 +2370,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -2080,11 +2379,13 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
-        
+
         onChanged();
         return getRateLimitFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -2095,11 +2396,14 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ != null) {
           return rateLimitBuilder_.getMessageOrBuilder();
         } else {
-          return rateLimit_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -2107,18 +2411,22 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
           getRateLimitFieldBuilder() {
         if (rateLimitBuilder_ == null) {
-          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
-                  getRateLimit(),
-                  getParentForChildren(),
-                  isClean());
+          rateLimitBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(), getParentForChildren(), isClean());
           rateLimit_ = null;
         }
         return rateLimitBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2131,30 +2439,32 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleCreateResponse)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleCreateResponse)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse();
     }
 
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse
+        getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleCreateResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RoleCreateResponse>() {
-      @java.lang.Override
-      public RoleCreateResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleCreateResponse(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleCreateResponse> PARSER =
+        new com.google.protobuf.AbstractParser<RoleCreateResponse>() {
+          @java.lang.Override
+          public RoleCreateResponse parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleCreateResponse(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleCreateResponse> parser() {
       return PARSER;
@@ -2166,35 +2476,44 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse
+        getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleGetRequestOrBuilder extends
+  public interface RoleGetRequestOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGetRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -2204,57 +2523,64 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The id.
      */
     java.lang.String getId();
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for id.
      */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    com.google.protobuf.ByteString getIdBytes();
   }
   /**
+   *
+   *
    * <pre>
    * RoleGetRequest specifies which Role to retrieve.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGetRequest}
    */
-  public  static final class RoleGetRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleGetRequest extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleGetRequest)
       RoleGetRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleGetRequest.newBuilder() to construct.
     private RoleGetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private RoleGetRequest() {
       id_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleGetRequest();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleGetRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2273,82 +2599,99 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                id_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetRequest_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleGetRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetRequest_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleGetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -2362,11 +2705,14 @@ public final class RolesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The id.
      */
     public java.lang.String getId() {
@@ -2374,28 +2720,28 @@ public final class RolesPlumbing {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to retrieve.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for id.
      */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
+    public com.google.protobuf.ByteString getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         id_ = b;
         return b;
       } else {
@@ -2404,6 +2750,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -2415,8 +2762,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -2433,8 +2779,7 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
@@ -2447,20 +2792,19 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
-      if (!getId()
-          .equals(other.getId())) return false;
+      if (!getId().equals(other.getId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2484,87 +2828,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -2574,27 +2925,32 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleGetRequest specifies which Role to retrieve.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGetRequest}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleGetRequest)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetRequest_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleGetRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetRequest_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleGetRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.newBuilder()
@@ -2602,16 +2958,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -2627,9 +2982,9 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetRequest_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleGetRequest_descriptor;
       }
 
       @java.lang.Override
@@ -2648,7 +3003,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -2663,38 +3019,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -2702,7 +3061,8 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.getDefaultInstance()) return this;
+        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -2729,7 +3089,8 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2741,34 +3102,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.GetRequestMetadata meta = 1;</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -2789,6 +3163,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -2807,6 +3183,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -2817,7 +3195,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -2829,6 +3209,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -2847,6 +3229,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -2854,11 +3238,13 @@ public final class RolesPlumbing {
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -2869,11 +3255,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -2881,14 +3270,17 @@ public final class RolesPlumbing {
        * <code>.v1.GetRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -2896,18 +3288,20 @@ public final class RolesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           id_ = s;
           return s;
@@ -2916,20 +3310,21 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The bytes for id.
        */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
+      public com.google.protobuf.ByteString getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           id_ = b;
           return b;
         } else {
@@ -2937,58 +3332,66 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
+      public Builder setId(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         id_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to retrieve.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setIdBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         id_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3001,12 +3404,12 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleGetRequest)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleGetRequest)
     private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest();
     }
@@ -3015,16 +3418,16 @@ public final class RolesPlumbing {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleGetRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RoleGetRequest>() {
-      @java.lang.Override
-      public RoleGetRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleGetRequest(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleGetRequest> PARSER =
+        new com.google.protobuf.AbstractParser<RoleGetRequest>() {
+          @java.lang.Override
+          public RoleGetRequest parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleGetRequest(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleGetRequest> parser() {
       return PARSER;
@@ -3039,32 +3442,40 @@ public final class RolesPlumbing {
     public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleGetResponseOrBuilder extends
+  public interface RoleGetResponseOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGetResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -3074,24 +3485,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
+     *
+     *
      * <pre>
      * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
+     *
+     *
      * <pre>
      * The requested Role.
      * </pre>
@@ -3101,24 +3520,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -3128,36 +3555,37 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * RoleGetResponse returns a requested Role.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGetResponse}
    */
-  public  static final class RoleGetResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleGetResponse extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleGetResponse)
       RoleGetResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleGetResponse.newBuilder() to construct.
     private RoleGetResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RoleGetResponse() {
-    }
+
+    private RoleGetResponse() {}
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleGetResponse();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleGetResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3176,102 +3604,126 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
-              if (role_ != null) {
-                subBuilder = role_.toBuilder();
+                break;
               }
-              role_ = input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(role_);
-                role_ = subBuilder.buildPartial();
-              }
+            case 18:
+              {
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
+                if (role_ != null) {
+                  subBuilder = role_.toBuilder();
+                }
+                role_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(role_);
+                  role_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 26: {
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
-              if (rateLimit_ != null) {
-                subBuilder = rateLimit_.toBuilder();
+                break;
               }
-              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rateLimit_);
-                rateLimit_ = subBuilder.buildPartial();
-              }
+            case 26:
+              {
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+                if (rateLimit_ != null) {
+                  subBuilder = rateLimit_.toBuilder();
+                }
+                rateLimit_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(rateLimit_);
+                  rateLimit_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetResponse_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleGetResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetResponse_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleGetResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -3285,28 +3737,38 @@ public final class RolesPlumbing {
     public static final int ROLE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
+     *
+     *
      * <pre>
      * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The requested Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
-      return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+      return role_ == null
+          ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+          : role_;
     }
     /**
+     *
+     *
      * <pre>
      * The requested Role.
      * </pre>
@@ -3320,28 +3782,38 @@ public final class RolesPlumbing {
     public static final int RATE_LIMIT_FIELD_NUMBER = 3;
     private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
-      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+      return rateLimit_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+          : rateLimit_;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -3353,6 +3825,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -3364,8 +3837,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -3385,16 +3857,13 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (role_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRole());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRole());
       }
       if (rateLimit_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getRateLimit());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3404,27 +3873,25 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
       if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        if (!getRole()
-            .equals(other.getRole())) return false;
+        if (!getRole().equals(other.getRole())) return false;
       }
       if (hasRateLimit() != other.hasRateLimit()) return false;
       if (hasRateLimit()) {
-        if (!getRateLimit()
-            .equals(other.getRateLimit())) return false;
+        if (!getRateLimit().equals(other.getRateLimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -3455,87 +3922,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -3545,27 +4019,32 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleGetResponse returns a requested Role.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGetResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleGetResponse)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetResponse_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleGetResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetResponse_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleGetResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.newBuilder()
@@ -3573,16 +4052,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -3608,13 +4086,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleGetResponse_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleGetResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.getDefaultInstance();
       }
 
@@ -3629,7 +4108,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -3653,38 +4133,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -3692,7 +4175,9 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.getDefaultInstance()) return this;
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -3721,7 +4206,8 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3733,34 +4219,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -3781,6 +4280,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -3799,6 +4300,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -3809,7 +4312,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -3821,6 +4326,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -3839,6 +4346,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -3846,11 +4355,13 @@ public final class RolesPlumbing {
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -3861,11 +4372,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -3873,14 +4387,17 @@ public final class RolesPlumbing {
        * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -3888,34 +4405,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
+          roleBuilder_;
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
-          return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         } else {
           return roleBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
@@ -3936,6 +4466,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
@@ -3954,6 +4486,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
@@ -3964,7 +4498,9 @@ public final class RolesPlumbing {
         if (roleBuilder_ == null) {
           if (role_ != null) {
             role_ =
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             role_ = value;
           }
@@ -3976,6 +4512,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
@@ -3994,6 +4532,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
@@ -4001,11 +4541,13 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder getRoleBuilder() {
-        
+
         onChanged();
         return getRoleFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
@@ -4016,11 +4558,14 @@ public final class RolesPlumbing {
         if (roleBuilder_ != null) {
           return roleBuilder_.getMessageOrBuilder();
         } else {
-          return role_ == null ?
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The requested Role.
        * </pre>
@@ -4028,14 +4573,17 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
           getRoleFieldBuilder() {
         if (roleBuilder_ == null) {
-          roleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
-                  getRole(),
-                  getParentForChildren(),
-                  isClean());
+          roleBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
+                  getRole(), getParentForChildren(), isClean());
           role_ = null;
         }
         return roleBuilder_;
@@ -4043,34 +4591,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
+          rateLimitBuilder_;
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
         return rateLimitBuilder_ != null || rateLimit_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
         if (rateLimitBuilder_ == null) {
-          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         } else {
           return rateLimitBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -4091,6 +4652,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -4109,6 +4672,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -4119,7 +4684,9 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ == null) {
           if (rateLimit_ != null) {
             rateLimit_ =
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             rateLimit_ = value;
           }
@@ -4131,6 +4698,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -4149,6 +4718,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -4156,11 +4727,13 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
-        
+
         onChanged();
         return getRateLimitFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -4171,11 +4744,14 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ != null) {
           return rateLimitBuilder_.getMessageOrBuilder();
         } else {
-          return rateLimit_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -4183,18 +4759,22 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
           getRateLimitFieldBuilder() {
         if (rateLimitBuilder_ == null) {
-          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
-                  getRateLimit(),
-                  getParentForChildren(),
-                  isClean());
+          rateLimitBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(), getParentForChildren(), isClean());
           rateLimit_ = null;
         }
         return rateLimitBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4207,12 +4787,13 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleGetResponse)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleGetResponse)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse();
     }
@@ -4221,16 +4802,16 @@ public final class RolesPlumbing {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleGetResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RoleGetResponse>() {
-      @java.lang.Override
-      public RoleGetResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleGetResponse(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleGetResponse> PARSER =
+        new com.google.protobuf.AbstractParser<RoleGetResponse>() {
+          @java.lang.Override
+          public RoleGetResponse parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleGetResponse(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleGetResponse> parser() {
       return PARSER;
@@ -4245,32 +4826,40 @@ public final class RolesPlumbing {
     public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleUpdateRequestOrBuilder extends
+  public interface RoleUpdateRequestOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleUpdateRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -4280,6 +4869,8 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to update. If an ID is already
      * specified in the `role` field, this field is not required. If an ID is
@@ -4287,10 +4878,13 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     *
      * @return The id.
      */
     java.lang.String getId();
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to update. If an ID is already
      * specified in the `role` field, this field is not required. If an ID is
@@ -4298,30 +4892,38 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     *
      * @return The bytes for id.
      */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    com.google.protobuf.ByteString getIdBytes();
 
     /**
+     *
+     *
      * <pre>
      * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
+     *
+     *
      * <pre>
      * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
+     *
+     *
      * <pre>
      * Parameters to overwrite the specified Role.
      * </pre>
@@ -4331,6 +4933,8 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * RoleUpdateRequest identifies a Role by ID and provides fields to update on
    * that Role record.
@@ -4338,31 +4942,31 @@ public final class RolesPlumbing {
    *
    * Protobuf type {@code v1.RoleUpdateRequest}
    */
-  public  static final class RoleUpdateRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleUpdateRequest extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleUpdateRequest)
       RoleUpdateRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleUpdateRequest.newBuilder() to construct.
     private RoleUpdateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private RoleUpdateRequest() {
       id_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleUpdateRequest();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleUpdateRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4381,95 +4985,116 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              id_ = s;
-              break;
-            }
-            case 26: {
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
-              if (role_ != null) {
-                subBuilder = role_.toBuilder();
+                id_ = s;
+                break;
               }
-              role_ = input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(role_);
-                role_ = subBuilder.buildPartial();
-              }
+            case 26:
+              {
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
+                if (role_ != null) {
+                  subBuilder = role_.toBuilder();
+                }
+                role_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(role_);
+                  role_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateRequest_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleUpdateRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateRequest_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleUpdateRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -4483,6 +5108,8 @@ public final class RolesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to update. If an ID is already
      * specified in the `role` field, this field is not required. If an ID is
@@ -4490,6 +5117,7 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     *
      * @return The id.
      */
     public java.lang.String getId() {
@@ -4497,14 +5125,15 @@ public final class RolesPlumbing {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to update. If an ID is already
      * specified in the `role` field, this field is not required. If an ID is
@@ -4512,15 +5141,14 @@ public final class RolesPlumbing {
      * </pre>
      *
      * <code>string id = 2;</code>
+     *
      * @return The bytes for id.
      */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
+    public com.google.protobuf.ByteString getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         id_ = b;
         return b;
       } else {
@@ -4531,28 +5159,38 @@ public final class RolesPlumbing {
     public static final int ROLE_FIELD_NUMBER = 3;
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
+     *
+     *
      * <pre>
      * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Parameters to overwrite the specified Role.
      * </pre>
      *
      * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
-      return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+      return role_ == null
+          ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+          : role_;
     }
     /**
+     *
+     *
      * <pre>
      * Parameters to overwrite the specified Role.
      * </pre>
@@ -4564,6 +5202,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -4575,8 +5214,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -4596,15 +5234,13 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       if (role_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getRole());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRole());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4614,24 +5250,22 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
-      if (!getId()
-          .equals(other.getId())) return false;
+      if (!getId().equals(other.getId())) return false;
       if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        if (!getRole()
-            .equals(other.getRole())) return false;
+        if (!getRole().equals(other.getRole())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -4660,87 +5294,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
+        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -4750,6 +5391,8 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleUpdateRequest identifies a Role by ID and provides fields to update on
      * that Role record.
@@ -4757,21 +5400,24 @@ public final class RolesPlumbing {
      *
      * Protobuf type {@code v1.RoleUpdateRequest}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleUpdateRequest)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateRequest_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleUpdateRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateRequest_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleUpdateRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.newBuilder()
@@ -4779,16 +5425,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -4810,13 +5455,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateRequest_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleUpdateRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.getDefaultInstance();
       }
 
@@ -4831,7 +5477,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -4851,38 +5498,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -4890,7 +5540,9 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.getDefaultInstance()) return this;
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -4920,7 +5572,9 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest)
+                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4932,34 +5586,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -4980,6 +5647,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -4998,6 +5667,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -5008,7 +5679,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -5020,6 +5693,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -5038,6 +5713,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -5045,11 +5722,13 @@ public final class RolesPlumbing {
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -5060,11 +5739,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -5072,14 +5754,17 @@ public final class RolesPlumbing {
        * <code>.v1.UpdateRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -5087,6 +5772,8 @@ public final class RolesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to update. If an ID is already
        * specified in the `role` field, this field is not required. If an ID is
@@ -5094,13 +5781,13 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       *
        * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           id_ = s;
           return s;
@@ -5109,6 +5796,8 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to update. If an ID is already
        * specified in the `role` field, this field is not required. If an ID is
@@ -5116,15 +5805,14 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       *
        * @return The bytes for id.
        */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
+      public com.google.protobuf.ByteString getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           id_ = b;
           return b;
         } else {
@@ -5132,6 +5820,8 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to update. If an ID is already
        * specified in the `role` field, this field is not required. If an ID is
@@ -5139,20 +5829,22 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       *
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
+      public Builder setId(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         id_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to update. If an ID is already
        * specified in the `role` field, this field is not required. If an ID is
@@ -5160,15 +5852,18 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to update. If an ID is already
        * specified in the `role` field, this field is not required. If an ID is
@@ -5176,16 +5871,16 @@ public final class RolesPlumbing {
        * </pre>
        *
        * <code>string id = 2;</code>
+       *
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setIdBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         id_ = value;
         onChanged();
         return this;
@@ -5193,34 +5888,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
+          roleBuilder_;
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
        *
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
-          return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         } else {
           return roleBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
@@ -5241,6 +5949,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
@@ -5259,6 +5969,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
@@ -5269,7 +5981,9 @@ public final class RolesPlumbing {
         if (roleBuilder_ == null) {
           if (role_ != null) {
             role_ =
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             role_ = value;
           }
@@ -5281,6 +5995,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
@@ -5299,6 +6015,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
@@ -5306,11 +6024,13 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder getRoleBuilder() {
-        
+
         onChanged();
         return getRoleFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
@@ -5321,11 +6041,14 @@ public final class RolesPlumbing {
         if (roleBuilder_ != null) {
           return roleBuilder_.getMessageOrBuilder();
         } else {
-          return role_ == null ?
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Parameters to overwrite the specified Role.
        * </pre>
@@ -5333,18 +6056,22 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
           getRoleFieldBuilder() {
         if (roleBuilder_ == null) {
-          roleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
-                  getRole(),
-                  getParentForChildren(),
-                  isClean());
+          roleBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
+                  getRole(), getParentForChildren(), isClean());
           role_ = null;
         }
         return roleBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5357,30 +6084,32 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleUpdateRequest)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleUpdateRequest)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest();
     }
 
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest
+        getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleUpdateRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RoleUpdateRequest>() {
-      @java.lang.Override
-      public RoleUpdateRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleUpdateRequest(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleUpdateRequest> PARSER =
+        new com.google.protobuf.AbstractParser<RoleUpdateRequest>() {
+          @java.lang.Override
+          public RoleUpdateRequest parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleUpdateRequest(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleUpdateRequest> parser() {
       return PARSER;
@@ -5392,35 +6121,44 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest
+        getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleUpdateResponseOrBuilder extends
+  public interface RoleUpdateResponseOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleUpdateResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -5430,24 +6168,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     boolean hasRole();
     /**
+     *
+     *
      * <pre>
      * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole();
     /**
+     *
+     *
      * <pre>
      * The updated Role.
      * </pre>
@@ -5457,24 +6203,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRoleOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -5484,6 +6238,8 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * RoleUpdateResponse returns the fields of a Role after it has been updated by
    * a RoleUpdateRequest.
@@ -5491,30 +6247,29 @@ public final class RolesPlumbing {
    *
    * Protobuf type {@code v1.RoleUpdateResponse}
    */
-  public  static final class RoleUpdateResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleUpdateResponse extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleUpdateResponse)
       RoleUpdateResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleUpdateResponse.newBuilder() to construct.
     private RoleUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RoleUpdateResponse() {
-    }
+
+    private RoleUpdateResponse() {}
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleUpdateResponse();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleUpdateResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5533,102 +6288,126 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
-              if (role_ != null) {
-                subBuilder = role_.toBuilder();
+                break;
               }
-              role_ = input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(role_);
-                role_ = subBuilder.buildPartial();
-              }
+            case 18:
+              {
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder subBuilder = null;
+                if (role_ != null) {
+                  subBuilder = role_.toBuilder();
+                }
+                role_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(role_);
+                  role_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 26: {
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
-              if (rateLimit_ != null) {
-                subBuilder = rateLimit_.toBuilder();
+                break;
               }
-              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rateLimit_);
-                rateLimit_ = subBuilder.buildPartial();
-              }
+            case 26:
+              {
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+                if (rateLimit_ != null) {
+                  subBuilder = rateLimit_.toBuilder();
+                }
+                rateLimit_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(rateLimit_);
+                  rateLimit_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateResponse_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleUpdateResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateResponse_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleUpdateResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -5642,28 +6421,38 @@ public final class RolesPlumbing {
     public static final int ROLE_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
     /**
+     *
+     *
      * <pre>
      * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the role field is set.
      */
     public boolean hasRole() {
       return role_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * The updated Role.
      * </pre>
      *
      * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The role.
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
-      return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+      return role_ == null
+          ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+          : role_;
     }
     /**
+     *
+     *
      * <pre>
      * The updated Role.
      * </pre>
@@ -5677,28 +6466,38 @@ public final class RolesPlumbing {
     public static final int RATE_LIMIT_FIELD_NUMBER = 3;
     private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
-      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+      return rateLimit_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+          : rateLimit_;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -5710,6 +6509,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -5721,8 +6521,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -5742,16 +6541,13 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (role_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRole());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRole());
       }
       if (rateLimit_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getRateLimit());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5761,27 +6557,25 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
       if (hasRole() != other.hasRole()) return false;
       if (hasRole()) {
-        if (!getRole()
-            .equals(other.getRole())) return false;
+        if (!getRole().equals(other.getRole())) return false;
       }
       if (hasRateLimit() != other.hasRateLimit()) return false;
       if (hasRateLimit()) {
-        if (!getRateLimit()
-            .equals(other.getRateLimit())) return false;
+        if (!getRateLimit().equals(other.getRateLimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -5812,87 +6606,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
+        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -5902,6 +6703,8 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleUpdateResponse returns the fields of a Role after it has been updated by
      * a RoleUpdateRequest.
@@ -5909,21 +6712,24 @@ public final class RolesPlumbing {
      *
      * Protobuf type {@code v1.RoleUpdateResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleUpdateResponse)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateResponse_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleUpdateResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateResponse_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleUpdateResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.newBuilder()
@@ -5931,16 +6737,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -5966,13 +6771,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleUpdateResponse_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleUpdateResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.getDefaultInstance();
       }
 
@@ -5987,7 +6793,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -6011,46 +6818,52 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse other) {
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -6079,7 +6892,9 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse)
+                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6091,34 +6906,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -6139,6 +6967,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -6157,6 +6987,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -6167,7 +6999,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -6179,6 +7013,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -6197,6 +7033,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -6204,11 +7042,13 @@ public final class RolesPlumbing {
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -6219,11 +7059,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -6231,14 +7074,17 @@ public final class RolesPlumbing {
        * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -6246,34 +7092,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.RolesPlumbing.Role role_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> roleBuilder_;
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
+          roleBuilder_;
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the role field is set.
        */
       public boolean hasRole() {
         return roleBuilder_ != null || role_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
        *
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The role.
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRole() {
         if (roleBuilder_ == null) {
-          return role_ == null ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         } else {
           return roleBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
@@ -6294,6 +7153,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
@@ -6312,6 +7173,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
@@ -6322,7 +7185,9 @@ public final class RolesPlumbing {
         if (roleBuilder_ == null) {
           if (role_ != null) {
             role_ =
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder(role_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             role_ = value;
           }
@@ -6334,6 +7199,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
@@ -6352,6 +7219,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
@@ -6359,11 +7228,13 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder getRoleBuilder() {
-        
+
         onChanged();
         return getRoleFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
@@ -6374,11 +7245,14 @@ public final class RolesPlumbing {
         if (roleBuilder_ != null) {
           return roleBuilder_.getMessageOrBuilder();
         } else {
-          return role_ == null ?
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance() : role_;
+          return role_ == null
+              ? com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()
+              : role_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * The updated Role.
        * </pre>
@@ -6386,14 +7260,17 @@ public final class RolesPlumbing {
        * <code>.v1.Role role = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
           getRoleFieldBuilder() {
         if (roleBuilder_ == null) {
-          roleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
-                  getRole(),
-                  getParentForChildren(),
-                  isClean());
+          roleBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
+                  getRole(), getParentForChildren(), isClean());
           role_ = null;
         }
         return roleBuilder_;
@@ -6401,34 +7278,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
+          rateLimitBuilder_;
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
         return rateLimitBuilder_ != null || rateLimit_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
         if (rateLimitBuilder_ == null) {
-          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         } else {
           return rateLimitBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -6449,6 +7339,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -6467,6 +7359,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -6477,7 +7371,9 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ == null) {
           if (rateLimit_ != null) {
             rateLimit_ =
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             rateLimit_ = value;
           }
@@ -6489,6 +7385,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -6507,6 +7405,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -6514,11 +7414,13 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
-        
+
         onChanged();
         return getRateLimitFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -6529,11 +7431,14 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ != null) {
           return rateLimitBuilder_.getMessageOrBuilder();
         } else {
-          return rateLimit_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -6541,18 +7446,22 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
           getRateLimitFieldBuilder() {
         if (rateLimitBuilder_ == null) {
-          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
-                  getRateLimit(),
-                  getParentForChildren(),
-                  isClean());
+          rateLimitBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(), getParentForChildren(), isClean());
           rateLimit_ = null;
         }
         return rateLimitBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6565,30 +7474,32 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleUpdateResponse)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleUpdateResponse)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse();
     }
 
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse
+        getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleUpdateResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RoleUpdateResponse>() {
-      @java.lang.Override
-      public RoleUpdateResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleUpdateResponse(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleUpdateResponse> PARSER =
+        new com.google.protobuf.AbstractParser<RoleUpdateResponse>() {
+          @java.lang.Override
+          public RoleUpdateResponse parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleUpdateResponse(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleUpdateResponse> parser() {
       return PARSER;
@@ -6600,35 +7511,44 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse
+        getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleDeleteRequestOrBuilder extends
+  public interface RoleDeleteRequestOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleDeleteRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -6638,57 +7558,64 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The id.
      */
     java.lang.String getId();
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for id.
      */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    com.google.protobuf.ByteString getIdBytes();
   }
   /**
+   *
+   *
    * <pre>
    * RoleDeleteRequest identifies a Role by ID to delete.
    * </pre>
    *
    * Protobuf type {@code v1.RoleDeleteRequest}
    */
-  public  static final class RoleDeleteRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleDeleteRequest extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleDeleteRequest)
       RoleDeleteRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleDeleteRequest.newBuilder() to construct.
     private RoleDeleteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private RoleDeleteRequest() {
       id_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleDeleteRequest();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleDeleteRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6707,82 +7634,99 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                id_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteRequest_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleDeleteRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteRequest_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleDeleteRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -6796,11 +7740,14 @@ public final class RolesPlumbing {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The id.
      */
     public java.lang.String getId() {
@@ -6808,28 +7755,28 @@ public final class RolesPlumbing {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * The unique identifier of the Role to delete.
      * </pre>
      *
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for id.
      */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
+    public com.google.protobuf.ByteString getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         id_ = b;
         return b;
       } else {
@@ -6838,6 +7785,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -6849,8 +7797,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -6867,8 +7814,7 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
@@ -6881,20 +7827,19 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
-      if (!getId()
-          .equals(other.getId())) return false;
+      if (!getId().equals(other.getId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6918,87 +7863,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
+        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -7008,27 +7960,32 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleDeleteRequest identifies a Role by ID to delete.
      * </pre>
      *
      * Protobuf type {@code v1.RoleDeleteRequest}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleDeleteRequest)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteRequest_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleDeleteRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteRequest_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleDeleteRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.newBuilder()
@@ -7036,16 +7993,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -7061,13 +8017,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteRequest_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleDeleteRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.getDefaultInstance();
       }
 
@@ -7082,7 +8039,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -7097,38 +8055,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -7136,7 +8097,9 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.getDefaultInstance()) return this;
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -7163,7 +8126,9 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest)
+                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7175,34 +8140,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -7223,6 +8201,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -7241,6 +8221,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -7251,7 +8233,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -7263,6 +8247,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -7281,6 +8267,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -7288,11 +8276,13 @@ public final class RolesPlumbing {
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -7303,11 +8293,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -7315,14 +8308,17 @@ public final class RolesPlumbing {
        * <code>.v1.DeleteRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -7330,18 +8326,20 @@ public final class RolesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           id_ = s;
           return s;
@@ -7350,20 +8348,21 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The bytes for id.
        */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
+      public com.google.protobuf.ByteString getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           id_ = b;
           return b;
         } else {
@@ -7371,58 +8370,66 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
+      public Builder setId(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         id_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * The unique identifier of the Role to delete.
        * </pre>
        *
        * <code>string id = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setIdBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         id_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7435,30 +8442,32 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleDeleteRequest)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleDeleteRequest)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest();
     }
 
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest
+        getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleDeleteRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RoleDeleteRequest>() {
-      @java.lang.Override
-      public RoleDeleteRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleDeleteRequest(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleDeleteRequest> PARSER =
+        new com.google.protobuf.AbstractParser<RoleDeleteRequest>() {
+          @java.lang.Override
+          public RoleDeleteRequest parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleDeleteRequest(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleDeleteRequest> parser() {
       return PARSER;
@@ -7470,35 +8479,44 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest
+        getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleDeleteResponseOrBuilder extends
+  public interface RoleDeleteResponseOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleDeleteResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -7508,24 +8526,32 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -7535,36 +8561,37 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * RoleDeleteResponse returns information about a Role that was deleted.
    * </pre>
    *
    * Protobuf type {@code v1.RoleDeleteResponse}
    */
-  public  static final class RoleDeleteResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleDeleteResponse extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleDeleteResponse)
       RoleDeleteResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleDeleteResponse.newBuilder() to construct.
     private RoleDeleteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private RoleDeleteResponse() {
-    }
+
+    private RoleDeleteResponse() {}
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleDeleteResponse();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleDeleteResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7583,89 +8610,109 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
-              if (rateLimit_ != null) {
-                subBuilder = rateLimit_.toBuilder();
+                break;
               }
-              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rateLimit_);
-                rateLimit_ = subBuilder.buildPartial();
-              }
+            case 18:
+              {
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+                if (rateLimit_ != null) {
+                  subBuilder = rateLimit_.toBuilder();
+                }
+                rateLimit_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(rateLimit_);
+                  rateLimit_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteResponse_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleDeleteResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteResponse_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleDeleteResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Reserved for future use.
      * </pre>
@@ -7679,28 +8726,38 @@ public final class RolesPlumbing {
     public static final int RATE_LIMIT_FIELD_NUMBER = 2;
     private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
-      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+      return rateLimit_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+          : rateLimit_;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -7712,6 +8769,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -7723,8 +8781,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -7741,12 +8798,10 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (rateLimit_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRateLimit());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7756,22 +8811,21 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
       if (hasRateLimit() != other.hasRateLimit()) return false;
       if (hasRateLimit()) {
-        if (!getRateLimit()
-            .equals(other.getRateLimit())) return false;
+        if (!getRateLimit().equals(other.getRateLimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -7798,87 +8852,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
+        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -7888,27 +8949,32 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleDeleteResponse returns information about a Role that was deleted.
      * </pre>
      *
      * Protobuf type {@code v1.RoleDeleteResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleDeleteResponse)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteResponse_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleDeleteResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteResponse_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleDeleteResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.newBuilder()
@@ -7916,16 +8982,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -7945,13 +9010,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleDeleteResponse_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleDeleteResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.getDefaultInstance();
       }
 
@@ -7966,7 +9032,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -7985,46 +9052,52 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse other) {
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -8050,7 +9123,9 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse)
+                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8062,34 +9137,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
        *
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -8110,6 +9198,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -8128,6 +9218,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -8138,7 +9230,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -8150,6 +9244,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -8168,6 +9264,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -8175,11 +9273,13 @@ public final class RolesPlumbing {
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -8190,11 +9290,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Reserved for future use.
        * </pre>
@@ -8202,14 +9305,17 @@ public final class RolesPlumbing {
        * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -8217,34 +9323,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
+          rateLimitBuilder_;
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
         return rateLimitBuilder_ != null || rateLimit_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
         if (rateLimitBuilder_ == null) {
-          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         } else {
           return rateLimitBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -8265,6 +9384,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -8283,6 +9404,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -8293,7 +9416,9 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ == null) {
           if (rateLimit_ != null) {
             rateLimit_ =
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             rateLimit_ = value;
           }
@@ -8305,6 +9430,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -8323,6 +9450,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -8330,11 +9459,13 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
-        
+
         onChanged();
         return getRateLimitFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -8345,11 +9476,14 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ != null) {
           return rateLimitBuilder_.getMessageOrBuilder();
         } else {
-          return rateLimit_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -8357,18 +9491,22 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
           getRateLimitFieldBuilder() {
         if (rateLimitBuilder_ == null) {
-          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
-                  getRateLimit(),
-                  getParentForChildren(),
-                  isClean());
+          rateLimitBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(), getParentForChildren(), isClean());
           rateLimit_ = null;
         }
         return rateLimitBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8381,30 +9519,32 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleDeleteResponse)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleDeleteResponse)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse();
     }
 
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse
+        getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleDeleteResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RoleDeleteResponse>() {
-      @java.lang.Override
-      public RoleDeleteResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleDeleteResponse(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleDeleteResponse> PARSER =
+        new com.google.protobuf.AbstractParser<RoleDeleteResponse>() {
+          @java.lang.Override
+          public RoleDeleteResponse parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleDeleteResponse(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleDeleteResponse> parser() {
       return PARSER;
@@ -8416,35 +9556,44 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse
+        getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleListRequestOrBuilder extends
+  public interface RoleListRequestOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleListRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Paging parameters for the query.
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Paging parameters for the query.
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Paging parameters for the query.
      * </pre>
@@ -8454,57 +9603,64 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * A human-readable filter query string.
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     *
+     *
      * <pre>
      * A human-readable filter query string.
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for filter.
      */
-    com.google.protobuf.ByteString
-        getFilterBytes();
+    com.google.protobuf.ByteString getFilterBytes();
   }
   /**
+   *
+   *
    * <pre>
    * RoleListRequest specifies criteria for retrieving a list of Roles.
    * </pre>
    *
    * Protobuf type {@code v1.RoleListRequest}
    */
-  public  static final class RoleListRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleListRequest extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleListRequest)
       RoleListRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleListRequest.newBuilder() to construct.
     private RoleListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private RoleListRequest() {
       filter_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleListRequest();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleListRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8523,82 +9679,99 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              filter_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                filter_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListRequest_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleListRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListRequest_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleListRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Paging parameters for the query.
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Paging parameters for the query.
      * </pre>
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Paging parameters for the query.
      * </pre>
@@ -8612,11 +9785,14 @@ public final class RolesPlumbing {
     public static final int FILTER_FIELD_NUMBER = 2;
     private volatile java.lang.Object filter_;
     /**
+     *
+     *
      * <pre>
      * A human-readable filter query string.
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The filter.
      */
     public java.lang.String getFilter() {
@@ -8624,28 +9800,28 @@ public final class RolesPlumbing {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         filter_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * A human-readable filter query string.
      * </pre>
      *
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for filter.
      */
-    public com.google.protobuf.ByteString
-        getFilterBytes() {
+    public com.google.protobuf.ByteString getFilterBytes() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         filter_ = b;
         return b;
       } else {
@@ -8654,6 +9830,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -8665,8 +9842,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -8683,8 +9859,7 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       if (!getFilterBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
@@ -8697,20 +9872,19 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
-      if (!getFilter()
-          .equals(other.getFilter())) return false;
+      if (!getFilter().equals(other.getFilter())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8734,87 +9908,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -8824,27 +10005,32 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleListRequest specifies criteria for retrieving a list of Roles.
      * </pre>
      *
      * Protobuf type {@code v1.RoleListRequest}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleListRequest)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListRequest_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleListRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListRequest_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleListRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.newBuilder()
@@ -8852,16 +10038,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -8877,13 +10062,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListRequest_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleListRequest_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.getDefaultInstance();
       }
 
@@ -8898,7 +10084,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest(this);
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
         } else {
@@ -8913,38 +10100,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -8952,7 +10142,9 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.getDefaultInstance()) return this;
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -8979,7 +10171,8 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8991,34 +10184,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
        *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
        *
        * <code>.v1.ListRequestMetadata meta = 1;</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
@@ -9039,6 +10245,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
@@ -9057,6 +10265,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
@@ -9067,7 +10277,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -9079,6 +10291,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
@@ -9097,6 +10311,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
@@ -9104,11 +10320,13 @@ public final class RolesPlumbing {
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
@@ -9119,11 +10337,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Paging parameters for the query.
        * </pre>
@@ -9131,14 +10352,17 @@ public final class RolesPlumbing {
        * <code>.v1.ListRequestMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata,
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
@@ -9146,18 +10370,20 @@ public final class RolesPlumbing {
 
       private java.lang.Object filter_ = "";
       /**
+       *
+       *
        * <pre>
        * A human-readable filter query string.
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The filter.
        */
       public java.lang.String getFilter() {
         java.lang.Object ref = filter_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           filter_ = s;
           return s;
@@ -9166,20 +10392,21 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * A human-readable filter query string.
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The bytes for filter.
        */
-      public com.google.protobuf.ByteString
-          getFilterBytes() {
+      public com.google.protobuf.ByteString getFilterBytes() {
         java.lang.Object ref = filter_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           filter_ = b;
           return b;
         } else {
@@ -9187,58 +10414,66 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * A human-readable filter query string.
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The filter to set.
        * @return This builder for chaining.
        */
-      public Builder setFilter(
-          java.lang.String value) {
+      public Builder setFilter(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         filter_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A human-readable filter query string.
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearFilter() {
-        
+
         filter_ = getDefaultInstance().getFilter();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A human-readable filter query string.
        * </pre>
        *
        * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
-      public Builder setFilterBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setFilterBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         filter_ = value;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9251,12 +10486,13 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleListRequest)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleListRequest)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest();
     }
@@ -9265,16 +10501,16 @@ public final class RolesPlumbing {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleListRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RoleListRequest>() {
-      @java.lang.Override
-      public RoleListRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleListRequest(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleListRequest> PARSER =
+        new com.google.protobuf.AbstractParser<RoleListRequest>() {
+          @java.lang.Override
+          public RoleListRequest parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleListRequest(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleListRequest> parser() {
       return PARSER;
@@ -9289,32 +10525,40 @@ public final class RolesPlumbing {
     public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleListResponseOrBuilder extends
+  public interface RoleListResponseOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.RoleListResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Paging information for the query.
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     boolean hasMeta();
     /**
+     *
+     *
      * <pre>
      * Paging information for the query.
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta();
     /**
+     *
+     *
      * <pre>
      * Paging information for the query.
      * </pre>
@@ -9324,15 +10568,18 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder();
 
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
      *
      * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<com.strongdm.api.v1.plumbing.RolesPlumbing.Role> 
-        getRolesList();
+    java.util.List<com.strongdm.api.v1.plumbing.RolesPlumbing.Role> getRolesList();
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
@@ -9341,6 +10588,8 @@ public final class RolesPlumbing {
      */
     com.strongdm.api.v1.plumbing.RolesPlumbing.Role getRoles(int index);
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
@@ -9349,43 +10598,54 @@ public final class RolesPlumbing {
      */
     int getRolesCount();
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
      *
      * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<? extends com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+    java.util.List<? extends com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
         getRolesOrBuilderList();
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
      *
      * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRolesOrBuilder(
-        int index);
+    com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRolesOrBuilder(int index);
 
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     boolean hasRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -9395,6 +10655,8 @@ public final class RolesPlumbing {
     com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
   }
   /**
+   *
+   *
    * <pre>
    * RoleListResponse returns a list of Roles that meet the criteria of a
    * RoleListRequest.
@@ -9402,31 +10664,31 @@ public final class RolesPlumbing {
    *
    * Protobuf type {@code v1.RoleListResponse}
    */
-  public  static final class RoleListResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class RoleListResponse extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.RoleListResponse)
       RoleListResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use RoleListResponse.newBuilder() to construct.
     private RoleListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private RoleListResponse() {
       roles_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new RoleListResponse();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private RoleListResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9446,55 +10708,66 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder subBuilder = null;
-              if (meta_ != null) {
-                subBuilder = meta_.toBuilder();
-              }
-              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meta_);
-                meta_ = subBuilder.buildPartial();
-              }
+            case 10:
+              {
+                com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder subBuilder = null;
+                if (meta_ != null) {
+                  subBuilder = meta_.toBuilder();
+                }
+                meta_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(meta_);
+                  meta_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                roles_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.RolesPlumbing.Role>();
-                mutable_bitField0_ |= 0x00000001;
+                break;
               }
-              roles_.add(
-                  input.readMessage(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
-              if (rateLimit_ != null) {
-                subBuilder = rateLimit_.toBuilder();
+            case 18:
+              {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  roles_ =
+                      new java.util.ArrayList<com.strongdm.api.v1.plumbing.RolesPlumbing.Role>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                roles_.add(
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.RolesPlumbing.Role.parser(),
+                        extensionRegistry));
+                break;
               }
-              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(rateLimit_);
-                rateLimit_ = subBuilder.buildPartial();
-              }
+            case 26:
+              {
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+                if (rateLimit_ != null) {
+                  subBuilder = rateLimit_.toBuilder();
+                }
+                rateLimit_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(rateLimit_);
+                  rateLimit_ = subBuilder.buildPartial();
+                }
 
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                break;
               }
-              break;
-            }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           roles_ = java.util.Collections.unmodifiableList(roles_);
@@ -9503,44 +10776,57 @@ public final class RolesPlumbing {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListResponse_descriptor;
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleListResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListResponse_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.RolesPlumbing
+          .internal_static_v1_RoleListResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.Builder.class);
     }
 
     public static final int META_FIELD_NUMBER = 1;
     private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
     /**
+     *
+     *
      * <pre>
      * Paging information for the query.
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     *
      * @return Whether the meta field is set.
      */
     public boolean hasMeta() {
       return meta_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Paging information for the query.
      * </pre>
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
+     *
      * @return The meta.
      */
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
-      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+      return meta_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance()
+          : meta_;
     }
     /**
+     *
+     *
      * <pre>
      * Paging information for the query.
      * </pre>
@@ -9554,6 +10840,8 @@ public final class RolesPlumbing {
     public static final int ROLES_FIELD_NUMBER = 2;
     private java.util.List<com.strongdm.api.v1.plumbing.RolesPlumbing.Role> roles_;
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
@@ -9564,17 +10852,21 @@ public final class RolesPlumbing {
       return roles_;
     }
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
      *
      * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
      */
-    public java.util.List<? extends com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+    public java.util.List<? extends com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
         getRolesOrBuilderList() {
       return roles_;
     }
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
@@ -9585,6 +10877,8 @@ public final class RolesPlumbing {
       return roles_.size();
     }
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
@@ -9595,42 +10889,53 @@ public final class RolesPlumbing {
       return roles_.get(index);
     }
     /**
+     *
+     *
      * <pre>
      * A single page of results matching the list request criteria.
      * </pre>
      *
      * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRolesOrBuilder(
-        int index) {
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRolesOrBuilder(int index) {
       return roles_.get(index);
     }
 
     public static final int RATE_LIMIT_FIELD_NUMBER = 3;
     private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return Whether the rateLimit field is set.
      */
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The rateLimit.
      */
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
-      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+      return rateLimit_ == null
+          ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+          : rateLimit_;
     }
     /**
+     *
+     *
      * <pre>
      * Rate limit information.
      * </pre>
@@ -9642,6 +10947,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -9653,8 +10959,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
@@ -9674,16 +10979,13 @@ public final class RolesPlumbing {
 
       size = 0;
       if (meta_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getMeta());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
       for (int i = 0; i < roles_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, roles_.get(i));
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, roles_.get(i));
       }
       if (rateLimit_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getRateLimit());
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getRateLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9693,24 +10995,22 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse other = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse) obj;
 
       if (hasMeta() != other.hasMeta()) return false;
       if (hasMeta()) {
-        if (!getMeta()
-            .equals(other.getMeta())) return false;
+        if (!getMeta().equals(other.getMeta())) return false;
       }
-      if (!getRolesList()
-          .equals(other.getRolesList())) return false;
+      if (!getRolesList().equals(other.getRolesList())) return false;
       if (hasRateLimit() != other.hasRateLimit()) return false;
       if (hasRateLimit()) {
-        if (!getRateLimit()
-            .equals(other.getRateLimit())) return false;
+        if (!getRateLimit().equals(other.getRateLimit())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -9741,87 +11041,94 @@ public final class RolesPlumbing {
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse prototype) {
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -9831,6 +11138,8 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * RoleListResponse returns a list of Roles that meet the criteria of a
      * RoleListRequest.
@@ -9838,21 +11147,24 @@ public final class RolesPlumbing {
      *
      * Protobuf type {@code v1.RoleListResponse}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.RoleListResponse)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListResponse_descriptor;
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleListResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListResponse_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleListResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.class, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.newBuilder()
@@ -9860,17 +11172,17 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
           getRolesFieldBuilder();
         }
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -9896,13 +11208,14 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_RoleListResponse_descriptor;
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.RolesPlumbing
+            .internal_static_v1_RoleListResponse_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse getDefaultInstanceForType() {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse
+          getDefaultInstanceForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.getDefaultInstance();
       }
 
@@ -9917,7 +11230,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse result = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse(this);
         int from_bitField0_ = bitField0_;
         if (metaBuilder_ == null) {
           result.meta_ = meta_;
@@ -9946,38 +11260,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -9985,7 +11302,9 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.getDefaultInstance()) return this;
+        if (other
+            == com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.getDefaultInstance())
+          return this;
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
@@ -10007,9 +11326,10 @@ public final class RolesPlumbing {
               rolesBuilder_ = null;
               roles_ = other.roles_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              rolesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getRolesFieldBuilder() : null;
+              rolesBuilder_ =
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                      ? getRolesFieldBuilder()
+                      : null;
             } else {
               rolesBuilder_.addAllMessages(other.roles_);
             }
@@ -10037,7 +11357,9 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse)
+                  e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10046,38 +11368,52 @@ public final class RolesPlumbing {
         }
         return this;
       }
+
       private int bitField0_;
 
       private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> metaBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder>
+          metaBuilder_;
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
        *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
+       *
        * @return Whether the meta field is set.
        */
       public boolean hasMeta() {
         return metaBuilder_ != null || meta_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
        *
        * <code>.v1.ListResponseMetadata meta = 1;</code>
+       *
        * @return The meta.
        */
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
         if (metaBuilder_ == null) {
-          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance()
+              : meta_;
         } else {
           return metaBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
@@ -10098,6 +11434,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
@@ -10116,6 +11454,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
@@ -10126,7 +11466,9 @@ public final class RolesPlumbing {
         if (metaBuilder_ == null) {
           if (meta_ != null) {
             meta_ =
-              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.newBuilder(meta_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             meta_ = value;
           }
@@ -10138,6 +11480,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
@@ -10156,6 +11500,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
@@ -10163,11 +11509,13 @@ public final class RolesPlumbing {
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder getMetaBuilder() {
-        
+
         onChanged();
         return getMetaFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
@@ -10178,11 +11526,14 @@ public final class RolesPlumbing {
         if (metaBuilder_ != null) {
           return metaBuilder_.getMessageOrBuilder();
         } else {
-          return meta_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+          return meta_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance()
+              : meta_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Paging information for the query.
        * </pre>
@@ -10190,32 +11541,41 @@ public final class RolesPlumbing {
        * <code>.v1.ListResponseMetadata meta = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata,
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder>
           getMetaFieldBuilder() {
         if (metaBuilder_ == null) {
-          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder>(
-                  getMeta(),
-                  getParentForChildren(),
-                  isClean());
+          metaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder>(
+                  getMeta(), getParentForChildren(), isClean());
           meta_ = null;
         }
         return metaBuilder_;
       }
 
       private java.util.List<com.strongdm.api.v1.plumbing.RolesPlumbing.Role> roles_ =
-        java.util.Collections.emptyList();
+          java.util.Collections.emptyList();
+
       private void ensureRolesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           roles_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.RolesPlumbing.Role>(roles_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> rolesBuilder_;
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
+          rolesBuilder_;
 
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10230,6 +11590,8 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10244,6 +11606,8 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10258,14 +11622,15 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
        *
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setRoles(
-          int index, com.strongdm.api.v1.plumbing.RolesPlumbing.Role value) {
+      public Builder setRoles(int index, com.strongdm.api.v1.plumbing.RolesPlumbing.Role value) {
         if (rolesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10279,6 +11644,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10297,6 +11664,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10317,14 +11686,15 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
        *
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addRoles(
-          int index, com.strongdm.api.v1.plumbing.RolesPlumbing.Role value) {
+      public Builder addRoles(int index, com.strongdm.api.v1.plumbing.RolesPlumbing.Role value) {
         if (rolesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10338,6 +11708,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10356,6 +11728,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10374,6 +11748,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10384,8 +11760,7 @@ public final class RolesPlumbing {
           java.lang.Iterable<? extends com.strongdm.api.v1.plumbing.RolesPlumbing.Role> values) {
         if (rolesBuilder_ == null) {
           ensureRolesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, roles_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(values, roles_);
           onChanged();
         } else {
           rolesBuilder_.addAllMessages(values);
@@ -10393,6 +11768,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10410,6 +11787,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10427,39 +11806,44 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
        *
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder getRolesBuilder(
-          int index) {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder getRolesBuilder(int index) {
         return getRolesFieldBuilder().getBuilder(index);
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
        *
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRolesOrBuilder(
-          int index) {
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder getRolesOrBuilder(int index) {
         if (rolesBuilder_ == null) {
-          return roles_.get(index);  } else {
+          return roles_.get(index);
+        } else {
           return rolesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
        *
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<? extends com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
-           getRolesOrBuilderList() {
+      public java.util.List<? extends com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
+          getRolesOrBuilderList() {
         if (rolesBuilder_ != null) {
           return rolesBuilder_.getMessageOrBuilderList();
         } else {
@@ -10467,6 +11851,8 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
@@ -10474,42 +11860,49 @@ public final class RolesPlumbing {
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder addRolesBuilder() {
-        return getRolesFieldBuilder().addBuilder(
-            com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance());
+        return getRolesFieldBuilder()
+            .addBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance());
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
        *
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder addRolesBuilder(
-          int index) {
-        return getRolesFieldBuilder().addBuilder(
-            index, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance());
+      public com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder addRolesBuilder(int index) {
+        return getRolesFieldBuilder()
+            .addBuilder(
+                index, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance());
       }
       /**
+       *
+       *
        * <pre>
        * A single page of results matching the list request criteria.
        * </pre>
        *
        * <code>repeated .v1.Role roles = 2 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder> 
-           getRolesBuilderList() {
+      public java.util.List<com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder>
+          getRolesBuilderList() {
         return getRolesFieldBuilder().getBuilderList();
       }
+
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder> 
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>
           getRolesFieldBuilder() {
         if (rolesBuilder_ == null) {
-          rolesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
-                  roles_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
+          rolesBuilder_ =
+              new com.google.protobuf.RepeatedFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder,
+                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder>(
+                  roles_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
           roles_ = null;
         }
         return rolesBuilder_;
@@ -10517,34 +11910,47 @@ public final class RolesPlumbing {
 
       private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
+          rateLimitBuilder_;
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return Whether the rateLimit field is set.
        */
       public boolean hasRateLimit() {
         return rateLimitBuilder_ != null || rateLimit_ != null;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
        *
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return The rateLimit.
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
         if (rateLimitBuilder_ == null) {
-          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         } else {
           return rateLimitBuilder_.getMessage();
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -10565,6 +11971,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -10583,6 +11991,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -10593,7 +12003,9 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ == null) {
           if (rateLimit_ != null) {
             rateLimit_ =
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+                com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_)
+                    .mergeFrom(value)
+                    .buildPartial();
           } else {
             rateLimit_ = value;
           }
@@ -10605,6 +12017,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -10623,6 +12037,8 @@ public final class RolesPlumbing {
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -10630,11 +12046,13 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
-        
+
         onChanged();
         return getRateLimitFieldBuilder().getBuilder();
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -10645,11 +12063,14 @@ public final class RolesPlumbing {
         if (rateLimitBuilder_ != null) {
           return rateLimitBuilder_.getMessageOrBuilder();
         } else {
-          return rateLimit_ == null ?
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+          return rateLimit_ == null
+              ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance()
+              : rateLimit_;
         }
       }
       /**
+       *
+       *
        * <pre>
        * Rate limit information.
        * </pre>
@@ -10657,18 +12078,22 @@ public final class RolesPlumbing {
        * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>
           getRateLimitFieldBuilder() {
         if (rateLimitBuilder_ == null) {
-          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
-                  getRateLimit(),
-                  getParentForChildren(),
-                  isClean());
+          rateLimitBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder,
+                  com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(), getParentForChildren(), isClean());
           rateLimit_ = null;
         }
         return rateLimitBuilder_;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10681,12 +12106,13 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.RoleListResponse)
     }
 
     // @@protoc_insertion_point(class_scope:v1.RoleListResponse)
-    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse DEFAULT_INSTANCE;
+    private static final com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse
+        DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse();
     }
@@ -10695,16 +12121,16 @@ public final class RolesPlumbing {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RoleListResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RoleListResponse>() {
-      @java.lang.Override
-      public RoleListResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RoleListResponse(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<RoleListResponse> PARSER =
+        new com.google.protobuf.AbstractParser<RoleListResponse>() {
+          @java.lang.Override
+          public RoleListResponse parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new RoleListResponse(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<RoleListResponse> parser() {
       return PARSER;
@@ -10719,64 +12145,79 @@ public final class RolesPlumbing {
     public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
-  public interface RoleOrBuilder extends
+  public interface RoleOrBuilder
+      extends
       // @@protoc_insertion_point(interface_extends:v1.Role)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     *
+     *
      * <pre>
      * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The id.
      */
     java.lang.String getId();
     /**
+     *
+     *
      * <pre>
      * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for id.
      */
-    com.google.protobuf.ByteString
-        getIdBytes();
+    com.google.protobuf.ByteString getIdBytes();
 
     /**
+     *
+     *
      * <pre>
      * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The name.
      */
     java.lang.String getName();
     /**
+     *
+     *
      * <pre>
      * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for name.
      */
-    com.google.protobuf.ByteString
-        getNameBytes();
+    com.google.protobuf.ByteString getNameBytes();
 
     /**
+     *
+     *
      * <pre>
      * True if the Role is a composite role.
      * </pre>
      *
      * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The composite.
      */
     boolean getComposite();
   }
   /**
+   *
+   *
    * <pre>
    * A Role grants users access to a set of resources. Composite roles have no
    * resource associations of their own, but instead grant access to the combined
@@ -10785,15 +12226,16 @@ public final class RolesPlumbing {
    *
    * Protobuf type {@code v1.Role}
    */
-  public  static final class Role extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public static final class Role extends com.google.protobuf.GeneratedMessageV3
+      implements
       // @@protoc_insertion_point(message_implements:v1.Role)
       RoleOrBuilder {
-  private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
     // Use Role.newBuilder() to construct.
     private Role(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
+
     private Role() {
       id_ = "";
       name_ = "";
@@ -10801,16 +12243,15 @@ public final class RolesPlumbing {
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
       return new Role();
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
     }
+
     private Role(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10829,44 +12270,45 @@ public final class RolesPlumbing {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
 
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 24: {
-
-              composite_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
+                id_ = s;
+                break;
               }
-              break;
-            }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+            case 24:
+              {
+                composite_ = input.readBool();
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_Role_descriptor;
     }
 
@@ -10875,17 +12317,21 @@ public final class RolesPlumbing {
         internalGetFieldAccessorTable() {
       return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_Role_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.class, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder.class);
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.class,
+              com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     *
+     *
      * <pre>
      * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The id.
      */
     public java.lang.String getId() {
@@ -10893,28 +12339,28 @@ public final class RolesPlumbing {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         id_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Unique identifier of the Role.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for id.
      */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
+    public com.google.protobuf.ByteString getIdBytes() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         id_ = b;
         return b;
       } else {
@@ -10925,11 +12371,14 @@ public final class RolesPlumbing {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     *
+     *
      * <pre>
      * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The name.
      */
     public java.lang.String getName() {
@@ -10937,28 +12386,28 @@ public final class RolesPlumbing {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         name_ = s;
         return s;
       }
     }
     /**
+     *
+     *
      * <pre>
      * Unique human-readable name of the Role.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     *
      * @return The bytes for name.
      */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
+    public com.google.protobuf.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         name_ = b;
         return b;
       } else {
@@ -10969,11 +12418,14 @@ public final class RolesPlumbing {
     public static final int COMPOSITE_FIELD_NUMBER = 3;
     private boolean composite_;
     /**
+     *
+     *
      * <pre>
      * True if the Role is a composite role.
      * </pre>
      *
      * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+     *
      * @return The composite.
      */
     public boolean getComposite() {
@@ -10981,6 +12433,7 @@ public final class RolesPlumbing {
     }
 
     private byte memoizedIsInitialized = -1;
+
     @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -10992,8 +12445,7 @@ public final class RolesPlumbing {
     }
 
     @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
@@ -11019,8 +12471,7 @@ public final class RolesPlumbing {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (composite_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, composite_);
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(3, composite_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11030,19 +12481,17 @@ public final class RolesPlumbing {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
       if (!(obj instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.Role)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.RolesPlumbing.Role other = (com.strongdm.api.v1.plumbing.RolesPlumbing.Role) obj;
+      com.strongdm.api.v1.plumbing.RolesPlumbing.Role other =
+          (com.strongdm.api.v1.plumbing.RolesPlumbing.Role) obj;
 
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (getComposite()
-          != other.getComposite()) return false;
+      if (!getId().equals(other.getId())) return false;
+      if (!getName().equals(other.getName())) return false;
+      if (getComposite() != other.getComposite()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11059,95 +12508,100 @@ public final class RolesPlumbing {
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + COMPOSITE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getComposite());
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getComposite());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseDelimitedFrom(java.io.InputStream input)
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
     }
+
+    public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
     }
+
     public static com.strongdm.api.v1.plumbing.RolesPlumbing.Role parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
+
     public static Builder newBuilder(com.strongdm.api.v1.plumbing.RolesPlumbing.Role prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+
     @java.lang.Override
     public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
@@ -11157,6 +12611,8 @@ public final class RolesPlumbing {
       return builder;
     }
     /**
+     *
+     *
      * <pre>
      * A Role grants users access to a set of resources. Composite roles have no
      * resource associations of their own, but instead grant access to the combined
@@ -11165,12 +12621,12 @@ public final class RolesPlumbing {
      *
      * Protobuf type {@code v1.Role}
      */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
         // @@protoc_insertion_point(builder_implements:v1.Role)
         com.strongdm.api.v1.plumbing.RolesPlumbing.RoleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_Role_descriptor;
       }
 
@@ -11179,7 +12635,8 @@ public final class RolesPlumbing {
           internalGetFieldAccessorTable() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_Role_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.class, com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder.class);
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.class,
+                com.strongdm.api.v1.plumbing.RolesPlumbing.Role.Builder.class);
       }
 
       // Construct using com.strongdm.api.v1.plumbing.RolesPlumbing.Role.newBuilder()
@@ -11187,16 +12644,15 @@ public final class RolesPlumbing {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
+
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
+
       @java.lang.Override
       public Builder clear() {
         super.clear();
@@ -11210,8 +12666,7 @@ public final class RolesPlumbing {
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
         return com.strongdm.api.v1.plumbing.RolesPlumbing.internal_static_v1_Role_descriptor;
       }
 
@@ -11231,7 +12686,8 @@ public final class RolesPlumbing {
 
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.RolesPlumbing.Role buildPartial() {
-        com.strongdm.api.v1.plumbing.RolesPlumbing.Role result = new com.strongdm.api.v1.plumbing.RolesPlumbing.Role(this);
+        com.strongdm.api.v1.plumbing.RolesPlumbing.Role result =
+            new com.strongdm.api.v1.plumbing.RolesPlumbing.Role(this);
         result.id_ = id_;
         result.name_ = name_;
         result.composite_ = composite_;
@@ -11243,38 +12699,41 @@ public final class RolesPlumbing {
       public Builder clone() {
         return super.clone();
       }
+
       @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.setField(field, value);
       }
+
       @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
+
       @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
+
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index,
+          java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
+
       @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.strongdm.api.v1.plumbing.RolesPlumbing.Role) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.Role)other);
+          return mergeFrom((com.strongdm.api.v1.plumbing.RolesPlumbing.Role) other);
         } else {
           super.mergeFrom(other);
           return this;
@@ -11282,7 +12741,8 @@ public final class RolesPlumbing {
       }
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.RolesPlumbing.Role other) {
-        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance()) return this;
+        if (other == com.strongdm.api.v1.plumbing.RolesPlumbing.Role.getDefaultInstance())
+          return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -11313,7 +12773,8 @@ public final class RolesPlumbing {
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.RolesPlumbing.Role) e.getUnfinishedMessage();
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.Role) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11325,18 +12786,20 @@ public final class RolesPlumbing {
 
       private java.lang.Object id_ = "";
       /**
+       *
+       *
        * <pre>
        * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           id_ = s;
           return s;
@@ -11345,20 +12808,21 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return The bytes for id.
        */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
+      public com.google.protobuf.ByteString getIdBytes() {
         java.lang.Object ref = id_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           id_ = b;
           return b;
         } else {
@@ -11366,54 +12830,61 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
-          java.lang.String value) {
+      public Builder setId(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         id_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
+
         id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Unique identifier of the Role.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setIdBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         id_ = value;
         onChanged();
         return this;
@@ -11421,18 +12892,20 @@ public final class RolesPlumbing {
 
       private java.lang.Object name_ = "";
       /**
+       *
+       *
        * <pre>
        * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
@@ -11441,20 +12914,21 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return The bytes for name.
        */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
+      public com.google.protobuf.ByteString getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -11462,100 +12936,117 @@ public final class RolesPlumbing {
         }
       }
       /**
+       *
+       *
        * <pre>
        * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The name to set.
        * @return This builder for chaining.
        */
-      public Builder setName(
-          java.lang.String value) {
+      public Builder setName(java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         name_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
+
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * Unique human-readable name of the Role.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
+      public Builder setNameBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         name_ = value;
         onChanged();
         return this;
       }
 
-      private boolean composite_ ;
+      private boolean composite_;
       /**
+       *
+       *
        * <pre>
        * True if the Role is a composite role.
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return The composite.
        */
       public boolean getComposite() {
         return composite_;
       }
       /**
+       *
+       *
        * <pre>
        * True if the Role is a composite role.
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @param value The composite to set.
        * @return This builder for chaining.
        */
       public Builder setComposite(boolean value) {
-        
+
         composite_ = value;
         onChanged();
         return this;
       }
       /**
+       *
+       *
        * <pre>
        * True if the Role is a composite role.
        * </pre>
        *
        * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       *
        * @return This builder for chaining.
        */
       public Builder clearComposite() {
-        
+
         composite_ = false;
         onChanged();
         return this;
       }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11568,12 +13059,12 @@ public final class RolesPlumbing {
         return super.mergeUnknownFields(unknownFields);
       }
 
-
       // @@protoc_insertion_point(builder_scope:v1.Role)
     }
 
     // @@protoc_insertion_point(class_scope:v1.Role)
     private static final com.strongdm.api.v1.plumbing.RolesPlumbing.Role DEFAULT_INSTANCE;
+
     static {
       DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.RolesPlumbing.Role();
     }
@@ -11582,16 +13073,16 @@ public final class RolesPlumbing {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Role>
-        PARSER = new com.google.protobuf.AbstractParser<Role>() {
-      @java.lang.Override
-      public Role parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Role(input, extensionRegistry);
-      }
-    };
+    private static final com.google.protobuf.Parser<Role> PARSER =
+        new com.google.protobuf.AbstractParser<Role>() {
+          @java.lang.Override
+          public Role parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Role(input, extensionRegistry);
+          }
+        };
 
     public static com.google.protobuf.Parser<Role> parser() {
       return PARSER;
@@ -11606,203 +13097,203 @@ public final class RolesPlumbing {
     public com.strongdm.api.v1.plumbing.RolesPlumbing.Role getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
-
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleCreateRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleCreateRequest_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleCreateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleCreateResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleCreateResponse_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleCreateResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleGetRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleGetRequest_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleGetRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleGetResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleGetResponse_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleGetResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleUpdateRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleUpdateRequest_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleUpdateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleUpdateResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleUpdateResponse_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleUpdateResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleDeleteRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleDeleteRequest_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleDeleteRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleDeleteResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleDeleteResponse_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleDeleteResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleListRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleListRequest_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleListRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_RoleListResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_RoleListResponse_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_RoleListResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_Role_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Role_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Role_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
   }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+
+  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+
   static {
     java.lang.String[] descriptorData = {
-      "\n\013roles.proto\022\002v1\032\034google/api/annotation" +
-      "s.proto\032,protoc-gen-swagger/options/anno" +
-      "tations.proto\032\roptions.proto\032\nspec.proto" +
-      "\"`\n\021RoleCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
-      ".CreateRequestMetadata\022\"\n\004role\030\002 \001(\0132\010.v" +
-      "1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\261\001\n\022RoleCreateRespons" +
-      "e\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
-      "eLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N" +
-      "\n\016RoleGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetR" +
-      "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\253" +
-      "\001\n\017RoleGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.Ge" +
-      "tResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 " +
-      "\001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030" +
-      "\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"l\n\021RoleUpdateRequest\022\'\n\004met" +
-      "a\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id" +
-      "\030\002 \001(\t\022\"\n\004role\030\003 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\261\001\n\022RoleUpdateResponse\0224\n\004meta\030\001 \001(\0132" +
-      "\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nr" +
-      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n" +
-      "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDeleteRequ" +
-      "est\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMeta" +
-      "data\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\215\001\n\022RoleDel" +
-      "eteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRes" +
-      "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030" +
-      "\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleListRequest\022%\n\004meta\030" +
-      "\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filter" +
-      "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\226\001\n\020RoleListResponse\022" +
-      "&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\022" +
-      "#\n\005roles\030\002 \003(\0132\010.v1.RoleB\n\362\370\263\007\005\270\363\263\007\001\0225\n\n" +
-      "rate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\"\346\001\n\004Role\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242" +
-      "\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Nam" +
-      "e\260\363\263\007\001\022+\n\tcomposite\030\003 \001(\010B\030\362\370\263\007\023\242\363\263\007\tCom" +
-      "posite\260\363\263\007\001:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A Role.\022/h" +
-      "ttps://www.strongdm.com/docs/api/entitie" +
-      "s#Role2$\022\"{ \"id\": \"7\", \"name\": \"happy-go" +
-      "at\"}2\362\003\n\005Roles\022\245\001\n\006Create\022\025.v1.RoleCreat" +
-      "eRequest\032\026.v1.RoleCreateResponse\"l\202\323\344\223\002\016" +
-      "\"\t/v1/roles:\001*\222AU\"S\n\030Learn how to make a" +
-      " Role\0227https://www.strongdm.com/docs/api" +
-      "/services/Roles#Create\022F\n\003Get\022\022.v1.RoleG" +
-      "etRequest\032\023.v1.RoleGetResponse\"\026\202\323\344\223\002\020\022\016" +
-      "/v1/roles/{id}\022R\n\006Update\022\025.v1.RoleUpdate" +
-      "Request\032\026.v1.RoleUpdateResponse\"\031\202\323\344\223\002\023\032" +
-      "\016/v1/roles/{id}:\001*\022O\n\006Delete\022\025.v1.RoleDe" +
-      "leteRequest\032\026.v1.RoleDeleteResponse\"\026\202\323\344" +
-      "\223\002\020*\016/v1/roles/{id}\022D\n\004List\022\023.v1.RoleLis" +
-      "tRequest\032\024.v1.RoleListResponse\"\021\202\323\344\223\002\013\022\t" +
-      "/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com.strongd" +
-      "m.api.v1.plumbingB\rRolesPlumbingb\006proto3"
+      "\n\013roles.proto\022\002v1\032\034google/api/annotation"
+          + "s.proto\032,protoc-gen-swagger/options/anno"
+          + "tations.proto\032\roptions.proto\032\nspec.proto"
+          + "\"`\n\021RoleCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1"
+          + ".CreateRequestMetadata\022\"\n\004role\030\002 \001(\0132\010.v"
+          + "1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\261\001\n\022RoleCreateRespons"
+          + "e\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetad"
+          + "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Rat"
+          + "eLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N"
+          + "\n\016RoleGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetR"
+          + "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\253"
+          + "\001\n\017RoleGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.Ge"
+          + "tResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 "
+          + "\001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030"
+          + "\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001"
+          + ":\n\372\370\263\007\005\250\363\263\007\001\"l\n\021RoleUpdateRequest\022\'\n\004met"
+          + "a\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id"
+          + "\030\002 \001(\t\022\"\n\004role\030\003 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\"\261\001\n\022RoleUpdateResponse\0224\n\004meta\030\001 \001(\0132"
+          + "\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nr"
+          + "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n"
+          + "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDeleteRequ"
+          + "est\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMeta"
+          + "data\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\215\001\n\022RoleDel"
+          + "eteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRes"
+          + "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030"
+          + "\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001"
+          + ":\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleListRequest\022%\n\004meta\030"
+          + "\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filter"
+          + "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\226\001\n\020RoleListResponse\022"
+          + "&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\022"
+          + "#\n\005roles\030\002 \003(\0132\010.v1.RoleB\n\362\370\263\007\005\270\363\263\007\001\0225\n\n"
+          + "rate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\"\346\001\n\004Role\022\035\n\002id\030\001 \001(\tB\021\362\370\263\007\014\242"
+          + "\363\263\007\002ID\260\363\263\007\001\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Nam"
+          + "e\260\363\263\007\001\022+\n\tcomposite\030\003 \001(\010B\030\362\370\263\007\023\242\363\263\007\tCom"
+          + "posite\260\363\263\007\001:o\372\370\263\007\005\250\363\263\007\001\222Ab*:\n\007A Role.\022/h"
+          + "ttps://www.strongdm.com/docs/api/entitie"
+          + "s#Role2$\022\"{ \"id\": \"7\", \"name\": \"happy-go"
+          + "at\"}2\362\003\n\005Roles\022\245\001\n\006Create\022\025.v1.RoleCreat"
+          + "eRequest\032\026.v1.RoleCreateResponse\"l\202\323\344\223\002\016"
+          + "\"\t/v1/roles:\001*\222AU\"S\n\030Learn how to make a"
+          + " Role\0227https://www.strongdm.com/docs/api"
+          + "/services/Roles#Create\022F\n\003Get\022\022.v1.RoleG"
+          + "etRequest\032\023.v1.RoleGetResponse\"\026\202\323\344\223\002\020\022\016"
+          + "/v1/roles/{id}\022R\n\006Update\022\025.v1.RoleUpdate"
+          + "Request\032\026.v1.RoleUpdateResponse\"\031\202\323\344\223\002\023\032"
+          + "\016/v1/roles/{id}:\001*\022O\n\006Delete\022\025.v1.RoleDe"
+          + "leteRequest\032\026.v1.RoleDeleteResponse\"\026\202\323\344"
+          + "\223\002\020*\016/v1/roles/{id}\022D\n\004List\022\023.v1.RoleLis"
+          + "tRequest\032\024.v1.RoleListResponse\"\021\202\323\344\223\002\013\022\t"
+          + "/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com.strongd"
+          + "m.api.v1.plumbingB\rRolesPlumbingb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
-          com.strongdm.api.v1.plumbing.Options.getDescriptor(),
-          com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
-        });
-    internal_static_v1_RoleCreateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_v1_RoleCreateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleCreateRequest_descriptor,
-        new java.lang.String[] { "Meta", "Role", });
-    internal_static_v1_RoleCreateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_v1_RoleCreateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleCreateResponse_descriptor,
-        new java.lang.String[] { "Meta", "Role", "RateLimit", });
-    internal_static_v1_RoleGetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_v1_RoleGetRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleGetRequest_descriptor,
-        new java.lang.String[] { "Meta", "Id", });
-    internal_static_v1_RoleGetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_v1_RoleGetResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleGetResponse_descriptor,
-        new java.lang.String[] { "Meta", "Role", "RateLimit", });
-    internal_static_v1_RoleUpdateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_v1_RoleUpdateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleUpdateRequest_descriptor,
-        new java.lang.String[] { "Meta", "Id", "Role", });
-    internal_static_v1_RoleUpdateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_v1_RoleUpdateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleUpdateResponse_descriptor,
-        new java.lang.String[] { "Meta", "Role", "RateLimit", });
-    internal_static_v1_RoleDeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_v1_RoleDeleteRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleDeleteRequest_descriptor,
-        new java.lang.String[] { "Meta", "Id", });
-    internal_static_v1_RoleDeleteResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_v1_RoleDeleteResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleDeleteResponse_descriptor,
-        new java.lang.String[] { "Meta", "RateLimit", });
-    internal_static_v1_RoleListRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_v1_RoleListRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleListRequest_descriptor,
-        new java.lang.String[] { "Meta", "Filter", });
-    internal_static_v1_RoleListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_v1_RoleListResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_RoleListResponse_descriptor,
-        new java.lang.String[] { "Meta", "Roles", "RateLimit", });
-    internal_static_v1_Role_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_v1_Role_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_Role_descriptor,
-        new java.lang.String[] { "Id", "Name", "Composite", });
+    descriptor =
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
+            descriptorData,
+            new com.google.protobuf.Descriptors.FileDescriptor[] {
+              com.google.api.AnnotationsProto.getDescriptor(),
+              grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+              com.strongdm.api.v1.plumbing.Options.getDescriptor(),
+              com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
+            });
+    internal_static_v1_RoleCreateRequest_descriptor = getDescriptor().getMessageTypes().get(0);
+    internal_static_v1_RoleCreateRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleCreateRequest_descriptor,
+            new java.lang.String[] {
+              "Meta", "Role",
+            });
+    internal_static_v1_RoleCreateResponse_descriptor = getDescriptor().getMessageTypes().get(1);
+    internal_static_v1_RoleCreateResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleCreateResponse_descriptor,
+            new java.lang.String[] {
+              "Meta", "Role", "RateLimit",
+            });
+    internal_static_v1_RoleGetRequest_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_RoleGetRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleGetRequest_descriptor,
+            new java.lang.String[] {
+              "Meta", "Id",
+            });
+    internal_static_v1_RoleGetResponse_descriptor = getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_RoleGetResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleGetResponse_descriptor,
+            new java.lang.String[] {
+              "Meta", "Role", "RateLimit",
+            });
+    internal_static_v1_RoleUpdateRequest_descriptor = getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_RoleUpdateRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleUpdateRequest_descriptor,
+            new java.lang.String[] {
+              "Meta", "Id", "Role",
+            });
+    internal_static_v1_RoleUpdateResponse_descriptor = getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_RoleUpdateResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleUpdateResponse_descriptor,
+            new java.lang.String[] {
+              "Meta", "Role", "RateLimit",
+            });
+    internal_static_v1_RoleDeleteRequest_descriptor = getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_RoleDeleteRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleDeleteRequest_descriptor,
+            new java.lang.String[] {
+              "Meta", "Id",
+            });
+    internal_static_v1_RoleDeleteResponse_descriptor = getDescriptor().getMessageTypes().get(7);
+    internal_static_v1_RoleDeleteResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleDeleteResponse_descriptor,
+            new java.lang.String[] {
+              "Meta", "RateLimit",
+            });
+    internal_static_v1_RoleListRequest_descriptor = getDescriptor().getMessageTypes().get(8);
+    internal_static_v1_RoleListRequest_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleListRequest_descriptor,
+            new java.lang.String[] {
+              "Meta", "Filter",
+            });
+    internal_static_v1_RoleListResponse_descriptor = getDescriptor().getMessageTypes().get(9);
+    internal_static_v1_RoleListResponse_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_RoleListResponse_descriptor,
+            new java.lang.String[] {
+              "Meta", "Roles", "RateLimit",
+            });
+    internal_static_v1_Role_descriptor = getDescriptor().getMessageTypes().get(10);
+    internal_static_v1_Role_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_Role_descriptor,
+            new java.lang.String[] {
+              "Id", "Name", "Composite",
+            });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -11811,8 +13302,8 @@ public final class RolesPlumbing {
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
+        descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();

@@ -1,138 +1,129 @@
 package com.strongdm.api.v1;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.function.Supplier;
-import java.util.concurrent.TimeUnit;
-import io.grpc.ManagedChannel;
-
-import com.strongdm.api.v1.plumbing.Plumbing;
-import com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata;
-
-import com.strongdm.api.v1.plumbing.PageResult;
-import com.strongdm.api.v1.plumbing.PageIterator;
-
-
 import com.strongdm.api.v1.plumbing.NodesGrpc;
 import com.strongdm.api.v1.plumbing.NodesPlumbing;
-
-import com.strongdm.api.v1.plumbing.RolesGrpc;
-import com.strongdm.api.v1.plumbing.RolesPlumbing;
+import com.strongdm.api.v1.plumbing.PageIterator;
+import com.strongdm.api.v1.plumbing.PageResult;
+import com.strongdm.api.v1.plumbing.Plumbing;
+import com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata;
+import io.grpc.ManagedChannel;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Supplier;
 
 // Nodes are proxies in the strongDM network. They come in two flavors: relays,
 // which communicate with resources, and gateways, which communicate with
 // clients.
 public class Nodes {
-    private final NodesGrpc.NodesBlockingStub stub;
-    private final Client parent;
+  private final NodesGrpc.NodesBlockingStub stub;
+  private final Client parent;
 
-    public Nodes(ManagedChannel channel, String apiKey, Client client) {
-        JwtCallCredential callCredential = new JwtCallCredential(apiKey);
-        this.stub = NodesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
-        this.parent = client;
+  public Nodes(ManagedChannel channel, String apiKey, Client client) {
+    JwtCallCredential callCredential = new JwtCallCredential(apiKey);
+    this.stub = NodesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
+    this.parent = client;
+  }
+
+  private Nodes(NodesGrpc.NodesBlockingStub stub, Client client) {
+    this.stub = stub;
+    this.parent = client;
+  }
+
+  // This function returns a copy of the Nodes service which has
+  // the given deadline set for all method calls.
+  public Nodes withDeadlineAfter(long duration, TimeUnit units) {
+    return new Nodes(this.stub.withDeadlineAfter(duration, units), this.parent);
+  }
+
+  // Create registers a new Node.
+  public NodeCreateResponse create(Node node) throws RpcException {
+    NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
+    builder.setNode(Plumbing.nodeToPlumbing(node));
+    NodesPlumbing.NodeCreateRequest req = builder.build();
+    NodesPlumbing.NodeCreateResponse plumbingResponse;
+    try {
+      plumbingResponse = this.stub.create(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
     }
+    return Plumbing.nodeCreateResponseToPorcelain(plumbingResponse);
+  }
 
-    private Nodes(NodesGrpc.NodesBlockingStub stub, Client client) {
-        this.stub = stub;
-        this.parent = client;
+  // Get reads one Node by ID.
+  public NodeGetResponse get(String id) throws RpcException {
+    NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
+    builder.setId(id);
+    NodesPlumbing.NodeGetRequest req = builder.build();
+    NodesPlumbing.NodeGetResponse plumbingResponse;
+    try {
+      plumbingResponse = this.stub.get(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
     }
+    return Plumbing.nodeGetResponseToPorcelain(plumbingResponse);
+  }
 
-    // This function returns a copy of the Nodes service which has
-    // the given deadline set for all method calls.
-    public Nodes withDeadlineAfter(long duration, TimeUnit units) {
-        return new Nodes(this.stub.withDeadlineAfter(duration, units), this.parent);
+  // Update patches a Node by ID.
+  public NodeUpdateResponse update(Node node) throws RpcException {
+    NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
+    builder.setNode(Plumbing.nodeToPlumbing(node));
+    NodesPlumbing.NodeUpdateRequest req = builder.build();
+    NodesPlumbing.NodeUpdateResponse plumbingResponse;
+    try {
+      plumbingResponse = this.stub.update(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
     }
+    return Plumbing.nodeUpdateResponseToPorcelain(plumbingResponse);
+  }
 
-    
-    // Create registers a new Node.
-    public NodeCreateResponse create(Node node) throws RpcException {
-        NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
-        builder.setNode(Plumbing.nodeToPlumbing(node));
-        NodesPlumbing.NodeCreateRequest req = builder.build();
-        NodesPlumbing.NodeCreateResponse plumbingResponse;
-        try {
-            plumbingResponse = this.stub.create(req);
-        } catch(Exception e) {
-            throw Plumbing.exceptionToPorcelain(e);
-        }
-        return Plumbing.nodeCreateResponseToPorcelain(plumbingResponse);
+  // Delete removes a Node by ID.
+  public NodeDeleteResponse delete(String id) throws RpcException {
+    NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
+    builder.setId(id);
+    NodesPlumbing.NodeDeleteRequest req = builder.build();
+    NodesPlumbing.NodeDeleteResponse plumbingResponse;
+    try {
+      plumbingResponse = this.stub.delete(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
     }
-    
-    // Get reads one Node by ID.
-    public NodeGetResponse get(String id) throws RpcException {
-        NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
-        builder.setId(id);
-        NodesPlumbing.NodeGetRequest req = builder.build();
-        NodesPlumbing.NodeGetResponse plumbingResponse;
-        try {
-            plumbingResponse = this.stub.get(req);
-        } catch(Exception e) {
-            throw Plumbing.exceptionToPorcelain(e);
-        }
-        return Plumbing.nodeGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.nodeDeleteResponseToPorcelain(plumbingResponse);
+  }
+
+  // List gets a list of Nodes matching a given set of criteria.
+  public Iterable<Node> list(String filter) throws RpcException {
+    NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
+    builder.setFilter(filter);
+
+    ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
+    Object pageSizeOption = this.parent.testOptions.get("PageSize");
+    if (pageSizeOption instanceof Integer) {
+      metaBuilder.setLimit((int) pageSizeOption);
     }
-    
-    // Update patches a Node by ID.
-    public NodeUpdateResponse update(Node node) throws RpcException {
-        NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
-        builder.setNode(Plumbing.nodeToPlumbing(node));
-        NodesPlumbing.NodeUpdateRequest req = builder.build();
-        NodesPlumbing.NodeUpdateResponse plumbingResponse;
-        try {
-            plumbingResponse = this.stub.update(req);
-        } catch(Exception e) {
-            throw Plumbing.exceptionToPorcelain(e);
-        }
-        return Plumbing.nodeUpdateResponseToPorcelain(plumbingResponse);
-    }
-    
-    // Delete removes a Node by ID.
-    public NodeDeleteResponse delete(String id) throws RpcException {
-        NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
-        builder.setId(id);
-        NodesPlumbing.NodeDeleteRequest req = builder.build();
-        NodesPlumbing.NodeDeleteResponse plumbingResponse;
-        try {
-            plumbingResponse = this.stub.delete(req);
-        } catch(Exception e) {
-            throw Plumbing.exceptionToPorcelain(e);
-        }
-        return Plumbing.nodeDeleteResponseToPorcelain(plumbingResponse);
-    }
-    
-    // List gets a list of Nodes matching a given set of criteria.
-    public Iterable<Node> list(String filter) throws RpcException {
-        NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
-        builder.setFilter(filter);
+    builder.setMeta(metaBuilder);
 
-        ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
-        Object pageSizeOption = this.parent.testOptions.get("PageSize");
-        if (pageSizeOption instanceof Integer) {
-            metaBuilder.setLimit((int)pageSizeOption);
-        }
-        builder.setMeta(metaBuilder);
+    Supplier<PageResult<Node>> pageFetcher =
+        () -> {
+          // Note: this closure captures and reuses the builder to set the next page
 
-        Supplier<PageResult<Node> > pageFetcher = () -> {
-            // Note: this closure captures and reuses the builder to set the next page
+          NodesPlumbing.NodeListRequest req = builder.build();
+          NodesPlumbing.NodeListResponse plumbingResponse;
+          plumbingResponse = this.stub.list(req);
 
-            NodesPlumbing.NodeListRequest req = builder.build();
-            NodesPlumbing.NodeListResponse plumbingResponse;
-            plumbingResponse = this.stub.list(req);
+          List<Node> page = Plumbing.repeatedNodeToPorcelain(plumbingResponse.getNodesList());
 
-            List<Node> page =
-                Plumbing.repeatedNodeToPorcelain(plumbingResponse.getNodesList());
+          boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
+          builder.setMeta(
+              ListRequestMetadata.newBuilder()
+                  .setCursor(plumbingResponse.getMeta().getNextCursor()));
 
-            boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
-            builder.setMeta(ListRequestMetadata.newBuilder().setCursor(plumbingResponse.getMeta().getNextCursor()));
-
-            return new PageResult<Node>(page, hasNextCursor);
+          return new PageResult<Node>(page, hasNextCursor);
         };
 
-        Iterator<Node> iterator = new PageIterator<>(pageFetcher);
+    Iterator<Node> iterator = new PageIterator<>(pageFetcher);
 
-        return () -> iterator;
-    }
-    
+    return () -> iterator;
+  }
 }
