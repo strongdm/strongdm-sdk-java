@@ -619,42 +619,35 @@ public class Plumbing {
         }
 
         com.google.rpc.Status status = io.grpc.protobuf.StatusProto.fromThrowable(e);
-        try {
-            for (com.google.protobuf.Any any : status.getDetailsList()) {
-                if (any.is(com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError.class)) {
-                    com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.AlreadyExistsError.class);
-                    return new com.strongdm.api.v1.AlreadyExistsException(e.getMessage(), plumbing.getEntity());
+        
+        switch (status.getCode()) {
+            case Code.DEADLINE_EXCEEDED_VALUE:
+                return new com.strongdm.api.v1.TimeoutException(e.getMessage());
+            case Code.ALREADY_EXISTS_VALUE:
+                return new com.strongdm.api.v1.AlreadyExistsException(e.getMessage());
+            case Code.INVALID_ARGUMENT_VALUE:
+                return new com.strongdm.api.v1.BadRequestException(e.getMessage());
+            case Code.INTERNAL_VALUE:
+                return new com.strongdm.api.v1.InternalException(e.getMessage());
+            case Code.PERMISSION_DENIED_VALUE:
+                return new com.strongdm.api.v1.PermissionException(e.getMessage());
+            case Code.UNAUTHENTICATED_VALUE:
+                return new com.strongdm.api.v1.AuthenticationException(e.getMessage());
+            case Code.RESOURCE_EXHAUSTED_VALUE:
+                try {
+                    for (com.google.protobuf.Any any : status.getDetailsList()) {
+                        if (any.is(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.class)) {
+                            com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.class);
+                            return new com.strongdm.api.v1.RateLimitException(e.getMessage(),  Plumbing.rateLimitMetadataToPorcelain(plumbing));
+                        }
+                    }
+                } catch (com.google.protobuf.InvalidProtocolBufferException ex) {   
                 }
-                if (any.is(com.strongdm.api.v1.plumbing.Spec.NotFoundError.class)) {
-                    com.strongdm.api.v1.plumbing.Spec.NotFoundError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.NotFoundError.class);
-                    return new com.strongdm.api.v1.NotFoundException(e.getMessage(), plumbing.getEntity());
-                }
-                if (any.is(com.strongdm.api.v1.plumbing.Spec.BadRequestError.class)) {
-                    com.strongdm.api.v1.plumbing.Spec.BadRequestError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.BadRequestError.class);
-                    return new com.strongdm.api.v1.BadRequestException(e.getMessage());
-                }
-                if (any.is(com.strongdm.api.v1.plumbing.Spec.AuthenticationError.class)) {
-                    com.strongdm.api.v1.plumbing.Spec.AuthenticationError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.AuthenticationError.class);
-                    return new com.strongdm.api.v1.AuthenticationException(e.getMessage());
-                }
-                if (any.is(com.strongdm.api.v1.plumbing.Spec.PermissionError.class)) {
-                    com.strongdm.api.v1.plumbing.Spec.PermissionError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.PermissionError.class);
-                    return new com.strongdm.api.v1.PermissionException(e.getMessage());
-                }
-                if (any.is(com.strongdm.api.v1.plumbing.Spec.InternalError.class)) {
-                    com.strongdm.api.v1.plumbing.Spec.InternalError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.InternalError.class);
-                    return new com.strongdm.api.v1.InternalException(e.getMessage());
-                }
-                if (any.is(com.strongdm.api.v1.plumbing.Spec.RateLimitError.class)) {
-                    com.strongdm.api.v1.plumbing.Spec.RateLimitError plumbing = any.unpack(com.strongdm.api.v1.plumbing.Spec.RateLimitError.class);
-                    return new com.strongdm.api.v1.RateLimitException(e.getMessage(),  Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
-                }
-            }
-        } catch (com.google.protobuf.InvalidProtocolBufferException anyParseException) {
-        }
-
-        if (status.getCode() == Code.DEADLINE_EXCEEDED_VALUE) {
-            return new com.strongdm.api.v1.TimeoutException(e.getMessage());
+                // this should never happen, but in case it does, fallback to an RpcException to avoid 
+                // returning a RateLimitException with a null metadata.
+                break;
+            case Code.NOT_FOUND_VALUE:
+                return new com.strongdm.api.v1.NotFoundException(e.getMessage());  
         }
 
         return new com.strongdm.api.v1.RpcException(e.getMessage(), status.getCode());

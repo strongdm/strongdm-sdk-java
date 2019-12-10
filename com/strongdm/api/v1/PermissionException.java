@@ -1,9 +1,5 @@
 package com.strongdm.api.v1;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.ArrayList;
-
 // PermissionException is used to specify a permissions violation
 public final class PermissionException extends RpcException {
     static final long serialVersionUID = 1;
