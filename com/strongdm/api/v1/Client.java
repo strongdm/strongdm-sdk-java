@@ -27,6 +27,12 @@ public class Client {
     return this.nodes;
   }
 
+  private final RoleAttachments roleAttachments;
+
+  public RoleAttachments roleAttachments() {
+    return this.roleAttachments;
+  }
+
   private final Roles roles;
 
   // Roles are tools for controlling user access to resources. Each Role holds a
@@ -52,6 +58,7 @@ public class Client {
       }
       this.channel = builder.build();
       this.nodes = new Nodes(this.channel, this);
+      this.roleAttachments = new RoleAttachments(this.channel, this);
       this.roles = new Roles(this.channel, this);
 
     } catch (Exception e) {

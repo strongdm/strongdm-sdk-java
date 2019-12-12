@@ -3,6 +3,7 @@ package com.strongdm.api.v1.plumbing;
 import com.google.protobuf.Timestamp;
 import com.google.rpc.Code;
 import com.strongdm.api.v1.plumbing.NodesPlumbing.*;
+import com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.*;
 import com.strongdm.api.v1.plumbing.RolesPlumbing.*;
 import com.strongdm.api.v1.plumbing.Spec.*;
 import java.util.Collection;
@@ -474,6 +475,172 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Gateway> porcelains) {
     return porcelains.stream()
         .map(porcelain -> gatewayToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RoleAttachmentCreateResponse
+      roleAttachmentCreateResponseToPorcelain(RoleAttachmentCreateResponse plumbing) {
+    com.strongdm.api.v1.RoleAttachmentCreateResponse porcelain =
+        new com.strongdm.api.v1.RoleAttachmentCreateResponse();
+    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRoleAttachment(Plumbing.roleAttachmentToPorcelain(plumbing.getRoleAttachment()));
+    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static RoleAttachmentCreateResponse roleAttachmentCreateResponseToPlumbing(
+      com.strongdm.api.v1.RoleAttachmentCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RoleAttachmentCreateResponse.Builder builder = RoleAttachmentCreateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.createResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRoleAttachment() != null) {
+      builder.setRoleAttachment(Plumbing.roleAttachmentToPlumbing(porcelain.getRoleAttachment()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RoleAttachmentCreateResponse>
+      repeatedRoleAttachmentCreateResponseToPorcelain(
+          Collection<RoleAttachmentCreateResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> roleAttachmentCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RoleAttachmentCreateResponse> repeatedRoleAttachmentCreateResponseToPlumbing(
+      Collection<com.strongdm.api.v1.RoleAttachmentCreateResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> roleAttachmentCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RoleAttachmentGetResponse roleAttachmentGetResponseToPorcelain(
+      RoleAttachmentGetResponse plumbing) {
+    com.strongdm.api.v1.RoleAttachmentGetResponse porcelain =
+        new com.strongdm.api.v1.RoleAttachmentGetResponse();
+    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRoleAttachment(Plumbing.roleAttachmentToPorcelain(plumbing.getRoleAttachment()));
+    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static RoleAttachmentGetResponse roleAttachmentGetResponseToPlumbing(
+      com.strongdm.api.v1.RoleAttachmentGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RoleAttachmentGetResponse.Builder builder = RoleAttachmentGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.getResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRoleAttachment() != null) {
+      builder.setRoleAttachment(Plumbing.roleAttachmentToPlumbing(porcelain.getRoleAttachment()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RoleAttachmentGetResponse>
+      repeatedRoleAttachmentGetResponseToPorcelain(
+          Collection<RoleAttachmentGetResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> roleAttachmentGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RoleAttachmentGetResponse> repeatedRoleAttachmentGetResponseToPlumbing(
+      Collection<com.strongdm.api.v1.RoleAttachmentGetResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> roleAttachmentGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RoleAttachmentDeleteResponse
+      roleAttachmentDeleteResponseToPorcelain(RoleAttachmentDeleteResponse plumbing) {
+    com.strongdm.api.v1.RoleAttachmentDeleteResponse porcelain =
+        new com.strongdm.api.v1.RoleAttachmentDeleteResponse();
+    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static RoleAttachmentDeleteResponse roleAttachmentDeleteResponseToPlumbing(
+      com.strongdm.api.v1.RoleAttachmentDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RoleAttachmentDeleteResponse.Builder builder = RoleAttachmentDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.deleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.rateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RoleAttachmentDeleteResponse>
+      repeatedRoleAttachmentDeleteResponseToPorcelain(
+          Collection<RoleAttachmentDeleteResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> roleAttachmentDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RoleAttachmentDeleteResponse> repeatedRoleAttachmentDeleteResponseToPlumbing(
+      Collection<com.strongdm.api.v1.RoleAttachmentDeleteResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> roleAttachmentDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RoleAttachment roleAttachmentToPorcelain(
+      RoleAttachment plumbing) {
+    com.strongdm.api.v1.RoleAttachment porcelain = new com.strongdm.api.v1.RoleAttachment();
+    porcelain.setId(plumbing.getId());
+    porcelain.setCompositeRoleId(plumbing.getCompositeRoleId());
+    porcelain.setAttachedRoleId(plumbing.getAttachedRoleId());
+    return porcelain;
+  }
+
+  public static RoleAttachment roleAttachmentToPlumbing(
+      com.strongdm.api.v1.RoleAttachment porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RoleAttachment.Builder builder = RoleAttachment.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getCompositeRoleId() != null) {
+      builder.setCompositeRoleId(porcelain.getCompositeRoleId());
+    }
+    if (porcelain.getAttachedRoleId() != null) {
+      builder.setAttachedRoleId(porcelain.getAttachedRoleId());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RoleAttachment> repeatedRoleAttachmentToPorcelain(
+      Collection<RoleAttachment> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> roleAttachmentToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RoleAttachment> repeatedRoleAttachmentToPlumbing(
+      Collection<com.strongdm.api.v1.RoleAttachment> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> roleAttachmentToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
