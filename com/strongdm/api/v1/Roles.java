@@ -21,9 +21,9 @@ public class Roles {
   private final RolesGrpc.RolesBlockingStub stub;
   private final Client parent;
 
-  public Roles(ManagedChannel channel, String apiKey, Client client) {
-    JwtCallCredential callCredential = new JwtCallCredential(apiKey);
-    this.stub = RolesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
+  public Roles(ManagedChannel channel, Client client) {
+
+    this.stub = RolesGrpc.newBlockingStub(channel);
     this.parent = client;
   }
 
@@ -45,7 +45,10 @@ public class Roles {
     RolesPlumbing.RoleCreateRequest req = builder.build();
     RolesPlumbing.RoleCreateResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.create(req);
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Roles.Create", req))
+              .create(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -59,7 +62,8 @@ public class Roles {
     RolesPlumbing.RoleGetRequest req = builder.build();
     RolesPlumbing.RoleGetResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.get(req);
+      plumbingResponse =
+          this.stub.withCallCredentials(this.parent.getCallCredentials("Roles.Get", req)).get(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -73,7 +77,10 @@ public class Roles {
     RolesPlumbing.RoleUpdateRequest req = builder.build();
     RolesPlumbing.RoleUpdateResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.update(req);
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Roles.Update", req))
+              .update(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -87,7 +94,10 @@ public class Roles {
     RolesPlumbing.RoleDeleteRequest req = builder.build();
     RolesPlumbing.RoleDeleteResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.delete(req);
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Roles.Delete", req))
+              .delete(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -112,7 +122,10 @@ public class Roles {
 
           RolesPlumbing.RoleListRequest req = builder.build();
           RolesPlumbing.RoleListResponse plumbingResponse;
-          plumbingResponse = this.stub.list(req);
+          plumbingResponse =
+              this.stub
+                  .withCallCredentials(this.parent.getCallCredentials("Roles.List", req))
+                  .list(req);
 
           List<Role> page = Plumbing.repeatedRoleToPorcelain(plumbingResponse.getRolesList());
 

@@ -3,12 +3,13 @@ package com.strongdm.api.v1;
 import io.grpc.*;
 import java.util.concurrent.Executor;
 
-/** Created by rayt on 10/6/16. */
-public class JwtCallCredential extends CallCredentials {
-  private final String jwt;
+public class SigningCallCredential extends CallCredentials {
+  private final String apiAccessKey;
+  private final String signature;
 
-  public JwtCallCredential(String jwt) {
-    this.jwt = jwt;
+  public SigningCallCredential(String apiAccessKey, String signature) {
+    this.apiAccessKey = apiAccessKey;
+    this.signature = signature;
   }
 
   @Override
@@ -20,9 +21,12 @@ public class JwtCallCredential extends CallCredentials {
           public void run() {
             try {
               Metadata headers = new Metadata();
-              Metadata.Key<String> jwtKey =
-                  Metadata.Key.of("Authorization", Metadata.ASCII_STRING_MARSHALLER);
-              headers.put(jwtKey, jwt);
+              Metadata.Key<String> apiAccessMD =
+                  Metadata.Key.of("x-sdm-authentication", Metadata.ASCII_STRING_MARSHALLER);
+              headers.put(apiAccessMD, apiAccessKey);
+              Metadata.Key<String> signatureMD =
+                  Metadata.Key.of("x-sdm-signature", Metadata.ASCII_STRING_MARSHALLER);
+              headers.put(signatureMD, signature);
               metadataApplier.apply(headers);
             } catch (Throwable e) {
               e.printStackTrace();

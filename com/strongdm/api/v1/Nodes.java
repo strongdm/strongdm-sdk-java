@@ -19,9 +19,9 @@ public class Nodes {
   private final NodesGrpc.NodesBlockingStub stub;
   private final Client parent;
 
-  public Nodes(ManagedChannel channel, String apiKey, Client client) {
-    JwtCallCredential callCredential = new JwtCallCredential(apiKey);
-    this.stub = NodesGrpc.newBlockingStub(channel).withCallCredentials(callCredential);
+  public Nodes(ManagedChannel channel, Client client) {
+
+    this.stub = NodesGrpc.newBlockingStub(channel);
     this.parent = client;
   }
 
@@ -43,7 +43,10 @@ public class Nodes {
     NodesPlumbing.NodeCreateRequest req = builder.build();
     NodesPlumbing.NodeCreateResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.create(req);
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Nodes.Create", req))
+              .create(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -57,7 +60,8 @@ public class Nodes {
     NodesPlumbing.NodeGetRequest req = builder.build();
     NodesPlumbing.NodeGetResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.get(req);
+      plumbingResponse =
+          this.stub.withCallCredentials(this.parent.getCallCredentials("Nodes.Get", req)).get(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -71,7 +75,10 @@ public class Nodes {
     NodesPlumbing.NodeUpdateRequest req = builder.build();
     NodesPlumbing.NodeUpdateResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.update(req);
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Nodes.Update", req))
+              .update(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -85,7 +92,10 @@ public class Nodes {
     NodesPlumbing.NodeDeleteRequest req = builder.build();
     NodesPlumbing.NodeDeleteResponse plumbingResponse;
     try {
-      plumbingResponse = this.stub.delete(req);
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Nodes.Delete", req))
+              .delete(req);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
@@ -110,7 +120,10 @@ public class Nodes {
 
           NodesPlumbing.NodeListRequest req = builder.build();
           NodesPlumbing.NodeListResponse plumbingResponse;
-          plumbingResponse = this.stub.list(req);
+          plumbingResponse =
+              this.stub
+                  .withCallCredentials(this.parent.getCallCredentials("Nodes.List", req))
+                  .list(req);
 
           List<Node> page = Plumbing.repeatedNodeToPorcelain(plumbingResponse.getNodesList());
 
