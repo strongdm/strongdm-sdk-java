@@ -88,11 +88,10 @@ public class RoleAttachments {
   }
 
   // List gets a list of RoleAttachments matching a given set of criteria.
-  public Iterable<RoleAttachment> list(String filter, String compositeRoleId) throws RpcException {
+  public Iterable<RoleAttachment> list(String filter) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentListRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentListRequest.newBuilder();
     builder.setFilter(filter);
-    builder.setCompositeRoleId(compositeRoleId);
 
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");

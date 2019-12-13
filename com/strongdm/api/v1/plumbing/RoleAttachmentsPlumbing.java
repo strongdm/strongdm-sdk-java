@@ -7140,19 +7140,6 @@ public final class RoleAttachmentsPlumbing {
      * @return The bytes for filter.
      */
     com.google.protobuf.ByteString getFilterBytes();
-
-    /**
-     * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The compositeRoleId.
-     */
-    java.lang.String getCompositeRoleId();
-    /**
-     * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for compositeRoleId.
-     */
-    com.google.protobuf.ByteString getCompositeRoleIdBytes();
   }
   /**
    *
@@ -7175,7 +7162,6 @@ public final class RoleAttachmentsPlumbing {
 
     private RoleAttachmentListRequest() {
       filter_ = "";
-      compositeRoleId_ = "";
     }
 
     @java.lang.Override
@@ -7229,13 +7215,6 @@ public final class RoleAttachmentsPlumbing {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 filter_ = s;
-                break;
-              }
-            case 26:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                compositeRoleId_ = s;
                 break;
               }
             default:
@@ -7365,41 +7344,6 @@ public final class RoleAttachmentsPlumbing {
       }
     }
 
-    public static final int COMPOSITE_ROLE_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object compositeRoleId_;
-    /**
-     * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The compositeRoleId.
-     */
-    public java.lang.String getCompositeRoleId() {
-      java.lang.Object ref = compositeRoleId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        compositeRoleId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for compositeRoleId.
-     */
-    public com.google.protobuf.ByteString getCompositeRoleIdBytes() {
-      java.lang.Object ref = compositeRoleId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        compositeRoleId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -7420,9 +7364,6 @@ public final class RoleAttachmentsPlumbing {
       if (!getFilterBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
       }
-      if (!getCompositeRoleIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, compositeRoleId_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -7437,9 +7378,6 @@ public final class RoleAttachmentsPlumbing {
       }
       if (!getFilterBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
-      }
-      if (!getCompositeRoleIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, compositeRoleId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7464,7 +7402,6 @@ public final class RoleAttachmentsPlumbing {
         if (!getMeta().equals(other.getMeta())) return false;
       }
       if (!getFilter().equals(other.getFilter())) return false;
-      if (!getCompositeRoleId().equals(other.getCompositeRoleId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7482,8 +7419,6 @@ public final class RoleAttachmentsPlumbing {
       }
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
-      hash = (37 * hash) + COMPOSITE_ROLE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getCompositeRoleId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7649,8 +7584,6 @@ public final class RoleAttachmentsPlumbing {
         }
         filter_ = "";
 
-        compositeRoleId_ = "";
-
         return this;
       }
 
@@ -7690,7 +7623,6 @@ public final class RoleAttachmentsPlumbing {
           result.meta_ = metaBuilder_.build();
         }
         result.filter_ = filter_;
-        result.compositeRoleId_ = compositeRoleId_;
         onBuilt();
         return result;
       }
@@ -7754,10 +7686,6 @@ public final class RoleAttachmentsPlumbing {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
-          onChanged();
-        }
-        if (!other.getCompositeRoleId().isEmpty()) {
-          compositeRoleId_ = other.compositeRoleId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8080,82 +8008,6 @@ public final class RoleAttachmentsPlumbing {
         checkByteStringIsUtf8(value);
 
         filter_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object compositeRoleId_ = "";
-      /**
-       * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The compositeRoleId.
-       */
-      public java.lang.String getCompositeRoleId() {
-        java.lang.Object ref = compositeRoleId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          compositeRoleId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The bytes for compositeRoleId.
-       */
-      public com.google.protobuf.ByteString getCompositeRoleIdBytes() {
-        java.lang.Object ref = compositeRoleId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-          compositeRoleId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The compositeRoleId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCompositeRoleId(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        compositeRoleId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearCompositeRoleId() {
-
-        compositeRoleId_ = getDefaultInstance().getCompositeRoleId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string composite_role_id = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The bytes for compositeRoleId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCompositeRoleIdBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        compositeRoleId_ = value;
         onChanged();
         return this;
       }
@@ -10936,10 +10788,9 @@ public final class RoleAttachmentsPlumbing {
           + "tDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delet"
           + "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_li"
           + "mit\030\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260"
-          + "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\205\001\n\031RoleAttachmentListR"
-          + "equest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMet"
-          + "adata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021com"
-          + "posite_role_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\265\001\n\032Rol"
+          + "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"^\n\031RoleAttachmentListRe"
+          + "quest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMeta"
+          + "data\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\265\001\n\032Rol"
           + "eAttachmentListResponse\022&\n\004meta\030\001 \001(\0132\030."
           + "v1.ListResponseMetadata\0228\n\020role_attachme"
           + "nts\030\002 \003(\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\270\363\263\007"
@@ -10952,7 +10803,7 @@ public final class RoleAttachmentsPlumbing {
           + "\222Av*N\n\021A RoleAttachment.\0229https://www.st"
           + "rongdm.com/docs/api/entities#RoleAttachm"
           + "ent2$\022\"{ \"id\": \"7\", \"name\": \"happy-goat\""
-          + "}2\325\004\n\017RoleAttachments\022\330\001\n\006Create\022\037.v1.Ro"
+          + "}2\277\004\n\017RoleAttachments\022\330\001\n\006Create\022\037.v1.Ro"
           + "leAttachmentCreateRequest\032 .v1.RoleAttac"
           + "hmentCreateResponse\"\212\001\202\323\344\223\002\030\"\023/v1/roleAt"
           + "tachments:\001*\222Ai\"g\n\"Learn how to make a R"
@@ -10963,12 +10814,12 @@ public final class RoleAttachmentsPlumbing {
           + "1/roleAttachments/{id}\022m\n\006Delete\022\037.v1.Ro"
           + "leAttachmentDeleteRequest\032 .v1.RoleAttac"
           + "hmentDeleteResponse\" \202\323\344\223\002\032*\030/v1/roleAtt"
-          + "achments/{id}\022x\n\004List\022\035.v1.RoleAttachmen"
+          + "achments/{id}\022b\n\004List\022\035.v1.RoleAttachmen"
           + "tListRequest\032\036.v1.RoleAttachmentListResp"
-          + "onse\"1\202\323\344\223\002+\022)/v1/roles/{composite_role_"
-          + "id}/attachments\032\030\312\371\263\007\023\302\371\263\007\016RoleAttachmen"
-          + "tB7\n\034com.strongdm.api.v1.plumbingB\027RoleA"
-          + "ttachmentsPlumbingb\006proto3"
+          + "onse\"\033\202\323\344\223\002\025\022\023/v1/roleAttachments\032\030\312\371\263\007\023"
+          + "\302\371\263\007\016RoleAttachmentB7\n\034com.strongdm.api."
+          + "v1.plumbingB\027RoleAttachmentsPlumbingb\006pr"
+          + "oto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -11033,7 +10884,7 @@ public final class RoleAttachmentsPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_RoleAttachmentListRequest_descriptor,
             new java.lang.String[] {
-              "Meta", "Filter", "CompositeRoleId",
+              "Meta", "Filter",
             });
     internal_static_v1_RoleAttachmentListResponse_descriptor =
         getDescriptor().getMessageTypes().get(7);
