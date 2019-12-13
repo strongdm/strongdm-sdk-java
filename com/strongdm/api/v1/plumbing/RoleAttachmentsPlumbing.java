@@ -9807,12 +9807,24 @@ public final class RoleAttachmentsPlumbing {
     com.google.protobuf.ByteString getIdBytes();
 
     /**
+     *
+     *
+     * <pre>
+     * The id of the composite role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The compositeRoleId.
      */
     java.lang.String getCompositeRoleId();
     /**
+     *
+     *
+     * <pre>
+     * The id of the composite role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for compositeRoleId.
@@ -9820,19 +9832,40 @@ public final class RoleAttachmentsPlumbing {
     com.google.protobuf.ByteString getCompositeRoleIdBytes();
 
     /**
+     *
+     *
+     * <pre>
+     * The id of the attached role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The attachedRoleId.
      */
     java.lang.String getAttachedRoleId();
     /**
+     *
+     *
+     * <pre>
+     * The id of the attached role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for attachedRoleId.
      */
     com.google.protobuf.ByteString getAttachedRoleIdBytes();
   }
-  /** Protobuf type {@code v1.RoleAttachment} */
+  /**
+   *
+   *
+   * <pre>
+   * A RoleAttachment connects a composite role to another role, granting members
+   * of the composite role the permissions granted to the attached role.
+   * </pre>
+   *
+   * Protobuf type {@code v1.RoleAttachment}
+   */
   public static final class RoleAttachment extends com.google.protobuf.GeneratedMessageV3
       implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachment)
@@ -9983,6 +10016,12 @@ public final class RoleAttachmentsPlumbing {
     public static final int COMPOSITE_ROLE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object compositeRoleId_;
     /**
+     *
+     *
+     * <pre>
+     * The id of the composite role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The compositeRoleId.
@@ -9999,6 +10038,12 @@ public final class RoleAttachmentsPlumbing {
       }
     }
     /**
+     *
+     *
+     * <pre>
+     * The id of the composite role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for compositeRoleId.
@@ -10018,6 +10063,12 @@ public final class RoleAttachmentsPlumbing {
     public static final int ATTACHED_ROLE_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object attachedRoleId_;
     /**
+     *
+     *
+     * <pre>
+     * The id of the attached role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The attachedRoleId.
@@ -10034,6 +10085,12 @@ public final class RoleAttachmentsPlumbing {
       }
     }
     /**
+     *
+     *
+     * <pre>
+     * The id of the attached role of this RoleAttachment.
+     * </pre>
+     *
      * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for attachedRoleId.
@@ -10230,7 +10287,16 @@ public final class RoleAttachmentsPlumbing {
       Builder builder = new Builder(parent);
       return builder;
     }
-    /** Protobuf type {@code v1.RoleAttachment} */
+    /**
+     *
+     *
+     * <pre>
+     * A RoleAttachment connects a composite role to another role, granting members
+     * of the composite role the permissions granted to the attached role.
+     * </pre>
+     *
+     * Protobuf type {@code v1.RoleAttachment}
+     */
     public static final class Builder
         extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
         implements
@@ -10513,6 +10579,12 @@ public final class RoleAttachmentsPlumbing {
 
       private java.lang.Object compositeRoleId_ = "";
       /**
+       *
+       *
+       * <pre>
+       * The id of the composite role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The compositeRoleId.
@@ -10529,6 +10601,12 @@ public final class RoleAttachmentsPlumbing {
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the composite role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for compositeRoleId.
@@ -10545,6 +10623,12 @@ public final class RoleAttachmentsPlumbing {
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the composite role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The compositeRoleId to set.
@@ -10560,6 +10644,12 @@ public final class RoleAttachmentsPlumbing {
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the composite role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
@@ -10571,6 +10661,12 @@ public final class RoleAttachmentsPlumbing {
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the composite role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for compositeRoleId to set.
@@ -10589,6 +10685,12 @@ public final class RoleAttachmentsPlumbing {
 
       private java.lang.Object attachedRoleId_ = "";
       /**
+       *
+       *
+       * <pre>
+       * The id of the attached role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The attachedRoleId.
@@ -10605,6 +10707,12 @@ public final class RoleAttachmentsPlumbing {
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the attached role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for attachedRoleId.
@@ -10621,6 +10729,12 @@ public final class RoleAttachmentsPlumbing {
         }
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the attached role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The attachedRoleId to set.
@@ -10636,6 +10750,12 @@ public final class RoleAttachmentsPlumbing {
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the attached role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
@@ -10647,6 +10767,12 @@ public final class RoleAttachmentsPlumbing {
         return this;
       }
       /**
+       *
+       *
+       * <pre>
+       * The id of the attached role of this RoleAttachment.
+       * </pre>
+       *
        * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for attachedRoleId to set.
@@ -10795,31 +10921,32 @@ public final class RoleAttachmentsPlumbing {
           + "v1.ListResponseMetadata\0228\n\020role_attachme"
           + "nts\030\002 \003(\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\270\363\263\007"
           + "\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMeta"
-          + "dataB\n\362\370\263\007\005\260\363\263\007\001\"\256\002\n\016RoleAttachment\022\035\n\002i"
+          + "dataB\n\362\370\263\007\005\260\363\263\007\001\"\330\002\n\016RoleAttachment\022\035\n\002i"
           + "d\030\001 \001(\tB\021\362\370\263\007\014\242\363\263\007\002ID\260\363\263\007\001\0229\n\021composite_"
           + "role_id\030\002 \001(\tB\036\362\370\263\007\031\242\363\263\007\017CompositeRoleID"
           + "\260\363\263\007\001\022/\n\020attached_role_id\030\003 \001(\tB\025\362\370\263\007\020\242\363"
-          + "\263\007\006RoleID\260\363\263\007\001:\220\001\372\370\263\007\022\242\363\263\007\010RoleRole\250\363\263\007\001"
-          + "\222Av*N\n\021A RoleAttachment.\0229https://www.st"
-          + "rongdm.com/docs/api/entities#RoleAttachm"
-          + "ent2$\022\"{ \"id\": \"7\", \"name\": \"happy-goat\""
-          + "}2\277\004\n\017RoleAttachments\022\330\001\n\006Create\022\037.v1.Ro"
-          + "leAttachmentCreateRequest\032 .v1.RoleAttac"
-          + "hmentCreateResponse\"\212\001\202\323\344\223\002\030\"\023/v1/roleAt"
-          + "tachments:\001*\222Ai\"g\n\"Learn how to make a R"
-          + "oleAttachment\022Ahttps://www.strongdm.com/"
-          + "docs/api/services/RoleAttachments#Create"
-          + "\022d\n\003Get\022\034.v1.RoleAttachmentGetRequest\032\035."
-          + "v1.RoleAttachmentGetResponse\" \202\323\344\223\002\032\022\030/v"
-          + "1/roleAttachments/{id}\022m\n\006Delete\022\037.v1.Ro"
-          + "leAttachmentDeleteRequest\032 .v1.RoleAttac"
-          + "hmentDeleteResponse\" \202\323\344\223\002\032*\030/v1/roleAtt"
-          + "achments/{id}\022b\n\004List\022\035.v1.RoleAttachmen"
-          + "tListRequest\032\036.v1.RoleAttachmentListResp"
-          + "onse\"\033\202\323\344\223\002\025\022\023/v1/roleAttachments\032\030\312\371\263\007\023"
-          + "\302\371\263\007\016RoleAttachmentB7\n\034com.strongdm.api."
-          + "v1.plumbingB\027RoleAttachmentsPlumbingb\006pr"
-          + "oto3"
+          + "\263\007\006RoleID\260\363\263\007\001:\272\001\372\370\263\007\022\242\363\263\007\010RoleRole\250\363\263\007\001"
+          + "\222A\237\001*N\n\021A RoleAttachment.\0229https://www.s"
+          + "trongdm.com/docs/api/entities#RoleAttach"
+          + "ment2M\022K{ \"id\": \"ra-244\", \"composite_rol"
+          + "e_id\": \"r-111\", \"attached_role_id\":\"r-44"
+          + "4\"}2\277\004\n\017RoleAttachments\022\330\001\n\006Create\022\037.v1."
+          + "RoleAttachmentCreateRequest\032 .v1.RoleAtt"
+          + "achmentCreateResponse\"\212\001\202\323\344\223\002\030\"\023/v1/role"
+          + "Attachments:\001*\222Ai\"g\n\"Learn how to make a"
+          + " RoleAttachment\022Ahttps://www.strongdm.co"
+          + "m/docs/api/services/RoleAttachments#Crea"
+          + "te\022d\n\003Get\022\034.v1.RoleAttachmentGetRequest\032"
+          + "\035.v1.RoleAttachmentGetResponse\" \202\323\344\223\002\032\022\030"
+          + "/v1/roleAttachments/{id}\022m\n\006Delete\022\037.v1."
+          + "RoleAttachmentDeleteRequest\032 .v1.RoleAtt"
+          + "achmentDeleteResponse\" \202\323\344\223\002\032*\030/v1/roleA"
+          + "ttachments/{id}\022b\n\004List\022\035.v1.RoleAttachm"
+          + "entListRequest\032\036.v1.RoleAttachmentListRe"
+          + "sponse\"\033\202\323\344\223\002\025\022\023/v1/roleAttachments\032\030\312\371\263"
+          + "\007\023\302\371\263\007\016RoleAttachmentB7\n\034com.strongdm.ap"
+          + "i.v1.plumbingB\027RoleAttachmentsPlumbingb\006"
+          + "proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

@@ -7,7 +7,16 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * RoleAttachments represent relationships between composite roles and the roles
+ * that make up those composite roles. When a composite role is attached to another
+ * role, the permissions granted to members of the composite role are augmented to
+ * include the permissions granted to members of the attached role.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.25.0)",
     comments = "Source: role_attachments.proto")
@@ -235,7 +244,16 @@ public final class RoleAttachmentsGrpc {
     return new RoleAttachmentsFutureStub(channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * RoleAttachments represent relationships between composite roles and the roles
+   * that make up those composite roles. When a composite role is attached to another
+   * role, the permissions granted to members of the composite role are augmented to
+   * include the permissions granted to members of the attached role.
+   * </pre>
+   */
   public abstract static class RoleAttachmentsImplBase implements io.grpc.BindableService {
 
     /**
@@ -272,7 +290,7 @@ public final class RoleAttachmentsGrpc {
      *
      *
      * <pre>
-     * Delete removes an RoleAttachment by ID.
+     * Delete removes a RoleAttachment by ID.
      * </pre>
      */
     public void delete(
@@ -336,7 +354,16 @@ public final class RoleAttachmentsGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * RoleAttachments represent relationships between composite roles and the roles
+   * that make up those composite roles. When a composite role is attached to another
+   * role, the permissions granted to members of the composite role are augmented to
+   * include the permissions granted to members of the attached role.
+   * </pre>
+   */
   public static final class RoleAttachmentsStub
       extends io.grpc.stub.AbstractStub<RoleAttachmentsStub> {
     private RoleAttachmentsStub(io.grpc.Channel channel) {
@@ -388,7 +415,7 @@ public final class RoleAttachmentsGrpc {
      *
      *
      * <pre>
-     * Delete removes an RoleAttachment by ID.
+     * Delete removes a RoleAttachment by ID.
      * </pre>
      */
     public void delete(
@@ -417,7 +444,16 @@ public final class RoleAttachmentsGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * RoleAttachments represent relationships between composite roles and the roles
+   * that make up those composite roles. When a composite role is attached to another
+   * role, the permissions granted to members of the composite role are augmented to
+   * include the permissions granted to members of the attached role.
+   * </pre>
+   */
   public static final class RoleAttachmentsBlockingStub
       extends io.grpc.stub.AbstractStub<RoleAttachmentsBlockingStub> {
     private RoleAttachmentsBlockingStub(io.grpc.Channel channel) {
@@ -462,7 +498,7 @@ public final class RoleAttachmentsGrpc {
      *
      *
      * <pre>
-     * Delete removes an RoleAttachment by ID.
+     * Delete removes a RoleAttachment by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse delete(
@@ -483,7 +519,16 @@ public final class RoleAttachmentsGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * RoleAttachments represent relationships between composite roles and the roles
+   * that make up those composite roles. When a composite role is attached to another
+   * role, the permissions granted to members of the composite role are augmented to
+   * include the permissions granted to members of the attached role.
+   * </pre>
+   */
   public static final class RoleAttachmentsFutureStub
       extends io.grpc.stub.AbstractStub<RoleAttachmentsFutureStub> {
     private RoleAttachmentsFutureStub(io.grpc.Channel channel) {
@@ -532,7 +577,7 @@ public final class RoleAttachmentsGrpc {
      *
      *
      * <pre>
-     * Delete removes an RoleAttachment by ID.
+     * Delete removes a RoleAttachment by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<

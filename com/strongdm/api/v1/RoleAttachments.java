@@ -12,6 +12,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
+// RoleAttachments represent relationships between composite roles and the roles
+// that make up those composite roles. When a composite role is attached to another
+// role, the permissions granted to members of the composite role are augmented to
+// include the permissions granted to members of the attached role.
 public class RoleAttachments {
   private final RoleAttachmentsGrpc.RoleAttachmentsBlockingStub stub;
   private final Client parent;
@@ -69,7 +73,7 @@ public class RoleAttachments {
     return Plumbing.roleAttachmentGetResponseToPorcelain(plumbingResponse);
   }
 
-  // Delete removes an RoleAttachment by ID.
+  // Delete removes a RoleAttachment by ID.
   public RoleAttachmentDeleteResponse delete(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.newBuilder();

@@ -29,6 +29,10 @@ public class Client {
 
   private final RoleAttachments roleAttachments;
 
+  // RoleAttachments represent relationships between composite roles and the roles
+  // that make up those composite roles. When a composite role is attached to another
+  // role, the permissions granted to members of the composite role are augmented to
+  // include the permissions granted to members of the attached role.
   public RoleAttachments roleAttachments() {
     return this.roleAttachments;
   }
