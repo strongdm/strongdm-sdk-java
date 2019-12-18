@@ -77,13 +77,13 @@ public class Client {
   }
 
   public String sign(String methodName, byte[] message) {
-    Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-    int day = calendar.get(Calendar.DATE);
-    int month = calendar.get(Calendar.MONTH) + 1;
-    int year = calendar.get(Calendar.YEAR);
-    String datestring = String.format("%04d-%02d-%02d", year, month, day);
+    Calendar utcCalendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+    int day = utcCalendar.get(Calendar.DATE);
+    int month = utcCalendar.get(Calendar.MONTH) + 1;
+    int year = utcCalendar.get(Calendar.YEAR);
+    String utcdatestring = String.format("%04d-%02d-%02d", year, month, day);
     try {
-      byte[] signingKey = hmac_digest(this.apiSecretKey, datestring.getBytes("UTF-8"));
+      byte[] signingKey = hmac_digest(this.apiSecretKey, utcdatestring.getBytes("UTF-8"));
       signingKey = hmac_digest(signingKey, "sdm_api_v1".getBytes("UTF-8"));
 
       MessageDigest digest = MessageDigest.getInstance("SHA-256");
