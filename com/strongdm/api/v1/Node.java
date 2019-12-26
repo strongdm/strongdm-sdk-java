@@ -4,6 +4,7 @@ package com.strongdm.api.v1;
 // which communicate with resources, and gateways, which communicate with
 // clients.
 public interface Node {
+
   // Returns the unique identifier of the Node.
   String getId();
 }

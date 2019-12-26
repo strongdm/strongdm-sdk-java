@@ -27,6 +27,12 @@ public class Client {
     return this.nodes;
   }
 
+  private final Resources resources;
+
+  public Resources resources() {
+    return this.resources;
+  }
+
   private final RoleAttachments roleAttachments;
 
   // RoleAttachments represent relationships between composite roles and the roles
@@ -62,6 +68,7 @@ public class Client {
       }
       this.channel = builder.build();
       this.nodes = new Nodes(this.channel, this);
+      this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);
       this.roles = new Roles(this.channel, this);
 

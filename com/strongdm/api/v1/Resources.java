@@ -1,0 +1,147 @@
+package com.strongdm.api.v1;
+
+import com.strongdm.api.v1.plumbing.PageIterator;
+import com.strongdm.api.v1.plumbing.PageResult;
+import com.strongdm.api.v1.plumbing.Plumbing;
+import com.strongdm.api.v1.plumbing.ResourcesGrpc;
+import com.strongdm.api.v1.plumbing.ResourcesPlumbing;
+import com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata;
+import io.grpc.ManagedChannel;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Supplier;
+
+public class Resources {
+  private final ResourcesGrpc.ResourcesBlockingStub stub;
+  private final Client parent;
+
+  public Resources(ManagedChannel channel, Client client) {
+
+    this.stub = ResourcesGrpc.newBlockingStub(channel);
+    this.parent = client;
+  }
+
+  private Resources(ResourcesGrpc.ResourcesBlockingStub stub, Client client) {
+    this.stub = stub;
+    this.parent = client;
+  }
+
+  // This function returns a copy of the Resources service which has
+  // the given deadline set for all method calls.
+  public Resources withDeadlineAfter(long duration, TimeUnit units) {
+    return new Resources(this.stub.withDeadlineAfter(duration, units), this.parent);
+  }
+
+  // Create registers a new Resource.
+  public ResourceCreateResponse create(Driver driver) throws RpcException {
+    ResourcesPlumbing.ResourceCreateRequest.Builder builder =
+        ResourcesPlumbing.ResourceCreateRequest.newBuilder();
+    builder.setDriver(Plumbing.driverToPlumbing(driver));
+    ResourcesPlumbing.ResourceCreateRequest req = builder.build();
+    ResourcesPlumbing.ResourceCreateResponse plumbingResponse;
+    try {
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Resources.Create", req))
+              .create(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
+    }
+    return Plumbing.resourceCreateResponseToPorcelain(plumbingResponse);
+  }
+
+  // Get reads one Resource by ID.
+  public ResourceGetResponse get(String id) throws RpcException {
+    ResourcesPlumbing.ResourceGetRequest.Builder builder =
+        ResourcesPlumbing.ResourceGetRequest.newBuilder();
+    builder.setId(id);
+    ResourcesPlumbing.ResourceGetRequest req = builder.build();
+    ResourcesPlumbing.ResourceGetResponse plumbingResponse;
+    try {
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Resources.Get", req))
+              .get(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
+    }
+    return Plumbing.resourceGetResponseToPorcelain(plumbingResponse);
+  }
+
+  // Update patches a Resource by ID.
+  public ResourceUpdateResponse update(Resource resource) throws RpcException {
+    ResourcesPlumbing.ResourceUpdateRequest.Builder builder =
+        ResourcesPlumbing.ResourceUpdateRequest.newBuilder();
+    builder.setResource(Plumbing.resourceToPlumbing(resource));
+    ResourcesPlumbing.ResourceUpdateRequest req = builder.build();
+    ResourcesPlumbing.ResourceUpdateResponse plumbingResponse;
+    try {
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Resources.Update", req))
+              .update(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
+    }
+    return Plumbing.resourceUpdateResponseToPorcelain(plumbingResponse);
+  }
+
+  // Delete removes a Resource by ID.
+  public ResourceDeleteResponse delete(String id) throws RpcException {
+    ResourcesPlumbing.ResourceDeleteRequest.Builder builder =
+        ResourcesPlumbing.ResourceDeleteRequest.newBuilder();
+    builder.setId(id);
+    ResourcesPlumbing.ResourceDeleteRequest req = builder.build();
+    ResourcesPlumbing.ResourceDeleteResponse plumbingResponse;
+    try {
+      plumbingResponse =
+          this.stub
+              .withCallCredentials(this.parent.getCallCredentials("Resources.Delete", req))
+              .delete(req);
+    } catch (Exception e) {
+      throw Plumbing.exceptionToPorcelain(e);
+    }
+    return Plumbing.resourceDeleteResponseToPorcelain(plumbingResponse);
+  }
+
+  // List gets a list of Resources matching a given set of criteria.
+  public Iterable<Resource> list(String filter) throws RpcException {
+    ResourcesPlumbing.ResourceListRequest.Builder builder =
+        ResourcesPlumbing.ResourceListRequest.newBuilder();
+    builder.setFilter(filter);
+
+    ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
+    Object pageSizeOption = this.parent.testOptions.get("PageSize");
+    if (pageSizeOption instanceof Integer) {
+      metaBuilder.setLimit((int) pageSizeOption);
+    }
+    builder.setMeta(metaBuilder);
+
+    Supplier<PageResult<Resource>> pageFetcher =
+        () -> {
+          // Note: this closure captures and reuses the builder to set the next page
+
+          ResourcesPlumbing.ResourceListRequest req = builder.build();
+          ResourcesPlumbing.ResourceListResponse plumbingResponse;
+          plumbingResponse =
+              this.stub
+                  .withCallCredentials(this.parent.getCallCredentials("Resources.List", req))
+                  .list(req);
+
+          List<Resource> page =
+              Plumbing.repeatedResourceToPorcelain(plumbingResponse.getResourcesList());
+
+          boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
+          builder.setMeta(
+              ListRequestMetadata.newBuilder()
+                  .setCursor(plumbingResponse.getMeta().getNextCursor()));
+
+          return new PageResult<Resource>(page, hasNextCursor);
+        };
+
+    Iterator<Resource> iterator = new PageIterator<>(pageFetcher);
+
+    return () -> iterator;
+  }
+}
