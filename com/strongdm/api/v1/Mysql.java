@@ -1,6 +1,17 @@
 package com.strongdm.api.v1;
 
 public class Mysql implements Driver {
+  private String hostname;
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public Mysql setHostname(String in) {
+    this.hostname = in;
+    return this;
+  }
+
   private String username;
 
   public String getUsername() {

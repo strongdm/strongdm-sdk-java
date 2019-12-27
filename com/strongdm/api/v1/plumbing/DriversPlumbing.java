@@ -984,46 +984,59 @@ public final class DriversPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The port.
      */
@@ -1041,6 +1054,7 @@ public final class DriversPlumbing {
     }
 
     private Mysql() {
+      hostname_ = "";
       username_ = "";
       password_ = "";
       database_ = "";
@@ -1079,24 +1093,31 @@ public final class DriversPlumbing {
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                username_ = s;
+                hostname_ = s;
                 break;
               }
             case 18:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                password_ = s;
+                username_ = s;
                 break;
               }
             case 26:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
+                password_ = s;
+                break;
+              }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
                 database_ = s;
                 break;
               }
-            case 32:
+            case 40:
               {
                 port_ = input.readInt32();
                 break;
@@ -1134,10 +1155,45 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.Builder.class);
     }
 
-    public static final int USERNAME_FIELD_NUMBER = 1;
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The username.
      */
@@ -1153,7 +1209,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for username.
      */
@@ -1169,10 +1225,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int PASSWORD_FIELD_NUMBER = 2;
+    public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The password.
      */
@@ -1188,7 +1244,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for password.
      */
@@ -1204,10 +1260,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int DATABASE_FIELD_NUMBER = 3;
+    public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The database.
      */
@@ -1223,7 +1279,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for database.
      */
@@ -1239,10 +1295,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int PORT_FIELD_NUMBER = 4;
+    public static final int PORT_FIELD_NUMBER = 5;
     private int port_;
     /**
-     * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The port.
      */
@@ -1264,17 +1320,20 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
       if (!getUsernameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
       }
       if (!getPasswordBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
       }
       if (!getDatabaseBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, database_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, database_);
       }
       if (port_ != 0) {
-        output.writeInt32(4, port_);
+        output.writeInt32(5, port_);
       }
       unknownFields.writeTo(output);
     }
@@ -1285,17 +1344,20 @@ public final class DriversPlumbing {
       if (size != -1) return size;
 
       size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
       if (!getUsernameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
       }
       if (!getPasswordBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
       }
       if (!getDatabaseBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, database_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, database_);
       }
       if (port_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(4, port_);
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(5, port_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1313,6 +1375,7 @@ public final class DriversPlumbing {
       com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql other =
           (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) obj;
 
+      if (!getHostname().equals(other.getHostname())) return false;
       if (!getUsername().equals(other.getUsername())) return false;
       if (!getPassword().equals(other.getPassword())) return false;
       if (!getDatabase().equals(other.getDatabase())) return false;
@@ -1328,6 +1391,8 @@ public final class DriversPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
       hash = (53 * hash) + getUsername().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
@@ -1474,6 +1539,8 @@ public final class DriversPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        hostname_ = "";
+
         username_ = "";
 
         password_ = "";
@@ -1508,6 +1575,7 @@ public final class DriversPlumbing {
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql buildPartial() {
         com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql result =
             new com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql(this);
+        result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
         result.database_ = database_;
@@ -1564,6 +1632,10 @@ public final class DriversPlumbing {
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql other) {
         if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance())
           return this;
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
           onChanged();
@@ -1609,9 +1681,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The username.
        */
@@ -1627,7 +1775,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for username.
        */
@@ -1643,7 +1791,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -1658,7 +1806,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -1669,7 +1817,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -1687,7 +1835,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The password.
        */
@@ -1703,7 +1851,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for password.
        */
@@ -1719,7 +1867,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -1734,7 +1882,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -1745,7 +1893,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -1763,7 +1911,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The database.
        */
@@ -1779,7 +1927,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for database.
        */
@@ -1795,7 +1943,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -1810,7 +1958,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -1821,7 +1969,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -1839,7 +1987,7 @@ public final class DriversPlumbing {
 
       private int port_;
       /**
-       * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return The port.
        */
@@ -1847,7 +1995,7 @@ public final class DriversPlumbing {
         return port_;
       }
       /**
-       * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
        *
        * @param value The port to set.
        * @return This builder for chaining.
@@ -1859,7 +2007,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port = 4 [(.v1.field_options) = { ... }</code>
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -1928,52 +2076,65 @@ public final class DriversPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The accessKey.
      */
     java.lang.String getAccessKey();
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for accessKey.
      */
     com.google.protobuf.ByteString getAccessKeyBytes();
 
     /**
-     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The secretAccessKey.
      */
     java.lang.String getSecretAccessKey();
     /**
-     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for secretAccessKey.
      */
     com.google.protobuf.ByteString getSecretAccessKeyBytes();
 
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The region.
      */
     java.lang.String getRegion();
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for region.
      */
     com.google.protobuf.ByteString getRegionBytes();
 
     /**
-     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The output.
      */
     java.lang.String getOutput();
     /**
-     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for output.
      */
@@ -1991,6 +2152,7 @@ public final class DriversPlumbing {
     }
 
     private Athena() {
+      hostname_ = "";
       accessKey_ = "";
       secretAccessKey_ = "";
       region_ = "";
@@ -2030,24 +2192,31 @@ public final class DriversPlumbing {
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                accessKey_ = s;
+                hostname_ = s;
                 break;
               }
             case 18:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                secretAccessKey_ = s;
+                accessKey_ = s;
                 break;
               }
             case 26:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                region_ = s;
+                secretAccessKey_ = s;
                 break;
               }
             case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                region_ = s;
+                break;
+              }
+            case 42:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -2087,10 +2256,45 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder.class);
     }
 
-    public static final int ACCESS_KEY_FIELD_NUMBER = 1;
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_KEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object accessKey_;
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The accessKey.
      */
@@ -2106,7 +2310,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for accessKey.
      */
@@ -2122,10 +2326,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int SECRETACCESSKEY_FIELD_NUMBER = 2;
+    public static final int SECRETACCESSKEY_FIELD_NUMBER = 3;
     private volatile java.lang.Object secretAccessKey_;
     /**
-     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The secretAccessKey.
      */
@@ -2141,7 +2345,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for secretAccessKey.
      */
@@ -2157,10 +2361,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int REGION_FIELD_NUMBER = 3;
+    public static final int REGION_FIELD_NUMBER = 4;
     private volatile java.lang.Object region_;
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The region.
      */
@@ -2176,7 +2380,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for region.
      */
@@ -2192,10 +2396,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int OUTPUT_FIELD_NUMBER = 4;
+    public static final int OUTPUT_FIELD_NUMBER = 5;
     private volatile java.lang.Object output_;
     /**
-     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The output.
      */
@@ -2211,7 +2415,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for output.
      */
@@ -2241,17 +2445,20 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
       if (!getAccessKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKey_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accessKey_);
       }
       if (!getSecretAccessKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretAccessKey_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secretAccessKey_);
       }
       if (!getRegionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, region_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, region_);
       }
       if (!getOutputBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, output_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, output_);
       }
       unknownFields.writeTo(output);
     }
@@ -2262,17 +2469,20 @@ public final class DriversPlumbing {
       if (size != -1) return size;
 
       size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
       if (!getAccessKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accessKey_);
       }
       if (!getSecretAccessKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretAccessKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secretAccessKey_);
       }
       if (!getRegionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, region_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, region_);
       }
       if (!getOutputBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, output_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, output_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2290,6 +2500,7 @@ public final class DriversPlumbing {
       com.strongdm.api.v1.plumbing.DriversPlumbing.Athena other =
           (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) obj;
 
+      if (!getHostname().equals(other.getHostname())) return false;
       if (!getAccessKey().equals(other.getAccessKey())) return false;
       if (!getSecretAccessKey().equals(other.getSecretAccessKey())) return false;
       if (!getRegion().equals(other.getRegion())) return false;
@@ -2305,6 +2516,8 @@ public final class DriversPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getAccessKey().hashCode();
       hash = (37 * hash) + SECRETACCESSKEY_FIELD_NUMBER;
@@ -2452,6 +2665,8 @@ public final class DriversPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        hostname_ = "";
+
         accessKey_ = "";
 
         secretAccessKey_ = "";
@@ -2486,6 +2701,7 @@ public final class DriversPlumbing {
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena buildPartial() {
         com.strongdm.api.v1.plumbing.DriversPlumbing.Athena result =
             new com.strongdm.api.v1.plumbing.DriversPlumbing.Athena(this);
+        result.hostname_ = hostname_;
         result.accessKey_ = accessKey_;
         result.secretAccessKey_ = secretAccessKey_;
         result.region_ = region_;
@@ -2542,6 +2758,10 @@ public final class DriversPlumbing {
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.Athena other) {
         if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance())
           return this;
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
         if (!other.getAccessKey().isEmpty()) {
           accessKey_ = other.accessKey_;
           onChanged();
@@ -2588,9 +2808,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object accessKey_ = "";
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The accessKey.
        */
@@ -2606,7 +2902,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for accessKey.
        */
@@ -2622,7 +2918,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The accessKey to set.
        * @return This builder for chaining.
@@ -2637,7 +2933,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -2648,7 +2944,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for accessKey to set.
        * @return This builder for chaining.
@@ -2666,7 +2962,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object secretAccessKey_ = "";
       /**
-       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The secretAccessKey.
        */
@@ -2682,7 +2978,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for secretAccessKey.
        */
@@ -2698,7 +2994,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The secretAccessKey to set.
        * @return This builder for chaining.
@@ -2713,7 +3009,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -2724,7 +3020,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for secretAccessKey to set.
        * @return This builder for chaining.
@@ -2742,7 +3038,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object region_ = "";
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The region.
        */
@@ -2758,7 +3054,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for region.
        */
@@ -2774,7 +3070,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The region to set.
        * @return This builder for chaining.
@@ -2789,7 +3085,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -2800,7 +3096,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for region to set.
        * @return This builder for chaining.
@@ -2818,7 +3114,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object output_ = "";
       /**
-       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return The output.
        */
@@ -2834,7 +3130,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for output.
        */
@@ -2850,7 +3146,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
        *
        * @param value The output to set.
        * @return This builder for chaining.
@@ -2865,7 +3161,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -2876,7 +3172,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for output to set.
        * @return This builder for chaining.
@@ -2968,15 +3264,17 @@ public final class DriversPlumbing {
       "\n\rdrivers.proto\022\002v1\032\roptions.proto\"X\n\006Dr"
           + "iver\022\032\n\005mysql\030\001 \001(\0132\t.v1.MysqlH\000\022\034\n\006athe"
           + "na\030\002 \001(\0132\n.v1.AthenaH\000:\n\372\370\263\007\005\250\363\263\007\001B\010\n\006dr"
-          + "iver\"\207\001\n\005Mysql\022\034\n\010username\030\001 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\034\n\010password\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010da"
-          + "tabase\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\004 \001(\005B\n"
-          + "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\221\001\n\006Athena\022\036\n\nacc"
-          + "ess_key\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\017secretAcces"
-          + "sKey\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\003 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022\032\n\006output\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n"
-          + "\372\370\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbi"
-          + "ngB\017DriversPlumbingb\006proto3"
+          + "iver\"\245\001\n\005Mysql\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010pa"
+          + "ssword\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001"
+          + ":\n\372\370\263\007\005\250\363\263\007\001\"\257\001\n\006Athena\022\034\n\010hostname\030\001 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccess_key\030\002 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\022#\n\017secretAccessKey\030\003 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\032\n\006region\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006output"
+          + "\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B/\n\034com.st"
+          + "rongdm.api.v1.plumbingB\017DriversPlumbingb"
+          + "\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -2996,14 +3294,14 @@ public final class DriversPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Mysql_descriptor,
             new java.lang.String[] {
-              "Username", "Password", "Database", "Port",
+              "Hostname", "Username", "Password", "Database", "Port",
             });
     internal_static_v1_Athena_descriptor = getDescriptor().getMessageTypes().get(2);
     internal_static_v1_Athena_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Athena_descriptor,
             new java.lang.String[] {
-              "AccessKey", "SecretAccessKey", "Region", "Output",
+              "Hostname", "AccessKey", "SecretAccessKey", "Region", "Output",
             });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

@@ -73,6 +73,7 @@ public class Plumbing {
 
   public static com.strongdm.api.v1.Mysql mysqlToPorcelain(Mysql plumbing) {
     com.strongdm.api.v1.Mysql porcelain = new com.strongdm.api.v1.Mysql();
+    porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
@@ -85,6 +86,9 @@ public class Plumbing {
       return null;
     }
     Mysql.Builder builder = Mysql.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
@@ -114,6 +118,7 @@ public class Plumbing {
 
   public static com.strongdm.api.v1.Athena athenaToPorcelain(Athena plumbing) {
     com.strongdm.api.v1.Athena porcelain = new com.strongdm.api.v1.Athena();
+    porcelain.setHostname(plumbing.getHostname());
     porcelain.setAccessKey(plumbing.getAccessKey());
     porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
     porcelain.setRegion(plumbing.getRegion());
@@ -126,6 +131,9 @@ public class Plumbing {
       return null;
     }
     Athena.Builder builder = Athena.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey(porcelain.getAccessKey());
     }
