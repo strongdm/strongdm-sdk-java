@@ -18,93 +18,93 @@ public final class DriversPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.v1.Mysql mysql = 1;</code>
+     * <code>.v1.Mysql mysql = 386203715;</code>
      *
      * @return Whether the mysql field is set.
      */
     boolean hasMysql();
     /**
-     * <code>.v1.Mysql mysql = 1;</code>
+     * <code>.v1.Mysql mysql = 386203715;</code>
      *
      * @return The mysql.
      */
     com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql getMysql();
-    /** <code>.v1.Mysql mysql = 1;</code> */
+    /** <code>.v1.Mysql mysql = 386203715;</code> */
     com.strongdm.api.v1.plumbing.DriversPlumbing.MysqlOrBuilder getMysqlOrBuilder();
 
     /**
-     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     * <code>.v1.AuroraMysql aurora_mysql = 18289005;</code>
      *
      * @return Whether the auroraMysql field is set.
      */
     boolean hasAuroraMysql();
     /**
-     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     * <code>.v1.AuroraMysql aurora_mysql = 18289005;</code>
      *
      * @return The auroraMysql.
      */
     com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getAuroraMysql();
-    /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+    /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
     com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder getAuroraMysqlOrBuilder();
 
     /**
-     * <code>.v1.Clustrix clustrix = 3;</code>
+     * <code>.v1.Clustrix clustrix = 532386964;</code>
      *
      * @return Whether the clustrix field is set.
      */
     boolean hasClustrix();
     /**
-     * <code>.v1.Clustrix clustrix = 3;</code>
+     * <code>.v1.Clustrix clustrix = 532386964;</code>
      *
      * @return The clustrix.
      */
     com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getClustrix();
-    /** <code>.v1.Clustrix clustrix = 3;</code> */
+    /** <code>.v1.Clustrix clustrix = 532386964;</code> */
     com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder getClustrixOrBuilder();
 
     /**
-     * <code>.v1.Maria maria = 4;</code>
+     * <code>.v1.Maria maria = 466202260;</code>
      *
      * @return Whether the maria field is set.
      */
     boolean hasMaria();
     /**
-     * <code>.v1.Maria maria = 4;</code>
+     * <code>.v1.Maria maria = 466202260;</code>
      *
      * @return The maria.
      */
     com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getMaria();
-    /** <code>.v1.Maria maria = 4;</code> */
+    /** <code>.v1.Maria maria = 466202260;</code> */
     com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder getMariaOrBuilder();
 
     /**
-     * <code>.v1.Memsql memsql = 5;</code>
+     * <code>.v1.Memsql memsql = 269999277;</code>
      *
      * @return Whether the memsql field is set.
      */
     boolean hasMemsql();
     /**
-     * <code>.v1.Memsql memsql = 5;</code>
+     * <code>.v1.Memsql memsql = 269999277;</code>
      *
      * @return The memsql.
      */
     com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getMemsql();
-    /** <code>.v1.Memsql memsql = 5;</code> */
+    /** <code>.v1.Memsql memsql = 269999277;</code> */
     com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder getMemsqlOrBuilder();
 
     /**
-     * <code>.v1.Athena athena = 6;</code>
+     * <code>.v1.Athena athena = 86524680;</code>
      *
      * @return Whether the athena field is set.
      */
     boolean hasAthena();
     /**
-     * <code>.v1.Athena athena = 6;</code>
+     * <code>.v1.Athena athena = 86524680;</code>
      *
      * @return The athena.
      */
     com.strongdm.api.v1.plumbing.DriversPlumbing.Athena getAthena();
-    /** <code>.v1.Athena athena = 6;</code> */
+    /** <code>.v1.Athena athena = 86524680;</code> */
     com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder getAthenaOrBuilder();
 
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.DriverCase getDriverCase();
@@ -151,29 +151,10 @@ public final class DriversPlumbing {
             case 0:
               done = true;
               break;
-            case 10:
-              {
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.Builder subBuilder = null;
-                if (driverCase_ == 1) {
-                  subBuilder =
-                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_).toBuilder();
-                }
-                driver_ =
-                    input.readMessage(
-                        com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_);
-                  driver_ = subBuilder.buildPartial();
-                }
-                driverCase_ = 1;
-                break;
-              }
-            case 18:
+            case 146312042:
               {
                 com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder subBuilder = null;
-                if (driverCase_ == 2) {
+                if (driverCase_ == 18289005) {
                   subBuilder =
                       ((com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_)
                           .toBuilder();
@@ -187,70 +168,13 @@ public final class DriversPlumbing {
                       (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
                   driver_ = subBuilder.buildPartial();
                 }
-                driverCase_ = 2;
+                driverCase_ = 18289005;
                 break;
               }
-            case 26:
-              {
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder subBuilder = null;
-                if (driverCase_ == 3) {
-                  subBuilder =
-                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_).toBuilder();
-                }
-                driver_ =
-                    input.readMessage(
-                        com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
-                  driver_ = subBuilder.buildPartial();
-                }
-                driverCase_ = 3;
-                break;
-              }
-            case 34:
-              {
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder subBuilder = null;
-                if (driverCase_ == 4) {
-                  subBuilder =
-                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_).toBuilder();
-                }
-                driver_ =
-                    input.readMessage(
-                        com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
-                  driver_ = subBuilder.buildPartial();
-                }
-                driverCase_ = 4;
-                break;
-              }
-            case 42:
-              {
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder subBuilder = null;
-                if (driverCase_ == 5) {
-                  subBuilder =
-                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_).toBuilder();
-                }
-                driver_ =
-                    input.readMessage(
-                        com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
-                  driver_ = subBuilder.buildPartial();
-                }
-                driverCase_ = 5;
-                break;
-              }
-            case 50:
+            case 692197442:
               {
                 com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder subBuilder = null;
-                if (driverCase_ == 6) {
+                if (driverCase_ == 86524680) {
                   subBuilder =
                       ((com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_).toBuilder();
                 }
@@ -263,7 +187,83 @@ public final class DriversPlumbing {
                       (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
                   driver_ = subBuilder.buildPartial();
                 }
-                driverCase_ = 6;
+                driverCase_ = 86524680;
+                break;
+              }
+            case -2134973078:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder subBuilder = null;
+                if (driverCase_ == 269999277) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_).toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 269999277;
+                break;
+              }
+            case -1205337574:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.Builder subBuilder = null;
+                if (driverCase_ == 386203715) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_).toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 386203715;
+                break;
+              }
+            case -565349214:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder subBuilder = null;
+                if (driverCase_ == 466202260) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_).toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 466202260;
+                break;
+              }
+            case -35871582:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder subBuilder = null;
+                if (driverCase_ == 532386964) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_).toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 532386964;
                 break;
               }
             default:
@@ -306,12 +306,12 @@ public final class DriversPlumbing {
         implements
             com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      MYSQL(1),
-      AURORA_MYSQL(2),
-      CLUSTRIX(3),
-      MARIA(4),
-      MEMSQL(5),
-      ATHENA(6),
+      MYSQL(386203715),
+      AURORA_MYSQL(18289005),
+      CLUSTRIX(532386964),
+      MARIA(466202260),
+      MEMSQL(269999277),
+      ATHENA(86524680),
       DRIVER_NOT_SET(0);
       private final int value;
 
@@ -330,17 +330,17 @@ public final class DriversPlumbing {
 
       public static DriverCase forNumber(int value) {
         switch (value) {
-          case 1:
+          case 386203715:
             return MYSQL;
-          case 2:
+          case 18289005:
             return AURORA_MYSQL;
-          case 3:
+          case 532386964:
             return CLUSTRIX;
-          case 4:
+          case 466202260:
             return MARIA;
-          case 5:
+          case 269999277:
             return MEMSQL;
-          case 6:
+          case 86524680:
             return ATHENA;
           case 0:
             return DRIVER_NOT_SET;
@@ -358,170 +358,170 @@ public final class DriversPlumbing {
       return DriverCase.forNumber(driverCase_);
     }
 
-    public static final int MYSQL_FIELD_NUMBER = 1;
+    public static final int MYSQL_FIELD_NUMBER = 386203715;
     /**
-     * <code>.v1.Mysql mysql = 1;</code>
+     * <code>.v1.Mysql mysql = 386203715;</code>
      *
      * @return Whether the mysql field is set.
      */
     public boolean hasMysql() {
-      return driverCase_ == 1;
+      return driverCase_ == 386203715;
     }
     /**
-     * <code>.v1.Mysql mysql = 1;</code>
+     * <code>.v1.Mysql mysql = 386203715;</code>
      *
      * @return The mysql.
      */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql getMysql() {
-      if (driverCase_ == 1) {
+      if (driverCase_ == 386203715) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance();
     }
-    /** <code>.v1.Mysql mysql = 1;</code> */
+    /** <code>.v1.Mysql mysql = 386203715;</code> */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.MysqlOrBuilder getMysqlOrBuilder() {
-      if (driverCase_ == 1) {
+      if (driverCase_ == 386203715) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance();
     }
 
-    public static final int AURORA_MYSQL_FIELD_NUMBER = 2;
+    public static final int AURORA_MYSQL_FIELD_NUMBER = 18289005;
     /**
-     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     * <code>.v1.AuroraMysql aurora_mysql = 18289005;</code>
      *
      * @return Whether the auroraMysql field is set.
      */
     public boolean hasAuroraMysql() {
-      return driverCase_ == 2;
+      return driverCase_ == 18289005;
     }
     /**
-     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     * <code>.v1.AuroraMysql aurora_mysql = 18289005;</code>
      *
      * @return The auroraMysql.
      */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getAuroraMysql() {
-      if (driverCase_ == 2) {
+      if (driverCase_ == 18289005) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
     }
-    /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+    /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder
         getAuroraMysqlOrBuilder() {
-      if (driverCase_ == 2) {
+      if (driverCase_ == 18289005) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
     }
 
-    public static final int CLUSTRIX_FIELD_NUMBER = 3;
+    public static final int CLUSTRIX_FIELD_NUMBER = 532386964;
     /**
-     * <code>.v1.Clustrix clustrix = 3;</code>
+     * <code>.v1.Clustrix clustrix = 532386964;</code>
      *
      * @return Whether the clustrix field is set.
      */
     public boolean hasClustrix() {
-      return driverCase_ == 3;
+      return driverCase_ == 532386964;
     }
     /**
-     * <code>.v1.Clustrix clustrix = 3;</code>
+     * <code>.v1.Clustrix clustrix = 532386964;</code>
      *
      * @return The clustrix.
      */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getClustrix() {
-      if (driverCase_ == 3) {
+      if (driverCase_ == 532386964) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
     }
-    /** <code>.v1.Clustrix clustrix = 3;</code> */
+    /** <code>.v1.Clustrix clustrix = 532386964;</code> */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder getClustrixOrBuilder() {
-      if (driverCase_ == 3) {
+      if (driverCase_ == 532386964) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
     }
 
-    public static final int MARIA_FIELD_NUMBER = 4;
+    public static final int MARIA_FIELD_NUMBER = 466202260;
     /**
-     * <code>.v1.Maria maria = 4;</code>
+     * <code>.v1.Maria maria = 466202260;</code>
      *
      * @return Whether the maria field is set.
      */
     public boolean hasMaria() {
-      return driverCase_ == 4;
+      return driverCase_ == 466202260;
     }
     /**
-     * <code>.v1.Maria maria = 4;</code>
+     * <code>.v1.Maria maria = 466202260;</code>
      *
      * @return The maria.
      */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getMaria() {
-      if (driverCase_ == 4) {
+      if (driverCase_ == 466202260) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
     }
-    /** <code>.v1.Maria maria = 4;</code> */
+    /** <code>.v1.Maria maria = 466202260;</code> */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder getMariaOrBuilder() {
-      if (driverCase_ == 4) {
+      if (driverCase_ == 466202260) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
     }
 
-    public static final int MEMSQL_FIELD_NUMBER = 5;
+    public static final int MEMSQL_FIELD_NUMBER = 269999277;
     /**
-     * <code>.v1.Memsql memsql = 5;</code>
+     * <code>.v1.Memsql memsql = 269999277;</code>
      *
      * @return Whether the memsql field is set.
      */
     public boolean hasMemsql() {
-      return driverCase_ == 5;
+      return driverCase_ == 269999277;
     }
     /**
-     * <code>.v1.Memsql memsql = 5;</code>
+     * <code>.v1.Memsql memsql = 269999277;</code>
      *
      * @return The memsql.
      */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getMemsql() {
-      if (driverCase_ == 5) {
+      if (driverCase_ == 269999277) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
     }
-    /** <code>.v1.Memsql memsql = 5;</code> */
+    /** <code>.v1.Memsql memsql = 269999277;</code> */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder getMemsqlOrBuilder() {
-      if (driverCase_ == 5) {
+      if (driverCase_ == 269999277) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
     }
 
-    public static final int ATHENA_FIELD_NUMBER = 6;
+    public static final int ATHENA_FIELD_NUMBER = 86524680;
     /**
-     * <code>.v1.Athena athena = 6;</code>
+     * <code>.v1.Athena athena = 86524680;</code>
      *
      * @return Whether the athena field is set.
      */
     public boolean hasAthena() {
-      return driverCase_ == 6;
+      return driverCase_ == 86524680;
     }
     /**
-     * <code>.v1.Athena athena = 6;</code>
+     * <code>.v1.Athena athena = 86524680;</code>
      *
      * @return The athena.
      */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena getAthena() {
-      if (driverCase_ == 6) {
+      if (driverCase_ == 86524680) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
     }
-    /** <code>.v1.Athena athena = 6;</code> */
+    /** <code>.v1.Athena athena = 86524680;</code> */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder getAthenaOrBuilder() {
-      if (driverCase_ == 6) {
+      if (driverCase_ == 86524680) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
@@ -541,23 +541,29 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (driverCase_ == 1) {
-        output.writeMessage(1, (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_);
+      if (driverCase_ == 18289005) {
+        output.writeMessage(
+            18289005, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
       }
-      if (driverCase_ == 2) {
-        output.writeMessage(2, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
+      if (driverCase_ == 86524680) {
+        output.writeMessage(
+            86524680, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
       }
-      if (driverCase_ == 3) {
-        output.writeMessage(3, (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
+      if (driverCase_ == 269999277) {
+        output.writeMessage(
+            269999277, (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
       }
-      if (driverCase_ == 4) {
-        output.writeMessage(4, (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
+      if (driverCase_ == 386203715) {
+        output.writeMessage(
+            386203715, (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_);
       }
-      if (driverCase_ == 5) {
-        output.writeMessage(5, (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
+      if (driverCase_ == 466202260) {
+        output.writeMessage(
+            466202260, (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
       }
-      if (driverCase_ == 6) {
-        output.writeMessage(6, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
+      if (driverCase_ == 532386964) {
+        output.writeMessage(
+            532386964, (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
       }
       unknownFields.writeTo(output);
     }
@@ -568,35 +574,35 @@ public final class DriversPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (driverCase_ == 1) {
+      if (driverCase_ == 18289005) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
-                1, (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_);
+                18289005, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
       }
-      if (driverCase_ == 2) {
+      if (driverCase_ == 86524680) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
-                2, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
+                86524680, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
       }
-      if (driverCase_ == 3) {
+      if (driverCase_ == 269999277) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
-                3, (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
+                269999277, (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
       }
-      if (driverCase_ == 4) {
+      if (driverCase_ == 386203715) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
-                4, (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
+                386203715, (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_);
       }
-      if (driverCase_ == 5) {
+      if (driverCase_ == 466202260) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
-                5, (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
+                466202260, (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
       }
-      if (driverCase_ == 6) {
+      if (driverCase_ == 532386964) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
-                6, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
+                532386964, (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -616,22 +622,22 @@ public final class DriversPlumbing {
 
       if (!getDriverCase().equals(other.getDriverCase())) return false;
       switch (driverCase_) {
-        case 1:
+        case 386203715:
           if (!getMysql().equals(other.getMysql())) return false;
           break;
-        case 2:
+        case 18289005:
           if (!getAuroraMysql().equals(other.getAuroraMysql())) return false;
           break;
-        case 3:
+        case 532386964:
           if (!getClustrix().equals(other.getClustrix())) return false;
           break;
-        case 4:
+        case 466202260:
           if (!getMaria().equals(other.getMaria())) return false;
           break;
-        case 5:
+        case 269999277:
           if (!getMemsql().equals(other.getMemsql())) return false;
           break;
-        case 6:
+        case 86524680:
           if (!getAthena().equals(other.getAthena())) return false;
           break;
         case 0:
@@ -649,27 +655,27 @@ public final class DriversPlumbing {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (driverCase_) {
-        case 1:
+        case 386203715:
           hash = (37 * hash) + MYSQL_FIELD_NUMBER;
           hash = (53 * hash) + getMysql().hashCode();
           break;
-        case 2:
+        case 18289005:
           hash = (37 * hash) + AURORA_MYSQL_FIELD_NUMBER;
           hash = (53 * hash) + getAuroraMysql().hashCode();
           break;
-        case 3:
+        case 532386964:
           hash = (37 * hash) + CLUSTRIX_FIELD_NUMBER;
           hash = (53 * hash) + getClustrix().hashCode();
           break;
-        case 4:
+        case 466202260:
           hash = (37 * hash) + MARIA_FIELD_NUMBER;
           hash = (53 * hash) + getMaria().hashCode();
           break;
-        case 5:
+        case 269999277:
           hash = (37 * hash) + MEMSQL_FIELD_NUMBER;
           hash = (53 * hash) + getMemsql().hashCode();
           break;
-        case 6:
+        case 86524680:
           hash = (37 * hash) + ATHENA_FIELD_NUMBER;
           hash = (53 * hash) + getAthena().hashCode();
           break;
@@ -843,42 +849,42 @@ public final class DriversPlumbing {
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver buildPartial() {
         com.strongdm.api.v1.plumbing.DriversPlumbing.Driver result =
             new com.strongdm.api.v1.plumbing.DriversPlumbing.Driver(this);
-        if (driverCase_ == 1) {
+        if (driverCase_ == 386203715) {
           if (mysqlBuilder_ == null) {
             result.driver_ = driver_;
           } else {
             result.driver_ = mysqlBuilder_.build();
           }
         }
-        if (driverCase_ == 2) {
+        if (driverCase_ == 18289005) {
           if (auroraMysqlBuilder_ == null) {
             result.driver_ = driver_;
           } else {
             result.driver_ = auroraMysqlBuilder_.build();
           }
         }
-        if (driverCase_ == 3) {
+        if (driverCase_ == 532386964) {
           if (clustrixBuilder_ == null) {
             result.driver_ = driver_;
           } else {
             result.driver_ = clustrixBuilder_.build();
           }
         }
-        if (driverCase_ == 4) {
+        if (driverCase_ == 466202260) {
           if (mariaBuilder_ == null) {
             result.driver_ = driver_;
           } else {
             result.driver_ = mariaBuilder_.build();
           }
         }
-        if (driverCase_ == 5) {
+        if (driverCase_ == 269999277) {
           if (memsqlBuilder_ == null) {
             result.driver_ = driver_;
           } else {
             result.driver_ = memsqlBuilder_.build();
           }
         }
-        if (driverCase_ == 6) {
+        if (driverCase_ == 86524680) {
           if (athenaBuilder_ == null) {
             result.driver_ = driver_;
           } else {
@@ -1024,32 +1030,32 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.MysqlOrBuilder>
           mysqlBuilder_;
       /**
-       * <code>.v1.Mysql mysql = 1;</code>
+       * <code>.v1.Mysql mysql = 386203715;</code>
        *
        * @return Whether the mysql field is set.
        */
       public boolean hasMysql() {
-        return driverCase_ == 1;
+        return driverCase_ == 386203715;
       }
       /**
-       * <code>.v1.Mysql mysql = 1;</code>
+       * <code>.v1.Mysql mysql = 386203715;</code>
        *
        * @return The mysql.
        */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql getMysql() {
         if (mysqlBuilder_ == null) {
-          if (driverCase_ == 1) {
+          if (driverCase_ == 386203715) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance();
         } else {
-          if (driverCase_ == 1) {
+          if (driverCase_ == 386203715) {
             return mysqlBuilder_.getMessage();
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance();
         }
       }
-      /** <code>.v1.Mysql mysql = 1;</code> */
+      /** <code>.v1.Mysql mysql = 386203715;</code> */
       public Builder setMysql(com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql value) {
         if (mysqlBuilder_ == null) {
           if (value == null) {
@@ -1060,10 +1066,10 @@ public final class DriversPlumbing {
         } else {
           mysqlBuilder_.setMessage(value);
         }
-        driverCase_ = 1;
+        driverCase_ = 386203715;
         return this;
       }
-      /** <code>.v1.Mysql mysql = 1;</code> */
+      /** <code>.v1.Mysql mysql = 386203715;</code> */
       public Builder setMysql(
           com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.Builder builderForValue) {
         if (mysqlBuilder_ == null) {
@@ -1072,13 +1078,13 @@ public final class DriversPlumbing {
         } else {
           mysqlBuilder_.setMessage(builderForValue.build());
         }
-        driverCase_ = 1;
+        driverCase_ = 386203715;
         return this;
       }
-      /** <code>.v1.Mysql mysql = 1;</code> */
+      /** <code>.v1.Mysql mysql = 386203715;</code> */
       public Builder mergeMysql(com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql value) {
         if (mysqlBuilder_ == null) {
-          if (driverCase_ == 1
+          if (driverCase_ == 386203715
               && driver_
                   != com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance()) {
             driver_ =
@@ -1091,24 +1097,24 @@ public final class DriversPlumbing {
           }
           onChanged();
         } else {
-          if (driverCase_ == 1) {
+          if (driverCase_ == 386203715) {
             mysqlBuilder_.mergeFrom(value);
           }
           mysqlBuilder_.setMessage(value);
         }
-        driverCase_ = 1;
+        driverCase_ = 386203715;
         return this;
       }
-      /** <code>.v1.Mysql mysql = 1;</code> */
+      /** <code>.v1.Mysql mysql = 386203715;</code> */
       public Builder clearMysql() {
         if (mysqlBuilder_ == null) {
-          if (driverCase_ == 1) {
+          if (driverCase_ == 386203715) {
             driverCase_ = 0;
             driver_ = null;
             onChanged();
           }
         } else {
-          if (driverCase_ == 1) {
+          if (driverCase_ == 386203715) {
             driverCase_ = 0;
             driver_ = null;
           }
@@ -1116,29 +1122,29 @@ public final class DriversPlumbing {
         }
         return this;
       }
-      /** <code>.v1.Mysql mysql = 1;</code> */
+      /** <code>.v1.Mysql mysql = 386203715;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.Builder getMysqlBuilder() {
         return getMysqlFieldBuilder().getBuilder();
       }
-      /** <code>.v1.Mysql mysql = 1;</code> */
+      /** <code>.v1.Mysql mysql = 386203715;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.MysqlOrBuilder getMysqlOrBuilder() {
-        if ((driverCase_ == 1) && (mysqlBuilder_ != null)) {
+        if ((driverCase_ == 386203715) && (mysqlBuilder_ != null)) {
           return mysqlBuilder_.getMessageOrBuilder();
         } else {
-          if (driverCase_ == 1) {
+          if (driverCase_ == 386203715) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance();
         }
       }
-      /** <code>.v1.Mysql mysql = 1;</code> */
+      /** <code>.v1.Mysql mysql = 386203715;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql,
               com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.MysqlOrBuilder>
           getMysqlFieldBuilder() {
         if (mysqlBuilder_ == null) {
-          if (!(driverCase_ == 1)) {
+          if (!(driverCase_ == 386203715)) {
             driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance();
           }
           mysqlBuilder_ =
@@ -1151,7 +1157,7 @@ public final class DriversPlumbing {
                   isClean());
           driver_ = null;
         }
-        driverCase_ = 1;
+        driverCase_ = 386203715;
         onChanged();
         ;
         return mysqlBuilder_;
@@ -1163,32 +1169,32 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder>
           auroraMysqlBuilder_;
       /**
-       * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+       * <code>.v1.AuroraMysql aurora_mysql = 18289005;</code>
        *
        * @return Whether the auroraMysql field is set.
        */
       public boolean hasAuroraMysql() {
-        return driverCase_ == 2;
+        return driverCase_ == 18289005;
       }
       /**
-       * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+       * <code>.v1.AuroraMysql aurora_mysql = 18289005;</code>
        *
        * @return The auroraMysql.
        */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getAuroraMysql() {
         if (auroraMysqlBuilder_ == null) {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 18289005) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 18289005) {
             return auroraMysqlBuilder_.getMessage();
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
         }
       }
-      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
       public Builder setAuroraMysql(
           com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql value) {
         if (auroraMysqlBuilder_ == null) {
@@ -1200,10 +1206,10 @@ public final class DriversPlumbing {
         } else {
           auroraMysqlBuilder_.setMessage(value);
         }
-        driverCase_ = 2;
+        driverCase_ = 18289005;
         return this;
       }
-      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
       public Builder setAuroraMysql(
           com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder builderForValue) {
         if (auroraMysqlBuilder_ == null) {
@@ -1212,14 +1218,14 @@ public final class DriversPlumbing {
         } else {
           auroraMysqlBuilder_.setMessage(builderForValue.build());
         }
-        driverCase_ = 2;
+        driverCase_ = 18289005;
         return this;
       }
-      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
       public Builder mergeAuroraMysql(
           com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql value) {
         if (auroraMysqlBuilder_ == null) {
-          if (driverCase_ == 2
+          if (driverCase_ == 18289005
               && driver_
                   != com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql
                       .getDefaultInstance()) {
@@ -1233,24 +1239,24 @@ public final class DriversPlumbing {
           }
           onChanged();
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 18289005) {
             auroraMysqlBuilder_.mergeFrom(value);
           }
           auroraMysqlBuilder_.setMessage(value);
         }
-        driverCase_ = 2;
+        driverCase_ = 18289005;
         return this;
       }
-      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
       public Builder clearAuroraMysql() {
         if (auroraMysqlBuilder_ == null) {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 18289005) {
             driverCase_ = 0;
             driver_ = null;
             onChanged();
           }
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 18289005) {
             driverCase_ = 0;
             driver_ = null;
           }
@@ -1258,31 +1264,31 @@ public final class DriversPlumbing {
         }
         return this;
       }
-      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder
           getAuroraMysqlBuilder() {
         return getAuroraMysqlFieldBuilder().getBuilder();
       }
-      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder
           getAuroraMysqlOrBuilder() {
-        if ((driverCase_ == 2) && (auroraMysqlBuilder_ != null)) {
+        if ((driverCase_ == 18289005) && (auroraMysqlBuilder_ != null)) {
           return auroraMysqlBuilder_.getMessageOrBuilder();
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 18289005) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
         }
       }
-      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      /** <code>.v1.AuroraMysql aurora_mysql = 18289005;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql,
               com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder>
           getAuroraMysqlFieldBuilder() {
         if (auroraMysqlBuilder_ == null) {
-          if (!(driverCase_ == 2)) {
+          if (!(driverCase_ == 18289005)) {
             driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
           }
           auroraMysqlBuilder_ =
@@ -1295,7 +1301,7 @@ public final class DriversPlumbing {
                   isClean());
           driver_ = null;
         }
-        driverCase_ = 2;
+        driverCase_ = 18289005;
         onChanged();
         ;
         return auroraMysqlBuilder_;
@@ -1307,32 +1313,32 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder>
           clustrixBuilder_;
       /**
-       * <code>.v1.Clustrix clustrix = 3;</code>
+       * <code>.v1.Clustrix clustrix = 532386964;</code>
        *
        * @return Whether the clustrix field is set.
        */
       public boolean hasClustrix() {
-        return driverCase_ == 3;
+        return driverCase_ == 532386964;
       }
       /**
-       * <code>.v1.Clustrix clustrix = 3;</code>
+       * <code>.v1.Clustrix clustrix = 532386964;</code>
        *
        * @return The clustrix.
        */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getClustrix() {
         if (clustrixBuilder_ == null) {
-          if (driverCase_ == 3) {
+          if (driverCase_ == 532386964) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
         } else {
-          if (driverCase_ == 3) {
+          if (driverCase_ == 532386964) {
             return clustrixBuilder_.getMessage();
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
         }
       }
-      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      /** <code>.v1.Clustrix clustrix = 532386964;</code> */
       public Builder setClustrix(com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix value) {
         if (clustrixBuilder_ == null) {
           if (value == null) {
@@ -1343,10 +1349,10 @@ public final class DriversPlumbing {
         } else {
           clustrixBuilder_.setMessage(value);
         }
-        driverCase_ = 3;
+        driverCase_ = 532386964;
         return this;
       }
-      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      /** <code>.v1.Clustrix clustrix = 532386964;</code> */
       public Builder setClustrix(
           com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder builderForValue) {
         if (clustrixBuilder_ == null) {
@@ -1355,13 +1361,13 @@ public final class DriversPlumbing {
         } else {
           clustrixBuilder_.setMessage(builderForValue.build());
         }
-        driverCase_ = 3;
+        driverCase_ = 532386964;
         return this;
       }
-      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      /** <code>.v1.Clustrix clustrix = 532386964;</code> */
       public Builder mergeClustrix(com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix value) {
         if (clustrixBuilder_ == null) {
-          if (driverCase_ == 3
+          if (driverCase_ == 532386964
               && driver_
                   != com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance()) {
             driver_ =
@@ -1374,24 +1380,24 @@ public final class DriversPlumbing {
           }
           onChanged();
         } else {
-          if (driverCase_ == 3) {
+          if (driverCase_ == 532386964) {
             clustrixBuilder_.mergeFrom(value);
           }
           clustrixBuilder_.setMessage(value);
         }
-        driverCase_ = 3;
+        driverCase_ = 532386964;
         return this;
       }
-      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      /** <code>.v1.Clustrix clustrix = 532386964;</code> */
       public Builder clearClustrix() {
         if (clustrixBuilder_ == null) {
-          if (driverCase_ == 3) {
+          if (driverCase_ == 532386964) {
             driverCase_ = 0;
             driver_ = null;
             onChanged();
           }
         } else {
-          if (driverCase_ == 3) {
+          if (driverCase_ == 532386964) {
             driverCase_ = 0;
             driver_ = null;
           }
@@ -1399,29 +1405,29 @@ public final class DriversPlumbing {
         }
         return this;
       }
-      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      /** <code>.v1.Clustrix clustrix = 532386964;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder getClustrixBuilder() {
         return getClustrixFieldBuilder().getBuilder();
       }
-      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      /** <code>.v1.Clustrix clustrix = 532386964;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder getClustrixOrBuilder() {
-        if ((driverCase_ == 3) && (clustrixBuilder_ != null)) {
+        if ((driverCase_ == 532386964) && (clustrixBuilder_ != null)) {
           return clustrixBuilder_.getMessageOrBuilder();
         } else {
-          if (driverCase_ == 3) {
+          if (driverCase_ == 532386964) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
         }
       }
-      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      /** <code>.v1.Clustrix clustrix = 532386964;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix,
               com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder>
           getClustrixFieldBuilder() {
         if (clustrixBuilder_ == null) {
-          if (!(driverCase_ == 3)) {
+          if (!(driverCase_ == 532386964)) {
             driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
           }
           clustrixBuilder_ =
@@ -1434,7 +1440,7 @@ public final class DriversPlumbing {
                   isClean());
           driver_ = null;
         }
-        driverCase_ = 3;
+        driverCase_ = 532386964;
         onChanged();
         ;
         return clustrixBuilder_;
@@ -1446,32 +1452,32 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder>
           mariaBuilder_;
       /**
-       * <code>.v1.Maria maria = 4;</code>
+       * <code>.v1.Maria maria = 466202260;</code>
        *
        * @return Whether the maria field is set.
        */
       public boolean hasMaria() {
-        return driverCase_ == 4;
+        return driverCase_ == 466202260;
       }
       /**
-       * <code>.v1.Maria maria = 4;</code>
+       * <code>.v1.Maria maria = 466202260;</code>
        *
        * @return The maria.
        */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getMaria() {
         if (mariaBuilder_ == null) {
-          if (driverCase_ == 4) {
+          if (driverCase_ == 466202260) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
         } else {
-          if (driverCase_ == 4) {
+          if (driverCase_ == 466202260) {
             return mariaBuilder_.getMessage();
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
         }
       }
-      /** <code>.v1.Maria maria = 4;</code> */
+      /** <code>.v1.Maria maria = 466202260;</code> */
       public Builder setMaria(com.strongdm.api.v1.plumbing.DriversPlumbing.Maria value) {
         if (mariaBuilder_ == null) {
           if (value == null) {
@@ -1482,10 +1488,10 @@ public final class DriversPlumbing {
         } else {
           mariaBuilder_.setMessage(value);
         }
-        driverCase_ = 4;
+        driverCase_ = 466202260;
         return this;
       }
-      /** <code>.v1.Maria maria = 4;</code> */
+      /** <code>.v1.Maria maria = 466202260;</code> */
       public Builder setMaria(
           com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder builderForValue) {
         if (mariaBuilder_ == null) {
@@ -1494,13 +1500,13 @@ public final class DriversPlumbing {
         } else {
           mariaBuilder_.setMessage(builderForValue.build());
         }
-        driverCase_ = 4;
+        driverCase_ = 466202260;
         return this;
       }
-      /** <code>.v1.Maria maria = 4;</code> */
+      /** <code>.v1.Maria maria = 466202260;</code> */
       public Builder mergeMaria(com.strongdm.api.v1.plumbing.DriversPlumbing.Maria value) {
         if (mariaBuilder_ == null) {
-          if (driverCase_ == 4
+          if (driverCase_ == 466202260
               && driver_
                   != com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance()) {
             driver_ =
@@ -1513,24 +1519,24 @@ public final class DriversPlumbing {
           }
           onChanged();
         } else {
-          if (driverCase_ == 4) {
+          if (driverCase_ == 466202260) {
             mariaBuilder_.mergeFrom(value);
           }
           mariaBuilder_.setMessage(value);
         }
-        driverCase_ = 4;
+        driverCase_ = 466202260;
         return this;
       }
-      /** <code>.v1.Maria maria = 4;</code> */
+      /** <code>.v1.Maria maria = 466202260;</code> */
       public Builder clearMaria() {
         if (mariaBuilder_ == null) {
-          if (driverCase_ == 4) {
+          if (driverCase_ == 466202260) {
             driverCase_ = 0;
             driver_ = null;
             onChanged();
           }
         } else {
-          if (driverCase_ == 4) {
+          if (driverCase_ == 466202260) {
             driverCase_ = 0;
             driver_ = null;
           }
@@ -1538,29 +1544,29 @@ public final class DriversPlumbing {
         }
         return this;
       }
-      /** <code>.v1.Maria maria = 4;</code> */
+      /** <code>.v1.Maria maria = 466202260;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder getMariaBuilder() {
         return getMariaFieldBuilder().getBuilder();
       }
-      /** <code>.v1.Maria maria = 4;</code> */
+      /** <code>.v1.Maria maria = 466202260;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder getMariaOrBuilder() {
-        if ((driverCase_ == 4) && (mariaBuilder_ != null)) {
+        if ((driverCase_ == 466202260) && (mariaBuilder_ != null)) {
           return mariaBuilder_.getMessageOrBuilder();
         } else {
-          if (driverCase_ == 4) {
+          if (driverCase_ == 466202260) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
         }
       }
-      /** <code>.v1.Maria maria = 4;</code> */
+      /** <code>.v1.Maria maria = 466202260;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.Maria,
               com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder>
           getMariaFieldBuilder() {
         if (mariaBuilder_ == null) {
-          if (!(driverCase_ == 4)) {
+          if (!(driverCase_ == 466202260)) {
             driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
           }
           mariaBuilder_ =
@@ -1573,7 +1579,7 @@ public final class DriversPlumbing {
                   isClean());
           driver_ = null;
         }
-        driverCase_ = 4;
+        driverCase_ = 466202260;
         onChanged();
         ;
         return mariaBuilder_;
@@ -1585,32 +1591,32 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder>
           memsqlBuilder_;
       /**
-       * <code>.v1.Memsql memsql = 5;</code>
+       * <code>.v1.Memsql memsql = 269999277;</code>
        *
        * @return Whether the memsql field is set.
        */
       public boolean hasMemsql() {
-        return driverCase_ == 5;
+        return driverCase_ == 269999277;
       }
       /**
-       * <code>.v1.Memsql memsql = 5;</code>
+       * <code>.v1.Memsql memsql = 269999277;</code>
        *
        * @return The memsql.
        */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getMemsql() {
         if (memsqlBuilder_ == null) {
-          if (driverCase_ == 5) {
+          if (driverCase_ == 269999277) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
         } else {
-          if (driverCase_ == 5) {
+          if (driverCase_ == 269999277) {
             return memsqlBuilder_.getMessage();
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
         }
       }
-      /** <code>.v1.Memsql memsql = 5;</code> */
+      /** <code>.v1.Memsql memsql = 269999277;</code> */
       public Builder setMemsql(com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql value) {
         if (memsqlBuilder_ == null) {
           if (value == null) {
@@ -1621,10 +1627,10 @@ public final class DriversPlumbing {
         } else {
           memsqlBuilder_.setMessage(value);
         }
-        driverCase_ = 5;
+        driverCase_ = 269999277;
         return this;
       }
-      /** <code>.v1.Memsql memsql = 5;</code> */
+      /** <code>.v1.Memsql memsql = 269999277;</code> */
       public Builder setMemsql(
           com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder builderForValue) {
         if (memsqlBuilder_ == null) {
@@ -1633,13 +1639,13 @@ public final class DriversPlumbing {
         } else {
           memsqlBuilder_.setMessage(builderForValue.build());
         }
-        driverCase_ = 5;
+        driverCase_ = 269999277;
         return this;
       }
-      /** <code>.v1.Memsql memsql = 5;</code> */
+      /** <code>.v1.Memsql memsql = 269999277;</code> */
       public Builder mergeMemsql(com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql value) {
         if (memsqlBuilder_ == null) {
-          if (driverCase_ == 5
+          if (driverCase_ == 269999277
               && driver_
                   != com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance()) {
             driver_ =
@@ -1652,24 +1658,24 @@ public final class DriversPlumbing {
           }
           onChanged();
         } else {
-          if (driverCase_ == 5) {
+          if (driverCase_ == 269999277) {
             memsqlBuilder_.mergeFrom(value);
           }
           memsqlBuilder_.setMessage(value);
         }
-        driverCase_ = 5;
+        driverCase_ = 269999277;
         return this;
       }
-      /** <code>.v1.Memsql memsql = 5;</code> */
+      /** <code>.v1.Memsql memsql = 269999277;</code> */
       public Builder clearMemsql() {
         if (memsqlBuilder_ == null) {
-          if (driverCase_ == 5) {
+          if (driverCase_ == 269999277) {
             driverCase_ = 0;
             driver_ = null;
             onChanged();
           }
         } else {
-          if (driverCase_ == 5) {
+          if (driverCase_ == 269999277) {
             driverCase_ = 0;
             driver_ = null;
           }
@@ -1677,29 +1683,29 @@ public final class DriversPlumbing {
         }
         return this;
       }
-      /** <code>.v1.Memsql memsql = 5;</code> */
+      /** <code>.v1.Memsql memsql = 269999277;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder getMemsqlBuilder() {
         return getMemsqlFieldBuilder().getBuilder();
       }
-      /** <code>.v1.Memsql memsql = 5;</code> */
+      /** <code>.v1.Memsql memsql = 269999277;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder getMemsqlOrBuilder() {
-        if ((driverCase_ == 5) && (memsqlBuilder_ != null)) {
+        if ((driverCase_ == 269999277) && (memsqlBuilder_ != null)) {
           return memsqlBuilder_.getMessageOrBuilder();
         } else {
-          if (driverCase_ == 5) {
+          if (driverCase_ == 269999277) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
         }
       }
-      /** <code>.v1.Memsql memsql = 5;</code> */
+      /** <code>.v1.Memsql memsql = 269999277;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql,
               com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder>
           getMemsqlFieldBuilder() {
         if (memsqlBuilder_ == null) {
-          if (!(driverCase_ == 5)) {
+          if (!(driverCase_ == 269999277)) {
             driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
           }
           memsqlBuilder_ =
@@ -1712,7 +1718,7 @@ public final class DriversPlumbing {
                   isClean());
           driver_ = null;
         }
-        driverCase_ = 5;
+        driverCase_ = 269999277;
         onChanged();
         ;
         return memsqlBuilder_;
@@ -1724,32 +1730,32 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder>
           athenaBuilder_;
       /**
-       * <code>.v1.Athena athena = 6;</code>
+       * <code>.v1.Athena athena = 86524680;</code>
        *
        * @return Whether the athena field is set.
        */
       public boolean hasAthena() {
-        return driverCase_ == 6;
+        return driverCase_ == 86524680;
       }
       /**
-       * <code>.v1.Athena athena = 6;</code>
+       * <code>.v1.Athena athena = 86524680;</code>
        *
        * @return The athena.
        */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena getAthena() {
         if (athenaBuilder_ == null) {
-          if (driverCase_ == 6) {
+          if (driverCase_ == 86524680) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
         } else {
-          if (driverCase_ == 6) {
+          if (driverCase_ == 86524680) {
             return athenaBuilder_.getMessage();
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
         }
       }
-      /** <code>.v1.Athena athena = 6;</code> */
+      /** <code>.v1.Athena athena = 86524680;</code> */
       public Builder setAthena(com.strongdm.api.v1.plumbing.DriversPlumbing.Athena value) {
         if (athenaBuilder_ == null) {
           if (value == null) {
@@ -1760,10 +1766,10 @@ public final class DriversPlumbing {
         } else {
           athenaBuilder_.setMessage(value);
         }
-        driverCase_ = 6;
+        driverCase_ = 86524680;
         return this;
       }
-      /** <code>.v1.Athena athena = 6;</code> */
+      /** <code>.v1.Athena athena = 86524680;</code> */
       public Builder setAthena(
           com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder builderForValue) {
         if (athenaBuilder_ == null) {
@@ -1772,13 +1778,13 @@ public final class DriversPlumbing {
         } else {
           athenaBuilder_.setMessage(builderForValue.build());
         }
-        driverCase_ = 6;
+        driverCase_ = 86524680;
         return this;
       }
-      /** <code>.v1.Athena athena = 6;</code> */
+      /** <code>.v1.Athena athena = 86524680;</code> */
       public Builder mergeAthena(com.strongdm.api.v1.plumbing.DriversPlumbing.Athena value) {
         if (athenaBuilder_ == null) {
-          if (driverCase_ == 6
+          if (driverCase_ == 86524680
               && driver_
                   != com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance()) {
             driver_ =
@@ -1791,24 +1797,24 @@ public final class DriversPlumbing {
           }
           onChanged();
         } else {
-          if (driverCase_ == 6) {
+          if (driverCase_ == 86524680) {
             athenaBuilder_.mergeFrom(value);
           }
           athenaBuilder_.setMessage(value);
         }
-        driverCase_ = 6;
+        driverCase_ = 86524680;
         return this;
       }
-      /** <code>.v1.Athena athena = 6;</code> */
+      /** <code>.v1.Athena athena = 86524680;</code> */
       public Builder clearAthena() {
         if (athenaBuilder_ == null) {
-          if (driverCase_ == 6) {
+          if (driverCase_ == 86524680) {
             driverCase_ = 0;
             driver_ = null;
             onChanged();
           }
         } else {
-          if (driverCase_ == 6) {
+          if (driverCase_ == 86524680) {
             driverCase_ = 0;
             driver_ = null;
           }
@@ -1816,29 +1822,29 @@ public final class DriversPlumbing {
         }
         return this;
       }
-      /** <code>.v1.Athena athena = 6;</code> */
+      /** <code>.v1.Athena athena = 86524680;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder getAthenaBuilder() {
         return getAthenaFieldBuilder().getBuilder();
       }
-      /** <code>.v1.Athena athena = 6;</code> */
+      /** <code>.v1.Athena athena = 86524680;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder getAthenaOrBuilder() {
-        if ((driverCase_ == 6) && (athenaBuilder_ != null)) {
+        if ((driverCase_ == 86524680) && (athenaBuilder_ != null)) {
           return athenaBuilder_.getMessageOrBuilder();
         } else {
-          if (driverCase_ == 6) {
+          if (driverCase_ == 86524680) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
         }
       }
-      /** <code>.v1.Athena athena = 6;</code> */
+      /** <code>.v1.Athena athena = 86524680;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena,
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder>
           getAthenaFieldBuilder() {
         if (athenaBuilder_ == null) {
-          if (!(driverCase_ == 6)) {
+          if (!(driverCase_ == 86524680)) {
             driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
           }
           athenaBuilder_ =
@@ -1851,7 +1857,7 @@ public final class DriversPlumbing {
                   isClean());
           driver_ = null;
         }
-        driverCase_ = 6;
+        driverCase_ = 86524680;
         onChanged();
         ;
         return athenaBuilder_;
@@ -7380,65 +7386,52 @@ public final class DriversPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The hostname.
-     */
-    java.lang.String getHostname();
-    /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for hostname.
-     */
-    com.google.protobuf.ByteString getHostnameBytes();
-
-    /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
      *
      * @return The accessKey.
      */
     java.lang.String getAccessKey();
     /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for accessKey.
      */
     com.google.protobuf.ByteString getAccessKeyBytes();
 
     /**
-     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The secretAccessKey.
      */
     java.lang.String getSecretAccessKey();
     /**
-     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for secretAccessKey.
      */
     com.google.protobuf.ByteString getSecretAccessKeyBytes();
 
     /**
-     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The region.
      */
     java.lang.String getRegion();
     /**
-     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for region.
      */
     com.google.protobuf.ByteString getRegionBytes();
 
     /**
-     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The output.
      */
     java.lang.String getOutput();
     /**
-     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for output.
      */
@@ -7456,7 +7449,6 @@ public final class DriversPlumbing {
     }
 
     private Athena() {
-      hostname_ = "";
       accessKey_ = "";
       secretAccessKey_ = "";
       region_ = "";
@@ -7496,31 +7488,24 @@ public final class DriversPlumbing {
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                hostname_ = s;
+                accessKey_ = s;
                 break;
               }
             case 18:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                accessKey_ = s;
+                secretAccessKey_ = s;
                 break;
               }
             case 26:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                secretAccessKey_ = s;
-                break;
-              }
-            case 34:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
                 region_ = s;
                 break;
               }
-            case 42:
+            case 34:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -7560,45 +7545,10 @@ public final class DriversPlumbing {
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder.class);
     }
 
-    public static final int HOSTNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object hostname_;
-    /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The hostname.
-     */
-    public java.lang.String getHostname() {
-      java.lang.Object ref = hostname_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        hostname_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for hostname.
-     */
-    public com.google.protobuf.ByteString getHostnameBytes() {
-      java.lang.Object ref = hostname_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        hostname_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ACCESS_KEY_FIELD_NUMBER = 2;
+    public static final int ACCESS_KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object accessKey_;
     /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
      *
      * @return The accessKey.
      */
@@ -7614,7 +7564,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for accessKey.
      */
@@ -7630,10 +7580,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int SECRETACCESSKEY_FIELD_NUMBER = 3;
+    public static final int SECRETACCESSKEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object secretAccessKey_;
     /**
-     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The secretAccessKey.
      */
@@ -7649,7 +7599,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for secretAccessKey.
      */
@@ -7665,10 +7615,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int REGION_FIELD_NUMBER = 4;
+    public static final int REGION_FIELD_NUMBER = 3;
     private volatile java.lang.Object region_;
     /**
-     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The region.
      */
@@ -7684,7 +7634,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for region.
      */
@@ -7700,10 +7650,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int OUTPUT_FIELD_NUMBER = 5;
+    public static final int OUTPUT_FIELD_NUMBER = 4;
     private volatile java.lang.Object output_;
     /**
-     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The output.
      */
@@ -7719,7 +7669,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for output.
      */
@@ -7749,20 +7699,17 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (!getHostnameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
-      }
       if (!getAccessKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accessKey_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKey_);
       }
       if (!getSecretAccessKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secretAccessKey_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretAccessKey_);
       }
       if (!getRegionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, region_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, region_);
       }
       if (!getOutputBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, output_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, output_);
       }
       unknownFields.writeTo(output);
     }
@@ -7773,20 +7720,17 @@ public final class DriversPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHostnameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
-      }
       if (!getAccessKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accessKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKey_);
       }
       if (!getSecretAccessKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secretAccessKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretAccessKey_);
       }
       if (!getRegionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, region_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, region_);
       }
       if (!getOutputBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, output_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, output_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7804,7 +7748,6 @@ public final class DriversPlumbing {
       com.strongdm.api.v1.plumbing.DriversPlumbing.Athena other =
           (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) obj;
 
-      if (!getHostname().equals(other.getHostname())) return false;
       if (!getAccessKey().equals(other.getAccessKey())) return false;
       if (!getSecretAccessKey().equals(other.getSecretAccessKey())) return false;
       if (!getRegion().equals(other.getRegion())) return false;
@@ -7820,8 +7763,6 @@ public final class DriversPlumbing {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getAccessKey().hashCode();
       hash = (37 * hash) + SECRETACCESSKEY_FIELD_NUMBER;
@@ -7969,8 +7910,6 @@ public final class DriversPlumbing {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        hostname_ = "";
-
         accessKey_ = "";
 
         secretAccessKey_ = "";
@@ -8005,7 +7944,6 @@ public final class DriversPlumbing {
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena buildPartial() {
         com.strongdm.api.v1.plumbing.DriversPlumbing.Athena result =
             new com.strongdm.api.v1.plumbing.DriversPlumbing.Athena(this);
-        result.hostname_ = hostname_;
         result.accessKey_ = accessKey_;
         result.secretAccessKey_ = secretAccessKey_;
         result.region_ = region_;
@@ -8062,10 +8000,6 @@ public final class DriversPlumbing {
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.Athena other) {
         if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance())
           return this;
-        if (!other.getHostname().isEmpty()) {
-          hostname_ = other.hostname_;
-          onChanged();
-        }
         if (!other.getAccessKey().isEmpty()) {
           accessKey_ = other.accessKey_;
           onChanged();
@@ -8112,85 +8046,9 @@ public final class DriversPlumbing {
         return this;
       }
 
-      private java.lang.Object hostname_ = "";
-      /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The hostname.
-       */
-      public java.lang.String getHostname() {
-        java.lang.Object ref = hostname_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          hostname_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The bytes for hostname.
-       */
-      public com.google.protobuf.ByteString getHostnameBytes() {
-        java.lang.Object ref = hostname_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-          hostname_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The hostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHostname(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        hostname_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearHostname() {
-
-        hostname_ = getDefaultInstance().getHostname();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The bytes for hostname to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        hostname_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object accessKey_ = "";
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
        *
        * @return The accessKey.
        */
@@ -8206,7 +8064,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for accessKey.
        */
@@ -8222,7 +8080,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
        *
        * @param value The accessKey to set.
        * @return This builder for chaining.
@@ -8237,7 +8095,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -8248,7 +8106,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for accessKey to set.
        * @return This builder for chaining.
@@ -8266,7 +8124,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object secretAccessKey_ = "";
       /**
-       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The secretAccessKey.
        */
@@ -8282,7 +8140,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for secretAccessKey.
        */
@@ -8298,7 +8156,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The secretAccessKey to set.
        * @return This builder for chaining.
@@ -8313,7 +8171,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -8324,7 +8182,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secretAccessKey = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string secretAccessKey = 2 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for secretAccessKey to set.
        * @return This builder for chaining.
@@ -8342,7 +8200,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object region_ = "";
       /**
-       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The region.
        */
@@ -8358,7 +8216,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for region.
        */
@@ -8374,7 +8232,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The region to set.
        * @return This builder for chaining.
@@ -8389,7 +8247,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -8400,7 +8258,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for region to set.
        * @return This builder for chaining.
@@ -8418,7 +8276,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object output_ = "";
       /**
-       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The output.
        */
@@ -8434,7 +8292,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for output.
        */
@@ -8450,7 +8308,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The output to set.
        * @return This builder for chaining.
@@ -8465,7 +8323,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -8476,7 +8334,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string output = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string output = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for output to set.
        * @return This builder for chaining.
@@ -8581,40 +8439,40 @@ public final class DriversPlumbing {
 
   static {
     java.lang.String[] descriptorData = {
-      "\n\rdrivers.proto\022\002v1\032\roptions.proto\"\335\001\n\006D"
-          + "river\022\032\n\005mysql\030\001 \001(\0132\t.v1.MysqlH\000\022\'\n\014aur"
-          + "ora_mysql\030\002 \001(\0132\017.v1.AuroraMysqlH\000\022 \n\010cl"
-          + "ustrix\030\003 \001(\0132\014.v1.ClustrixH\000\022\032\n\005maria\030\004 "
-          + "\001(\0132\t.v1.MariaH\000\022\034\n\006memsql\030\005 \001(\0132\n.v1.Me"
-          + "msqlH\000\022\034\n\006athena\030\006 \001(\0132\n.v1.AthenaH\000:\n\372\370"
-          + "\263\007\005\250\363\263\007\001B\010\n\006driver\"\245\001\n\005Mysql\022\034\n\010hostname"
-          + "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001"
-          + "(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\253\001\n\013AuroraMys"
-          + "ql\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010user"
-          + "name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001"
-          + "\"\250\001\n\010Clustrix\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010pas"
-          + "sword\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:"
-          + "\n\372\370\263\007\005\250\363\263\007\001\"\245\001\n\005Maria\022\034\n\010hostname\030\001 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010datab"
-          + "ase\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263"
-          + "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\246\001\n\006Memsql\022\034\n\010hostna"
-          + "me\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005"
-          + " \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\257\001\n\006Athena\022"
-          + "\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccess_"
-          + "key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\017secretAccessKey"
-          + "\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\004 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\032\n\006output\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007"
-          + "\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbingB\017"
-          + "DriversPlumbingb\006proto3"
+      "\n\rdrivers.proto\022\002v1\032\roptions.proto\"\363\001\n\006D"
+          + "river\022\036\n\005mysql\030\303\200\224\270\001 \001(\0132\t.v1.MysqlH\000\022*\n"
+          + "\014aurora_mysql\030\355\242\334\010 \001(\0132\017.v1.AuroraMysqlH"
+          + "\000\022$\n\010clustrix\030\224\251\356\375\001 \001(\0132\014.v1.ClustrixH\000\022"
+          + "\036\n\005maria\030\224\335\246\336\001 \001(\0132\t.v1.MariaH\000\022 \n\006memsq"
+          + "l\030\255\271\337\200\001 \001(\0132\n.v1.MemsqlH\000\022\037\n\006athena\030\210\206\241)"
+          + " \001(\0132\n.v1.AthenaH\000:\n\372\370\263\007\005\250\363\263\007\001B\010\n\006driver"
+          + "\"\245\001\n\005Mysql\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010passwo"
+          + "rd\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370"
+          + "\263\007\005\250\363\263\007\001\"\253\001\n\013AuroraMysql\022\034\n\010hostname\030\001 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010da"
+          + "tabase\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n"
+          + "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\250\001\n\010Clustrix\022\034\n\010h"
+          + "ostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004p"
+          + "ort\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\245\001\n\005Ma"
+          + "ria\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010use"
+          + "rname\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007"
+          + "\001\"\246\001\n\006Memsql\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010pass"
+          + "word\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\t"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n"
+          + "\372\370\263\007\005\250\363\263\007\001\"\221\001\n\006Athena\022\036\n\naccess_key\030\001 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\017secretAccessKey\030\002 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032"
+          + "\n\006output\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B/"
+          + "\n\034com.strongdm.api.v1.plumbingB\017DriversP"
+          + "lumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -8669,7 +8527,7 @@ public final class DriversPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Athena_descriptor,
             new java.lang.String[] {
-              "Hostname", "AccessKey", "SecretAccessKey", "Region", "Output",
+              "AccessKey", "SecretAccessKey", "Region", "Output",
             });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

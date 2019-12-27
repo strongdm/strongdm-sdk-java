@@ -330,7 +330,6 @@ public class Plumbing {
 
   public static com.strongdm.api.v1.Athena athenaToPorcelain(Athena plumbing) {
     com.strongdm.api.v1.Athena porcelain = new com.strongdm.api.v1.Athena();
-    porcelain.setHostname(plumbing.getHostname());
     porcelain.setAccessKey(plumbing.getAccessKey());
     porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
     porcelain.setRegion(plumbing.getRegion());
@@ -343,9 +342,6 @@ public class Plumbing {
       return null;
     }
     Athena.Builder builder = Athena.newBuilder();
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey(porcelain.getAccessKey());
     }

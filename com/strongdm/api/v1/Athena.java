@@ -1,17 +1,6 @@
 package com.strongdm.api.v1;
 
 public class Athena implements Driver {
-  private String hostname;
-
-  public String getHostname() {
-    return this.hostname;
-  }
-
-  public Athena setHostname(String in) {
-    this.hostname = in;
-    return this;
-  }
-
   private String accessKey;
 
   public String getAccessKey() {
