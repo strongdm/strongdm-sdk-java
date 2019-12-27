@@ -59,11 +59,11 @@ public final class ResourcesPlumbing {
      * Parameters to define the new Resource.
      * </pre>
      *
-     * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      *
-     * @return Whether the driver field is set.
+     * @return Whether the resource field is set.
      */
-    boolean hasDriver();
+    boolean hasResource();
     /**
      *
      *
@@ -71,11 +71,11 @@ public final class ResourcesPlumbing {
      * Parameters to define the new Resource.
      * </pre>
      *
-     * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      *
-     * @return The driver.
+     * @return The resource.
      */
-    com.strongdm.api.v1.plumbing.DriversPlumbing.Driver getDriver();
+    com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource();
     /**
      *
      *
@@ -83,9 +83,9 @@ public final class ResourcesPlumbing {
      * Parameters to define the new Resource.
      * </pre>
      *
-     * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder getDriverOrBuilder();
+    com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder();
   }
   /**
    *
@@ -156,17 +156,17 @@ public final class ResourcesPlumbing {
               }
             case 18:
               {
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder subBuilder = null;
-                if (driver_ != null) {
-                  subBuilder = driver_.toBuilder();
+                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder subBuilder = null;
+                if (resource_ != null) {
+                  subBuilder = resource_.toBuilder();
                 }
-                driver_ =
+                resource_ =
                     input.readMessage(
-                        com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.parser(),
+                        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.parser(),
                         extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom(driver_);
-                  driver_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom(resource_);
+                  resource_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -250,8 +250,8 @@ public final class ResourcesPlumbing {
       return getMeta();
     }
 
-    public static final int DRIVER_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.DriversPlumbing.Driver driver_;
+    public static final int RESOURCE_FIELD_NUMBER = 2;
+    private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
     /**
      *
      *
@@ -259,12 +259,12 @@ public final class ResourcesPlumbing {
      * Parameters to define the new Resource.
      * </pre>
      *
-     * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      *
-     * @return Whether the driver field is set.
+     * @return Whether the resource field is set.
      */
-    public boolean hasDriver() {
-      return driver_ != null;
+    public boolean hasResource() {
+      return resource_ != null;
     }
     /**
      *
@@ -273,14 +273,14 @@ public final class ResourcesPlumbing {
      * Parameters to define the new Resource.
      * </pre>
      *
-     * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      *
-     * @return The driver.
+     * @return The resource.
      */
-    public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver getDriver() {
-      return driver_ == null
-          ? com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.getDefaultInstance()
-          : driver_;
+    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+      return resource_ == null
+          ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+          : resource_;
     }
     /**
      *
@@ -289,10 +289,10 @@ public final class ResourcesPlumbing {
      * Parameters to define the new Resource.
      * </pre>
      *
-     * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder getDriverOrBuilder() {
-      return getDriver();
+    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder() {
+      return getResource();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -312,8 +312,8 @@ public final class ResourcesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (driver_ != null) {
-        output.writeMessage(2, getDriver());
+      if (resource_ != null) {
+        output.writeMessage(2, getResource());
       }
       unknownFields.writeTo(output);
     }
@@ -327,8 +327,8 @@ public final class ResourcesPlumbing {
       if (meta_ != null) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(1, getMeta());
       }
-      if (driver_ != null) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getDriver());
+      if (resource_ != null) {
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getResource());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -350,9 +350,9 @@ public final class ResourcesPlumbing {
       if (hasMeta()) {
         if (!getMeta().equals(other.getMeta())) return false;
       }
-      if (hasDriver() != other.hasDriver()) return false;
-      if (hasDriver()) {
-        if (!getDriver().equals(other.getDriver())) return false;
+      if (hasResource() != other.hasResource()) return false;
+      if (hasResource()) {
+        if (!getResource().equals(other.getResource())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -369,9 +369,9 @@ public final class ResourcesPlumbing {
         hash = (37 * hash) + META_FIELD_NUMBER;
         hash = (53 * hash) + getMeta().hashCode();
       }
-      if (hasDriver()) {
-        hash = (37 * hash) + DRIVER_FIELD_NUMBER;
-        hash = (53 * hash) + getDriver().hashCode();
+      if (hasResource()) {
+        hash = (37 * hash) + RESOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getResource().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -529,11 +529,11 @@ public final class ResourcesPlumbing {
           meta_ = null;
           metaBuilder_ = null;
         }
-        if (driverBuilder_ == null) {
-          driver_ = null;
+        if (resourceBuilder_ == null) {
+          resource_ = null;
         } else {
-          driver_ = null;
-          driverBuilder_ = null;
+          resource_ = null;
+          resourceBuilder_ = null;
         }
         return this;
       }
@@ -570,10 +570,10 @@ public final class ResourcesPlumbing {
         } else {
           result.meta_ = metaBuilder_.build();
         }
-        if (driverBuilder_ == null) {
-          result.driver_ = driver_;
+        if (resourceBuilder_ == null) {
+          result.resource_ = resource_;
         } else {
-          result.driver_ = driverBuilder_.build();
+          result.resource_ = resourceBuilder_.build();
         }
         onBuilt();
         return result;
@@ -633,8 +633,8 @@ public final class ResourcesPlumbing {
         if (other.hasMeta()) {
           mergeMeta(other.getMeta());
         }
-        if (other.hasDriver()) {
-          mergeDriver(other.getDriver());
+        if (other.hasResource()) {
+          mergeResource(other.getResource());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -853,12 +853,12 @@ public final class ResourcesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.DriversPlumbing.Driver driver_;
+      private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder>
-          driverBuilder_;
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+          resourceBuilder_;
       /**
        *
        *
@@ -866,12 +866,12 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        *
-       * @return Whether the driver field is set.
+       * @return Whether the resource field is set.
        */
-      public boolean hasDriver() {
-        return driverBuilder_ != null || driver_ != null;
+      public boolean hasResource() {
+        return resourceBuilder_ != null || resource_ != null;
       }
       /**
        *
@@ -880,17 +880,17 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        *
-       * @return The driver.
+       * @return The resource.
        */
-      public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver getDriver() {
-        if (driverBuilder_ == null) {
-          return driver_ == null
-              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.getDefaultInstance()
-              : driver_;
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+        if (resourceBuilder_ == null) {
+          return resource_ == null
+              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              : resource_;
         } else {
-          return driverBuilder_.getMessage();
+          return resourceBuilder_.getMessage();
         }
       }
       /**
@@ -900,17 +900,17 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setDriver(com.strongdm.api.v1.plumbing.DriversPlumbing.Driver value) {
-        if (driverBuilder_ == null) {
+      public Builder setResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+        if (resourceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          driver_ = value;
+          resource_ = value;
           onChanged();
         } else {
-          driverBuilder_.setMessage(value);
+          resourceBuilder_.setMessage(value);
         }
 
         return this;
@@ -922,15 +922,15 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setDriver(
-          com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder builderForValue) {
-        if (driverBuilder_ == null) {
-          driver_ = builderForValue.build();
+      public Builder setResource(
+          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+        if (resourceBuilder_ == null) {
+          resource_ = builderForValue.build();
           onChanged();
         } else {
-          driverBuilder_.setMessage(builderForValue.build());
+          resourceBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -942,21 +942,21 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeDriver(com.strongdm.api.v1.plumbing.DriversPlumbing.Driver value) {
-        if (driverBuilder_ == null) {
-          if (driver_ != null) {
-            driver_ =
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.newBuilder(driver_)
+      public Builder mergeResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+        if (resourceBuilder_ == null) {
+          if (resource_ != null) {
+            resource_ =
+                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.newBuilder(resource_)
                     .mergeFrom(value)
                     .buildPartial();
           } else {
-            driver_ = value;
+            resource_ = value;
           }
           onChanged();
         } else {
-          driverBuilder_.mergeFrom(value);
+          resourceBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -968,15 +968,15 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder clearDriver() {
-        if (driverBuilder_ == null) {
-          driver_ = null;
+      public Builder clearResource() {
+        if (resourceBuilder_ == null) {
+          resource_ = null;
           onChanged();
         } else {
-          driver_ = null;
-          driverBuilder_ = null;
+          resource_ = null;
+          resourceBuilder_ = null;
         }
 
         return this;
@@ -988,12 +988,12 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder getDriverBuilder() {
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder getResourceBuilder() {
 
         onChanged();
-        return getDriverFieldBuilder().getBuilder();
+        return getResourceFieldBuilder().getBuilder();
       }
       /**
        *
@@ -1002,15 +1002,16 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder getDriverOrBuilder() {
-        if (driverBuilder_ != null) {
-          return driverBuilder_.getMessageOrBuilder();
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder
+          getResourceOrBuilder() {
+        if (resourceBuilder_ != null) {
+          return resourceBuilder_.getMessageOrBuilder();
         } else {
-          return driver_ == null
-              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.getDefaultInstance()
-              : driver_;
+          return resource_ == null
+              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              : resource_;
         }
       }
       /**
@@ -1020,23 +1021,23 @@ public final class ResourcesPlumbing {
        * Parameters to define the new Resource.
        * </pre>
        *
-       * <code>.v1.Driver driver = 2 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder>
-          getDriverFieldBuilder() {
-        if (driverBuilder_ == null) {
-          driverBuilder_ =
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+          getResourceFieldBuilder() {
+        if (resourceBuilder_ == null) {
+          resourceBuilder_ =
               new com.google.protobuf.SingleFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.DriversPlumbing.Driver,
-                  com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder,
-                  com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder>(
-                  getDriver(), getParentForChildren(), isClean());
-          driver_ = null;
+                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
+                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
+                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>(
+                  getResource(), getParentForChildren(), isClean());
+          resource_ = null;
         }
-        return driverBuilder_;
+        return resourceBuilder_;
       }
 
       @java.lang.Override
@@ -13673,59 +13674,60 @@ public final class ResourcesPlumbing {
       "\n\017resources.proto\022\002v1\032\034google/api/annota"
           + "tions.proto\032,protoc-gen-swagger/options/"
           + "annotations.proto\032\roptions.proto\032\nspec.p"
-          + "roto\032\rdrivers.proto\"h\n\025ResourceCreateReq"
+          + "roto\032\rdrivers.proto\"l\n\025ResourceCreateReq"
           + "uest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMet"
-          + "adata\022&\n\006driver\030\002 \001(\0132\n.v1.DriverB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\"\275\001\n\026ResourceCreateResponse\0224\n\004meta"
-          + "\030\001 \001(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v1.ResourceB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\004 \001(\0132\025.v1.Rate"
-          + "LimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"R\n"
-          + "\022ResourceGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.G"
-          + "etRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\"\267\001\n\023ResourceGetResponse\0221\n\004meta\030\001 \001(\0132"
-          + "\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010"
-          + "resource\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad"
-          + "ataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"x\n\025ResourceU"
-          + "pdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRe"
-          + "questMetadata\022\n\n\002id\030\002 \001(\t\022*\n\010resource\030\003 "
-          + "\001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\"\275\001\n\026Resour"
-          + "ceUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Upda"
-          + "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resour"
-          + "ce\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nra"
-          + "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362"
-          + "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\025ResourceDeleteR"
-          + "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestM"
-          + "etadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\221\001\n\026Reso"
-          + "urceDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.De"
-          + "leteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate"
-          + "_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263"
-          + "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\023ResourceListReque"
-          + "st\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadat"
-          + "a\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\242\001\n\024Resour"
-          + "ceListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRe"
-          + "sponseMetadata\022+\n\tresources\030\002 \003(\0132\014.v1.R"
-          + "esourceB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132"
-          + "\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\265\001\n\010R"
-          + "esource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004name\030"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\003 \001(\005"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022 \n\007healthy\030\004 \001(\010B\017\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\002@\001\022&\n\006driver\030\005 \001(\0132\n.v1.DriverB\n\362\370\263\007"
-          + "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\335\003\n\tResources\022Y\n\006Crea"
-          + "te\022\031.v1.ResourceCreateRequest\032\032.v1.Resou"
-          + "rceCreateResponse\"\030\202\323\344\223\002\022\"\r/v1/resources"
-          + ":\001*\022R\n\003Get\022\026.v1.ResourceGetRequest\032\027.v1."
-          + "ResourceGetResponse\"\032\202\323\344\223\002\024\022\022/v1/resourc"
-          + "es/{id}\022^\n\006Update\022\031.v1.ResourceUpdateReq"
-          + "uest\032\032.v1.ResourceUpdateResponse\"\035\202\323\344\223\002\027"
-          + "\032\022/v1/resources/{id}:\001*\022[\n\006Delete\022\031.v1.R"
-          + "esourceDeleteRequest\032\032.v1.ResourceDelete"
-          + "Response\"\032\202\323\344\223\002\024*\022/v1/resources/{id}\022P\n\004"
-          + "List\022\027.v1.ResourceListRequest\032\030.v1.Resou"
-          + "rceListResponse\"\025\202\323\344\223\002\017\022\r/v1/resources\032\022"
-          + "\312\371\263\007\r\302\371\263\007\010ResourceB1\n\034com.strongdm.api.v"
-          + "1.plumbingB\021ResourcesPlumbingb\006proto3"
+          + "adata\022*\n\010resource\030\002 \001(\0132\014.v1.ResourceB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\"\275\001\n\026ResourceCreateResponse\0224\n\004"
+          + "meta\030\001 \001(\0132\032.v1.CreateResponseMetadataB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v1.Resour"
+          + "ceB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\004 \001(\0132\025.v1."
+          + "RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007"
+          + "\001\"R\n\022ResourceGetRequest\022$\n\004meta\030\001 \001(\0132\026."
+          + "v1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\"\267\001\n\023ResourceGetResponse\0221\n\004meta\030\001 "
+          + "\001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022*\n\010resource\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM"
+          + "etadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"x\n\025Resou"
+          + "rceUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Upda"
+          + "teRequestMetadata\022\n\n\002id\030\002 \001(\t\022*\n\010resourc"
+          + "e\030\003 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\"\275\001\n\026Re"
+          + "sourceUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1."
+          + "UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010re"
+          + "source\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\0225"
+          + "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat"
+          + "aB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\025ResourceDel"
+          + "eteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequ"
+          + "estMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\221\001\n\026"
+          + "ResourceDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v"
+          + "1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\n"
+          + "rate_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB"
+          + "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\023ResourceListR"
+          + "equest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMet"
+          + "adata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\242\001\n\024Re"
+          + "sourceListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Li"
+          + "stResponseMetadata\022+\n\tresources\030\002 \003(\0132\014."
+          + "v1.ResourceB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 "
+          + "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\265"
+          + "\001\n\010Resource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004n"
+          + "ame\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\003"
+          + " \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022 \n\007healthy\030\004 \001(\010B\017\362\370\263\007\005"
+          + "\260\363\263\007\001\222A\002@\001\022&\n\006driver\030\005 \001(\0132\n.v1.DriverB\n"
+          + "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\335\003\n\tResources\022Y\n\006"
+          + "Create\022\031.v1.ResourceCreateRequest\032\032.v1.R"
+          + "esourceCreateResponse\"\030\202\323\344\223\002\022\"\r/v1/resou"
+          + "rces:\001*\022R\n\003Get\022\026.v1.ResourceGetRequest\032\027"
+          + ".v1.ResourceGetResponse\"\032\202\323\344\223\002\024\022\022/v1/res"
+          + "ources/{id}\022^\n\006Update\022\031.v1.ResourceUpdat"
+          + "eRequest\032\032.v1.ResourceUpdateResponse\"\035\202\323"
+          + "\344\223\002\027\032\022/v1/resources/{id}:\001*\022[\n\006Delete\022\031."
+          + "v1.ResourceDeleteRequest\032\032.v1.ResourceDe"
+          + "leteResponse\"\032\202\323\344\223\002\024*\022/v1/resources/{id}"
+          + "\022P\n\004List\022\027.v1.ResourceListRequest\032\030.v1.R"
+          + "esourceListResponse\"\025\202\323\344\223\002\017\022\r/v1/resourc"
+          + "es\032\022\312\371\263\007\r\302\371\263\007\010ResourceB1\n\034com.strongdm.a"
+          + "pi.v1.plumbingB\021ResourcesPlumbingb\006proto"
+          + "3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -13742,7 +13744,7 @@ public final class ResourcesPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_ResourceCreateRequest_descriptor,
             new java.lang.String[] {
-              "Meta", "Driver",
+              "Meta", "Resource",
             });
     internal_static_v1_ResourceCreateResponse_descriptor = getDescriptor().getMessageTypes().get(1);
     internal_static_v1_ResourceCreateResponse_fieldAccessorTable =

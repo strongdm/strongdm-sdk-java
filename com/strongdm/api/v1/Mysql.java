@@ -34,13 +34,13 @@ public class Mysql implements Driver {
     return this;
   }
 
-  private String port;
+  private int port;
 
-  public String getPort() {
+  public int getPort() {
     return this.port;
   }
 
-  public Mysql setPort(String in) {
+  public Mysql setPort(int in) {
     this.port = in;
     return this;
   }

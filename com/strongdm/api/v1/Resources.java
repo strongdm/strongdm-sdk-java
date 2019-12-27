@@ -34,10 +34,10 @@ public class Resources {
   }
 
   // Create registers a new Resource.
-  public ResourceCreateResponse create(Driver driver) throws RpcException {
+  public ResourceCreateResponse create(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceCreateRequest.Builder builder =
         ResourcesPlumbing.ResourceCreateRequest.newBuilder();
-    builder.setDriver(Plumbing.driverToPlumbing(driver));
+    builder.setResource(Plumbing.resourceToPlumbing(resource));
     ResourcesPlumbing.ResourceCreateRequest req = builder.build();
     ResourcesPlumbing.ResourceCreateResponse plumbingResponse;
     try {
