@@ -34,6 +34,12 @@ public class Plumbing {
     if (plumbing.getHttpBasicAuth() != null) {
       return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
     }
+    if (plumbing.getHttpNoAuth() != null) {
+      return httpNoAuthToPorcelain(plumbing.getHttpNoAuth());
+    }
+    if (plumbing.getHttpAuth() != null) {
+      return httpAuthToPorcelain(plumbing.getHttpAuth());
+    }
     if (plumbing.getMysql() != null) {
       return mysqlToPorcelain(plumbing.getMysql());
     }
@@ -63,6 +69,16 @@ public class Plumbing {
       Driver.Builder builder = Driver.newBuilder();
       builder.setHttpBasicAuth(
           httpBasicAuthToPlumbing((com.strongdm.api.v1.HTTPBasicAuth) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.HTTPNoAuth) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setHttpNoAuth(httpNoAuthToPlumbing((com.strongdm.api.v1.HTTPNoAuth) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.HTTPAuth) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setHttpAuth(httpAuthToPlumbing((com.strongdm.api.v1.HTTPAuth) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Mysql) {
@@ -164,6 +180,104 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.HTTPBasicAuth> porcelains) {
     return porcelains.stream()
         .map(porcelain -> httpBasicAuthToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.HTTPNoAuth httpNoAuthToPorcelain(HTTPNoAuth plumbing) {
+    com.strongdm.api.v1.HTTPNoAuth porcelain = new com.strongdm.api.v1.HTTPNoAuth();
+    porcelain.setUrl(plumbing.getUrl());
+    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
+    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
+    porcelain.setDefaultPath(plumbing.getDefaultPath());
+    porcelain.setSubdomain(plumbing.getSubdomain());
+    return porcelain;
+  }
+
+  public static HTTPNoAuth httpNoAuthToPlumbing(com.strongdm.api.v1.HTTPNoAuth porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    HTTPNoAuth.Builder builder = HTTPNoAuth.newBuilder();
+    if (porcelain.getUrl() != null) {
+      builder.setUrl(porcelain.getUrl());
+    }
+    if (porcelain.getHealthcheckPath() != null) {
+      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
+    }
+    if (porcelain.getHeadersBlacklist() != null) {
+      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
+    }
+    if (porcelain.getDefaultPath() != null) {
+      builder.setDefaultPath(porcelain.getDefaultPath());
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain(porcelain.getSubdomain());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.HTTPNoAuth> repeatedHTTPNoAuthToPorcelain(
+      Collection<HTTPNoAuth> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> httpNoAuthToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<HTTPNoAuth> repeatedHTTPNoAuthToPlumbing(
+      Collection<com.strongdm.api.v1.HTTPNoAuth> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> httpNoAuthToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.HTTPAuth httpAuthToPorcelain(HTTPAuth plumbing) {
+    com.strongdm.api.v1.HTTPAuth porcelain = new com.strongdm.api.v1.HTTPAuth();
+    porcelain.setUrl(plumbing.getUrl());
+    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
+    porcelain.setAuthHeader(plumbing.getAuthHeader());
+    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
+    porcelain.setDefaultPath(plumbing.getDefaultPath());
+    porcelain.setSubdomain(plumbing.getSubdomain());
+    return porcelain;
+  }
+
+  public static HTTPAuth httpAuthToPlumbing(com.strongdm.api.v1.HTTPAuth porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    HTTPAuth.Builder builder = HTTPAuth.newBuilder();
+    if (porcelain.getUrl() != null) {
+      builder.setUrl(porcelain.getUrl());
+    }
+    if (porcelain.getHealthcheckPath() != null) {
+      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
+    }
+    if (porcelain.getAuthHeader() != null) {
+      builder.setAuthHeader(porcelain.getAuthHeader());
+    }
+    if (porcelain.getHeadersBlacklist() != null) {
+      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
+    }
+    if (porcelain.getDefaultPath() != null) {
+      builder.setDefaultPath(porcelain.getDefaultPath());
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain(porcelain.getSubdomain());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.HTTPAuth> repeatedHTTPAuthToPorcelain(
+      Collection<HTTPAuth> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> httpAuthToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<HTTPAuth> repeatedHTTPAuthToPlumbing(
+      Collection<com.strongdm.api.v1.HTTPAuth> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> httpAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
