@@ -31,6 +31,9 @@ public class Plumbing {
     if (plumbing == null) {
       return null;
     }
+    if (plumbing.getHttpBasicAuth() != null) {
+      return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
+    }
     if (plumbing.getMysql() != null) {
       return mysqlToPorcelain(plumbing.getMysql());
     }
@@ -55,6 +58,12 @@ public class Plumbing {
   public static Driver driverToPlumbing(com.strongdm.api.v1.Driver porcelain) {
     if (porcelain == null) {
       return null;
+    }
+    if (porcelain instanceof com.strongdm.api.v1.HTTPBasicAuth) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setHttpBasicAuth(
+          httpBasicAuthToPlumbing((com.strongdm.api.v1.HTTPBasicAuth) porcelain));
+      return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Mysql) {
       Driver.Builder builder = Driver.newBuilder();
@@ -100,6 +109,61 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Driver> porcelains) {
     return porcelains.stream()
         .map(porcelain -> driverToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.HTTPBasicAuth httpBasicAuthToPorcelain(HTTPBasicAuth plumbing) {
+    com.strongdm.api.v1.HTTPBasicAuth porcelain = new com.strongdm.api.v1.HTTPBasicAuth();
+    porcelain.setUrl(plumbing.getUrl());
+    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
+    porcelain.setDefaultPath(plumbing.getDefaultPath());
+    porcelain.setSubdomain(plumbing.getSubdomain());
+    return porcelain;
+  }
+
+  public static HTTPBasicAuth httpBasicAuthToPlumbing(com.strongdm.api.v1.HTTPBasicAuth porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    HTTPBasicAuth.Builder builder = HTTPBasicAuth.newBuilder();
+    if (porcelain.getUrl() != null) {
+      builder.setUrl(porcelain.getUrl());
+    }
+    if (porcelain.getHealthcheckPath() != null) {
+      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getHeadersBlacklist() != null) {
+      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
+    }
+    if (porcelain.getDefaultPath() != null) {
+      builder.setDefaultPath(porcelain.getDefaultPath());
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain(porcelain.getSubdomain());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.HTTPBasicAuth> repeatedHTTPBasicAuthToPorcelain(
+      Collection<HTTPBasicAuth> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> httpBasicAuthToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<HTTPBasicAuth> repeatedHTTPBasicAuthToPlumbing(
+      Collection<com.strongdm.api.v1.HTTPBasicAuth> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> httpBasicAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
