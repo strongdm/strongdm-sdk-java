@@ -34,6 +34,18 @@ public class Plumbing {
     if (plumbing.getMysql() != null) {
       return mysqlToPorcelain(plumbing.getMysql());
     }
+    if (plumbing.getAuroraMysql() != null) {
+      return auroraMysqlToPorcelain(plumbing.getAuroraMysql());
+    }
+    if (plumbing.getClustrix() != null) {
+      return clustrixToPorcelain(plumbing.getClustrix());
+    }
+    if (plumbing.getMaria() != null) {
+      return mariaToPorcelain(plumbing.getMaria());
+    }
+    if (plumbing.getMemsql() != null) {
+      return memsqlToPorcelain(plumbing.getMemsql());
+    }
     if (plumbing.getAthena() != null) {
       return athenaToPorcelain(plumbing.getAthena());
     }
@@ -47,6 +59,26 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.Mysql) {
       Driver.Builder builder = Driver.newBuilder();
       builder.setMysql(mysqlToPlumbing((com.strongdm.api.v1.Mysql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AuroraMysql) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setAuroraMysql(auroraMysqlToPlumbing((com.strongdm.api.v1.AuroraMysql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Clustrix) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setClustrix(clustrixToPlumbing((com.strongdm.api.v1.Clustrix) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Maria) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setMaria(mariaToPlumbing((com.strongdm.api.v1.Maria) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Memsql) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setMemsql(memsqlToPlumbing((com.strongdm.api.v1.Memsql) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Athena) {
@@ -113,6 +145,186 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Mysql> porcelains) {
     return porcelains.stream()
         .map(porcelain -> mysqlToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AuroraMysql auroraMysqlToPorcelain(AuroraMysql plumbing) {
+    com.strongdm.api.v1.AuroraMysql porcelain = new com.strongdm.api.v1.AuroraMysql();
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static AuroraMysql auroraMysqlToPlumbing(com.strongdm.api.v1.AuroraMysql porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AuroraMysql.Builder builder = AuroraMysql.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AuroraMysql> repeatedAuroraMysqlToPorcelain(
+      Collection<AuroraMysql> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> auroraMysqlToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AuroraMysql> repeatedAuroraMysqlToPlumbing(
+      Collection<com.strongdm.api.v1.AuroraMysql> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> auroraMysqlToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Clustrix clustrixToPorcelain(Clustrix plumbing) {
+    com.strongdm.api.v1.Clustrix porcelain = new com.strongdm.api.v1.Clustrix();
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Clustrix clustrixToPlumbing(com.strongdm.api.v1.Clustrix porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Clustrix.Builder builder = Clustrix.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Clustrix> repeatedClustrixToPorcelain(
+      Collection<Clustrix> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> clustrixToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Clustrix> repeatedClustrixToPlumbing(
+      Collection<com.strongdm.api.v1.Clustrix> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> clustrixToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Maria mariaToPorcelain(Maria plumbing) {
+    com.strongdm.api.v1.Maria porcelain = new com.strongdm.api.v1.Maria();
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Maria mariaToPlumbing(com.strongdm.api.v1.Maria porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Maria.Builder builder = Maria.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Maria> repeatedMariaToPorcelain(
+      Collection<Maria> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mariaToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Maria> repeatedMariaToPlumbing(
+      Collection<com.strongdm.api.v1.Maria> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mariaToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Memsql memsqlToPorcelain(Memsql plumbing) {
+    com.strongdm.api.v1.Memsql porcelain = new com.strongdm.api.v1.Memsql();
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Memsql memsqlToPlumbing(com.strongdm.api.v1.Memsql porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Memsql.Builder builder = Memsql.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Memsql> repeatedMemsqlToPorcelain(
+      Collection<Memsql> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> memsqlToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Memsql> repeatedMemsqlToPlumbing(
+      Collection<com.strongdm.api.v1.Memsql> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> memsqlToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

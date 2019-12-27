@@ -33,18 +33,78 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.DriversPlumbing.MysqlOrBuilder getMysqlOrBuilder();
 
     /**
-     * <code>.v1.Athena athena = 2;</code>
+     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     *
+     * @return Whether the auroraMysql field is set.
+     */
+    boolean hasAuroraMysql();
+    /**
+     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     *
+     * @return The auroraMysql.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getAuroraMysql();
+    /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder getAuroraMysqlOrBuilder();
+
+    /**
+     * <code>.v1.Clustrix clustrix = 3;</code>
+     *
+     * @return Whether the clustrix field is set.
+     */
+    boolean hasClustrix();
+    /**
+     * <code>.v1.Clustrix clustrix = 3;</code>
+     *
+     * @return The clustrix.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getClustrix();
+    /** <code>.v1.Clustrix clustrix = 3;</code> */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder getClustrixOrBuilder();
+
+    /**
+     * <code>.v1.Maria maria = 4;</code>
+     *
+     * @return Whether the maria field is set.
+     */
+    boolean hasMaria();
+    /**
+     * <code>.v1.Maria maria = 4;</code>
+     *
+     * @return The maria.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getMaria();
+    /** <code>.v1.Maria maria = 4;</code> */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder getMariaOrBuilder();
+
+    /**
+     * <code>.v1.Memsql memsql = 5;</code>
+     *
+     * @return Whether the memsql field is set.
+     */
+    boolean hasMemsql();
+    /**
+     * <code>.v1.Memsql memsql = 5;</code>
+     *
+     * @return The memsql.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getMemsql();
+    /** <code>.v1.Memsql memsql = 5;</code> */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder getMemsqlOrBuilder();
+
+    /**
+     * <code>.v1.Athena athena = 6;</code>
      *
      * @return Whether the athena field is set.
      */
     boolean hasAthena();
     /**
-     * <code>.v1.Athena athena = 2;</code>
+     * <code>.v1.Athena athena = 6;</code>
      *
      * @return The athena.
      */
     com.strongdm.api.v1.plumbing.DriversPlumbing.Athena getAthena();
-    /** <code>.v1.Athena athena = 2;</code> */
+    /** <code>.v1.Athena athena = 6;</code> */
     com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder getAthenaOrBuilder();
 
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.DriverCase getDriverCase();
@@ -112,8 +172,85 @@ public final class DriversPlumbing {
               }
             case 18:
               {
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder subBuilder = null;
+                com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder subBuilder = null;
                 if (driverCase_ == 2) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_)
+                          .toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 2;
+                break;
+              }
+            case 26:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder subBuilder = null;
+                if (driverCase_ == 3) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_).toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 3;
+                break;
+              }
+            case 34:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder subBuilder = null;
+                if (driverCase_ == 4) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_).toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 4;
+                break;
+              }
+            case 42:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder subBuilder = null;
+                if (driverCase_ == 5) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_).toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 5;
+                break;
+              }
+            case 50:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder subBuilder = null;
+                if (driverCase_ == 6) {
                   subBuilder =
                       ((com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_).toBuilder();
                 }
@@ -126,7 +263,7 @@ public final class DriversPlumbing {
                       (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
                   driver_ = subBuilder.buildPartial();
                 }
-                driverCase_ = 2;
+                driverCase_ = 6;
                 break;
               }
             default:
@@ -170,7 +307,11 @@ public final class DriversPlumbing {
             com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       MYSQL(1),
-      ATHENA(2),
+      AURORA_MYSQL(2),
+      CLUSTRIX(3),
+      MARIA(4),
+      MEMSQL(5),
+      ATHENA(6),
       DRIVER_NOT_SET(0);
       private final int value;
 
@@ -192,6 +333,14 @@ public final class DriversPlumbing {
           case 1:
             return MYSQL;
           case 2:
+            return AURORA_MYSQL;
+          case 3:
+            return CLUSTRIX;
+          case 4:
+            return MARIA;
+          case 5:
+            return MEMSQL;
+          case 6:
             return ATHENA;
           case 0:
             return DRIVER_NOT_SET;
@@ -237,29 +386,142 @@ public final class DriversPlumbing {
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql.getDefaultInstance();
     }
 
-    public static final int ATHENA_FIELD_NUMBER = 2;
+    public static final int AURORA_MYSQL_FIELD_NUMBER = 2;
     /**
-     * <code>.v1.Athena athena = 2;</code>
+     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     *
+     * @return Whether the auroraMysql field is set.
+     */
+    public boolean hasAuroraMysql() {
+      return driverCase_ == 2;
+    }
+    /**
+     * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+     *
+     * @return The auroraMysql.
+     */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getAuroraMysql() {
+      if (driverCase_ == 2) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
+    }
+    /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder
+        getAuroraMysqlOrBuilder() {
+      if (driverCase_ == 2) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
+    }
+
+    public static final int CLUSTRIX_FIELD_NUMBER = 3;
+    /**
+     * <code>.v1.Clustrix clustrix = 3;</code>
+     *
+     * @return Whether the clustrix field is set.
+     */
+    public boolean hasClustrix() {
+      return driverCase_ == 3;
+    }
+    /**
+     * <code>.v1.Clustrix clustrix = 3;</code>
+     *
+     * @return The clustrix.
+     */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getClustrix() {
+      if (driverCase_ == 3) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
+    }
+    /** <code>.v1.Clustrix clustrix = 3;</code> */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder getClustrixOrBuilder() {
+      if (driverCase_ == 3) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
+    }
+
+    public static final int MARIA_FIELD_NUMBER = 4;
+    /**
+     * <code>.v1.Maria maria = 4;</code>
+     *
+     * @return Whether the maria field is set.
+     */
+    public boolean hasMaria() {
+      return driverCase_ == 4;
+    }
+    /**
+     * <code>.v1.Maria maria = 4;</code>
+     *
+     * @return The maria.
+     */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getMaria() {
+      if (driverCase_ == 4) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
+    }
+    /** <code>.v1.Maria maria = 4;</code> */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder getMariaOrBuilder() {
+      if (driverCase_ == 4) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
+    }
+
+    public static final int MEMSQL_FIELD_NUMBER = 5;
+    /**
+     * <code>.v1.Memsql memsql = 5;</code>
+     *
+     * @return Whether the memsql field is set.
+     */
+    public boolean hasMemsql() {
+      return driverCase_ == 5;
+    }
+    /**
+     * <code>.v1.Memsql memsql = 5;</code>
+     *
+     * @return The memsql.
+     */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getMemsql() {
+      if (driverCase_ == 5) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
+    }
+    /** <code>.v1.Memsql memsql = 5;</code> */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder getMemsqlOrBuilder() {
+      if (driverCase_ == 5) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
+    }
+
+    public static final int ATHENA_FIELD_NUMBER = 6;
+    /**
+     * <code>.v1.Athena athena = 6;</code>
      *
      * @return Whether the athena field is set.
      */
     public boolean hasAthena() {
-      return driverCase_ == 2;
+      return driverCase_ == 6;
     }
     /**
-     * <code>.v1.Athena athena = 2;</code>
+     * <code>.v1.Athena athena = 6;</code>
      *
      * @return The athena.
      */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena getAthena() {
-      if (driverCase_ == 2) {
+      if (driverCase_ == 6) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
     }
-    /** <code>.v1.Athena athena = 2;</code> */
+    /** <code>.v1.Athena athena = 6;</code> */
     public com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder getAthenaOrBuilder() {
-      if (driverCase_ == 2) {
+      if (driverCase_ == 6) {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
@@ -283,7 +545,19 @@ public final class DriversPlumbing {
         output.writeMessage(1, (com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql) driver_);
       }
       if (driverCase_ == 2) {
-        output.writeMessage(2, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
+        output.writeMessage(2, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
+      }
+      if (driverCase_ == 3) {
+        output.writeMessage(3, (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
+      }
+      if (driverCase_ == 4) {
+        output.writeMessage(4, (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
+      }
+      if (driverCase_ == 5) {
+        output.writeMessage(5, (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
+      }
+      if (driverCase_ == 6) {
+        output.writeMessage(6, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
       }
       unknownFields.writeTo(output);
     }
@@ -302,7 +576,27 @@ public final class DriversPlumbing {
       if (driverCase_ == 2) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
-                2, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
+                2, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_);
+      }
+      if (driverCase_ == 3) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(
+                3, (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_);
+      }
+      if (driverCase_ == 4) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(
+                4, (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_);
+      }
+      if (driverCase_ == 5) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(
+                5, (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_);
+      }
+      if (driverCase_ == 6) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(
+                6, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -326,6 +620,18 @@ public final class DriversPlumbing {
           if (!getMysql().equals(other.getMysql())) return false;
           break;
         case 2:
+          if (!getAuroraMysql().equals(other.getAuroraMysql())) return false;
+          break;
+        case 3:
+          if (!getClustrix().equals(other.getClustrix())) return false;
+          break;
+        case 4:
+          if (!getMaria().equals(other.getMaria())) return false;
+          break;
+        case 5:
+          if (!getMemsql().equals(other.getMemsql())) return false;
+          break;
+        case 6:
           if (!getAthena().equals(other.getAthena())) return false;
           break;
         case 0:
@@ -348,6 +654,22 @@ public final class DriversPlumbing {
           hash = (53 * hash) + getMysql().hashCode();
           break;
         case 2:
+          hash = (37 * hash) + AURORA_MYSQL_FIELD_NUMBER;
+          hash = (53 * hash) + getAuroraMysql().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + CLUSTRIX_FIELD_NUMBER;
+          hash = (53 * hash) + getClustrix().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + MARIA_FIELD_NUMBER;
+          hash = (53 * hash) + getMaria().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + MEMSQL_FIELD_NUMBER;
+          hash = (53 * hash) + getMemsql().hashCode();
+          break;
+        case 6:
           hash = (37 * hash) + ATHENA_FIELD_NUMBER;
           hash = (53 * hash) + getAthena().hashCode();
           break;
@@ -529,6 +851,34 @@ public final class DriversPlumbing {
           }
         }
         if (driverCase_ == 2) {
+          if (auroraMysqlBuilder_ == null) {
+            result.driver_ = driver_;
+          } else {
+            result.driver_ = auroraMysqlBuilder_.build();
+          }
+        }
+        if (driverCase_ == 3) {
+          if (clustrixBuilder_ == null) {
+            result.driver_ = driver_;
+          } else {
+            result.driver_ = clustrixBuilder_.build();
+          }
+        }
+        if (driverCase_ == 4) {
+          if (mariaBuilder_ == null) {
+            result.driver_ = driver_;
+          } else {
+            result.driver_ = mariaBuilder_.build();
+          }
+        }
+        if (driverCase_ == 5) {
+          if (memsqlBuilder_ == null) {
+            result.driver_ = driver_;
+          } else {
+            result.driver_ = memsqlBuilder_.build();
+          }
+        }
+        if (driverCase_ == 6) {
           if (athenaBuilder_ == null) {
             result.driver_ = driver_;
           } else {
@@ -592,6 +942,26 @@ public final class DriversPlumbing {
           case MYSQL:
             {
               mergeMysql(other.getMysql());
+              break;
+            }
+          case AURORA_MYSQL:
+            {
+              mergeAuroraMysql(other.getAuroraMysql());
+              break;
+            }
+          case CLUSTRIX:
+            {
+              mergeClustrix(other.getClustrix());
+              break;
+            }
+          case MARIA:
+            {
+              mergeMaria(other.getMaria());
+              break;
+            }
+          case MEMSQL:
+            {
+              mergeMemsql(other.getMemsql());
               break;
             }
           case ATHENA:
@@ -788,37 +1158,598 @@ public final class DriversPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder>
+          auroraMysqlBuilder_;
+      /**
+       * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+       *
+       * @return Whether the auroraMysql field is set.
+       */
+      public boolean hasAuroraMysql() {
+        return driverCase_ == 2;
+      }
+      /**
+       * <code>.v1.AuroraMysql aurora_mysql = 2;</code>
+       *
+       * @return The auroraMysql.
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getAuroraMysql() {
+        if (auroraMysqlBuilder_ == null) {
+          if (driverCase_ == 2) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
+        } else {
+          if (driverCase_ == 2) {
+            return auroraMysqlBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      public Builder setAuroraMysql(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql value) {
+        if (auroraMysqlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          driver_ = value;
+          onChanged();
+        } else {
+          auroraMysqlBuilder_.setMessage(value);
+        }
+        driverCase_ = 2;
+        return this;
+      }
+      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      public Builder setAuroraMysql(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder builderForValue) {
+        if (auroraMysqlBuilder_ == null) {
+          driver_ = builderForValue.build();
+          onChanged();
+        } else {
+          auroraMysqlBuilder_.setMessage(builderForValue.build());
+        }
+        driverCase_ = 2;
+        return this;
+      }
+      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      public Builder mergeAuroraMysql(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql value) {
+        if (auroraMysqlBuilder_ == null) {
+          if (driverCase_ == 2
+              && driver_
+                  != com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql
+                      .getDefaultInstance()) {
+            driver_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.newBuilder(
+                        (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            driver_ = value;
+          }
+          onChanged();
+        } else {
+          if (driverCase_ == 2) {
+            auroraMysqlBuilder_.mergeFrom(value);
+          }
+          auroraMysqlBuilder_.setMessage(value);
+        }
+        driverCase_ = 2;
+        return this;
+      }
+      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      public Builder clearAuroraMysql() {
+        if (auroraMysqlBuilder_ == null) {
+          if (driverCase_ == 2) {
+            driverCase_ = 0;
+            driver_ = null;
+            onChanged();
+          }
+        } else {
+          if (driverCase_ == 2) {
+            driverCase_ = 0;
+            driver_ = null;
+          }
+          auroraMysqlBuilder_.clear();
+        }
+        return this;
+      }
+      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder
+          getAuroraMysqlBuilder() {
+        return getAuroraMysqlFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder
+          getAuroraMysqlOrBuilder() {
+        if ((driverCase_ == 2) && (auroraMysqlBuilder_ != null)) {
+          return auroraMysqlBuilder_.getMessageOrBuilder();
+        } else {
+          if (driverCase_ == 2) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.AuroraMysql aurora_mysql = 2;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder>
+          getAuroraMysqlFieldBuilder() {
+        if (auroraMysqlBuilder_ == null) {
+          if (!(driverCase_ == 2)) {
+            driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
+          }
+          auroraMysqlBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) driver_,
+                  getParentForChildren(),
+                  isClean());
+          driver_ = null;
+        }
+        driverCase_ = 2;
+        onChanged();
+        ;
+        return auroraMysqlBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder>
+          clustrixBuilder_;
+      /**
+       * <code>.v1.Clustrix clustrix = 3;</code>
+       *
+       * @return Whether the clustrix field is set.
+       */
+      public boolean hasClustrix() {
+        return driverCase_ == 3;
+      }
+      /**
+       * <code>.v1.Clustrix clustrix = 3;</code>
+       *
+       * @return The clustrix.
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getClustrix() {
+        if (clustrixBuilder_ == null) {
+          if (driverCase_ == 3) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
+        } else {
+          if (driverCase_ == 3) {
+            return clustrixBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      public Builder setClustrix(com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix value) {
+        if (clustrixBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          driver_ = value;
+          onChanged();
+        } else {
+          clustrixBuilder_.setMessage(value);
+        }
+        driverCase_ = 3;
+        return this;
+      }
+      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      public Builder setClustrix(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder builderForValue) {
+        if (clustrixBuilder_ == null) {
+          driver_ = builderForValue.build();
+          onChanged();
+        } else {
+          clustrixBuilder_.setMessage(builderForValue.build());
+        }
+        driverCase_ = 3;
+        return this;
+      }
+      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      public Builder mergeClustrix(com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix value) {
+        if (clustrixBuilder_ == null) {
+          if (driverCase_ == 3
+              && driver_
+                  != com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance()) {
+            driver_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.newBuilder(
+                        (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            driver_ = value;
+          }
+          onChanged();
+        } else {
+          if (driverCase_ == 3) {
+            clustrixBuilder_.mergeFrom(value);
+          }
+          clustrixBuilder_.setMessage(value);
+        }
+        driverCase_ = 3;
+        return this;
+      }
+      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      public Builder clearClustrix() {
+        if (clustrixBuilder_ == null) {
+          if (driverCase_ == 3) {
+            driverCase_ = 0;
+            driver_ = null;
+            onChanged();
+          }
+        } else {
+          if (driverCase_ == 3) {
+            driverCase_ = 0;
+            driver_ = null;
+          }
+          clustrixBuilder_.clear();
+        }
+        return this;
+      }
+      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder getClustrixBuilder() {
+        return getClustrixFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder getClustrixOrBuilder() {
+        if ((driverCase_ == 3) && (clustrixBuilder_ != null)) {
+          return clustrixBuilder_.getMessageOrBuilder();
+        } else {
+          if (driverCase_ == 3) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Clustrix clustrix = 3;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder>
+          getClustrixFieldBuilder() {
+        if (clustrixBuilder_ == null) {
+          if (!(driverCase_ == 3)) {
+            driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
+          }
+          clustrixBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) driver_,
+                  getParentForChildren(),
+                  isClean());
+          driver_ = null;
+        }
+        driverCase_ = 3;
+        onChanged();
+        ;
+        return clustrixBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Maria,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder>
+          mariaBuilder_;
+      /**
+       * <code>.v1.Maria maria = 4;</code>
+       *
+       * @return Whether the maria field is set.
+       */
+      public boolean hasMaria() {
+        return driverCase_ == 4;
+      }
+      /**
+       * <code>.v1.Maria maria = 4;</code>
+       *
+       * @return The maria.
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getMaria() {
+        if (mariaBuilder_ == null) {
+          if (driverCase_ == 4) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
+        } else {
+          if (driverCase_ == 4) {
+            return mariaBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Maria maria = 4;</code> */
+      public Builder setMaria(com.strongdm.api.v1.plumbing.DriversPlumbing.Maria value) {
+        if (mariaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          driver_ = value;
+          onChanged();
+        } else {
+          mariaBuilder_.setMessage(value);
+        }
+        driverCase_ = 4;
+        return this;
+      }
+      /** <code>.v1.Maria maria = 4;</code> */
+      public Builder setMaria(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder builderForValue) {
+        if (mariaBuilder_ == null) {
+          driver_ = builderForValue.build();
+          onChanged();
+        } else {
+          mariaBuilder_.setMessage(builderForValue.build());
+        }
+        driverCase_ = 4;
+        return this;
+      }
+      /** <code>.v1.Maria maria = 4;</code> */
+      public Builder mergeMaria(com.strongdm.api.v1.plumbing.DriversPlumbing.Maria value) {
+        if (mariaBuilder_ == null) {
+          if (driverCase_ == 4
+              && driver_
+                  != com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance()) {
+            driver_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.newBuilder(
+                        (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            driver_ = value;
+          }
+          onChanged();
+        } else {
+          if (driverCase_ == 4) {
+            mariaBuilder_.mergeFrom(value);
+          }
+          mariaBuilder_.setMessage(value);
+        }
+        driverCase_ = 4;
+        return this;
+      }
+      /** <code>.v1.Maria maria = 4;</code> */
+      public Builder clearMaria() {
+        if (mariaBuilder_ == null) {
+          if (driverCase_ == 4) {
+            driverCase_ = 0;
+            driver_ = null;
+            onChanged();
+          }
+        } else {
+          if (driverCase_ == 4) {
+            driverCase_ = 0;
+            driver_ = null;
+          }
+          mariaBuilder_.clear();
+        }
+        return this;
+      }
+      /** <code>.v1.Maria maria = 4;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder getMariaBuilder() {
+        return getMariaFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.Maria maria = 4;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder getMariaOrBuilder() {
+        if ((driverCase_ == 4) && (mariaBuilder_ != null)) {
+          return mariaBuilder_.getMessageOrBuilder();
+        } else {
+          if (driverCase_ == 4) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Maria maria = 4;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Maria,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder>
+          getMariaFieldBuilder() {
+        if (mariaBuilder_ == null) {
+          if (!(driverCase_ == 4)) {
+            driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
+          }
+          mariaBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Maria,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) driver_,
+                  getParentForChildren(),
+                  isClean());
+          driver_ = null;
+        }
+        driverCase_ = 4;
+        onChanged();
+        ;
+        return mariaBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder>
+          memsqlBuilder_;
+      /**
+       * <code>.v1.Memsql memsql = 5;</code>
+       *
+       * @return Whether the memsql field is set.
+       */
+      public boolean hasMemsql() {
+        return driverCase_ == 5;
+      }
+      /**
+       * <code>.v1.Memsql memsql = 5;</code>
+       *
+       * @return The memsql.
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getMemsql() {
+        if (memsqlBuilder_ == null) {
+          if (driverCase_ == 5) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
+        } else {
+          if (driverCase_ == 5) {
+            return memsqlBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Memsql memsql = 5;</code> */
+      public Builder setMemsql(com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql value) {
+        if (memsqlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          driver_ = value;
+          onChanged();
+        } else {
+          memsqlBuilder_.setMessage(value);
+        }
+        driverCase_ = 5;
+        return this;
+      }
+      /** <code>.v1.Memsql memsql = 5;</code> */
+      public Builder setMemsql(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder builderForValue) {
+        if (memsqlBuilder_ == null) {
+          driver_ = builderForValue.build();
+          onChanged();
+        } else {
+          memsqlBuilder_.setMessage(builderForValue.build());
+        }
+        driverCase_ = 5;
+        return this;
+      }
+      /** <code>.v1.Memsql memsql = 5;</code> */
+      public Builder mergeMemsql(com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql value) {
+        if (memsqlBuilder_ == null) {
+          if (driverCase_ == 5
+              && driver_
+                  != com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance()) {
+            driver_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.newBuilder(
+                        (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            driver_ = value;
+          }
+          onChanged();
+        } else {
+          if (driverCase_ == 5) {
+            memsqlBuilder_.mergeFrom(value);
+          }
+          memsqlBuilder_.setMessage(value);
+        }
+        driverCase_ = 5;
+        return this;
+      }
+      /** <code>.v1.Memsql memsql = 5;</code> */
+      public Builder clearMemsql() {
+        if (memsqlBuilder_ == null) {
+          if (driverCase_ == 5) {
+            driverCase_ = 0;
+            driver_ = null;
+            onChanged();
+          }
+        } else {
+          if (driverCase_ == 5) {
+            driverCase_ = 0;
+            driver_ = null;
+          }
+          memsqlBuilder_.clear();
+        }
+        return this;
+      }
+      /** <code>.v1.Memsql memsql = 5;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder getMemsqlBuilder() {
+        return getMemsqlFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.Memsql memsql = 5;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder getMemsqlOrBuilder() {
+        if ((driverCase_ == 5) && (memsqlBuilder_ != null)) {
+          return memsqlBuilder_.getMessageOrBuilder();
+        } else {
+          if (driverCase_ == 5) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Memsql memsql = 5;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder>
+          getMemsqlFieldBuilder() {
+        if (memsqlBuilder_ == null) {
+          if (!(driverCase_ == 5)) {
+            driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
+          }
+          memsqlBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) driver_,
+                  getParentForChildren(),
+                  isClean());
+          driver_ = null;
+        }
+        driverCase_ = 5;
+        onChanged();
+        ;
+        return memsqlBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena,
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder>
           athenaBuilder_;
       /**
-       * <code>.v1.Athena athena = 2;</code>
+       * <code>.v1.Athena athena = 6;</code>
        *
        * @return Whether the athena field is set.
        */
       public boolean hasAthena() {
-        return driverCase_ == 2;
+        return driverCase_ == 6;
       }
       /**
-       * <code>.v1.Athena athena = 2;</code>
+       * <code>.v1.Athena athena = 6;</code>
        *
        * @return The athena.
        */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena getAthena() {
         if (athenaBuilder_ == null) {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 6) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 6) {
             return athenaBuilder_.getMessage();
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
         }
       }
-      /** <code>.v1.Athena athena = 2;</code> */
+      /** <code>.v1.Athena athena = 6;</code> */
       public Builder setAthena(com.strongdm.api.v1.plumbing.DriversPlumbing.Athena value) {
         if (athenaBuilder_ == null) {
           if (value == null) {
@@ -829,10 +1760,10 @@ public final class DriversPlumbing {
         } else {
           athenaBuilder_.setMessage(value);
         }
-        driverCase_ = 2;
+        driverCase_ = 6;
         return this;
       }
-      /** <code>.v1.Athena athena = 2;</code> */
+      /** <code>.v1.Athena athena = 6;</code> */
       public Builder setAthena(
           com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder builderForValue) {
         if (athenaBuilder_ == null) {
@@ -841,13 +1772,13 @@ public final class DriversPlumbing {
         } else {
           athenaBuilder_.setMessage(builderForValue.build());
         }
-        driverCase_ = 2;
+        driverCase_ = 6;
         return this;
       }
-      /** <code>.v1.Athena athena = 2;</code> */
+      /** <code>.v1.Athena athena = 6;</code> */
       public Builder mergeAthena(com.strongdm.api.v1.plumbing.DriversPlumbing.Athena value) {
         if (athenaBuilder_ == null) {
-          if (driverCase_ == 2
+          if (driverCase_ == 6
               && driver_
                   != com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance()) {
             driver_ =
@@ -860,24 +1791,24 @@ public final class DriversPlumbing {
           }
           onChanged();
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 6) {
             athenaBuilder_.mergeFrom(value);
           }
           athenaBuilder_.setMessage(value);
         }
-        driverCase_ = 2;
+        driverCase_ = 6;
         return this;
       }
-      /** <code>.v1.Athena athena = 2;</code> */
+      /** <code>.v1.Athena athena = 6;</code> */
       public Builder clearAthena() {
         if (athenaBuilder_ == null) {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 6) {
             driverCase_ = 0;
             driver_ = null;
             onChanged();
           }
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 6) {
             driverCase_ = 0;
             driver_ = null;
           }
@@ -885,29 +1816,29 @@ public final class DriversPlumbing {
         }
         return this;
       }
-      /** <code>.v1.Athena athena = 2;</code> */
+      /** <code>.v1.Athena athena = 6;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder getAthenaBuilder() {
         return getAthenaFieldBuilder().getBuilder();
       }
-      /** <code>.v1.Athena athena = 2;</code> */
+      /** <code>.v1.Athena athena = 6;</code> */
       public com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder getAthenaOrBuilder() {
-        if ((driverCase_ == 2) && (athenaBuilder_ != null)) {
+        if ((driverCase_ == 6) && (athenaBuilder_ != null)) {
           return athenaBuilder_.getMessageOrBuilder();
         } else {
-          if (driverCase_ == 2) {
+          if (driverCase_ == 6) {
             return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_;
           }
           return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
         }
       }
-      /** <code>.v1.Athena athena = 2;</code> */
+      /** <code>.v1.Athena athena = 6;</code> */
       private com.google.protobuf.SingleFieldBuilderV3<
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena,
               com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder,
               com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder>
           getAthenaFieldBuilder() {
         if (athenaBuilder_ == null) {
-          if (!(driverCase_ == 2)) {
+          if (!(driverCase_ == 6)) {
             driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
           }
           athenaBuilder_ =
@@ -920,7 +1851,7 @@ public final class DriversPlumbing {
                   isClean());
           driver_ = null;
         }
-        driverCase_ = 2;
+        driverCase_ = 6;
         onChanged();
         ;
         return athenaBuilder_;
@@ -2066,6 +2997,4379 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Mysql getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface AuroraMysqlOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.AuroraMysql)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString getUsernameBytes();
+
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString getPasswordBytes();
+
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString getDatabaseBytes();
+
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    int getPort();
+  }
+  /** Protobuf type {@code v1.AuroraMysql} */
+  public static final class AuroraMysql extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.AuroraMysql)
+      AuroraMysqlOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use AuroraMysql.newBuilder() to construct.
+    private AuroraMysql(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private AuroraMysql() {
+      hostname_ = "";
+      username_ = "";
+      password_ = "";
+      database_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new AuroraMysql();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private AuroraMysql(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                hostname_ = s;
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                username_ = s;
+                break;
+              }
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                database_ = s;
+                break;
+              }
+            case 40:
+              {
+                port_ = input.readInt32();
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_AuroraMysql_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_AuroraMysql_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.class,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder.class);
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object username_;
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    public com.google.protobuf.ByteString getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 3;
+    private volatile java.lang.Object password_;
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    public com.google.protobuf.ByteString getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object database_;
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    public com.google.protobuf.ByteString getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 5;
+    private int port_;
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, database_);
+      }
+      if (port_ != 0) {
+        output.writeInt32(5, port_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, database_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(5, port_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql other =
+          (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) obj;
+
+      if (!getHostname().equals(other.getHostname())) return false;
+      if (!getUsername().equals(other.getUsername())) return false;
+      if (!getPassword().equals(other.getPassword())) return false;
+      if (!getDatabase().equals(other.getDatabase())) return false;
+      if (getPort() != other.getPort()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.AuroraMysql} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.AuroraMysql)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysqlOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_AuroraMysql_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_AuroraMysql_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.class,
+                com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostname_ = "";
+
+        username_ = "";
+
+        password_ = "";
+
+        database_ = "";
+
+        port_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_AuroraMysql_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql result =
+            new com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql(this);
+        result.hostname_ = hostname_;
+        result.username_ = username_;
+        result.password_ = password_;
+        result.database_ = database_;
+        result.port_ = port_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql other) {
+        if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql.getDefaultInstance())
+          return this;
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_;
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The port.
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.AuroraMysql)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AuroraMysql)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AuroraMysql> PARSER =
+        new com.google.protobuf.AbstractParser<AuroraMysql>() {
+          @java.lang.Override
+          public AuroraMysql parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new AuroraMysql(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<AuroraMysql> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AuroraMysql> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface ClustrixOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.Clustrix)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString getUsernameBytes();
+
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString getPasswordBytes();
+
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString getDatabaseBytes();
+
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    int getPort();
+  }
+  /** Protobuf type {@code v1.Clustrix} */
+  public static final class Clustrix extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.Clustrix)
+      ClustrixOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use Clustrix.newBuilder() to construct.
+    private Clustrix(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private Clustrix() {
+      hostname_ = "";
+      username_ = "";
+      password_ = "";
+      database_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new Clustrix();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private Clustrix(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                hostname_ = s;
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                username_ = s;
+                break;
+              }
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                database_ = s;
+                break;
+              }
+            case 40:
+              {
+                port_ = input.readInt32();
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Clustrix_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_Clustrix_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.class,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder.class);
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object username_;
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    public com.google.protobuf.ByteString getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 3;
+    private volatile java.lang.Object password_;
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    public com.google.protobuf.ByteString getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object database_;
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    public com.google.protobuf.ByteString getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 5;
+    private int port_;
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, database_);
+      }
+      if (port_ != 0) {
+        output.writeInt32(5, port_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, database_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(5, port_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix other =
+          (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) obj;
+
+      if (!getHostname().equals(other.getHostname())) return false;
+      if (!getUsername().equals(other.getUsername())) return false;
+      if (!getPassword().equals(other.getPassword())) return false;
+      if (!getDatabase().equals(other.getDatabase())) return false;
+      if (getPort() != other.getPort()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.Clustrix} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.Clustrix)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.ClustrixOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Clustrix_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_Clustrix_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.class,
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostname_ = "";
+
+        username_ = "";
+
+        password_ = "";
+
+        database_ = "";
+
+        port_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Clustrix_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix result =
+            new com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix(this);
+        result.hostname_ = hostname_;
+        result.username_ = username_;
+        result.password_ = password_;
+        result.database_ = database_;
+        result.port_ = port_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix other) {
+        if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix.getDefaultInstance())
+          return this;
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_;
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The port.
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.Clustrix)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Clustrix)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Clustrix> PARSER =
+        new com.google.protobuf.AbstractParser<Clustrix>() {
+          @java.lang.Override
+          public Clustrix parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Clustrix(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<Clustrix> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Clustrix> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Clustrix getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface MariaOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.Maria)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString getUsernameBytes();
+
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString getPasswordBytes();
+
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString getDatabaseBytes();
+
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    int getPort();
+  }
+  /** Protobuf type {@code v1.Maria} */
+  public static final class Maria extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.Maria)
+      MariaOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use Maria.newBuilder() to construct.
+    private Maria(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private Maria() {
+      hostname_ = "";
+      username_ = "";
+      password_ = "";
+      database_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new Maria();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private Maria(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                hostname_ = s;
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                username_ = s;
+                break;
+              }
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                database_ = s;
+                break;
+              }
+            case 40:
+              {
+                port_ = input.readInt32();
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Maria_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_Maria_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.class,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder.class);
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object username_;
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    public com.google.protobuf.ByteString getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 3;
+    private volatile java.lang.Object password_;
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    public com.google.protobuf.ByteString getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object database_;
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    public com.google.protobuf.ByteString getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 5;
+    private int port_;
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, database_);
+      }
+      if (port_ != 0) {
+        output.writeInt32(5, port_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, database_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(5, port_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Maria)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.Maria other =
+          (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) obj;
+
+      if (!getHostname().equals(other.getHostname())) return false;
+      if (!getUsername().equals(other.getUsername())) return false;
+      if (!getPassword().equals(other.getPassword())) return false;
+      if (!getDatabase().equals(other.getDatabase())) return false;
+      if (getPort() != other.getPort()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.DriversPlumbing.Maria prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.Maria} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.Maria)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.MariaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Maria_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_Maria_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.class,
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostname_ = "";
+
+        username_ = "";
+
+        password_ = "";
+
+        database_ = "";
+
+        port_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Maria_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Maria result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Maria result =
+            new com.strongdm.api.v1.plumbing.DriversPlumbing.Maria(this);
+        result.hostname_ = hostname_;
+        result.username_ = username_;
+        result.password_ = password_;
+        result.database_ = database_;
+        result.port_ = port_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.Maria other) {
+        if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Maria.getDefaultInstance())
+          return this;
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Maria parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.DriversPlumbing.Maria) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_;
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The port.
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.Maria)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Maria)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.Maria DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.Maria();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Maria> PARSER =
+        new com.google.protobuf.AbstractParser<Maria>() {
+          @java.lang.Override
+          public Maria parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Maria(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<Maria> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Maria> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Maria getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface MemsqlOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.Memsql)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString getUsernameBytes();
+
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString getPasswordBytes();
+
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    java.lang.String getDatabase();
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    com.google.protobuf.ByteString getDatabaseBytes();
+
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    int getPort();
+  }
+  /** Protobuf type {@code v1.Memsql} */
+  public static final class Memsql extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.Memsql)
+      MemsqlOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use Memsql.newBuilder() to construct.
+    private Memsql(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private Memsql() {
+      hostname_ = "";
+      username_ = "";
+      password_ = "";
+      database_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new Memsql();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private Memsql(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                hostname_ = s;
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                username_ = s;
+                break;
+              }
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                database_ = s;
+                break;
+              }
+            case 40:
+              {
+                port_ = input.readInt32();
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Memsql_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_Memsql_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.class,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder.class);
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object username_;
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The username.
+     */
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for username.
+     */
+    public com.google.protobuf.ByteString getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 3;
+    private volatile java.lang.Object password_;
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    public com.google.protobuf.ByteString getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object database_;
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The database.
+     */
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for database.
+     */
+    public com.google.protobuf.ByteString getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 5;
+    private int port_;
+    /**
+     * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The port.
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, database_);
+      }
+      if (port_ != 0) {
+        output.writeInt32(5, port_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
+      if (!getUsernameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, database_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(5, port_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql other =
+          (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) obj;
+
+      if (!getHostname().equals(other.getHostname())) return false;
+      if (!getUsername().equals(other.getUsername())) return false;
+      if (!getPassword().equals(other.getPassword())) return false;
+      if (!getDatabase().equals(other.getDatabase())) return false;
+      if (getPort() != other.getPort()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.Memsql} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.Memsql)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.MemsqlOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Memsql_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_Memsql_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.class,
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostname_ = "";
+
+        username_ = "";
+
+        password_ = "";
+
+        database_ = "";
+
+        port_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Memsql_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql result =
+            new com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql(this);
+        result.hostname_ = hostname_;
+        result.username_ = username_;
+        result.password_ = password_;
+        result.database_ = database_;
+        result.port_ = port_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql other) {
+        if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql.getDefaultInstance())
+          return this;
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The database.
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for database.
+       */
+      public com.google.protobuf.ByteString getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabase(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearDatabase() {
+
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for database to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatabaseBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_;
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The port.
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 port = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.Memsql)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Memsql)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Memsql> PARSER =
+        new com.google.protobuf.AbstractParser<Memsql>() {
+          @java.lang.Override
+          public Memsql parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Memsql(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<Memsql> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Memsql> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Memsql getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
   }
@@ -3249,6 +8553,22 @@ public final class DriversPlumbing {
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Mysql_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_AuroraMysql_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AuroraMysql_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_Clustrix_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Clustrix_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_Maria_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Maria_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_Memsql_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Memsql_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
       internal_static_v1_Athena_descriptor;
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Athena_fieldAccessorTable;
@@ -3261,20 +8581,40 @@ public final class DriversPlumbing {
 
   static {
     java.lang.String[] descriptorData = {
-      "\n\rdrivers.proto\022\002v1\032\roptions.proto\"X\n\006Dr"
-          + "iver\022\032\n\005mysql\030\001 \001(\0132\t.v1.MysqlH\000\022\034\n\006athe"
-          + "na\030\002 \001(\0132\n.v1.AthenaH\000:\n\372\370\263\007\005\250\363\263\007\001B\010\n\006dr"
-          + "iver\"\245\001\n\005Mysql\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010pa"
-          + "ssword\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001"
-          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001"
-          + ":\n\372\370\263\007\005\250\363\263\007\001\"\257\001\n\006Athena\022\034\n\010hostname\030\001 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccess_key\030\002 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022#\n\017secretAccessKey\030\003 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\032\n\006region\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006output"
-          + "\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B/\n\034com.st"
-          + "rongdm.api.v1.plumbingB\017DriversPlumbingb"
-          + "\006proto3"
+      "\n\rdrivers.proto\022\002v1\032\roptions.proto\"\335\001\n\006D"
+          + "river\022\032\n\005mysql\030\001 \001(\0132\t.v1.MysqlH\000\022\'\n\014aur"
+          + "ora_mysql\030\002 \001(\0132\017.v1.AuroraMysqlH\000\022 \n\010cl"
+          + "ustrix\030\003 \001(\0132\014.v1.ClustrixH\000\022\032\n\005maria\030\004 "
+          + "\001(\0132\t.v1.MariaH\000\022\034\n\006memsql\030\005 \001(\0132\n.v1.Me"
+          + "msqlH\000\022\034\n\006athena\030\006 \001(\0132\n.v1.AthenaH\000:\n\372\370"
+          + "\263\007\005\250\363\263\007\001B\010\n\006driver\"\245\001\n\005Mysql\022\034\n\010hostname"
+          + "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370"
+          + "\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
+          + "\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001"
+          + "(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\253\001\n\013AuroraMys"
+          + "ql\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010user"
+          + "name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\t"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001"
+          + "\"\250\001\n\010Clustrix\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010pas"
+          + "sword\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:"
+          + "\n\372\370\263\007\005\250\363\263\007\001\"\245\001\n\005Maria\022\034\n\010hostname\030\001 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010datab"
+          + "ase\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005 \001(\005B\n\362\370\263"
+          + "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\246\001\n\006Memsql\022\034\n\010hostna"
+          + "me\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004port\030\005"
+          + " \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\257\001\n\006Athena\022"
+          + "\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccess_"
+          + "key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\017secretAccessKey"
+          + "\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\004 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022\032\n\006output\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007"
+          + "\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbingB\017"
+          + "DriversPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -3287,7 +8627,7 @@ public final class DriversPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Driver_descriptor,
             new java.lang.String[] {
-              "Mysql", "Athena", "Driver",
+              "Mysql", "AuroraMysql", "Clustrix", "Maria", "Memsql", "Athena", "Driver",
             });
     internal_static_v1_Mysql_descriptor = getDescriptor().getMessageTypes().get(1);
     internal_static_v1_Mysql_fieldAccessorTable =
@@ -3296,7 +8636,35 @@ public final class DriversPlumbing {
             new java.lang.String[] {
               "Hostname", "Username", "Password", "Database", "Port",
             });
-    internal_static_v1_Athena_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_AuroraMysql_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_AuroraMysql_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_AuroraMysql_descriptor,
+            new java.lang.String[] {
+              "Hostname", "Username", "Password", "Database", "Port",
+            });
+    internal_static_v1_Clustrix_descriptor = getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_Clustrix_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_Clustrix_descriptor,
+            new java.lang.String[] {
+              "Hostname", "Username", "Password", "Database", "Port",
+            });
+    internal_static_v1_Maria_descriptor = getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_Maria_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_Maria_descriptor,
+            new java.lang.String[] {
+              "Hostname", "Username", "Password", "Database", "Port",
+            });
+    internal_static_v1_Memsql_descriptor = getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_Memsql_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_Memsql_descriptor,
+            new java.lang.String[] {
+              "Hostname", "Username", "Password", "Database", "Port",
+            });
+    internal_static_v1_Athena_descriptor = getDescriptor().getMessageTypes().get(6);
     internal_static_v1_Athena_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Athena_descriptor,
