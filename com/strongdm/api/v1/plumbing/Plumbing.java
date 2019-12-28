@@ -31,6 +31,12 @@ public class Plumbing {
     if (plumbing == null) {
       return null;
     }
+    if (plumbing.getKubernetes() != null) {
+      return kubernetesToPorcelain(plumbing.getKubernetes());
+    }
+    if (plumbing.getAmazonEks() != null) {
+      return amazonEksToPorcelain(plumbing.getAmazonEks());
+    }
     if (plumbing.getHttpBasicAuth() != null) {
       return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
     }
@@ -64,6 +70,16 @@ public class Plumbing {
   public static Driver driverToPlumbing(com.strongdm.api.v1.Driver porcelain) {
     if (porcelain == null) {
       return null;
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Kubernetes) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setKubernetes(kubernetesToPlumbing((com.strongdm.api.v1.Kubernetes) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AmazonEKS) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setAmazonEks(amazonEksToPlumbing((com.strongdm.api.v1.AmazonEKS) porcelain));
+      return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.HTTPBasicAuth) {
       Driver.Builder builder = Driver.newBuilder();
@@ -125,6 +141,102 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Driver> porcelains) {
     return porcelains.stream()
         .map(porcelain -> driverToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Kubernetes kubernetesToPorcelain(Kubernetes plumbing) {
+    com.strongdm.api.v1.Kubernetes porcelain = new com.strongdm.api.v1.Kubernetes();
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setClientCertificate(plumbing.getClientCertificate());
+    porcelain.setClientKey(plumbing.getClientKey());
+    return porcelain;
+  }
+
+  public static Kubernetes kubernetesToPlumbing(com.strongdm.api.v1.Kubernetes porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Kubernetes.Builder builder = Kubernetes.newBuilder();
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority(porcelain.getCertificateAuthority());
+    }
+    if (porcelain.getClientCertificate() != null) {
+      builder.setClientCertificate(porcelain.getClientCertificate());
+    }
+    if (porcelain.getClientKey() != null) {
+      builder.setClientKey(porcelain.getClientKey());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Kubernetes> repeatedKubernetesToPorcelain(
+      Collection<Kubernetes> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> kubernetesToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Kubernetes> repeatedKubernetesToPlumbing(
+      Collection<com.strongdm.api.v1.Kubernetes> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> kubernetesToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AmazonEKS amazonEksToPorcelain(AmazonEKS plumbing) {
+    com.strongdm.api.v1.AmazonEKS porcelain = new com.strongdm.api.v1.AmazonEKS();
+    porcelain.setEndpoint(plumbing.getEndpoint());
+    porcelain.setAccessKey(plumbing.getAccessKey());
+    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
+    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setRegion(plumbing.getRegion());
+    porcelain.setClusterName(plumbing.getClusterName());
+    return porcelain;
+  }
+
+  public static AmazonEKS amazonEksToPlumbing(com.strongdm.api.v1.AmazonEKS porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AmazonEKS.Builder builder = AmazonEKS.newBuilder();
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint(porcelain.getEndpoint());
+    }
+    if (porcelain.getAccessKey() != null) {
+      builder.setAccessKey(porcelain.getAccessKey());
+    }
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey(porcelain.getSecretAccessKey());
+    }
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority(porcelain.getCertificateAuthority());
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion(porcelain.getRegion());
+    }
+    if (porcelain.getClusterName() != null) {
+      builder.setClusterName(porcelain.getClusterName());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AmazonEKS> repeatedAmazonEKSToPorcelain(
+      Collection<AmazonEKS> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> amazonEksToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AmazonEKS> repeatedAmazonEKSToPlumbing(
+      Collection<com.strongdm.api.v1.AmazonEKS> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> amazonEksToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
