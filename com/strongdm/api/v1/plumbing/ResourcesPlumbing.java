@@ -75,7 +75,7 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource();
     /**
      *
      *
@@ -85,7 +85,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder();
   }
   /**
    *
@@ -156,13 +156,13 @@ public final class ResourcesPlumbing {
               }
             case 18:
               {
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder subBuilder = null;
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder subBuilder = null;
                 if (resource_ != null) {
                   subBuilder = resource_.toBuilder();
                 }
                 resource_ =
                     input.readMessage(
-                        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.parser(),
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.parser(),
                         extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resource_);
@@ -251,7 +251,7 @@ public final class ResourcesPlumbing {
     }
 
     public static final int RESOURCE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+    private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
     /**
      *
      *
@@ -277,9 +277,9 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
       return resource_ == null
-          ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+          ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
           : resource_;
     }
     /**
@@ -291,7 +291,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
       return getResource();
     }
 
@@ -853,11 +853,11 @@ public final class ResourcesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+      private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           resourceBuilder_;
       /**
        *
@@ -884,10 +884,10 @@ public final class ResourcesPlumbing {
        *
        * @return The resource.
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
         if (resourceBuilder_ == null) {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         } else {
           return resourceBuilder_.getMessage();
@@ -902,7 +902,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder setResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -925,7 +925,7 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResource(
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourceBuilder_ == null) {
           resource_ = builderForValue.build();
           onChanged();
@@ -944,11 +944,11 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder mergeResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (resource_ != null) {
             resource_ =
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.newBuilder(resource_)
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.newBuilder(resource_)
                     .mergeFrom(value)
                     .buildPartial();
           } else {
@@ -990,7 +990,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder getResourceBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder getResourceBuilder() {
 
         onChanged();
         return getResourceFieldBuilder().getBuilder();
@@ -1004,13 +1004,12 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder
-          getResourceOrBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
         if (resourceBuilder_ != null) {
           return resourceBuilder_.getMessageOrBuilder();
         } else {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         }
       }
@@ -1024,16 +1023,16 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           getResourceFieldBuilder() {
         if (resourceBuilder_ == null) {
           resourceBuilder_ =
               new com.google.protobuf.SingleFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>(
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>(
                   getResource(), getParentForChildren(), isClean());
           resource_ = null;
         }
@@ -1158,7 +1157,7 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource();
     /**
      *
      *
@@ -1168,7 +1167,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder();
 
     /**
      *
@@ -1274,13 +1273,13 @@ public final class ResourcesPlumbing {
               }
             case 18:
               {
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder subBuilder = null;
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder subBuilder = null;
                 if (resource_ != null) {
                   subBuilder = resource_.toBuilder();
                 }
                 resource_ =
                     input.readMessage(
-                        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.parser(),
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.parser(),
                         extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resource_);
@@ -1386,7 +1385,7 @@ public final class ResourcesPlumbing {
     }
 
     public static final int RESOURCE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+    private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
     /**
      *
      *
@@ -1412,9 +1411,9 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
       return resource_ == null
-          ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+          ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
           : resource_;
     }
     /**
@@ -1426,7 +1425,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
       return getResource();
     }
 
@@ -2063,11 +2062,11 @@ public final class ResourcesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+      private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           resourceBuilder_;
       /**
        *
@@ -2094,10 +2093,10 @@ public final class ResourcesPlumbing {
        *
        * @return The resource.
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
         if (resourceBuilder_ == null) {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         } else {
           return resourceBuilder_.getMessage();
@@ -2112,7 +2111,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder setResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2135,7 +2134,7 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResource(
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourceBuilder_ == null) {
           resource_ = builderForValue.build();
           onChanged();
@@ -2154,11 +2153,11 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder mergeResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (resource_ != null) {
             resource_ =
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.newBuilder(resource_)
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.newBuilder(resource_)
                     .mergeFrom(value)
                     .buildPartial();
           } else {
@@ -2200,7 +2199,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder getResourceBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder getResourceBuilder() {
 
         onChanged();
         return getResourceFieldBuilder().getBuilder();
@@ -2214,13 +2213,12 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder
-          getResourceOrBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
         if (resourceBuilder_ != null) {
           return resourceBuilder_.getMessageOrBuilder();
         } else {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         }
       }
@@ -2234,16 +2232,16 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           getResourceFieldBuilder() {
         if (resourceBuilder_ == null) {
           resourceBuilder_ =
               new com.google.protobuf.SingleFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>(
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>(
                   getResource(), getParentForChildren(), isClean());
           resource_ = null;
         }
@@ -3528,7 +3526,7 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource();
     /**
      *
      *
@@ -3538,7 +3536,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder();
 
     /**
      *
@@ -3644,13 +3642,13 @@ public final class ResourcesPlumbing {
               }
             case 18:
               {
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder subBuilder = null;
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder subBuilder = null;
                 if (resource_ != null) {
                   subBuilder = resource_.toBuilder();
                 }
                 resource_ =
                     input.readMessage(
-                        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.parser(),
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.parser(),
                         extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resource_);
@@ -3756,7 +3754,7 @@ public final class ResourcesPlumbing {
     }
 
     public static final int RESOURCE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+    private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
     /**
      *
      *
@@ -3782,9 +3780,9 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
       return resource_ == null
-          ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+          ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
           : resource_;
     }
     /**
@@ -3796,7 +3794,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
       return getResource();
     }
 
@@ -4430,11 +4428,11 @@ public final class ResourcesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+      private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           resourceBuilder_;
       /**
        *
@@ -4461,10 +4459,10 @@ public final class ResourcesPlumbing {
        *
        * @return The resource.
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
         if (resourceBuilder_ == null) {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         } else {
           return resourceBuilder_.getMessage();
@@ -4479,7 +4477,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder setResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4502,7 +4500,7 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResource(
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourceBuilder_ == null) {
           resource_ = builderForValue.build();
           onChanged();
@@ -4521,11 +4519,11 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder mergeResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (resource_ != null) {
             resource_ =
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.newBuilder(resource_)
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.newBuilder(resource_)
                     .mergeFrom(value)
                     .buildPartial();
           } else {
@@ -4567,7 +4565,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder getResourceBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder getResourceBuilder() {
 
         onChanged();
         return getResourceFieldBuilder().getBuilder();
@@ -4581,13 +4579,12 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder
-          getResourceOrBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
         if (resourceBuilder_ != null) {
           return resourceBuilder_.getMessageOrBuilder();
         } else {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         }
       }
@@ -4601,16 +4598,16 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           getResourceFieldBuilder() {
         if (resourceBuilder_ == null) {
           resourceBuilder_ =
               new com.google.protobuf.SingleFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>(
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>(
                   getResource(), getParentForChildren(), isClean());
           resource_ = null;
         }
@@ -4950,7 +4947,7 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource();
     /**
      *
      *
@@ -4960,7 +4957,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder();
   }
   /**
    *
@@ -5041,13 +5038,13 @@ public final class ResourcesPlumbing {
               }
             case 26:
               {
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder subBuilder = null;
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder subBuilder = null;
                 if (resource_ != null) {
                   subBuilder = resource_.toBuilder();
                 }
                 resource_ =
                     input.readMessage(
-                        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.parser(),
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.parser(),
                         extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resource_);
@@ -5187,7 +5184,7 @@ public final class ResourcesPlumbing {
     }
 
     public static final int RESOURCE_FIELD_NUMBER = 3;
-    private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+    private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
     /**
      *
      *
@@ -5213,9 +5210,9 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
       return resource_ == null
-          ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+          ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
           : resource_;
     }
     /**
@@ -5227,7 +5224,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
       return getResource();
     }
 
@@ -5922,11 +5919,11 @@ public final class ResourcesPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+      private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           resourceBuilder_;
       /**
        *
@@ -5953,10 +5950,10 @@ public final class ResourcesPlumbing {
        *
        * @return The resource.
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
         if (resourceBuilder_ == null) {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         } else {
           return resourceBuilder_.getMessage();
@@ -5971,7 +5968,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder setResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5994,7 +5991,7 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResource(
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourceBuilder_ == null) {
           resource_ = builderForValue.build();
           onChanged();
@@ -6013,11 +6010,11 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder mergeResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (resource_ != null) {
             resource_ =
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.newBuilder(resource_)
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.newBuilder(resource_)
                     .mergeFrom(value)
                     .buildPartial();
           } else {
@@ -6059,7 +6056,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder getResourceBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder getResourceBuilder() {
 
         onChanged();
         return getResourceFieldBuilder().getBuilder();
@@ -6073,13 +6070,12 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder
-          getResourceOrBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
         if (resourceBuilder_ != null) {
           return resourceBuilder_.getMessageOrBuilder();
         } else {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         }
       }
@@ -6093,16 +6089,16 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           getResourceFieldBuilder() {
         if (resourceBuilder_ == null) {
           resourceBuilder_ =
               new com.google.protobuf.SingleFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>(
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>(
                   getResource(), getParentForChildren(), isClean());
           resource_ = null;
         }
@@ -6227,7 +6223,7 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource();
     /**
      *
      *
@@ -6237,7 +6233,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder();
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder();
 
     /**
      *
@@ -6344,13 +6340,13 @@ public final class ResourcesPlumbing {
               }
             case 18:
               {
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder subBuilder = null;
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder subBuilder = null;
                 if (resource_ != null) {
                   subBuilder = resource_.toBuilder();
                 }
                 resource_ =
                     input.readMessage(
-                        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.parser(),
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.parser(),
                         extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(resource_);
@@ -6456,7 +6452,7 @@ public final class ResourcesPlumbing {
     }
 
     public static final int RESOURCE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+    private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
     /**
      *
      *
@@ -6482,9 +6478,9 @@ public final class ResourcesPlumbing {
      *
      * @return The resource.
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
       return resource_ == null
-          ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+          ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
           : resource_;
     }
     /**
@@ -6496,7 +6492,7 @@ public final class ResourcesPlumbing {
      *
      * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourceOrBuilder() {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
       return getResource();
     }
 
@@ -7134,11 +7130,11 @@ public final class ResourcesPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource resource_;
+      private com.strongdm.api.v1.plumbing.DriversPlumbing.Resource resource_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           resourceBuilder_;
       /**
        *
@@ -7165,10 +7161,10 @@ public final class ResourcesPlumbing {
        *
        * @return The resource.
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResource() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResource() {
         if (resourceBuilder_ == null) {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         } else {
           return resourceBuilder_.getMessage();
@@ -7183,7 +7179,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder setResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7206,7 +7202,7 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResource(
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourceBuilder_ == null) {
           resource_ = builderForValue.build();
           onChanged();
@@ -7225,11 +7221,11 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeResource(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder mergeResource(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourceBuilder_ == null) {
           if (resource_ != null) {
             resource_ =
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.newBuilder(resource_)
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.newBuilder(resource_)
                     .mergeFrom(value)
                     .buildPartial();
           } else {
@@ -7271,7 +7267,7 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder getResourceBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder getResourceBuilder() {
 
         onChanged();
         return getResourceFieldBuilder().getBuilder();
@@ -7285,13 +7281,12 @@ public final class ResourcesPlumbing {
        *
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder
-          getResourceOrBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourceOrBuilder() {
         if (resourceBuilder_ != null) {
           return resourceBuilder_.getMessageOrBuilder();
         } else {
           return resource_ == null
-              ? com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance()
+              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance()
               : resource_;
         }
       }
@@ -7305,16 +7300,16 @@ public final class ResourcesPlumbing {
        * <code>.v1.Resource resource = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           getResourceFieldBuilder() {
         if (resourceBuilder_ == null) {
           resourceBuilder_ =
               new com.google.protobuf.SingleFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>(
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>(
                   getResource(), getParentForChildren(), isClean());
           resource_ = null;
         }
@@ -10644,7 +10639,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource> getResourcesList();
+    java.util.List<com.strongdm.api.v1.plumbing.DriversPlumbing.Resource> getResourcesList();
     /**
      *
      *
@@ -10654,7 +10649,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResources(int index);
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResources(int index);
     /**
      *
      *
@@ -10674,7 +10669,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<? extends com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+    java.util.List<? extends com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
         getResourcesOrBuilderList();
     /**
      *
@@ -10685,8 +10680,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourcesOrBuilder(
-        int index);
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourcesOrBuilder(int index);
 
     /**
      *
@@ -10799,12 +10793,12 @@ public final class ResourcesPlumbing {
                 if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                   resources_ =
                       new java.util.ArrayList<
-                          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource>();
+                          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource>();
                   mutable_bitField0_ |= 0x00000001;
                 }
                 resources_.add(
                     input.readMessage(
-                        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.parser(),
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.parser(),
                         extensionRegistry));
                 break;
               }
@@ -10908,7 +10902,7 @@ public final class ResourcesPlumbing {
     }
 
     public static final int RESOURCES_FIELD_NUMBER = 2;
-    private java.util.List<com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource> resources_;
+    private java.util.List<com.strongdm.api.v1.plumbing.DriversPlumbing.Resource> resources_;
     /**
      *
      *
@@ -10918,7 +10912,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    public java.util.List<com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource>
+    public java.util.List<com.strongdm.api.v1.plumbing.DriversPlumbing.Resource>
         getResourcesList() {
       return resources_;
     }
@@ -10931,8 +10925,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    public java.util.List<
-            ? extends com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+    public java.util.List<? extends com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
         getResourcesOrBuilderList() {
       return resources_;
     }
@@ -10957,7 +10950,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResources(int index) {
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResources(int index) {
       return resources_.get(index);
     }
     /**
@@ -10969,7 +10962,7 @@ public final class ResourcesPlumbing {
      *
      * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
      */
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourcesOrBuilder(
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourcesOrBuilder(
         int index) {
       return resources_.get(index);
     }
@@ -11635,22 +11628,22 @@ public final class ResourcesPlumbing {
         return metaBuilder_;
       }
 
-      private java.util.List<com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource> resources_ =
+      private java.util.List<com.strongdm.api.v1.plumbing.DriversPlumbing.Resource> resources_ =
           java.util.Collections.emptyList();
 
       private void ensureResourcesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           resources_ =
-              new java.util.ArrayList<com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource>(
+              new java.util.ArrayList<com.strongdm.api.v1.plumbing.DriversPlumbing.Resource>(
                   resources_);
           bitField0_ |= 0x00000001;
         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           resourcesBuilder_;
 
       /**
@@ -11662,7 +11655,7 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource>
+      public java.util.List<com.strongdm.api.v1.plumbing.DriversPlumbing.Resource>
           getResourcesList() {
         if (resourcesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(resources_);
@@ -11695,7 +11688,7 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getResources(int index) {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getResources(int index) {
         if (resourcesBuilder_ == null) {
           return resources_.get(index);
         } else {
@@ -11712,7 +11705,7 @@ public final class ResourcesPlumbing {
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setResources(
-          int index, com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+          int index, com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourcesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11736,7 +11729,7 @@ public final class ResourcesPlumbing {
        */
       public Builder setResources(
           int index,
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
           resources_.set(index, builderForValue.build());
@@ -11755,7 +11748,7 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addResources(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+      public Builder addResources(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourcesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11778,7 +11771,7 @@ public final class ResourcesPlumbing {
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addResources(
-          int index, com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource value) {
+          int index, com.strongdm.api.v1.plumbing.DriversPlumbing.Resource value) {
         if (resourcesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11801,7 +11794,7 @@ public final class ResourcesPlumbing {
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addResources(
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
           resources_.add(builderForValue.build());
@@ -11822,7 +11815,7 @@ public final class ResourcesPlumbing {
        */
       public Builder addResources(
           int index,
-          com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder builderForValue) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
           resources_.add(index, builderForValue.build());
@@ -11842,7 +11835,7 @@ public final class ResourcesPlumbing {
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addAllResources(
-          java.lang.Iterable<? extends com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource>
+          java.lang.Iterable<? extends com.strongdm.api.v1.plumbing.DriversPlumbing.Resource>
               values) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
@@ -11900,7 +11893,7 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder getResourcesBuilder(
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder getResourcesBuilder(
           int index) {
         return getResourcesFieldBuilder().getBuilder(index);
       }
@@ -11913,7 +11906,7 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder getResourcesOrBuilder(
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder getResourcesOrBuilder(
           int index) {
         if (resourcesBuilder_ == null) {
           return resources_.get(index);
@@ -11931,7 +11924,7 @@ public final class ResourcesPlumbing {
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
       public java.util.List<
-              ? extends com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              ? extends com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           getResourcesOrBuilderList() {
         if (resourcesBuilder_ != null) {
           return resourcesBuilder_.getMessageOrBuilderList();
@@ -11948,10 +11941,9 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder addResourcesBuilder() {
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder addResourcesBuilder() {
         return getResourcesFieldBuilder()
-            .addBuilder(
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance());
+            .addBuilder(com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance());
       }
       /**
        *
@@ -11962,12 +11954,11 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder addResourcesBuilder(
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder addResourcesBuilder(
           int index) {
         return getResourcesFieldBuilder()
             .addBuilder(
-                index,
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance());
+                index, com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance());
       }
       /**
        *
@@ -11978,22 +11969,22 @@ public final class ResourcesPlumbing {
        *
        * <code>repeated .v1.Resource resources = 2 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder>
+      public java.util.List<com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder>
           getResourcesBuilderList() {
         return getResourcesFieldBuilder().getBuilderList();
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>
           getResourcesFieldBuilder() {
         if (resourcesBuilder_ == null) {
           resourcesBuilder_ =
               new com.google.protobuf.RepeatedFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder,
-                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder>(
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ResourceOrBuilder>(
                   resources_, ((bitField0_ & 0x00000001) != 0), getParentForChildren(), isClean());
           resources_ = null;
         }
@@ -12241,1388 +12232,6 @@ public final class ResourcesPlumbing {
     }
   }
 
-  public interface ResourceOrBuilder
-      extends
-      // @@protoc_insertion_point(interface_extends:v1.Resource)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     *
-     *
-     * <pre>
-     * Unique identifier of the Resource.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     *
-     *
-     * <pre>
-     * Unique identifier of the Resource.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString getIdBytes();
-
-    /**
-     *
-     *
-     * <pre>
-     * Unique human-readable name of the Resource.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     *
-     *
-     * <pre>
-     * Unique human-readable name of the Resource.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString getNameBytes();
-
-    /**
-     *
-     *
-     * <pre>
-     * Port number override.
-     * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
-     * </pre>
-     *
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The portOverride.
-     */
-    int getPortOverride();
-
-    /**
-     *
-     *
-     * <pre>
-     * True if the datasource is reachable and the credentials are valid.
-     * </pre>
-     *
-     * <code>bool healthy = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The healthy.
-     */
-    boolean getHealthy();
-
-    /**
-     *
-     *
-     * <pre>
-     * Fields for connecting to the resource.
-     * </pre>
-     *
-     * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-     *
-     * @return Whether the driver field is set.
-     */
-    boolean hasDriver();
-    /**
-     *
-     *
-     * <pre>
-     * Fields for connecting to the resource.
-     * </pre>
-     *
-     * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The driver.
-     */
-    com.strongdm.api.v1.plumbing.DriversPlumbing.Driver getDriver();
-    /**
-     *
-     *
-     * <pre>
-     * Fields for connecting to the resource.
-     * </pre>
-     *
-     * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder getDriverOrBuilder();
-  }
-  /**
-   *
-   *
-   * <pre>
-   * A Resource is a proxy in the strongDM network. They come in two flavors: relays,
-   * which communicate with resources, and gateways, which communicate with
-   * clients.
-   * </pre>
-   *
-   * Protobuf type {@code v1.Resource}
-   */
-  public static final class Resource extends com.google.protobuf.GeneratedMessageV3
-      implements
-      // @@protoc_insertion_point(message_implements:v1.Resource)
-      ResourceOrBuilder {
-    private static final long serialVersionUID = 0L;
-    // Use Resource.newBuilder() to construct.
-    private Resource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private Resource() {
-      id_ = "";
-      name_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
-      return new Resource();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
-      return this.unknownFields;
-    }
-
-    private Resource(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                id_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                name_ = s;
-                break;
-              }
-            case 24:
-              {
-                portOverride_ = input.readInt32();
-                break;
-              }
-            case 32:
-              {
-                healthy_ = input.readBool();
-                break;
-              }
-            case 42:
-              {
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder subBuilder = null;
-                if (driver_ != null) {
-                  subBuilder = driver_.toBuilder();
-                }
-                driver_ =
-                    input.readMessage(
-                        com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(driver_);
-                  driver_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-      return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_Resource_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.ResourcesPlumbing
-          .internal_static_v1_Resource_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.class,
-              com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     *
-     *
-     * <pre>
-     * Unique identifier of the Resource.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The id.
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Unique identifier of the Resource.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for id.
-     */
-    public com.google.protobuf.ByteString getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     *
-     *
-     * <pre>
-     * Unique human-readable name of the Resource.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Unique human-readable name of the Resource.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PORT_OVERRIDE_FIELD_NUMBER = 3;
-    private int portOverride_;
-    /**
-     *
-     *
-     * <pre>
-     * Port number override.
-     * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
-     * </pre>
-     *
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The portOverride.
-     */
-    public int getPortOverride() {
-      return portOverride_;
-    }
-
-    public static final int HEALTHY_FIELD_NUMBER = 4;
-    private boolean healthy_;
-    /**
-     *
-     *
-     * <pre>
-     * True if the datasource is reachable and the credentials are valid.
-     * </pre>
-     *
-     * <code>bool healthy = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The healthy.
-     */
-    public boolean getHealthy() {
-      return healthy_;
-    }
-
-    public static final int DRIVER_FIELD_NUMBER = 5;
-    private com.strongdm.api.v1.plumbing.DriversPlumbing.Driver driver_;
-    /**
-     *
-     *
-     * <pre>
-     * Fields for connecting to the resource.
-     * </pre>
-     *
-     * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-     *
-     * @return Whether the driver field is set.
-     */
-    public boolean hasDriver() {
-      return driver_ != null;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Fields for connecting to the resource.
-     * </pre>
-     *
-     * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-     *
-     * @return The driver.
-     */
-    public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver getDriver() {
-      return driver_ == null
-          ? com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.getDefaultInstance()
-          : driver_;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Fields for connecting to the resource.
-     * </pre>
-     *
-     * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-     */
-    public com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder getDriverOrBuilder() {
-      return getDriver();
-    }
-
-    private byte memoizedIsInitialized = -1;
-
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (portOverride_ != 0) {
-        output.writeInt32(3, portOverride_);
-      }
-      if (healthy_ != false) {
-        output.writeBool(4, healthy_);
-      }
-      if (driver_ != null) {
-        output.writeMessage(5, getDriver());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (portOverride_ != 0) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, portOverride_);
-      }
-      if (healthy_ != false) {
-        size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, healthy_);
-      }
-      if (driver_ != null) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getDriver());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-        return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource other =
-          (com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource) obj;
-
-      if (!getId().equals(other.getId())) return false;
-      if (!getName().equals(other.getName())) return false;
-      if (getPortOverride() != other.getPortOverride()) return false;
-      if (getHealthy() != other.getHealthy()) return false;
-      if (hasDriver() != other.hasDriver()) return false;
-      if (hasDriver()) {
-        if (!getDriver().equals(other.getDriver())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
-      hash = (53 * hash) + getPortOverride();
-      hash = (37 * hash) + HEALTHY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getHealthy());
-      if (hasDriver()) {
-        hash = (37 * hash) + DRIVER_FIELD_NUMBER;
-        hash = (53 * hash) + getDriver().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseDelimitedFrom(
-        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
-          PARSER, input, extensionRegistry);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
-          PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-
-    public static Builder newBuilder(
-        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * A Resource is a proxy in the strongDM network. They come in two flavors: relays,
-     * which communicate with resources, and gateways, which communicate with
-     * clients.
-     * </pre>
-     *
-     * Protobuf type {@code v1.Resource}
-     */
-    public static final class Builder
-        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
-        implements
-        // @@protoc_insertion_point(builder_implements:v1.Resource)
-        com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
-        return com.strongdm.api.v1.plumbing.ResourcesPlumbing
-            .internal_static_v1_Resource_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.ResourcesPlumbing
-            .internal_static_v1_Resource_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.class,
-                com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
-      }
-
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        name_ = "";
-
-        portOverride_ = 0;
-
-        healthy_ = false;
-
-        if (driverBuilder_ == null) {
-          driver_ = null;
-        } else {
-          driver_ = null;
-          driverBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.ResourcesPlumbing
-            .internal_static_v1_Resource_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource build() {
-        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource buildPartial() {
-        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource result =
-            new com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.portOverride_ = portOverride_;
-        result.healthy_ = healthy_;
-        if (driverBuilder_ == null) {
-          result.driver_ = driver_;
-        } else {
-          result.driver_ = driverBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
-        return super.setField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-
-      @java.lang.Override
-      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index,
-          java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource) other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource other) {
-        if (other == com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource.getDefaultInstance())
-          return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (other.getPortOverride() != 0) {
-          setPortOverride(other.getPortOverride());
-        }
-        if (other.getHealthy() != false) {
-          setHealthy(other.getHealthy());
-        }
-        if (other.hasDriver()) {
-          mergeDriver(other.getDriver());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       *
-       *
-       * <pre>
-       * Unique identifier of the Resource.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique identifier of the Resource.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique identifier of the Resource.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique identifier of the Resource.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique identifier of the Resource.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       *
-       *
-       * <pre>
-       * Unique human-readable name of the Resource.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique human-readable name of the Resource.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique human-readable name of the Resource.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique human-readable name of the Resource.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Unique human-readable name of the Resource.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int portOverride_;
-      /**
-       *
-       *
-       * <pre>
-       * Port number override.
-       * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
-       * </pre>
-       *
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The portOverride.
-       */
-      public int getPortOverride() {
-        return portOverride_;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Port number override.
-       * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
-       * </pre>
-       *
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @param value The portOverride to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPortOverride(int value) {
-
-        portOverride_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Port number override.
-       * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
-       * </pre>
-       *
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearPortOverride() {
-
-        portOverride_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean healthy_;
-      /**
-       *
-       *
-       * <pre>
-       * True if the datasource is reachable and the credentials are valid.
-       * </pre>
-       *
-       * <code>
-       * bool healthy = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @return The healthy.
-       */
-      public boolean getHealthy() {
-        return healthy_;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * True if the datasource is reachable and the credentials are valid.
-       * </pre>
-       *
-       * <code>
-       * bool healthy = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @param value The healthy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHealthy(boolean value) {
-
-        healthy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * True if the datasource is reachable and the credentials are valid.
-       * </pre>
-       *
-       * <code>
-       * bool healthy = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearHealthy() {
-
-        healthy_ = false;
-        onChanged();
-        return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.DriversPlumbing.Driver driver_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder>
-          driverBuilder_;
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       *
-       * @return Whether the driver field is set.
-       */
-      public boolean hasDriver() {
-        return driverBuilder_ != null || driver_ != null;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       *
-       * @return The driver.
-       */
-      public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver getDriver() {
-        if (driverBuilder_ == null) {
-          return driver_ == null
-              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.getDefaultInstance()
-              : driver_;
-        } else {
-          return driverBuilder_.getMessage();
-        }
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setDriver(com.strongdm.api.v1.plumbing.DriversPlumbing.Driver value) {
-        if (driverBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          driver_ = value;
-          onChanged();
-        } else {
-          driverBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setDriver(
-          com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder builderForValue) {
-        if (driverBuilder_ == null) {
-          driver_ = builderForValue.build();
-          onChanged();
-        } else {
-          driverBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeDriver(com.strongdm.api.v1.plumbing.DriversPlumbing.Driver value) {
-        if (driverBuilder_ == null) {
-          if (driver_ != null) {
-            driver_ =
-                com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.newBuilder(driver_)
-                    .mergeFrom(value)
-                    .buildPartial();
-          } else {
-            driver_ = value;
-          }
-          onChanged();
-        } else {
-          driverBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearDriver() {
-        if (driverBuilder_ == null) {
-          driver_ = null;
-          onChanged();
-        } else {
-          driver_ = null;
-          driverBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder getDriverBuilder() {
-
-        onChanged();
-        return getDriverFieldBuilder().getBuilder();
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder getDriverOrBuilder() {
-        if (driverBuilder_ != null) {
-          return driverBuilder_.getMessageOrBuilder();
-        } else {
-          return driver_ == null
-              ? com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.getDefaultInstance()
-              : driver_;
-        }
-      }
-      /**
-       *
-       *
-       * <pre>
-       * Fields for connecting to the resource.
-       * </pre>
-       *
-       * <code>.v1.Driver driver = 5 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder,
-              com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder>
-          getDriverFieldBuilder() {
-        if (driverBuilder_ == null) {
-          driverBuilder_ =
-              new com.google.protobuf.SingleFieldBuilderV3<
-                  com.strongdm.api.v1.plumbing.DriversPlumbing.Driver,
-                  com.strongdm.api.v1.plumbing.DriversPlumbing.Driver.Builder,
-                  com.strongdm.api.v1.plumbing.DriversPlumbing.DriverOrBuilder>(
-                  getDriver(), getParentForChildren(), isClean());
-          driver_ = null;
-        }
-        return driverBuilder_;
-      }
-
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-      // @@protoc_insertion_point(builder_scope:v1.Resource)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.Resource)
-    private static final com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource DEFAULT_INSTANCE;
-
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource();
-    }
-
-    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Resource> PARSER =
-        new com.google.protobuf.AbstractParser<Resource>() {
-          @java.lang.Override
-          public Resource parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Resource(input, extensionRegistry);
-          }
-        };
-
-    public static com.google.protobuf.Parser<Resource> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Resource> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.Resource getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
       internal_static_v1_ResourceCreateRequest_descriptor;
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13663,10 +12272,6 @@ public final class ResourcesPlumbing {
       internal_static_v1_ResourceListResponse_descriptor;
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_ResourceListResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_v1_Resource_descriptor;
-  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_Resource_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
@@ -13713,26 +12318,21 @@ public final class ResourcesPlumbing {
           + "sourceListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Li"
           + "stResponseMetadata\022+\n\tresources\030\002 \003(\0132\014."
           + "v1.ResourceB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 "
-          + "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\265"
-          + "\001\n\010Resource\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\030\n\004n"
-          + "ame\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\003"
-          + " \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022 \n\007healthy\030\004 \001(\010B\017\362\370\263\007\005"
-          + "\260\363\263\007\001\222A\002@\001\022&\n\006driver\030\005 \001(\0132\n.v1.DriverB\n"
-          + "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\335\003\n\tResources\022Y\n\006"
-          + "Create\022\031.v1.ResourceCreateRequest\032\032.v1.R"
-          + "esourceCreateResponse\"\030\202\323\344\223\002\022\"\r/v1/resou"
-          + "rces:\001*\022R\n\003Get\022\026.v1.ResourceGetRequest\032\027"
-          + ".v1.ResourceGetResponse\"\032\202\323\344\223\002\024\022\022/v1/res"
-          + "ources/{id}\022^\n\006Update\022\031.v1.ResourceUpdat"
-          + "eRequest\032\032.v1.ResourceUpdateResponse\"\035\202\323"
-          + "\344\223\002\027\032\022/v1/resources/{id}:\001*\022[\n\006Delete\022\031."
-          + "v1.ResourceDeleteRequest\032\032.v1.ResourceDe"
-          + "leteResponse\"\032\202\323\344\223\002\024*\022/v1/resources/{id}"
-          + "\022P\n\004List\022\027.v1.ResourceListRequest\032\030.v1.R"
-          + "esourceListResponse\"\025\202\323\344\223\002\017\022\r/v1/resourc"
-          + "es\032\022\312\371\263\007\r\302\371\263\007\010ResourceB1\n\034com.strongdm.a"
-          + "pi.v1.plumbingB\021ResourcesPlumbingb\006proto"
-          + "3"
+          + "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\0012\335"
+          + "\003\n\tResources\022Y\n\006Create\022\031.v1.ResourceCrea"
+          + "teRequest\032\032.v1.ResourceCreateResponse\"\030\202"
+          + "\323\344\223\002\022\"\r/v1/resources:\001*\022R\n\003Get\022\026.v1.Reso"
+          + "urceGetRequest\032\027.v1.ResourceGetResponse\""
+          + "\032\202\323\344\223\002\024\022\022/v1/resources/{id}\022^\n\006Update\022\031."
+          + "v1.ResourceUpdateRequest\032\032.v1.ResourceUp"
+          + "dateResponse\"\035\202\323\344\223\002\027\032\022/v1/resources/{id}"
+          + ":\001*\022[\n\006Delete\022\031.v1.ResourceDeleteRequest"
+          + "\032\032.v1.ResourceDeleteResponse\"\032\202\323\344\223\002\024*\022/v"
+          + "1/resources/{id}\022P\n\004List\022\027.v1.ResourceLi"
+          + "stRequest\032\030.v1.ResourceListResponse\"\025\202\323\344"
+          + "\223\002\017\022\r/v1/resources\032\022\312\371\263\007\r\302\371\263\007\010ResourceB1"
+          + "\n\034com.strongdm.api.v1.plumbingB\021Resource"
+          + "sPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -13814,17 +12414,9 @@ public final class ResourcesPlumbing {
             new java.lang.String[] {
               "Meta", "Resources", "RateLimit",
             });
-    internal_static_v1_Resource_descriptor = getDescriptor().getMessageTypes().get(10);
-    internal_static_v1_Resource_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_v1_Resource_descriptor,
-            new java.lang.String[] {
-              "Id", "Name", "PortOverride", "Healthy", "Driver",
-            });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
