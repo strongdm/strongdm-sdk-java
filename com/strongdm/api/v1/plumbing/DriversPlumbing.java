@@ -48,6 +48,21 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.DriversPlumbing.AmazonEKSOrBuilder getAmazonEksOrBuilder();
 
     /**
+     * <code>.v1.GoogleGKE google_gke = 138696469;</code>
+     *
+     * @return Whether the googleGke field is set.
+     */
+    boolean hasGoogleGke();
+    /**
+     * <code>.v1.GoogleGKE google_gke = 138696469;</code>
+     *
+     * @return The googleGke.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE getGoogleGke();
+    /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKEOrBuilder getGoogleGkeOrBuilder();
+
+    /**
      * <code>.v1.HTTPBasicAuth http_basic_auth = 448320780;</code>
      *
      * @return Whether the httpBasicAuth field is set.
@@ -263,6 +278,26 @@ public final class DriversPlumbing {
                   driver_ = subBuilder.buildPartial();
                 }
                 driverCase_ = 86524680;
+                break;
+              }
+            case 1109571754:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder subBuilder = null;
+                if (driverCase_ == 138696469) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_)
+                          .toBuilder();
+                }
+                driver_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_);
+                  driver_ = subBuilder.buildPartial();
+                }
+                driverCase_ = 138696469;
                 break;
               }
             case 1157797762:
@@ -483,6 +518,7 @@ public final class DriversPlumbing {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       KUBERNETES(231451540),
       AMAZON_EKS(144724720),
+      GOOGLE_GKE(138696469),
       HTTP_BASIC_AUTH(448320780),
       HTTP_NO_AUTH(435770653),
       HTTP_AUTH(224436590),
@@ -514,6 +550,8 @@ public final class DriversPlumbing {
             return KUBERNETES;
           case 144724720:
             return AMAZON_EKS;
+          case 138696469:
+            return GOOGLE_GKE;
           case 448320780:
             return HTTP_BASIC_AUTH;
           case 435770653:
@@ -603,6 +641,34 @@ public final class DriversPlumbing {
         return (com.strongdm.api.v1.plumbing.DriversPlumbing.AmazonEKS) driver_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.AmazonEKS.getDefaultInstance();
+    }
+
+    public static final int GOOGLE_GKE_FIELD_NUMBER = 138696469;
+    /**
+     * <code>.v1.GoogleGKE google_gke = 138696469;</code>
+     *
+     * @return Whether the googleGke field is set.
+     */
+    public boolean hasGoogleGke() {
+      return driverCase_ == 138696469;
+    }
+    /**
+     * <code>.v1.GoogleGKE google_gke = 138696469;</code>
+     *
+     * @return The googleGke.
+     */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE getGoogleGke() {
+      if (driverCase_ == 138696469) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance();
+    }
+    /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKEOrBuilder getGoogleGkeOrBuilder() {
+      if (driverCase_ == 138696469) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance();
     }
 
     public static final int HTTP_BASIC_AUTH_FIELD_NUMBER = 448320780;
@@ -882,6 +948,10 @@ public final class DriversPlumbing {
         output.writeMessage(
             86524680, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
       }
+      if (driverCase_ == 138696469) {
+        output.writeMessage(
+            138696469, (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_);
+      }
       if (driverCase_ == 144724720) {
         output.writeMessage(
             144724720, (com.strongdm.api.v1.plumbing.DriversPlumbing.AmazonEKS) driver_);
@@ -936,6 +1006,11 @@ public final class DriversPlumbing {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
                 86524680, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) driver_);
+      }
+      if (driverCase_ == 138696469) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(
+                138696469, (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_);
       }
       if (driverCase_ == 144724720) {
         size +=
@@ -1006,6 +1081,9 @@ public final class DriversPlumbing {
         case 144724720:
           if (!getAmazonEks().equals(other.getAmazonEks())) return false;
           break;
+        case 138696469:
+          if (!getGoogleGke().equals(other.getGoogleGke())) return false;
+          break;
         case 448320780:
           if (!getHttpBasicAuth().equals(other.getHttpBasicAuth())) return false;
           break;
@@ -1055,6 +1133,10 @@ public final class DriversPlumbing {
         case 144724720:
           hash = (37 * hash) + AMAZON_EKS_FIELD_NUMBER;
           hash = (53 * hash) + getAmazonEks().hashCode();
+          break;
+        case 138696469:
+          hash = (37 * hash) + GOOGLE_GKE_FIELD_NUMBER;
+          hash = (53 * hash) + getGoogleGke().hashCode();
           break;
         case 448320780:
           hash = (37 * hash) + HTTP_BASIC_AUTH_FIELD_NUMBER;
@@ -1276,6 +1358,13 @@ public final class DriversPlumbing {
             result.driver_ = amazonEksBuilder_.build();
           }
         }
+        if (driverCase_ == 138696469) {
+          if (googleGkeBuilder_ == null) {
+            result.driver_ = driver_;
+          } else {
+            result.driver_ = googleGkeBuilder_.build();
+          }
+        }
         if (driverCase_ == 448320780) {
           if (httpBasicAuthBuilder_ == null) {
             result.driver_ = driver_;
@@ -1401,6 +1490,11 @@ public final class DriversPlumbing {
           case AMAZON_EKS:
             {
               mergeAmazonEks(other.getAmazonEks());
+              break;
+            }
+          case GOOGLE_GKE:
+            {
+              mergeGoogleGke(other.getGoogleGke());
               break;
             }
           case HTTP_BASIC_AUTH:
@@ -1777,6 +1871,146 @@ public final class DriversPlumbing {
         onChanged();
         ;
         return amazonEksBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKEOrBuilder>
+          googleGkeBuilder_;
+      /**
+       * <code>.v1.GoogleGKE google_gke = 138696469;</code>
+       *
+       * @return Whether the googleGke field is set.
+       */
+      public boolean hasGoogleGke() {
+        return driverCase_ == 138696469;
+      }
+      /**
+       * <code>.v1.GoogleGKE google_gke = 138696469;</code>
+       *
+       * @return The googleGke.
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE getGoogleGke() {
+        if (googleGkeBuilder_ == null) {
+          if (driverCase_ == 138696469) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance();
+        } else {
+          if (driverCase_ == 138696469) {
+            return googleGkeBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+      public Builder setGoogleGke(com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE value) {
+        if (googleGkeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          driver_ = value;
+          onChanged();
+        } else {
+          googleGkeBuilder_.setMessage(value);
+        }
+        driverCase_ = 138696469;
+        return this;
+      }
+      /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+      public Builder setGoogleGke(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder builderForValue) {
+        if (googleGkeBuilder_ == null) {
+          driver_ = builderForValue.build();
+          onChanged();
+        } else {
+          googleGkeBuilder_.setMessage(builderForValue.build());
+        }
+        driverCase_ = 138696469;
+        return this;
+      }
+      /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+      public Builder mergeGoogleGke(com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE value) {
+        if (googleGkeBuilder_ == null) {
+          if (driverCase_ == 138696469
+              && driver_
+                  != com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance()) {
+            driver_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.newBuilder(
+                        (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            driver_ = value;
+          }
+          onChanged();
+        } else {
+          if (driverCase_ == 138696469) {
+            googleGkeBuilder_.mergeFrom(value);
+          }
+          googleGkeBuilder_.setMessage(value);
+        }
+        driverCase_ = 138696469;
+        return this;
+      }
+      /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+      public Builder clearGoogleGke() {
+        if (googleGkeBuilder_ == null) {
+          if (driverCase_ == 138696469) {
+            driverCase_ = 0;
+            driver_ = null;
+            onChanged();
+          }
+        } else {
+          if (driverCase_ == 138696469) {
+            driverCase_ = 0;
+            driver_ = null;
+          }
+          googleGkeBuilder_.clear();
+        }
+        return this;
+      }
+      /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder getGoogleGkeBuilder() {
+        return getGoogleGkeFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKEOrBuilder
+          getGoogleGkeOrBuilder() {
+        if ((driverCase_ == 138696469) && (googleGkeBuilder_ != null)) {
+          return googleGkeBuilder_.getMessageOrBuilder();
+        } else {
+          if (driverCase_ == 138696469) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.GoogleGKE google_gke = 138696469;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKEOrBuilder>
+          getGoogleGkeFieldBuilder() {
+        if (googleGkeBuilder_ == null) {
+          if (!(driverCase_ == 138696469)) {
+            driver_ = com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance();
+          }
+          googleGkeBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKEOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) driver_,
+                  getParentForChildren(),
+                  isClean());
+          driver_ = null;
+        }
+        driverCase_ = 138696469;
+        onChanged();
+        ;
+        return googleGkeBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5510,6 +5744,880 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.DriversPlumbing.AmazonEKS getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface GoogleGKEOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.GoogleGKE)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The endpoint.
+     */
+    java.lang.String getEndpoint();
+    /**
+     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for endpoint.
+     */
+    com.google.protobuf.ByteString getEndpointBytes();
+
+    /**
+     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthority.
+     */
+    java.lang.String getCertificateAuthority();
+    /**
+     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthority.
+     */
+    com.google.protobuf.ByteString getCertificateAuthorityBytes();
+
+    /**
+     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The serviceAccountKey.
+     */
+    java.lang.String getServiceAccountKey();
+    /**
+     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for serviceAccountKey.
+     */
+    com.google.protobuf.ByteString getServiceAccountKeyBytes();
+  }
+  /** Protobuf type {@code v1.GoogleGKE} */
+  public static final class GoogleGKE extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.GoogleGKE)
+      GoogleGKEOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use GoogleGKE.newBuilder() to construct.
+    private GoogleGKE(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private GoogleGKE() {
+      endpoint_ = "";
+      certificateAuthority_ = "";
+      serviceAccountKey_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new GoogleGKE();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private GoogleGKE(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                endpoint_ = s;
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                certificateAuthority_ = s;
+                break;
+              }
+            case 26:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                serviceAccountKey_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_GoogleGKE_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_GoogleGKE_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.class,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder.class);
+    }
+
+    public static final int ENDPOINT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object endpoint_;
+    /**
+     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The endpoint.
+     */
+    public java.lang.String getEndpoint() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for endpoint.
+     */
+    public com.google.protobuf.ByteString getEndpointBytes() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CERTIFICATE_AUTHORITY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object certificateAuthority_;
+    /**
+     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthority.
+     */
+    public java.lang.String getCertificateAuthority() {
+      java.lang.Object ref = certificateAuthority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateAuthority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthority.
+     */
+    public com.google.protobuf.ByteString getCertificateAuthorityBytes() {
+      java.lang.Object ref = certificateAuthority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        certificateAuthority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_KEY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serviceAccountKey_;
+    /**
+     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The serviceAccountKey.
+     */
+    public java.lang.String getServiceAccountKey() {
+      java.lang.Object ref = serviceAccountKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for serviceAccountKey.
+     */
+    public com.google.protobuf.ByteString getServiceAccountKeyBytes() {
+      java.lang.Object ref = serviceAccountKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        serviceAccountKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getEndpointBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, endpoint_);
+      }
+      if (!getCertificateAuthorityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, certificateAuthority_);
+      }
+      if (!getServiceAccountKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceAccountKey_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getEndpointBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, endpoint_);
+      }
+      if (!getCertificateAuthorityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, certificateAuthority_);
+      }
+      if (!getServiceAccountKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceAccountKey_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE other =
+          (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) obj;
+
+      if (!getEndpoint().equals(other.getEndpoint())) return false;
+      if (!getCertificateAuthority().equals(other.getCertificateAuthority())) return false;
+      if (!getServiceAccountKey().equals(other.getServiceAccountKey())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoint().hashCode();
+      hash = (37 * hash) + CERTIFICATE_AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateAuthority().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountKey().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.GoogleGKE} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.GoogleGKE)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKEOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_GoogleGKE_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_GoogleGKE_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.class,
+                com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        endpoint_ = "";
+
+        certificateAuthority_ = "";
+
+        serviceAccountKey_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_GoogleGKE_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE result =
+            new com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE(this);
+        result.endpoint_ = endpoint_;
+        result.certificateAuthority_ = certificateAuthority_;
+        result.serviceAccountKey_ = serviceAccountKey_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE other) {
+        if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE.getDefaultInstance())
+          return this;
+        if (!other.getEndpoint().isEmpty()) {
+          endpoint_ = other.endpoint_;
+          onChanged();
+        }
+        if (!other.getCertificateAuthority().isEmpty()) {
+          certificateAuthority_ = other.certificateAuthority_;
+          onChanged();
+        }
+        if (!other.getServiceAccountKey().isEmpty()) {
+          serviceAccountKey_ = other.serviceAccountKey_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object endpoint_ = "";
+      /**
+       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The endpoint.
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for endpoint.
+       */
+      public com.google.protobuf.ByteString getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpoint(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpoint() {
+
+        endpoint_ = getDefaultInstance().getEndpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object certificateAuthority_ = "";
+      /**
+       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The certificateAuthority.
+       */
+      public java.lang.String getCertificateAuthority() {
+        java.lang.Object ref = certificateAuthority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateAuthority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for certificateAuthority.
+       */
+      public com.google.protobuf.ByteString getCertificateAuthorityBytes() {
+        java.lang.Object ref = certificateAuthority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          certificateAuthority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The certificateAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthority(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        certificateAuthority_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateAuthority() {
+
+        certificateAuthority_ = getDefaultInstance().getCertificateAuthority();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for certificateAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        certificateAuthority_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountKey_ = "";
+      /**
+       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The serviceAccountKey.
+       */
+      public java.lang.String getServiceAccountKey() {
+        java.lang.Object ref = serviceAccountKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for serviceAccountKey.
+       */
+      public com.google.protobuf.ByteString getServiceAccountKeyBytes() {
+        java.lang.Object ref = serviceAccountKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          serviceAccountKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The serviceAccountKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountKey(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        serviceAccountKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountKey() {
+
+        serviceAccountKey_ = getDefaultInstance().getServiceAccountKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for serviceAccountKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountKeyBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        serviceAccountKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.GoogleGKE)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.GoogleGKE)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GoogleGKE> PARSER =
+        new com.google.protobuf.AbstractParser<GoogleGKE>() {
+          @java.lang.Override
+          public GoogleGKE parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new GoogleGKE(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<GoogleGKE> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GoogleGKE> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
   }
@@ -16069,6 +17177,10 @@ public final class DriversPlumbing {
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AmazonEKS_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_GoogleGKE_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_GoogleGKE_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
       internal_static_v1_HTTPBasicAuth_descriptor;
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_HTTPBasicAuth_fieldAccessorTable;
@@ -16115,9 +17227,10 @@ public final class DriversPlumbing {
     java.lang.String[] descriptorData = {
       "\n\rdrivers.proto\022\002v1\032,protoc-gen-swagger/"
           + "options/annotations.proto\032\roptions.proto"
-          + "\"\310\003\n\006Driver\022\'\n\nkubernetes\030\224\327\256n \001(\0132\016.v1."
+          + "\"\360\003\n\006Driver\022\'\n\nkubernetes\030\224\327\256n \001(\0132\016.v1."
           + "KubernetesH\000\022&\n\namazon_eks\030\360\245\201E \001(\0132\r.v1"
-          + ".AmazonEKSH\000\0220\n\017http_basic_auth\030\214\252\343\325\001 \001("
+          + ".AmazonEKSH\000\022&\n\ngoogle_gke\030\225\256\221B \001(\0132\r.v1"
+          + ".GoogleGKEH\000\0220\n\017http_basic_auth\030\214\252\343\325\001 \001("
           + "\0132\021.v1.HTTPBasicAuthH\000\022*\n\014http_no_auth\030\235"
           + "\252\345\317\001 \001(\0132\016.v1.HTTPNoAuthH\000\022$\n\thttp_auth\030"
           + "\356\302\202k \001(\0132\014.v1.HTTPAuthH\000\022\036\n\005mysql\030\303\200\224\270\001 "
@@ -16137,52 +17250,56 @@ public final class DriversPlumbing {
           + "ey\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate_auth"
           + "ority\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\005 \001(\tB"
           + "\n\362\370\263\007\005\260\363\263\007\001\022 \n\014cluster_name\030\006 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\203\002\n\rHTTPBasicAuth\022\027\n\003u"
-          + "rl\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020healthcheck_path"
-          + "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\003 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\034\n\010password\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%"
-          + "\n\021headers_blacklist\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n"
-          + "\014default_path\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdo"
-          + "main\030\007 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\""
-          + "\304\001\n\nHTTPNoAuth\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "$\n\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n"
-          + "\021headers_blacklist\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014"
-          + "default_path\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdom"
-          + "ain\030\005 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\343"
-          + "\001\n\010HTTPAuth\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020"
-          + "healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013au"
-          + "th_header\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_b"
-          + "lacklist\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_pa"
-          + "th\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\006 \001(\tB"
-          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\256\001\n\005Mysql\022\034"
+          + "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\211\001\n\tGoogleGKE\022\034\n\010endpo"
+          + "int\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate_aut"
+          + "hority\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\'\n\023service_acco"
+          + "unt_key\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\203\002"
+          + "\n\rHTTPBasicAuth\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022$\n\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
+          + "\n\010username\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password"
+          + "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_blacklist\030"
+          + "\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_path\030\006 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\007 \001(\tB\017\362\370\263\007\005\260\363\263"
+          + "\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\304\001\n\nHTTPNoAuth\022\027\n\003ur"
+          + "l\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020healthcheck_path\030"
+          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_blacklist\030\003"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_path\030\004 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\005 \001(\tB\017\362\370\263\007\005\260\363\263\007"
+          + "\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\343\001\n\010HTTPAuth\022\027\n\003url\030\001"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020healthcheck_path\030\002 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013auth_header\030\003 \001(\tB\n\362\370\263"
+          + "\007\005\260\363\263\007\001\022%\n\021headers_blacklist\030\004 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022 \n\014default_path\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022\"\n\tsubdomain\030\006 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370"
+          + "\263\007\005\250\363\263\007\001\"\256\001\n\005Mysql\022\034\n\010hostname\030\001 \001(\tB\n\362\370"
+          + "\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
+          + "\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database"
+          + "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260"
+          + "\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\264\001\n\013AuroraMysq"
+          + "l\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010usern"
+          + "ame\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370"
+          + "\263\007\005\250\363\263\007\001\"\261\001\n\010Clustrix\022\034\n\010hostname\030\001 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010datab"
+          + "ase\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263"
+          + "\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\256\001\n\005Maria\022\034"
           + "\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username"
           + "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370"
           + "\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!"
           + "\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005"
-          + "\250\363\263\007\001\"\264\001\n\013AuroraMysql\022\034\n\010hostname\030\001 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010datab"
-          + "ase\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263"
-          + "\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\261\001\n\010Clustri"
-          + "x\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010usern"
-          + "ame\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370"
-          + "\263\007\005\250\363\263\007\001\"\256\001\n\005Maria\022\034\n\010hostname\030\001 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database"
-          + "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260"
-          + "\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\257\001\n\006Memsql\022\034\n\010"
-          + "hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004"
-          + "port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363"
-          + "\263\007\001\"\241\001\n\006Athena\022\036\n\naccess_key\030\001 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022%\n\021secret_access_key\030\002 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022(\n\006region\030\003 \001(\tB\030\362\370\263\007\005\260\363\263\007\001\222A\013:\tus"
-          + "-east-1\022\032\n\006output\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263"
-          + "\007\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbingB"
-          + "\017DriversPlumbingb\006proto3"
+          + "\250\363\263\007\001\"\257\001\n\006Memsql\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010"
+          + "password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263"
+          + "\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\241\001\n\006Athena\022\036\n\nac"
+          + "cess_key\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021secret_acc"
+          + "ess_key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\006region\030\003 \001("
+          + "\tB\030\362\370\263\007\005\260\363\263\007\001\222A\013:\tus-east-1\022\032\n\006output\030\004 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B/\n\034com.stron"
+          + "gdm.api.v1.plumbingB\017DriversPlumbingb\006pr"
+          + "oto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -16198,6 +17315,7 @@ public final class DriversPlumbing {
             new java.lang.String[] {
               "Kubernetes",
               "AmazonEks",
+              "GoogleGke",
               "HttpBasicAuth",
               "HttpNoAuth",
               "HttpAuth",
@@ -16228,7 +17346,14 @@ public final class DriversPlumbing {
               "Region",
               "ClusterName",
             });
-    internal_static_v1_HTTPBasicAuth_descriptor = getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_GoogleGKE_descriptor = getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_GoogleGKE_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_GoogleGKE_descriptor,
+            new java.lang.String[] {
+              "Endpoint", "CertificateAuthority", "ServiceAccountKey",
+            });
+    internal_static_v1_HTTPBasicAuth_descriptor = getDescriptor().getMessageTypes().get(4);
     internal_static_v1_HTTPBasicAuth_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_HTTPBasicAuth_descriptor,
@@ -16241,14 +17366,14 @@ public final class DriversPlumbing {
               "DefaultPath",
               "Subdomain",
             });
-    internal_static_v1_HTTPNoAuth_descriptor = getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_HTTPNoAuth_descriptor = getDescriptor().getMessageTypes().get(5);
     internal_static_v1_HTTPNoAuth_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_HTTPNoAuth_descriptor,
             new java.lang.String[] {
               "Url", "HealthcheckPath", "HeadersBlacklist", "DefaultPath", "Subdomain",
             });
-    internal_static_v1_HTTPAuth_descriptor = getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_HTTPAuth_descriptor = getDescriptor().getMessageTypes().get(6);
     internal_static_v1_HTTPAuth_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_HTTPAuth_descriptor,
@@ -16260,42 +17385,42 @@ public final class DriversPlumbing {
               "DefaultPath",
               "Subdomain",
             });
-    internal_static_v1_Mysql_descriptor = getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_Mysql_descriptor = getDescriptor().getMessageTypes().get(7);
     internal_static_v1_Mysql_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Mysql_descriptor,
             new java.lang.String[] {
               "Hostname", "Username", "Password", "Database", "Port",
             });
-    internal_static_v1_AuroraMysql_descriptor = getDescriptor().getMessageTypes().get(7);
+    internal_static_v1_AuroraMysql_descriptor = getDescriptor().getMessageTypes().get(8);
     internal_static_v1_AuroraMysql_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_AuroraMysql_descriptor,
             new java.lang.String[] {
               "Hostname", "Username", "Password", "Database", "Port",
             });
-    internal_static_v1_Clustrix_descriptor = getDescriptor().getMessageTypes().get(8);
+    internal_static_v1_Clustrix_descriptor = getDescriptor().getMessageTypes().get(9);
     internal_static_v1_Clustrix_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Clustrix_descriptor,
             new java.lang.String[] {
               "Hostname", "Username", "Password", "Database", "Port",
             });
-    internal_static_v1_Maria_descriptor = getDescriptor().getMessageTypes().get(9);
+    internal_static_v1_Maria_descriptor = getDescriptor().getMessageTypes().get(10);
     internal_static_v1_Maria_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Maria_descriptor,
             new java.lang.String[] {
               "Hostname", "Username", "Password", "Database", "Port",
             });
-    internal_static_v1_Memsql_descriptor = getDescriptor().getMessageTypes().get(10);
+    internal_static_v1_Memsql_descriptor = getDescriptor().getMessageTypes().get(11);
     internal_static_v1_Memsql_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Memsql_descriptor,
             new java.lang.String[] {
               "Hostname", "Username", "Password", "Database", "Port",
             });
-    internal_static_v1_Athena_descriptor = getDescriptor().getMessageTypes().get(11);
+    internal_static_v1_Athena_descriptor = getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Athena_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Athena_descriptor,

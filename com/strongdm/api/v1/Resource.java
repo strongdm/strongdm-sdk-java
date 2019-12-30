@@ -28,10 +28,12 @@ public class Resource {
 
   private int portOverride;
   // Port number override.
+  // TODO: should this be a part of the Driver since it does not apply to HTTP resources?
   public int getPortOverride() {
     return this.portOverride;
   }
   // Port number override.
+  // TODO: should this be a part of the Driver since it does not apply to HTTP resources?
   public Resource setPortOverride(int in) {
     this.portOverride = in;
     return this;

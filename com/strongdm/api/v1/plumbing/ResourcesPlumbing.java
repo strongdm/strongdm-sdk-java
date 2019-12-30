@@ -12301,6 +12301,7 @@ public final class ResourcesPlumbing {
      *
      * <pre>
      * Port number override.
+     * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
      * </pre>
      *
      * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
@@ -12588,6 +12589,7 @@ public final class ResourcesPlumbing {
      *
      * <pre>
      * Port number override.
+     * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
      * </pre>
      *
      * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
@@ -13278,6 +13280,7 @@ public final class ResourcesPlumbing {
        *
        * <pre>
        * Port number override.
+       * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
        * </pre>
        *
        * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
@@ -13292,6 +13295,7 @@ public final class ResourcesPlumbing {
        *
        * <pre>
        * Port number override.
+       * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
        * </pre>
        *
        * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
@@ -13310,6 +13314,7 @@ public final class ResourcesPlumbing {
        *
        * <pre>
        * Port number override.
+       * TODO: should this be a part of the Driver since it does not apply to HTTP resources?
        * </pre>
        *
        * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>

@@ -37,6 +37,9 @@ public class Plumbing {
     if (plumbing.getAmazonEks() != null) {
       return amazonEksToPorcelain(plumbing.getAmazonEks());
     }
+    if (plumbing.getGoogleGke() != null) {
+      return googleGkeToPorcelain(plumbing.getGoogleGke());
+    }
     if (plumbing.getHttpBasicAuth() != null) {
       return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
     }
@@ -79,6 +82,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.AmazonEKS) {
       Driver.Builder builder = Driver.newBuilder();
       builder.setAmazonEks(amazonEksToPlumbing((com.strongdm.api.v1.AmazonEKS) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.GoogleGKE) {
+      Driver.Builder builder = Driver.newBuilder();
+      builder.setGoogleGke(googleGkeToPlumbing((com.strongdm.api.v1.GoogleGKE) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.HTTPBasicAuth) {
@@ -237,6 +245,45 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.AmazonEKS> porcelains) {
     return porcelains.stream()
         .map(porcelain -> amazonEksToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.GoogleGKE googleGkeToPorcelain(GoogleGKE plumbing) {
+    com.strongdm.api.v1.GoogleGKE porcelain = new com.strongdm.api.v1.GoogleGKE();
+    porcelain.setEndpoint(plumbing.getEndpoint());
+    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setServiceAccountKey(plumbing.getServiceAccountKey());
+    return porcelain;
+  }
+
+  public static GoogleGKE googleGkeToPlumbing(com.strongdm.api.v1.GoogleGKE porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GoogleGKE.Builder builder = GoogleGKE.newBuilder();
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint(porcelain.getEndpoint());
+    }
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority(porcelain.getCertificateAuthority());
+    }
+    if (porcelain.getServiceAccountKey() != null) {
+      builder.setServiceAccountKey(porcelain.getServiceAccountKey());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.GoogleGKE> repeatedGoogleGKEToPorcelain(
+      Collection<GoogleGKE> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> googleGkeToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GoogleGKE> repeatedGoogleGKEToPlumbing(
+      Collection<com.strongdm.api.v1.GoogleGKE> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> googleGkeToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
