@@ -40,6 +40,9 @@ public class Plumbing {
     if (plumbing.getGoogleGke() != null) {
       return googleGkeToPorcelain(plumbing.getGoogleGke());
     }
+    if (plumbing.getSsh() != null) {
+      return sshToPorcelain(plumbing.getSsh());
+    }
     if (plumbing.getHttpBasicAuth() != null) {
       return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
     }
@@ -87,6 +90,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.GoogleGKE) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setGoogleGke(googleGkeToPlumbing((com.strongdm.api.v1.GoogleGKE) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.SSH) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setSsh(sshToPlumbing((com.strongdm.api.v1.SSH) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.HTTPBasicAuth) {
@@ -320,6 +328,57 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.GoogleGKE> porcelains) {
     return porcelains.stream()
         .map(porcelain -> googleGkeToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.SSH sshToPorcelain(SSH plumbing) {
+    com.strongdm.api.v1.SSH porcelain = new com.strongdm.api.v1.SSH();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setPublicKey(plumbing.getPublicKey());
+    return porcelain;
+  }
+
+  public static SSH sshToPlumbing(com.strongdm.api.v1.SSH porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SSH.Builder builder = SSH.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey(porcelain.getPublicKey());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.SSH> repeatedSSHToPorcelain(Collection<SSH> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> sshToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SSH> repeatedSSHToPlumbing(Collection<com.strongdm.api.v1.SSH> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> sshToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
