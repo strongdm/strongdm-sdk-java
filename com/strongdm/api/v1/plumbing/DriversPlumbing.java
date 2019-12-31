@@ -18,6 +18,37 @@ public final class DriversPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <code>.v1.Redis redis = 138869556;</code>
+     *
+     * @return Whether the redis field is set.
+     */
+    boolean hasRedis();
+    /**
+     * <code>.v1.Redis redis = 138869556;</code>
+     *
+     * @return The redis.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.Redis getRedis();
+    /** <code>.v1.Redis redis = 138869556;</code> */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.RedisOrBuilder getRedisOrBuilder();
+
+    /**
+     * <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code>
+     *
+     * @return Whether the elasticacheRedis field is set.
+     */
+    boolean hasElasticacheRedis();
+    /**
+     * <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code>
+     *
+     * @return The elasticacheRedis.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis getElasticacheRedis();
+    /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedisOrBuilder
+        getElasticacheRedisOrBuilder();
+
+    /**
      * <code>.v1.Kubernetes kubernetes = 231451540;</code>
      *
      * @return Whether the kubernetes field is set.
@@ -284,6 +315,27 @@ public final class DriversPlumbing {
                 resourceCase_ = 18289005;
                 break;
               }
+            case 224359994:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder subBuilder =
+                    null;
+                if (resourceCase_ == 28044999) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_)
+                          .toBuilder();
+                }
+                resource_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_);
+                  resource_ = subBuilder.buildPartial();
+                }
+                resourceCase_ = 28044999;
+                break;
+              }
             case 692197442:
               {
                 com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.Builder subBuilder = null;
@@ -321,6 +373,25 @@ public final class DriversPlumbing {
                   resource_ = subBuilder.buildPartial();
                 }
                 resourceCase_ = 138696469;
+                break;
+              }
+            case 1110956450:
+              {
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder subBuilder = null;
+                if (resourceCase_ == 138869556) {
+                  subBuilder =
+                      ((com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_).toBuilder();
+                }
+                resource_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(
+                      (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_);
+                  resource_ = subBuilder.buildPartial();
+                }
+                resourceCase_ = 138869556;
                 break;
               }
             case 1157797762:
@@ -560,6 +631,8 @@ public final class DriversPlumbing {
         implements
             com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      REDIS(138869556),
+      ELASTICACHE_REDIS(28044999),
       KUBERNETES(231451540),
       AMAZON_EKS(144724720),
       GOOGLE_GKE(138696469),
@@ -591,6 +664,10 @@ public final class DriversPlumbing {
 
       public static ResourceCase forNumber(int value) {
         switch (value) {
+          case 138869556:
+            return REDIS;
+          case 28044999:
+            return ELASTICACHE_REDIS;
           case 231451540:
             return KUBERNETES;
           case 144724720:
@@ -631,6 +708,63 @@ public final class DriversPlumbing {
 
     public ResourceCase getResourceCase() {
       return ResourceCase.forNumber(resourceCase_);
+    }
+
+    public static final int REDIS_FIELD_NUMBER = 138869556;
+    /**
+     * <code>.v1.Redis redis = 138869556;</code>
+     *
+     * @return Whether the redis field is set.
+     */
+    public boolean hasRedis() {
+      return resourceCase_ == 138869556;
+    }
+    /**
+     * <code>.v1.Redis redis = 138869556;</code>
+     *
+     * @return The redis.
+     */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Redis getRedis() {
+      if (resourceCase_ == 138869556) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance();
+    }
+    /** <code>.v1.Redis redis = 138869556;</code> */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.RedisOrBuilder getRedisOrBuilder() {
+      if (resourceCase_ == 138869556) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance();
+    }
+
+    public static final int ELASTICACHE_REDIS_FIELD_NUMBER = 28044999;
+    /**
+     * <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code>
+     *
+     * @return Whether the elasticacheRedis field is set.
+     */
+    public boolean hasElasticacheRedis() {
+      return resourceCase_ == 28044999;
+    }
+    /**
+     * <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code>
+     *
+     * @return The elasticacheRedis.
+     */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis getElasticacheRedis() {
+      if (resourceCase_ == 28044999) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance();
+    }
+    /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedisOrBuilder
+        getElasticacheRedisOrBuilder() {
+      if (resourceCase_ == 28044999) {
+        return (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance();
     }
 
     public static final int KUBERNETES_FIELD_NUMBER = 231451540;
@@ -1019,6 +1153,10 @@ public final class DriversPlumbing {
         output.writeMessage(
             18289005, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) resource_);
       }
+      if (resourceCase_ == 28044999) {
+        output.writeMessage(
+            28044999, (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_);
+      }
       if (resourceCase_ == 86524680) {
         output.writeMessage(
             86524680, (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) resource_);
@@ -1026,6 +1164,10 @@ public final class DriversPlumbing {
       if (resourceCase_ == 138696469) {
         output.writeMessage(
             138696469, (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) resource_);
+      }
+      if (resourceCase_ == 138869556) {
+        output.writeMessage(
+            138869556, (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_);
       }
       if (resourceCase_ == 144724720) {
         output.writeMessage(
@@ -1081,6 +1223,12 @@ public final class DriversPlumbing {
             com.google.protobuf.CodedOutputStream.computeMessageSize(
                 18289005, (com.strongdm.api.v1.plumbing.DriversPlumbing.AuroraMysql) resource_);
       }
+      if (resourceCase_ == 28044999) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(
+                28044999,
+                (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_);
+      }
       if (resourceCase_ == 86524680) {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
@@ -1090,6 +1238,11 @@ public final class DriversPlumbing {
         size +=
             com.google.protobuf.CodedOutputStream.computeMessageSize(
                 138696469, (com.strongdm.api.v1.plumbing.DriversPlumbing.GoogleGKE) resource_);
+      }
+      if (resourceCase_ == 138869556) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(
+                138869556, (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_);
       }
       if (resourceCase_ == 144724720) {
         size +=
@@ -1159,6 +1312,12 @@ public final class DriversPlumbing {
 
       if (!getResourceCase().equals(other.getResourceCase())) return false;
       switch (resourceCase_) {
+        case 138869556:
+          if (!getRedis().equals(other.getRedis())) return false;
+          break;
+        case 28044999:
+          if (!getElasticacheRedis().equals(other.getElasticacheRedis())) return false;
+          break;
         case 231451540:
           if (!getKubernetes().equals(other.getKubernetes())) return false;
           break;
@@ -1213,6 +1372,14 @@ public final class DriversPlumbing {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (resourceCase_) {
+        case 138869556:
+          hash = (37 * hash) + REDIS_FIELD_NUMBER;
+          hash = (53 * hash) + getRedis().hashCode();
+          break;
+        case 28044999:
+          hash = (37 * hash) + ELASTICACHE_REDIS_FIELD_NUMBER;
+          hash = (53 * hash) + getElasticacheRedis().hashCode();
+          break;
         case 231451540:
           hash = (37 * hash) + KUBERNETES_FIELD_NUMBER;
           hash = (53 * hash) + getKubernetes().hashCode();
@@ -1443,6 +1610,20 @@ public final class DriversPlumbing {
       public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource buildPartial() {
         com.strongdm.api.v1.plumbing.DriversPlumbing.Resource result =
             new com.strongdm.api.v1.plumbing.DriversPlumbing.Resource(this);
+        if (resourceCase_ == 138869556) {
+          if (redisBuilder_ == null) {
+            result.resource_ = resource_;
+          } else {
+            result.resource_ = redisBuilder_.build();
+          }
+        }
+        if (resourceCase_ == 28044999) {
+          if (elasticacheRedisBuilder_ == null) {
+            result.resource_ = resource_;
+          } else {
+            result.resource_ = elasticacheRedisBuilder_.build();
+          }
+        }
         if (resourceCase_ == 231451540) {
           if (kubernetesBuilder_ == null) {
             result.resource_ = resource_;
@@ -1588,6 +1769,16 @@ public final class DriversPlumbing {
         if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Resource.getDefaultInstance())
           return this;
         switch (other.getResourceCase()) {
+          case REDIS:
+            {
+              mergeRedis(other.getRedis());
+              break;
+            }
+          case ELASTICACHE_REDIS:
+            {
+              mergeElasticacheRedis(other.getElasticacheRedis());
+              break;
+            }
           case KUBERNETES:
             {
               mergeKubernetes(other.getKubernetes());
@@ -1700,6 +1891,290 @@ public final class DriversPlumbing {
         resource_ = null;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Redis,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.RedisOrBuilder>
+          redisBuilder_;
+      /**
+       * <code>.v1.Redis redis = 138869556;</code>
+       *
+       * @return Whether the redis field is set.
+       */
+      public boolean hasRedis() {
+        return resourceCase_ == 138869556;
+      }
+      /**
+       * <code>.v1.Redis redis = 138869556;</code>
+       *
+       * @return The redis.
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Redis getRedis() {
+        if (redisBuilder_ == null) {
+          if (resourceCase_ == 138869556) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance();
+        } else {
+          if (resourceCase_ == 138869556) {
+            return redisBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Redis redis = 138869556;</code> */
+      public Builder setRedis(com.strongdm.api.v1.plumbing.DriversPlumbing.Redis value) {
+        if (redisBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resource_ = value;
+          onChanged();
+        } else {
+          redisBuilder_.setMessage(value);
+        }
+        resourceCase_ = 138869556;
+        return this;
+      }
+      /** <code>.v1.Redis redis = 138869556;</code> */
+      public Builder setRedis(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder builderForValue) {
+        if (redisBuilder_ == null) {
+          resource_ = builderForValue.build();
+          onChanged();
+        } else {
+          redisBuilder_.setMessage(builderForValue.build());
+        }
+        resourceCase_ = 138869556;
+        return this;
+      }
+      /** <code>.v1.Redis redis = 138869556;</code> */
+      public Builder mergeRedis(com.strongdm.api.v1.plumbing.DriversPlumbing.Redis value) {
+        if (redisBuilder_ == null) {
+          if (resourceCase_ == 138869556
+              && resource_
+                  != com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance()) {
+            resource_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.newBuilder(
+                        (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            resource_ = value;
+          }
+          onChanged();
+        } else {
+          if (resourceCase_ == 138869556) {
+            redisBuilder_.mergeFrom(value);
+          }
+          redisBuilder_.setMessage(value);
+        }
+        resourceCase_ = 138869556;
+        return this;
+      }
+      /** <code>.v1.Redis redis = 138869556;</code> */
+      public Builder clearRedis() {
+        if (redisBuilder_ == null) {
+          if (resourceCase_ == 138869556) {
+            resourceCase_ = 0;
+            resource_ = null;
+            onChanged();
+          }
+        } else {
+          if (resourceCase_ == 138869556) {
+            resourceCase_ = 0;
+            resource_ = null;
+          }
+          redisBuilder_.clear();
+        }
+        return this;
+      }
+      /** <code>.v1.Redis redis = 138869556;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder getRedisBuilder() {
+        return getRedisFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.Redis redis = 138869556;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.RedisOrBuilder getRedisOrBuilder() {
+        if ((resourceCase_ == 138869556) && (redisBuilder_ != null)) {
+          return redisBuilder_.getMessageOrBuilder();
+        } else {
+          if (resourceCase_ == 138869556) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.Redis redis = 138869556;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Redis,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.RedisOrBuilder>
+          getRedisFieldBuilder() {
+        if (redisBuilder_ == null) {
+          if (!(resourceCase_ == 138869556)) {
+            resource_ = com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance();
+          }
+          redisBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Redis,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.RedisOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) resource_,
+                  getParentForChildren(),
+                  isClean());
+          resource_ = null;
+        }
+        resourceCase_ = 138869556;
+        onChanged();
+        ;
+        return redisBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedisOrBuilder>
+          elasticacheRedisBuilder_;
+      /**
+       * <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code>
+       *
+       * @return Whether the elasticacheRedis field is set.
+       */
+      public boolean hasElasticacheRedis() {
+        return resourceCase_ == 28044999;
+      }
+      /**
+       * <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code>
+       *
+       * @return The elasticacheRedis.
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis getElasticacheRedis() {
+        if (elasticacheRedisBuilder_ == null) {
+          if (resourceCase_ == 28044999) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance();
+        } else {
+          if (resourceCase_ == 28044999) {
+            return elasticacheRedisBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+      public Builder setElasticacheRedis(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis value) {
+        if (elasticacheRedisBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resource_ = value;
+          onChanged();
+        } else {
+          elasticacheRedisBuilder_.setMessage(value);
+        }
+        resourceCase_ = 28044999;
+        return this;
+      }
+      /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+      public Builder setElasticacheRedis(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder builderForValue) {
+        if (elasticacheRedisBuilder_ == null) {
+          resource_ = builderForValue.build();
+          onChanged();
+        } else {
+          elasticacheRedisBuilder_.setMessage(builderForValue.build());
+        }
+        resourceCase_ = 28044999;
+        return this;
+      }
+      /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+      public Builder mergeElasticacheRedis(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis value) {
+        if (elasticacheRedisBuilder_ == null) {
+          if (resourceCase_ == 28044999
+              && resource_
+                  != com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis
+                      .getDefaultInstance()) {
+            resource_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.newBuilder(
+                        (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            resource_ = value;
+          }
+          onChanged();
+        } else {
+          if (resourceCase_ == 28044999) {
+            elasticacheRedisBuilder_.mergeFrom(value);
+          }
+          elasticacheRedisBuilder_.setMessage(value);
+        }
+        resourceCase_ = 28044999;
+        return this;
+      }
+      /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+      public Builder clearElasticacheRedis() {
+        if (elasticacheRedisBuilder_ == null) {
+          if (resourceCase_ == 28044999) {
+            resourceCase_ = 0;
+            resource_ = null;
+            onChanged();
+          }
+        } else {
+          if (resourceCase_ == 28044999) {
+            resourceCase_ = 0;
+            resource_ = null;
+          }
+          elasticacheRedisBuilder_.clear();
+        }
+        return this;
+      }
+      /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder
+          getElasticacheRedisBuilder() {
+        return getElasticacheRedisFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedisOrBuilder
+          getElasticacheRedisOrBuilder() {
+        if ((resourceCase_ == 28044999) && (elasticacheRedisBuilder_ != null)) {
+          return elasticacheRedisBuilder_.getMessageOrBuilder();
+        } else {
+          if (resourceCase_ == 28044999) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance();
+        }
+      }
+      /** <code>.v1.ElasticacheRedis elasticache_redis = 28044999;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedisOrBuilder>
+          getElasticacheRedisFieldBuilder() {
+        if (elasticacheRedisBuilder_ == null) {
+          if (!(resourceCase_ == 28044999)) {
+            resource_ =
+                com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance();
+          }
+          elasticacheRedisBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder,
+                  com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedisOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) resource_,
+                  getParentForChildren(),
+                  isClean());
+          resource_ = null;
+        }
+        resourceCase_ = 28044999;
+        onChanged();
+        ;
+        return elasticacheRedisBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3579,6 +4054,2932 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Resource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface RedisOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.Redis)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString getIdBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString getNameBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * Port number override.
+     * </pre>
+     *
+     * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The portOverride.
+     */
+    int getPortOverride();
+
+    /**
+     *
+     *
+     * <pre>
+     * True if the datasource is reachable and the credentials are valid.
+     * </pre>
+     *
+     * <code>
+     * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The healthy.
+     */
+    boolean getHealthy();
+
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString getPasswordBytes();
+
+    /**
+     * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The port.
+     */
+    int getPort();
+  }
+  /** Protobuf type {@code v1.Redis} */
+  public static final class Redis extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.Redis)
+      RedisOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use Redis.newBuilder() to construct.
+    private Redis(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private Redis() {
+      id_ = "";
+      name_ = "";
+      hostname_ = "";
+      password_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new Redis();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private Redis(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                hostname_ = s;
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+            case 24:
+              {
+                port_ = input.readInt32();
+                break;
+              }
+            case 262146:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                id_ = s;
+                break;
+              }
+            case 262154:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+            case 262160:
+              {
+                portOverride_ = input.readInt32();
+                break;
+              }
+            case 262168:
+              {
+                healthy_ = input.readBool();
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Redis_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_Redis_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.class,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 32768;
+    private volatile java.lang.Object id_;
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The id.
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for id.
+     */
+    public com.google.protobuf.ByteString getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 32769;
+    private volatile java.lang.Object name_;
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_OVERRIDE_FIELD_NUMBER = 32770;
+    private int portOverride_;
+    /**
+     *
+     *
+     * <pre>
+     * Port number override.
+     * </pre>
+     *
+     * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The portOverride.
+     */
+    public int getPortOverride() {
+      return portOverride_;
+    }
+
+    public static final int HEALTHY_FIELD_NUMBER = 32771;
+    private boolean healthy_;
+    /**
+     *
+     *
+     * <pre>
+     * True if the datasource is reachable and the credentials are valid.
+     * </pre>
+     *
+     * <code>
+     * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The healthy.
+     */
+    public boolean getHealthy() {
+      return healthy_;
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 2;
+    private volatile java.lang.Object password_;
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    public com.google.protobuf.ByteString getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 3;
+    private int port_;
+    /**
+     * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The port.
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
+      }
+      if (port_ != 0) {
+        output.writeInt32(3, port_);
+      }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32769, name_);
+      }
+      if (portOverride_ != 0) {
+        output.writeInt32(32770, portOverride_);
+      }
+      if (healthy_ != false) {
+        output.writeBool(32771, healthy_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, port_);
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32769, name_);
+      }
+      if (portOverride_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(32770, portOverride_);
+      }
+      if (healthy_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(32771, healthy_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Redis)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.Redis other =
+          (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) obj;
+
+      if (!getId().equals(other.getId())) return false;
+      if (!getName().equals(other.getName())) return false;
+      if (getPortOverride() != other.getPortOverride()) return false;
+      if (getHealthy() != other.getHealthy()) return false;
+      if (!getHostname().equals(other.getHostname())) return false;
+      if (!getPassword().equals(other.getPassword())) return false;
+      if (getPort() != other.getPort()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
+      hash = (53 * hash) + getPortOverride();
+      hash = (37 * hash) + HEALTHY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getHealthy());
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.DriversPlumbing.Redis prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.Redis} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.Redis)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.RedisOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Redis_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_Redis_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.class,
+                com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        portOverride_ = 0;
+
+        healthy_ = false;
+
+        hostname_ = "";
+
+        password_ = "";
+
+        port_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_Redis_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Redis getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Redis build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Redis result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.Redis buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Redis result =
+            new com.strongdm.api.v1.plumbing.DriversPlumbing.Redis(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.portOverride_ = portOverride_;
+        result.healthy_ = healthy_;
+        result.hostname_ = hostname_;
+        result.password_ = password_;
+        result.port_ = port_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.Redis other) {
+        if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.Redis.getDefaultInstance())
+          return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getPortOverride() != 0) {
+          setPortOverride(other.getPortOverride());
+        }
+        if (other.getHealthy() != false) {
+          setHealthy(other.getHealthy());
+        }
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.Redis parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.DriversPlumbing.Redis) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int portOverride_;
+      /**
+       *
+       *
+       * <pre>
+       * Port number override.
+       * </pre>
+       *
+       * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The portOverride.
+       */
+      public int getPortOverride() {
+        return portOverride_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Port number override.
+       * </pre>
+       *
+       * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The portOverride to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortOverride(int value) {
+
+        portOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Port number override.
+       * </pre>
+       *
+       * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPortOverride() {
+
+        portOverride_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean healthy_;
+      /**
+       *
+       *
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>
+       * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return The healthy.
+       */
+      public boolean getHealthy() {
+        return healthy_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>
+       * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @param value The healthy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthy(boolean value) {
+
+        healthy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>
+       * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthy() {
+
+        healthy_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_;
+      /**
+       * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return The port.
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.Redis)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.Redis)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.Redis DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.Redis();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.Redis getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Redis> PARSER =
+        new com.google.protobuf.AbstractParser<Redis>() {
+          @java.lang.Override
+          public Redis parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Redis(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<Redis> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Redis> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.Redis getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface ElasticacheRedisOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.ElasticacheRedis)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString getIdBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString getNameBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * Port number override.
+     * </pre>
+     *
+     * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The portOverride.
+     */
+    int getPortOverride();
+
+    /**
+     *
+     *
+     * <pre>
+     * True if the datasource is reachable and the credentials are valid.
+     * </pre>
+     *
+     * <code>
+     * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The healthy.
+     */
+    boolean getHealthy();
+
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    java.lang.String getHostname();
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    com.google.protobuf.ByteString getHostnameBytes();
+
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString getPasswordBytes();
+
+    /**
+     * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The port.
+     */
+    int getPort();
+
+    /**
+     * <code>
+     * bool tls_required = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The tlsRequired.
+     */
+    boolean getTlsRequired();
+  }
+  /** Protobuf type {@code v1.ElasticacheRedis} */
+  public static final class ElasticacheRedis extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.ElasticacheRedis)
+      ElasticacheRedisOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use ElasticacheRedis.newBuilder() to construct.
+    private ElasticacheRedis(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private ElasticacheRedis() {
+      id_ = "";
+      name_ = "";
+      hostname_ = "";
+      password_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new ElasticacheRedis();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private ElasticacheRedis(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                hostname_ = s;
+                break;
+              }
+            case 18:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+            case 24:
+              {
+                port_ = input.readInt32();
+                break;
+              }
+            case 32:
+              {
+                tlsRequired_ = input.readBool();
+                break;
+              }
+            case 262146:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                id_ = s;
+                break;
+              }
+            case 262154:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+            case 262160:
+              {
+                portOverride_ = input.readInt32();
+                break;
+              }
+            case 262168:
+              {
+                healthy_ = input.readBool();
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_ElasticacheRedis_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing
+          .internal_static_v1_ElasticacheRedis_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.class,
+              com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 32768;
+    private volatile java.lang.Object id_;
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The id.
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for id.
+     */
+    public com.google.protobuf.ByteString getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 32769;
+    private volatile java.lang.Object name_;
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_OVERRIDE_FIELD_NUMBER = 32770;
+    private int portOverride_;
+    /**
+     *
+     *
+     * <pre>
+     * Port number override.
+     * </pre>
+     *
+     * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The portOverride.
+     */
+    public int getPortOverride() {
+      return portOverride_;
+    }
+
+    public static final int HEALTHY_FIELD_NUMBER = 32771;
+    private boolean healthy_;
+    /**
+     *
+     *
+     * <pre>
+     * True if the datasource is reachable and the credentials are valid.
+     * </pre>
+     *
+     * <code>
+     * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The healthy.
+     */
+    public boolean getHealthy() {
+      return healthy_;
+    }
+
+    public static final int HOSTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostname_;
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The hostname.
+     */
+    public java.lang.String getHostname() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostname_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for hostname.
+     */
+    public com.google.protobuf.ByteString getHostnameBytes() {
+      java.lang.Object ref = hostname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        hostname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 2;
+    private volatile java.lang.Object password_;
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The password.
+     */
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for password.
+     */
+    public com.google.protobuf.ByteString getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PORT_FIELD_NUMBER = 3;
+    private int port_;
+    /**
+     * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The port.
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    public static final int TLS_REQUIRED_FIELD_NUMBER = 4;
+    private boolean tlsRequired_;
+    /**
+     * <code>
+     * bool tls_required = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
+     *
+     * @return The tlsRequired.
+     */
+    public boolean getTlsRequired() {
+      return tlsRequired_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getHostnameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostname_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
+      }
+      if (port_ != 0) {
+        output.writeInt32(3, port_);
+      }
+      if (tlsRequired_ != false) {
+        output.writeBool(4, tlsRequired_);
+      }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32769, name_);
+      }
+      if (portOverride_ != 0) {
+        output.writeInt32(32770, portOverride_);
+      }
+      if (healthy_ != false) {
+        output.writeBool(32771, healthy_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getHostnameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostname_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
+      }
+      if (port_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, port_);
+      }
+      if (tlsRequired_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, tlsRequired_);
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32769, name_);
+      }
+      if (portOverride_ != 0) {
+        size += com.google.protobuf.CodedOutputStream.computeInt32Size(32770, portOverride_);
+      }
+      if (healthy_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(32771, healthy_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis other =
+          (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) obj;
+
+      if (!getId().equals(other.getId())) return false;
+      if (!getName().equals(other.getName())) return false;
+      if (getPortOverride() != other.getPortOverride()) return false;
+      if (getHealthy() != other.getHealthy()) return false;
+      if (!getHostname().equals(other.getHostname())) return false;
+      if (!getPassword().equals(other.getPassword())) return false;
+      if (getPort() != other.getPort()) return false;
+      if (getTlsRequired() != other.getTlsRequired()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
+      hash = (53 * hash) + getPortOverride();
+      hash = (37 * hash) + HEALTHY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getHealthy());
+      hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getHostname().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + PORT_FIELD_NUMBER;
+      hash = (53 * hash) + getPort();
+      hash = (37 * hash) + TLS_REQUIRED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getTlsRequired());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(
+        com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.ElasticacheRedis} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.ElasticacheRedis)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedisOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_ElasticacheRedis_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_ElasticacheRedis_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.class,
+                com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        portOverride_ = 0;
+
+        healthy_ = false;
+
+        hostname_ = "";
+
+        password_ = "";
+
+        port_ = 0;
+
+        tlsRequired_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing
+            .internal_static_v1_ElasticacheRedis_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis
+          getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis result =
+            new com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.portOverride_ = portOverride_;
+        result.healthy_ = healthy_;
+        result.hostname_ = hostname_;
+        result.password_ = password_;
+        result.port_ = port_;
+        result.tlsRequired_ = tlsRequired_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis other) {
+        if (other
+            == com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis.getDefaultInstance())
+          return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getPortOverride() != 0) {
+          setPortOverride(other.getPortOverride());
+        }
+        if (other.getHealthy() != false) {
+          setHealthy(other.getHealthy());
+        }
+        if (!other.getHostname().isEmpty()) {
+          hostname_ = other.hostname_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (other.getPort() != 0) {
+          setPort(other.getPort());
+        }
+        if (other.getTlsRequired() != false) {
+          setTlsRequired(other.getTlsRequired());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis)
+                  e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int portOverride_;
+      /**
+       *
+       *
+       * <pre>
+       * Port number override.
+       * </pre>
+       *
+       * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The portOverride.
+       */
+      public int getPortOverride() {
+        return portOverride_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Port number override.
+       * </pre>
+       *
+       * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The portOverride to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPortOverride(int value) {
+
+        portOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Port number override.
+       * </pre>
+       *
+       * <code>int32 port_override = 32770 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPortOverride() {
+
+        portOverride_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean healthy_;
+      /**
+       *
+       *
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>
+       * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return The healthy.
+       */
+      public boolean getHealthy() {
+        return healthy_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>
+       * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @param value The healthy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthy(boolean value) {
+
+        healthy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>
+       * bool healthy = 32771 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthy() {
+
+        healthy_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostname_ = "";
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The hostname.
+       */
+      public java.lang.String getHostname() {
+        java.lang.Object ref = hostname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostname_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for hostname.
+       */
+      public com.google.protobuf.ByteString getHostnameBytes() {
+        java.lang.Object ref = hostname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          hostname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostname(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearHostname() {
+
+        hostname_ = getDefaultInstance().getHostname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for hostname to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostnameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        hostname_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int port_;
+      /**
+       * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return The port.
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @param value The port to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPort(int value) {
+
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 port = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearPort() {
+
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean tlsRequired_;
+      /**
+       * <code>
+       * bool tls_required = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return The tlsRequired.
+       */
+      public boolean getTlsRequired() {
+        return tlsRequired_;
+      }
+      /**
+       * <code>
+       * bool tls_required = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @param value The tlsRequired to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTlsRequired(boolean value) {
+
+        tlsRequired_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>
+       * bool tls_required = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearTlsRequired() {
+
+        tlsRequired_ = false;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.ElasticacheRedis)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ElasticacheRedis)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis
+        DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis
+        getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ElasticacheRedis> PARSER =
+        new com.google.protobuf.AbstractParser<ElasticacheRedis>() {
+          @java.lang.Override
+          public ElasticacheRedis parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new ElasticacheRedis(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<ElasticacheRedis> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ElasticacheRedis> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.ElasticacheRedis
+        getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
   }
@@ -26396,6 +29797,14 @@ public final class DriversPlumbing {
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Resource_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_Redis_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_Redis_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_ElasticacheRedis_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_ElasticacheRedis_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
       internal_static_v1_Kubernetes_descriptor;
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Kubernetes_fieldAccessorTable;
@@ -26457,93 +29866,101 @@ public final class DriversPlumbing {
     java.lang.String[] descriptorData = {
       "\n\rdrivers.proto\022\002v1\032,protoc-gen-swagger/"
           + "options/annotations.proto\032\roptions.proto"
-          + "\"\217\004\n\010Resource\022\'\n\nkubernetes\030\224\327\256n \001(\0132\016.v"
-          + "1.KubernetesH\000\022&\n\namazon_eks\030\360\245\201E \001(\0132\r."
-          + "v1.AmazonEKSH\000\022&\n\ngoogle_gke\030\225\256\221B \001(\0132\r."
-          + "v1.GoogleGKEH\000\022\031\n\003ssh\030\377\264\325z \001(\0132\007.v1.SSHH"
-          + "\000\0220\n\017http_basic_auth\030\214\252\343\325\001 \001(\0132\021.v1.HTTP"
-          + "BasicAuthH\000\022*\n\014http_no_auth\030\235\252\345\317\001 \001(\0132\016."
-          + "v1.HTTPNoAuthH\000\022$\n\thttp_auth\030\356\302\202k \001(\0132\014."
-          + "v1.HTTPAuthH\000\022\036\n\005mysql\030\303\200\224\270\001 \001(\0132\t.v1.My"
-          + "sqlH\000\022*\n\014aurora_mysql\030\355\242\334\010 \001(\0132\017.v1.Auro"
-          + "raMysqlH\000\022$\n\010clustrix\030\224\251\356\375\001 \001(\0132\014.v1.Clu"
-          + "strixH\000\022\036\n\005maria\030\224\335\246\336\001 \001(\0132\t.v1.MariaH\000\022"
-          + " \n\006memsql\030\255\271\337\200\001 \001(\0132\n.v1.MemsqlH\000\022\037\n\006ath"
-          + "ena\030\210\206\241) \001(\0132\n.v1.AthenaH\000:\n\372\370\263\007\005\250\363\263\007\001B\n"
-          + "\n\010resource\"\312\002\n\nKubernetes\022\030\n\002id\030\200\200\002 \001(\tB"
+          + "\"\344\004\n\010Resource\022\035\n\005redis\030\264\366\233B \001(\0132\t.v1.Red"
+          + "isH\000\0224\n\021elasticache_redis\030\307\335\257\r \001(\0132\024.v1."
+          + "ElasticacheRedisH\000\022\'\n\nkubernetes\030\224\327\256n \001("
+          + "\0132\016.v1.KubernetesH\000\022&\n\namazon_eks\030\360\245\201E \001"
+          + "(\0132\r.v1.AmazonEKSH\000\022&\n\ngoogle_gke\030\225\256\221B \001"
+          + "(\0132\r.v1.GoogleGKEH\000\022\031\n\003ssh\030\377\264\325z \001(\0132\007.v1"
+          + ".SSHH\000\0220\n\017http_basic_auth\030\214\252\343\325\001 \001(\0132\021.v1"
+          + ".HTTPBasicAuthH\000\022*\n\014http_no_auth\030\235\252\345\317\001 \001"
+          + "(\0132\016.v1.HTTPNoAuthH\000\022$\n\thttp_auth\030\356\302\202k \001"
+          + "(\0132\014.v1.HTTPAuthH\000\022\036\n\005mysql\030\303\200\224\270\001 \001(\0132\t."
+          + "v1.MysqlH\000\022*\n\014aurora_mysql\030\355\242\334\010 \001(\0132\017.v1"
+          + ".AuroraMysqlH\000\022$\n\010clustrix\030\224\251\356\375\001 \001(\0132\014.v"
+          + "1.ClustrixH\000\022\036\n\005maria\030\224\335\246\336\001 \001(\0132\t.v1.Mar"
+          + "iaH\000\022 \n\006memsql\030\255\271\337\200\001 \001(\0132\n.v1.MemsqlH\000\022\037"
+          + "\n\006athena\030\210\206\241) \001(\0132\n.v1.AthenaH\000:\n\372\370\263\007\005\250\363"
+          + "\263\007\001B\n\n\010resource\"\361\001\n\005Redis\022\030\n\002id\030\200\200\002 \001(\tB"
           + "\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
           + "#\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007"
           + "healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010host"
-          + "name\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\004port\030\002 \001(\005B\022\362\370"
-          + "\263\007\005\260\363\263\007\001\222A\005:\003443\022)\n\025certificate_authorit"
-          + "y\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022&\n\022client_certificat"
-          + "e\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nclient_key\030\005 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\344\002\n\tAmazonEKS\022\030\n"
+          + "name\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\002 \001(\t"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\003 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A"
+          + "\006:\0046379:\n\372\370\263\007\005\250\363\263\007\001\"\247\002\n\020ElasticacheRedis"
+          + "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005B"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263"
+          + "\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n"
+          + "\010password\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\003 \001("
+          + "\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0046379\022)\n\014tls_required\030\004"
+          + " \001(\010B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\004true:\n\372\370\263\007\005\250\363\263\007\001\"\312\002"
+          + "\n\nKubernetes\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032"
+          + "\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_overr"
+          + "ide\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001"
+          + "(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022 \n\004port\030\002 \001(\005B\022\362\370\263\007\005\260\363\263\007\001\222A\005:\003"
+          + "443\022)\n\025certificate_authority\030\003 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022&\n\022client_certificate\030\004 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022\036\n\nclient_key\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n"
+          + "\372\370\263\007\005\250\363\263\007\001\"\344\002\n\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#"
+          + "\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007h"
+          + "ealthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010endpo"
+          + "int\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccess_key\030\002 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021secret_access_key\030\003 \001(\t"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate_authority\030\004 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\005 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022 \n\014cluster_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372"
+          + "\370\263\007\005\250\363\263\007\001\"\210\002\n\tGoogleGKE\022\030\n\002id\030\200\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n"
+          + "\rport_override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007he"
+          + "althy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010endpoi"
+          + "nt\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate_auth"
+          + "ority\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\'\n\023service_accou"
+          + "nt_key\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\222\002\n"
+          + "\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201"
+          + "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 "
+          + "\001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007"
+          + "\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\004port\030"
+          + "\003 \001(\005B\021\362\370\263\007\005\260\363\263\007\001\222A\004:\00222\022#\n\npublic_key\030\004"
+          + " \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\202\003\n\rHT"
+          + "TPBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n"
+          + "\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_overri"
+          + "de\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001("
+          + "\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022$\n\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\034\n\010username\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010passw"
+          + "ord\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_blackli"
+          + "st\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_path\030\006 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\007 \001(\tB\017\362\370\263\007\005"
+          + "\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\303\002\n\nHTTPNoAuth\022\030\n"
           + "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB"
           + "\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005B\n\362\370"
           + "\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\002@\001\022\034\n\010endpoint\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nac"
-          + "cess_key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021secret_acc"
-          + "ess_key\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate"
-          + "_authority\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\005"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014cluster_name\030\006 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\210\002\n\tGoogleGKE\022\030\n\002"
-          + "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
-          + "\002@\001\022\034\n\010endpoint\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025cer"
-          + "tificate_authority\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\'\n\023"
-          + "service_account_key\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372"
-          + "\370\263\007\005\250\363\263\007\001\"\222\002\n\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_"
-          + "override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030"
-          + "\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001"
-          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\037\n\004port\030\003 \001(\005B\021\362\370\263\007\005\260\363\263\007\001\222A\004:\00222\022#\n"
-          + "\npublic_key\030\004 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007"
-          + "\005\250\363\263\007\001\"\202\003\n\rHTTPBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#"
-          + "\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007h"
-          + "ealthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020healthcheck_path\030\002 \001"
-          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\003 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\034\n\010password\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021he"
-          + "aders_blacklist\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014def"
-          + "ault_path\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain"
-          + "\030\007 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\303\002\n\n"
-          + "HTTPNoAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004"
-          + "name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_overrid"
-          + "e\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010"
-          + "B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022$\n\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\022%\n\021headers_blacklist\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + " \n\014default_path\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsub"
-          + "domain\030\005 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007"
-          + "\001\"\342\002\n\010HTTPAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_ove"
-          + "rride\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002"
-          + " \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022$\n\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\037\n\013auth_header\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n"
-          + "\021headers_blacklist\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014"
-          + "default_path\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdom"
-          + "ain\030\006 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\255"
-          + "\002\n\005Mysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004na"
-          + "me\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030"
-          + "\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017"
-          + "\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010p"
-          + "assword\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\263\002\n\013AuroraMysql\022\030"
-          + "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005B\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001"
-          + "\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010u"
-          + "sername\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306"
-          + ":\n\372\370\263\007\005\250\363\263\007\001\"\260\002\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB"
+          + "A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020healthc"
+          + "heck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_b"
+          + "lacklist\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_pa"
+          + "th\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\005 \001(\tB"
+          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\342\002\n\010HTTPAut"
+          + "h\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363"
+          + "\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020hea"
+          + "lthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013auth_"
+          + "header\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_blac"
+          + "klist\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_path\030"
+          + "\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\006 \001(\tB\017\362\370"
+          + "\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\255\002\n\005Mysql\022\030\n\002i"
+          + "d\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002"
+          + "@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010user"
+          + "name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\t"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372"
+          + "\370\263\007\005\250\363\263\007\001\"\263\002\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001(\tB"
           + "\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
           + "#\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007"
           + "healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010host"
@@ -26551,30 +29968,38 @@ public final class DriversPlumbing {
           + "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263"
           + "\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port"
           + "\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\""
-          + "\255\002\n\005Maria\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004n"
-          + "ame\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override"
-          + "\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B"
-          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010"
-          + "password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263"
-          + "\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\256\002\n\006Memsql\022\030\n\002id"
-          + "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@"
-          + "\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010usern"
-          + "ame\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370"
-          + "\263\007\005\250\363\263\007\001\"\240\002\n\006Athena\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rpor"
-          + "t_override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007health"
-          + "y\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\036\n\naccess_key"
-          + "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021secret_access_key\030"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\006region\030\003 \001(\tB\030\362\370\263\007\005"
-          + "\260\363\263\007\001\222A\013:\tus-east-1\022\032\n\006output\030\004 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api."
-          + "v1.plumbingB\017DriversPlumbingb\006proto3"
+          + "\260\002\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032"
+          + "\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_overr"
+          + "ide\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001"
+          + "(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010databas"
+          + "e\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005"
+          + "\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\255\002\n\005Maria\022\030\n\002"
+          + "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200\002 \001(\005B\n\362\370\263"
+          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
+          + "\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010use"
+          + "rname\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n"
+          + "\372\370\263\007\005\250\363\263\007\001\"\256\002\n\006Memsql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263"
+          + "\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rp"
+          + "ort_override\030\202\200\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
+          + "thy\030\203\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname"
+          + "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370"
+          + "\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
+          + "\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001"
+          + "(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\240\002\n\006"
+          + "Athena\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name"
+          + "\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\rport_override\030\202\200"
+          + "\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\203\200\002 \001(\010B\017\362\370"
+          + "\263\007\005\260\363\263\007\001\222A\002@\001\022\036\n\naccess_key\030\001 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\022%\n\021secret_access_key\030\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022(\n\006region\030\003 \001(\tB\030\362\370\263\007\005\260\363\263\007\001\222A\013:\tus-"
+          + "east-1\022\032\n\006output\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007"
+          + "\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbingB\017"
+          + "DriversPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -26588,6 +30013,8 @@ public final class DriversPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Resource_descriptor,
             new java.lang.String[] {
+              "Redis",
+              "ElasticacheRedis",
               "Kubernetes",
               "AmazonEks",
               "GoogleGke",
@@ -26603,7 +30030,28 @@ public final class DriversPlumbing {
               "Athena",
               "Resource",
             });
-    internal_static_v1_Kubernetes_descriptor = getDescriptor().getMessageTypes().get(1);
+    internal_static_v1_Redis_descriptor = getDescriptor().getMessageTypes().get(1);
+    internal_static_v1_Redis_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_Redis_descriptor,
+            new java.lang.String[] {
+              "Id", "Name", "PortOverride", "Healthy", "Hostname", "Password", "Port",
+            });
+    internal_static_v1_ElasticacheRedis_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_ElasticacheRedis_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_ElasticacheRedis_descriptor,
+            new java.lang.String[] {
+              "Id",
+              "Name",
+              "PortOverride",
+              "Healthy",
+              "Hostname",
+              "Password",
+              "Port",
+              "TlsRequired",
+            });
+    internal_static_v1_Kubernetes_descriptor = getDescriptor().getMessageTypes().get(3);
     internal_static_v1_Kubernetes_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Kubernetes_descriptor,
@@ -26618,7 +30066,7 @@ public final class DriversPlumbing {
               "ClientCertificate",
               "ClientKey",
             });
-    internal_static_v1_AmazonEKS_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_AmazonEKS_descriptor = getDescriptor().getMessageTypes().get(4);
     internal_static_v1_AmazonEKS_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_AmazonEKS_descriptor,
@@ -26634,7 +30082,7 @@ public final class DriversPlumbing {
               "Region",
               "ClusterName",
             });
-    internal_static_v1_GoogleGKE_descriptor = getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_GoogleGKE_descriptor = getDescriptor().getMessageTypes().get(5);
     internal_static_v1_GoogleGKE_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_GoogleGKE_descriptor,
@@ -26647,14 +30095,14 @@ public final class DriversPlumbing {
               "CertificateAuthority",
               "ServiceAccountKey",
             });
-    internal_static_v1_SSH_descriptor = getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_SSH_descriptor = getDescriptor().getMessageTypes().get(6);
     internal_static_v1_SSH_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_SSH_descriptor,
             new java.lang.String[] {
               "Id", "Name", "PortOverride", "Healthy", "Hostname", "Username", "Port", "PublicKey",
             });
-    internal_static_v1_HTTPBasicAuth_descriptor = getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_HTTPBasicAuth_descriptor = getDescriptor().getMessageTypes().get(7);
     internal_static_v1_HTTPBasicAuth_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_HTTPBasicAuth_descriptor,
@@ -26671,7 +30119,7 @@ public final class DriversPlumbing {
               "DefaultPath",
               "Subdomain",
             });
-    internal_static_v1_HTTPNoAuth_descriptor = getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_HTTPNoAuth_descriptor = getDescriptor().getMessageTypes().get(8);
     internal_static_v1_HTTPNoAuth_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_HTTPNoAuth_descriptor,
@@ -26686,7 +30134,7 @@ public final class DriversPlumbing {
               "DefaultPath",
               "Subdomain",
             });
-    internal_static_v1_HTTPAuth_descriptor = getDescriptor().getMessageTypes().get(7);
+    internal_static_v1_HTTPAuth_descriptor = getDescriptor().getMessageTypes().get(9);
     internal_static_v1_HTTPAuth_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_HTTPAuth_descriptor,
@@ -26702,7 +30150,7 @@ public final class DriversPlumbing {
               "DefaultPath",
               "Subdomain",
             });
-    internal_static_v1_Mysql_descriptor = getDescriptor().getMessageTypes().get(8);
+    internal_static_v1_Mysql_descriptor = getDescriptor().getMessageTypes().get(10);
     internal_static_v1_Mysql_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Mysql_descriptor,
@@ -26717,7 +30165,7 @@ public final class DriversPlumbing {
               "Database",
               "Port",
             });
-    internal_static_v1_AuroraMysql_descriptor = getDescriptor().getMessageTypes().get(9);
+    internal_static_v1_AuroraMysql_descriptor = getDescriptor().getMessageTypes().get(11);
     internal_static_v1_AuroraMysql_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_AuroraMysql_descriptor,
@@ -26732,7 +30180,7 @@ public final class DriversPlumbing {
               "Database",
               "Port",
             });
-    internal_static_v1_Clustrix_descriptor = getDescriptor().getMessageTypes().get(10);
+    internal_static_v1_Clustrix_descriptor = getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Clustrix_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Clustrix_descriptor,
@@ -26747,7 +30195,7 @@ public final class DriversPlumbing {
               "Database",
               "Port",
             });
-    internal_static_v1_Maria_descriptor = getDescriptor().getMessageTypes().get(11);
+    internal_static_v1_Maria_descriptor = getDescriptor().getMessageTypes().get(13);
     internal_static_v1_Maria_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Maria_descriptor,
@@ -26762,7 +30210,7 @@ public final class DriversPlumbing {
               "Database",
               "Port",
             });
-    internal_static_v1_Memsql_descriptor = getDescriptor().getMessageTypes().get(12);
+    internal_static_v1_Memsql_descriptor = getDescriptor().getMessageTypes().get(14);
     internal_static_v1_Memsql_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Memsql_descriptor,
@@ -26777,7 +30225,7 @@ public final class DriversPlumbing {
               "Database",
               "Port",
             });
-    internal_static_v1_Athena_descriptor = getDescriptor().getMessageTypes().get(13);
+    internal_static_v1_Athena_descriptor = getDescriptor().getMessageTypes().get(15);
     internal_static_v1_Athena_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Athena_descriptor,

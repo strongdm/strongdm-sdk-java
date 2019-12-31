@@ -31,6 +31,12 @@ public class Plumbing {
     if (plumbing == null) {
       return null;
     }
+    if (plumbing.getRedis() != null) {
+      return redisToPorcelain(plumbing.getRedis());
+    }
+    if (plumbing.getElasticacheRedis() != null) {
+      return elasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
+    }
     if (plumbing.getKubernetes() != null) {
       return kubernetesToPorcelain(plumbing.getKubernetes());
     }
@@ -76,6 +82,17 @@ public class Plumbing {
   public static Resource resourceToPlumbing(com.strongdm.api.v1.Resource porcelain) {
     if (porcelain == null) {
       return null;
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Redis) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setRedis(redisToPlumbing((com.strongdm.api.v1.Redis) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.ElasticacheRedis) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setElasticacheRedis(
+          elasticacheRedisToPlumbing((com.strongdm.api.v1.ElasticacheRedis) porcelain));
+      return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Kubernetes) {
       Resource.Builder builder = Resource.newBuilder();
@@ -157,6 +174,108 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Resource> porcelains) {
     return porcelains.stream()
         .map(porcelain -> resourceToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Redis redisToPorcelain(Redis plumbing) {
+    com.strongdm.api.v1.Redis porcelain = new com.strongdm.api.v1.Redis();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Redis redisToPlumbing(com.strongdm.api.v1.Redis porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Redis.Builder builder = Redis.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Redis> repeatedRedisToPorcelain(
+      Collection<Redis> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> redisToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Redis> repeatedRedisToPlumbing(
+      Collection<com.strongdm.api.v1.Redis> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> redisToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.ElasticacheRedis elasticacheRedisToPorcelain(
+      ElasticacheRedis plumbing) {
+    com.strongdm.api.v1.ElasticacheRedis porcelain = new com.strongdm.api.v1.ElasticacheRedis();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    return porcelain;
+  }
+
+  public static ElasticacheRedis elasticacheRedisToPlumbing(
+      com.strongdm.api.v1.ElasticacheRedis porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ElasticacheRedis.Builder builder = ElasticacheRedis.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.ElasticacheRedis> repeatedElasticacheRedisToPorcelain(
+      Collection<ElasticacheRedis> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> elasticacheRedisToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ElasticacheRedis> repeatedElasticacheRedisToPlumbing(
+      Collection<com.strongdm.api.v1.ElasticacheRedis> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> elasticacheRedisToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
