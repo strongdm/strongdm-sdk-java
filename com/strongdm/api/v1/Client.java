@@ -1,5 +1,6 @@
 package com.strongdm.api.v1;
 
+import com.google.rpc.Code;
 import com.strongdm.api.v1.plumbing.Plumbing;
 import io.grpc.ManagedChannel;
 import io.grpc.netty.GrpcSslContexts;
@@ -9,6 +10,7 @@ import java.util.Base64;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import javax.crypto.Mac;
@@ -17,6 +19,14 @@ import javax.crypto.spec.SecretKeySpec;
 public class Client {
   private String apiAccessKey;
   private byte[] apiSecretKey;
+
+  private final int defaultMaxRetries = 3;
+  private final int defaultBaseRetryDelay = 30; // 30 ms
+  private final int defaultMaxRetryDelay = 300000; // 300 seconds
+
+  private int maxRetries;
+  private int baseRetryDelay;
+  private int maxRetryDelay;
 
   private final Nodes nodes;
 
@@ -59,6 +69,9 @@ public class Client {
       throws RpcException {
     this.apiAccessKey = apiAccessKey;
     this.apiSecretKey = Base64.getDecoder().decode(apiSecretKey);
+    this.maxRetries = this.defaultMaxRetries;
+    this.baseRetryDelay = this.defaultBaseRetryDelay;
+    this.maxRetryDelay = this.defaultMaxRetryDelay;
     try {
       NettyChannelBuilder builder = NettyChannelBuilder.forAddress(host, port);
       if (port == 443) {
@@ -140,6 +153,29 @@ public class Client {
       return true;
     }
     return this.channel.awaitTermination(timeout, unit);
+  }
+
+  public void jitterSleep(int iter) {
+    int durMax = this.baseRetryDelay * (2 << iter);
+    if (durMax > this.maxRetryDelay) {
+      durMax = this.maxRetryDelay;
+    }
+    try {
+      Thread.sleep(new Random().nextInt(durMax));
+    } catch (Exception e) {
+    }
+  }
+
+  public boolean shouldRetry(int iter, Exception e) {
+    if (iter >= this.maxRetries - 1) {
+      return false;
+    }
+    if (!(e instanceof io.grpc.StatusRuntimeException)) {
+      return true;
+    }
+    com.google.rpc.Status status = io.grpc.protobuf.StatusProto.fromThrowable(e);
+
+    return (status.getCode() == Code.INTERNAL_VALUE);
   }
 
   protected Map<String, Object> testOptions;

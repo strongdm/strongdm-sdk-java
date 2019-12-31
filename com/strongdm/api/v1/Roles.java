@@ -44,13 +44,22 @@ public class Roles {
     builder.setRole(Plumbing.roleToPlumbing(role));
     RolesPlumbing.RoleCreateRequest req = builder.build();
     RolesPlumbing.RoleCreateResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Roles.Create", req))
-              .create(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Roles.Create", req))
+                .create(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.roleCreateResponseToPorcelain(plumbingResponse);
   }
@@ -61,11 +70,22 @@ public class Roles {
     builder.setId(id);
     RolesPlumbing.RoleGetRequest req = builder.build();
     RolesPlumbing.RoleGetResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub.withCallCredentials(this.parent.getCallCredentials("Roles.Get", req)).get(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Roles.Get", req))
+                .get(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.roleGetResponseToPorcelain(plumbingResponse);
   }
@@ -76,13 +96,22 @@ public class Roles {
     builder.setRole(Plumbing.roleToPlumbing(role));
     RolesPlumbing.RoleUpdateRequest req = builder.build();
     RolesPlumbing.RoleUpdateResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Roles.Update", req))
-              .update(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Roles.Update", req))
+                .update(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.roleUpdateResponseToPorcelain(plumbingResponse);
   }
@@ -93,21 +122,30 @@ public class Roles {
     builder.setId(id);
     RolesPlumbing.RoleDeleteRequest req = builder.build();
     RolesPlumbing.RoleDeleteResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Roles.Delete", req))
-              .delete(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Roles.Delete", req))
+                .delete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.roleDeleteResponseToPorcelain(plumbingResponse);
   }
 
   // List gets a list of Roles matching a given set of criteria.
-  public Iterable<Role> list(String filter) throws RpcException {
+  public Iterable<Role> list(String filter, Object... args) throws RpcException {
     RolesPlumbing.RoleListRequest.Builder builder = RolesPlumbing.RoleListRequest.newBuilder();
-    builder.setFilter(filter);
+    builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
 
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");

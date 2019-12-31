@@ -2,6 +2,7 @@ package com.strongdm.api.v1.plumbing;
 
 import com.google.protobuf.Timestamp;
 import com.google.rpc.Code;
+import com.strongdm.api.v1.BadRequestException;
 import com.strongdm.api.v1.plumbing.DriversPlumbing.*;
 import com.strongdm.api.v1.plumbing.NodesPlumbing.*;
 import com.strongdm.api.v1.plumbing.ResourcesPlumbing.*;
@@ -12,8 +13,27 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.json.JSONObject;
 
 public class Plumbing {
+
+  public static String quoteFilterArgs(String filter, Object... args) throws BadRequestException {
+    String[] parts =
+        (filter + " ").split("\\?"); // trailing space to stop split from discarding last match
+    if (parts.length != args.length + 1) {
+      throw new BadRequestException("incorrect number of replacements");
+    }
+    String b = "";
+    for (int i = 0; i < parts.length; i++) {
+      b += parts[i];
+      if (i < args.length) {
+        String s = args[i].toString();
+        s = JSONObject.valueToString(s);
+        b += s;
+      }
+    }
+    return b;
+  }
 
   public static Timestamp timestampToPlumbing(Date t) {
     long ms = t.getTime();

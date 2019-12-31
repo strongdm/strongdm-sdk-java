@@ -24,6 +24,8 @@ repositories {
 def grpcVersion = '1.25.0'
 def protobufVersion = '3.10.0'
 def protocVersion = protobufVersion
+def jsonVersion = '20190722'
+
 
 // for more info on dependency annotations:
 // https://docs.gradle.org/current/userguide/building_java_projects.html#sec:java_dependency_management_overview
@@ -31,6 +33,7 @@ dependencies {
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-stub:${grpcVersion}"
     implementation "io.grpc:grpc-netty:${grpcVersion}"
+    implementation "org.json:json:${jsonVersion}"
     compileOnly "javax.annotation:javax.annotation-api:1.2"
 }
 

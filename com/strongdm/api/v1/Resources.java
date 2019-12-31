@@ -40,13 +40,22 @@ public class Resources {
     builder.setResource(Plumbing.resourceToPlumbing(resource));
     ResourcesPlumbing.ResourceCreateRequest req = builder.build();
     ResourcesPlumbing.ResourceCreateResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Resources.Create", req))
-              .create(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Resources.Create", req))
+                .create(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.resourceCreateResponseToPorcelain(plumbingResponse);
   }
@@ -58,13 +67,22 @@ public class Resources {
     builder.setId(id);
     ResourcesPlumbing.ResourceGetRequest req = builder.build();
     ResourcesPlumbing.ResourceGetResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Resources.Get", req))
-              .get(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Resources.Get", req))
+                .get(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.resourceGetResponseToPorcelain(plumbingResponse);
   }
@@ -76,13 +94,22 @@ public class Resources {
     builder.setResource(Plumbing.resourceToPlumbing(resource));
     ResourcesPlumbing.ResourceUpdateRequest req = builder.build();
     ResourcesPlumbing.ResourceUpdateResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Resources.Update", req))
-              .update(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Resources.Update", req))
+                .update(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.resourceUpdateResponseToPorcelain(plumbingResponse);
   }
@@ -94,22 +121,31 @@ public class Resources {
     builder.setId(id);
     ResourcesPlumbing.ResourceDeleteRequest req = builder.build();
     ResourcesPlumbing.ResourceDeleteResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Resources.Delete", req))
-              .delete(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Resources.Delete", req))
+                .delete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.resourceDeleteResponseToPorcelain(plumbingResponse);
   }
 
   // List gets a list of Resources matching a given set of criteria.
-  public Iterable<Resource> list(String filter) throws RpcException {
+  public Iterable<Resource> list(String filter, Object... args) throws RpcException {
     ResourcesPlumbing.ResourceListRequest.Builder builder =
         ResourcesPlumbing.ResourceListRequest.newBuilder();
-    builder.setFilter(filter);
+    builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
 
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");

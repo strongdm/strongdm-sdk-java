@@ -44,13 +44,22 @@ public class RoleAttachments {
     builder.setRoleAttachment(Plumbing.roleAttachmentToPlumbing(roleAttachment));
     RoleAttachmentsPlumbing.RoleAttachmentCreateRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentCreateResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("RoleAttachments.Create", req))
-              .create(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("RoleAttachments.Create", req))
+                .create(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.roleAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
@@ -62,13 +71,22 @@ public class RoleAttachments {
     builder.setId(id);
     RoleAttachmentsPlumbing.RoleAttachmentGetRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentGetResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("RoleAttachments.Get", req))
-              .get(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("RoleAttachments.Get", req))
+                .get(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.roleAttachmentGetResponseToPorcelain(plumbingResponse);
   }
@@ -80,22 +98,31 @@ public class RoleAttachments {
     builder.setId(id);
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("RoleAttachments.Delete", req))
-              .delete(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("RoleAttachments.Delete", req))
+                .delete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.roleAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
 
   // List gets a list of RoleAttachments matching a given set of criteria.
-  public Iterable<RoleAttachment> list(String filter) throws RpcException {
+  public Iterable<RoleAttachment> list(String filter, Object... args) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentListRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentListRequest.newBuilder();
-    builder.setFilter(filter);
+    builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
 
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");

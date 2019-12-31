@@ -42,13 +42,22 @@ public class Nodes {
     builder.setNode(Plumbing.nodeToPlumbing(node));
     NodesPlumbing.NodeCreateRequest req = builder.build();
     NodesPlumbing.NodeCreateResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Nodes.Create", req))
-              .create(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Nodes.Create", req))
+                .create(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.nodeCreateResponseToPorcelain(plumbingResponse);
   }
@@ -59,11 +68,22 @@ public class Nodes {
     builder.setId(id);
     NodesPlumbing.NodeGetRequest req = builder.build();
     NodesPlumbing.NodeGetResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub.withCallCredentials(this.parent.getCallCredentials("Nodes.Get", req)).get(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Nodes.Get", req))
+                .get(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.nodeGetResponseToPorcelain(plumbingResponse);
   }
@@ -74,13 +94,22 @@ public class Nodes {
     builder.setNode(Plumbing.nodeToPlumbing(node));
     NodesPlumbing.NodeUpdateRequest req = builder.build();
     NodesPlumbing.NodeUpdateResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Nodes.Update", req))
-              .update(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Nodes.Update", req))
+                .update(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.nodeUpdateResponseToPorcelain(plumbingResponse);
   }
@@ -91,21 +120,30 @@ public class Nodes {
     builder.setId(id);
     NodesPlumbing.NodeDeleteRequest req = builder.build();
     NodesPlumbing.NodeDeleteResponse plumbingResponse;
-    try {
-      plumbingResponse =
-          this.stub
-              .withCallCredentials(this.parent.getCallCredentials("Nodes.Delete", req))
-              .delete(req);
-    } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("Nodes.Delete", req))
+                .delete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
     }
     return Plumbing.nodeDeleteResponseToPorcelain(plumbingResponse);
   }
 
   // List gets a list of Nodes matching a given set of criteria.
-  public Iterable<Node> list(String filter) throws RpcException {
+  public Iterable<Node> list(String filter, Object... args) throws RpcException {
     NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
-    builder.setFilter(filter);
+    builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
 
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
