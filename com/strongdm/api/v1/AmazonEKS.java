@@ -78,6 +78,17 @@ public class AmazonEKS implements Resource {
     return this;
   }
 
+  private String certificateAuthorityFilename;
+
+  public String getCertificateAuthorityFilename() {
+    return this.certificateAuthorityFilename;
+  }
+
+  public AmazonEKS setCertificateAuthorityFilename(String in) {
+    this.certificateAuthorityFilename = in;
+    return this;
+  }
+
   private String region;
 
   public String getRegion() {

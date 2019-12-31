@@ -67,6 +67,17 @@ public class Kubernetes implements Resource {
     return this;
   }
 
+  private String certificateAuthorityFilename;
+
+  public String getCertificateAuthorityFilename() {
+    return this.certificateAuthorityFilename;
+  }
+
+  public Kubernetes setCertificateAuthorityFilename(String in) {
+    this.certificateAuthorityFilename = in;
+    return this;
+  }
+
   private String clientCertificate;
 
   public String getClientCertificate() {
@@ -78,6 +89,17 @@ public class Kubernetes implements Resource {
     return this;
   }
 
+  private String clientCertificateFilename;
+
+  public String getClientCertificateFilename() {
+    return this.clientCertificateFilename;
+  }
+
+  public Kubernetes setClientCertificateFilename(String in) {
+    this.clientCertificateFilename = in;
+    return this;
+  }
+
   private String clientKey;
 
   public String getClientKey() {
@@ -86,6 +108,17 @@ public class Kubernetes implements Resource {
 
   public Kubernetes setClientKey(String in) {
     this.clientKey = in;
+    return this;
+  }
+
+  private String clientKeyFilename;
+
+  public String getClientKeyFilename() {
+    return this.clientKeyFilename;
+  }
+
+  public Kubernetes setClientKeyFilename(String in) {
+    this.clientKeyFilename = in;
     return this;
   }
 }

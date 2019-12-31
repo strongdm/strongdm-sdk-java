@@ -7281,30 +7281,69 @@ public final class DriversPlumbing {
     com.google.protobuf.ByteString getCertificateAuthorityBytes();
 
     /**
-     * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    java.lang.String getCertificateAuthorityFilename();
+    /**
+     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes();
+
+    /**
+     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientCertificate.
      */
     java.lang.String getClientCertificate();
     /**
-     * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientCertificate.
      */
     com.google.protobuf.ByteString getClientCertificateBytes();
 
     /**
-     * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientCertificateFilename.
+     */
+    java.lang.String getClientCertificateFilename();
+    /**
+     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientCertificateFilename.
+     */
+    com.google.protobuf.ByteString getClientCertificateFilenameBytes();
+
+    /**
+     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientKey.
      */
     java.lang.String getClientKey();
     /**
-     * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientKey.
      */
     com.google.protobuf.ByteString getClientKeyBytes();
+
+    /**
+     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientKeyFilename.
+     */
+    java.lang.String getClientKeyFilename();
+    /**
+     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientKeyFilename.
+     */
+    com.google.protobuf.ByteString getClientKeyFilenameBytes();
   }
   /** Protobuf type {@code v1.Kubernetes} */
   public static final class Kubernetes extends com.google.protobuf.GeneratedMessageV3
@@ -7322,8 +7361,11 @@ public final class DriversPlumbing {
       name_ = "";
       hostname_ = "";
       certificateAuthority_ = "";
+      certificateAuthorityFilename_ = "";
       clientCertificate_ = "";
+      clientCertificateFilename_ = "";
       clientKey_ = "";
+      clientKeyFilename_ = "";
     }
 
     @java.lang.Override
@@ -7378,14 +7420,35 @@ public final class DriversPlumbing {
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                clientCertificate_ = s;
+                certificateAuthorityFilename_ = s;
                 break;
               }
             case 42:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
+                clientCertificate_ = s;
+                break;
+              }
+            case 50:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                clientCertificateFilename_ = s;
+                break;
+              }
+            case 58:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
                 clientKey_ = s;
+                break;
+              }
+            case 66:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                clientKeyFilename_ = s;
                 break;
               }
             case 262146:
@@ -7635,10 +7698,45 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int CLIENT_CERTIFICATE_FIELD_NUMBER = 4;
+    public static final int CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER = 4;
+    private volatile java.lang.Object certificateAuthorityFilename_;
+    /**
+     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    public java.lang.String getCertificateAuthorityFilename() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateAuthorityFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        certificateAuthorityFilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_CERTIFICATE_FIELD_NUMBER = 5;
     private volatile java.lang.Object clientCertificate_;
     /**
-     * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientCertificate.
      */
@@ -7654,7 +7752,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientCertificate.
      */
@@ -7670,10 +7768,45 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int CLIENT_KEY_FIELD_NUMBER = 5;
+    public static final int CLIENT_CERTIFICATE_FILENAME_FIELD_NUMBER = 6;
+    private volatile java.lang.Object clientCertificateFilename_;
+    /**
+     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientCertificateFilename.
+     */
+    public java.lang.String getClientCertificateFilename() {
+      java.lang.Object ref = clientCertificateFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientCertificateFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientCertificateFilename.
+     */
+    public com.google.protobuf.ByteString getClientCertificateFilenameBytes() {
+      java.lang.Object ref = clientCertificateFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        clientCertificateFilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_KEY_FIELD_NUMBER = 7;
     private volatile java.lang.Object clientKey_;
     /**
-     * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientKey.
      */
@@ -7689,7 +7822,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientKey.
      */
@@ -7699,6 +7832,41 @@ public final class DriversPlumbing {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         clientKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_KEY_FILENAME_FIELD_NUMBER = 8;
+    private volatile java.lang.Object clientKeyFilename_;
+    /**
+     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientKeyFilename.
+     */
+    public java.lang.String getClientKeyFilename() {
+      java.lang.Object ref = clientKeyFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientKeyFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientKeyFilename.
+     */
+    public com.google.protobuf.ByteString getClientKeyFilenameBytes() {
+      java.lang.Object ref = clientKeyFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        clientKeyFilename_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7728,11 +7896,21 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(
+            output, 4, certificateAuthorityFilename_);
+      }
       if (!getClientCertificateBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, clientCertificate_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientCertificate_);
+      }
+      if (!getClientCertificateFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, clientCertificateFilename_);
       }
       if (!getClientKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientKey_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, clientKey_);
+      }
+      if (!getClientKeyFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, clientKeyFilename_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -7761,11 +7939,23 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(
+                4, certificateAuthorityFilename_);
+      }
       if (!getClientCertificateBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, clientCertificate_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientCertificate_);
+      }
+      if (!getClientCertificateFilenameBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(6, clientCertificateFilename_);
       }
       if (!getClientKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, clientKey_);
+      }
+      if (!getClientKeyFilenameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, clientKeyFilename_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -7798,8 +7988,13 @@ public final class DriversPlumbing {
       if (!getHostname().equals(other.getHostname())) return false;
       if (getPort() != other.getPort()) return false;
       if (!getCertificateAuthority().equals(other.getCertificateAuthority())) return false;
+      if (!getCertificateAuthorityFilename().equals(other.getCertificateAuthorityFilename()))
+        return false;
       if (!getClientCertificate().equals(other.getClientCertificate())) return false;
+      if (!getClientCertificateFilename().equals(other.getClientCertificateFilename()))
+        return false;
       if (!getClientKey().equals(other.getClientKey())) return false;
+      if (!getClientKeyFilename().equals(other.getClientKeyFilename())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7823,10 +8018,16 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPort();
       hash = (37 * hash) + CERTIFICATE_AUTHORITY_FIELD_NUMBER;
       hash = (53 * hash) + getCertificateAuthority().hashCode();
+      hash = (37 * hash) + CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateAuthorityFilename().hashCode();
       hash = (37 * hash) + CLIENT_CERTIFICATE_FIELD_NUMBER;
       hash = (53 * hash) + getClientCertificate().hashCode();
+      hash = (37 * hash) + CLIENT_CERTIFICATE_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClientCertificateFilename().hashCode();
       hash = (37 * hash) + CLIENT_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getClientKey().hashCode();
+      hash = (37 * hash) + CLIENT_KEY_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClientKeyFilename().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7979,9 +8180,15 @@ public final class DriversPlumbing {
 
         certificateAuthority_ = "";
 
+        certificateAuthorityFilename_ = "";
+
         clientCertificate_ = "";
 
+        clientCertificateFilename_ = "";
+
         clientKey_ = "";
+
+        clientKeyFilename_ = "";
 
         return this;
       }
@@ -8016,8 +8223,11 @@ public final class DriversPlumbing {
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.certificateAuthority_ = certificateAuthority_;
+        result.certificateAuthorityFilename_ = certificateAuthorityFilename_;
         result.clientCertificate_ = clientCertificate_;
+        result.clientCertificateFilename_ = clientCertificateFilename_;
         result.clientKey_ = clientKey_;
+        result.clientKeyFilename_ = clientKeyFilename_;
         onBuilt();
         return result;
       }
@@ -8092,12 +8302,24 @@ public final class DriversPlumbing {
           certificateAuthority_ = other.certificateAuthority_;
           onChanged();
         }
+        if (!other.getCertificateAuthorityFilename().isEmpty()) {
+          certificateAuthorityFilename_ = other.certificateAuthorityFilename_;
+          onChanged();
+        }
         if (!other.getClientCertificate().isEmpty()) {
           clientCertificate_ = other.clientCertificate_;
           onChanged();
         }
+        if (!other.getClientCertificateFilename().isEmpty()) {
+          clientCertificateFilename_ = other.clientCertificateFilename_;
+          onChanged();
+        }
         if (!other.getClientKey().isEmpty()) {
           clientKey_ = other.clientKey_;
+          onChanged();
+        }
+        if (!other.getClientKeyFilename().isEmpty()) {
+          clientKeyFilename_ = other.clientKeyFilename_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8587,9 +8809,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object certificateAuthorityFilename_ = "";
+      /**
+       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The certificateAuthorityFilename.
+       */
+      public java.lang.String getCertificateAuthorityFilename() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateAuthorityFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for certificateAuthorityFilename.
+       */
+      public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          certificateAuthorityFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateAuthorityFilename() {
+
+        certificateAuthorityFilename_ = getDefaultInstance().getCertificateAuthorityFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object clientCertificate_ = "";
       /**
-       * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return The clientCertificate.
        */
@@ -8605,7 +8903,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for clientCertificate.
        */
@@ -8621,7 +8919,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
        *
        * @param value The clientCertificate to set.
        * @return This builder for chaining.
@@ -8636,7 +8934,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -8647,7 +8945,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for clientCertificate to set.
        * @return This builder for chaining.
@@ -8663,9 +8961,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object clientCertificateFilename_ = "";
+      /**
+       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The clientCertificateFilename.
+       */
+      public java.lang.String getClientCertificateFilename() {
+        java.lang.Object ref = clientCertificateFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientCertificateFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for clientCertificateFilename.
+       */
+      public com.google.protobuf.ByteString getClientCertificateFilenameBytes() {
+        java.lang.Object ref = clientCertificateFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          clientCertificateFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The clientCertificateFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientCertificateFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        clientCertificateFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearClientCertificateFilename() {
+
+        clientCertificateFilename_ = getDefaultInstance().getClientCertificateFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for clientCertificateFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientCertificateFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        clientCertificateFilename_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object clientKey_ = "";
       /**
-       * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return The clientKey.
        */
@@ -8681,7 +9055,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for clientKey.
        */
@@ -8697,7 +9071,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
        *
        * @param value The clientKey to set.
        * @return This builder for chaining.
@@ -8712,7 +9086,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -8723,7 +9097,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for clientKey to set.
        * @return This builder for chaining.
@@ -8735,6 +9109,82 @@ public final class DriversPlumbing {
         checkByteStringIsUtf8(value);
 
         clientKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientKeyFilename_ = "";
+      /**
+       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The clientKeyFilename.
+       */
+      public java.lang.String getClientKeyFilename() {
+        java.lang.Object ref = clientKeyFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientKeyFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for clientKeyFilename.
+       */
+      public com.google.protobuf.ByteString getClientKeyFilenameBytes() {
+        java.lang.Object ref = clientKeyFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          clientKeyFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The clientKeyFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientKeyFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        clientKeyFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearClientKeyFilename() {
+
+        clientKeyFilename_ = getDefaultInstance().getClientKeyFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for clientKeyFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientKeyFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        clientKeyFilename_ = value;
         onChanged();
         return this;
       }
@@ -8922,30 +9372,69 @@ public final class DriversPlumbing {
     com.google.protobuf.ByteString getCertificateAuthorityBytes();
 
     /**
-     * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    java.lang.String getCertificateAuthorityFilename();
+    /**
+     * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes();
+
+    /**
+     * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientCertificate.
      */
     java.lang.String getClientCertificate();
     /**
-     * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientCertificate.
      */
     com.google.protobuf.ByteString getClientCertificateBytes();
 
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientCertificateFilename.
+     */
+    java.lang.String getClientCertificateFilename();
+    /**
+     * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientCertificateFilename.
+     */
+    com.google.protobuf.ByteString getClientCertificateFilenameBytes();
+
+    /**
+     * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientKey.
      */
     java.lang.String getClientKey();
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientKey.
      */
     com.google.protobuf.ByteString getClientKeyBytes();
+
+    /**
+     * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientKeyFilename.
+     */
+    java.lang.String getClientKeyFilename();
+    /**
+     * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientKeyFilename.
+     */
+    com.google.protobuf.ByteString getClientKeyFilenameBytes();
   }
   /** Protobuf type {@code v1.KubernetesBasicAuth} */
   public static final class KubernetesBasicAuth extends com.google.protobuf.GeneratedMessageV3
@@ -8965,8 +9454,11 @@ public final class DriversPlumbing {
       username_ = "";
       password_ = "";
       certificateAuthority_ = "";
+      certificateAuthorityFilename_ = "";
       clientCertificate_ = "";
+      clientCertificateFilename_ = "";
       clientKey_ = "";
+      clientKeyFilename_ = "";
     }
 
     @java.lang.Override
@@ -9035,14 +9527,35 @@ public final class DriversPlumbing {
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                clientCertificate_ = s;
+                certificateAuthorityFilename_ = s;
                 break;
               }
             case 58:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
+                clientCertificate_ = s;
+                break;
+              }
+            case 66:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                clientCertificateFilename_ = s;
+                break;
+              }
+            case 74:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
                 clientKey_ = s;
+                break;
+              }
+            case 82:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                clientKeyFilename_ = s;
                 break;
               }
             case 262146:
@@ -9363,10 +9876,45 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int CLIENT_CERTIFICATE_FIELD_NUMBER = 6;
+    public static final int CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER = 6;
+    private volatile java.lang.Object certificateAuthorityFilename_;
+    /**
+     * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    public java.lang.String getCertificateAuthorityFilename() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateAuthorityFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        certificateAuthorityFilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_CERTIFICATE_FIELD_NUMBER = 7;
     private volatile java.lang.Object clientCertificate_;
     /**
-     * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientCertificate.
      */
@@ -9382,7 +9930,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientCertificate.
      */
@@ -9398,10 +9946,45 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int CLIENT_KEY_FIELD_NUMBER = 7;
+    public static final int CLIENT_CERTIFICATE_FILENAME_FIELD_NUMBER = 8;
+    private volatile java.lang.Object clientCertificateFilename_;
+    /**
+     * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientCertificateFilename.
+     */
+    public java.lang.String getClientCertificateFilename() {
+      java.lang.Object ref = clientCertificateFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientCertificateFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientCertificateFilename.
+     */
+    public com.google.protobuf.ByteString getClientCertificateFilenameBytes() {
+      java.lang.Object ref = clientCertificateFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        clientCertificateFilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_KEY_FIELD_NUMBER = 9;
     private volatile java.lang.Object clientKey_;
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
      *
      * @return The clientKey.
      */
@@ -9417,7 +10000,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clientKey.
      */
@@ -9427,6 +10010,41 @@ public final class DriversPlumbing {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         clientKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENT_KEY_FILENAME_FIELD_NUMBER = 10;
+    private volatile java.lang.Object clientKeyFilename_;
+    /**
+     * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The clientKeyFilename.
+     */
+    public java.lang.String getClientKeyFilename() {
+      java.lang.Object ref = clientKeyFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientKeyFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for clientKeyFilename.
+     */
+    public com.google.protobuf.ByteString getClientKeyFilenameBytes() {
+      java.lang.Object ref = clientKeyFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        clientKeyFilename_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9462,11 +10080,21 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(
+            output, 6, certificateAuthorityFilename_);
+      }
       if (!getClientCertificateBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, clientCertificate_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, clientCertificate_);
+      }
+      if (!getClientCertificateFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, clientCertificateFilename_);
       }
       if (!getClientKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, clientKey_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, clientKey_);
+      }
+      if (!getClientKeyFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, clientKeyFilename_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -9501,11 +10129,23 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(
+                6, certificateAuthorityFilename_);
+      }
       if (!getClientCertificateBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, clientCertificate_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, clientCertificate_);
+      }
+      if (!getClientCertificateFilenameBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(8, clientCertificateFilename_);
       }
       if (!getClientKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, clientKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, clientKey_);
+      }
+      if (!getClientKeyFilenameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, clientKeyFilename_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -9540,8 +10180,13 @@ public final class DriversPlumbing {
       if (!getUsername().equals(other.getUsername())) return false;
       if (!getPassword().equals(other.getPassword())) return false;
       if (!getCertificateAuthority().equals(other.getCertificateAuthority())) return false;
+      if (!getCertificateAuthorityFilename().equals(other.getCertificateAuthorityFilename()))
+        return false;
       if (!getClientCertificate().equals(other.getClientCertificate())) return false;
+      if (!getClientCertificateFilename().equals(other.getClientCertificateFilename()))
+        return false;
       if (!getClientKey().equals(other.getClientKey())) return false;
+      if (!getClientKeyFilename().equals(other.getClientKeyFilename())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9569,10 +10214,16 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPassword().hashCode();
       hash = (37 * hash) + CERTIFICATE_AUTHORITY_FIELD_NUMBER;
       hash = (53 * hash) + getCertificateAuthority().hashCode();
+      hash = (37 * hash) + CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateAuthorityFilename().hashCode();
       hash = (37 * hash) + CLIENT_CERTIFICATE_FIELD_NUMBER;
       hash = (53 * hash) + getClientCertificate().hashCode();
+      hash = (37 * hash) + CLIENT_CERTIFICATE_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClientCertificateFilename().hashCode();
       hash = (37 * hash) + CLIENT_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getClientKey().hashCode();
+      hash = (37 * hash) + CLIENT_KEY_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getClientKeyFilename().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9731,9 +10382,15 @@ public final class DriversPlumbing {
 
         certificateAuthority_ = "";
 
+        certificateAuthorityFilename_ = "";
+
         clientCertificate_ = "";
 
+        clientCertificateFilename_ = "";
+
         clientKey_ = "";
+
+        clientKeyFilename_ = "";
 
         return this;
       }
@@ -9772,8 +10429,11 @@ public final class DriversPlumbing {
         result.username_ = username_;
         result.password_ = password_;
         result.certificateAuthority_ = certificateAuthority_;
+        result.certificateAuthorityFilename_ = certificateAuthorityFilename_;
         result.clientCertificate_ = clientCertificate_;
+        result.clientCertificateFilename_ = clientCertificateFilename_;
         result.clientKey_ = clientKey_;
+        result.clientKeyFilename_ = clientKeyFilename_;
         onBuilt();
         return result;
       }
@@ -9859,12 +10519,24 @@ public final class DriversPlumbing {
           certificateAuthority_ = other.certificateAuthority_;
           onChanged();
         }
+        if (!other.getCertificateAuthorityFilename().isEmpty()) {
+          certificateAuthorityFilename_ = other.certificateAuthorityFilename_;
+          onChanged();
+        }
         if (!other.getClientCertificate().isEmpty()) {
           clientCertificate_ = other.clientCertificate_;
           onChanged();
         }
+        if (!other.getClientCertificateFilename().isEmpty()) {
+          clientCertificateFilename_ = other.clientCertificateFilename_;
+          onChanged();
+        }
         if (!other.getClientKey().isEmpty()) {
           clientKey_ = other.clientKey_;
+          onChanged();
+        }
+        if (!other.getClientKeyFilename().isEmpty()) {
+          clientKeyFilename_ = other.clientKeyFilename_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -10507,9 +11179,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object certificateAuthorityFilename_ = "";
+      /**
+       * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The certificateAuthorityFilename.
+       */
+      public java.lang.String getCertificateAuthorityFilename() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateAuthorityFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for certificateAuthorityFilename.
+       */
+      public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          certificateAuthorityFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateAuthorityFilename() {
+
+        certificateAuthorityFilename_ = getDefaultInstance().getCertificateAuthorityFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 6 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object clientCertificate_ = "";
       /**
-       * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return The clientCertificate.
        */
@@ -10525,7 +11273,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for clientCertificate.
        */
@@ -10541,7 +11289,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
        *
        * @param value The clientCertificate to set.
        * @return This builder for chaining.
@@ -10556,7 +11304,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -10567,7 +11315,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string client_certificate = 7 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for clientCertificate to set.
        * @return This builder for chaining.
@@ -10583,9 +11331,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object clientCertificateFilename_ = "";
+      /**
+       * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The clientCertificateFilename.
+       */
+      public java.lang.String getClientCertificateFilename() {
+        java.lang.Object ref = clientCertificateFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientCertificateFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for clientCertificateFilename.
+       */
+      public com.google.protobuf.ByteString getClientCertificateFilenameBytes() {
+        java.lang.Object ref = clientCertificateFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          clientCertificateFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The clientCertificateFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientCertificateFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        clientCertificateFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearClientCertificateFilename() {
+
+        clientCertificateFilename_ = getDefaultInstance().getClientCertificateFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_certificate_filename = 8 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for clientCertificateFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientCertificateFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        clientCertificateFilename_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object clientKey_ = "";
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
        *
        * @return The clientKey.
        */
@@ -10601,7 +11425,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for clientKey.
        */
@@ -10617,7 +11441,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
        *
        * @param value The clientKey to set.
        * @return This builder for chaining.
@@ -10632,7 +11456,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -10643,7 +11467,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>string client_key = 9 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for clientKey to set.
        * @return This builder for chaining.
@@ -10655,6 +11479,82 @@ public final class DriversPlumbing {
         checkByteStringIsUtf8(value);
 
         clientKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientKeyFilename_ = "";
+      /**
+       * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The clientKeyFilename.
+       */
+      public java.lang.String getClientKeyFilename() {
+        java.lang.Object ref = clientKeyFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientKeyFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for clientKeyFilename.
+       */
+      public com.google.protobuf.ByteString getClientKeyFilenameBytes() {
+        java.lang.Object ref = clientKeyFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          clientKeyFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The clientKeyFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientKeyFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        clientKeyFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearClientKeyFilename() {
+
+        clientKeyFilename_ = getDefaultInstance().getClientKeyFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string client_key_filename = 10 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for clientKeyFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientKeyFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        clientKeyFilename_ = value;
         onChanged();
         return this;
       }
@@ -10837,26 +11737,39 @@ public final class DriversPlumbing {
     com.google.protobuf.ByteString getCertificateAuthorityBytes();
 
     /**
-     * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    java.lang.String getCertificateAuthorityFilename();
+    /**
+     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes();
+
+    /**
+     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
      *
      * @return The region.
      */
     java.lang.String getRegion();
     /**
-     * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for region.
      */
     com.google.protobuf.ByteString getRegionBytes();
 
     /**
-     * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The clusterName.
      */
     java.lang.String getClusterName();
     /**
-     * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clusterName.
      */
@@ -10880,6 +11793,7 @@ public final class DriversPlumbing {
       accessKey_ = "";
       secretAccessKey_ = "";
       certificateAuthority_ = "";
+      certificateAuthorityFilename_ = "";
       region_ = "";
       clusterName_ = "";
     }
@@ -10945,10 +11859,17 @@ public final class DriversPlumbing {
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                region_ = s;
+                certificateAuthorityFilename_ = s;
                 break;
               }
             case 50:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                region_ = s;
+                break;
+              }
+            case 58:
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
@@ -11260,10 +12181,45 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int REGION_FIELD_NUMBER = 5;
+    public static final int CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object certificateAuthorityFilename_;
+    /**
+     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    public java.lang.String getCertificateAuthorityFilename() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateAuthorityFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        certificateAuthorityFilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGION_FIELD_NUMBER = 6;
     private volatile java.lang.Object region_;
     /**
-     * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
      *
      * @return The region.
      */
@@ -11279,7 +12235,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for region.
      */
@@ -11295,10 +12251,10 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int CLUSTER_NAME_FIELD_NUMBER = 6;
+    public static final int CLUSTER_NAME_FIELD_NUMBER = 7;
     private volatile java.lang.Object clusterName_;
     /**
-     * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The clusterName.
      */
@@ -11314,7 +12270,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for clusterName.
      */
@@ -11356,11 +12312,15 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(
+            output, 5, certificateAuthorityFilename_);
+      }
       if (!getRegionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, region_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, region_);
       }
       if (!getClusterNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, clusterName_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, clusterName_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -11392,11 +12352,16 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(
+                5, certificateAuthorityFilename_);
+      }
       if (!getRegionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, region_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, region_);
       }
       if (!getClusterNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, clusterName_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, clusterName_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -11430,6 +12395,8 @@ public final class DriversPlumbing {
       if (!getAccessKey().equals(other.getAccessKey())) return false;
       if (!getSecretAccessKey().equals(other.getSecretAccessKey())) return false;
       if (!getCertificateAuthority().equals(other.getCertificateAuthority())) return false;
+      if (!getCertificateAuthorityFilename().equals(other.getCertificateAuthorityFilename()))
+        return false;
       if (!getRegion().equals(other.getRegion())) return false;
       if (!getClusterName().equals(other.getClusterName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -11457,6 +12424,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getSecretAccessKey().hashCode();
       hash = (37 * hash) + CERTIFICATE_AUTHORITY_FIELD_NUMBER;
       hash = (53 * hash) + getCertificateAuthority().hashCode();
+      hash = (37 * hash) + CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateAuthorityFilename().hashCode();
       hash = (37 * hash) + REGION_FIELD_NUMBER;
       hash = (53 * hash) + getRegion().hashCode();
       hash = (37 * hash) + CLUSTER_NAME_FIELD_NUMBER;
@@ -11614,6 +12583,8 @@ public final class DriversPlumbing {
 
         certificateAuthority_ = "";
 
+        certificateAuthorityFilename_ = "";
+
         region_ = "";
 
         clusterName_ = "";
@@ -11651,6 +12622,7 @@ public final class DriversPlumbing {
         result.accessKey_ = accessKey_;
         result.secretAccessKey_ = secretAccessKey_;
         result.certificateAuthority_ = certificateAuthority_;
+        result.certificateAuthorityFilename_ = certificateAuthorityFilename_;
         result.region_ = region_;
         result.clusterName_ = clusterName_;
         onBuilt();
@@ -11730,6 +12702,10 @@ public final class DriversPlumbing {
         }
         if (!other.getCertificateAuthority().isEmpty()) {
           certificateAuthority_ = other.certificateAuthority_;
+          onChanged();
+        }
+        if (!other.getCertificateAuthorityFilename().isEmpty()) {
+          certificateAuthorityFilename_ = other.certificateAuthorityFilename_;
           onChanged();
         }
         if (!other.getRegion().isEmpty()) {
@@ -12343,9 +13319,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object certificateAuthorityFilename_ = "";
+      /**
+       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The certificateAuthorityFilename.
+       */
+      public java.lang.String getCertificateAuthorityFilename() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateAuthorityFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for certificateAuthorityFilename.
+       */
+      public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          certificateAuthorityFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateAuthorityFilename() {
+
+        certificateAuthorityFilename_ = getDefaultInstance().getCertificateAuthorityFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object region_ = "";
       /**
-       * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
        *
        * @return The region.
        */
@@ -12361,7 +13413,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for region.
        */
@@ -12377,7 +13429,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
        *
        * @param value The region to set.
        * @return This builder for chaining.
@@ -12392,7 +13444,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -12403,7 +13455,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 5 [(.v1.field_options) = { ... }</code>
+       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for region to set.
        * @return This builder for chaining.
@@ -12421,7 +13473,7 @@ public final class DriversPlumbing {
 
       private java.lang.Object clusterName_ = "";
       /**
-       * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return The clusterName.
        */
@@ -12437,7 +13489,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for clusterName.
        */
@@ -12453,7 +13505,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
        *
        * @param value The clusterName to set.
        * @return This builder for chaining.
@@ -12468,7 +13520,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -12479,7 +13531,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string cluster_name = 6 [(.v1.field_options) = { ... }</code>
+       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for clusterName to set.
        * @return This builder for chaining.
@@ -12644,17 +13696,43 @@ public final class DriversPlumbing {
     com.google.protobuf.ByteString getCertificateAuthorityBytes();
 
     /**
-     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    java.lang.String getCertificateAuthorityFilename();
+    /**
+     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes();
+
+    /**
+     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The serviceAccountKey.
      */
     java.lang.String getServiceAccountKey();
     /**
-     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for serviceAccountKey.
      */
     com.google.protobuf.ByteString getServiceAccountKeyBytes();
+
+    /**
+     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The serviceAccountKeyFilename.
+     */
+    java.lang.String getServiceAccountKeyFilename();
+    /**
+     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for serviceAccountKeyFilename.
+     */
+    com.google.protobuf.ByteString getServiceAccountKeyFilenameBytes();
   }
   /** Protobuf type {@code v1.GoogleGKE} */
   public static final class GoogleGKE extends com.google.protobuf.GeneratedMessageV3
@@ -12672,7 +13750,9 @@ public final class DriversPlumbing {
       name_ = "";
       endpoint_ = "";
       certificateAuthority_ = "";
+      certificateAuthorityFilename_ = "";
       serviceAccountKey_ = "";
+      serviceAccountKeyFilename_ = "";
     }
 
     @java.lang.Override
@@ -12722,7 +13802,21 @@ public final class DriversPlumbing {
               {
                 java.lang.String s = input.readStringRequireUtf8();
 
+                certificateAuthorityFilename_ = s;
+                break;
+              }
+            case 34:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
                 serviceAccountKey_ = s;
+                break;
+              }
+            case 42:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                serviceAccountKeyFilename_ = s;
                 break;
               }
             case 262146:
@@ -12960,10 +14054,45 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int SERVICE_ACCOUNT_KEY_FIELD_NUMBER = 3;
+    public static final int CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object certificateAuthorityFilename_;
+    /**
+     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The certificateAuthorityFilename.
+     */
+    public java.lang.String getCertificateAuthorityFilename() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateAuthorityFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for certificateAuthorityFilename.
+     */
+    public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+      java.lang.Object ref = certificateAuthorityFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        certificateAuthorityFilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_KEY_FIELD_NUMBER = 4;
     private volatile java.lang.Object serviceAccountKey_;
     /**
-     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The serviceAccountKey.
      */
@@ -12979,7 +14108,7 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
      *
      * @return The bytes for serviceAccountKey.
      */
@@ -12989,6 +14118,41 @@ public final class DriversPlumbing {
         com.google.protobuf.ByteString b =
             com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
         serviceAccountKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_KEY_FILENAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object serviceAccountKeyFilename_;
+    /**
+     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The serviceAccountKeyFilename.
+     */
+    public java.lang.String getServiceAccountKeyFilename() {
+      java.lang.Object ref = serviceAccountKeyFilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountKeyFilename_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The bytes for serviceAccountKeyFilename.
+     */
+    public com.google.protobuf.ByteString getServiceAccountKeyFilenameBytes() {
+      java.lang.Object ref = serviceAccountKeyFilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        serviceAccountKeyFilename_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -13015,8 +14179,15 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(
+            output, 3, certificateAuthorityFilename_);
+      }
       if (!getServiceAccountKeyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serviceAccountKey_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceAccountKey_);
+      }
+      if (!getServiceAccountKeyFilenameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, serviceAccountKeyFilename_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -13042,8 +14213,17 @@ public final class DriversPlumbing {
       if (!getCertificateAuthorityBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, certificateAuthority_);
       }
+      if (!getCertificateAuthorityFilenameBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(
+                3, certificateAuthorityFilename_);
+      }
       if (!getServiceAccountKeyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serviceAccountKey_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceAccountKey_);
+      }
+      if (!getServiceAccountKeyFilenameBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(5, serviceAccountKeyFilename_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -13075,7 +14255,11 @@ public final class DriversPlumbing {
       if (getHealthy() != other.getHealthy()) return false;
       if (!getEndpoint().equals(other.getEndpoint())) return false;
       if (!getCertificateAuthority().equals(other.getCertificateAuthority())) return false;
+      if (!getCertificateAuthorityFilename().equals(other.getCertificateAuthorityFilename()))
+        return false;
       if (!getServiceAccountKey().equals(other.getServiceAccountKey())) return false;
+      if (!getServiceAccountKeyFilename().equals(other.getServiceAccountKeyFilename()))
+        return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13097,8 +14281,12 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getEndpoint().hashCode();
       hash = (37 * hash) + CERTIFICATE_AUTHORITY_FIELD_NUMBER;
       hash = (53 * hash) + getCertificateAuthority().hashCode();
+      hash = (37 * hash) + CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateAuthorityFilename().hashCode();
       hash = (37 * hash) + SERVICE_ACCOUNT_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountKey().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_KEY_FILENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountKeyFilename().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13248,7 +14436,11 @@ public final class DriversPlumbing {
 
         certificateAuthority_ = "";
 
+        certificateAuthorityFilename_ = "";
+
         serviceAccountKey_ = "";
+
+        serviceAccountKeyFilename_ = "";
 
         return this;
       }
@@ -13281,7 +14473,9 @@ public final class DriversPlumbing {
         result.healthy_ = healthy_;
         result.endpoint_ = endpoint_;
         result.certificateAuthority_ = certificateAuthority_;
+        result.certificateAuthorityFilename_ = certificateAuthorityFilename_;
         result.serviceAccountKey_ = serviceAccountKey_;
+        result.serviceAccountKeyFilename_ = serviceAccountKeyFilename_;
         onBuilt();
         return result;
       }
@@ -13353,8 +14547,16 @@ public final class DriversPlumbing {
           certificateAuthority_ = other.certificateAuthority_;
           onChanged();
         }
+        if (!other.getCertificateAuthorityFilename().isEmpty()) {
+          certificateAuthorityFilename_ = other.certificateAuthorityFilename_;
+          onChanged();
+        }
         if (!other.getServiceAccountKey().isEmpty()) {
           serviceAccountKey_ = other.serviceAccountKey_;
+          onChanged();
+        }
+        if (!other.getServiceAccountKeyFilename().isEmpty()) {
+          serviceAccountKeyFilename_ = other.serviceAccountKeyFilename_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -13808,9 +15010,85 @@ public final class DriversPlumbing {
         return this;
       }
 
+      private java.lang.Object certificateAuthorityFilename_ = "";
+      /**
+       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The certificateAuthorityFilename.
+       */
+      public java.lang.String getCertificateAuthorityFilename() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateAuthorityFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for certificateAuthorityFilename.
+       */
+      public com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes() {
+        java.lang.Object ref = certificateAuthorityFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          certificateAuthorityFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCertificateAuthorityFilename() {
+
+        certificateAuthorityFilename_ = getDefaultInstance().getCertificateAuthorityFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for certificateAuthorityFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCertificateAuthorityFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        certificateAuthorityFilename_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object serviceAccountKey_ = "";
       /**
-       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The serviceAccountKey.
        */
@@ -13826,7 +15104,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return The bytes for serviceAccountKey.
        */
@@ -13842,7 +15120,7 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The serviceAccountKey to set.
        * @return This builder for chaining.
@@ -13857,7 +15135,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
        *
        * @return This builder for chaining.
        */
@@ -13868,7 +15146,7 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string service_account_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
        *
        * @param value The bytes for serviceAccountKey to set.
        * @return This builder for chaining.
@@ -13880,6 +15158,82 @@ public final class DriversPlumbing {
         checkByteStringIsUtf8(value);
 
         serviceAccountKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountKeyFilename_ = "";
+      /**
+       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The serviceAccountKeyFilename.
+       */
+      public java.lang.String getServiceAccountKeyFilename() {
+        java.lang.Object ref = serviceAccountKeyFilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountKeyFilename_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The bytes for serviceAccountKeyFilename.
+       */
+      public com.google.protobuf.ByteString getServiceAccountKeyFilenameBytes() {
+        java.lang.Object ref = serviceAccountKeyFilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          serviceAccountKeyFilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The serviceAccountKeyFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountKeyFilename(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        serviceAccountKeyFilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountKeyFilename() {
+
+        serviceAccountKeyFilename_ = getDefaultInstance().getServiceAccountKeyFilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The bytes for serviceAccountKeyFilename to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountKeyFilenameBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        serviceAccountKeyFilename_ = value;
         onChanged();
         return this;
       }
@@ -31128,114 +32482,125 @@ public final class DriversPlumbing {
           + "\001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005"
           + "\260\363\263\007\001\022!\n\004port\030\004 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0046379"
           + "\022)\n\014tls_required\030\005 \001(\010B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\004t"
-          + "rue:\n\372\370\263\007\005\250\363\263\007\001\"\245\002\n\nKubernetes\022\030\n\002id\030\200\200\002"
+          + "rue:\n\372\370\263\007\005\250\363\263\007\001\"\263\003\n\nKubernetes\022\030\n\002id\030\200\200\002"
           + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260"
           + "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
           + "\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\004port\030\002"
           + " \001(\005B\022\362\370\263\007\005\260\363\263\007\001\222A\005:\003443\022)\n\025certificate_"
-          + "authority\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022&\n\022client_ce"
-          + "rtificate\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nclient_ke"
-          + "y\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\352\002\n\023Kube"
-          + "rnetesBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy"
-          + "\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\004port\030\002 \001(\005B\022\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\005:\003443\022\034\n\010username\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "\034\n\010password\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certifi"
-          + "cate_authority\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022&\n\022clie"
-          + "nt_certificate\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nclie"
-          + "nt_key\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\277\002\n"
-          + "\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004"
-          + "name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 "
-          + "\001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010endpoint\030\001 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022\036\n\naccess_key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022%\n\021secret_access_key\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022)\n\025certificate_authority\030\004 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\032\n\006region\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014clus"
-          + "ter_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\343"
-          + "\001\n\tGoogleGKE\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032"
-          + "\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200"
-          + "\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010endpoint\030\001 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate_authority\030\002 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\'\n\023service_account_key\030\003"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\355\001\n\003SSH\022\030\n\002"
-          + "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010"
-          + "username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\004port\030\003 \001(\005"
-          + "B\021\362\370\263\007\005\260\363\263\007\001\222A\004:\00222\022#\n\npublic_key\030\004 \001(\tB"
-          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\335\002\n\rHTTPBas"
-          + "icAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name"
-          + "\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B"
-          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022$\n\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "\034\n\010username\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010passwor"
-          + "d\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_blacklist"
-          + "\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_path\030\006 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\007 \001(\tB\017\362\370\263\007\005\260\363"
-          + "\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\236\002\n\nHTTPNoAuth\022\030\n\002i"
-          + "d\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001"
-          + "\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020health"
-          + "check_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_"
-          + "blacklist\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_p"
-          + "ath\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\005 \001(\t"
-          + "B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\275\002\n\010HTTPAu"
-          + "th\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263"
-          + "\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n"
-          + "\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013a"
-          + "uth_header\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_"
-          + "blacklist\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_p"
-          + "ath\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\006 \001(\t"
-          + "B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Mysql\022"
-          + "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260"
-          + "\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010passwor"
-          + "d\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:"
-          + "\n\372\370\263\007\005\250\363\263\007\001\"\261\002\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n"
-          + "\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n"
-          + "\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port"
-          + "\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\""
-          + "\256\002\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032"
-          + "\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200"
-          + "\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010data"
-          + "base\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030"
-          + "\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363"
-          + "\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Maria\022\030\n\002id"
+          + "authority\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\036certifica"
+          + "te_authority_filename\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "&\n\022client_certificate\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "/\n\033client_certificate_filename\030\006 \001(\tB\n\362\370"
+          + "\263\007\005\260\363\263\007\001\022\036\n\nclient_key\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022\'\n\023client_key_filename\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001:\n\372\370\263\007\005\250\363\263\007\001\"\370\003\n\023KubernetesBasicAuth\022\030\n"
+          + "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263"
+          + "\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n"
+          + "\004port\030\002 \001(\005B\022\362\370\263\007\005\260\363\263\007\001\222A\005:\003443\022\034\n\010usern"
+          + "ame\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\004 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate_authority\030\005 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\036certificate_authority_"
+          + "filename\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022&\n\022client_cer"
+          + "tificate\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022/\n\033client_cer"
+          + "tificate_filename\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nc"
+          + "lient_key\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\'\n\023client_ke"
+          + "y_filename\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001"
+          + "\"\363\002\n\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030"
+          + "\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010endpoint\030\001 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\naccess_key\030\002 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022%\n\021secret_access_key\030\003 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\022)\n\025certificate_authority\030\004 \001(\tB\n\362\370"
+          + "\263\007\005\260\363\263\007\001\0222\n\036certificate_authority_filena"
+          + "me\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\006 \001(\tB\n\362\370"
+          + "\263\007\005\260\363\263\007\001\022 \n\014cluster_name\030\007 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\311\002\n\tGoogleGKE\022\030\n\002id\030\200\200\002 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034"
+          + "\n\010endpoint\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certific"
+          + "ate_authority\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\036certi"
+          + "ficate_authority_filename\030\003 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022\'\n\023service_account_key\030\004 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\0220\n\034service_account_key_filename\030\005 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\355\001\n\003SSH\022\030\n\002id"
           + "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370"
           + "\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222"
           + "A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010us"
-          + "ername\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001"
-          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007"
-          + "\005\250\363\263\007\001\"\254\002\n\006Memsql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healt"
-          + "hy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030"
-          + "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n"
-          + "\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_over"
-          + "ride\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370"
-          + "\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\236\002\n\006Athena"
+          + "ername\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\004port\030\003 \001(\005B\021"
+          + "\362\370\263\007\005\260\363\263\007\001\222A\004:\00222\022#\n\npublic_key\030\004 \001(\tB\017\362"
+          + "\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\335\002\n\rHTTPBasic"
+          + "Auth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201"
+          + "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362"
+          + "\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "$\n\020healthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n"
+          + "\010username\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030"
+          + "\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_blacklist\030\005"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_path\030\006 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\007 \001(\tB\017\362\370\263\007\005\260\363\263\007"
+          + "\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\236\002\n\nHTTPNoAuth\022\030\n\002id\030"
+          + "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263"
+          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
+          + "\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020healthch"
+          + "eck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_bl"
+          + "acklist\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_pat"
+          + "h\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\005 \001(\tB\017"
+          + "\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\275\002\n\010HTTPAuth"
           + "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001"
           + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005"
-          + "\260\363\263\007\001\222A\002@\001\022\036\n\naccess_key\030\001 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022%\n\021secret_access_key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\032\n\006output\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_ov"
-          + "erride\030\004 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022(\n\006region\030\005 \001(\t"
-          + "B\030\362\370\263\007\005\260\363\263\007\001\222A\013:\tus-east-1:\n\372\370\263\007\005\250\363\263\007\001B/"
-          + "\n\034com.strongdm.api.v1.plumbingB\017DriversP"
-          + "lumbingb\006proto3"
+          + "\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\020h"
+          + "ealthcheck_path\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013aut"
+          + "h_header\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_bl"
+          + "acklist\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default_pat"
+          + "h\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\006 \001(\tB\017"
+          + "\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Mysql\022\030\n"
+          + "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263"
+          + "\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n"
+          + "\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030"
+          + "\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263"
+          + "\007\005\260\363\263\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372"
+          + "\370\263\007\005\250\363\263\007\001\"\261\002\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010h"
+          + "ostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rp"
+          + "ort_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006"
+          + " \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\256\002"
+          + "\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004"
+          + "name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 "
+          + "\001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010databa"
+          + "se\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\005 "
+          + "\001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007"
+          + "\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Maria\022\030\n\002id\030\200"
+          + "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002"
+          + "@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010user"
+          + "name\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\t"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n"
+          + "\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250"
+          + "\363\263\007\001\"\254\002\n\006Memsql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy"
+          + "\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010d"
+          + "atabase\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_overri"
+          + "de\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007"
+          + "\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\236\002\n\006Athena\022\030"
+          + "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\t"
+          + "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363"
+          + "\263\007\001\222A\002@\001\022\036\n\naccess_key\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
+          + "\022%\n\021secret_access_key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "\032\n\006output\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_over"
+          + "ride\030\004 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022(\n\006region\030\005 \001(\tB\030"
+          + "\362\370\263\007\005\260\363\263\007\001\222A\013:\tus-east-1:\n\372\370\263\007\005\250\363\263\007\001B/\n\034"
+          + "com.strongdm.api.v1.plumbingB\017DriversPlu"
+          + "mbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -31299,8 +32664,11 @@ public final class DriversPlumbing {
               "Hostname",
               "Port",
               "CertificateAuthority",
+              "CertificateAuthorityFilename",
               "ClientCertificate",
+              "ClientCertificateFilename",
               "ClientKey",
+              "ClientKeyFilename",
             });
     internal_static_v1_KubernetesBasicAuth_descriptor = getDescriptor().getMessageTypes().get(4);
     internal_static_v1_KubernetesBasicAuth_fieldAccessorTable =
@@ -31315,8 +32683,11 @@ public final class DriversPlumbing {
               "Username",
               "Password",
               "CertificateAuthority",
+              "CertificateAuthorityFilename",
               "ClientCertificate",
+              "ClientCertificateFilename",
               "ClientKey",
+              "ClientKeyFilename",
             });
     internal_static_v1_AmazonEKS_descriptor = getDescriptor().getMessageTypes().get(5);
     internal_static_v1_AmazonEKS_fieldAccessorTable =
@@ -31330,6 +32701,7 @@ public final class DriversPlumbing {
               "AccessKey",
               "SecretAccessKey",
               "CertificateAuthority",
+              "CertificateAuthorityFilename",
               "Region",
               "ClusterName",
             });
@@ -31338,7 +32710,14 @@ public final class DriversPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_GoogleGKE_descriptor,
             new java.lang.String[] {
-              "Id", "Name", "Healthy", "Endpoint", "CertificateAuthority", "ServiceAccountKey",
+              "Id",
+              "Name",
+              "Healthy",
+              "Endpoint",
+              "CertificateAuthority",
+              "CertificateAuthorityFilename",
+              "ServiceAccountKey",
+              "ServiceAccountKeyFilename",
             });
     internal_static_v1_SSH_descriptor = getDescriptor().getMessageTypes().get(7);
     internal_static_v1_SSH_fieldAccessorTable =

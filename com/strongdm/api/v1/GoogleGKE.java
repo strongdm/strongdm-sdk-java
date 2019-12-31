@@ -56,6 +56,17 @@ public class GoogleGKE implements Resource {
     return this;
   }
 
+  private String certificateAuthorityFilename;
+
+  public String getCertificateAuthorityFilename() {
+    return this.certificateAuthorityFilename;
+  }
+
+  public GoogleGKE setCertificateAuthorityFilename(String in) {
+    this.certificateAuthorityFilename = in;
+    return this;
+  }
+
   private String serviceAccountKey;
 
   public String getServiceAccountKey() {
@@ -64,6 +75,17 @@ public class GoogleGKE implements Resource {
 
   public GoogleGKE setServiceAccountKey(String in) {
     this.serviceAccountKey = in;
+    return this;
+  }
+
+  private String serviceAccountKeyFilename;
+
+  public String getServiceAccountKeyFilename() {
+    return this.serviceAccountKeyFilename;
+  }
+
+  public GoogleGKE setServiceAccountKeyFilename(String in) {
+    this.serviceAccountKeyFilename = in;
     return this;
   }
 }

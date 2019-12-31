@@ -89,6 +89,17 @@ public class KubernetesBasicAuth implements Resource {
     return this;
   }
 
+  private String certificateAuthorityFilename;
+
+  public String getCertificateAuthorityFilename() {
+    return this.certificateAuthorityFilename;
+  }
+
+  public KubernetesBasicAuth setCertificateAuthorityFilename(String in) {
+    this.certificateAuthorityFilename = in;
+    return this;
+  }
+
   private String clientCertificate;
 
   public String getClientCertificate() {
@@ -100,6 +111,17 @@ public class KubernetesBasicAuth implements Resource {
     return this;
   }
 
+  private String clientCertificateFilename;
+
+  public String getClientCertificateFilename() {
+    return this.clientCertificateFilename;
+  }
+
+  public KubernetesBasicAuth setClientCertificateFilename(String in) {
+    this.clientCertificateFilename = in;
+    return this;
+  }
+
   private String clientKey;
 
   public String getClientKey() {
@@ -108,6 +130,17 @@ public class KubernetesBasicAuth implements Resource {
 
   public KubernetesBasicAuth setClientKey(String in) {
     this.clientKey = in;
+    return this;
+  }
+
+  private String clientKeyFilename;
+
+  public String getClientKeyFilename() {
+    return this.clientKeyFilename;
+  }
+
+  public KubernetesBasicAuth setClientKeyFilename(String in) {
+    this.clientKeyFilename = in;
     return this;
   }
 }

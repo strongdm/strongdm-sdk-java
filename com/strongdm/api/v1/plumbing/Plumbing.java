@@ -316,8 +316,11 @@ public class Plumbing {
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setPort(plumbing.getPort());
     porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
     porcelain.setClientCertificate(plumbing.getClientCertificate());
+    porcelain.setClientCertificateFilename(plumbing.getClientCertificateFilename());
     porcelain.setClientKey(plumbing.getClientKey());
+    porcelain.setClientKeyFilename(plumbing.getClientKeyFilename());
     return porcelain;
   }
 
@@ -340,11 +343,20 @@ public class Plumbing {
     if (porcelain.getCertificateAuthority() != null) {
       builder.setCertificateAuthority(porcelain.getCertificateAuthority());
     }
+    if (porcelain.getCertificateAuthorityFilename() != null) {
+      builder.setCertificateAuthorityFilename(porcelain.getCertificateAuthorityFilename());
+    }
     if (porcelain.getClientCertificate() != null) {
       builder.setClientCertificate(porcelain.getClientCertificate());
     }
+    if (porcelain.getClientCertificateFilename() != null) {
+      builder.setClientCertificateFilename(porcelain.getClientCertificateFilename());
+    }
     if (porcelain.getClientKey() != null) {
       builder.setClientKey(porcelain.getClientKey());
+    }
+    if (porcelain.getClientKeyFilename() != null) {
+      builder.setClientKeyFilename(porcelain.getClientKeyFilename());
     }
     return builder.build();
   }
@@ -375,8 +387,11 @@ public class Plumbing {
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
     porcelain.setClientCertificate(plumbing.getClientCertificate());
+    porcelain.setClientCertificateFilename(plumbing.getClientCertificateFilename());
     porcelain.setClientKey(plumbing.getClientKey());
+    porcelain.setClientKeyFilename(plumbing.getClientKeyFilename());
     return porcelain;
   }
 
@@ -406,11 +421,20 @@ public class Plumbing {
     if (porcelain.getCertificateAuthority() != null) {
       builder.setCertificateAuthority(porcelain.getCertificateAuthority());
     }
+    if (porcelain.getCertificateAuthorityFilename() != null) {
+      builder.setCertificateAuthorityFilename(porcelain.getCertificateAuthorityFilename());
+    }
     if (porcelain.getClientCertificate() != null) {
       builder.setClientCertificate(porcelain.getClientCertificate());
     }
+    if (porcelain.getClientCertificateFilename() != null) {
+      builder.setClientCertificateFilename(porcelain.getClientCertificateFilename());
+    }
     if (porcelain.getClientKey() != null) {
       builder.setClientKey(porcelain.getClientKey());
+    }
+    if (porcelain.getClientKeyFilename() != null) {
+      builder.setClientKeyFilename(porcelain.getClientKeyFilename());
     }
     return builder.build();
   }
@@ -438,6 +462,7 @@ public class Plumbing {
     porcelain.setAccessKey(plumbing.getAccessKey());
     porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
     porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
     porcelain.setRegion(plumbing.getRegion());
     porcelain.setClusterName(plumbing.getClusterName());
     return porcelain;
@@ -466,6 +491,9 @@ public class Plumbing {
     }
     if (porcelain.getCertificateAuthority() != null) {
       builder.setCertificateAuthority(porcelain.getCertificateAuthority());
+    }
+    if (porcelain.getCertificateAuthorityFilename() != null) {
+      builder.setCertificateAuthorityFilename(porcelain.getCertificateAuthorityFilename());
     }
     if (porcelain.getRegion() != null) {
       builder.setRegion(porcelain.getRegion());
@@ -497,7 +525,9 @@ public class Plumbing {
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
     porcelain.setServiceAccountKey(plumbing.getServiceAccountKey());
+    porcelain.setServiceAccountKeyFilename(plumbing.getServiceAccountKeyFilename());
     return porcelain;
   }
 
@@ -519,8 +549,14 @@ public class Plumbing {
     if (porcelain.getCertificateAuthority() != null) {
       builder.setCertificateAuthority(porcelain.getCertificateAuthority());
     }
+    if (porcelain.getCertificateAuthorityFilename() != null) {
+      builder.setCertificateAuthorityFilename(porcelain.getCertificateAuthorityFilename());
+    }
     if (porcelain.getServiceAccountKey() != null) {
       builder.setServiceAccountKey(porcelain.getServiceAccountKey());
+    }
+    if (porcelain.getServiceAccountKeyFilename() != null) {
+      builder.setServiceAccountKeyFilename(porcelain.getServiceAccountKeyFilename());
     }
     return builder.build();
   }
