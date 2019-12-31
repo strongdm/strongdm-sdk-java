@@ -23,17 +23,6 @@ public class Athena implements Resource {
     return this;
   }
 
-  private int portOverride;
-  // Port number override.
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-  // Port number override.
-  public Athena setPortOverride(int in) {
-    this.portOverride = in;
-    return this;
-  }
-
   private boolean healthy;
   // True if the datasource is reachable and the credentials are valid.
   public boolean getHealthy() {
@@ -67,17 +56,6 @@ public class Athena implements Resource {
     return this;
   }
 
-  private String region;
-
-  public String getRegion() {
-    return this.region;
-  }
-
-  public Athena setRegion(String in) {
-    this.region = in;
-    return this;
-  }
-
   private String output;
 
   public String getOutput() {
@@ -86,6 +64,28 @@ public class Athena implements Resource {
 
   public Athena setOutput(String in) {
     this.output = in;
+    return this;
+  }
+
+  private int portOverride;
+
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+
+  public Athena setPortOverride(int in) {
+    this.portOverride = in;
+    return this;
+  }
+
+  private String region;
+
+  public String getRegion() {
+    return this.region;
+  }
+
+  public Athena setRegion(String in) {
+    this.region = in;
     return this;
   }
 }

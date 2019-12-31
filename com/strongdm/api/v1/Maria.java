@@ -23,17 +23,6 @@ public class Maria implements Resource {
     return this;
   }
 
-  private int portOverride;
-  // Port number override.
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-  // Port number override.
-  public Maria setPortOverride(int in) {
-    this.portOverride = in;
-    return this;
-  }
-
   private boolean healthy;
   // True if the datasource is reachable and the credentials are valid.
   public boolean getHealthy() {
@@ -86,6 +75,17 @@ public class Maria implements Resource {
 
   public Maria setDatabase(String in) {
     this.database = in;
+    return this;
+  }
+
+  private int portOverride;
+
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+
+  public Maria setPortOverride(int in) {
+    this.portOverride = in;
     return this;
   }
 

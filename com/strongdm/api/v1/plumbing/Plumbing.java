@@ -40,6 +40,9 @@ public class Plumbing {
     if (plumbing.getKubernetes() != null) {
       return kubernetesToPorcelain(plumbing.getKubernetes());
     }
+    if (plumbing.getKubernetesBasicAuth() != null) {
+      return kubernetesBasicAuthToPorcelain(plumbing.getKubernetesBasicAuth());
+    }
     if (plumbing.getAmazonEks() != null) {
       return amazonEksToPorcelain(plumbing.getAmazonEks());
     }
@@ -97,6 +100,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.Kubernetes) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setKubernetes(kubernetesToPlumbing((com.strongdm.api.v1.Kubernetes) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.KubernetesBasicAuth) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setKubernetesBasicAuth(
+          kubernetesBasicAuthToPlumbing((com.strongdm.api.v1.KubernetesBasicAuth) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.AmazonEKS) {
@@ -181,9 +190,9 @@ public class Plumbing {
     com.strongdm.api.v1.Redis porcelain = new com.strongdm.api.v1.Redis();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setPort(plumbing.getPort());
     return porcelain;
@@ -200,11 +209,11 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
@@ -231,9 +240,9 @@ public class Plumbing {
     com.strongdm.api.v1.ElasticacheRedis porcelain = new com.strongdm.api.v1.ElasticacheRedis();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setPort(plumbing.getPort());
     porcelain.setTlsRequired(plumbing.getTlsRequired());
@@ -252,11 +261,11 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
@@ -283,7 +292,6 @@ public class Plumbing {
     com.strongdm.api.v1.Kubernetes porcelain = new com.strongdm.api.v1.Kubernetes();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setPort(plumbing.getPort());
@@ -304,7 +312,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
@@ -336,11 +343,76 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.KubernetesBasicAuth kubernetesBasicAuthToPorcelain(
+      KubernetesBasicAuth plumbing) {
+    com.strongdm.api.v1.KubernetesBasicAuth porcelain =
+        new com.strongdm.api.v1.KubernetesBasicAuth();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setClientCertificate(plumbing.getClientCertificate());
+    porcelain.setClientKey(plumbing.getClientKey());
+    return porcelain;
+  }
+
+  public static KubernetesBasicAuth kubernetesBasicAuthToPlumbing(
+      com.strongdm.api.v1.KubernetesBasicAuth porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    KubernetesBasicAuth.Builder builder = KubernetesBasicAuth.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority(porcelain.getCertificateAuthority());
+    }
+    if (porcelain.getClientCertificate() != null) {
+      builder.setClientCertificate(porcelain.getClientCertificate());
+    }
+    if (porcelain.getClientKey() != null) {
+      builder.setClientKey(porcelain.getClientKey());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.KubernetesBasicAuth>
+      repeatedKubernetesBasicAuthToPorcelain(Collection<KubernetesBasicAuth> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> kubernetesBasicAuthToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<KubernetesBasicAuth> repeatedKubernetesBasicAuthToPlumbing(
+      Collection<com.strongdm.api.v1.KubernetesBasicAuth> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> kubernetesBasicAuthToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.AmazonEKS amazonEksToPorcelain(AmazonEKS plumbing) {
     com.strongdm.api.v1.AmazonEKS porcelain = new com.strongdm.api.v1.AmazonEKS();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setAccessKey(plumbing.getAccessKey());
@@ -362,7 +434,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getEndpoint() != null) {
       builder.setEndpoint(porcelain.getEndpoint());
@@ -403,7 +474,6 @@ public class Plumbing {
     com.strongdm.api.v1.GoogleGKE porcelain = new com.strongdm.api.v1.GoogleGKE();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
@@ -422,7 +492,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getEndpoint() != null) {
       builder.setEndpoint(porcelain.getEndpoint());
@@ -454,7 +523,6 @@ public class Plumbing {
     com.strongdm.api.v1.SSH porcelain = new com.strongdm.api.v1.SSH();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
@@ -474,7 +542,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
@@ -505,7 +572,6 @@ public class Plumbing {
     com.strongdm.api.v1.HTTPBasicAuth porcelain = new com.strongdm.api.v1.HTTPBasicAuth();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setUrl(plumbing.getUrl());
     porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
@@ -528,7 +594,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getUrl() != null) {
       builder.setUrl(porcelain.getUrl());
@@ -572,7 +637,6 @@ public class Plumbing {
     com.strongdm.api.v1.HTTPNoAuth porcelain = new com.strongdm.api.v1.HTTPNoAuth();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setUrl(plumbing.getUrl());
     porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
@@ -593,7 +657,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getUrl() != null) {
       builder.setUrl(porcelain.getUrl());
@@ -631,7 +694,6 @@ public class Plumbing {
     com.strongdm.api.v1.HTTPAuth porcelain = new com.strongdm.api.v1.HTTPAuth();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setUrl(plumbing.getUrl());
     porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
@@ -653,7 +715,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getUrl() != null) {
       builder.setUrl(porcelain.getUrl());
@@ -694,12 +755,12 @@ public class Plumbing {
     com.strongdm.api.v1.Mysql porcelain = new com.strongdm.api.v1.Mysql();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
     return porcelain;
   }
@@ -715,7 +776,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
@@ -729,6 +789,7 @@ public class Plumbing {
     if (porcelain.getDatabase() != null) {
       builder.setDatabase(porcelain.getDatabase());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
     return builder.build();
   }
@@ -751,12 +812,12 @@ public class Plumbing {
     com.strongdm.api.v1.AuroraMysql porcelain = new com.strongdm.api.v1.AuroraMysql();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
     return porcelain;
   }
@@ -772,7 +833,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
@@ -786,6 +846,7 @@ public class Plumbing {
     if (porcelain.getDatabase() != null) {
       builder.setDatabase(porcelain.getDatabase());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
     return builder.build();
   }
@@ -808,12 +869,12 @@ public class Plumbing {
     com.strongdm.api.v1.Clustrix porcelain = new com.strongdm.api.v1.Clustrix();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
     return porcelain;
   }
@@ -829,7 +890,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
@@ -843,6 +903,7 @@ public class Plumbing {
     if (porcelain.getDatabase() != null) {
       builder.setDatabase(porcelain.getDatabase());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
     return builder.build();
   }
@@ -865,12 +926,12 @@ public class Plumbing {
     com.strongdm.api.v1.Maria porcelain = new com.strongdm.api.v1.Maria();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
     return porcelain;
   }
@@ -886,7 +947,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
@@ -900,6 +960,7 @@ public class Plumbing {
     if (porcelain.getDatabase() != null) {
       builder.setDatabase(porcelain.getDatabase());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
     return builder.build();
   }
@@ -922,12 +983,12 @@ public class Plumbing {
     com.strongdm.api.v1.Memsql porcelain = new com.strongdm.api.v1.Memsql();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
     return porcelain;
   }
@@ -943,7 +1004,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
@@ -957,6 +1017,7 @@ public class Plumbing {
     if (porcelain.getDatabase() != null) {
       builder.setDatabase(porcelain.getDatabase());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
     return builder.build();
   }
@@ -979,12 +1040,12 @@ public class Plumbing {
     com.strongdm.api.v1.Athena porcelain = new com.strongdm.api.v1.Athena();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setAccessKey(plumbing.getAccessKey());
     porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setRegion(plumbing.getRegion());
     porcelain.setOutput(plumbing.getOutput());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setRegion(plumbing.getRegion());
     return porcelain;
   }
 
@@ -999,7 +1060,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey(porcelain.getAccessKey());
@@ -1007,11 +1067,12 @@ public class Plumbing {
     if (porcelain.getSecretAccessKey() != null) {
       builder.setSecretAccessKey(porcelain.getSecretAccessKey());
     }
-    if (porcelain.getRegion() != null) {
-      builder.setRegion(porcelain.getRegion());
-    }
     if (porcelain.getOutput() != null) {
       builder.setOutput(porcelain.getOutput());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion(porcelain.getRegion());
     }
     return builder.build();
   }

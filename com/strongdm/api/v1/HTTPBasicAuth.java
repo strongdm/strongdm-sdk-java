@@ -23,17 +23,6 @@ public class HTTPBasicAuth implements Resource {
     return this;
   }
 
-  private int portOverride;
-  // Port number override.
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-  // Port number override.
-  public HTTPBasicAuth setPortOverride(int in) {
-    this.portOverride = in;
-    return this;
-  }
-
   private boolean healthy;
   // True if the datasource is reachable and the credentials are valid.
   public boolean getHealthy() {

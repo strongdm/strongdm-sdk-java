@@ -23,17 +23,6 @@ public class Clustrix implements Resource {
     return this;
   }
 
-  private int portOverride;
-  // Port number override.
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-  // Port number override.
-  public Clustrix setPortOverride(int in) {
-    this.portOverride = in;
-    return this;
-  }
-
   private boolean healthy;
   // True if the datasource is reachable and the credentials are valid.
   public boolean getHealthy() {
@@ -86,6 +75,17 @@ public class Clustrix implements Resource {
 
   public Clustrix setDatabase(String in) {
     this.database = in;
+    return this;
+  }
+
+  private int portOverride;
+
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+
+  public Clustrix setPortOverride(int in) {
+    this.portOverride = in;
     return this;
   }
 

@@ -1,13 +1,13 @@
 package com.strongdm.api.v1;
 
-public class AuroraMysql implements Resource {
+public class KubernetesBasicAuth implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public AuroraMysql setId(String in) {
+  public KubernetesBasicAuth setId(String in) {
     this.id = in;
     return this;
   }
@@ -18,7 +18,7 @@ public class AuroraMysql implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public AuroraMysql setName(String in) {
+  public KubernetesBasicAuth setName(String in) {
     this.name = in;
     return this;
   }
@@ -29,7 +29,7 @@ public class AuroraMysql implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public AuroraMysql setHealthy(boolean in) {
+  public KubernetesBasicAuth setHealthy(boolean in) {
     this.healthy = in;
     return this;
   }
@@ -40,8 +40,19 @@ public class AuroraMysql implements Resource {
     return this.hostname;
   }
 
-  public AuroraMysql setHostname(String in) {
+  public KubernetesBasicAuth setHostname(String in) {
     this.hostname = in;
+    return this;
+  }
+
+  private int port;
+
+  public int getPort() {
+    return this.port;
+  }
+
+  public KubernetesBasicAuth setPort(int in) {
+    this.port = in;
     return this;
   }
 
@@ -51,7 +62,7 @@ public class AuroraMysql implements Resource {
     return this.username;
   }
 
-  public AuroraMysql setUsername(String in) {
+  public KubernetesBasicAuth setUsername(String in) {
     this.username = in;
     return this;
   }
@@ -62,41 +73,41 @@ public class AuroraMysql implements Resource {
     return this.password;
   }
 
-  public AuroraMysql setPassword(String in) {
+  public KubernetesBasicAuth setPassword(String in) {
     this.password = in;
     return this;
   }
 
-  private String database;
+  private String certificateAuthority;
 
-  public String getDatabase() {
-    return this.database;
+  public String getCertificateAuthority() {
+    return this.certificateAuthority;
   }
 
-  public AuroraMysql setDatabase(String in) {
-    this.database = in;
+  public KubernetesBasicAuth setCertificateAuthority(String in) {
+    this.certificateAuthority = in;
     return this;
   }
 
-  private int portOverride;
+  private String clientCertificate;
 
-  public int getPortOverride() {
-    return this.portOverride;
+  public String getClientCertificate() {
+    return this.clientCertificate;
   }
 
-  public AuroraMysql setPortOverride(int in) {
-    this.portOverride = in;
+  public KubernetesBasicAuth setClientCertificate(String in) {
+    this.clientCertificate = in;
     return this;
   }
 
-  private int port;
+  private String clientKey;
 
-  public int getPort() {
-    return this.port;
+  public String getClientKey() {
+    return this.clientKey;
   }
 
-  public AuroraMysql setPort(int in) {
-    this.port = in;
+  public KubernetesBasicAuth setClientKey(String in) {
+    this.clientKey = in;
     return this;
   }
 }
