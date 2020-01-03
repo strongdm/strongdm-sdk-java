@@ -34,6 +34,28 @@ public class AmazonES implements Resource {
     return this;
   }
 
+  private String region;
+
+  public String getRegion() {
+    return this.region;
+  }
+
+  public AmazonES setRegion(String in) {
+    this.region = in;
+    return this;
+  }
+
+  private String secretAccessKey;
+
+  public String getSecretAccessKey() {
+    return this.secretAccessKey;
+  }
+
+  public AmazonES setSecretAccessKey(String in) {
+    this.secretAccessKey = in;
+    return this;
+  }
+
   private String endpoint;
 
   public String getEndpoint() {
@@ -53,28 +75,6 @@ public class AmazonES implements Resource {
 
   public AmazonES setAccessKey(String in) {
     this.accessKey = in;
-    return this;
-  }
-
-  private String secretAccessKey;
-
-  public String getSecretAccessKey() {
-    return this.secretAccessKey;
-  }
-
-  public AmazonES setSecretAccessKey(String in) {
-    this.secretAccessKey = in;
-    return this;
-  }
-
-  private String region;
-
-  public String getRegion() {
-    return this.region;
-  }
-
-  public AmazonES setRegion(String in) {
-    this.region = in;
     return this;
   }
 

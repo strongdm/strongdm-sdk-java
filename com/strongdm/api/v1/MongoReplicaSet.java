@@ -121,4 +121,15 @@ public class MongoReplicaSet implements Resource {
     this.connectToReplica = in;
     return this;
   }
+
+  private boolean tlsRequired;
+
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
+  }
+
+  public MongoReplicaSet setTlsRequired(boolean in) {
+    this.tlsRequired = in;
+    return this;
+  }
 }

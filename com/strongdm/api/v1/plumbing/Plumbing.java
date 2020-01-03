@@ -153,8 +153,11 @@ public class Plumbing {
     if (plumbing.getSqlServer() != null) {
       return sqlServerToPorcelain(plumbing.getSqlServer());
     }
-    if (plumbing.getMongoHybrid() != null) {
-      return mongoHybridToPorcelain(plumbing.getMongoHybrid());
+    if (plumbing.getMongoLegacyHost() != null) {
+      return mongoLegacyHostToPorcelain(plumbing.getMongoLegacyHost());
+    }
+    if (plumbing.getMongoLegacyReplicaset() != null) {
+      return mongoLegacyReplicasetToPorcelain(plumbing.getMongoLegacyReplicaset());
     }
     if (plumbing.getMongoHost() != null) {
       return mongoHostToPorcelain(plumbing.getMongoHost());
@@ -346,9 +349,16 @@ public class Plumbing {
       builder.setSqlServer(sqlServerToPlumbing((com.strongdm.api.v1.SQLServer) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.MongoHybrid) {
+    if (porcelain instanceof com.strongdm.api.v1.MongoLegacyHost) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setMongoHybrid(mongoHybridToPlumbing((com.strongdm.api.v1.MongoHybrid) porcelain));
+      builder.setMongoLegacyHost(
+          mongoLegacyHostToPlumbing((com.strongdm.api.v1.MongoLegacyHost) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.MongoLegacyReplicaset) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMongoLegacyReplicaset(
+          mongoLegacyReplicasetToPlumbing((com.strongdm.api.v1.MongoLegacyReplicaset) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.MongoHost) {
@@ -443,6 +453,8 @@ public class Plumbing {
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
     porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
     porcelain.setUsername(plumbing.getUsername());
@@ -464,6 +476,12 @@ public class Plumbing {
     builder.setHealthy(porcelain.getHealthy());
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
     }
     builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
@@ -546,10 +564,10 @@ public class Plumbing {
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setRegion(plumbing.getRegion());
+    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
     porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setAccessKey(plumbing.getAccessKey());
-    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setRegion(plumbing.getRegion());
     porcelain.setPortOverride(plumbing.getPortOverride());
     return porcelain;
   }
@@ -566,17 +584,17 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion(porcelain.getRegion());
+    }
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey(porcelain.getSecretAccessKey());
+    }
     if (porcelain.getEndpoint() != null) {
       builder.setEndpoint(porcelain.getEndpoint());
     }
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey(porcelain.getAccessKey());
-    }
-    if (porcelain.getSecretAccessKey() != null) {
-      builder.setSecretAccessKey(porcelain.getSecretAccessKey());
-    }
-    if (porcelain.getRegion() != null) {
-      builder.setRegion(porcelain.getRegion());
     }
     builder.setPortOverride(porcelain.getPortOverride());
     return builder.build();
@@ -831,12 +849,6 @@ public class Plumbing {
     porcelain.setPort(plumbing.getPort());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
-    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
-    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
-    porcelain.setClientCertificate(plumbing.getClientCertificate());
-    porcelain.setClientCertificateFilename(plumbing.getClientCertificateFilename());
-    porcelain.setClientKey(plumbing.getClientKey());
-    porcelain.setClientKeyFilename(plumbing.getClientKeyFilename());
     return porcelain;
   }
 
@@ -862,24 +874,6 @@ public class Plumbing {
     }
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
-    }
-    if (porcelain.getCertificateAuthority() != null) {
-      builder.setCertificateAuthority(porcelain.getCertificateAuthority());
-    }
-    if (porcelain.getCertificateAuthorityFilename() != null) {
-      builder.setCertificateAuthorityFilename(porcelain.getCertificateAuthorityFilename());
-    }
-    if (porcelain.getClientCertificate() != null) {
-      builder.setClientCertificate(porcelain.getClientCertificate());
-    }
-    if (porcelain.getClientCertificateFilename() != null) {
-      builder.setClientCertificateFilename(porcelain.getClientCertificateFilename());
-    }
-    if (porcelain.getClientKey() != null) {
-      builder.setClientKey(porcelain.getClientKey());
-    }
-    if (porcelain.getClientKeyFilename() != null) {
-      builder.setClientKeyFilename(porcelain.getClientKeyFilename());
     }
     return builder.build();
   }
@@ -1084,10 +1078,10 @@ public class Plumbing {
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setAccessKey(plumbing.getAccessKey());
     porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
     porcelain.setRegion(plumbing.getRegion());
+    porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setPortOverride(plumbing.getPortOverride());
     return porcelain;
   }
@@ -1104,9 +1098,6 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getEndpoint() != null) {
-      builder.setEndpoint(porcelain.getEndpoint());
-    }
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey(porcelain.getAccessKey());
     }
@@ -1115,6 +1106,9 @@ public class Plumbing {
     }
     if (porcelain.getRegion() != null) {
       builder.setRegion(porcelain.getRegion());
+    }
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint(porcelain.getEndpoint());
     }
     builder.setPortOverride(porcelain.getPortOverride());
     return builder.build();
@@ -1190,10 +1184,10 @@ public class Plumbing {
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setPrivateKey(plumbing.getPrivateKey());
     porcelain.setProject(plumbing.getProject());
     porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setEndpoint(plumbing.getEndpoint());
     porcelain.setUsername(plumbing.getUsername());
     return porcelain;
   }
@@ -1210,9 +1204,6 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getEndpoint() != null) {
-      builder.setEndpoint(porcelain.getEndpoint());
-    }
     if (porcelain.getPrivateKey() != null) {
       builder.setPrivateKey(porcelain.getPrivateKey());
     }
@@ -1220,6 +1211,9 @@ public class Plumbing {
       builder.setProject(porcelain.getProject());
     }
     builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint(porcelain.getEndpoint());
+    }
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
@@ -2276,6 +2270,7 @@ public class Plumbing {
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
     porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setSchema(plumbing.getSchema());
     porcelain.setPort(plumbing.getPort());
     porcelain.setOverrideDatabase(plumbing.getOverrideDatabase());
     return porcelain;
@@ -2306,6 +2301,9 @@ public class Plumbing {
       builder.setDatabase(porcelain.getDatabase());
     }
     builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSchema() != null) {
+      builder.setSchema(porcelain.getSchema());
+    }
     builder.setPort(porcelain.getPort());
     builder.setOverrideDatabase(porcelain.getOverrideDatabase());
     return builder.build();
@@ -2325,8 +2323,9 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoHybrid mongoHybridToPorcelain(MongoHybrid plumbing) {
-    com.strongdm.api.v1.MongoHybrid porcelain = new com.strongdm.api.v1.MongoHybrid();
+  public static com.strongdm.api.v1.MongoLegacyHost mongoLegacyHostToPorcelain(
+      MongoLegacyHost plumbing) {
+    com.strongdm.api.v1.MongoLegacyHost porcelain = new com.strongdm.api.v1.MongoLegacyHost();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
@@ -2338,14 +2337,16 @@ public class Plumbing {
     porcelain.setPort(plumbing.getPort());
     porcelain.setReplicaSet(plumbing.getReplicaSet());
     porcelain.setConnectToReplica(plumbing.getConnectToReplica());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
 
-  public static MongoHybrid mongoHybridToPlumbing(com.strongdm.api.v1.MongoHybrid porcelain) {
+  public static MongoLegacyHost mongoLegacyHostToPlumbing(
+      com.strongdm.api.v1.MongoLegacyHost porcelain) {
     if (porcelain == null) {
       return null;
     }
-    MongoHybrid.Builder builder = MongoHybrid.newBuilder();
+    MongoLegacyHost.Builder builder = MongoLegacyHost.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -2371,20 +2372,89 @@ public class Plumbing {
       builder.setReplicaSet(porcelain.getReplicaSet());
     }
     builder.setConnectToReplica(porcelain.getConnectToReplica());
+    builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.MongoHybrid> repeatedMongoHybridToPorcelain(
-      Collection<MongoHybrid> plumbings) {
+  public static List<com.strongdm.api.v1.MongoLegacyHost> repeatedMongoLegacyHostToPorcelain(
+      Collection<MongoLegacyHost> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoHybridToPorcelain(plumbing))
+        .map(plumbing -> mongoLegacyHostToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<MongoHybrid> repeatedMongoHybridToPlumbing(
-      Collection<com.strongdm.api.v1.MongoHybrid> porcelains) {
+  public static List<MongoLegacyHost> repeatedMongoLegacyHostToPlumbing(
+      Collection<com.strongdm.api.v1.MongoLegacyHost> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> mongoHybridToPlumbing(porcelain))
+        .map(porcelain -> mongoLegacyHostToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.MongoLegacyReplicaset mongoLegacyReplicasetToPorcelain(
+      MongoLegacyReplicaset plumbing) {
+    com.strongdm.api.v1.MongoLegacyReplicaset porcelain =
+        new com.strongdm.api.v1.MongoLegacyReplicaset();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setReplicaSet(plumbing.getReplicaSet());
+    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    return porcelain;
+  }
+
+  public static MongoLegacyReplicaset mongoLegacyReplicasetToPlumbing(
+      com.strongdm.api.v1.MongoLegacyReplicaset porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MongoLegacyReplicaset.Builder builder = MongoLegacyReplicaset.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase(porcelain.getAuthDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getReplicaSet() != null) {
+      builder.setReplicaSet(porcelain.getReplicaSet());
+    }
+    builder.setConnectToReplica(porcelain.getConnectToReplica());
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.MongoLegacyReplicaset>
+      repeatedMongoLegacyReplicasetToPorcelain(Collection<MongoLegacyReplicaset> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mongoLegacyReplicasetToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MongoLegacyReplicaset> repeatedMongoLegacyReplicasetToPlumbing(
+      Collection<com.strongdm.api.v1.MongoLegacyReplicaset> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mongoLegacyReplicasetToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -2399,6 +2469,8 @@ public class Plumbing {
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setPort(plumbing.getPort());
+    porcelain.setSchema(plumbing.getSchema());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
 
@@ -2428,6 +2500,10 @@ public class Plumbing {
       builder.setPassword(porcelain.getPassword());
     }
     builder.setPort(porcelain.getPort());
+    if (porcelain.getSchema() != null) {
+      builder.setSchema(porcelain.getSchema());
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 
@@ -2459,6 +2535,7 @@ public class Plumbing {
     porcelain.setPort(plumbing.getPort());
     porcelain.setReplicaSet(plumbing.getReplicaSet());
     porcelain.setConnectToReplica(plumbing.getConnectToReplica());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
 
@@ -2493,6 +2570,7 @@ public class Plumbing {
       builder.setReplicaSet(porcelain.getReplicaSet());
     }
     builder.setConnectToReplica(porcelain.getConnectToReplica());
+    builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 

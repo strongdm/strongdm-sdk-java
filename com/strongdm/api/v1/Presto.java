@@ -45,6 +45,28 @@ public class Presto implements Resource {
     return this;
   }
 
+  private String password;
+
+  public String getPassword() {
+    return this.password;
+  }
+
+  public Presto setPassword(String in) {
+    this.password = in;
+    return this;
+  }
+
+  private String database;
+
+  public String getDatabase() {
+    return this.database;
+  }
+
+  public Presto setDatabase(String in) {
+    this.database = in;
+    return this;
+  }
+
   private int portOverride;
 
   public int getPortOverride() {

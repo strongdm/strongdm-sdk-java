@@ -34,17 +34,6 @@ public class DynamoDB implements Resource {
     return this;
   }
 
-  private String endpoint;
-
-  public String getEndpoint() {
-    return this.endpoint;
-  }
-
-  public DynamoDB setEndpoint(String in) {
-    this.endpoint = in;
-    return this;
-  }
-
   private String accessKey;
 
   public String getAccessKey() {
@@ -75,6 +64,17 @@ public class DynamoDB implements Resource {
 
   public DynamoDB setRegion(String in) {
     this.region = in;
+    return this;
+  }
+
+  private String endpoint;
+
+  public String getEndpoint() {
+    return this.endpoint;
+  }
+
+  public DynamoDB setEndpoint(String in) {
+    this.endpoint = in;
     return this;
   }
 

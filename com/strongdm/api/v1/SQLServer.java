@@ -89,6 +89,17 @@ public class SQLServer implements Resource {
     return this;
   }
 
+  private String schema;
+
+  public String getSchema() {
+    return this.schema;
+  }
+
+  public SQLServer setSchema(String in) {
+    this.schema = in;
+    return this;
+  }
+
   private int port;
 
   public int getPort() {

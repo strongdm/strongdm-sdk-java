@@ -1,13 +1,13 @@
 package com.strongdm.api.v1;
 
-public class MongoHost implements Resource {
+public class MongoLegacyReplicaset implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public MongoHost setId(String in) {
+  public MongoLegacyReplicaset setId(String in) {
     this.id = in;
     return this;
   }
@@ -18,7 +18,7 @@ public class MongoHost implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public MongoHost setName(String in) {
+  public MongoLegacyReplicaset setName(String in) {
     this.name = in;
     return this;
   }
@@ -29,7 +29,7 @@ public class MongoHost implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public MongoHost setHealthy(boolean in) {
+  public MongoLegacyReplicaset setHealthy(boolean in) {
     this.healthy = in;
     return this;
   }
@@ -40,7 +40,7 @@ public class MongoHost implements Resource {
     return this.hostname;
   }
 
-  public MongoHost setHostname(String in) {
+  public MongoLegacyReplicaset setHostname(String in) {
     this.hostname = in;
     return this;
   }
@@ -51,7 +51,7 @@ public class MongoHost implements Resource {
     return this.authDatabase;
   }
 
-  public MongoHost setAuthDatabase(String in) {
+  public MongoLegacyReplicaset setAuthDatabase(String in) {
     this.authDatabase = in;
     return this;
   }
@@ -62,7 +62,7 @@ public class MongoHost implements Resource {
     return this.portOverride;
   }
 
-  public MongoHost setPortOverride(int in) {
+  public MongoLegacyReplicaset setPortOverride(int in) {
     this.portOverride = in;
     return this;
   }
@@ -73,7 +73,7 @@ public class MongoHost implements Resource {
     return this.username;
   }
 
-  public MongoHost setUsername(String in) {
+  public MongoLegacyReplicaset setUsername(String in) {
     this.username = in;
     return this;
   }
@@ -84,7 +84,7 @@ public class MongoHost implements Resource {
     return this.password;
   }
 
-  public MongoHost setPassword(String in) {
+  public MongoLegacyReplicaset setPassword(String in) {
     this.password = in;
     return this;
   }
@@ -95,19 +95,30 @@ public class MongoHost implements Resource {
     return this.port;
   }
 
-  public MongoHost setPort(int in) {
+  public MongoLegacyReplicaset setPort(int in) {
     this.port = in;
     return this;
   }
 
-  private String schema;
+  private String replicaSet;
 
-  public String getSchema() {
-    return this.schema;
+  public String getReplicaSet() {
+    return this.replicaSet;
   }
 
-  public MongoHost setSchema(String in) {
-    this.schema = in;
+  public MongoLegacyReplicaset setReplicaSet(String in) {
+    this.replicaSet = in;
+    return this;
+  }
+
+  private boolean connectToReplica;
+
+  public boolean getConnectToReplica() {
+    return this.connectToReplica;
+  }
+
+  public MongoLegacyReplicaset setConnectToReplica(boolean in) {
+    this.connectToReplica = in;
     return this;
   }
 
@@ -117,7 +128,7 @@ public class MongoHost implements Resource {
     return this.tlsRequired;
   }
 
-  public MongoHost setTlsRequired(boolean in) {
+  public MongoLegacyReplicaset setTlsRequired(boolean in) {
     this.tlsRequired = in;
     return this;
   }

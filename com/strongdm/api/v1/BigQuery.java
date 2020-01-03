@@ -34,17 +34,6 @@ public class BigQuery implements Resource {
     return this;
   }
 
-  private String endpoint;
-
-  public String getEndpoint() {
-    return this.endpoint;
-  }
-
-  public BigQuery setEndpoint(String in) {
-    this.endpoint = in;
-    return this;
-  }
-
   private String privateKey;
 
   public String getPrivateKey() {
@@ -75,6 +64,17 @@ public class BigQuery implements Resource {
 
   public BigQuery setPortOverride(int in) {
     this.portOverride = in;
+    return this;
+  }
+
+  private String endpoint;
+
+  public String getEndpoint() {
+    return this.endpoint;
+  }
+
+  public BigQuery setEndpoint(String in) {
+    this.endpoint = in;
     return this;
   }
 
