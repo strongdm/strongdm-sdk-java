@@ -32,7 +32,6 @@ public class Resources {
   public Resources withDeadlineAfter(long duration, TimeUnit units) {
     return new Resources(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-
   // Create registers a new Resource.
   public ResourceCreateResponse create(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceCreateRequest.Builder builder =
@@ -59,7 +58,6 @@ public class Resources {
     }
     return Plumbing.resourceCreateResponseToPorcelain(plumbingResponse);
   }
-
   // Get reads one Resource by ID.
   public ResourceGetResponse get(String id) throws RpcException {
     ResourcesPlumbing.ResourceGetRequest.Builder builder =
@@ -86,7 +84,6 @@ public class Resources {
     }
     return Plumbing.resourceGetResponseToPorcelain(plumbingResponse);
   }
-
   // Update patches a Resource by ID.
   public ResourceUpdateResponse update(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceUpdateRequest.Builder builder =
@@ -113,7 +110,6 @@ public class Resources {
     }
     return Plumbing.resourceUpdateResponseToPorcelain(plumbingResponse);
   }
-
   // Delete removes a Resource by ID.
   public ResourceDeleteResponse delete(String id) throws RpcException {
     ResourcesPlumbing.ResourceDeleteRequest.Builder builder =
@@ -140,13 +136,11 @@ public class Resources {
     }
     return Plumbing.resourceDeleteResponseToPorcelain(plumbingResponse);
   }
-
   // List gets a list of Resources matching a given set of criteria.
   public Iterable<Resource> list(String filter, Object... args) throws RpcException {
     ResourcesPlumbing.ResourceListRequest.Builder builder =
         ResourcesPlumbing.ResourceListRequest.newBuilder();
     builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
-
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {

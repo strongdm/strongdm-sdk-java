@@ -2,6 +2,7 @@ package com.strongdm.api.v1;
 
 // RoleUpdateResponse returns the fields of a Role after it has been updated by
 // a RoleUpdateRequest.
+
 public class RoleUpdateResponse {
   private UpdateResponseMetadata meta;
   // Reserved for future use.

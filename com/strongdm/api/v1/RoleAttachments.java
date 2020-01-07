@@ -36,7 +36,6 @@ public class RoleAttachments {
   public RoleAttachments withDeadlineAfter(long duration, TimeUnit units) {
     return new RoleAttachments(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-
   // Create registers a new RoleAttachment.
   public RoleAttachmentCreateResponse create(RoleAttachment roleAttachment) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentCreateRequest.Builder builder =
@@ -63,7 +62,6 @@ public class RoleAttachments {
     }
     return Plumbing.roleAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
-
   // Get reads one RoleAttachment by ID.
   public RoleAttachmentGetResponse get(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentGetRequest.Builder builder =
@@ -90,7 +88,6 @@ public class RoleAttachments {
     }
     return Plumbing.roleAttachmentGetResponseToPorcelain(plumbingResponse);
   }
-
   // Delete removes a RoleAttachment by ID.
   public RoleAttachmentDeleteResponse delete(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.Builder builder =
@@ -117,13 +114,11 @@ public class RoleAttachments {
     }
     return Plumbing.roleAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
-
   // List gets a list of RoleAttachments matching a given set of criteria.
   public Iterable<RoleAttachment> list(String filter, Object... args) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentListRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentListRequest.newBuilder();
     builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
-
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {

@@ -37,7 +37,6 @@ public class Roles {
   public Roles withDeadlineAfter(long duration, TimeUnit units) {
     return new Roles(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-
   // Create registers a new Role.
   public RoleCreateResponse create(Role role) throws RpcException {
     RolesPlumbing.RoleCreateRequest.Builder builder = RolesPlumbing.RoleCreateRequest.newBuilder();
@@ -63,7 +62,6 @@ public class Roles {
     }
     return Plumbing.roleCreateResponseToPorcelain(plumbingResponse);
   }
-
   // Get reads one Role by ID.
   public RoleGetResponse get(String id) throws RpcException {
     RolesPlumbing.RoleGetRequest.Builder builder = RolesPlumbing.RoleGetRequest.newBuilder();
@@ -89,7 +87,6 @@ public class Roles {
     }
     return Plumbing.roleGetResponseToPorcelain(plumbingResponse);
   }
-
   // Update patches a Role by ID.
   public RoleUpdateResponse update(Role role) throws RpcException {
     RolesPlumbing.RoleUpdateRequest.Builder builder = RolesPlumbing.RoleUpdateRequest.newBuilder();
@@ -115,7 +112,6 @@ public class Roles {
     }
     return Plumbing.roleUpdateResponseToPorcelain(plumbingResponse);
   }
-
   // Delete removes a Role by ID.
   public RoleDeleteResponse delete(String id) throws RpcException {
     RolesPlumbing.RoleDeleteRequest.Builder builder = RolesPlumbing.RoleDeleteRequest.newBuilder();
@@ -141,12 +137,10 @@ public class Roles {
     }
     return Plumbing.roleDeleteResponseToPorcelain(plumbingResponse);
   }
-
   // List gets a list of Roles matching a given set of criteria.
   public Iterable<Role> list(String filter, Object... args) throws RpcException {
     RolesPlumbing.RoleListRequest.Builder builder = RolesPlumbing.RoleListRequest.newBuilder();
     builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
-
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {

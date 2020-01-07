@@ -1,6 +1,7 @@
 package com.strongdm.api.v1;
 
 // RoleAttachmentGetResponse returns a requested RoleAttachment.
+
 public class RoleAttachmentGetResponse {
   private GetResponseMetadata meta;
   // Reserved for future use.

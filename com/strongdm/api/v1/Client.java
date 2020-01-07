@@ -27,7 +27,6 @@ public class Client {
   private int maxRetries;
   private int baseRetryDelay;
   private int maxRetryDelay;
-
   private final Nodes nodes;
 
   // Nodes are proxies in the strongDM network. They come in two flavors: relays,
@@ -63,7 +62,6 @@ public class Client {
   public Roles roles() {
     return this.roles;
   }
-
   // Creates a new strongDM API client. Pass in the API hostname, port, and authentication token.
   public Client(String host, int port, String apiAccessKey, String apiSecretKey)
       throws RpcException {
@@ -84,7 +82,6 @@ public class Client {
       this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);
       this.roles = new Roles(this.channel, this);
-
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }

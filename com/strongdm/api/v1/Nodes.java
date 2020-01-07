@@ -35,7 +35,6 @@ public class Nodes {
   public Nodes withDeadlineAfter(long duration, TimeUnit units) {
     return new Nodes(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-
   // Create registers a new Node.
   public NodeCreateResponse create(Node node) throws RpcException {
     NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
@@ -61,7 +60,6 @@ public class Nodes {
     }
     return Plumbing.nodeCreateResponseToPorcelain(plumbingResponse);
   }
-
   // Get reads one Node by ID.
   public NodeGetResponse get(String id) throws RpcException {
     NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
@@ -87,7 +85,6 @@ public class Nodes {
     }
     return Plumbing.nodeGetResponseToPorcelain(plumbingResponse);
   }
-
   // Update patches a Node by ID.
   public NodeUpdateResponse update(Node node) throws RpcException {
     NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
@@ -113,7 +110,6 @@ public class Nodes {
     }
     return Plumbing.nodeUpdateResponseToPorcelain(plumbingResponse);
   }
-
   // Delete removes a Node by ID.
   public NodeDeleteResponse delete(String id) throws RpcException {
     NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
@@ -139,12 +135,10 @@ public class Nodes {
     }
     return Plumbing.nodeDeleteResponseToPorcelain(plumbingResponse);
   }
-
   // List gets a list of Nodes matching a given set of criteria.
   public Iterable<Node> list(String filter, Object... args) throws RpcException {
     NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
     builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
-
     ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {

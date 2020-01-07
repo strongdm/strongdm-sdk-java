@@ -1,6 +1,7 @@
 package com.strongdm.api.v1;
 
 // Relay represents a StrongDM CLI installation running in relay mode.
+
 public class Relay implements Node {
   private String id;
   // Unique identifier of the Relay.

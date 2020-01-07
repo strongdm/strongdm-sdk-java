@@ -1,6 +1,7 @@
 package com.strongdm.api.v1;
 
 // NodeGetResponse returns a requested Node.
+
 public class NodeGetResponse {
   private GetResponseMetadata meta;
   // Reserved for future use.

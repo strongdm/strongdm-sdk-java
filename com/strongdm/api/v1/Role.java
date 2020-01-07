@@ -3,6 +3,7 @@ package com.strongdm.api.v1;
 // A Role grants users access to a set of resources. Composite roles have no
 // resource associations of their own, but instead grant access to the combined
 // resources of their child roles.
+
 public class Role {
   private String id;
   // Unique identifier of the Role.

@@ -4,6 +4,7 @@ import java.util.Date;
 
 // RateLimitMetadata contains information about remaining requests avaialable
 // to the user over some timeframe.
+
 public class RateLimitMetadata {
   private long limit;
   // How many total requests the user/token is authorized to make before being
