@@ -51,121 +51,121 @@ public class Plumbing {
     if (plumbing == null) {
       return null;
     }
-    if (plumbing.getSybase() != null) {
+    if (plumbing.hasSybase()) {
       return sybaseToPorcelain(plumbing.getSybase());
     }
-    if (plumbing.getPresto() != null) {
+    if (plumbing.hasPresto()) {
       return prestoToPorcelain(plumbing.getPresto());
     }
-    if (plumbing.getTeradata() != null) {
+    if (plumbing.hasTeradata()) {
       return teradataToPorcelain(plumbing.getTeradata());
     }
-    if (plumbing.getAmazonEs() != null) {
+    if (plumbing.hasAmazonEs()) {
       return amazonEsToPorcelain(plumbing.getAmazonEs());
     }
-    if (plumbing.getElastic() != null) {
+    if (plumbing.hasElastic()) {
       return elasticToPorcelain(plumbing.getElastic());
     }
-    if (plumbing.getRedis() != null) {
+    if (plumbing.hasRedis()) {
       return redisToPorcelain(plumbing.getRedis());
     }
-    if (plumbing.getElasticacheRedis() != null) {
+    if (plumbing.hasElasticacheRedis()) {
       return elasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
     }
-    if (plumbing.getKubernetes() != null) {
+    if (plumbing.hasKubernetes()) {
       return kubernetesToPorcelain(plumbing.getKubernetes());
     }
-    if (plumbing.getKubernetesBasicAuth() != null) {
+    if (plumbing.hasKubernetesBasicAuth()) {
       return kubernetesBasicAuthToPorcelain(plumbing.getKubernetesBasicAuth());
     }
-    if (plumbing.getAmazonEks() != null) {
+    if (plumbing.hasAmazonEks()) {
       return amazonEksToPorcelain(plumbing.getAmazonEks());
     }
-    if (plumbing.getGoogleGke() != null) {
+    if (plumbing.hasGoogleGke()) {
       return googleGkeToPorcelain(plumbing.getGoogleGke());
     }
-    if (plumbing.getOracle() != null) {
+    if (plumbing.hasOracle()) {
       return oracleToPorcelain(plumbing.getOracle());
     }
-    if (plumbing.getDynamoDb() != null) {
+    if (plumbing.hasDynamoDb()) {
       return dynamoDbToPorcelain(plumbing.getDynamoDb());
     }
-    if (plumbing.getRdp() != null) {
+    if (plumbing.hasRdp()) {
       return rdpToPorcelain(plumbing.getRdp());
     }
-    if (plumbing.getBigQuery() != null) {
+    if (plumbing.hasBigQuery()) {
       return bigQueryToPorcelain(plumbing.getBigQuery());
     }
-    if (plumbing.getSnowflake() != null) {
+    if (plumbing.hasSnowflake()) {
       return snowflakeToPorcelain(plumbing.getSnowflake());
     }
-    if (plumbing.getMemcached() != null) {
+    if (plumbing.hasMemcached()) {
       return memcachedToPorcelain(plumbing.getMemcached());
     }
-    if (plumbing.getPostgres() != null) {
+    if (plumbing.hasPostgres()) {
       return postgresToPorcelain(plumbing.getPostgres());
     }
-    if (plumbing.getAuroraPostgres() != null) {
+    if (plumbing.hasAuroraPostgres()) {
       return auroraPostgresToPorcelain(plumbing.getAuroraPostgres());
     }
-    if (plumbing.getGreenplum() != null) {
+    if (plumbing.hasGreenplum()) {
       return greenplumToPorcelain(plumbing.getGreenplum());
     }
-    if (plumbing.getCockroach() != null) {
+    if (plumbing.hasCockroach()) {
       return cockroachToPorcelain(plumbing.getCockroach());
     }
-    if (plumbing.getRedshift() != null) {
+    if (plumbing.hasRedshift()) {
       return redshiftToPorcelain(plumbing.getRedshift());
     }
-    if (plumbing.getSsh() != null) {
+    if (plumbing.hasSsh()) {
       return sshToPorcelain(plumbing.getSsh());
     }
-    if (plumbing.getHttpBasicAuth() != null) {
+    if (plumbing.hasHttpBasicAuth()) {
       return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
     }
-    if (plumbing.getHttpNoAuth() != null) {
+    if (plumbing.hasHttpNoAuth()) {
       return httpNoAuthToPorcelain(plumbing.getHttpNoAuth());
     }
-    if (plumbing.getHttpAuth() != null) {
+    if (plumbing.hasHttpAuth()) {
       return httpAuthToPorcelain(plumbing.getHttpAuth());
     }
-    if (plumbing.getCassandra() != null) {
+    if (plumbing.hasCassandra()) {
       return cassandraToPorcelain(plumbing.getCassandra());
     }
-    if (plumbing.getMysql() != null) {
+    if (plumbing.hasMysql()) {
       return mysqlToPorcelain(plumbing.getMysql());
     }
-    if (plumbing.getAuroraMysql() != null) {
+    if (plumbing.hasAuroraMysql()) {
       return auroraMysqlToPorcelain(plumbing.getAuroraMysql());
     }
-    if (plumbing.getClustrix() != null) {
+    if (plumbing.hasClustrix()) {
       return clustrixToPorcelain(plumbing.getClustrix());
     }
-    if (plumbing.getMaria() != null) {
+    if (plumbing.hasMaria()) {
       return mariaToPorcelain(plumbing.getMaria());
     }
-    if (plumbing.getMemsql() != null) {
+    if (plumbing.hasMemsql()) {
       return memsqlToPorcelain(plumbing.getMemsql());
     }
-    if (plumbing.getDruid() != null) {
+    if (plumbing.hasDruid()) {
       return druidToPorcelain(plumbing.getDruid());
     }
-    if (plumbing.getSqlServer() != null) {
+    if (plumbing.hasSqlServer()) {
       return sqlServerToPorcelain(plumbing.getSqlServer());
     }
-    if (plumbing.getMongoLegacyHost() != null) {
+    if (plumbing.hasMongoLegacyHost()) {
       return mongoLegacyHostToPorcelain(plumbing.getMongoLegacyHost());
     }
-    if (plumbing.getMongoLegacyReplicaset() != null) {
+    if (plumbing.hasMongoLegacyReplicaset()) {
       return mongoLegacyReplicasetToPorcelain(plumbing.getMongoLegacyReplicaset());
     }
-    if (plumbing.getMongoHost() != null) {
+    if (plumbing.hasMongoHost()) {
       return mongoHostToPorcelain(plumbing.getMongoHost());
     }
-    if (plumbing.getMongoReplicaSet() != null) {
+    if (plumbing.hasMongoReplicaSet()) {
       return mongoReplicaSetToPorcelain(plumbing.getMongoReplicaSet());
     }
-    if (plumbing.getAthena() != null) {
+    if (plumbing.hasAthena()) {
       return athenaToPorcelain(plumbing.getAthena());
     }
     return null;
@@ -2972,10 +2972,10 @@ public class Plumbing {
     if (plumbing == null) {
       return null;
     }
-    if (plumbing.getRelay() != null) {
+    if (plumbing.hasRelay()) {
       return relayToPorcelain(plumbing.getRelay());
     }
-    if (plumbing.getGateway() != null) {
+    if (plumbing.hasGateway()) {
       return gatewayToPorcelain(plumbing.getGateway());
     }
     return null;
