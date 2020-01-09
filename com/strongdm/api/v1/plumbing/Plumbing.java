@@ -51,14 +51,20 @@ public class Plumbing {
     if (plumbing == null) {
       return null;
     }
-    if (plumbing.hasSybase()) {
-      return sybaseToPorcelain(plumbing.getSybase());
+    if (plumbing.hasAthena()) {
+      return athenaToPorcelain(plumbing.getAthena());
     }
-    if (plumbing.hasPresto()) {
-      return prestoToPorcelain(plumbing.getPresto());
+    if (plumbing.hasBigQuery()) {
+      return bigQueryToPorcelain(plumbing.getBigQuery());
     }
-    if (plumbing.hasTeradata()) {
-      return teradataToPorcelain(plumbing.getTeradata());
+    if (plumbing.hasCassandra()) {
+      return cassandraToPorcelain(plumbing.getCassandra());
+    }
+    if (plumbing.hasDruid()) {
+      return druidToPorcelain(plumbing.getDruid());
+    }
+    if (plumbing.hasDynamoDb()) {
+      return dynamoDbToPorcelain(plumbing.getDynamoDb());
     }
     if (plumbing.hasAmazonEs()) {
       return amazonEsToPorcelain(plumbing.getAmazonEs());
@@ -66,11 +72,14 @@ public class Plumbing {
     if (plumbing.hasElastic()) {
       return elasticToPorcelain(plumbing.getElastic());
     }
-    if (plumbing.hasRedis()) {
-      return redisToPorcelain(plumbing.getRedis());
+    if (plumbing.hasHttpBasicAuth()) {
+      return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
     }
-    if (plumbing.hasElasticacheRedis()) {
-      return elasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
+    if (plumbing.hasHttpNoAuth()) {
+      return httpNoAuthToPorcelain(plumbing.getHttpNoAuth());
+    }
+    if (plumbing.hasHttpAuth()) {
+      return httpAuthToPorcelain(plumbing.getHttpAuth());
     }
     if (plumbing.hasKubernetes()) {
       return kubernetesToPorcelain(plumbing.getKubernetes());
@@ -84,53 +93,20 @@ public class Plumbing {
     if (plumbing.hasGoogleGke()) {
       return googleGkeToPorcelain(plumbing.getGoogleGke());
     }
-    if (plumbing.hasOracle()) {
-      return oracleToPorcelain(plumbing.getOracle());
-    }
-    if (plumbing.hasDynamoDb()) {
-      return dynamoDbToPorcelain(plumbing.getDynamoDb());
-    }
-    if (plumbing.hasRdp()) {
-      return rdpToPorcelain(plumbing.getRdp());
-    }
-    if (plumbing.hasBigQuery()) {
-      return bigQueryToPorcelain(plumbing.getBigQuery());
-    }
-    if (plumbing.hasSnowflake()) {
-      return snowflakeToPorcelain(plumbing.getSnowflake());
-    }
     if (plumbing.hasMemcached()) {
       return memcachedToPorcelain(plumbing.getMemcached());
     }
-    if (plumbing.hasPostgres()) {
-      return postgresToPorcelain(plumbing.getPostgres());
+    if (plumbing.hasMongoLegacyHost()) {
+      return mongoLegacyHostToPorcelain(plumbing.getMongoLegacyHost());
     }
-    if (plumbing.hasAuroraPostgres()) {
-      return auroraPostgresToPorcelain(plumbing.getAuroraPostgres());
+    if (plumbing.hasMongoLegacyReplicaset()) {
+      return mongoLegacyReplicasetToPorcelain(plumbing.getMongoLegacyReplicaset());
     }
-    if (plumbing.hasGreenplum()) {
-      return greenplumToPorcelain(plumbing.getGreenplum());
+    if (plumbing.hasMongoHost()) {
+      return mongoHostToPorcelain(plumbing.getMongoHost());
     }
-    if (plumbing.hasCockroach()) {
-      return cockroachToPorcelain(plumbing.getCockroach());
-    }
-    if (plumbing.hasRedshift()) {
-      return redshiftToPorcelain(plumbing.getRedshift());
-    }
-    if (plumbing.hasSsh()) {
-      return sshToPorcelain(plumbing.getSsh());
-    }
-    if (plumbing.hasHttpBasicAuth()) {
-      return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
-    }
-    if (plumbing.hasHttpNoAuth()) {
-      return httpNoAuthToPorcelain(plumbing.getHttpNoAuth());
-    }
-    if (plumbing.hasHttpAuth()) {
-      return httpAuthToPorcelain(plumbing.getHttpAuth());
-    }
-    if (plumbing.hasCassandra()) {
-      return cassandraToPorcelain(plumbing.getCassandra());
+    if (plumbing.hasMongoReplicaSet()) {
+      return mongoReplicaSetToPorcelain(plumbing.getMongoReplicaSet());
     }
     if (plumbing.hasMysql()) {
       return mysqlToPorcelain(plumbing.getMysql());
@@ -147,26 +123,50 @@ public class Plumbing {
     if (plumbing.hasMemsql()) {
       return memsqlToPorcelain(plumbing.getMemsql());
     }
-    if (plumbing.hasDruid()) {
-      return druidToPorcelain(plumbing.getDruid());
+    if (plumbing.hasOracle()) {
+      return oracleToPorcelain(plumbing.getOracle());
+    }
+    if (plumbing.hasPostgres()) {
+      return postgresToPorcelain(plumbing.getPostgres());
+    }
+    if (plumbing.hasAuroraPostgres()) {
+      return auroraPostgresToPorcelain(plumbing.getAuroraPostgres());
+    }
+    if (plumbing.hasGreenplum()) {
+      return greenplumToPorcelain(plumbing.getGreenplum());
+    }
+    if (plumbing.hasCockroach()) {
+      return cockroachToPorcelain(plumbing.getCockroach());
+    }
+    if (plumbing.hasRedshift()) {
+      return redshiftToPorcelain(plumbing.getRedshift());
+    }
+    if (plumbing.hasPresto()) {
+      return prestoToPorcelain(plumbing.getPresto());
+    }
+    if (plumbing.hasRdp()) {
+      return rdpToPorcelain(plumbing.getRdp());
+    }
+    if (plumbing.hasRedis()) {
+      return redisToPorcelain(plumbing.getRedis());
+    }
+    if (plumbing.hasElasticacheRedis()) {
+      return elasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
+    }
+    if (plumbing.hasSnowflake()) {
+      return snowflakeToPorcelain(plumbing.getSnowflake());
     }
     if (plumbing.hasSqlServer()) {
       return sqlServerToPorcelain(plumbing.getSqlServer());
     }
-    if (plumbing.hasMongoLegacyHost()) {
-      return mongoLegacyHostToPorcelain(plumbing.getMongoLegacyHost());
+    if (plumbing.hasSsh()) {
+      return sshToPorcelain(plumbing.getSsh());
     }
-    if (plumbing.hasMongoLegacyReplicaset()) {
-      return mongoLegacyReplicasetToPorcelain(plumbing.getMongoLegacyReplicaset());
+    if (plumbing.hasSybase()) {
+      return sybaseToPorcelain(plumbing.getSybase());
     }
-    if (plumbing.hasMongoHost()) {
-      return mongoHostToPorcelain(plumbing.getMongoHost());
-    }
-    if (plumbing.hasMongoReplicaSet()) {
-      return mongoReplicaSetToPorcelain(plumbing.getMongoReplicaSet());
-    }
-    if (plumbing.hasAthena()) {
-      return athenaToPorcelain(plumbing.getAthena());
+    if (plumbing.hasTeradata()) {
+      return teradataToPorcelain(plumbing.getTeradata());
     }
     return null;
   }
@@ -175,19 +175,29 @@ public class Plumbing {
     if (porcelain == null) {
       return null;
     }
-    if (porcelain instanceof com.strongdm.api.v1.Sybase) {
+    if (porcelain instanceof com.strongdm.api.v1.Athena) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setSybase(sybaseToPlumbing((com.strongdm.api.v1.Sybase) porcelain));
+      builder.setAthena(athenaToPlumbing((com.strongdm.api.v1.Athena) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.Presto) {
+    if (porcelain instanceof com.strongdm.api.v1.BigQuery) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setPresto(prestoToPlumbing((com.strongdm.api.v1.Presto) porcelain));
+      builder.setBigQuery(bigQueryToPlumbing((com.strongdm.api.v1.BigQuery) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.Teradata) {
+    if (porcelain instanceof com.strongdm.api.v1.Cassandra) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setTeradata(teradataToPlumbing((com.strongdm.api.v1.Teradata) porcelain));
+      builder.setCassandra(cassandraToPlumbing((com.strongdm.api.v1.Cassandra) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Druid) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setDruid(druidToPlumbing((com.strongdm.api.v1.Druid) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.DynamoDB) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setDynamoDb(dynamoDbToPlumbing((com.strongdm.api.v1.DynamoDB) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.AmazonES) {
@@ -200,15 +210,20 @@ public class Plumbing {
       builder.setElastic(elasticToPlumbing((com.strongdm.api.v1.Elastic) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.Redis) {
+    if (porcelain instanceof com.strongdm.api.v1.HTTPBasicAuth) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setRedis(redisToPlumbing((com.strongdm.api.v1.Redis) porcelain));
+      builder.setHttpBasicAuth(
+          httpBasicAuthToPlumbing((com.strongdm.api.v1.HTTPBasicAuth) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.ElasticacheRedis) {
+    if (porcelain instanceof com.strongdm.api.v1.HTTPNoAuth) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setElasticacheRedis(
-          elasticacheRedisToPlumbing((com.strongdm.api.v1.ElasticacheRedis) porcelain));
+      builder.setHttpNoAuth(httpNoAuthToPlumbing((com.strongdm.api.v1.HTTPNoAuth) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.HTTPAuth) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setHttpAuth(httpAuthToPlumbing((com.strongdm.api.v1.HTTPAuth) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Kubernetes) {
@@ -232,34 +247,62 @@ public class Plumbing {
       builder.setGoogleGke(googleGkeToPlumbing((com.strongdm.api.v1.GoogleGKE) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.Oracle) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setOracle(oracleToPlumbing((com.strongdm.api.v1.Oracle) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.DynamoDB) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setDynamoDb(dynamoDbToPlumbing((com.strongdm.api.v1.DynamoDB) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.RDP) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setRdp(rdpToPlumbing((com.strongdm.api.v1.RDP) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.BigQuery) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setBigQuery(bigQueryToPlumbing((com.strongdm.api.v1.BigQuery) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.Snowflake) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setSnowflake(snowflakeToPlumbing((com.strongdm.api.v1.Snowflake) porcelain));
-      return builder.build();
-    }
     if (porcelain instanceof com.strongdm.api.v1.Memcached) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setMemcached(memcachedToPlumbing((com.strongdm.api.v1.Memcached) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.MongoLegacyHost) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMongoLegacyHost(
+          mongoLegacyHostToPlumbing((com.strongdm.api.v1.MongoLegacyHost) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.MongoLegacyReplicaset) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMongoLegacyReplicaset(
+          mongoLegacyReplicasetToPlumbing((com.strongdm.api.v1.MongoLegacyReplicaset) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.MongoHost) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMongoHost(mongoHostToPlumbing((com.strongdm.api.v1.MongoHost) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.MongoReplicaSet) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMongoReplicaSet(
+          mongoReplicaSetToPlumbing((com.strongdm.api.v1.MongoReplicaSet) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Mysql) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMysql(mysqlToPlumbing((com.strongdm.api.v1.Mysql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AuroraMysql) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAuroraMysql(auroraMysqlToPlumbing((com.strongdm.api.v1.AuroraMysql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Clustrix) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setClustrix(clustrixToPlumbing((com.strongdm.api.v1.Clustrix) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Maria) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMaria(mariaToPlumbing((com.strongdm.api.v1.Maria) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Memsql) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMemsql(memsqlToPlumbing((com.strongdm.api.v1.Memsql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Oracle) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setOracle(oracleToPlumbing((com.strongdm.api.v1.Oracle) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Postgres) {
@@ -288,60 +331,30 @@ public class Plumbing {
       builder.setRedshift(redshiftToPlumbing((com.strongdm.api.v1.Redshift) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.SSH) {
+    if (porcelain instanceof com.strongdm.api.v1.Presto) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setSsh(sshToPlumbing((com.strongdm.api.v1.SSH) porcelain));
+      builder.setPresto(prestoToPlumbing((com.strongdm.api.v1.Presto) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.HTTPBasicAuth) {
+    if (porcelain instanceof com.strongdm.api.v1.RDP) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setHttpBasicAuth(
-          httpBasicAuthToPlumbing((com.strongdm.api.v1.HTTPBasicAuth) porcelain));
+      builder.setRdp(rdpToPlumbing((com.strongdm.api.v1.RDP) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.HTTPNoAuth) {
+    if (porcelain instanceof com.strongdm.api.v1.Redis) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setHttpNoAuth(httpNoAuthToPlumbing((com.strongdm.api.v1.HTTPNoAuth) porcelain));
+      builder.setRedis(redisToPlumbing((com.strongdm.api.v1.Redis) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.HTTPAuth) {
+    if (porcelain instanceof com.strongdm.api.v1.ElasticacheRedis) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setHttpAuth(httpAuthToPlumbing((com.strongdm.api.v1.HTTPAuth) porcelain));
+      builder.setElasticacheRedis(
+          elasticacheRedisToPlumbing((com.strongdm.api.v1.ElasticacheRedis) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.Cassandra) {
+    if (porcelain instanceof com.strongdm.api.v1.Snowflake) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setCassandra(cassandraToPlumbing((com.strongdm.api.v1.Cassandra) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.Mysql) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setMysql(mysqlToPlumbing((com.strongdm.api.v1.Mysql) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.AuroraMysql) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setAuroraMysql(auroraMysqlToPlumbing((com.strongdm.api.v1.AuroraMysql) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.Clustrix) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setClustrix(clustrixToPlumbing((com.strongdm.api.v1.Clustrix) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.Maria) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setMaria(mariaToPlumbing((com.strongdm.api.v1.Maria) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.Memsql) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setMemsql(memsqlToPlumbing((com.strongdm.api.v1.Memsql) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.Druid) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setDruid(druidToPlumbing((com.strongdm.api.v1.Druid) porcelain));
+      builder.setSnowflake(snowflakeToPlumbing((com.strongdm.api.v1.Snowflake) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.SQLServer) {
@@ -349,32 +362,19 @@ public class Plumbing {
       builder.setSqlServer(sqlServerToPlumbing((com.strongdm.api.v1.SQLServer) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.MongoLegacyHost) {
+    if (porcelain instanceof com.strongdm.api.v1.SSH) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setMongoLegacyHost(
-          mongoLegacyHostToPlumbing((com.strongdm.api.v1.MongoLegacyHost) porcelain));
+      builder.setSsh(sshToPlumbing((com.strongdm.api.v1.SSH) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.MongoLegacyReplicaset) {
+    if (porcelain instanceof com.strongdm.api.v1.Sybase) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setMongoLegacyReplicaset(
-          mongoLegacyReplicasetToPlumbing((com.strongdm.api.v1.MongoLegacyReplicaset) porcelain));
+      builder.setSybase(sybaseToPlumbing((com.strongdm.api.v1.Sybase) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.MongoHost) {
+    if (porcelain instanceof com.strongdm.api.v1.Teradata) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setMongoHost(mongoHostToPlumbing((com.strongdm.api.v1.MongoHost) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.MongoReplicaSet) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setMongoReplicaSet(
-          mongoReplicaSetToPlumbing((com.strongdm.api.v1.MongoReplicaSet) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.Athena) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setAthena(athenaToPlumbing((com.strongdm.api.v1.Athena) porcelain));
+      builder.setTeradata(teradataToPlumbing((com.strongdm.api.v1.Teradata) porcelain));
       return builder.build();
     }
     return null;
@@ -394,24 +394,24 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Sybase sybaseToPorcelain(Sybase plumbing) {
-    com.strongdm.api.v1.Sybase porcelain = new com.strongdm.api.v1.Sybase();
+  public static com.strongdm.api.v1.Athena athenaToPorcelain(Athena plumbing) {
+    com.strongdm.api.v1.Athena porcelain = new com.strongdm.api.v1.Athena();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setAccessKey(plumbing.getAccessKey());
+    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
+    porcelain.setOutput(plumbing.getOutput());
     porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setRegion(plumbing.getRegion());
     return porcelain;
   }
 
-  public static Sybase sybaseToPlumbing(com.strongdm.api.v1.Sybase porcelain) {
+  public static Athena athenaToPlumbing(com.strongdm.api.v1.Athena porcelain) {
     if (porcelain == null) {
       return null;
     }
-    Sybase.Builder builder = Sybase.newBuilder();
+    Athena.Builder builder = Athena.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -419,54 +419,110 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
+    if (porcelain.getAccessKey() != null) {
+      builder.setAccessKey(porcelain.getAccessKey());
     }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey(porcelain.getSecretAccessKey());
+    }
+    if (porcelain.getOutput() != null) {
+      builder.setOutput(porcelain.getOutput());
     }
     builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion(porcelain.getRegion());
     }
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Sybase> repeatedSybaseToPorcelain(
-      Collection<Sybase> plumbings) {
+  public static List<com.strongdm.api.v1.Athena> repeatedAthenaToPorcelain(
+      Collection<Athena> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> sybaseToPorcelain(plumbing))
+        .map(plumbing -> athenaToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<Sybase> repeatedSybaseToPlumbing(
-      Collection<com.strongdm.api.v1.Sybase> porcelains) {
+  public static List<Athena> repeatedAthenaToPlumbing(
+      Collection<com.strongdm.api.v1.Athena> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> sybaseToPlumbing(porcelain))
+        .map(porcelain -> athenaToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Presto prestoToPorcelain(Presto plumbing) {
-    com.strongdm.api.v1.Presto porcelain = new com.strongdm.api.v1.Presto();
+  public static com.strongdm.api.v1.BigQuery bigQueryToPorcelain(BigQuery plumbing) {
+    com.strongdm.api.v1.BigQuery porcelain = new com.strongdm.api.v1.BigQuery();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setPrivateKey(plumbing.getPrivateKey());
+    porcelain.setProject(plumbing.getProject());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setEndpoint(plumbing.getEndpoint());
+    porcelain.setUsername(plumbing.getUsername());
+    return porcelain;
+  }
+
+  public static BigQuery bigQueryToPlumbing(com.strongdm.api.v1.BigQuery porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    BigQuery.Builder builder = BigQuery.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getPrivateKey() != null) {
+      builder.setPrivateKey(porcelain.getPrivateKey());
+    }
+    if (porcelain.getProject() != null) {
+      builder.setProject(porcelain.getProject());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint(porcelain.getEndpoint());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.BigQuery> repeatedBigQueryToPorcelain(
+      Collection<BigQuery> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> bigQueryToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<BigQuery> repeatedBigQueryToPlumbing(
+      Collection<com.strongdm.api.v1.BigQuery> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> bigQueryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Cassandra cassandraToPorcelain(Cassandra plumbing) {
+    com.strongdm.api.v1.Cassandra porcelain = new com.strongdm.api.v1.Cassandra();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
     porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
-    porcelain.setUsername(plumbing.getUsername());
     porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
 
-  public static Presto prestoToPlumbing(com.strongdm.api.v1.Presto porcelain) {
+  public static Cassandra cassandraToPlumbing(com.strongdm.api.v1.Cassandra porcelain) {
     if (porcelain == null) {
       return null;
     }
-    Presto.Builder builder = Presto.newBuilder();
+    Cassandra.Builder builder = Cassandra.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -477,53 +533,50 @@ public class Plumbing {
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase(porcelain.getDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
     builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Presto> repeatedPrestoToPorcelain(
-      Collection<Presto> plumbings) {
+  public static List<com.strongdm.api.v1.Cassandra> repeatedCassandraToPorcelain(
+      Collection<Cassandra> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> prestoToPorcelain(plumbing))
+        .map(plumbing -> cassandraToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<Presto> repeatedPrestoToPlumbing(
-      Collection<com.strongdm.api.v1.Presto> porcelains) {
+  public static List<Cassandra> repeatedCassandraToPlumbing(
+      Collection<com.strongdm.api.v1.Cassandra> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> prestoToPlumbing(porcelain))
+        .map(porcelain -> cassandraToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Teradata teradataToPorcelain(Teradata plumbing) {
-    com.strongdm.api.v1.Teradata porcelain = new com.strongdm.api.v1.Teradata();
+  public static com.strongdm.api.v1.Druid druidToPorcelain(Druid plumbing) {
+    com.strongdm.api.v1.Druid porcelain = new com.strongdm.api.v1.Druid();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
     return porcelain;
   }
 
-  public static Teradata teradataToPlumbing(com.strongdm.api.v1.Teradata porcelain) {
+  public static Druid druidToPlumbing(com.strongdm.api.v1.Druid porcelain) {
     if (porcelain == null) {
       return null;
     }
-    Teradata.Builder builder = Teradata.newBuilder();
+    Druid.Builder builder = Druid.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -534,28 +587,83 @@ public class Plumbing {
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Teradata> repeatedTeradataToPorcelain(
-      Collection<Teradata> plumbings) {
+  public static List<com.strongdm.api.v1.Druid> repeatedDruidToPorcelain(
+      Collection<Druid> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> teradataToPorcelain(plumbing))
+        .map(plumbing -> druidToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<Teradata> repeatedTeradataToPlumbing(
-      Collection<com.strongdm.api.v1.Teradata> porcelains) {
+  public static List<Druid> repeatedDruidToPlumbing(
+      Collection<com.strongdm.api.v1.Druid> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> teradataToPlumbing(porcelain))
+        .map(porcelain -> druidToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.DynamoDB dynamoDbToPorcelain(DynamoDB plumbing) {
+    com.strongdm.api.v1.DynamoDB porcelain = new com.strongdm.api.v1.DynamoDB();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setAccessKey(plumbing.getAccessKey());
+    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
+    porcelain.setRegion(plumbing.getRegion());
+    porcelain.setEndpoint(plumbing.getEndpoint());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    return porcelain;
+  }
+
+  public static DynamoDB dynamoDbToPlumbing(com.strongdm.api.v1.DynamoDB porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    DynamoDB.Builder builder = DynamoDB.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getAccessKey() != null) {
+      builder.setAccessKey(porcelain.getAccessKey());
+    }
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey(porcelain.getSecretAccessKey());
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion(porcelain.getRegion());
+    }
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint(porcelain.getEndpoint());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.DynamoDB> repeatedDynamoDBToPorcelain(
+      Collection<DynamoDB> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> dynamoDbToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<DynamoDB> repeatedDynamoDBToPlumbing(
+      Collection<com.strongdm.api.v1.DynamoDB> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> dynamoDbToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -669,23 +777,26 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Redis redisToPorcelain(Redis plumbing) {
-    com.strongdm.api.v1.Redis porcelain = new com.strongdm.api.v1.Redis();
+  public static com.strongdm.api.v1.HTTPBasicAuth httpBasicAuthToPorcelain(HTTPBasicAuth plumbing) {
+    com.strongdm.api.v1.HTTPBasicAuth porcelain = new com.strongdm.api.v1.HTTPBasicAuth();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setUrl(plumbing.getUrl());
+    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
+    porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
+    porcelain.setDefaultPath(plumbing.getDefaultPath());
+    porcelain.setSubdomain(plumbing.getSubdomain());
     return porcelain;
   }
 
-  public static Redis redisToPlumbing(com.strongdm.api.v1.Redis porcelain) {
+  public static HTTPBasicAuth httpBasicAuthToPlumbing(com.strongdm.api.v1.HTTPBasicAuth porcelain) {
     if (porcelain == null) {
       return null;
     }
-    Redis.Builder builder = Redis.newBuilder();
+    HTTPBasicAuth.Builder builder = HTTPBasicAuth.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -693,51 +804,62 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
+    if (porcelain.getUrl() != null) {
+      builder.setUrl(porcelain.getUrl());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getHealthcheckPath() != null) {
+      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
-    builder.setPort(porcelain.getPort());
+    if (porcelain.getHeadersBlacklist() != null) {
+      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
+    }
+    if (porcelain.getDefaultPath() != null) {
+      builder.setDefaultPath(porcelain.getDefaultPath());
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain(porcelain.getSubdomain());
+    }
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Redis> repeatedRedisToPorcelain(
-      Collection<Redis> plumbings) {
+  public static List<com.strongdm.api.v1.HTTPBasicAuth> repeatedHTTPBasicAuthToPorcelain(
+      Collection<HTTPBasicAuth> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> redisToPorcelain(plumbing))
+        .map(plumbing -> httpBasicAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<Redis> repeatedRedisToPlumbing(
-      Collection<com.strongdm.api.v1.Redis> porcelains) {
+  public static List<HTTPBasicAuth> repeatedHTTPBasicAuthToPlumbing(
+      Collection<com.strongdm.api.v1.HTTPBasicAuth> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> redisToPlumbing(porcelain))
+        .map(porcelain -> httpBasicAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.ElasticacheRedis elasticacheRedisToPorcelain(
-      ElasticacheRedis plumbing) {
-    com.strongdm.api.v1.ElasticacheRedis porcelain = new com.strongdm.api.v1.ElasticacheRedis();
+  public static com.strongdm.api.v1.HTTPNoAuth httpNoAuthToPorcelain(HTTPNoAuth plumbing) {
+    com.strongdm.api.v1.HTTPNoAuth porcelain = new com.strongdm.api.v1.HTTPNoAuth();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setUrl(plumbing.getUrl());
+    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
+    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
+    porcelain.setDefaultPath(plumbing.getDefaultPath());
+    porcelain.setSubdomain(plumbing.getSubdomain());
     return porcelain;
   }
 
-  public static ElasticacheRedis elasticacheRedisToPlumbing(
-      com.strongdm.api.v1.ElasticacheRedis porcelain) {
+  public static HTTPNoAuth httpNoAuthToPlumbing(com.strongdm.api.v1.HTTPNoAuth porcelain) {
     if (porcelain == null) {
       return null;
     }
-    ElasticacheRedis.Builder builder = ElasticacheRedis.newBuilder();
+    HTTPNoAuth.Builder builder = HTTPNoAuth.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -745,29 +867,96 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
+    if (porcelain.getUrl() != null) {
+      builder.setUrl(porcelain.getUrl());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
+    if (porcelain.getHealthcheckPath() != null) {
+      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
     }
-    builder.setPort(porcelain.getPort());
-    builder.setTlsRequired(porcelain.getTlsRequired());
+    if (porcelain.getHeadersBlacklist() != null) {
+      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
+    }
+    if (porcelain.getDefaultPath() != null) {
+      builder.setDefaultPath(porcelain.getDefaultPath());
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain(porcelain.getSubdomain());
+    }
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.ElasticacheRedis> repeatedElasticacheRedisToPorcelain(
-      Collection<ElasticacheRedis> plumbings) {
+  public static List<com.strongdm.api.v1.HTTPNoAuth> repeatedHTTPNoAuthToPorcelain(
+      Collection<HTTPNoAuth> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> elasticacheRedisToPorcelain(plumbing))
+        .map(plumbing -> httpNoAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<ElasticacheRedis> repeatedElasticacheRedisToPlumbing(
-      Collection<com.strongdm.api.v1.ElasticacheRedis> porcelains) {
+  public static List<HTTPNoAuth> repeatedHTTPNoAuthToPlumbing(
+      Collection<com.strongdm.api.v1.HTTPNoAuth> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> elasticacheRedisToPlumbing(porcelain))
+        .map(porcelain -> httpNoAuthToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.HTTPAuth httpAuthToPorcelain(HTTPAuth plumbing) {
+    com.strongdm.api.v1.HTTPAuth porcelain = new com.strongdm.api.v1.HTTPAuth();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setUrl(plumbing.getUrl());
+    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
+    porcelain.setAuthHeader(plumbing.getAuthHeader());
+    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
+    porcelain.setDefaultPath(plumbing.getDefaultPath());
+    porcelain.setSubdomain(plumbing.getSubdomain());
+    return porcelain;
+  }
+
+  public static HTTPAuth httpAuthToPlumbing(com.strongdm.api.v1.HTTPAuth porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    HTTPAuth.Builder builder = HTTPAuth.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getUrl() != null) {
+      builder.setUrl(porcelain.getUrl());
+    }
+    if (porcelain.getHealthcheckPath() != null) {
+      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
+    }
+    if (porcelain.getAuthHeader() != null) {
+      builder.setAuthHeader(porcelain.getAuthHeader());
+    }
+    if (porcelain.getHeadersBlacklist() != null) {
+      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
+    }
+    if (porcelain.getDefaultPath() != null) {
+      builder.setDefaultPath(porcelain.getDefaultPath());
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain(porcelain.getSubdomain());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.HTTPAuth> repeatedHTTPAuthToPorcelain(
+      Collection<HTTPAuth> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> httpAuthToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<HTTPAuth> repeatedHTTPAuthToPlumbing(
+      Collection<com.strongdm.api.v1.HTTPAuth> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> httpAuthToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -1014,6 +1203,601 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.Memcached memcachedToPorcelain(Memcached plumbing) {
+    com.strongdm.api.v1.Memcached porcelain = new com.strongdm.api.v1.Memcached();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Memcached memcachedToPlumbing(com.strongdm.api.v1.Memcached porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Memcached.Builder builder = Memcached.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Memcached> repeatedMemcachedToPorcelain(
+      Collection<Memcached> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> memcachedToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Memcached> repeatedMemcachedToPlumbing(
+      Collection<com.strongdm.api.v1.Memcached> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> memcachedToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.MongoLegacyHost mongoLegacyHostToPorcelain(
+      MongoLegacyHost plumbing) {
+    com.strongdm.api.v1.MongoLegacyHost porcelain = new com.strongdm.api.v1.MongoLegacyHost();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setReplicaSet(plumbing.getReplicaSet());
+    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    return porcelain;
+  }
+
+  public static MongoLegacyHost mongoLegacyHostToPlumbing(
+      com.strongdm.api.v1.MongoLegacyHost porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MongoLegacyHost.Builder builder = MongoLegacyHost.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase(porcelain.getAuthDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getReplicaSet() != null) {
+      builder.setReplicaSet(porcelain.getReplicaSet());
+    }
+    builder.setConnectToReplica(porcelain.getConnectToReplica());
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.MongoLegacyHost> repeatedMongoLegacyHostToPorcelain(
+      Collection<MongoLegacyHost> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mongoLegacyHostToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MongoLegacyHost> repeatedMongoLegacyHostToPlumbing(
+      Collection<com.strongdm.api.v1.MongoLegacyHost> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mongoLegacyHostToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.MongoLegacyReplicaset mongoLegacyReplicasetToPorcelain(
+      MongoLegacyReplicaset plumbing) {
+    com.strongdm.api.v1.MongoLegacyReplicaset porcelain =
+        new com.strongdm.api.v1.MongoLegacyReplicaset();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setReplicaSet(plumbing.getReplicaSet());
+    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    return porcelain;
+  }
+
+  public static MongoLegacyReplicaset mongoLegacyReplicasetToPlumbing(
+      com.strongdm.api.v1.MongoLegacyReplicaset porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MongoLegacyReplicaset.Builder builder = MongoLegacyReplicaset.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase(porcelain.getAuthDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getReplicaSet() != null) {
+      builder.setReplicaSet(porcelain.getReplicaSet());
+    }
+    builder.setConnectToReplica(porcelain.getConnectToReplica());
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.MongoLegacyReplicaset>
+      repeatedMongoLegacyReplicasetToPorcelain(Collection<MongoLegacyReplicaset> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mongoLegacyReplicasetToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MongoLegacyReplicaset> repeatedMongoLegacyReplicasetToPlumbing(
+      Collection<com.strongdm.api.v1.MongoLegacyReplicaset> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mongoLegacyReplicasetToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.MongoHost mongoHostToPorcelain(MongoHost plumbing) {
+    com.strongdm.api.v1.MongoHost porcelain = new com.strongdm.api.v1.MongoHost();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setSchema(plumbing.getSchema());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    return porcelain;
+  }
+
+  public static MongoHost mongoHostToPlumbing(com.strongdm.api.v1.MongoHost porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MongoHost.Builder builder = MongoHost.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase(porcelain.getAuthDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getSchema() != null) {
+      builder.setSchema(porcelain.getSchema());
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.MongoHost> repeatedMongoHostToPorcelain(
+      Collection<MongoHost> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mongoHostToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MongoHost> repeatedMongoHostToPlumbing(
+      Collection<com.strongdm.api.v1.MongoHost> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mongoHostToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.MongoReplicaSet mongoReplicaSetToPorcelain(
+      MongoReplicaSet plumbing) {
+    com.strongdm.api.v1.MongoReplicaSet porcelain = new com.strongdm.api.v1.MongoReplicaSet();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setReplicaSet(plumbing.getReplicaSet());
+    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    return porcelain;
+  }
+
+  public static MongoReplicaSet mongoReplicaSetToPlumbing(
+      com.strongdm.api.v1.MongoReplicaSet porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MongoReplicaSet.Builder builder = MongoReplicaSet.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase(porcelain.getAuthDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getReplicaSet() != null) {
+      builder.setReplicaSet(porcelain.getReplicaSet());
+    }
+    builder.setConnectToReplica(porcelain.getConnectToReplica());
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.MongoReplicaSet> repeatedMongoReplicaSetToPorcelain(
+      Collection<MongoReplicaSet> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mongoReplicaSetToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MongoReplicaSet> repeatedMongoReplicaSetToPlumbing(
+      Collection<com.strongdm.api.v1.MongoReplicaSet> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mongoReplicaSetToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Mysql mysqlToPorcelain(Mysql plumbing) {
+    com.strongdm.api.v1.Mysql porcelain = new com.strongdm.api.v1.Mysql();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Mysql mysqlToPlumbing(com.strongdm.api.v1.Mysql porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Mysql.Builder builder = Mysql.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Mysql> repeatedMysqlToPorcelain(
+      Collection<Mysql> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mysqlToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Mysql> repeatedMysqlToPlumbing(
+      Collection<com.strongdm.api.v1.Mysql> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mysqlToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AuroraMysql auroraMysqlToPorcelain(AuroraMysql plumbing) {
+    com.strongdm.api.v1.AuroraMysql porcelain = new com.strongdm.api.v1.AuroraMysql();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static AuroraMysql auroraMysqlToPlumbing(com.strongdm.api.v1.AuroraMysql porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AuroraMysql.Builder builder = AuroraMysql.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AuroraMysql> repeatedAuroraMysqlToPorcelain(
+      Collection<AuroraMysql> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> auroraMysqlToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AuroraMysql> repeatedAuroraMysqlToPlumbing(
+      Collection<com.strongdm.api.v1.AuroraMysql> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> auroraMysqlToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Clustrix clustrixToPorcelain(Clustrix plumbing) {
+    com.strongdm.api.v1.Clustrix porcelain = new com.strongdm.api.v1.Clustrix();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Clustrix clustrixToPlumbing(com.strongdm.api.v1.Clustrix porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Clustrix.Builder builder = Clustrix.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Clustrix> repeatedClustrixToPorcelain(
+      Collection<Clustrix> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> clustrixToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Clustrix> repeatedClustrixToPlumbing(
+      Collection<com.strongdm.api.v1.Clustrix> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> clustrixToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Maria mariaToPorcelain(Maria plumbing) {
+    com.strongdm.api.v1.Maria porcelain = new com.strongdm.api.v1.Maria();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Maria mariaToPlumbing(com.strongdm.api.v1.Maria porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Maria.Builder builder = Maria.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Maria> repeatedMariaToPorcelain(
+      Collection<Maria> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> mariaToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Maria> repeatedMariaToPlumbing(
+      Collection<com.strongdm.api.v1.Maria> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> mariaToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Memsql memsqlToPorcelain(Memsql plumbing) {
+    com.strongdm.api.v1.Memsql porcelain = new com.strongdm.api.v1.Memsql();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Memsql memsqlToPlumbing(com.strongdm.api.v1.Memsql porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Memsql.Builder builder = Memsql.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Memsql> repeatedMemsqlToPorcelain(
+      Collection<Memsql> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> memsqlToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Memsql> repeatedMemsqlToPlumbing(
+      Collection<com.strongdm.api.v1.Memsql> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> memsqlToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Oracle oracleToPorcelain(Oracle plumbing) {
     com.strongdm.api.v1.Oracle porcelain = new com.strongdm.api.v1.Oracle();
     porcelain.setId(plumbing.getId());
@@ -1070,271 +1854,6 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Oracle> porcelains) {
     return porcelains.stream()
         .map(porcelain -> oracleToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.DynamoDB dynamoDbToPorcelain(DynamoDB plumbing) {
-    com.strongdm.api.v1.DynamoDB porcelain = new com.strongdm.api.v1.DynamoDB();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setAccessKey(plumbing.getAccessKey());
-    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setRegion(plumbing.getRegion());
-    porcelain.setEndpoint(plumbing.getEndpoint());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    return porcelain;
-  }
-
-  public static DynamoDB dynamoDbToPlumbing(com.strongdm.api.v1.DynamoDB porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    DynamoDB.Builder builder = DynamoDB.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getAccessKey() != null) {
-      builder.setAccessKey(porcelain.getAccessKey());
-    }
-    if (porcelain.getSecretAccessKey() != null) {
-      builder.setSecretAccessKey(porcelain.getSecretAccessKey());
-    }
-    if (porcelain.getRegion() != null) {
-      builder.setRegion(porcelain.getRegion());
-    }
-    if (porcelain.getEndpoint() != null) {
-      builder.setEndpoint(porcelain.getEndpoint());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.DynamoDB> repeatedDynamoDBToPorcelain(
-      Collection<DynamoDB> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> dynamoDbToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<DynamoDB> repeatedDynamoDBToPlumbing(
-      Collection<com.strongdm.api.v1.DynamoDB> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> dynamoDbToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.RDP rdpToPorcelain(RDP plumbing) {
-    com.strongdm.api.v1.RDP porcelain = new com.strongdm.api.v1.RDP();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    return porcelain;
-  }
-
-  public static RDP rdpToPlumbing(com.strongdm.api.v1.RDP porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    RDP.Builder builder = RDP.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.RDP> repeatedRDPToPorcelain(Collection<RDP> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> rdpToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<RDP> repeatedRDPToPlumbing(Collection<com.strongdm.api.v1.RDP> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> rdpToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.BigQuery bigQueryToPorcelain(BigQuery plumbing) {
-    com.strongdm.api.v1.BigQuery porcelain = new com.strongdm.api.v1.BigQuery();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setPrivateKey(plumbing.getPrivateKey());
-    porcelain.setProject(plumbing.getProject());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setEndpoint(plumbing.getEndpoint());
-    porcelain.setUsername(plumbing.getUsername());
-    return porcelain;
-  }
-
-  public static BigQuery bigQueryToPlumbing(com.strongdm.api.v1.BigQuery porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    BigQuery.Builder builder = BigQuery.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getPrivateKey() != null) {
-      builder.setPrivateKey(porcelain.getPrivateKey());
-    }
-    if (porcelain.getProject() != null) {
-      builder.setProject(porcelain.getProject());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getEndpoint() != null) {
-      builder.setEndpoint(porcelain.getEndpoint());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.BigQuery> repeatedBigQueryToPorcelain(
-      Collection<BigQuery> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> bigQueryToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<BigQuery> repeatedBigQueryToPlumbing(
-      Collection<com.strongdm.api.v1.BigQuery> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> bigQueryToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Snowflake snowflakeToPorcelain(Snowflake plumbing) {
-    com.strongdm.api.v1.Snowflake porcelain = new com.strongdm.api.v1.Snowflake();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setSchema(plumbing.getSchema());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    return porcelain;
-  }
-
-  public static Snowflake snowflakeToPlumbing(com.strongdm.api.v1.Snowflake porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    Snowflake.Builder builder = Snowflake.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase(porcelain.getDatabase());
-    }
-    if (porcelain.getSchema() != null) {
-      builder.setSchema(porcelain.getSchema());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.Snowflake> repeatedSnowflakeToPorcelain(
-      Collection<Snowflake> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> snowflakeToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<Snowflake> repeatedSnowflakeToPlumbing(
-      Collection<com.strongdm.api.v1.Snowflake> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> snowflakeToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Memcached memcachedToPorcelain(Memcached plumbing) {
-    com.strongdm.api.v1.Memcached porcelain = new com.strongdm.api.v1.Memcached();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    return porcelain;
-  }
-
-  public static Memcached memcachedToPlumbing(com.strongdm.api.v1.Memcached porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    Memcached.Builder builder = Memcached.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.Memcached> repeatedMemcachedToPorcelain(
-      Collection<Memcached> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> memcachedToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<Memcached> repeatedMemcachedToPlumbing(
-      Collection<com.strongdm.api.v1.Memcached> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> memcachedToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -1635,23 +2154,83 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.SSH sshToPorcelain(SSH plumbing) {
-    com.strongdm.api.v1.SSH porcelain = new com.strongdm.api.v1.SSH();
+  public static com.strongdm.api.v1.Presto prestoToPorcelain(Presto plumbing) {
+    com.strongdm.api.v1.Presto porcelain = new com.strongdm.api.v1.Presto();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    return porcelain;
+  }
+
+  public static Presto prestoToPlumbing(com.strongdm.api.v1.Presto porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Presto.Builder builder = Presto.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase(porcelain.getDatabase());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Presto> repeatedPrestoToPorcelain(
+      Collection<Presto> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> prestoToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Presto> repeatedPrestoToPlumbing(
+      Collection<com.strongdm.api.v1.Presto> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> prestoToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RDP rdpToPorcelain(RDP plumbing) {
+    com.strongdm.api.v1.RDP porcelain = new com.strongdm.api.v1.RDP();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
     porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
-    porcelain.setPublicKey(plumbing.getPublicKey());
     return porcelain;
   }
 
-  public static SSH sshToPlumbing(com.strongdm.api.v1.SSH porcelain) {
+  public static RDP rdpToPlumbing(com.strongdm.api.v1.RDP porcelain) {
     if (porcelain == null) {
       return null;
     }
-    SSH.Builder builder = SSH.newBuilder();
+    RDP.Builder builder = RDP.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -1665,227 +2244,95 @@ public class Plumbing {
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
-    builder.setPort(porcelain.getPort());
-    if (porcelain.getPublicKey() != null) {
-      builder.setPublicKey(porcelain.getPublicKey());
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.SSH> repeatedSSHToPorcelain(Collection<SSH> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> sshToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<SSH> repeatedSSHToPlumbing(Collection<com.strongdm.api.v1.SSH> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> sshToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.HTTPBasicAuth httpBasicAuthToPorcelain(HTTPBasicAuth plumbing) {
-    com.strongdm.api.v1.HTTPBasicAuth porcelain = new com.strongdm.api.v1.HTTPBasicAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setUrl(plumbing.getUrl());
-    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
-    porcelain.setDefaultPath(plumbing.getDefaultPath());
-    porcelain.setSubdomain(plumbing.getSubdomain());
-    return porcelain;
-  }
-
-  public static HTTPBasicAuth httpBasicAuthToPlumbing(com.strongdm.api.v1.HTTPBasicAuth porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    HTTPBasicAuth.Builder builder = HTTPBasicAuth.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getUrl() != null) {
-      builder.setUrl(porcelain.getUrl());
-    }
-    if (porcelain.getHealthcheckPath() != null) {
-      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
-    if (porcelain.getHeadersBlacklist() != null) {
-      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
-    }
-    if (porcelain.getDefaultPath() != null) {
-      builder.setDefaultPath(porcelain.getDefaultPath());
-    }
-    if (porcelain.getSubdomain() != null) {
-      builder.setSubdomain(porcelain.getSubdomain());
-    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.HTTPBasicAuth> repeatedHTTPBasicAuthToPorcelain(
-      Collection<HTTPBasicAuth> plumbings) {
+  public static List<com.strongdm.api.v1.RDP> repeatedRDPToPorcelain(Collection<RDP> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> httpBasicAuthToPorcelain(plumbing))
+        .map(plumbing -> rdpToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<HTTPBasicAuth> repeatedHTTPBasicAuthToPlumbing(
-      Collection<com.strongdm.api.v1.HTTPBasicAuth> porcelains) {
+  public static List<RDP> repeatedRDPToPlumbing(Collection<com.strongdm.api.v1.RDP> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> httpBasicAuthToPlumbing(porcelain))
+        .map(porcelain -> rdpToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.HTTPNoAuth httpNoAuthToPorcelain(HTTPNoAuth plumbing) {
-    com.strongdm.api.v1.HTTPNoAuth porcelain = new com.strongdm.api.v1.HTTPNoAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setUrl(plumbing.getUrl());
-    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
-    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
-    porcelain.setDefaultPath(plumbing.getDefaultPath());
-    porcelain.setSubdomain(plumbing.getSubdomain());
-    return porcelain;
-  }
-
-  public static HTTPNoAuth httpNoAuthToPlumbing(com.strongdm.api.v1.HTTPNoAuth porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    HTTPNoAuth.Builder builder = HTTPNoAuth.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getUrl() != null) {
-      builder.setUrl(porcelain.getUrl());
-    }
-    if (porcelain.getHealthcheckPath() != null) {
-      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
-    }
-    if (porcelain.getHeadersBlacklist() != null) {
-      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
-    }
-    if (porcelain.getDefaultPath() != null) {
-      builder.setDefaultPath(porcelain.getDefaultPath());
-    }
-    if (porcelain.getSubdomain() != null) {
-      builder.setSubdomain(porcelain.getSubdomain());
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.HTTPNoAuth> repeatedHTTPNoAuthToPorcelain(
-      Collection<HTTPNoAuth> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> httpNoAuthToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<HTTPNoAuth> repeatedHTTPNoAuthToPlumbing(
-      Collection<com.strongdm.api.v1.HTTPNoAuth> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> httpNoAuthToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.HTTPAuth httpAuthToPorcelain(HTTPAuth plumbing) {
-    com.strongdm.api.v1.HTTPAuth porcelain = new com.strongdm.api.v1.HTTPAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setUrl(plumbing.getUrl());
-    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
-    porcelain.setAuthHeader(plumbing.getAuthHeader());
-    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
-    porcelain.setDefaultPath(plumbing.getDefaultPath());
-    porcelain.setSubdomain(plumbing.getSubdomain());
-    return porcelain;
-  }
-
-  public static HTTPAuth httpAuthToPlumbing(com.strongdm.api.v1.HTTPAuth porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    HTTPAuth.Builder builder = HTTPAuth.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getUrl() != null) {
-      builder.setUrl(porcelain.getUrl());
-    }
-    if (porcelain.getHealthcheckPath() != null) {
-      builder.setHealthcheckPath(porcelain.getHealthcheckPath());
-    }
-    if (porcelain.getAuthHeader() != null) {
-      builder.setAuthHeader(porcelain.getAuthHeader());
-    }
-    if (porcelain.getHeadersBlacklist() != null) {
-      builder.setHeadersBlacklist(porcelain.getHeadersBlacklist());
-    }
-    if (porcelain.getDefaultPath() != null) {
-      builder.setDefaultPath(porcelain.getDefaultPath());
-    }
-    if (porcelain.getSubdomain() != null) {
-      builder.setSubdomain(porcelain.getSubdomain());
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.HTTPAuth> repeatedHTTPAuthToPorcelain(
-      Collection<HTTPAuth> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> httpAuthToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<HTTPAuth> repeatedHTTPAuthToPlumbing(
-      Collection<com.strongdm.api.v1.HTTPAuth> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> httpAuthToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Cassandra cassandraToPorcelain(Cassandra plumbing) {
-    com.strongdm.api.v1.Cassandra porcelain = new com.strongdm.api.v1.Cassandra();
+  public static com.strongdm.api.v1.Redis redisToPorcelain(Redis plumbing) {
+    com.strongdm.api.v1.Redis porcelain = new com.strongdm.api.v1.Redis();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
     porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPort(plumbing.getPort());
+    return porcelain;
+  }
+
+  public static Redis redisToPlumbing(com.strongdm.api.v1.Redis porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Redis.Builder builder = Redis.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    builder.setPort(porcelain.getPort());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Redis> repeatedRedisToPorcelain(
+      Collection<Redis> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> redisToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Redis> repeatedRedisToPlumbing(
+      Collection<com.strongdm.api.v1.Redis> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> redisToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.ElasticacheRedis elasticacheRedisToPorcelain(
+      ElasticacheRedis plumbing) {
+    com.strongdm.api.v1.ElasticacheRedis porcelain = new com.strongdm.api.v1.ElasticacheRedis();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setPassword(plumbing.getPassword());
     porcelain.setPort(plumbing.getPort());
     porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
 
-  public static Cassandra cassandraToPlumbing(com.strongdm.api.v1.Cassandra porcelain) {
+  public static ElasticacheRedis elasticacheRedisToPlumbing(
+      com.strongdm.api.v1.ElasticacheRedis porcelain) {
     if (porcelain == null) {
       return null;
     }
-    Cassandra.Builder builder = Cassandra.newBuilder();
+    ElasticacheRedis.Builder builder = ElasticacheRedis.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -1896,34 +2343,31 @@ public class Plumbing {
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
-    builder.setPortOverride(porcelain.getPortOverride());
     builder.setPort(porcelain.getPort());
     builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Cassandra> repeatedCassandraToPorcelain(
-      Collection<Cassandra> plumbings) {
+  public static List<com.strongdm.api.v1.ElasticacheRedis> repeatedElasticacheRedisToPorcelain(
+      Collection<ElasticacheRedis> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> cassandraToPorcelain(plumbing))
+        .map(plumbing -> elasticacheRedisToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<Cassandra> repeatedCassandraToPlumbing(
-      Collection<com.strongdm.api.v1.Cassandra> porcelains) {
+  public static List<ElasticacheRedis> repeatedElasticacheRedisToPlumbing(
+      Collection<com.strongdm.api.v1.ElasticacheRedis> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> cassandraToPlumbing(porcelain))
+        .map(porcelain -> elasticacheRedisToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Mysql mysqlToPorcelain(Mysql plumbing) {
-    com.strongdm.api.v1.Mysql porcelain = new com.strongdm.api.v1.Mysql();
+  public static com.strongdm.api.v1.Snowflake snowflakeToPorcelain(Snowflake plumbing) {
+    com.strongdm.api.v1.Snowflake porcelain = new com.strongdm.api.v1.Snowflake();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
@@ -1931,16 +2375,16 @@ public class Plumbing {
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setDatabase(plumbing.getDatabase());
+    porcelain.setSchema(plumbing.getSchema());
     porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
     return porcelain;
   }
 
-  public static Mysql mysqlToPlumbing(com.strongdm.api.v1.Mysql porcelain) {
+  public static Snowflake snowflakeToPlumbing(com.strongdm.api.v1.Snowflake porcelain) {
     if (porcelain == null) {
       return null;
     }
-    Mysql.Builder builder = Mysql.newBuilder();
+    Snowflake.Builder builder = Snowflake.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -1960,303 +2404,24 @@ public class Plumbing {
     if (porcelain.getDatabase() != null) {
       builder.setDatabase(porcelain.getDatabase());
     }
+    if (porcelain.getSchema() != null) {
+      builder.setSchema(porcelain.getSchema());
+    }
     builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Mysql> repeatedMysqlToPorcelain(
-      Collection<Mysql> plumbings) {
+  public static List<com.strongdm.api.v1.Snowflake> repeatedSnowflakeToPorcelain(
+      Collection<Snowflake> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mysqlToPorcelain(plumbing))
+        .map(plumbing -> snowflakeToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<Mysql> repeatedMysqlToPlumbing(
-      Collection<com.strongdm.api.v1.Mysql> porcelains) {
+  public static List<Snowflake> repeatedSnowflakeToPlumbing(
+      Collection<com.strongdm.api.v1.Snowflake> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> mysqlToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.AuroraMysql auroraMysqlToPorcelain(AuroraMysql plumbing) {
-    com.strongdm.api.v1.AuroraMysql porcelain = new com.strongdm.api.v1.AuroraMysql();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    return porcelain;
-  }
-
-  public static AuroraMysql auroraMysqlToPlumbing(com.strongdm.api.v1.AuroraMysql porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    AuroraMysql.Builder builder = AuroraMysql.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase(porcelain.getDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.AuroraMysql> repeatedAuroraMysqlToPorcelain(
-      Collection<AuroraMysql> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> auroraMysqlToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<AuroraMysql> repeatedAuroraMysqlToPlumbing(
-      Collection<com.strongdm.api.v1.AuroraMysql> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> auroraMysqlToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Clustrix clustrixToPorcelain(Clustrix plumbing) {
-    com.strongdm.api.v1.Clustrix porcelain = new com.strongdm.api.v1.Clustrix();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    return porcelain;
-  }
-
-  public static Clustrix clustrixToPlumbing(com.strongdm.api.v1.Clustrix porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    Clustrix.Builder builder = Clustrix.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase(porcelain.getDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.Clustrix> repeatedClustrixToPorcelain(
-      Collection<Clustrix> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> clustrixToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<Clustrix> repeatedClustrixToPlumbing(
-      Collection<com.strongdm.api.v1.Clustrix> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> clustrixToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Maria mariaToPorcelain(Maria plumbing) {
-    com.strongdm.api.v1.Maria porcelain = new com.strongdm.api.v1.Maria();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    return porcelain;
-  }
-
-  public static Maria mariaToPlumbing(com.strongdm.api.v1.Maria porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    Maria.Builder builder = Maria.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase(porcelain.getDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.Maria> repeatedMariaToPorcelain(
-      Collection<Maria> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> mariaToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<Maria> repeatedMariaToPlumbing(
-      Collection<com.strongdm.api.v1.Maria> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> mariaToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Memsql memsqlToPorcelain(Memsql plumbing) {
-    com.strongdm.api.v1.Memsql porcelain = new com.strongdm.api.v1.Memsql();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    return porcelain;
-  }
-
-  public static Memsql memsqlToPlumbing(com.strongdm.api.v1.Memsql porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    Memsql.Builder builder = Memsql.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase(porcelain.getDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    builder.setPort(porcelain.getPort());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.Memsql> repeatedMemsqlToPorcelain(
-      Collection<Memsql> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> memsqlToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<Memsql> repeatedMemsqlToPlumbing(
-      Collection<com.strongdm.api.v1.Memsql> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> memsqlToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Druid druidToPorcelain(Druid plumbing) {
-    com.strongdm.api.v1.Druid porcelain = new com.strongdm.api.v1.Druid();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    return porcelain;
-  }
-
-  public static Druid druidToPlumbing(com.strongdm.api.v1.Druid porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    Druid.Builder builder = Druid.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
-    builder.setPort(porcelain.getPort());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.Druid> repeatedDruidToPorcelain(
-      Collection<Druid> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> druidToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<Druid> repeatedDruidToPlumbing(
-      Collection<com.strongdm.api.v1.Druid> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> druidToPlumbing(porcelain))
+        .map(porcelain -> snowflakeToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -2323,30 +2488,23 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoLegacyHost mongoLegacyHostToPorcelain(
-      MongoLegacyHost plumbing) {
-    com.strongdm.api.v1.MongoLegacyHost porcelain = new com.strongdm.api.v1.MongoLegacyHost();
+  public static com.strongdm.api.v1.SSH sshToPorcelain(SSH plumbing) {
+    com.strongdm.api.v1.SSH porcelain = new com.strongdm.api.v1.SSH();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
     porcelain.setPort(plumbing.getPort());
-    porcelain.setReplicaSet(plumbing.getReplicaSet());
-    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setPublicKey(plumbing.getPublicKey());
     return porcelain;
   }
 
-  public static MongoLegacyHost mongoLegacyHostToPlumbing(
-      com.strongdm.api.v1.MongoLegacyHost porcelain) {
+  public static SSH sshToPlumbing(com.strongdm.api.v1.SSH porcelain) {
     if (porcelain == null) {
       return null;
     }
-    MongoLegacyHost.Builder builder = MongoLegacyHost.newBuilder();
+    SSH.Builder builder = SSH.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -2357,64 +2515,46 @@ public class Plumbing {
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
-    if (porcelain.getAuthDatabase() != null) {
-      builder.setAuthDatabase(porcelain.getAuthDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
     builder.setPort(porcelain.getPort());
-    if (porcelain.getReplicaSet() != null) {
-      builder.setReplicaSet(porcelain.getReplicaSet());
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey(porcelain.getPublicKey());
     }
-    builder.setConnectToReplica(porcelain.getConnectToReplica());
-    builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.MongoLegacyHost> repeatedMongoLegacyHostToPorcelain(
-      Collection<MongoLegacyHost> plumbings) {
+  public static List<com.strongdm.api.v1.SSH> repeatedSSHToPorcelain(Collection<SSH> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoLegacyHostToPorcelain(plumbing))
+        .map(plumbing -> sshToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<MongoLegacyHost> repeatedMongoLegacyHostToPlumbing(
-      Collection<com.strongdm.api.v1.MongoLegacyHost> porcelains) {
+  public static List<SSH> repeatedSSHToPlumbing(Collection<com.strongdm.api.v1.SSH> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> mongoLegacyHostToPlumbing(porcelain))
+        .map(porcelain -> sshToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoLegacyReplicaset mongoLegacyReplicasetToPorcelain(
-      MongoLegacyReplicaset plumbing) {
-    com.strongdm.api.v1.MongoLegacyReplicaset porcelain =
-        new com.strongdm.api.v1.MongoLegacyReplicaset();
+  public static com.strongdm.api.v1.Sybase sybaseToPorcelain(Sybase plumbing) {
+    com.strongdm.api.v1.Sybase porcelain = new com.strongdm.api.v1.Sybase();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
-    porcelain.setReplicaSet(plumbing.getReplicaSet());
-    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setPassword(plumbing.getPassword());
     return porcelain;
   }
 
-  public static MongoLegacyReplicaset mongoLegacyReplicasetToPlumbing(
-      com.strongdm.api.v1.MongoLegacyReplicaset porcelain) {
+  public static Sybase sybaseToPlumbing(com.strongdm.api.v1.Sybase porcelain) {
     if (porcelain == null) {
       return null;
     }
-    MongoLegacyReplicaset.Builder builder = MongoLegacyReplicaset.newBuilder();
+    Sybase.Builder builder = Sybase.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -2425,60 +2565,49 @@ public class Plumbing {
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
-    if (porcelain.getAuthDatabase() != null) {
-      builder.setAuthDatabase(porcelain.getAuthDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
-    builder.setPort(porcelain.getPort());
-    if (porcelain.getReplicaSet() != null) {
-      builder.setReplicaSet(porcelain.getReplicaSet());
-    }
-    builder.setConnectToReplica(porcelain.getConnectToReplica());
-    builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.MongoLegacyReplicaset>
-      repeatedMongoLegacyReplicasetToPorcelain(Collection<MongoLegacyReplicaset> plumbings) {
+  public static List<com.strongdm.api.v1.Sybase> repeatedSybaseToPorcelain(
+      Collection<Sybase> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoLegacyReplicasetToPorcelain(plumbing))
+        .map(plumbing -> sybaseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<MongoLegacyReplicaset> repeatedMongoLegacyReplicasetToPlumbing(
-      Collection<com.strongdm.api.v1.MongoLegacyReplicaset> porcelains) {
+  public static List<Sybase> repeatedSybaseToPlumbing(
+      Collection<com.strongdm.api.v1.Sybase> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> mongoLegacyReplicasetToPlumbing(porcelain))
+        .map(porcelain -> sybaseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoHost mongoHostToPorcelain(MongoHost plumbing) {
-    com.strongdm.api.v1.MongoHost porcelain = new com.strongdm.api.v1.MongoHost();
+  public static com.strongdm.api.v1.Teradata teradataToPorcelain(Teradata plumbing) {
+    com.strongdm.api.v1.Teradata porcelain = new com.strongdm.api.v1.Teradata();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
     porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
+    porcelain.setPortOverride(plumbing.getPortOverride());
     porcelain.setPort(plumbing.getPort());
-    porcelain.setSchema(plumbing.getSchema());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
 
-  public static MongoHost mongoHostToPlumbing(com.strongdm.api.v1.MongoHost porcelain) {
+  public static Teradata teradataToPlumbing(com.strongdm.api.v1.Teradata porcelain) {
     if (porcelain == null) {
       return null;
     }
-    MongoHost.Builder builder = MongoHost.newBuilder();
+    Teradata.Builder builder = Teradata.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -2489,157 +2618,28 @@ public class Plumbing {
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
-    if (porcelain.getAuthDatabase() != null) {
-      builder.setAuthDatabase(porcelain.getAuthDatabase());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getUsername() != null) {
       builder.setUsername(porcelain.getUsername());
     }
     if (porcelain.getPassword() != null) {
       builder.setPassword(porcelain.getPassword());
     }
-    builder.setPort(porcelain.getPort());
-    if (porcelain.getSchema() != null) {
-      builder.setSchema(porcelain.getSchema());
-    }
-    builder.setTlsRequired(porcelain.getTlsRequired());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.MongoHost> repeatedMongoHostToPorcelain(
-      Collection<MongoHost> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> mongoHostToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<MongoHost> repeatedMongoHostToPlumbing(
-      Collection<com.strongdm.api.v1.MongoHost> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> mongoHostToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.MongoReplicaSet mongoReplicaSetToPorcelain(
-      MongoReplicaSet plumbing) {
-    com.strongdm.api.v1.MongoReplicaSet porcelain = new com.strongdm.api.v1.MongoReplicaSet();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setReplicaSet(plumbing.getReplicaSet());
-    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
-    return porcelain;
-  }
-
-  public static MongoReplicaSet mongoReplicaSetToPlumbing(
-      com.strongdm.api.v1.MongoReplicaSet porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    MongoReplicaSet.Builder builder = MongoReplicaSet.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname(porcelain.getHostname());
-    }
-    if (porcelain.getAuthDatabase() != null) {
-      builder.setAuthDatabase(porcelain.getAuthDatabase());
-    }
     builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getUsername() != null) {
-      builder.setUsername(porcelain.getUsername());
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword(porcelain.getPassword());
-    }
     builder.setPort(porcelain.getPort());
-    if (porcelain.getReplicaSet() != null) {
-      builder.setReplicaSet(porcelain.getReplicaSet());
-    }
-    builder.setConnectToReplica(porcelain.getConnectToReplica());
-    builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.MongoReplicaSet> repeatedMongoReplicaSetToPorcelain(
-      Collection<MongoReplicaSet> plumbings) {
+  public static List<com.strongdm.api.v1.Teradata> repeatedTeradataToPorcelain(
+      Collection<Teradata> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoReplicaSetToPorcelain(plumbing))
+        .map(plumbing -> teradataToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<MongoReplicaSet> repeatedMongoReplicaSetToPlumbing(
-      Collection<com.strongdm.api.v1.MongoReplicaSet> porcelains) {
+  public static List<Teradata> repeatedTeradataToPlumbing(
+      Collection<com.strongdm.api.v1.Teradata> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> mongoReplicaSetToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.Athena athenaToPorcelain(Athena plumbing) {
-    com.strongdm.api.v1.Athena porcelain = new com.strongdm.api.v1.Athena();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setAccessKey(plumbing.getAccessKey());
-    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setOutput(plumbing.getOutput());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setRegion(plumbing.getRegion());
-    return porcelain;
-  }
-
-  public static Athena athenaToPlumbing(com.strongdm.api.v1.Athena porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    Athena.Builder builder = Athena.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId(porcelain.getId());
-    }
-    if (porcelain.getName() != null) {
-      builder.setName(porcelain.getName());
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getAccessKey() != null) {
-      builder.setAccessKey(porcelain.getAccessKey());
-    }
-    if (porcelain.getSecretAccessKey() != null) {
-      builder.setSecretAccessKey(porcelain.getSecretAccessKey());
-    }
-    if (porcelain.getOutput() != null) {
-      builder.setOutput(porcelain.getOutput());
-    }
-    builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getRegion() != null) {
-      builder.setRegion(porcelain.getRegion());
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.Athena> repeatedAthenaToPorcelain(
-      Collection<Athena> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> athenaToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<Athena> repeatedAthenaToPlumbing(
-      Collection<com.strongdm.api.v1.Athena> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> athenaToPlumbing(porcelain))
+        .map(porcelain -> teradataToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
