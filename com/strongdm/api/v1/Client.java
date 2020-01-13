@@ -27,6 +27,13 @@ public class Client {
   private int maxRetries;
   private int baseRetryDelay;
   private int maxRetryDelay;
+  private final Accounts accounts;
+
+  // Accounts are users, services or tokens who connect to and act within the strongDM network.
+  public Accounts accounts() {
+    return this.accounts;
+  }
+
   private final Nodes nodes;
 
   // Nodes are proxies in the strongDM network. They come in two flavors: relays,
@@ -78,6 +85,7 @@ public class Client {
         builder = builder.usePlaintext();
       }
       this.channel = builder.build();
+      this.accounts = new Accounts(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
       this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);
