@@ -64,6 +64,13 @@ public final class Options {
      * @return The iterable.
      */
     boolean getIterable();
+
+    /**
+     * <code>bool required = 1941304;</code>
+     *
+     * @return The required.
+     */
+    boolean getRequired();
   }
   /** Protobuf type {@code v1.FieldOptions} */
   public static final class FieldOptions extends com.google.protobuf.GeneratedMessageV3
@@ -129,6 +136,11 @@ public final class Options {
             case 15530424:
               {
                 iterable_ = input.readBool();
+                break;
+              }
+            case 15530432:
+              {
+                required_ = input.readBool();
                 break;
               }
             default:
@@ -240,6 +252,17 @@ public final class Options {
       return iterable_;
     }
 
+    public static final int REQUIRED_FIELD_NUMBER = 1941304;
+    private boolean required_;
+    /**
+     * <code>bool required = 1941304;</code>
+     *
+     * @return The required.
+     */
+    public boolean getRequired() {
+      return required_;
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -266,6 +289,9 @@ public final class Options {
       if (iterable_ != false) {
         output.writeBool(1941303, iterable_);
       }
+      if (required_ != false) {
+        output.writeBool(1941304, required_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -287,6 +313,9 @@ public final class Options {
       if (iterable_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941303, iterable_);
       }
+      if (required_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941304, required_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -307,6 +336,7 @@ public final class Options {
       if (getSqlNullable() != other.getSqlNullable()) return false;
       if (getExposeAsPorcelain() != other.getExposeAsPorcelain()) return false;
       if (getIterable() != other.getIterable()) return false;
+      if (getRequired() != other.getRequired()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -326,6 +356,8 @@ public final class Options {
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getExposeAsPorcelain());
       hash = (37 * hash) + ITERABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIterable());
+      hash = (37 * hash) + REQUIRED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getRequired());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -472,6 +504,8 @@ public final class Options {
 
         iterable_ = false;
 
+        required_ = false;
+
         return this;
       }
 
@@ -502,6 +536,7 @@ public final class Options {
         result.sqlNullable_ = sqlNullable_;
         result.exposeAsPorcelain_ = exposeAsPorcelain_;
         result.iterable_ = iterable_;
+        result.required_ = required_;
         onBuilt();
         return result;
       }
@@ -566,6 +601,9 @@ public final class Options {
         }
         if (other.getIterable() != false) {
           setIterable(other.getIterable());
+        }
+        if (other.getRequired() != false) {
+          setRequired(other.getRequired());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -795,6 +833,39 @@ public final class Options {
       public Builder clearIterable() {
 
         iterable_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean required_;
+      /**
+       * <code>bool required = 1941304;</code>
+       *
+       * @return The required.
+       */
+      public boolean getRequired() {
+        return required_;
+      }
+      /**
+       * <code>bool required = 1941304;</code>
+       *
+       * @param value The required to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequired(boolean value) {
+
+        required_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool required = 1941304;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearRequired() {
+
+        required_ = false;
         onChanged();
         return this;
       }
@@ -2821,22 +2892,23 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des"
-          + "criptor.proto\"i\n\014FieldOptions\022\016\n\004name\030\264\276"
+          + "criptor.proto\"}\n\014FieldOptions\022\016\n\004name\030\264\276"
           + "v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose_"
           + "as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010"
-          + "\"L\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t"
-          + "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\"$"
-          + "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016"
-          + "ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rf"
-          + "ield_options\022\035.google.protobuf.FieldOpti"
-          + "ons\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message"
-          + "_options\022\037.google.protobuf.MessageOption"
-          + "s\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_o"
-          + "ptions\022\035.google.protobuf.OneofOptions\030\205\277"
-          + "v \001(\0132\020.v1.OneofOptions:N\n\017service_optio"
-          + "ns\022\037.google.protobuf.ServiceOptions\030\231\277v "
-          + "\001(\0132\022.v1.ServiceOptionsB\036\n\034com.strongdm."
-          + "api.v1.plumbingb\006proto3"
+          + "\022\022\n\010required\030\270\276v \001(\010\"L\n\016MessageOptions\022\024"
+          + "\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001("
+          + "\010\022\017\n\005error\030\266\276v \001(\005\"$\n\014OneofOptions\022\024\n\nmo"
+          + "del_name\030\204\277v \001(\t\"%\n\016ServiceOptions\022\023\n\tma"
+          + "in_noun\030\230\277v \001(\t:H\n\rfield_options\022\035.googl"
+          + "e.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fie"
+          + "ldOptions:N\n\017message_options\022\037.google.pr"
+          + "otobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Messa"
+          + "geOptions:H\n\roneof_options\022\035.google.prot"
+          + "obuf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOpti"
+          + "ons:N\n\017service_options\022\037.google.protobuf"
+          + ".ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOpti"
+          + "onsB\036\n\034com.strongdm.api.v1.plumbingb\006pro"
+          + "to3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -2849,7 +2921,7 @@ public final class Options {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_FieldOptions_descriptor,
             new java.lang.String[] {
-              "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable",
+              "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required",
             });
     internal_static_v1_MessageOptions_descriptor = getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable =

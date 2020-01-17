@@ -9772,46 +9772,58 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
     java.lang.String getAccessKey();
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
     com.google.protobuf.ByteString getAccessKeyBytes();
 
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
     java.lang.String getSecretAccessKey();
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
     com.google.protobuf.ByteString getSecretAccessKeyBytes();
 
     /**
-     * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The output.
      */
     java.lang.String getOutput();
     /**
-     * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for output.
      */
     com.google.protobuf.ByteString getOutputBytes();
 
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -10082,7 +10094,9 @@ public final class DriversPlumbing {
     public static final int ACCESS_KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object accessKey_;
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
@@ -10098,7 +10112,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
@@ -10117,7 +10133,9 @@ public final class DriversPlumbing {
     public static final int SECRET_ACCESS_KEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object secretAccessKey_;
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
@@ -10133,7 +10151,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
@@ -10152,7 +10172,8 @@ public final class DriversPlumbing {
     public static final int OUTPUT_FIELD_NUMBER = 3;
     private volatile java.lang.Object output_;
     /**
-     * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The output.
      */
@@ -10168,7 +10189,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for output.
      */
@@ -10187,7 +10209,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 4;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -10926,7 +10950,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object accessKey_ = "";
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The accessKey.
        */
@@ -10942,7 +10968,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for accessKey.
        */
@@ -10958,7 +10986,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The accessKey to set.
        * @return This builder for chaining.
@@ -10973,7 +11003,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -10984,7 +11016,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for accessKey to set.
        * @return This builder for chaining.
@@ -11002,7 +11036,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object secretAccessKey_ = "";
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The secretAccessKey.
        */
@@ -11018,7 +11054,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for secretAccessKey.
        */
@@ -11034,7 +11072,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The secretAccessKey to set.
        * @return This builder for chaining.
@@ -11049,7 +11089,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -11060,7 +11102,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for secretAccessKey to set.
        * @return This builder for chaining.
@@ -11078,7 +11122,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object output_ = "";
       /**
-       * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The output.
        */
@@ -11094,7 +11140,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for output.
        */
@@ -11110,7 +11158,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The output to set.
        * @return This builder for chaining.
@@ -11125,7 +11175,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -11136,7 +11188,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string output = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string output = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for output to set.
        * @return This builder for chaining.
@@ -11154,7 +11208,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -11162,7 +11218,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -11174,7 +11232,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -11394,59 +11454,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The privateKey.
      */
     java.lang.String getPrivateKey();
     /**
-     * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for privateKey.
      */
     com.google.protobuf.ByteString getPrivateKeyBytes();
 
     /**
-     * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The project.
      */
     java.lang.String getProject();
     /**
-     * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for project.
      */
     com.google.protobuf.ByteString getProjectBytes();
 
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
     com.google.protobuf.ByteString getEndpointBytes();
 
     /**
-     * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -11702,7 +11780,9 @@ public final class DriversPlumbing {
     public static final int PRIVATE_KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object privateKey_;
     /**
-     * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The privateKey.
      */
@@ -11718,7 +11798,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for privateKey.
      */
@@ -11737,7 +11819,9 @@ public final class DriversPlumbing {
     public static final int PROJECT_FIELD_NUMBER = 2;
     private volatile java.lang.Object project_;
     /**
-     * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The project.
      */
@@ -11753,7 +11837,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for project.
      */
@@ -11772,7 +11858,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 3;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -11783,7 +11871,9 @@ public final class DriversPlumbing {
     public static final int ENDPOINT_FIELD_NUMBER = 4;
     private volatile java.lang.Object endpoint_;
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
@@ -11799,7 +11889,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
@@ -11818,7 +11910,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -11834,7 +11928,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -12544,7 +12640,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object privateKey_ = "";
       /**
-       * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The privateKey.
        */
@@ -12560,7 +12658,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for privateKey.
        */
@@ -12576,7 +12676,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The privateKey to set.
        * @return This builder for chaining.
@@ -12591,7 +12693,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -12602,7 +12706,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string private_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for privateKey to set.
        * @return This builder for chaining.
@@ -12620,7 +12726,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object project_ = "";
       /**
-       * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The project.
        */
@@ -12636,7 +12744,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for project.
        */
@@ -12652,7 +12762,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The project to set.
        * @return This builder for chaining.
@@ -12667,7 +12779,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -12678,7 +12792,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string project = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string project = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for project to set.
        * @return This builder for chaining.
@@ -12696,7 +12812,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -12704,7 +12822,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -12716,7 +12836,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -12729,7 +12851,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object endpoint_ = "";
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The endpoint.
        */
@@ -12745,7 +12869,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for endpoint.
        */
@@ -12761,7 +12887,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -12776,7 +12904,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -12787,7 +12917,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -12805,7 +12937,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -12821,7 +12955,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -12837,7 +12973,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -12852,7 +12990,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -12863,7 +13003,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -13002,46 +13144,60 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -13056,7 +13212,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -13314,7 +13472,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -13330,7 +13490,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -13349,7 +13511,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -13365,7 +13529,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -13384,7 +13550,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -13400,7 +13568,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -13419,7 +13589,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 4;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -13442,7 +13614,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 6;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -14158,7 +14332,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -14174,7 +14350,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -14190,7 +14368,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -14205,7 +14385,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -14216,7 +14398,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -14234,7 +14418,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -14250,7 +14436,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -14266,7 +14454,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -14281,7 +14471,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -14292,7 +14484,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -14310,7 +14504,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -14326,7 +14522,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -14342,7 +14540,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -14357,7 +14557,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -14368,7 +14570,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -14386,7 +14590,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -14394,7 +14600,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -14406,7 +14614,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -14455,7 +14665,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -14463,7 +14675,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -14475,7 +14689,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -14609,46 +14825,60 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -14909,7 +15139,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -14925,7 +15157,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -14944,7 +15178,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 2;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -14955,7 +15191,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -14971,7 +15209,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -14990,7 +15230,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 4;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -15006,7 +15248,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -15726,7 +15970,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -15742,7 +15988,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -15758,7 +16006,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -15773,7 +16023,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -15784,7 +16036,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -15802,7 +16056,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -15810,7 +16066,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -15822,7 +16080,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -15835,7 +16095,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -15851,7 +16113,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -15867,7 +16131,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -15882,7 +16148,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -15893,7 +16161,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -15911,7 +16181,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -15927,7 +16199,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -15943,7 +16217,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -15958,7 +16234,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -15969,7 +16247,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -16144,59 +16424,75 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
     java.lang.String getAccessKey();
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
     com.google.protobuf.ByteString getAccessKeyBytes();
 
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
     java.lang.String getSecretAccessKey();
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
     com.google.protobuf.ByteString getSecretAccessKeyBytes();
 
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The region.
      */
     java.lang.String getRegion();
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for region.
      */
     com.google.protobuf.ByteString getRegionBytes();
 
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
     com.google.protobuf.ByteString getEndpointBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -16452,7 +16748,9 @@ public final class DriversPlumbing {
     public static final int ACCESS_KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object accessKey_;
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
@@ -16468,7 +16766,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
@@ -16487,7 +16787,9 @@ public final class DriversPlumbing {
     public static final int SECRET_ACCESS_KEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object secretAccessKey_;
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
@@ -16503,7 +16805,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
@@ -16522,7 +16826,8 @@ public final class DriversPlumbing {
     public static final int REGION_FIELD_NUMBER = 3;
     private volatile java.lang.Object region_;
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The region.
      */
@@ -16538,7 +16843,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for region.
      */
@@ -16557,7 +16863,9 @@ public final class DriversPlumbing {
     public static final int ENDPOINT_FIELD_NUMBER = 4;
     private volatile java.lang.Object endpoint_;
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
@@ -16573,7 +16881,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
@@ -16592,7 +16902,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -17294,7 +17606,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object accessKey_ = "";
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The accessKey.
        */
@@ -17310,7 +17624,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for accessKey.
        */
@@ -17326,7 +17642,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The accessKey to set.
        * @return This builder for chaining.
@@ -17341,7 +17659,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -17352,7 +17672,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for accessKey to set.
        * @return This builder for chaining.
@@ -17370,7 +17692,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object secretAccessKey_ = "";
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The secretAccessKey.
        */
@@ -17386,7 +17710,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for secretAccessKey.
        */
@@ -17402,7 +17728,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The secretAccessKey to set.
        * @return This builder for chaining.
@@ -17417,7 +17745,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -17428,7 +17758,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for secretAccessKey to set.
        * @return This builder for chaining.
@@ -17446,7 +17778,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object region_ = "";
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The region.
        */
@@ -17462,7 +17796,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for region.
        */
@@ -17478,7 +17814,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The region to set.
        * @return This builder for chaining.
@@ -17493,7 +17831,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -17504,7 +17844,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for region to set.
        * @return This builder for chaining.
@@ -17522,7 +17864,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object endpoint_ = "";
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The endpoint.
        */
@@ -17538,7 +17882,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for endpoint.
        */
@@ -17554,7 +17900,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -17569,7 +17917,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -17580,7 +17930,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -17598,7 +17950,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -17606,7 +17960,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -17618,7 +17974,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -17752,59 +18110,75 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The region.
      */
     java.lang.String getRegion();
     /**
-     * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for region.
      */
     com.google.protobuf.ByteString getRegionBytes();
 
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
     java.lang.String getSecretAccessKey();
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
     com.google.protobuf.ByteString getSecretAccessKeyBytes();
 
     /**
-     * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
-     * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
     com.google.protobuf.ByteString getEndpointBytes();
 
     /**
-     * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
     java.lang.String getAccessKey();
     /**
-     * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
     com.google.protobuf.ByteString getAccessKeyBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -18060,7 +18434,8 @@ public final class DriversPlumbing {
     public static final int REGION_FIELD_NUMBER = 1;
     private volatile java.lang.Object region_;
     /**
-     * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The region.
      */
@@ -18076,7 +18451,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for region.
      */
@@ -18095,7 +18471,9 @@ public final class DriversPlumbing {
     public static final int SECRET_ACCESS_KEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object secretAccessKey_;
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
@@ -18111,7 +18489,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
@@ -18130,7 +18510,9 @@ public final class DriversPlumbing {
     public static final int ENDPOINT_FIELD_NUMBER = 3;
     private volatile java.lang.Object endpoint_;
     /**
-     * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
@@ -18146,7 +18528,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
@@ -18165,7 +18549,9 @@ public final class DriversPlumbing {
     public static final int ACCESS_KEY_FIELD_NUMBER = 4;
     private volatile java.lang.Object accessKey_;
     /**
-     * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
@@ -18181,7 +18567,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
@@ -18200,7 +18588,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -18902,7 +19292,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object region_ = "";
       /**
-       * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The region.
        */
@@ -18918,7 +19310,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for region.
        */
@@ -18934,7 +19328,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The region to set.
        * @return This builder for chaining.
@@ -18949,7 +19345,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -18960,7 +19358,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for region to set.
        * @return This builder for chaining.
@@ -18978,7 +19378,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object secretAccessKey_ = "";
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The secretAccessKey.
        */
@@ -18994,7 +19396,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for secretAccessKey.
        */
@@ -19010,7 +19414,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The secretAccessKey to set.
        * @return This builder for chaining.
@@ -19025,7 +19431,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -19036,7 +19444,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for secretAccessKey to set.
        * @return This builder for chaining.
@@ -19054,7 +19464,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object endpoint_ = "";
       /**
-       * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The endpoint.
        */
@@ -19070,7 +19482,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for endpoint.
        */
@@ -19086,7 +19500,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -19101,7 +19517,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -19112,7 +19530,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -19130,7 +19550,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object accessKey_ = "";
       /**
-       * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The accessKey.
        */
@@ -19146,7 +19568,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for accessKey.
        */
@@ -19162,7 +19586,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The accessKey to set.
        * @return This builder for chaining.
@@ -19177,7 +19603,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -19188,7 +19616,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for accessKey to set.
        * @return This builder for chaining.
@@ -19206,7 +19636,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -19214,7 +19646,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -19226,7 +19660,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -19360,46 +19796,60 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -19414,7 +19864,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -19672,7 +20124,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -19688,7 +20142,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -19707,7 +20163,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -19723,7 +20181,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -19742,7 +20202,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -19758,7 +20220,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -19777,7 +20241,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 4;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -19800,7 +20266,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 6;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -20516,7 +20984,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -20532,7 +21002,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -20548,7 +21020,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -20563,7 +21037,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -20574,7 +21050,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -20592,7 +21070,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -20608,7 +21088,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -20624,7 +21106,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -20639,7 +21123,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -20650,7 +21136,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -20668,7 +21156,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -20684,7 +21174,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -20700,7 +21192,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -20715,7 +21209,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -20726,7 +21222,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -20744,7 +21242,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -20752,7 +21252,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -20764,7 +21266,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -20813,7 +21317,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -20821,7 +21327,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -20833,7 +21341,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -20967,13 +21477,15 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The url.
      */
     java.lang.String getUrl();
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for url.
      */
@@ -20997,52 +21509,68 @@ public final class DriversPlumbing {
     com.google.protobuf.ByteString getHealthcheckPathBytes();
 
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The headersBlacklist.
      */
     java.lang.String getHeadersBlacklist();
     /**
-     * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for headersBlacklist.
      */
     com.google.protobuf.ByteString getHeadersBlacklistBytes();
 
     /**
-     * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The defaultPath.
      */
     java.lang.String getDefaultPath();
     /**
-     * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for defaultPath.
      */
@@ -21335,7 +21863,8 @@ public final class DriversPlumbing {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The url.
      */
@@ -21351,7 +21880,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for url.
      */
@@ -21409,7 +21939,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -21425,7 +21957,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -21444,7 +21978,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 4;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -21460,7 +21996,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -21479,7 +22017,9 @@ public final class DriversPlumbing {
     public static final int HEADERS_BLACKLIST_FIELD_NUMBER = 5;
     private volatile java.lang.Object headersBlacklist_;
     /**
-     * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The headersBlacklist.
      */
@@ -21495,7 +22035,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for headersBlacklist.
      */
@@ -21514,7 +22056,9 @@ public final class DriversPlumbing {
     public static final int DEFAULT_PATH_FIELD_NUMBER = 6;
     private volatile java.lang.Object defaultPath_;
     /**
-     * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The defaultPath.
      */
@@ -21530,7 +22074,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for defaultPath.
      */
@@ -22316,7 +22862,8 @@ public final class DriversPlumbing {
 
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The url.
        */
@@ -22332,7 +22879,8 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for url.
        */
@@ -22348,7 +22896,8 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The url to set.
        * @return This builder for chaining.
@@ -22363,7 +22912,8 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -22374,7 +22924,8 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -22478,7 +23029,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -22494,7 +23047,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -22510,7 +23065,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -22525,7 +23082,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -22536,7 +23095,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -22554,7 +23115,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -22570,7 +23133,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -22586,7 +23151,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -22601,7 +23168,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -22612,7 +23181,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -22630,7 +23201,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object headersBlacklist_ = "";
       /**
-       * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The headersBlacklist.
        */
@@ -22646,7 +23219,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for headersBlacklist.
        */
@@ -22662,7 +23237,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The headersBlacklist to set.
        * @return This builder for chaining.
@@ -22677,7 +23254,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -22688,7 +23267,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string headers_blacklist = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for headersBlacklist to set.
        * @return This builder for chaining.
@@ -22706,7 +23287,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object defaultPath_ = "";
       /**
-       * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The defaultPath.
        */
@@ -22722,7 +23305,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for defaultPath.
        */
@@ -22738,7 +23323,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The defaultPath to set.
        * @return This builder for chaining.
@@ -22753,7 +23340,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -22764,7 +23353,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string default_path = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for defaultPath to set.
        * @return This builder for chaining.
@@ -22990,13 +23581,15 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The url.
      */
     java.lang.String getUrl();
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for url.
      */
@@ -23020,26 +23613,34 @@ public final class DriversPlumbing {
     com.google.protobuf.ByteString getHealthcheckPathBytes();
 
     /**
-     * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The headersBlacklist.
      */
     java.lang.String getHeadersBlacklist();
     /**
-     * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for headersBlacklist.
      */
     com.google.protobuf.ByteString getHeadersBlacklistBytes();
 
     /**
-     * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The defaultPath.
      */
     java.lang.String getDefaultPath();
     /**
-     * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for defaultPath.
      */
@@ -23315,7 +23916,8 @@ public final class DriversPlumbing {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The url.
      */
@@ -23331,7 +23933,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for url.
      */
@@ -23389,7 +23992,9 @@ public final class DriversPlumbing {
     public static final int HEADERS_BLACKLIST_FIELD_NUMBER = 3;
     private volatile java.lang.Object headersBlacklist_;
     /**
-     * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The headersBlacklist.
      */
@@ -23405,7 +24010,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for headersBlacklist.
      */
@@ -23424,7 +24031,9 @@ public final class DriversPlumbing {
     public static final int DEFAULT_PATH_FIELD_NUMBER = 4;
     private volatile java.lang.Object defaultPath_;
     /**
-     * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The defaultPath.
      */
@@ -23440,7 +24049,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for defaultPath.
      */
@@ -24192,7 +24803,8 @@ public final class DriversPlumbing {
 
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The url.
        */
@@ -24208,7 +24820,8 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for url.
        */
@@ -24224,7 +24837,8 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The url to set.
        * @return This builder for chaining.
@@ -24239,7 +24853,8 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -24250,7 +24865,8 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -24354,7 +24970,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object headersBlacklist_ = "";
       /**
-       * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The headersBlacklist.
        */
@@ -24370,7 +24988,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for headersBlacklist.
        */
@@ -24386,7 +25006,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The headersBlacklist to set.
        * @return This builder for chaining.
@@ -24401,7 +25023,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -24412,7 +25036,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string headers_blacklist = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for headersBlacklist to set.
        * @return This builder for chaining.
@@ -24430,7 +25056,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object defaultPath_ = "";
       /**
-       * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The defaultPath.
        */
@@ -24446,7 +25074,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for defaultPath.
        */
@@ -24462,7 +25092,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The defaultPath to set.
        * @return This builder for chaining.
@@ -24477,7 +25109,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -24488,7 +25122,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string default_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for defaultPath to set.
        * @return This builder for chaining.
@@ -24713,13 +25349,15 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The url.
      */
     java.lang.String getUrl();
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for url.
      */
@@ -24743,39 +25381,51 @@ public final class DriversPlumbing {
     com.google.protobuf.ByteString getHealthcheckPathBytes();
 
     /**
-     * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authHeader.
      */
     java.lang.String getAuthHeader();
     /**
-     * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authHeader.
      */
     com.google.protobuf.ByteString getAuthHeaderBytes();
 
     /**
-     * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The headersBlacklist.
      */
     java.lang.String getHeadersBlacklist();
     /**
-     * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for headersBlacklist.
      */
     com.google.protobuf.ByteString getHeadersBlacklistBytes();
 
     /**
-     * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The defaultPath.
      */
     java.lang.String getDefaultPath();
     /**
-     * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for defaultPath.
      */
@@ -25059,7 +25709,8 @@ public final class DriversPlumbing {
     public static final int URL_FIELD_NUMBER = 1;
     private volatile java.lang.Object url_;
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The url.
      */
@@ -25075,7 +25726,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+     * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for url.
      */
@@ -25133,7 +25785,9 @@ public final class DriversPlumbing {
     public static final int AUTH_HEADER_FIELD_NUMBER = 3;
     private volatile java.lang.Object authHeader_;
     /**
-     * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authHeader.
      */
@@ -25149,7 +25803,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authHeader.
      */
@@ -25168,7 +25824,9 @@ public final class DriversPlumbing {
     public static final int HEADERS_BLACKLIST_FIELD_NUMBER = 4;
     private volatile java.lang.Object headersBlacklist_;
     /**
-     * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The headersBlacklist.
      */
@@ -25184,7 +25842,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for headersBlacklist.
      */
@@ -25203,7 +25863,9 @@ public final class DriversPlumbing {
     public static final int DEFAULT_PATH_FIELD_NUMBER = 5;
     private volatile java.lang.Object defaultPath_;
     /**
-     * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The defaultPath.
      */
@@ -25219,7 +25881,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for defaultPath.
      */
@@ -25985,7 +26649,8 @@ public final class DriversPlumbing {
 
       private java.lang.Object url_ = "";
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The url.
        */
@@ -26001,7 +26666,8 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for url.
        */
@@ -26017,7 +26683,8 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The url to set.
        * @return This builder for chaining.
@@ -26032,7 +26699,8 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -26043,7 +26711,8 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string url = 1 [(.v1.field_options) = { ... }</code>
+       * <code>string url = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -26147,7 +26816,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object authHeader_ = "";
       /**
-       * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The authHeader.
        */
@@ -26163,7 +26834,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for authHeader.
        */
@@ -26179,7 +26852,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The authHeader to set.
        * @return This builder for chaining.
@@ -26194,7 +26869,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -26205,7 +26882,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_header = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_header = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for authHeader to set.
        * @return This builder for chaining.
@@ -26223,7 +26902,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object headersBlacklist_ = "";
       /**
-       * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The headersBlacklist.
        */
@@ -26239,7 +26920,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for headersBlacklist.
        */
@@ -26255,7 +26938,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The headersBlacklist to set.
        * @return This builder for chaining.
@@ -26270,7 +26955,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -26281,7 +26968,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string headers_blacklist = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string headers_blacklist = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for headersBlacklist to set.
        * @return This builder for chaining.
@@ -26299,7 +26988,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object defaultPath_ = "";
       /**
-       * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The defaultPath.
        */
@@ -26315,7 +27006,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for defaultPath.
        */
@@ -26331,7 +27024,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The defaultPath to set.
        * @return This builder for chaining.
@@ -26346,7 +27041,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -26357,7 +27054,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string default_path = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string default_path = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for defaultPath to set.
        * @return This builder for chaining.
@@ -26582,13 +27281,17 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -26603,78 +27306,102 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthority.
      */
     java.lang.String getCertificateAuthority();
     /**
-     * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthority.
      */
     com.google.protobuf.ByteString getCertificateAuthorityBytes();
 
     /**
-     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthorityFilename.
      */
     java.lang.String getCertificateAuthorityFilename();
     /**
-     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthorityFilename.
      */
     com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes();
 
     /**
-     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientCertificate.
      */
     java.lang.String getClientCertificate();
     /**
-     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientCertificate.
      */
     com.google.protobuf.ByteString getClientCertificateBytes();
 
     /**
-     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientCertificateFilename.
      */
     java.lang.String getClientCertificateFilename();
     /**
-     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientCertificateFilename.
      */
     com.google.protobuf.ByteString getClientCertificateFilenameBytes();
 
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientKey.
      */
     java.lang.String getClientKey();
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientKey.
      */
     com.google.protobuf.ByteString getClientKeyBytes();
 
     /**
-     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientKeyFilename.
      */
     java.lang.String getClientKeyFilename();
     /**
-     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientKeyFilename.
      */
@@ -26954,7 +27681,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -26970,7 +27699,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -27001,7 +27732,9 @@ public final class DriversPlumbing {
     public static final int CERTIFICATE_AUTHORITY_FIELD_NUMBER = 3;
     private volatile java.lang.Object certificateAuthority_;
     /**
-     * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthority.
      */
@@ -27017,7 +27750,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthority.
      */
@@ -27036,7 +27771,9 @@ public final class DriversPlumbing {
     public static final int CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object certificateAuthorityFilename_;
     /**
-     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthorityFilename.
      */
@@ -27052,7 +27789,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthorityFilename.
      */
@@ -27071,7 +27810,9 @@ public final class DriversPlumbing {
     public static final int CLIENT_CERTIFICATE_FIELD_NUMBER = 5;
     private volatile java.lang.Object clientCertificate_;
     /**
-     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientCertificate.
      */
@@ -27087,7 +27828,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientCertificate.
      */
@@ -27106,7 +27849,9 @@ public final class DriversPlumbing {
     public static final int CLIENT_CERTIFICATE_FILENAME_FIELD_NUMBER = 6;
     private volatile java.lang.Object clientCertificateFilename_;
     /**
-     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientCertificateFilename.
      */
@@ -27122,7 +27867,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientCertificateFilename.
      */
@@ -27141,7 +27888,9 @@ public final class DriversPlumbing {
     public static final int CLIENT_KEY_FIELD_NUMBER = 7;
     private volatile java.lang.Object clientKey_;
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientKey.
      */
@@ -27157,7 +27906,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientKey.
      */
@@ -27176,7 +27927,9 @@ public final class DriversPlumbing {
     public static final int CLIENT_KEY_FILENAME_FIELD_NUMBER = 8;
     private volatile java.lang.Object clientKeyFilename_;
     /**
-     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clientKeyFilename.
      */
@@ -27192,7 +27945,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clientKeyFilename.
      */
@@ -27958,7 +28713,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -27974,7 +28731,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -27990,7 +28749,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -28005,7 +28766,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -28016,7 +28779,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -28070,7 +28835,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object certificateAuthority_ = "";
       /**
-       * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The certificateAuthority.
        */
@@ -28086,7 +28853,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for certificateAuthority.
        */
@@ -28102,7 +28871,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The certificateAuthority to set.
        * @return This builder for chaining.
@@ -28117,7 +28888,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -28128,7 +28901,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for certificateAuthority to set.
        * @return This builder for chaining.
@@ -28146,7 +28921,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object certificateAuthorityFilename_ = "";
       /**
-       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The certificateAuthorityFilename.
        */
@@ -28162,7 +28939,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for certificateAuthorityFilename.
        */
@@ -28178,7 +28957,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The certificateAuthorityFilename to set.
        * @return This builder for chaining.
@@ -28193,7 +28974,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -28204,7 +28987,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority_filename = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for certificateAuthorityFilename to set.
        * @return This builder for chaining.
@@ -28222,7 +29007,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object clientCertificate_ = "";
       /**
-       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The clientCertificate.
        */
@@ -28238,7 +29025,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for clientCertificate.
        */
@@ -28254,7 +29043,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The clientCertificate to set.
        * @return This builder for chaining.
@@ -28269,7 +29060,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -28280,7 +29073,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for clientCertificate to set.
        * @return This builder for chaining.
@@ -28298,7 +29093,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object clientCertificateFilename_ = "";
       /**
-       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The clientCertificateFilename.
        */
@@ -28314,7 +29111,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for clientCertificateFilename.
        */
@@ -28330,7 +29129,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The clientCertificateFilename to set.
        * @return This builder for chaining.
@@ -28345,7 +29146,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -28356,7 +29159,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_certificate_filename = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_certificate_filename = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for clientCertificateFilename to set.
        * @return This builder for chaining.
@@ -28374,7 +29179,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object clientKey_ = "";
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The clientKey.
        */
@@ -28390,7 +29197,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for clientKey.
        */
@@ -28406,7 +29215,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The clientKey to set.
        * @return This builder for chaining.
@@ -28421,7 +29232,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -28432,7 +29245,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for clientKey to set.
        * @return This builder for chaining.
@@ -28450,7 +29265,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object clientKeyFilename_ = "";
       /**
-       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The clientKeyFilename.
        */
@@ -28466,7 +29283,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for clientKeyFilename.
        */
@@ -28482,7 +29301,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The clientKeyFilename to set.
        * @return This builder for chaining.
@@ -28497,7 +29318,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -28508,7 +29331,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string client_key_filename = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string client_key_filename = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for clientKeyFilename to set.
        * @return This builder for chaining.
@@ -28647,13 +29472,17 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -28668,26 +29497,34 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -28936,7 +29773,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -28952,7 +29791,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -28983,7 +29824,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -28999,7 +29842,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -29018,7 +29863,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 4;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -29034,7 +29881,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -29738,7 +30587,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -29754,7 +30605,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -29770,7 +30623,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -29785,7 +30640,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -29796,7 +30653,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -29850,7 +30709,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -29866,7 +30727,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -29882,7 +30745,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -29897,7 +30762,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -29908,7 +30775,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -29926,7 +30795,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -29942,7 +30813,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -29958,7 +30831,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -29973,7 +30848,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -29984,7 +30861,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -30126,91 +31005,117 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
     com.google.protobuf.ByteString getEndpointBytes();
 
     /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
     java.lang.String getAccessKey();
     /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
     com.google.protobuf.ByteString getAccessKeyBytes();
 
     /**
-     * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
     java.lang.String getSecretAccessKey();
     /**
-     * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
     com.google.protobuf.ByteString getSecretAccessKeyBytes();
 
     /**
-     * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthority.
      */
     java.lang.String getCertificateAuthority();
     /**
-     * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthority.
      */
     com.google.protobuf.ByteString getCertificateAuthorityBytes();
 
     /**
-     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthorityFilename.
      */
     java.lang.String getCertificateAuthorityFilename();
     /**
-     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthorityFilename.
      */
     com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes();
 
     /**
-     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The region.
      */
     java.lang.String getRegion();
     /**
-     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for region.
      */
     com.google.protobuf.ByteString getRegionBytes();
 
     /**
-     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clusterName.
      */
     java.lang.String getClusterName();
     /**
-     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clusterName.
      */
@@ -30485,7 +31390,9 @@ public final class DriversPlumbing {
     public static final int ENDPOINT_FIELD_NUMBER = 1;
     private volatile java.lang.Object endpoint_;
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
@@ -30501,7 +31408,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
@@ -30520,7 +31429,9 @@ public final class DriversPlumbing {
     public static final int ACCESS_KEY_FIELD_NUMBER = 2;
     private volatile java.lang.Object accessKey_;
     /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The accessKey.
      */
@@ -30536,7 +31447,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for accessKey.
      */
@@ -30555,7 +31468,9 @@ public final class DriversPlumbing {
     public static final int SECRET_ACCESS_KEY_FIELD_NUMBER = 3;
     private volatile java.lang.Object secretAccessKey_;
     /**
-     * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The secretAccessKey.
      */
@@ -30571,7 +31486,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for secretAccessKey.
      */
@@ -30590,7 +31507,9 @@ public final class DriversPlumbing {
     public static final int CERTIFICATE_AUTHORITY_FIELD_NUMBER = 4;
     private volatile java.lang.Object certificateAuthority_;
     /**
-     * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthority.
      */
@@ -30606,7 +31525,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthority.
      */
@@ -30625,7 +31546,9 @@ public final class DriversPlumbing {
     public static final int CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object certificateAuthorityFilename_;
     /**
-     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthorityFilename.
      */
@@ -30641,7 +31564,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthorityFilename.
      */
@@ -30660,7 +31585,8 @@ public final class DriversPlumbing {
     public static final int REGION_FIELD_NUMBER = 6;
     private volatile java.lang.Object region_;
     /**
-     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The region.
      */
@@ -30676,7 +31602,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for region.
      */
@@ -30695,7 +31622,9 @@ public final class DriversPlumbing {
     public static final int CLUSTER_NAME_FIELD_NUMBER = 7;
     private volatile java.lang.Object clusterName_;
     /**
-     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The clusterName.
      */
@@ -30711,7 +31640,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for clusterName.
      */
@@ -31458,7 +32389,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object endpoint_ = "";
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The endpoint.
        */
@@ -31474,7 +32407,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for endpoint.
        */
@@ -31490,7 +32425,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -31505,7 +32442,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -31516,7 +32455,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -31534,7 +32475,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object accessKey_ = "";
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The accessKey.
        */
@@ -31550,7 +32493,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for accessKey.
        */
@@ -31566,7 +32511,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The accessKey to set.
        * @return This builder for chaining.
@@ -31581,7 +32528,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -31592,7 +32541,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string access_key = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string access_key = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for accessKey to set.
        * @return This builder for chaining.
@@ -31610,7 +32561,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object secretAccessKey_ = "";
       /**
-       * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The secretAccessKey.
        */
@@ -31626,7 +32579,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for secretAccessKey.
        */
@@ -31642,7 +32597,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The secretAccessKey to set.
        * @return This builder for chaining.
@@ -31657,7 +32614,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -31668,7 +32627,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string secret_access_key = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string secret_access_key = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for secretAccessKey to set.
        * @return This builder for chaining.
@@ -31686,7 +32647,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object certificateAuthority_ = "";
       /**
-       * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The certificateAuthority.
        */
@@ -31702,7 +32665,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for certificateAuthority.
        */
@@ -31718,7 +32683,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The certificateAuthority to set.
        * @return This builder for chaining.
@@ -31733,7 +32700,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -31744,7 +32713,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for certificateAuthority to set.
        * @return This builder for chaining.
@@ -31762,7 +32733,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object certificateAuthorityFilename_ = "";
       /**
-       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The certificateAuthorityFilename.
        */
@@ -31778,7 +32751,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for certificateAuthorityFilename.
        */
@@ -31794,7 +32769,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The certificateAuthorityFilename to set.
        * @return This builder for chaining.
@@ -31809,7 +32786,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -31820,7 +32799,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for certificateAuthorityFilename to set.
        * @return This builder for chaining.
@@ -31838,7 +32819,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object region_ = "";
       /**
-       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The region.
        */
@@ -31854,7 +32837,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for region.
        */
@@ -31870,7 +32855,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The region to set.
        * @return This builder for chaining.
@@ -31885,7 +32872,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -31896,7 +32885,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string region = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string region = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for region to set.
        * @return This builder for chaining.
@@ -31914,7 +32905,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object clusterName_ = "";
       /**
-       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The clusterName.
        */
@@ -31930,7 +32923,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for clusterName.
        */
@@ -31946,7 +32941,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The clusterName to set.
        * @return This builder for chaining.
@@ -31961,7 +32958,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -31972,7 +32971,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string cluster_name = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string cluster_name = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for clusterName to set.
        * @return This builder for chaining.
@@ -32111,65 +33112,85 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
     java.lang.String getEndpoint();
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
     com.google.protobuf.ByteString getEndpointBytes();
 
     /**
-     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthority.
      */
     java.lang.String getCertificateAuthority();
     /**
-     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthority.
      */
     com.google.protobuf.ByteString getCertificateAuthorityBytes();
 
     /**
-     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthorityFilename.
      */
     java.lang.String getCertificateAuthorityFilename();
     /**
-     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthorityFilename.
      */
     com.google.protobuf.ByteString getCertificateAuthorityFilenameBytes();
 
     /**
-     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The serviceAccountKey.
      */
     java.lang.String getServiceAccountKey();
     /**
-     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for serviceAccountKey.
      */
     com.google.protobuf.ByteString getServiceAccountKeyBytes();
 
     /**
-     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The serviceAccountKeyFilename.
      */
     java.lang.String getServiceAccountKeyFilename();
     /**
-     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for serviceAccountKeyFilename.
      */
@@ -32428,7 +33449,9 @@ public final class DriversPlumbing {
     public static final int ENDPOINT_FIELD_NUMBER = 1;
     private volatile java.lang.Object endpoint_;
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The endpoint.
      */
@@ -32444,7 +33467,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for endpoint.
      */
@@ -32463,7 +33488,9 @@ public final class DriversPlumbing {
     public static final int CERTIFICATE_AUTHORITY_FIELD_NUMBER = 2;
     private volatile java.lang.Object certificateAuthority_;
     /**
-     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthority.
      */
@@ -32479,7 +33506,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthority.
      */
@@ -32498,7 +33527,9 @@ public final class DriversPlumbing {
     public static final int CERTIFICATE_AUTHORITY_FILENAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object certificateAuthorityFilename_;
     /**
-     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The certificateAuthorityFilename.
      */
@@ -32514,7 +33545,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for certificateAuthorityFilename.
      */
@@ -32533,7 +33566,9 @@ public final class DriversPlumbing {
     public static final int SERVICE_ACCOUNT_KEY_FIELD_NUMBER = 4;
     private volatile java.lang.Object serviceAccountKey_;
     /**
-     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The serviceAccountKey.
      */
@@ -32549,7 +33584,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for serviceAccountKey.
      */
@@ -32568,7 +33605,9 @@ public final class DriversPlumbing {
     public static final int SERVICE_ACCOUNT_KEY_FILENAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object serviceAccountKeyFilename_;
     /**
-     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The serviceAccountKeyFilename.
      */
@@ -32584,7 +33623,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for serviceAccountKeyFilename.
      */
@@ -33301,7 +34342,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object endpoint_ = "";
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The endpoint.
        */
@@ -33317,7 +34360,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for endpoint.
        */
@@ -33333,7 +34378,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The endpoint to set.
        * @return This builder for chaining.
@@ -33348,7 +34395,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -33359,7 +34408,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string endpoint = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for endpoint to set.
        * @return This builder for chaining.
@@ -33377,7 +34428,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object certificateAuthority_ = "";
       /**
-       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The certificateAuthority.
        */
@@ -33393,7 +34446,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for certificateAuthority.
        */
@@ -33409,7 +34464,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The certificateAuthority to set.
        * @return This builder for chaining.
@@ -33424,7 +34481,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -33435,7 +34494,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for certificateAuthority to set.
        * @return This builder for chaining.
@@ -33453,7 +34514,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object certificateAuthorityFilename_ = "";
       /**
-       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The certificateAuthorityFilename.
        */
@@ -33469,7 +34532,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for certificateAuthorityFilename.
        */
@@ -33485,7 +34550,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The certificateAuthorityFilename to set.
        * @return This builder for chaining.
@@ -33500,7 +34567,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -33511,7 +34580,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string certificate_authority_filename = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string certificate_authority_filename = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for certificateAuthorityFilename to set.
        * @return This builder for chaining.
@@ -33529,7 +34600,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object serviceAccountKey_ = "";
       /**
-       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The serviceAccountKey.
        */
@@ -33545,7 +34618,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for serviceAccountKey.
        */
@@ -33561,7 +34636,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The serviceAccountKey to set.
        * @return This builder for chaining.
@@ -33576,7 +34653,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -33587,7 +34666,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string service_account_key = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for serviceAccountKey to set.
        * @return This builder for chaining.
@@ -33605,7 +34686,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object serviceAccountKeyFilename_ = "";
       /**
-       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The serviceAccountKeyFilename.
        */
@@ -33621,7 +34704,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for serviceAccountKeyFilename.
        */
@@ -33637,7 +34722,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The serviceAccountKeyFilename to set.
        * @return This builder for chaining.
@@ -33652,7 +34739,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -33663,7 +34752,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string service_account_key_filename = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string service_account_key_filename = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for serviceAccountKeyFilename to set.
        * @return This builder for chaining.
@@ -33802,20 +34893,26 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -34060,7 +35157,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -34076,7 +35175,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -34095,7 +35196,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 2;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -34776,7 +35879,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -34792,7 +35897,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -34808,7 +35915,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -34823,7 +35932,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -34834,7 +35945,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -34852,7 +35965,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -34860,7 +35975,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -34872,7 +35989,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -35042,59 +36161,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
     java.lang.String getAuthDatabase();
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
     com.google.protobuf.ByteString getAuthDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -35109,13 +36246,17 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The replicaSet.
      */
     java.lang.String getReplicaSet();
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for replicaSet.
      */
@@ -35131,7 +36272,9 @@ public final class DriversPlumbing {
     boolean getConnectToReplica();
 
     /**
-     * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -35411,7 +36554,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -35427,7 +36572,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -35446,7 +36593,9 @@ public final class DriversPlumbing {
     public static final int AUTH_DATABASE_FIELD_NUMBER = 2;
     private volatile java.lang.Object authDatabase_;
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
@@ -35462,7 +36611,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
@@ -35481,7 +36632,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 3;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -35492,7 +36645,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -35508,7 +36663,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -35527,7 +36684,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 5;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -35543,7 +36702,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -35574,7 +36735,9 @@ public final class DriversPlumbing {
     public static final int REPLICA_SET_FIELD_NUMBER = 7;
     private volatile java.lang.Object replicaSet_;
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The replicaSet.
      */
@@ -35590,7 +36753,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for replicaSet.
      */
@@ -35622,7 +36787,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 9;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -36390,7 +37557,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -36406,7 +37575,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -36422,7 +37593,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -36437,7 +37610,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -36448,7 +37623,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -36466,7 +37643,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object authDatabase_ = "";
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The authDatabase.
        */
@@ -36482,7 +37661,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for authDatabase.
        */
@@ -36498,7 +37679,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The authDatabase to set.
        * @return This builder for chaining.
@@ -36513,7 +37696,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -36524,7 +37709,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for authDatabase to set.
        * @return This builder for chaining.
@@ -36542,7 +37729,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -36550,7 +37739,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -36562,7 +37753,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -36575,7 +37768,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -36591,7 +37786,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -36607,7 +37804,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -36622,7 +37821,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -36633,7 +37834,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -36651,7 +37854,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -36667,7 +37872,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -36683,7 +37890,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -36698,7 +37907,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -36709,7 +37920,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -36763,7 +37976,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object replicaSet_ = "";
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The replicaSet.
        */
@@ -36779,7 +37994,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for replicaSet.
        */
@@ -36795,7 +38012,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The replicaSet to set.
        * @return This builder for chaining.
@@ -36810,7 +38029,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -36821,7 +38042,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for replicaSet to set.
        * @return This builder for chaining.
@@ -36878,7 +38101,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -36886,7 +38111,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -36898,7 +38125,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -37035,59 +38264,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
     java.lang.String getAuthDatabase();
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
     com.google.protobuf.ByteString getAuthDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -37102,13 +38349,17 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The replicaSet.
      */
     java.lang.String getReplicaSet();
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for replicaSet.
      */
@@ -37124,7 +38375,9 @@ public final class DriversPlumbing {
     boolean getConnectToReplica();
 
     /**
-     * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -37404,7 +38657,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -37420,7 +38675,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -37439,7 +38696,9 @@ public final class DriversPlumbing {
     public static final int AUTH_DATABASE_FIELD_NUMBER = 2;
     private volatile java.lang.Object authDatabase_;
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
@@ -37455,7 +38714,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
@@ -37474,7 +38735,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 3;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -37485,7 +38748,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -37501,7 +38766,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -37520,7 +38787,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 5;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -37536,7 +38805,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -37567,7 +38838,9 @@ public final class DriversPlumbing {
     public static final int REPLICA_SET_FIELD_NUMBER = 7;
     private volatile java.lang.Object replicaSet_;
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The replicaSet.
      */
@@ -37583,7 +38856,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for replicaSet.
      */
@@ -37615,7 +38890,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 9;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -38388,7 +39665,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -38404,7 +39683,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -38420,7 +39701,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -38435,7 +39718,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -38446,7 +39731,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -38464,7 +39751,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object authDatabase_ = "";
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The authDatabase.
        */
@@ -38480,7 +39769,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for authDatabase.
        */
@@ -38496,7 +39787,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The authDatabase to set.
        * @return This builder for chaining.
@@ -38511,7 +39804,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -38522,7 +39817,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for authDatabase to set.
        * @return This builder for chaining.
@@ -38540,7 +39837,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -38548,7 +39847,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -38560,7 +39861,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -38573,7 +39876,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -38589,7 +39894,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -38605,7 +39912,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -38620,7 +39929,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -38631,7 +39942,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -38649,7 +39962,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -38665,7 +39980,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -38681,7 +39998,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -38696,7 +40015,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -38707,7 +40028,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -38761,7 +40084,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object replicaSet_ = "";
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The replicaSet.
        */
@@ -38777,7 +40102,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for replicaSet.
        */
@@ -38793,7 +40120,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The replicaSet to set.
        * @return This builder for chaining.
@@ -38808,7 +40137,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -38819,7 +40150,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for replicaSet to set.
        * @return This builder for chaining.
@@ -38876,7 +40209,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -38884,7 +40219,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -38896,7 +40233,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -39033,59 +40372,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
     java.lang.String getAuthDatabase();
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
     com.google.protobuf.ByteString getAuthDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -39100,20 +40457,24 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The schema.
      */
     java.lang.String getSchema();
     /**
-     * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for schema.
      */
     com.google.protobuf.ByteString getSchemaBytes();
 
     /**
-     * <code>bool tls_required = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -39387,7 +40748,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -39403,7 +40766,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -39422,7 +40787,9 @@ public final class DriversPlumbing {
     public static final int AUTH_DATABASE_FIELD_NUMBER = 2;
     private volatile java.lang.Object authDatabase_;
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
@@ -39438,7 +40805,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
@@ -39457,7 +40826,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 3;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -39468,7 +40839,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -39484,7 +40857,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -39503,7 +40878,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 5;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -39519,7 +40896,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -39550,7 +40929,8 @@ public final class DriversPlumbing {
     public static final int SCHEMA_FIELD_NUMBER = 7;
     private volatile java.lang.Object schema_;
     /**
-     * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The schema.
      */
@@ -39566,7 +40946,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for schema.
      */
@@ -39585,7 +40966,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 8;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -40333,7 +41716,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -40349,7 +41734,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -40365,7 +41752,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -40380,7 +41769,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -40391,7 +41782,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -40409,7 +41802,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object authDatabase_ = "";
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The authDatabase.
        */
@@ -40425,7 +41820,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for authDatabase.
        */
@@ -40441,7 +41838,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The authDatabase to set.
        * @return This builder for chaining.
@@ -40456,7 +41855,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -40467,7 +41868,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for authDatabase to set.
        * @return This builder for chaining.
@@ -40485,7 +41888,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -40493,7 +41898,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -40505,7 +41912,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -40518,7 +41927,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -40534,7 +41945,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -40550,7 +41963,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -40565,7 +41980,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -40576,7 +41993,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -40594,7 +42013,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -40610,7 +42031,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -40626,7 +42049,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -40641,7 +42066,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -40652,7 +42079,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -40706,7 +42135,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object schema_ = "";
       /**
-       * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The schema.
        */
@@ -40722,7 +42153,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for schema.
        */
@@ -40738,7 +42171,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The schema to set.
        * @return This builder for chaining.
@@ -40753,7 +42188,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -40764,7 +42201,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string schema = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for schema to set.
        * @return This builder for chaining.
@@ -40782,7 +42221,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -40790,7 +42231,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -40802,7 +42245,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -40936,59 +42381,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
     java.lang.String getAuthDatabase();
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
     com.google.protobuf.ByteString getAuthDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -41003,13 +42466,17 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The replicaSet.
      */
     java.lang.String getReplicaSet();
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for replicaSet.
      */
@@ -41025,7 +42492,9 @@ public final class DriversPlumbing {
     boolean getConnectToReplica();
 
     /**
-     * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -41305,7 +42774,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -41321,7 +42792,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -41340,7 +42813,9 @@ public final class DriversPlumbing {
     public static final int AUTH_DATABASE_FIELD_NUMBER = 2;
     private volatile java.lang.Object authDatabase_;
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The authDatabase.
      */
@@ -41356,7 +42831,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for authDatabase.
      */
@@ -41375,7 +42852,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 3;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -41386,7 +42865,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -41402,7 +42883,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -41421,7 +42904,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 5;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -41437,7 +42922,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -41468,7 +42955,9 @@ public final class DriversPlumbing {
     public static final int REPLICA_SET_FIELD_NUMBER = 7;
     private volatile java.lang.Object replicaSet_;
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The replicaSet.
      */
@@ -41484,7 +42973,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for replicaSet.
      */
@@ -41516,7 +43007,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 9;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -42284,7 +43777,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -42300,7 +43795,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -42316,7 +43813,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -42331,7 +43830,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -42342,7 +43843,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -42360,7 +43863,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object authDatabase_ = "";
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The authDatabase.
        */
@@ -42376,7 +43881,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for authDatabase.
        */
@@ -42392,7 +43899,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The authDatabase to set.
        * @return This builder for chaining.
@@ -42407,7 +43916,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -42418,7 +43929,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string auth_database = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string auth_database = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for authDatabase to set.
        * @return This builder for chaining.
@@ -42436,7 +43949,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -42444,7 +43959,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -42456,7 +43973,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -42469,7 +43988,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -42485,7 +44006,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -42501,7 +44024,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -42516,7 +44041,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -42527,7 +44054,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -42545,7 +44074,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -42561,7 +44092,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -42577,7 +44110,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -42592,7 +44127,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -42603,7 +44140,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -42657,7 +44196,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object replicaSet_ = "";
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The replicaSet.
        */
@@ -42673,7 +44214,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for replicaSet.
        */
@@ -42689,7 +44232,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The replicaSet to set.
        * @return This builder for chaining.
@@ -42704,7 +44249,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -42715,7 +44262,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string replica_set = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string replica_set = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for replicaSet to set.
        * @return This builder for chaining.
@@ -42772,7 +44321,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -42780,7 +44331,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -42792,7 +44345,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 9 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -42929,59 +44484,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -43250,7 +44823,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -43266,7 +44841,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -43285,7 +44862,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -43301,7 +44880,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -43320,7 +44901,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -43336,7 +44919,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -43355,7 +44940,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -43371,7 +44958,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -43390,7 +44979,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -44118,7 +45709,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -44134,7 +45727,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -44150,7 +45745,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -44165,7 +45762,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -44176,7 +45775,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -44194,7 +45795,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -44210,7 +45813,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -44226,7 +45831,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -44241,7 +45848,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -44252,7 +45861,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -44270,7 +45881,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -44286,7 +45899,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -44302,7 +45917,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -44317,7 +45934,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -44328,7 +45947,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -44346,7 +45967,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -44362,7 +45985,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -44378,7 +46003,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -44393,7 +46020,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -44404,7 +46033,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -44422,7 +46053,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -44430,7 +46063,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -44442,7 +46077,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -44612,59 +46249,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -44933,7 +46588,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -44949,7 +46606,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -44968,7 +46627,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -44984,7 +46645,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -45003,7 +46666,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -45019,7 +46684,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -45038,7 +46705,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -45054,7 +46723,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -45073,7 +46744,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -45804,7 +47477,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -45820,7 +47495,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -45836,7 +47513,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -45851,7 +47530,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -45862,7 +47543,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -45880,7 +47563,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -45896,7 +47581,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -45912,7 +47599,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -45927,7 +47616,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -45938,7 +47629,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -45956,7 +47649,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -45972,7 +47667,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -45988,7 +47685,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -46003,7 +47702,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -46014,7 +47715,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -46032,7 +47735,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -46048,7 +47753,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -46064,7 +47771,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -46079,7 +47788,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -46090,7 +47801,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -46108,7 +47821,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -46116,7 +47831,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -46128,7 +47845,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -46298,59 +48017,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -46619,7 +48356,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -46635,7 +48374,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -46654,7 +48395,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -46670,7 +48413,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -46689,7 +48434,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -46705,7 +48452,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -46724,7 +48473,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -46740,7 +48491,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -46759,7 +48512,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -47488,7 +49243,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -47504,7 +49261,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -47520,7 +49279,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -47535,7 +49296,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -47546,7 +49309,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -47564,7 +49329,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -47580,7 +49347,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -47596,7 +49365,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -47611,7 +49382,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -47622,7 +49395,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -47640,7 +49415,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -47656,7 +49433,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -47672,7 +49451,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -47687,7 +49468,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -47698,7 +49481,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -47716,7 +49501,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -47732,7 +49519,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -47748,7 +49537,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -47763,7 +49554,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -47774,7 +49567,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -47792,7 +49587,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -47800,7 +49597,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -47812,7 +49611,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -47982,59 +49783,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -48303,7 +50122,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -48319,7 +50140,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -48338,7 +50161,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -48354,7 +50179,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -48373,7 +50200,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -48389,7 +50218,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -48408,7 +50239,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -48424,7 +50257,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -48443,7 +50278,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -49171,7 +51008,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -49187,7 +51026,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -49203,7 +51044,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -49218,7 +51061,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -49229,7 +51074,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -49247,7 +51094,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -49263,7 +51112,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -49279,7 +51130,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -49294,7 +51147,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -49305,7 +51160,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -49323,7 +51180,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -49339,7 +51198,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -49355,7 +51216,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -49370,7 +51233,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -49381,7 +51246,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -49399,7 +51266,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -49415,7 +51284,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -49431,7 +51302,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -49446,7 +51319,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -49457,7 +51332,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -49475,7 +51352,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -49483,7 +51362,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -49495,7 +51376,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -49665,59 +51548,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -49986,7 +51887,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -50002,7 +51905,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -50021,7 +51926,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -50037,7 +51944,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -50056,7 +51965,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -50072,7 +51983,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -50091,7 +52004,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -50107,7 +52022,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -50126,7 +52043,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -50855,7 +52774,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -50871,7 +52792,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -50887,7 +52810,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -50902,7 +52827,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -50913,7 +52840,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -50931,7 +52860,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -50947,7 +52878,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -50963,7 +52896,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -50978,7 +52913,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -50989,7 +52926,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -51007,7 +52946,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -51023,7 +52964,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -51039,7 +52982,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -51054,7 +52999,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -51065,7 +53012,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -51083,7 +53032,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -51099,7 +53050,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -51115,7 +53068,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -51130,7 +53085,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -51141,7 +53098,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -51159,7 +53118,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -51167,7 +53128,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -51179,7 +53142,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -51349,52 +53314,68 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -51409,14 +53390,18 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -51682,7 +53667,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -51698,7 +53685,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -51717,7 +53706,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -51733,7 +53724,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -51752,7 +53745,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -51768,7 +53763,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -51787,7 +53784,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -51803,7 +53802,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -51834,7 +53835,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 6;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -51845,7 +53848,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 7;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -52577,7 +54582,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -52593,7 +54600,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -52609,7 +54618,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -52624,7 +54635,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -52635,7 +54648,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -52653,7 +54668,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -52669,7 +54686,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -52685,7 +54704,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -52700,7 +54721,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -52711,7 +54734,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -52729,7 +54754,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -52745,7 +54772,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -52761,7 +54790,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -52776,7 +54807,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -52787,7 +54820,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -52805,7 +54840,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -52821,7 +54858,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -52837,7 +54876,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -52852,7 +54893,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -52863,7 +54906,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -52917,7 +54962,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -52925,7 +54972,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -52937,7 +54986,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -52950,7 +55001,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -52958,7 +55011,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -52970,7 +55025,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -53104,59 +55161,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -53171,7 +55246,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -53437,7 +55514,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -53453,7 +55532,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -53472,7 +55553,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -53488,7 +55571,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -53507,7 +55592,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -53523,7 +55610,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -53542,7 +55631,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -53558,7 +55649,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -53577,7 +55670,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -53600,7 +55695,9 @@ public final class DriversPlumbing {
     public static final int OVERRIDE_DATABASE_FIELD_NUMBER = 7;
     private boolean overrideDatabase_;
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -54332,7 +56429,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -54348,7 +56447,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -54364,7 +56465,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -54379,7 +56482,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -54390,7 +56495,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -54408,7 +56515,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -54424,7 +56533,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -54440,7 +56551,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -54455,7 +56568,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -54466,7 +56581,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -54484,7 +56601,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -54500,7 +56619,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -54516,7 +56637,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -54531,7 +56654,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -54542,7 +56667,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -54560,7 +56687,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -54576,7 +56705,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -54592,7 +56723,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -54607,7 +56740,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -54618,7 +56753,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -54636,7 +56773,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -54644,7 +56783,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -54656,7 +56797,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -54705,7 +56848,9 @@ public final class DriversPlumbing {
 
       private boolean overrideDatabase_;
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The overrideDatabase.
        */
@@ -54713,7 +56858,9 @@ public final class DriversPlumbing {
         return overrideDatabase_;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The overrideDatabase to set.
        * @return This builder for chaining.
@@ -54725,7 +56872,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -54859,59 +57008,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -54926,7 +57093,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -55193,7 +57362,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -55209,7 +57380,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -55228,7 +57401,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -55244,7 +57419,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -55263,7 +57440,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -55279,7 +57458,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -55298,7 +57479,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -55314,7 +57497,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -55333,7 +57518,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -55356,7 +57543,9 @@ public final class DriversPlumbing {
     public static final int OVERRIDE_DATABASE_FIELD_NUMBER = 7;
     private boolean overrideDatabase_;
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -56093,7 +58282,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -56109,7 +58300,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -56125,7 +58318,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -56140,7 +58335,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -56151,7 +58348,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -56169,7 +58368,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -56185,7 +58386,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -56201,7 +58404,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -56216,7 +58421,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -56227,7 +58434,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -56245,7 +58454,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -56261,7 +58472,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -56277,7 +58490,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -56292,7 +58507,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -56303,7 +58520,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -56321,7 +58540,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -56337,7 +58558,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -56353,7 +58576,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -56368,7 +58593,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -56379,7 +58606,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -56397,7 +58626,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -56405,7 +58636,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -56417,7 +58650,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -56466,7 +58701,9 @@ public final class DriversPlumbing {
 
       private boolean overrideDatabase_;
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The overrideDatabase.
        */
@@ -56474,7 +58711,9 @@ public final class DriversPlumbing {
         return overrideDatabase_;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The overrideDatabase to set.
        * @return This builder for chaining.
@@ -56486,7 +58725,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -56621,59 +58862,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -56688,7 +58947,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -56954,7 +59215,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -56970,7 +59233,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -56989,7 +59254,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -57005,7 +59272,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -57024,7 +59293,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -57040,7 +59311,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -57059,7 +59332,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -57075,7 +59350,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -57094,7 +59371,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -57117,7 +59396,9 @@ public final class DriversPlumbing {
     public static final int OVERRIDE_DATABASE_FIELD_NUMBER = 7;
     private boolean overrideDatabase_;
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -57849,7 +60130,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -57865,7 +60148,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -57881,7 +60166,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -57896,7 +60183,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -57907,7 +60196,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -57925,7 +60216,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -57941,7 +60234,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -57957,7 +60252,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -57972,7 +60269,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -57983,7 +60282,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -58001,7 +60302,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -58017,7 +60320,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -58033,7 +60338,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -58048,7 +60355,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -58059,7 +60368,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -58077,7 +60388,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -58093,7 +60406,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -58109,7 +60424,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -58124,7 +60441,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -58135,7 +60454,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -58153,7 +60474,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -58161,7 +60484,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -58173,7 +60498,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -58222,7 +60549,9 @@ public final class DriversPlumbing {
 
       private boolean overrideDatabase_;
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The overrideDatabase.
        */
@@ -58230,7 +60559,9 @@ public final class DriversPlumbing {
         return overrideDatabase_;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The overrideDatabase to set.
        * @return This builder for chaining.
@@ -58242,7 +60573,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -58376,59 +60709,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -58443,7 +60794,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -58709,7 +61062,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -58725,7 +61080,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -58744,7 +61101,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -58760,7 +61119,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -58779,7 +61140,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -58795,7 +61158,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -58814,7 +61179,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -58830,7 +61197,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -58849,7 +61218,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -58872,7 +61243,9 @@ public final class DriversPlumbing {
     public static final int OVERRIDE_DATABASE_FIELD_NUMBER = 7;
     private boolean overrideDatabase_;
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -59604,7 +61977,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -59620,7 +61995,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -59636,7 +62013,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -59651,7 +62030,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -59662,7 +62043,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -59680,7 +62063,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -59696,7 +62081,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -59712,7 +62099,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -59727,7 +62116,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -59738,7 +62129,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -59756,7 +62149,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -59772,7 +62167,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -59788,7 +62185,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -59803,7 +62202,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -59814,7 +62215,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -59832,7 +62235,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -59848,7 +62253,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -59864,7 +62271,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -59879,7 +62288,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -59890,7 +62301,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -59908,7 +62321,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -59916,7 +62331,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -59928,7 +62345,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -59977,7 +62396,9 @@ public final class DriversPlumbing {
 
       private boolean overrideDatabase_;
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The overrideDatabase.
        */
@@ -59985,7 +62406,9 @@ public final class DriversPlumbing {
         return overrideDatabase_;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The overrideDatabase to set.
        * @return This builder for chaining.
@@ -59997,7 +62420,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -60131,59 +62556,77 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -60198,7 +62641,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -60464,7 +62909,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -60480,7 +62927,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -60499,7 +62948,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -60515,7 +62966,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -60534,7 +62987,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -60550,7 +63005,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -60569,7 +63026,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -60585,7 +63044,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -60604,7 +63065,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -60627,7 +63090,9 @@ public final class DriversPlumbing {
     public static final int OVERRIDE_DATABASE_FIELD_NUMBER = 7;
     private boolean overrideDatabase_;
     /**
-     * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -61359,7 +63824,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -61375,7 +63842,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -61391,7 +63860,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -61406,7 +63877,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -61417,7 +63890,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -61435,7 +63910,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -61451,7 +63928,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -61467,7 +63946,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -61482,7 +63963,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -61493,7 +63976,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -61511,7 +63996,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -61527,7 +64014,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -61543,7 +64032,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -61558,7 +64049,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -61569,7 +64062,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -61587,7 +64082,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -61603,7 +64100,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -61619,7 +64118,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -61634,7 +64135,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -61645,7 +64148,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -61663,7 +64168,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -61671,7 +64178,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -61683,7 +64192,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -61732,7 +64243,9 @@ public final class DriversPlumbing {
 
       private boolean overrideDatabase_;
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The overrideDatabase.
        */
@@ -61740,7 +64253,9 @@ public final class DriversPlumbing {
         return overrideDatabase_;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The overrideDatabase to set.
        * @return This builder for chaining.
@@ -61752,7 +64267,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool override_database = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -61886,46 +64403,60 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -61940,20 +64471,26 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -62219,7 +64756,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -62235,7 +64774,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -62254,7 +64795,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 2;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -62270,7 +64813,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -62289,7 +64834,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 3;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -62305,7 +64852,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -62324,7 +64873,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 4;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -62347,7 +64898,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 6;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -62363,7 +64916,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -62382,7 +64937,9 @@ public final class DriversPlumbing {
     public static final int TLS_REQUIRED_FIELD_NUMBER = 7;
     private boolean tlsRequired_;
     /**
-     * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The tlsRequired.
      */
@@ -63114,7 +65671,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -63130,7 +65689,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -63146,7 +65707,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -63161,7 +65724,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -63172,7 +65737,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -63190,7 +65757,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -63206,7 +65775,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -63222,7 +65793,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -63237,7 +65810,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -63248,7 +65823,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -63266,7 +65843,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -63282,7 +65861,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -63298,7 +65879,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -63313,7 +65896,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -63324,7 +65909,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -63342,7 +65929,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -63350,7 +65939,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -63362,7 +65953,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -63411,7 +66004,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -63427,7 +66022,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -63443,7 +66040,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -63458,7 +66057,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -63469,7 +66070,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -63487,7 +66090,9 @@ public final class DriversPlumbing {
 
       private boolean tlsRequired_;
       /**
-       * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The tlsRequired.
        */
@@ -63495,7 +66100,9 @@ public final class DriversPlumbing {
         return tlsRequired_;
       }
       /**
-       * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The tlsRequired to set.
        * @return This builder for chaining.
@@ -63507,7 +66114,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool tls_required = 7 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool tls_required = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -63641,46 +66250,60 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -63940,7 +66563,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -63956,7 +66581,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -63975,7 +66602,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -63991,7 +66620,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -64010,7 +66641,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -64026,7 +66659,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -64045,7 +66680,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 4;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -64757,7 +67394,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -64773,7 +67412,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -64789,7 +67430,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -64804,7 +67447,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -64815,7 +67460,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -64833,7 +67480,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -64849,7 +67498,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -64865,7 +67516,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -64880,7 +67533,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -64891,7 +67546,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -64909,7 +67566,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -64925,7 +67584,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -64941,7 +67602,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -64956,7 +67619,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -64967,7 +67632,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -64985,7 +67652,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -64993,7 +67662,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -65005,7 +67676,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -65175,33 +67848,43 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -65454,7 +68137,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -65470,7 +68155,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -65489,7 +68176,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 2;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -65500,7 +68189,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -65516,7 +68207,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -66220,7 +68913,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -66236,7 +68931,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -66252,7 +68949,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -66267,7 +68966,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -66278,7 +68979,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -66296,7 +68999,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -66304,7 +69009,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -66316,7 +69023,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -66329,7 +69038,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -66345,7 +69056,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -66361,7 +69074,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -66376,7 +69091,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -66387,7 +69104,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -66562,33 +69281,43 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -66856,7 +69585,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -66872,7 +69603,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -66891,7 +69624,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 2;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -66902,7 +69637,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -66918,7 +69655,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -67657,7 +70396,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -67673,7 +70414,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -67689,7 +70432,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -67704,7 +70449,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -67715,7 +70462,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -67733,7 +70482,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -67741,7 +70492,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -67753,7 +70506,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -67766,7 +70521,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -67782,7 +70539,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -67798,7 +70557,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -67813,7 +70574,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -67824,7 +70587,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -68041,72 +70806,92 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The schema.
      */
     java.lang.String getSchema();
     /**
-     * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for schema.
      */
     com.google.protobuf.ByteString getSchemaBytes();
 
     /**
-     * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -68370,7 +71155,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -68386,7 +71173,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -68405,7 +71194,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -68421,7 +71212,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -68440,7 +71233,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -68456,7 +71251,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -68475,7 +71272,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -68491,7 +71290,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -68510,7 +71311,8 @@ public final class DriversPlumbing {
     public static final int SCHEMA_FIELD_NUMBER = 5;
     private volatile java.lang.Object schema_;
     /**
-     * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The schema.
      */
@@ -68526,7 +71328,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for schema.
      */
@@ -68545,7 +71348,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 6;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -69263,7 +72068,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -69279,7 +72086,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -69295,7 +72104,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -69310,7 +72121,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -69321,7 +72134,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -69339,7 +72154,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -69355,7 +72172,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -69371,7 +72190,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -69386,7 +72207,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -69397,7 +72220,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -69415,7 +72240,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -69431,7 +72258,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -69447,7 +72276,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -69462,7 +72293,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -69473,7 +72306,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -69491,7 +72326,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -69507,7 +72344,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -69523,7 +72362,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -69538,7 +72379,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -69549,7 +72392,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -69567,7 +72412,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object schema_ = "";
       /**
-       * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The schema.
        */
@@ -69583,7 +72430,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for schema.
        */
@@ -69599,7 +72448,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The schema to set.
        * @return This builder for chaining.
@@ -69614,7 +72465,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -69625,7 +72478,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string schema = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for schema to set.
        * @return This builder for chaining.
@@ -69643,7 +72498,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -69651,7 +72508,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -69663,7 +72522,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -69797,72 +72658,92 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
     com.google.protobuf.ByteString getDatabaseBytes();
 
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
     int getPortOverride();
 
     /**
-     * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The schema.
      */
     java.lang.String getSchema();
     /**
-     * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for schema.
      */
@@ -69877,7 +72758,9 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>bool override_database = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -70151,7 +73034,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -70167,7 +73052,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -70186,7 +73073,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -70202,7 +73091,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -70221,7 +73112,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -70237,7 +73130,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -70256,7 +73151,9 @@ public final class DriversPlumbing {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The database.
      */
@@ -70272,7 +73169,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for database.
      */
@@ -70291,7 +73190,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 5;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -70302,7 +73203,8 @@ public final class DriversPlumbing {
     public static final int SCHEMA_FIELD_NUMBER = 6;
     private volatile java.lang.Object schema_;
     /**
-     * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The schema.
      */
@@ -70318,7 +73220,8 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+     * <code>string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for schema.
      */
@@ -70349,7 +73252,9 @@ public final class DriversPlumbing {
     public static final int OVERRIDE_DATABASE_FIELD_NUMBER = 8;
     private boolean overrideDatabase_;
     /**
-     * <code>bool override_database = 8 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * bool override_database = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The overrideDatabase.
      */
@@ -71097,7 +74002,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -71113,7 +74020,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -71129,7 +74038,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -71144,7 +74055,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -71155,7 +74068,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -71173,7 +74088,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -71189,7 +74106,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -71205,7 +74124,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -71220,7 +74141,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -71231,7 +74154,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -71249,7 +74174,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -71265,7 +74192,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -71281,7 +74210,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -71296,7 +74227,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -71307,7 +74240,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -71325,7 +74260,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object database_ = "";
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The database.
        */
@@ -71341,7 +74278,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for database.
        */
@@ -71357,7 +74296,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The database to set.
        * @return This builder for chaining.
@@ -71372,7 +74313,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -71383,7 +74326,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string database = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string database = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -71401,7 +74346,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -71409,7 +74356,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -71421,7 +74370,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -71434,7 +74385,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object schema_ = "";
       /**
-       * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The schema.
        */
@@ -71450,7 +74403,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for schema.
        */
@@ -71466,7 +74421,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The schema to set.
        * @return This builder for chaining.
@@ -71481,7 +74438,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -71492,7 +74451,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string schema = 6 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string schema = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for schema to set.
        * @return This builder for chaining.
@@ -71546,7 +74507,9 @@ public final class DriversPlumbing {
 
       private boolean overrideDatabase_;
       /**
-       * <code>bool override_database = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The overrideDatabase.
        */
@@ -71554,7 +74517,9 @@ public final class DriversPlumbing {
         return overrideDatabase_;
       }
       /**
-       * <code>bool override_database = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The overrideDatabase to set.
        * @return This builder for chaining.
@@ -71566,7 +74531,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>bool override_database = 8 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * bool override_database = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -71700,26 +74667,34 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -71991,7 +74966,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -72007,7 +74984,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -72026,7 +75005,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -72042,7 +75023,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -72786,7 +75769,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -72802,7 +75787,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -72818,7 +75805,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -72833,7 +75822,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -72844,7 +75835,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -72862,7 +75855,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -72878,7 +75873,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -72894,7 +75891,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -72909,7 +75908,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -72920,7 +75921,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -73181,33 +76184,43 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -73222,13 +76235,17 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -73481,7 +76498,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -73497,7 +76516,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -73516,7 +76537,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -73532,7 +76555,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -73551,7 +76576,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 3;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -73574,7 +76601,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 5;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -73590,7 +76619,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -74299,7 +77330,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -74315,7 +77348,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -74331,7 +77366,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -74346,7 +77383,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -74357,7 +77396,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -74375,7 +77416,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -74391,7 +77434,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -74407,7 +77452,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -74422,7 +77469,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -74433,7 +77482,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -74451,7 +77502,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -74459,7 +77512,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -74471,7 +77526,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -74520,7 +77577,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -74536,7 +77595,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -74552,7 +77613,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -74567,7 +77630,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -74578,7 +77643,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 5 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -74717,46 +77784,60 @@ public final class DriversPlumbing {
     boolean getHealthy();
 
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
     java.lang.String getHostname();
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
     com.google.protobuf.ByteString getHostnameBytes();
 
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
     java.lang.String getUsername();
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString getUsernameBytes();
 
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
     java.lang.String getPassword();
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString getPasswordBytes();
 
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -75017,7 +78098,9 @@ public final class DriversPlumbing {
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The hostname.
      */
@@ -75033,7 +78116,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for hostname.
      */
@@ -75052,7 +78137,9 @@ public final class DriversPlumbing {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object username_;
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The username.
      */
@@ -75068,7 +78155,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for username.
      */
@@ -75087,7 +78176,9 @@ public final class DriversPlumbing {
     public static final int PASSWORD_FIELD_NUMBER = 3;
     private volatile java.lang.Object password_;
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The password.
      */
@@ -75103,7 +78194,9 @@ public final class DriversPlumbing {
       }
     }
     /**
-     * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The bytes for password.
      */
@@ -75122,7 +78215,9 @@ public final class DriversPlumbing {
     public static final int PORT_OVERRIDE_FIELD_NUMBER = 4;
     private int portOverride_;
     /**
-     * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+     * <code>
+     * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * </code>
      *
      * @return The portOverride.
      */
@@ -75835,7 +78930,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object hostname_ = "";
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The hostname.
        */
@@ -75851,7 +78948,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for hostname.
        */
@@ -75867,7 +78966,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The hostname to set.
        * @return This builder for chaining.
@@ -75882,7 +78983,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -75893,7 +78996,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string hostname = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for hostname to set.
        * @return This builder for chaining.
@@ -75911,7 +79016,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object username_ = "";
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The username.
        */
@@ -75927,7 +79034,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for username.
        */
@@ -75943,7 +79052,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The username to set.
        * @return This builder for chaining.
@@ -75958,7 +79069,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -75969,7 +79082,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string username = 2 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string username = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for username to set.
        * @return This builder for chaining.
@@ -75987,7 +79102,9 @@ public final class DriversPlumbing {
 
       private java.lang.Object password_ = "";
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The password.
        */
@@ -76003,7 +79120,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The bytes for password.
        */
@@ -76019,7 +79138,9 @@ public final class DriversPlumbing {
         }
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The password to set.
        * @return This builder for chaining.
@@ -76034,7 +79155,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -76045,7 +79168,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>string password = 3 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * string password = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The bytes for password to set.
        * @return This builder for chaining.
@@ -76063,7 +79188,9 @@ public final class DriversPlumbing {
 
       private int portOverride_;
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return The portOverride.
        */
@@ -76071,7 +79198,9 @@ public final class DriversPlumbing {
         return portOverride_;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @param value The portOverride to set.
        * @return This builder for chaining.
@@ -76083,7 +79212,9 @@ public final class DriversPlumbing {
         return this;
       }
       /**
-       * <code>int32 port_override = 4 [(.v1.field_options) = { ... }</code>
+       * <code>
+       * int32 port_override = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * </code>
        *
        * @return This builder for chaining.
        */
@@ -76388,320 +79519,409 @@ public final class DriversPlumbing {
           + "erver\030\210\016 \001(\0132\r.v1.SQLServerH\000\022\027\n\003ssh\030\354\016 "
           + "\001(\0132\007.v1.SSHH\000\022\035\n\006sybase\030\320\017 \001(\0132\n.v1.Syb"
           + "aseH\000\022!\n\010teradata\030\264\020 \001(\0132\014.v1.TeradataH\000"
-          + ":\n\372\370\263\007\005\250\363\263\007\001B\n\n\010resource\"\236\002\n\006Athena\022\030\n\002i"
+          + ":\n\372\370\263\007\005\250\363\263\007\001B\n\n\010resource\"\351\002\n\006Athena\022\030\n\002i"
           + "d\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362"
           + "\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001"
-          + "\222A\002@\001\022\036\n\naccess_key\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n"
-          + "\021secret_access_key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006"
-          + "output\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_overrid"
-          + "e\030\004 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022(\n\006region\030\005 \001(\tB\030\362\370\263"
-          + "\007\005\260\363\263\007\001\222A\013:\tus-east-1:\n\372\370\263\007\005\250\363\263\007\001\"\215\002\n\010Bi"
-          + "gQuery\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name"
-          + "\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B"
-          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\037\n\013private_key\030\001 \001(\tB\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022\033\n\007project\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!"
-          + "\n\rport_override\030\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010end"
-          + "point\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\005 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\263\002\n\tCassandra\022"
-          + "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260"
-          + "\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010passwor"
-          + "d\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\004 \001"
-          + "(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001"
-          + "\222A\006:\0049042\022 \n\014tls_required\030\006 \001(\010B\n\362\370\263\007\005\260\363"
-          + "\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\215\002\n\005Druid\022\030\n\002id\030\200\200\002 \001(\tB"
+          + "\222A\002@\001\022-\n\naccess_key\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\001\222A\002@\000\0224\n\021secret_access_key\030\002 \001(\tB"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022)\n\006output\030\003 \001"
+          + "(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_ov"
+          + "erride\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022"
+          + "7\n\006region\030\005 \001(\tB\'\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\013"
+          + ":\tus-east-1\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\330\002\n\010BigQuer"
+          + "y\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007"
+          + "\005\260\363\263\007\001\222A\002@\001\022.\n\013private_key\030\001 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022*\n\007project\030\002 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override"
+          + "\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010end"
+          + "point\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+"
+          + "\n\010username\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
+          + "\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\215\003\n\tCassandra\022\030\n\002id\030\200\200\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022"
+          + "+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222"
+          + "A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\004 \001(\005B\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\005 \001(\005B\""
+          + "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0049042\222A\002@\000\022/\n\014tl"
+          + "s_required\030\006 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
+          + "\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\330\002\n\005Druid\022\030\n\002id\030\200\200\002 \001(\tB"
           + "\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010h"
-          + "ostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_overri"
-          + "de\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\003 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0048082:\n\372\370\263"
-          + "\007\005\250\363\263\007\001\"\224\002\n\010DynamoDB\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007he"
-          + "althy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\036\n\naccess"
-          + "_key\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021secret_access_"
-          + "key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006region\030\003 \001(\tB\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022\034\n\010endpoint\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007"
-          + "\005\250\363\263\007\001\"\224\002\n\010AmazonES\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007hea"
-          + "lthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\032\n\006region\030"
-          + "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021secret_access_key\030\002"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010endpoint\030\003 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\036\n\naccess_key\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!"
-          + "\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005"
-          + "\250\363\263\007\001\"\261\002\n\007Elastic\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healt"
-          + "hy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030"
-          + "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n"
-          + "\rport_override\030\004 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port"
-          + "\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0049200\022 \n\014tls_requi"
-          + "red\030\006 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\343\002\n\rHT"
-          + "TPBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n"
-          + "\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002"
-          + " \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022*\n\020healthcheck_path\030\002 \001(\tB\020\362\370\263\007\005\260"
-          + "\363\263\007\001\222A\003:\001/\022\034\n\010username\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\022\034\n\010password\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021header"
-          + "s_blacklist\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014default"
-          + "_path\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\tsubdomain\030\007 \001"
-          + "(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\244\002\n\nHTTP"
-          + "NoAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name"
-          + "\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B"
-          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022*\n\020healthcheck_path\030\002 \001(\tB\020\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\003:\001/\022%\n\021headers_blacklist\030\003 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022 \n\014default_path\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\""
-          + "\n\tsubdomain\030\005 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007"
-          + "\005\250\363\263\007\001\"\303\002\n\010HTTPAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007hea"
-          + "lthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\027\n\003url\030\001 \001"
-          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\020healthcheck_path\030\002 \001(\t"
-          + "B\020\362\370\263\007\005\260\363\263\007\001\222A\003:\001/\022\037\n\013auth_header\030\003 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022%\n\021headers_blacklist\030\004 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022 \n\014default_path\030\005 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\"\n\tsubdomain\030\006 \001(\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
-          + ":\n\372\370\263\007\005\250\363\263\007\001\"\263\003\n\nKubernetes\022\030\n\002id\030\200\200\002 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n"
-          + "\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\004port\030\002 \001("
-          + "\005B\022\362\370\263\007\005\260\363\263\007\001\222A\005:\003443\022)\n\025certificate_aut"
-          + "hority\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\036certificate_"
-          + "authority_filename\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022&\n\022"
-          + "client_certificate\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022/\n\033"
-          + "client_certificate_filename\030\006 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\036\n\nclient_key\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\'\n"
-          + "\023client_key_filename\030\010 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n"
-          + "\372\370\263\007\005\250\363\263\007\001\"\367\001\n\023KubernetesBasicAuth\022\030\n\002id"
-          + "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\004po"
-          + "rt\030\002 \001(\005B\022\362\370\263\007\005\260\363\263\007\001\222A\005:\003443\022\034\n\010username"
-          + "\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\004 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\363\002\n\tAmazonEKS\022\030\n\002id"
-          + "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\002@\001\022\034\n\010endpoint\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nac"
-          + "cess_key\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\021secret_acc"
-          + "ess_key\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022)\n\025certificate"
-          + "_authority\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\036certific"
-          + "ate_authority_filename\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\022\032\n\006region\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014cluster_"
-          + "name\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\311\002\n\tG"
-          + "oogleGKE\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004na"
-          + "me\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001("
-          + "\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010endpoint\030\001 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022)\n\025certificate_authority\030\002 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\0222\n\036certificate_authority_fil"
-          + "ename\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\'\n\023service_accou"
-          + "nt_key\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0220\n\034service_acco"
-          + "unt_key_filename\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007"
-          + "\005\250\363\263\007\001\"\326\001\n\tMemcached\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007he"
-          + "althy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostna"
-          + "me\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\002 "
-          + "\001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004port\030\003 \001(\005B\024\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\007:\00511211:\n\372\370\263\007\005\250\363\263\007\001\"\260\003\n\017MongoLegacyH"
-          + "ost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370"
-          + "\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022!\n\rauth_database\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!"
-          + "\n\rport_override\030\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010use"
-          + "rname\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\005 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004port\030\006 \001(\005B\024\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\007:\00527017\022\037\n\013replica_set\030\007 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\0220\n\022connect_to_replica\030\010 \001(\010B\024\362\370\263\007\005\260\363\263"
-          + "\007\001\222A\007:\005false\022 \n\014tls_required\030\t \001(\010B\n\362\370\263\007"
-          + "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\266\003\n\025MongoLegacyReplic"
-          + "aset\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201"
-          + "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362"
-          + "\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022!\n\rauth_database\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "!\n\rport_override\030\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010us"
-          + "ername\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\005 \001"
-          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004port\030\006 \001(\005B\024\362\370\263\007\005\260\363\263\007\001"
-          + "\222A\007:\00527017\022\037\n\013replica_set\030\007 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\0220\n\022connect_to_replica\030\010 \001(\010B\024\362\370\263\007\005\260\363"
-          + "\263\007\001\222A\007:\005false\022 \n\014tls_required\030\t \001(\010B\n\362\370\263"
-          + "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\363\002\n\tMongoHost\022\030\n\002id\030"
-          + "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
-          + "\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\raut"
-          + "h_database\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_ove"
-          + "rride\030\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\004 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\005 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022\"\n\004port\030\006 \001(\005B\024\362\370\263\007\005\260\363\263\007\001\222A\007:\00527017\022"
-          + "\032\n\006schema\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014tls_requi"
-          + "red\030\010 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\260\003\n\017Mo"
-          + "ngoReplicaSet\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202"
-          + "\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rauth_database\030\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022!\n\rport_override\030\003 \001(\005B\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022\034\n\010username\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010pas"
-          + "sword\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004port\030\006 \001(\005B\024\362"
-          + "\370\263\007\005\260\363\263\007\001\222A\007:\00527017\022\037\n\013replica_set\030\007 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\0220\n\022connect_to_replica\030\010 \001(\010"
-          + "B\024\362\370\263\007\005\260\363\263\007\001\222A\007:\005false\022 \n\014tls_required\030\t"
-          + " \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Mysql\022\030"
-          + "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363"
-          + "\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password"
-          + "\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n"
-          + "\372\370\263\007\005\250\363\263\007\001\"\261\002\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001"
-          + "\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010"
-          + "hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\r"
-          + "port_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030"
-          + "\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\256"
-          + "\002\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n"
-          + "\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002"
-          + " \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010datab"
-          + "ase\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\005"
-          + " \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263"
-          + "\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Maria\022\030\n\002id\030"
-          + "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
-          + "\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010use"
-          + "rname\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!"
-          + "\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005"
-          + "\250\363\263\007\001\"\254\002\n\006Memsql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007health"
-          + "y\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007"
-          + "\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010"
-          + "database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_overr"
-          + "ide\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263"
-          + "\007\005\260\363\263\007\001\222A\006:\0043306:\n\372\370\263\007\005\250\363\263\007\001\"\316\002\n\006Oracle\022"
-          + "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260"
-          + "\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010passwor"
-          + "d\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\004"
-          + "1521\022!\n\rport_override\030\006 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022"
-          + " \n\014tls_required\030\007 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005"
-          + "\250\363\263\007\001\"\325\002\n\010Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
-          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname"
-          + "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_ove"
-          + "rride\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362"
-          + "\370\263\007\005\260\363\263\007\001\222A\006:\0045432\022%\n\021override_database\030"
-          + "\007 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\333\002\n\016Aurora"
-          + "Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004na"
-          + "me\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001("
-          + "\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database"
-          + "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\005 \001("
-          + "\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\006:\0045432\022%\n\021override_database\030\007 \001(\010B\n\362\370\263"
-          + "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\326\002\n\tGreenplum\022\030\n\002id\030"
-          + "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
-          + "\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010use"
-          + "rname\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!"
-          + "\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0045432\022%\n\021ove"
-          + "rride_database\030\007 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250"
-          + "\363\263\007\001\"\326\002\n\tCockroach\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
-          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname"
-          + "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_ove"
-          + "rride\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362"
-          + "\370\263\007\005\260\363\263\007\001\222A\006:\0045432\022%\n\021override_database\030"
-          + "\007 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\325\002\n\010Redshi"
-          + "ft\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002"
+          + "\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010h"
+          + "ostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000"
+          + "\0220\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\001\222A\002@\000\022+\n\010username\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010password\030\004 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\005 \001(\005B\"\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0048082\222A\002@\000:\n\372\370\263\007\005\250\363\263"
+          + "\007\001\"\337\002\n\010DynamoDB\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy"
+          + "\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022-\n\naccess_key\030"
+          + "\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0224\n\021secr"
+          + "et_access_key\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
+          + "\001\222A\002@\000\022)\n\006region\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\001\222A\002@\000\022+\n\010endpoint\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\337\002\n"
+          + "\010AmazonES\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004n"
+          + "ame\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001"
+          + "(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022)\n\006region\030\001 \001(\tB\031\362\370\263"
+          + "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0224\n\021secret_access_"
+          + "key\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010"
+          + "endpoint\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@"
+          + "\000\022-\n\naccess_key\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\000\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\213\003\n\007Elast"
+          + "ic\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002"
           + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263"
-          + "\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010pass"
-          + "word\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022!\n\004port\030\006 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\00454"
-          + "39\022%\n\021override_database\030\007 \001(\010B\n\362\370\263\007\005\260\363\263\007"
-          + "\001:\n\372\370\263\007\005\250\363\263\007\001\"\316\002\n\006Presto\022\030\n\002id\030\200\200\002 \001(\tB\n"
+          + "\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263"
+          + "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\t"
+          + "B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_over"
+          + "ride\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n"
+          + "\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\00492"
+          + "00\222A\002@\000\022/\n\014tls_required\030\006 \001(\010B\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\307\003\n\rHTTPBas"
+          + "icAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name"
+          + "\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B"
+          + "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022&\n\003url\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0229\n\020healthcheck_path\030\002 \001"
+          + "(\tB\037\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\003:\001/\222A\002@\000\022+\n\010u"
+          + "sername\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000"
+          + "\022+\n\010password\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000"
+          + "\222A\002@\000\0224\n\021headers_blacklist\030\005 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014default_path\030\006 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022,\n\tsubdomai"
+          + "n\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\001:\n\372\370\263\007"
+          + "\005\250\363\263\007\001\"\352\002\n\nHTTPNoAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263"
+          + "\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007h"
+          + "ealthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022&\n\003url\030\001"
+          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0229\n\020healt"
+          + "hcheck_path\030\002 \001(\tB\037\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222"
+          + "A\003:\001/\222A\002@\000\0224\n\021headers_blacklist\030\003 \001(\tB\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014default_path"
+          + "\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022,\n\tsub"
+          + "domain\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\001:"
+          + "\n\372\370\263\007\005\250\363\263\007\001\"\230\003\n\010HTTPAuth\022\030\n\002id\030\200\200\002 \001(\tB\n"
           + "\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\""
-          + "\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010ho"
-          + "stname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\002 \001"
-          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\003 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022!\n\rport_override\030\004 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022"
-          + "!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0048080\022\034\n\010us"
-          + "ername\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022 \n\014tls_required"
-          + "\030\007 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\213\002\n\003RDP\022\030"
-          + "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363"
-          + "\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password"
-          + "\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\004 \001("
-          + "\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\006:\0043389:\n\372\370\263\007\005\250\363\263\007\001\"\357\001\n\005Redis\022\030\n\002id\030\200\200\002"
+          + "\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022&\n\003ur"
+          + "l\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0229\n\020he"
+          + "althcheck_path\030\002 \001(\tB\037\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263"
+          + "\007\001\222A\003:\001/\222A\002@\000\022.\n\013auth_header\030\003 \001(\tB\031\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0224\n\021headers_blackli"
+          + "st\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014d"
+          + "efault_path\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
+          + "A\002@\000\022,\n\tsubdomain\030\006 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\000\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\253\004\n\nKubernetes\022\030\n"
+          + "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263"
+          + "\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\001\222A\002@\000\022/\n\004port\030\002 \001(\005B!\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\005:\003443\222A\002@\000\0228\n\025certificate_aut"
+          + "hority\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022"
+          + "A\n\036certificate_authority_filename\030\004 \001(\tB"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0225\n\022client_cer"
+          + "tificate\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@"
+          + "\000\022>\n\033client_certificate_filename\030\006 \001(\tB\031"
+          + "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022-\n\nclient_key\030"
+          + "\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0226\n\023clie"
+          + "nt_key_filename\030\010 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\263\002\n\023KubernetesBasic"
+          + "Auth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201"
+          + "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362"
+          + "\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022/\n\004port\030\002 \001(\005B!\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\005:\003443\222A\002@\000\022+\n\010username"
+          + "\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010pas"
+          + "sword\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000:\n"
+          + "\372\370\263\007\005\250\363\263\007\001\"\334\003\n\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\""
+          + "\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010en"
+          + "dpoint\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022"
+          + "-\n\naccess_key\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
+          + "\000\222A\002@\000\0224\n\021secret_access_key\030\003 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0228\n\025certificate_auth"
+          + "ority\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022A"
+          + "\n\036certificate_authority_filename\030\005 \001(\tB\031"
+          + "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022)\n\006region\030\006 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022/\n\014cluster_"
+          + "name\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000:\n\372"
+          + "\370\263\007\005\250\363\263\007\001\"\224\003\n\tGoogleGKE\022\030\n\002id\030\200\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n"
+          + "\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010end"
+          + "point\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0228"
+          + "\n\025certificate_authority\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022A\n\036certificate_authorit"
+          + "y_filename\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
+          + "\002@\000\0226\n\023service_account_key\030\004 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022?\n\034service_account_k"
+          + "ey_filename\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
+          + "A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\203\002\n\tMemcached\022\030\n\002id\030\200\200\002"
           + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260"
           + "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
-          + "\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_o"
-          + "verride\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\004 \001(\005B\023\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\006:\0046379:\n\372\370\263\007\005\250\363\263\007\001\"\245\002\n\020ElasticacheRe"
-          + "dis\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370"
-          + "\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022!\n\rport_override\030\002 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\004 \001"
-          + "(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0046379\022)\n\014tls_required\030"
-          + "\005 \001(\010B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\004true:\n\372\370\263\007\005\250\363\263\007\001\"\250"
-          + "\002\n\tSnowflake\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032"
-          + "\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200"
-          + "\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\034\n\010password\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010data"
-          + "base\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006schema\030\005 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\006 \001(\005B\n\362\370\263\007\005"
-          + "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\362\002\n\tSQLServer\022\030\n\002id\030\200\200"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@"
-          + "\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010usern"
-          + "ame\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010database\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022!\n\rport_override\030\005 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006"
-          + "schema\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\007 \001(\005B\023"
-          + "\362\370\263\007\005\260\363\263\007\001\222A\006:\0041433\022%\n\021override_database"
-          + "\030\010 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\355\001\n\003SSH\022\030"
+          + "\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\0220\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0221\n\004port\030\003 \001(\005B#\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00511211\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267"
+          + "\004\n\017MongoLegacyHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
+          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
+          + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\raut"
+          + "h_database\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\0220\n\rport_override\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\004 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010password\030\005 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0221\n\004port\030\006 \001(\005B#\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00527017\222A\002@\000\022.\n\013re"
+          + "plica_set\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002"
+          + "@\000\022?\n\022connect_to_replica\030\010 \001(\010B#\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005false\222A\002@\000\022/\n\014tls_requi"
+          + "red\030\t \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370"
+          + "\263\007\005\250\363\263\007\001\"\275\004\n\025MongoLegacyReplicaset\022\030\n\002id"
+          + "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370"
+          + "\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222"
+          + "A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\001\222A\002@\000\0220\n\rauth_database\030\002 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\003 \001"
+          + "(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010usernam"
+          + "e\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010pa"
+          + "ssword\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022"
+          + "1\n\004port\030\006 \001(\005B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005"
+          + "27017\222A\002@\000\022.\n\013replica_set\030\007 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022?\n\022connect_to_replica"
+          + "\030\010 \001(\010B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005false\222A"
+          + "\002@\000\022/\n\014tls_required\030\t \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\353\003\n\tMongoHost\022\030"
           + "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\t"
           + "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363"
-          + "\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034"
-          + "\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\004port\030\003 \001"
-          + "(\005B\021\362\370\263\007\005\260\363\263\007\001\222A\004:\00222\022#\n\npublic_key\030\004 \001("
-          + "\tB\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\216\002\n\006Sybas"
-          + "e\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007"
-          + "\005\260\363\263\007\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\034\n\010username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_"
-          + "override\030\003 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\004 \001(\005"
-          + "B\023\362\370\263\007\005\260\363\263\007\001\222A\006:\0042638\022\034\n\010password\030\005 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\220\002\n\010Teradata\022\030\n\002"
+          + "\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rauth_database\030\002 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override"
+          + "\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010use"
+          + "rname\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+"
+          + "\n\010password\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
+          + "\002@\000\0221\n\004port\030\006 \001(\005B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
+          + "A\007:\00527017\222A\002@\000\022)\n\006schema\030\007 \001(\tB\031\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014tls_required\030\010 \001(\010B"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267"
+          + "\004\n\017MongoReplicaSet\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
+          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
+          + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\raut"
+          + "h_database\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\0220\n\rport_override\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\004 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010password\030\005 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0221\n\004port\030\006 \001(\005B#\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00527017\222A\002@\000\022.\n\013re"
+          + "plica_set\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002"
+          + "@\000\022?\n\022connect_to_replica\030\010 \001(\010B#\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005false\222A\002@\000\022/\n\014tls_requi"
+          + "red\030\t \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370"
+          + "\263\007\005\250\363\263\007\001\"\205\003\n\005Mysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
+          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
+          + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010use"
+          + "rname\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
+          + "\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001"
+          + "\"\213\003\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007health"
+          + "y\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001"
+          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010usern"
+          + "ame\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010"
+          + "password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@"
+          + "\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
+          + "\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\210"
+          + "\003\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n"
+          + "\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002"
+          + " \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002"
+          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010passw"
+          + "ord\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010"
+          + "database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@"
+          + "\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
+          + "\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\205\003\n\005Ma"
+          + "ria\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200"
+          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370"
+          + "\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database"
+          + "\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rpor"
+          + "t_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
+          + "A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\206\003\n\006Memsql\022\030\n\002"
           + "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n"
           + "\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\002@\001\022\034\n\010hostname\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010"
-          + "username\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\034\n\010password\030\003"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022!\n\rport_override\030\004 \001(\005B"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022!\n\004port\030\005 \001(\005B\023\362\370\263\007\005\260\363\263\007\001\222A\006"
-          + ":\0041025:\n\372\370\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api.v"
-          + "1.plumbingB\017DriversPlumbingb\006proto3"
+          + "\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
+          + "\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_overr"
+          + "ide\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004"
+          + "port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\004330"
+          + "6\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267\003\n\006Oracle\022\030\n\002id\030\200\200\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363"
+          + "\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022"
+          + "+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222"
+          + "A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\005 \001(\005B\"\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\006:\0041521\222A\002@\000\0220\n\rport_ov"
+          + "erride\030\006 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022"
+          + "/\n\014tls_required\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\276\003\n\010Postgres\022\030\n\002id\030"
+          + "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263"
+          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
+          + "\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override"
+          + "\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004por"
+          + "t\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A"
+          + "\002@\000\0224\n\021override_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\304\003\n\016Aurora"
+          + "Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004na"
+          + "me\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001("
+          + "\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password"
+          + "\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010dat"
+          + "abase\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
+          + "\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\000\222A\006:\0045432\222A\002@\000\0224\n\021override_database\030"
+          + "\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250"
+          + "\363\263\007\001\"\277\003\n\tGreenplum\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
+          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
+          + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010use"
+          + "rname\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
+          + "\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A\002@\000\0224\n\021override"
+          + "_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002"
+          + "@\000:\n\372\370\263\007\005\250\363\263\007\001\"\277\003\n\tCockroach\022\030\n\002id\030\200\200\002 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+"
+          + "\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001("
+          + "\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001"
+          + "(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A\002@\000\0224"
+          + "\n\021override_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\276\003\n\010Redshift\022\030\n"
+          + "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB"
+          + "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263"
+          + "\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263"
+          + "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\t"
+          + "B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_over"
+          + "ride\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n"
+          + "\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\00454"
+          + "39\222A\002@\000\0224\n\021override_database\030\007 \001(\010B\031\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267\003\n\006Pr"
+          + "esto\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201"
+          + "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362"
+          + "\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\002 \001(\tB\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\003 \001"
+          + "(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_ov"
+          + "erride\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022"
+          + "0\n\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\004"
+          + "8080\222A\002@\000\022+\n\010username\030\006 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014tls_required\030\007 \001(\010B\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\326\002\n\003"
+          + "RDP\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200"
+          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370"
+          + "\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_ove"
+          + "rride\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
+          + "\n\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043"
+          + "389\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Redis\022\030\n\002id\030\200\200\002"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
+          + "\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\0220\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\004 \001(\005B\"\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0046379\222A\002@\000:\n\372\370\263\007\005\250\363\263"
+          + "\007\001\"\360\002\n\020ElasticacheRedis\022\030\n\002id\030\200\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n"
+          + "\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hos"
+          + "tname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
+          + "\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\004 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\000\222A\006:\0046379\222A\002@\000\0228\n\014tls_required\030"
+          + "\005 \001(\010B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\004true\222A\002@"
+          + "\000:\n\372\370\263\007\005\250\363\263\007\001\"\202\003\n\tSnowflake\022\030\n\002id\030\200\200\002 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n"
+          + "\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002"
+          + "@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263"
+          + "\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263",
+      "\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022)\n\006schema\030\005 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\006 "
+          + "\001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263"
+          + "\007\001\"\352\003\n\tSQLServer\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007health"
+          + "y\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001"
+          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010usern"
+          + "ame\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010"
+          + "password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@"
+          + "\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
+          + "\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022)\n\006schema\030\006 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\007 \001(\005B\"\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0041433\222A\002@\000\0224\n\021overrid"
+          + "e_database\030\010 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
+          + "\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\244\002\n\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n"
+          + "\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hos"
+          + "tname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
+          + "\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\022.\n\004port\030\003 \001(\005B \362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222"
+          + "A\004:\00222\222A\002@\000\022-\n\npublic_key\030\004 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\331\002\n\006Sybas"
+          + "e\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007"
+          + "\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\003"
+          + " \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030"
+          + "\004 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0042638\222A\002@"
+          + "\000\022+\n\010password\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
+          + "\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\333\002\n\010Teradata\022\030\n\002id\030\200\200"
+          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@"
+          + "\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
+          + "\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
+          + "\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\004 \001(\005B"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\005 \001(\005"
+          + "B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0041025\222A\002@\000:\n\372\370"
+          + "\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbing"
+          + "B\017DriversPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
