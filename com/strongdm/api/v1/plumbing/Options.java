@@ -71,6 +71,19 @@ public final class Options {
      * @return The required.
      */
     boolean getRequired();
+
+    /**
+     * <code>string id_type = 1941305;</code>
+     *
+     * @return The idType.
+     */
+    java.lang.String getIdType();
+    /**
+     * <code>string id_type = 1941305;</code>
+     *
+     * @return The bytes for idType.
+     */
+    com.google.protobuf.ByteString getIdTypeBytes();
   }
   /** Protobuf type {@code v1.FieldOptions} */
   public static final class FieldOptions extends com.google.protobuf.GeneratedMessageV3
@@ -85,6 +98,7 @@ public final class Options {
 
     private FieldOptions() {
       name_ = "";
+      idType_ = "";
     }
 
     @java.lang.Override
@@ -141,6 +155,13 @@ public final class Options {
             case 15530432:
               {
                 required_ = input.readBool();
+                break;
+              }
+            case 15530442:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                idType_ = s;
                 break;
               }
             default:
@@ -263,6 +284,41 @@ public final class Options {
       return required_;
     }
 
+    public static final int ID_TYPE_FIELD_NUMBER = 1941305;
+    private volatile java.lang.Object idType_;
+    /**
+     * <code>string id_type = 1941305;</code>
+     *
+     * @return The idType.
+     */
+    public java.lang.String getIdType() {
+      java.lang.Object ref = idType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id_type = 1941305;</code>
+     *
+     * @return The bytes for idType.
+     */
+    public com.google.protobuf.ByteString getIdTypeBytes() {
+      java.lang.Object ref = idType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        idType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -292,6 +348,9 @@ public final class Options {
       if (required_ != false) {
         output.writeBool(1941304, required_);
       }
+      if (!getIdTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941305, idType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -316,6 +375,9 @@ public final class Options {
       if (required_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941304, required_);
       }
+      if (!getIdTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941305, idType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -337,6 +399,7 @@ public final class Options {
       if (getExposeAsPorcelain() != other.getExposeAsPorcelain()) return false;
       if (getIterable() != other.getIterable()) return false;
       if (getRequired() != other.getRequired()) return false;
+      if (!getIdType().equals(other.getIdType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -358,6 +421,8 @@ public final class Options {
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getIterable());
       hash = (37 * hash) + REQUIRED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getRequired());
+      hash = (37 * hash) + ID_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getIdType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -506,6 +571,8 @@ public final class Options {
 
         required_ = false;
 
+        idType_ = "";
+
         return this;
       }
 
@@ -537,6 +604,7 @@ public final class Options {
         result.exposeAsPorcelain_ = exposeAsPorcelain_;
         result.iterable_ = iterable_;
         result.required_ = required_;
+        result.idType_ = idType_;
         onBuilt();
         return result;
       }
@@ -604,6 +672,10 @@ public final class Options {
         }
         if (other.getRequired() != false) {
           setRequired(other.getRequired());
+        }
+        if (!other.getIdType().isEmpty()) {
+          idType_ = other.idType_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -866,6 +938,82 @@ public final class Options {
       public Builder clearRequired() {
 
         required_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idType_ = "";
+      /**
+       * <code>string id_type = 1941305;</code>
+       *
+       * @return The idType.
+       */
+      public java.lang.String getIdType() {
+        java.lang.Object ref = idType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          idType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id_type = 1941305;</code>
+       *
+       * @return The bytes for idType.
+       */
+      public com.google.protobuf.ByteString getIdTypeBytes() {
+        java.lang.Object ref = idType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          idType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id_type = 1941305;</code>
+       *
+       * @param value The idType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdType(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        idType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id_type = 1941305;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearIdType() {
+
+        idType_ = getDefaultInstance().getIdType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id_type = 1941305;</code>
+       *
+       * @param value The bytes for idType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdTypeBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        idType_ = value;
         onChanged();
         return this;
       }
@@ -2892,23 +3040,23 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des"
-          + "criptor.proto\"}\n\014FieldOptions\022\016\n\004name\030\264\276"
-          + "v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose_"
-          + "as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010"
-          + "\022\022\n\010required\030\270\276v \001(\010\"L\n\016MessageOptions\022\024"
-          + "\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001("
-          + "\010\022\017\n\005error\030\266\276v \001(\005\"$\n\014OneofOptions\022\024\n\nmo"
-          + "del_name\030\204\277v \001(\t\"%\n\016ServiceOptions\022\023\n\tma"
-          + "in_noun\030\230\277v \001(\t:H\n\rfield_options\022\035.googl"
-          + "e.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fie"
-          + "ldOptions:N\n\017message_options\022\037.google.pr"
-          + "otobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Messa"
-          + "geOptions:H\n\roneof_options\022\035.google.prot"
-          + "obuf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOpti"
-          + "ons:N\n\017service_options\022\037.google.protobuf"
-          + ".ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOpti"
-          + "onsB\036\n\034com.strongdm.api.v1.plumbingb\006pro"
-          + "to3"
+          + "criptor.proto\"\220\001\n\014FieldOptions\022\016\n\004name\030\264"
+          + "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose"
+          + "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001("
+          + "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t"
+          + "\"L\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t"
+          + "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\"$"
+          + "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016"
+          + "ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rf"
+          + "ield_options\022\035.google.protobuf.FieldOpti"
+          + "ons\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message"
+          + "_options\022\037.google.protobuf.MessageOption"
+          + "s\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_o"
+          + "ptions\022\035.google.protobuf.OneofOptions\030\205\277"
+          + "v \001(\0132\020.v1.OneofOptions:N\n\017service_optio"
+          + "ns\022\037.google.protobuf.ServiceOptions\030\231\277v "
+          + "\001(\0132\022.v1.ServiceOptionsB\036\n\034com.strongdm."
+          + "api.v1.plumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -2921,7 +3069,7 @@ public final class Options {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_FieldOptions_descriptor,
             new java.lang.String[] {
-              "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required",
+              "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType",
             });
     internal_static_v1_MessageOptions_descriptor = getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable =
