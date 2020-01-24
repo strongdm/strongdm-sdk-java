@@ -2,7 +2,6 @@ package com.strongdm.api.v1;
 
 // NodeUpdateResponse returns the fields of a Node after it has been updated by
 // a NodeUpdateRequest.
-
 public class NodeUpdateResponse {
   private UpdateResponseMetadata meta;
   // Reserved for future use.

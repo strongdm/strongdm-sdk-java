@@ -1710,7 +1710,6 @@ public class Plumbing {
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setPort(plumbing.getPort());
     porcelain.setReplicaSet(plumbing.getReplicaSet());
-    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
     porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
@@ -1745,7 +1744,6 @@ public class Plumbing {
     if (porcelain.getReplicaSet() != null) {
       builder.setReplicaSet(porcelain.getReplicaSet());
     }
-    builder.setConnectToReplica(porcelain.getConnectToReplica());
     builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }
@@ -1843,7 +1841,6 @@ public class Plumbing {
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPassword(plumbing.getPassword());
     porcelain.setPort(plumbing.getPort());
-    porcelain.setSchema(plumbing.getSchema());
     porcelain.setTlsRequired(plumbing.getTlsRequired());
     return porcelain;
   }
@@ -1874,9 +1871,6 @@ public class Plumbing {
       builder.setPassword(porcelain.getPassword());
     }
     builder.setPort(porcelain.getPort());
-    if (porcelain.getSchema() != null) {
-      builder.setSchema(porcelain.getSchema());
-    }
     builder.setTlsRequired(porcelain.getTlsRequired());
     return builder.build();
   }

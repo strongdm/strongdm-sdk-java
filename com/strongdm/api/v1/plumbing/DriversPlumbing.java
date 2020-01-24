@@ -36264,16 +36264,7 @@ public final class DriversPlumbing {
 
     /**
      * <code>
-     * bool connect_to_replica = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The connectToReplica.
-     */
-    boolean getConnectToReplica();
-
-    /**
-     * <code>
-     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
      * </code>
      *
      * @return The tlsRequired.
@@ -36376,11 +36367,6 @@ public final class DriversPlumbing {
                 break;
               }
             case 64:
-              {
-                connectToReplica_ = input.readBool();
-                break;
-              }
-            case 72:
               {
                 tlsRequired_ = input.readBool();
                 break;
@@ -36771,24 +36757,11 @@ public final class DriversPlumbing {
       }
     }
 
-    public static final int CONNECT_TO_REPLICA_FIELD_NUMBER = 8;
-    private boolean connectToReplica_;
-    /**
-     * <code>
-     * bool connect_to_replica = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The connectToReplica.
-     */
-    public boolean getConnectToReplica() {
-      return connectToReplica_;
-    }
-
-    public static final int TLS_REQUIRED_FIELD_NUMBER = 9;
+    public static final int TLS_REQUIRED_FIELD_NUMBER = 8;
     private boolean tlsRequired_;
     /**
      * <code>
-     * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+     * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
      * </code>
      *
      * @return The tlsRequired.
@@ -36832,11 +36805,8 @@ public final class DriversPlumbing {
       if (!getReplicaSetBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, replicaSet_);
       }
-      if (connectToReplica_ != false) {
-        output.writeBool(8, connectToReplica_);
-      }
       if (tlsRequired_ != false) {
-        output.writeBool(9, tlsRequired_);
+        output.writeBool(8, tlsRequired_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -36877,11 +36847,8 @@ public final class DriversPlumbing {
       if (!getReplicaSetBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, replicaSet_);
       }
-      if (connectToReplica_ != false) {
-        size += com.google.protobuf.CodedOutputStream.computeBoolSize(8, connectToReplica_);
-      }
       if (tlsRequired_ != false) {
-        size += com.google.protobuf.CodedOutputStream.computeBoolSize(9, tlsRequired_);
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(8, tlsRequired_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -36918,7 +36885,6 @@ public final class DriversPlumbing {
       if (!getPassword().equals(other.getPassword())) return false;
       if (getPort() != other.getPort()) return false;
       if (!getReplicaSet().equals(other.getReplicaSet())) return false;
-      if (getConnectToReplica() != other.getConnectToReplica()) return false;
       if (getTlsRequired() != other.getTlsRequired()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -36951,8 +36917,6 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPort();
       hash = (37 * hash) + REPLICA_SET_FIELD_NUMBER;
       hash = (53 * hash) + getReplicaSet().hashCode();
-      hash = (37 * hash) + CONNECT_TO_REPLICA_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getConnectToReplica());
       hash = (37 * hash) + TLS_REQUIRED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getTlsRequired());
       hash = (29 * hash) + unknownFields.hashCode();
@@ -37115,8 +37079,6 @@ public final class DriversPlumbing {
 
         replicaSet_ = "";
 
-        connectToReplica_ = false;
-
         tlsRequired_ = false;
 
         return this;
@@ -37157,7 +37119,6 @@ public final class DriversPlumbing {
         result.password_ = password_;
         result.port_ = port_;
         result.replicaSet_ = replicaSet_;
-        result.connectToReplica_ = connectToReplica_;
         result.tlsRequired_ = tlsRequired_;
         onBuilt();
         return result;
@@ -37248,9 +37209,6 @@ public final class DriversPlumbing {
         if (!other.getReplicaSet().isEmpty()) {
           replicaSet_ = other.replicaSet_;
           onChanged();
-        }
-        if (other.getConnectToReplica() != false) {
-          setConnectToReplica(other.getConnectToReplica());
         }
         if (other.getTlsRequired() != false) {
           setTlsRequired(other.getTlsRequired());
@@ -38060,49 +38018,10 @@ public final class DriversPlumbing {
         return this;
       }
 
-      private boolean connectToReplica_;
-      /**
-       * <code>
-       * bool connect_to_replica = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @return The connectToReplica.
-       */
-      public boolean getConnectToReplica() {
-        return connectToReplica_;
-      }
-      /**
-       * <code>
-       * bool connect_to_replica = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @param value The connectToReplica to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConnectToReplica(boolean value) {
-
-        connectToReplica_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>
-       * bool connect_to_replica = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearConnectToReplica() {
-
-        connectToReplica_ = false;
-        onChanged();
-        return this;
-      }
-
       private boolean tlsRequired_;
       /**
        * <code>
-       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
        * </code>
        *
        * @return The tlsRequired.
@@ -38112,7 +38031,7 @@ public final class DriversPlumbing {
       }
       /**
        * <code>
-       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
        * </code>
        *
        * @param value The tlsRequired to set.
@@ -38126,7 +38045,7 @@ public final class DriversPlumbing {
       }
       /**
        * <code>
-       * bool tls_required = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
+       * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
        * </code>
        *
        * @return This builder for chaining.
@@ -40457,21 +40376,6 @@ public final class DriversPlumbing {
     int getPort();
 
     /**
-     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The schema.
-     */
-    java.lang.String getSchema();
-    /**
-     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The bytes for schema.
-     */
-    com.google.protobuf.ByteString getSchemaBytes();
-
-    /**
      * <code>
      * bool tls_required = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
      * </code>
@@ -40498,7 +40402,6 @@ public final class DriversPlumbing {
       authDatabase_ = "";
       username_ = "";
       password_ = "";
-      schema_ = "";
     }
 
     @java.lang.Override
@@ -40566,13 +40469,6 @@ public final class DriversPlumbing {
             case 48:
               {
                 port_ = input.readInt32();
-                break;
-              }
-            case 58:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                schema_ = s;
                 break;
               }
             case 64:
@@ -40926,43 +40822,6 @@ public final class DriversPlumbing {
       return port_;
     }
 
-    public static final int SCHEMA_FIELD_NUMBER = 7;
-    private volatile java.lang.Object schema_;
-    /**
-     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The schema.
-     */
-    public java.lang.String getSchema() {
-      java.lang.Object ref = schema_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        schema_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-     * </code>
-     *
-     * @return The bytes for schema.
-     */
-    public com.google.protobuf.ByteString getSchemaBytes() {
-      java.lang.Object ref = schema_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-        schema_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int TLS_REQUIRED_FIELD_NUMBER = 8;
     private boolean tlsRequired_;
     /**
@@ -41008,9 +40867,6 @@ public final class DriversPlumbing {
       if (port_ != 0) {
         output.writeInt32(6, port_);
       }
-      if (!getSchemaBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, schema_);
-      }
       if (tlsRequired_ != false) {
         output.writeBool(8, tlsRequired_);
       }
@@ -41050,9 +40906,6 @@ public final class DriversPlumbing {
       if (port_ != 0) {
         size += com.google.protobuf.CodedOutputStream.computeInt32Size(6, port_);
       }
-      if (!getSchemaBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, schema_);
-      }
       if (tlsRequired_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(8, tlsRequired_);
       }
@@ -41090,7 +40943,6 @@ public final class DriversPlumbing {
       if (!getUsername().equals(other.getUsername())) return false;
       if (!getPassword().equals(other.getPassword())) return false;
       if (getPort() != other.getPort()) return false;
-      if (!getSchema().equals(other.getSchema())) return false;
       if (getTlsRequired() != other.getTlsRequired()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -41121,8 +40973,6 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPassword().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
       hash = (53 * hash) + getPort();
-      hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
-      hash = (53 * hash) + getSchema().hashCode();
       hash = (37 * hash) + TLS_REQUIRED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getTlsRequired());
       hash = (29 * hash) + unknownFields.hashCode();
@@ -41282,8 +41132,6 @@ public final class DriversPlumbing {
 
         port_ = 0;
 
-        schema_ = "";
-
         tlsRequired_ = false;
 
         return this;
@@ -41321,7 +41169,6 @@ public final class DriversPlumbing {
         result.username_ = username_;
         result.password_ = password_;
         result.port_ = port_;
-        result.schema_ = schema_;
         result.tlsRequired_ = tlsRequired_;
         onBuilt();
         return result;
@@ -41407,10 +41254,6 @@ public final class DriversPlumbing {
         }
         if (other.getPort() != 0) {
           setPort(other.getPort());
-        }
-        if (!other.getSchema().isEmpty()) {
-          schema_ = other.schema_;
-          onChanged();
         }
         if (other.getTlsRequired() != false) {
           setTlsRequired(other.getTlsRequired());
@@ -42129,92 +41972,6 @@ public final class DriversPlumbing {
       public Builder clearPort() {
 
         port_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object schema_ = "";
-      /**
-       * <code>
-       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @return The schema.
-       */
-      public java.lang.String getSchema() {
-        java.lang.Object ref = schema_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          schema_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>
-       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @return The bytes for schema.
-       */
-      public com.google.protobuf.ByteString getSchemaBytes() {
-        java.lang.Object ref = schema_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
-          schema_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>
-       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @param value The schema to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSchema(java.lang.String value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-
-        schema_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>
-       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @return This builder for chaining.
-       */
-      public Builder clearSchema() {
-
-        schema_ = getDefaultInstance().getSchema();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>
-       * string schema = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
-       * </code>
-       *
-       * @param value The bytes for schema to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSchemaBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
-        schema_ = value;
         onChanged();
         return this;
       }
@@ -79535,7 +79292,7 @@ public final class DriversPlumbing {
           + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022*\n\007project\030\002 \001(\tB\031\362\370"
           + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override"
           + "\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010end"
-          + "point\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+"
+          + "point\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
           + "\n\010username\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
           + "\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\215\003\n\tCassandra\022\030\n\002id\030\200\200\002 "
           + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363"
@@ -79563,7 +79320,7 @@ public final class DriversPlumbing {
           + "et_access_key\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
           + "\001\222A\002@\000\022)\n\006region\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
           + "\363\263\007\001\222A\002@\000\022+\n\010endpoint\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
-          + "\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362"
+          + "\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362"
           + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\337\002\n"
           + "\010AmazonES\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004n"
           + "ame\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001"
@@ -79664,8 +79421,8 @@ public final class DriversPlumbing {
           + "\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
           + "\222A\002@\000\0220\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005\260\363\263\007\001"
           + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0221\n\004port\030\003 \001(\005B#\362\370\263\007\005\260\363\263\007"
-          + "\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00511211\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267"
-          + "\004\n\017MongoLegacyHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00511211\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\366"
+          + "\003\n\017MongoLegacyHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
           + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
           + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
           + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\raut"
@@ -79676,145 +79433,58 @@ public final class DriversPlumbing {
           + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0221\n\004port\030\006 \001(\005B#\362"
           + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00527017\222A\002@\000\022.\n\013re"
           + "plica_set\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002"
-          + "@\000\022?\n\022connect_to_replica\030\010 \001(\010B#\362\370\263\007\005\260\363\263"
-          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005false\222A\002@\000\022/\n\014tls_requi"
-          + "red\030\t \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370"
-          + "\263\007\005\250\363\263\007\001\"\275\004\n\025MongoLegacyReplicaset\022\030\n\002id"
-          + "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370"
-          + "\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222"
-          + "A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
-          + "\363\263\007\001\222A\002@\000\0220\n\rauth_database\030\002 \001(\tB\031\362\370\263\007\005\260"
-          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\003 \001"
-          + "(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010usernam"
-          + "e\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010pa"
-          + "ssword\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022"
-          + "1\n\004port\030\006 \001(\005B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005"
-          + "27017\222A\002@\000\022.\n\013replica_set\030\007 \001(\tB\031\362\370\263\007\005\260\363"
-          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022?\n\022connect_to_replica"
-          + "\030\010 \001(\010B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005false\222A"
-          + "\002@\000\022/\n\014tls_required\030\t \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
-          + "\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\353\003\n\tMongoHost\022\030"
-          + "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\t"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363"
-          + "\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
-          + "\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rauth_database\030\002 \001(\tB\031\362\370"
-          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override"
-          + "\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010use"
-          + "rname\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+"
-          + "\n\010password\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
-          + "\002@\000\0221\n\004port\030\006 \001(\005B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
-          + "A\007:\00527017\222A\002@\000\022)\n\006schema\030\007 \001(\tB\031\362\370\263\007\005\260\363\263"
-          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014tls_required\030\010 \001(\010B"
-          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267"
-          + "\004\n\017MongoReplicaSet\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
-          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
-          + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\raut"
-          + "h_database\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
-          + "\002@\000\0220\n\rport_override\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370"
-          + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\004 \001(\tB\031\362\370\263\007\005\260\363"
-          + "\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010password\030\005 \001(\tB\031\362\370"
-          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0221\n\004port\030\006 \001(\005B#\362"
-          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00527017\222A\002@\000\022.\n\013re"
-          + "plica_set\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002"
-          + "@\000\022?\n\022connect_to_replica\030\010 \001(\010B#\362\370\263\007\005\260\363\263"
-          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005false\222A\002@\000\022/\n\014tls_requi"
-          + "red\030\t \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370"
-          + "\263\007\005\250\363\263\007\001\"\205\003\n\005Mysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
-          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
-          + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010use"
-          + "rname\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
-          + "\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
-          + "\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
-          + "\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363"
-          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260"
-          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001"
-          + "\"\213\003\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007health"
-          + "y\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001"
-          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010usern"
-          + "ame\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010"
-          + "password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@"
-          + "\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
-          + "\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007"
-          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263"
-          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\210"
-          + "\003\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n"
-          + "\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002"
-          + " \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB"
-          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002"
-          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010passw"
-          + "ord\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010"
-          + "database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@"
-          + "\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
-          + "\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263"
-          + "\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\205\003\n\005Ma"
-          + "ria\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370"
-          + "\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363"
-          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370"
-          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001("
-          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database"
-          + "\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rpor"
-          + "t_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
-          + "\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
-          + "A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\206\003\n\006Memsql\022\030\n\002"
-          + "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n"
-          + "\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007"
-          + "\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
-          + "\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007"
-          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007"
-          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB"
-          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_overr"
-          + "ide\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004"
-          + "port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\004330"
-          + "6\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267\003\n\006Oracle\022\030\n\002id\030\200\200\002 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022"
-          + "+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222"
-          + "A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
-          + "\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
-          + "\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260"
-          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\005 \001(\005B\"\362\370\263\007\005"
-          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\006:\0041521\222A\002@\000\0220\n\rport_ov"
-          + "erride\030\006 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022"
-          + "/\n\014tls_required\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
-          + "\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\276\003\n\010Postgres\022\030\n\002id\030"
-          + "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263"
-          + "\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A"
-          + "\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
-          + "\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
-          + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363"
-          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370"
-          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override"
-          + "\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004por"
-          + "t\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A"
-          + "\002@\000\0224\n\021override_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263"
-          + "\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\304\003\n\016Aurora"
-          + "Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004na"
-          + "me\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001("
-          + "\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370"
-          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001("
-          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password"
-          + "\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010dat"
-          + "abase\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
-          + "\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
-          + "\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
-          + "\363\263\007\000\222A\006:\0045432\222A\002@\000\0224\n\021override_database\030"
-          + "\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250"
-          + "\363\263\007\001\"\277\003\n\tGreenplum\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007heal"
-          + "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname"
-          + "\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010use"
-          + "rname\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
-          + "\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
-          + "\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
-          + "\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363"
-          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260"
-          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A\002@\000\0224\n\021override"
-          + "_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002"
-          + "@\000:\n\372\370\263\007\005\250\363\263\007\001\"\277\003\n\tCockroach\022\030\n\002id\030\200\200\002 \001"
+          + "@\000\022/\n\014tls_required\030\010 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
+          + "\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\275\004\n\025MongoLegacyR"
+          + "eplicaset\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004n"
+          + "ame\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001"
+          + "(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rauth_databas"
+          + "e\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rpo"
+          + "rt_override\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222"
+          + "A\002@\000\022+\n\010username\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\000\222A\002@\000\022+\n\010password\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\000\222A\002@\000\0221\n\004port\030\006 \001(\005B#\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\000\222A\007:\00527017\222A\002@\000\022.\n\013replica_set"
+          + "\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022?\n\022con"
+          + "nect_to_replica\030\010 \001(\010B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\000\222A\007:\005false\222A\002@\000\022/\n\014tls_required\030\t \001(\010"
+          + "B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\""
+          + "\300\003\n\tMongoHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202"
+          + "\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rauth_dat"
+          + "abase\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
+          + "\n\rport_override\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\022+\n\010username\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010password\030\005 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0221\n\004port\030\006 \001(\005B#\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\00527017\222A\002@\000\022/\n\014tls_req"
+          + "uired\030\010 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n"
+          + "\372\370\263\007\005\250\363\263\007\001\"\267\004\n\017MongoReplicaSet\022\030\n\002id\030\200\200\002"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
+          + "\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\0220\n\rauth_database\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\003 \001(\005B\031"
+          + "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\004 "
+          + "\001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022+\n\010passwo"
+          + "rd\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0221\n\004p"
+          + "ort\030\006 \001(\005B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\0052701"
+          + "7\222A\002@\000\022.\n\013replica_set\030\007 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\001\222A\002@\000\022?\n\022connect_to_replica\030\010 \001"
+          + "(\010B#\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\007:\005false\222A\002@\000\022"
+          + "/\n\014tls_required\030\t \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\205\003\n\005Mysql\022\030\n\002id\030\200\200\002"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
+          + "\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 "
+          + "\001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006"
+          + " \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000"
+          + ":\n\372\370\263\007\005\250\363\263\007\001\"\213\003\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001"
           + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
           + "\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+"
           + "\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
@@ -79823,105 +79493,189 @@ public final class DriversPlumbing {
           + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363"
           + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001("
           + "\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001"
-          + "(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A\002@\000\0224"
-          + "\n\021override_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
-          + "\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\276\003\n\010Redshift\022\030\n"
-          + "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB"
-          + "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263"
-          + "\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
-          + "\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263"
-          + "\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263"
-          + "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\t"
-          + "B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_over"
-          + "ride\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n"
-          + "\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\00454"
-          + "39\222A\002@\000\0224\n\021override_database\030\007 \001(\010B\031\362\370\263\007"
-          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267\003\n\006Pr"
-          + "esto\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201"
-          + "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362"
-          + "\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260"
-          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\002 \001(\tB\031\362"
-          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\003 \001"
-          + "(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_ov"
-          + "erride\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022"
-          + "0\n\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\004"
-          + "8080\222A\002@\000\022+\n\010username\030\006 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
-          + "\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014tls_required\030\007 \001(\010B\031\362\370"
-          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\326\002\n\003"
-          + "RDP\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200"
+          + "(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n"
+          + "\372\370\263\007\005\250\363\263\007\001\"\210\003\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n"
+          + "\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hos"
+          + "tname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
+          + "\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005"
+          + "\250\363\263\007\001\"\205\003\n\005Maria\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy"
+          + "\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 "
+          + "\001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010userna"
+          + "me\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010p"
+          + "assword\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000"
+          + "\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\206\003"
+          + "\n\006Memsql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004na"
+          + "me\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001("
+          + "\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370"
+          + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password"
+          + "\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010dat"
+          + "abase\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
+          + "\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\000\222A\006:\0043306\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267\003\n\006Oracl"
+          + "e\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 "
+          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007"
+          + "\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004"
+          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030"
+          + "\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\006:\0041521\222A\002@"
+          + "\000\0220\n\rport_override\030\006 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
+          + "\005\300\363\263\007\001\222A\002@\000\022/\n\014tls_required\030\007 \001(\010B\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\276\003\n\010Pos"
+          + "tgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030"
+          + "\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017"
+          + "\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031"
+          + "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 "
+          + "\001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010databa"
+          + "se\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rp"
+          + "ort_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
+          + "\000\222A\006:\0045432\222A\002@\000\0224\n\021override_database\030\007 \001"
+          + "(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007"
+          + "\001\"\304\003\n\016AuroraPostgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007"
+          + "\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007he"
+          + "althy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostna"
+          + "me\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010u"
+          + "sername\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000"
+          + "\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007"
+          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A\002@\000\0224\n\021overri"
+          + "de_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
+          + "A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\277\003\n\tGreenplum\022\030\n\002id\030\200\200\002"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260"
+          + "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
+          + "\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
+          + "\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 "
+          + "\001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\006"
+          + " \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0045432\222A\002@\000"
+          + "\0224\n\021override_database\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\277\003\n\tCockroach"
+          + "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005"
+          + "\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031"
+          + "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 "
+          + "\001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_o"
+          + "verride\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000"
+          + "\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:"
+          + "\0045432\222A\002@\000\0224\n\021override_database\030\007 \001(\010B\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\276\003\n"
+          + "\010Redshift\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004n"
+          + "ame\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001"
+          + "(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001"
+          + "(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010passwor"
+          + "d\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010da"
+          + "tabase\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022"
+          + "0\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300"
+          + "\363\263\007\001\222A\002@\000\0220\n\004port\030\006 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\000\222A\006:\0045439\222A\002@\000\0224\n\021override_database"
+          + "\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005"
+          + "\250\363\263\007\001\"\267\003\n\006Presto\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007health"
+          + "y\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001"
+          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010passw"
+          + "ord\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010"
+          + "database\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@"
+          + "\000\0220\n\rport_override\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
+          + "\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263"
+          + "\007\005\300\363\263\007\000\222A\006:\0048080\222A\002@\000\022+\n\010username\030\006 \001(\tB"
+          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\022/\n\014tls_requir"
+          + "ed\030\007 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263"
+          + "\007\005\250\363\263\007\001\"\326\002\n\003RDP\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
+          + "\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy"
+          + "\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 "
+          + "\001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010userna"
+          + "me\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010p"
+          + "assword\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000"
+          + "\0220\n\rport_override\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\001\222A\002@\000\0220\n\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
+          + "\005\300\363\263\007\000\222A\006:\0043389\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Red"
+          + "is\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002"
+          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263"
+          + "\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263"
+          + "\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\002 \001(\005"
+          + "B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030"
+          + "\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port"
+          + "\030\004 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0046379\222A\002"
+          + "@\000:\n\372\370\263\007\005\250\363\263\007\001\"\360\002\n\020ElasticacheRedis\022\030\n\002i"
+          + "d\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001"
+          + "\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005"
+          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031"
+          + "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\004 \001(\005B"
+          + "\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0046379\222A\002@\000\0228\n\014t"
+          + "ls_required\030\005 \001(\010B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
+          + "A\006:\004true\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\202\003\n\tSnowflake\022"
+          + "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001("
+          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260"
+          + "\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362"
+          + "\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260"
+          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362"
+          + "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001"
+          + "(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022)\n\006schema\030"
+          + "\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport"
+          + "_override\030\006 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002",
+      "@\000:\n\372\370\263\007\005\250\363\263\007\001\"\352\003\n\tSQLServer\022\030\n\002id\030\200\200\002 \001"
+          + "(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
+          + "\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+"
+          + "\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
+          + "\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
+          + "\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\005 \001("
+          + "\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022)\n\006schema\030\006"
+          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030"
+          + "\007 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0041433\222A\002@"
+          + "\000\0224\n\021override_database\030\010 \001(\010B\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\244\002\n\003SSH\022\030\n\002i"
+          + "d\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362"
+          + "\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001"
+          + "\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005"
+          + "\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001"
+          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022.\n\004port\030\003 \001(\005B \362\370\263\007\005\260\363\263\007"
+          + "\001\362\370\263\007\005\300\363\263\007\001\222A\004:\00222\222A\002@\000\022-\n\npublic_key\030\004 "
+          + "\001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\001:\n\372\370\263\007\005\250\363\263"
+          + "\007\001\"\331\002\n\006Sybase\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022"
+          + "\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202"
+          + "\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001("
+          + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username"
+          + "\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rpor"
+          + "t_override\030\003 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
+          + "\002@\000\0220\n\004port\030\004 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222"
+          + "A\006:\0042638\222A\002@\000\022+\n\010password\030\005 \001(\tB\031\362\370\263\007\005\260\363"
+          + "\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\333\002\n\010Terad"
+          + "ata\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200"
           + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370"
           + "\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363"
           + "\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370"
           + "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001("
           + "\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_ove"
           + "rride\030\004 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
-          + "\n\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0043"
-          + "389\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\253\002\n\005Redis\022\030\n\002id\030\200\200\002"
-          + " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001"
-          + "\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001"
-          + "\222A\002@\000\0220\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005\260\363\263\007\001"
-          + "\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005"
-          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\004 \001(\005B\"\362\370\263\007"
-          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0046379\222A\002@\000:\n\372\370\263\007\005\250\363\263"
-          + "\007\001\"\360\002\n\020ElasticacheRedis\022\030\n\002id\030\200\200\002 \001(\tB\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n"
-          + "\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hos"
-          + "tname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220"
-          + "\n\rport_override\030\002 \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363"
-          + "\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370"
-          + "\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\004 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362"
-          + "\370\263\007\005\300\363\263\007\000\222A\006:\0046379\222A\002@\000\0228\n\014tls_required\030"
-          + "\005 \001(\010B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\004true\222A\002@"
-          + "\000:\n\372\370\263\007\005\250\363\263\007\001\"\202\003\n\tSnowflake\022\030\n\002id\030\200\200\002 \001("
-          + "\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007"
-          + "\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n"
-          + "\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002"
-          + "@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263"
-          + "\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263"
-          + "\007\005\300\363\263\007\001\222A\002@\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263",
-      "\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022)\n\006schema\030\005 \001(\tB\031\362\370\263\007\005"
-          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\006 "
-          + "\001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263"
-          + "\007\001\"\352\003\n\tSQLServer\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263"
-          + "\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007health"
-          + "y\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001"
-          + " \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010usern"
-          + "ame\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010"
-          + "password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@"
-          + "\000\022+\n\010database\030\004 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
-          + "\001\222A\002@\000\0220\n\rport_override\030\005 \001(\005B\031\362\370\263\007\005\260\363\263\007"
-          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022)\n\006schema\030\006 \001(\tB\031\362\370\263\007\005\260"
-          + "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\000\0220\n\004port\030\007 \001(\005B\"\362\370\263\007\005"
-          + "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0041433\222A\002@\000\0224\n\021overrid"
-          + "e_database\030\010 \001(\010B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A"
-          + "\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\244\002\n\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362"
-          + "\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n"
-          + "\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022+\n\010hos"
-          + "tname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+"
-          + "\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A"
-          + "\002@\000\022.\n\004port\030\003 \001(\005B \362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222"
-          + "A\004:\00222\222A\002@\000\022-\n\npublic_key\030\004 \001(\tB\031\362\370\263\007\005\260\363"
-          + "\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\331\002\n\006Sybas"
-          + "e\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 "
-          + "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007"
-          + "\005\260\363\263\007\001\222A\002@\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007"
-          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007"
-          + "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\003"
-          + " \001(\005B\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030"
-          + "\004 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0042638\222A\002@"
-          + "\000\022+\n\010password\030\005 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
-          + "\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\333\002\n\010Teradata\022\030\n\002id\030\200\200"
-          + "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\004name\030\201\200\002 \001(\tB\n\362\370\263\007\005"
-          + "\260\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@"
-          + "\001\022+\n\010hostname\030\001 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007"
-          + "\001\222A\002@\000\022+\n\010username\030\002 \001(\tB\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007"
-          + "\005\300\363\263\007\001\222A\002@\000\022+\n\010password\030\003 \001(\tB\031\362\370\263\007\005\260\363\263\007"
-          + "\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\rport_override\030\004 \001(\005B"
-          + "\031\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\222A\002@\000\0220\n\004port\030\005 \001(\005"
-          + "B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0041025\222A\002@\000:\n\372\370"
-          + "\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbing"
-          + "B\017DriversPlumbingb\006proto3"
+          + "\n\004port\030\005 \001(\005B\"\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\222A\006:\0041"
+          + "025\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api"
+          + ".v1.plumbingB\017DriversPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -80190,7 +79944,6 @@ public final class DriversPlumbing {
               "Password",
               "Port",
               "ReplicaSet",
-              "ConnectToReplica",
               "TlsRequired",
             });
     internal_static_v1_MongoLegacyReplicaset_descriptor = getDescriptor().getMessageTypes().get(17);
@@ -80225,7 +79978,6 @@ public final class DriversPlumbing {
               "Username",
               "Password",
               "Port",
-              "Schema",
               "TlsRequired",
             });
     internal_static_v1_MongoReplicaSet_descriptor = getDescriptor().getMessageTypes().get(19);

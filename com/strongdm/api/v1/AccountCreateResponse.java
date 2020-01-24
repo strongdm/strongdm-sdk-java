@@ -1,7 +1,6 @@
 package com.strongdm.api.v1;
 
 // AccountCreateResponse reports how the Accounts were created in the system.
-
 public class AccountCreateResponse {
   private CreateResponseMetadata meta;
   // Reserved for future use.

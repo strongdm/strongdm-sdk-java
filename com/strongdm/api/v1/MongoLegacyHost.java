@@ -111,17 +111,6 @@ public class MongoLegacyHost implements Resource {
     return this;
   }
 
-  private boolean connectToReplica;
-
-  public boolean getConnectToReplica() {
-    return this.connectToReplica;
-  }
-
-  public MongoLegacyHost setConnectToReplica(boolean in) {
-    this.connectToReplica = in;
-    return this;
-  }
-
   private boolean tlsRequired;
 
   public boolean getTlsRequired() {

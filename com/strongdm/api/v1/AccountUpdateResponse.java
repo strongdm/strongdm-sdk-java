@@ -2,7 +2,6 @@ package com.strongdm.api.v1;
 
 // AccountUpdateResponse returns the fields of a Account after it has been updated by
 // a AccountUpdateRequest.
-
 public class AccountUpdateResponse {
   private UpdateResponseMetadata meta;
   // Reserved for future use.

@@ -100,17 +100,6 @@ public class MongoHost implements Resource {
     return this;
   }
 
-  private String schema;
-
-  public String getSchema() {
-    return this.schema;
-  }
-
-  public MongoHost setSchema(String in) {
-    this.schema = in;
-    return this;
-  }
-
   private boolean tlsRequired;
 
   public boolean getTlsRequired() {

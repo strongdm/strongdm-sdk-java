@@ -1,7 +1,6 @@
 package com.strongdm.api.v1;
 
 // ResourceCreateResponse reports how the Resources were created in the system.
-
 public class ResourceCreateResponse {
   private CreateResponseMetadata meta;
   // Reserved for future use.

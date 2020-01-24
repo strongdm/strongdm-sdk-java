@@ -1,7 +1,6 @@
 package com.strongdm.api.v1;
 
 // ResourceGetResponse returns a requested Resource.
-
 public class ResourceGetResponse {
   private GetResponseMetadata meta;
   // Reserved for future use.
