@@ -542,6 +542,9 @@ public class Plumbing {
     if (plumbing.hasGoogleGke()) {
       return googleGkeToPorcelain(plumbing.getGoogleGke());
     }
+    if (plumbing.hasKubernetesServiceAccount()) {
+      return kubernetesServiceAccountToPorcelain(plumbing.getKubernetesServiceAccount());
+    }
     if (plumbing.hasMemcached()) {
       return memcachedToPorcelain(plumbing.getMemcached());
     }
@@ -694,6 +697,13 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.GoogleGKE) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setGoogleGke(googleGkeToPlumbing((com.strongdm.api.v1.GoogleGKE) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.KubernetesServiceAccount) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setKubernetesServiceAccount(
+          kubernetesServiceAccountToPlumbing(
+              (com.strongdm.api.v1.KubernetesServiceAccount) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Memcached) {
@@ -1649,6 +1659,56 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.GoogleGKE> porcelains) {
     return porcelains.stream()
         .map(porcelain -> googleGkeToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.KubernetesServiceAccount kubernetesServiceAccountToPorcelain(
+      KubernetesServiceAccount plumbing) {
+    com.strongdm.api.v1.KubernetesServiceAccount porcelain =
+        new com.strongdm.api.v1.KubernetesServiceAccount();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setToken(plumbing.getToken());
+    return porcelain;
+  }
+
+  public static KubernetesServiceAccount kubernetesServiceAccountToPlumbing(
+      com.strongdm.api.v1.KubernetesServiceAccount porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    KubernetesServiceAccount.Builder builder = KubernetesServiceAccount.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getToken() != null) {
+      builder.setToken(porcelain.getToken());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.KubernetesServiceAccount>
+      repeatedKubernetesServiceAccountToPorcelain(Collection<KubernetesServiceAccount> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> kubernetesServiceAccountToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<KubernetesServiceAccount> repeatedKubernetesServiceAccountToPlumbing(
+      Collection<com.strongdm.api.v1.KubernetesServiceAccount> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> kubernetesServiceAccountToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
