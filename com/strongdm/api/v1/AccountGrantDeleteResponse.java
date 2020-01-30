@@ -1,14 +1,14 @@
 package com.strongdm.api.v1;
 
-// UserGrantDeleteResponse returns information about a UserGrant that was deleted.
-public class UserGrantDeleteResponse {
+// AccountGrantDeleteResponse returns information about a AccountGrant that was deleted.
+public class AccountGrantDeleteResponse {
   private DeleteResponseMetadata meta;
   // Reserved for future use.
   public DeleteResponseMetadata getMeta() {
     return this.meta;
   }
   // Reserved for future use.
-  public UserGrantDeleteResponse setMeta(DeleteResponseMetadata in) {
+  public AccountGrantDeleteResponse setMeta(DeleteResponseMetadata in) {
     this.meta = in;
     return this;
   }
@@ -19,7 +19,7 @@ public class UserGrantDeleteResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public UserGrantDeleteResponse setRateLimit(RateLimitMetadata in) {
+  public AccountGrantDeleteResponse setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
     return this;
   }

@@ -27,6 +27,16 @@ public class Client {
   private int maxRetries;
   private int baseRetryDelay;
   private int maxRetryDelay;
+  private final AccountGrants accountGrants;
+
+  // AccountGrants represent relationships between composite roles and the roles
+  // that make up those composite roles. When a composite role is attached to another
+  // role, the permissions granted to members of the composite role are augmented to
+  // include the permissions granted to members of the attached role.
+  public AccountGrants accountGrants() {
+    return this.accountGrants;
+  }
+
   private final Accounts accounts;
 
   // Accounts are users, services or tokens who connect to and act within the strongDM network.
@@ -69,16 +79,6 @@ public class Client {
   public Roles roles() {
     return this.roles;
   }
-
-  private final UserGrants userGrants;
-
-  // UserGrants represent relationships between composite roles and the roles
-  // that make up those composite roles. When a composite role is attached to another
-  // role, the permissions granted to members of the composite role are augmented to
-  // include the permissions granted to members of the attached role.
-  public UserGrants userGrants() {
-    return this.userGrants;
-  }
   // Creates a new strongDM API client. Pass in the API hostname, port, and authentication token.
   public Client(String host, int port, String apiAccessKey, String apiSecretKey)
       throws RpcException {
@@ -95,12 +95,12 @@ public class Client {
         builder = builder.usePlaintext();
       }
       this.channel = builder.build();
+      this.accountGrants = new AccountGrants(this.channel, this);
       this.accounts = new Accounts(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
       this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);
       this.roles = new Roles(this.channel, this);
-      this.userGrants = new UserGrants(this.channel, this);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
     }
