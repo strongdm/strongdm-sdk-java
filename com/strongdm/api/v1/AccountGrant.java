@@ -1,16 +1,16 @@
 package com.strongdm.api.v1;
 
+import java.util.Date;
+
 // A AccountGrant connects a composite role to another role, granting members
 // of the composite role the permissions granted to the attached role.
 public class AccountGrant {
   private String id;
   // Unique identifier of the AccountGrant.
-  // TODO: add strong ID
   public String getId() {
     return this.id;
   }
   // Unique identifier of the AccountGrant.
-  // TODO: add strong ID
   public AccountGrant setId(String in) {
     this.id = in;
     return this;
@@ -35,6 +35,32 @@ public class AccountGrant {
   // The id of the attached role of this AccountGrant.
   public AccountGrant setAccountId(String in) {
     this.accountId = in;
+    return this;
+  }
+
+  private Date startFrom;
+  // The timestamp when the resource will be granted. Optional. Both start_at
+  // and end_at must be defined together, or not defined at all.
+  public Date getStartFrom() {
+    return this.startFrom;
+  }
+  // The timestamp when the resource will be granted. Optional. Both start_at
+  // and end_at must be defined together, or not defined at all.
+  public AccountGrant setStartFrom(Date in) {
+    this.startFrom = in;
+    return this;
+  }
+
+  private Date validUntil;
+  // The timestamp when the resource grant will expire. Optional. Both
+  // start_at and end_at must be defined together, or not defined at all.
+  public Date getValidUntil() {
+    return this.validUntil;
+  }
+  // The timestamp when the resource grant will expire. Optional. Both
+  // start_at and end_at must be defined together, or not defined at all.
+  public AccountGrant setValidUntil(Date in) {
+    this.validUntil = in;
     return this;
   }
 }

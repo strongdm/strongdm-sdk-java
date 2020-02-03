@@ -339,6 +339,8 @@ public class Plumbing {
     porcelain.setId(plumbing.getId());
     porcelain.setResourceId(plumbing.getResourceId());
     porcelain.setAccountId(plumbing.getAccountId());
+    porcelain.setStartFrom(Plumbing.timestampToPorcelain(plumbing.getStartFrom()));
+    porcelain.setValidUntil(Plumbing.timestampToPorcelain(plumbing.getValidUntil()));
     return porcelain;
   }
 
@@ -355,6 +357,12 @@ public class Plumbing {
     }
     if (porcelain.getAccountId() != null) {
       builder.setAccountId(porcelain.getAccountId());
+    }
+    if (porcelain.getStartFrom() != null) {
+      builder.setStartFrom(Plumbing.timestampToPlumbing(porcelain.getStartFrom()));
+    }
+    if (porcelain.getValidUntil() != null) {
+      builder.setValidUntil(Plumbing.timestampToPlumbing(porcelain.getValidUntil()));
     }
     return builder.build();
   }

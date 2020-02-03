@@ -9693,7 +9693,6 @@ public final class AccountGrantsPlumbing {
      *
      * <pre>
      * Unique identifier of the AccountGrant.
-     * TODO: add strong ID
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -9706,7 +9705,6 @@ public final class AccountGrantsPlumbing {
      *
      * <pre>
      * Unique identifier of the AccountGrant.
-     * TODO: add strong ID
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -9764,6 +9762,82 @@ public final class AccountGrantsPlumbing {
      * @return The bytes for accountId.
      */
     com.google.protobuf.ByteString getAccountIdBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource will be granted. Optional. Both start_at
+     * and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return Whether the startFrom field is set.
+     */
+    boolean hasStartFrom();
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource will be granted. Optional. Both start_at
+     * and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The startFrom.
+     */
+    com.google.protobuf.Timestamp getStartFrom();
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource will be granted. Optional. Both start_at
+     * and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartFromOrBuilder();
+
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource grant will expire. Optional. Both
+     * start_at and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return Whether the validUntil field is set.
+     */
+    boolean hasValidUntil();
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource grant will expire. Optional. Both
+     * start_at and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The validUntil.
+     */
+    com.google.protobuf.Timestamp getValidUntil();
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource grant will expire. Optional. Both
+     * start_at and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getValidUntilOrBuilder();
   }
   /**
    *
@@ -9841,6 +9915,36 @@ public final class AccountGrantsPlumbing {
                 accountId_ = s;
                 break;
               }
+            case 34:
+              {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (startFrom_ != null) {
+                  subBuilder = startFrom_.toBuilder();
+                }
+                startFrom_ =
+                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(startFrom_);
+                  startFrom_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+            case 42:
+              {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (validUntil_ != null) {
+                  subBuilder = validUntil_.toBuilder();
+                }
+                validUntil_ =
+                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(validUntil_);
+                  validUntil_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
             default:
               {
                 if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -9882,7 +9986,6 @@ public final class AccountGrantsPlumbing {
      *
      * <pre>
      * Unique identifier of the AccountGrant.
-     * TODO: add strong ID
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -9905,7 +10008,6 @@ public final class AccountGrantsPlumbing {
      *
      * <pre>
      * Unique identifier of the AccountGrant.
-     * TODO: add strong ID
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10018,6 +10120,98 @@ public final class AccountGrantsPlumbing {
       }
     }
 
+    public static final int START_FROM_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startFrom_;
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource will be granted. Optional. Both start_at
+     * and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return Whether the startFrom field is set.
+     */
+    public boolean hasStartFrom() {
+      return startFrom_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource will be granted. Optional. Both start_at
+     * and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The startFrom.
+     */
+    public com.google.protobuf.Timestamp getStartFrom() {
+      return startFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startFrom_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource will be granted. Optional. Both start_at
+     * and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getStartFromOrBuilder() {
+      return getStartFrom();
+    }
+
+    public static final int VALID_UNTIL_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp validUntil_;
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource grant will expire. Optional. Both
+     * start_at and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return Whether the validUntil field is set.
+     */
+    public boolean hasValidUntil() {
+      return validUntil_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource grant will expire. Optional. Both
+     * start_at and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The validUntil.
+     */
+    public com.google.protobuf.Timestamp getValidUntil() {
+      return validUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validUntil_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The timestamp when the resource grant will expire. Optional. Both
+     * start_at and end_at must be defined together, or not defined at all.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getValidUntilOrBuilder() {
+      return getValidUntil();
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -10041,6 +10235,12 @@ public final class AccountGrantsPlumbing {
       if (!getAccountIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, accountId_);
       }
+      if (startFrom_ != null) {
+        output.writeMessage(4, getStartFrom());
+      }
+      if (validUntil_ != null) {
+        output.writeMessage(5, getValidUntil());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10058,6 +10258,12 @@ public final class AccountGrantsPlumbing {
       }
       if (!getAccountIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, accountId_);
+      }
+      if (startFrom_ != null) {
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getStartFrom());
+      }
+      if (validUntil_ != null) {
+        size += com.google.protobuf.CodedOutputStream.computeMessageSize(5, getValidUntil());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10078,6 +10284,14 @@ public final class AccountGrantsPlumbing {
       if (!getId().equals(other.getId())) return false;
       if (!getResourceId().equals(other.getResourceId())) return false;
       if (!getAccountId().equals(other.getAccountId())) return false;
+      if (hasStartFrom() != other.hasStartFrom()) return false;
+      if (hasStartFrom()) {
+        if (!getStartFrom().equals(other.getStartFrom())) return false;
+      }
+      if (hasValidUntil() != other.hasValidUntil()) return false;
+      if (hasValidUntil()) {
+        if (!getValidUntil().equals(other.getValidUntil())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10095,6 +10309,14 @@ public final class AccountGrantsPlumbing {
       hash = (53 * hash) + getResourceId().hashCode();
       hash = (37 * hash) + ACCOUNT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAccountId().hashCode();
+      if (hasStartFrom()) {
+        hash = (37 * hash) + START_FROM_FIELD_NUMBER;
+        hash = (53 * hash) + getStartFrom().hashCode();
+      }
+      if (hasValidUntil()) {
+        hash = (37 * hash) + VALID_UNTIL_FIELD_NUMBER;
+        hash = (53 * hash) + getValidUntil().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10252,6 +10474,18 @@ public final class AccountGrantsPlumbing {
 
         accountId_ = "";
 
+        if (startFromBuilder_ == null) {
+          startFrom_ = null;
+        } else {
+          startFrom_ = null;
+          startFromBuilder_ = null;
+        }
+        if (validUntilBuilder_ == null) {
+          validUntil_ = null;
+        } else {
+          validUntil_ = null;
+          validUntilBuilder_ = null;
+        }
         return this;
       }
 
@@ -10283,6 +10517,16 @@ public final class AccountGrantsPlumbing {
         result.id_ = id_;
         result.resourceId_ = resourceId_;
         result.accountId_ = accountId_;
+        if (startFromBuilder_ == null) {
+          result.startFrom_ = startFrom_;
+        } else {
+          result.startFrom_ = startFromBuilder_.build();
+        }
+        if (validUntilBuilder_ == null) {
+          result.validUntil_ = validUntil_;
+        } else {
+          result.validUntil_ = validUntilBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -10349,6 +10593,12 @@ public final class AccountGrantsPlumbing {
           accountId_ = other.accountId_;
           onChanged();
         }
+        if (other.hasStartFrom()) {
+          mergeStartFrom(other.getStartFrom());
+        }
+        if (other.hasValidUntil()) {
+          mergeValidUntil(other.getValidUntil());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10386,7 +10636,6 @@ public final class AccountGrantsPlumbing {
        *
        * <pre>
        * Unique identifier of the AccountGrant.
-       * TODO: add strong ID
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10409,7 +10658,6 @@ public final class AccountGrantsPlumbing {
        *
        * <pre>
        * Unique identifier of the AccountGrant.
-       * TODO: add strong ID
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10432,7 +10680,6 @@ public final class AccountGrantsPlumbing {
        *
        * <pre>
        * Unique identifier of the AccountGrant.
-       * TODO: add strong ID
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10454,7 +10701,6 @@ public final class AccountGrantsPlumbing {
        *
        * <pre>
        * Unique identifier of the AccountGrant.
-       * TODO: add strong ID
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10472,7 +10718,6 @@ public final class AccountGrantsPlumbing {
        *
        * <pre>
        * Unique identifier of the AccountGrant.
-       * TODO: add strong ID
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -10703,6 +10948,394 @@ public final class AccountGrantsPlumbing {
         return this;
       }
 
+      private com.google.protobuf.Timestamp startFrom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          startFromBuilder_;
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return Whether the startFrom field is set.
+       */
+      public boolean hasStartFrom() {
+        return startFromBuilder_ != null || startFrom_ != null;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The startFrom.
+       */
+      public com.google.protobuf.Timestamp getStartFrom() {
+        if (startFromBuilder_ == null) {
+          return startFrom_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : startFrom_;
+        } else {
+          return startFromBuilder_.getMessage();
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setStartFrom(com.google.protobuf.Timestamp value) {
+        if (startFromBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startFrom_ = value;
+          onChanged();
+        } else {
+          startFromBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setStartFrom(com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startFromBuilder_ == null) {
+          startFrom_ = builderForValue.build();
+          onChanged();
+        } else {
+          startFromBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeStartFrom(com.google.protobuf.Timestamp value) {
+        if (startFromBuilder_ == null) {
+          if (startFrom_ != null) {
+            startFrom_ =
+                com.google.protobuf.Timestamp.newBuilder(startFrom_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            startFrom_ = value;
+          }
+          onChanged();
+        } else {
+          startFromBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearStartFrom() {
+        if (startFromBuilder_ == null) {
+          startFrom_ = null;
+          onChanged();
+        } else {
+          startFrom_ = null;
+          startFromBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartFromBuilder() {
+
+        onChanged();
+        return getStartFromFieldBuilder().getBuilder();
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartFromOrBuilder() {
+        if (startFromBuilder_ != null) {
+          return startFromBuilder_.getMessageOrBuilder();
+        } else {
+          return startFrom_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : startFrom_;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource will be granted. Optional. Both start_at
+       * and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          getStartFromFieldBuilder() {
+        if (startFromBuilder_ == null) {
+          startFromBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp,
+                  com.google.protobuf.Timestamp.Builder,
+                  com.google.protobuf.TimestampOrBuilder>(
+                  getStartFrom(), getParentForChildren(), isClean());
+          startFrom_ = null;
+        }
+        return startFromBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp validUntil_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          validUntilBuilder_;
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return Whether the validUntil field is set.
+       */
+      public boolean hasValidUntil() {
+        return validUntilBuilder_ != null || validUntil_ != null;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The validUntil.
+       */
+      public com.google.protobuf.Timestamp getValidUntil() {
+        if (validUntilBuilder_ == null) {
+          return validUntil_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : validUntil_;
+        } else {
+          return validUntilBuilder_.getMessage();
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setValidUntil(com.google.protobuf.Timestamp value) {
+        if (validUntilBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          validUntil_ = value;
+          onChanged();
+        } else {
+          validUntilBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setValidUntil(com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (validUntilBuilder_ == null) {
+          validUntil_ = builderForValue.build();
+          onChanged();
+        } else {
+          validUntilBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeValidUntil(com.google.protobuf.Timestamp value) {
+        if (validUntilBuilder_ == null) {
+          if (validUntil_ != null) {
+            validUntil_ =
+                com.google.protobuf.Timestamp.newBuilder(validUntil_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            validUntil_ = value;
+          }
+          onChanged();
+        } else {
+          validUntilBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearValidUntil() {
+        if (validUntilBuilder_ == null) {
+          validUntil_ = null;
+          onChanged();
+        } else {
+          validUntil_ = null;
+          validUntilBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getValidUntilBuilder() {
+
+        onChanged();
+        return getValidUntilFieldBuilder().getBuilder();
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getValidUntilOrBuilder() {
+        if (validUntilBuilder_ != null) {
+          return validUntilBuilder_.getMessageOrBuilder();
+        } else {
+          return validUntil_ == null
+              ? com.google.protobuf.Timestamp.getDefaultInstance()
+              : validUntil_;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The timestamp when the resource grant will expire. Optional. Both
+       * start_at and end_at must be defined together, or not defined at all.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp,
+              com.google.protobuf.Timestamp.Builder,
+              com.google.protobuf.TimestampOrBuilder>
+          getValidUntilFieldBuilder() {
+        if (validUntilBuilder_ == null) {
+          validUntilBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Timestamp,
+                  com.google.protobuf.Timestamp.Builder,
+                  com.google.protobuf.TimestampOrBuilder>(
+                  getValidUntil(), getParentForChildren(), isClean());
+          validUntil_ = null;
+        }
+        return validUntilBuilder_;
+      }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10805,60 +11438,65 @@ public final class AccountGrantsPlumbing {
     java.lang.String[] descriptorData = {
       "\n\024account_grants.proto\022\002v1\032\034google/api/a"
           + "nnotations.proto\032,protoc-gen-swagger/opt"
-          + "ions/annotations.proto\032\roptions.proto\032\ns"
-          + "pec.proto\"y\n\031AccountGrantCreateRequest\022\'"
-          + "\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022"
-          + "3\n\raccount_grant\030\002 \001(\0132\020.v1.AccountGrant"
-          + "B\n\362\370\263\007\005\260\363\263\007\001\"\312\001\n\032AccountGrantCreateRespo"
-          + "nse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMet"
+          + "ions/annotations.proto\032\037google/protobuf/"
+          + "timestamp.proto\032\roptions.proto\032\nspec.pro"
+          + "to\"y\n\031AccountGrantCreateRequest\022\'\n\004meta\030"
+          + "\001 \001(\0132\031.v1.CreateRequestMetadata\0223\n\racco"
+          + "unt_grant\030\002 \001(\0132\020.v1.AccountGrantB\n\362\370\263\007\005"
+          + "\260\363\263\007\001\"\312\001\n\032AccountGrantCreateResponse\0224\n\004"
+          + "meta\030\001 \001(\0132\032.v1.CreateResponseMetadataB\n"
+          + "\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\0132\020.v1.A"
+          + "ccountGrantB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 "
+          + "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n"
+          + "\372\370\263\007\005\250\363\263\007\001\"V\n\026AccountGrantGetRequest\022$\n\004"
+          + "meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id"
+          + "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\304\001\n\027AccountGrantGetRe"
+          + "sponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMet"
           + "adataB\n\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\013"
           + "2\020.v1.AccountGrantB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_l"
           + "imit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005"
-          + "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"V\n\026AccountGrantGetRequ"
-          + "est\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadat"
-          + "a\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\304\001\n\027AccountGra"
-          + "ntGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResp"
-          + "onseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_gran"
-          + "t\030\002 \001(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\260\363\263\007\001\0225\n"
-          + "\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadata"
-          + "B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\031AccountGrant"
-          + "DeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteR"
-          + "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\225"
-          + "\001\n\032AccountGrantDeleteResponse\0224\n\004meta\030\001 "
-          + "\001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363"
-          + "\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimitMe"
-          + "tadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\027Accoun"
-          + "tGrantListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.Lis"
-          + "tRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\"\257\001\n\030AccountGrantListResponse\022&\n\004met"
-          + "a\030\001 \001(\0132\030.v1.ListResponseMetadata\0224\n\016acc"
-          + "ount_grants\030\002 \003(\0132\020.v1.AccountGrantB\n\362\370\263"
-          + "\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLim"
-          + "itMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\341\002\n\014AccountGrant\022"
-          + ",\n\002id\030\001 \001(\tB \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nPermi"
-          + "ssion\022?\n\013resource_id\030\002 \001(\tB*\362\370\263\007%\242\363\263\007\014Da"
-          + "tasourceID\260\363\263\007\001\312\363\263\007\nDatasource\0222\n\naccoun"
-          + "t_id\030\003 \001(\tB\036\362\370\263\007\031\242\363\263\007\006UserID\260\363\263\007\001\312\363\263\007\004Us"
-          + "er:\255\001\372\370\263\007\024\242\363\263\007\nPermission\250\363\263\007\001\222A\220\001*J\n\017A "
-          + "AccountGrant.\0227https://www.strongdm.com/"
-          + "docs/api/entities#AccountGrant2B\022@{ \"id\""
-          + ": \"ug-244\", \"resource_id\": \"rs-111\", \"ac"
-          + "count_id\":\"a-444\"}2\237\004\n\rAccountGrants\022\316\001\n"
-          + "\006Create\022\035.v1.AccountGrantCreateRequest\032\036"
-          + ".v1.AccountGrantCreateResponse\"\204\001\202\323\344\223\002\026\""
-          + "\021/v1/accountGrants:\001*\222Ae\"c\n Learn how to"
-          + " make a AccountGrant\022?https://www.strong"
-          + "dm.com/docs/api/services/AccountGrants#C"
-          + "reate\022^\n\003Get\022\032.v1.AccountGrantGetRequest"
-          + "\032\033.v1.AccountGrantGetResponse\"\036\202\323\344\223\002\030\022\026/"
-          + "v1/accountGrants/{id}\022g\n\006Delete\022\035.v1.Acc"
-          + "ountGrantDeleteRequest\032\036.v1.AccountGrant"
-          + "DeleteResponse\"\036\202\323\344\223\002\030*\026/v1/accountGrant"
-          + "s/{id}\022\\\n\004List\022\033.v1.AccountGrantListRequ"
-          + "est\032\034.v1.AccountGrantListResponse\"\031\202\323\344\223\002"
-          + "\023\022\021/v1/accountGrants\032\026\312\371\263\007\021\302\371\263\007\014AccountG"
-          + "rantB5\n\034com.strongdm.api.v1.plumbingB\025Ac"
-          + "countGrantsPlumbingb\006proto3"
+          + "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\031AccountGrantDeleteR"
+          + "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestM"
+          + "etadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\225\001\n\032Acco"
+          + "untGrantDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v"
+          + "1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\n"
+          + "rate_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB"
+          + "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\027AccountGrantL"
+          + "istRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListReques"
+          + "tMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\257\001"
+          + "\n\030AccountGrantListResponse\022&\n\004meta\030\001 \001(\013"
+          + "2\030.v1.ListResponseMetadata\0224\n\016account_gr"
+          + "ants\030\002 \003(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001"
+          + "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad"
+          + "ataB\n\362\370\263\007\005\260\363\263\007\001\"\367\003\n\014AccountGrant\022,\n\002id\030\001"
+          + " \001(\tB \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nPermission\022?"
+          + "\n\013resource_id\030\002 \001(\tB*\362\370\263\007%\242\363\263\007\014Datasourc"
+          + "eID\260\363\263\007\001\312\363\263\007\nDatasource\0222\n\naccount_id\030\003 "
+          + "\001(\tB\036\362\370\263\007\031\242\363\263\007\006UserID\260\363\263\007\001\312\363\263\007\004User\022H\n\ns"
+          + "tart_from\030\004 \001(\0132\032.google.protobuf.Timest"
+          + "ampB\030\362\370\263\007\023\242\363\263\007\tStartFrom\260\363\263\007\001\022J\n\013valid_u"
+          + "ntil\030\005 \001(\0132\032.google.protobuf.TimestampB\031"
+          + "\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:\255\001\372\370\263\007\024\242\363\263\007\nPe"
+          + "rmission\250\363\263\007\001\222A\220\001*J\n\017A AccountGrant.\0227ht"
+          + "tps://www.strongdm.com/docs/api/entities"
+          + "#AccountGrant2B\022@{ \"id\": \"ug-244\", \"reso"
+          + "urce_id\": \"rs-111\", \"account_id\":\"a-444\""
+          + "}2\237\004\n\rAccountGrants\022\316\001\n\006Create\022\035.v1.Acco"
+          + "untGrantCreateRequest\032\036.v1.AccountGrantC"
+          + "reateResponse\"\204\001\202\323\344\223\002\026\"\021/v1/accountGrant"
+          + "s:\001*\222Ae\"c\n Learn how to make a AccountGr"
+          + "ant\022?https://www.strongdm.com/docs/api/s"
+          + "ervices/AccountGrants#Create\022^\n\003Get\022\032.v1"
+          + ".AccountGrantGetRequest\032\033.v1.AccountGran"
+          + "tGetResponse\"\036\202\323\344\223\002\030\022\026/v1/accountGrants/"
+          + "{id}\022g\n\006Delete\022\035.v1.AccountGrantDeleteRe"
+          + "quest\032\036.v1.AccountGrantDeleteResponse\"\036\202"
+          + "\323\344\223\002\030*\026/v1/accountGrants/{id}\022\\\n\004List\022\033."
+          + "v1.AccountGrantListRequest\032\034.v1.AccountG"
+          + "rantListResponse\"\031\202\323\344\223\002\023\022\021/v1/accountGra"
+          + "nts\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantB5\n\034com.stron"
+          + "gdm.api.v1.plumbingB\025AccountGrantsPlumbi"
+          + "ngb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -10866,6 +11504,7 @@ public final class AccountGrantsPlumbing {
             new com.google.protobuf.Descriptors.FileDescriptor[] {
               com.google.api.AnnotationsProto.getDescriptor(),
               grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+              com.google.protobuf.TimestampProto.getDescriptor(),
               com.strongdm.api.v1.plumbing.Options.getDescriptor(),
               com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
             });
@@ -10937,7 +11576,7 @@ public final class AccountGrantsPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_AccountGrant_descriptor,
             new java.lang.String[] {
-              "Id", "ResourceId", "AccountId",
+              "Id", "ResourceId", "AccountId", "StartFrom", "ValidUntil",
             });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -10951,6 +11590,7 @@ public final class AccountGrantsPlumbing {
         descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
   }
