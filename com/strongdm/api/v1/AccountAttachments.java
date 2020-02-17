@@ -1,0 +1,164 @@
+package com.strongdm.api.v1;
+
+import com.strongdm.api.v1.plumbing.AccountAttachmentsGrpc;
+import com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing;
+import com.strongdm.api.v1.plumbing.PageIterator;
+import com.strongdm.api.v1.plumbing.PageResult;
+import com.strongdm.api.v1.plumbing.Plumbing;
+import com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata;
+import io.grpc.ManagedChannel;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Supplier;
+
+// AccountAttachments represent relationships between an account and a role.
+public class AccountAttachments {
+  private final AccountAttachmentsGrpc.AccountAttachmentsBlockingStub stub;
+  private final Client parent;
+
+  public AccountAttachments(ManagedChannel channel, Client client) {
+
+    this.stub = AccountAttachmentsGrpc.newBlockingStub(channel);
+    this.parent = client;
+  }
+
+  private AccountAttachments(
+      AccountAttachmentsGrpc.AccountAttachmentsBlockingStub stub, Client client) {
+    this.stub = stub;
+    this.parent = client;
+  }
+
+  // This function returns a copy of the AccountAttachments service which has
+  // the given deadline set for all method calls.
+  public AccountAttachments withDeadlineAfter(long duration, TimeUnit units) {
+    return new AccountAttachments(this.stub.withDeadlineAfter(duration, units), this.parent);
+  }
+  // Create registers a new AccountAttachment.
+  public AccountAttachmentCreateResponse create(
+      AccountAttachment accountAttachment, AccountAttachmentCreateOptions... options)
+      throws RpcException {
+    AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.Builder builder =
+        AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.newBuilder();
+    builder.setAccountAttachment(Plumbing.accountAttachmentToPlumbing(accountAttachment));
+    if (options.length > 1) {
+      throw new BadRequestException("use only one AccountAttachmentCreateOptions per create call");
+    } else if (options.length == 1) {
+      builder.setOptions(Plumbing.accountAttachmentCreateOptionsToPlumbing(options[0]));
+    }
+    AccountAttachmentsPlumbing.AccountAttachmentCreateRequest req = builder.build();
+    AccountAttachmentsPlumbing.AccountAttachmentCreateResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(
+                    this.parent.getCallCredentials("AccountAttachments.Create", req))
+                .create(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.accountAttachmentCreateResponseToPorcelain(plumbingResponse);
+  }
+  // Get reads one AccountAttachment by ID.
+  public AccountAttachmentGetResponse get(String id) throws RpcException {
+    AccountAttachmentsPlumbing.AccountAttachmentGetRequest.Builder builder =
+        AccountAttachmentsPlumbing.AccountAttachmentGetRequest.newBuilder();
+    builder.setId(id);
+    AccountAttachmentsPlumbing.AccountAttachmentGetRequest req = builder.build();
+    AccountAttachmentsPlumbing.AccountAttachmentGetResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("AccountAttachments.Get", req))
+                .get(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.accountAttachmentGetResponseToPorcelain(plumbingResponse);
+  }
+  // Delete removes a AccountAttachment by ID.
+  public AccountAttachmentDeleteResponse delete(String id) throws RpcException {
+    AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest.Builder builder =
+        AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest.newBuilder();
+    builder.setId(id);
+    AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest req = builder.build();
+    AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(
+                    this.parent.getCallCredentials("AccountAttachments.Delete", req))
+                .delete(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.exceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.accountAttachmentDeleteResponseToPorcelain(plumbingResponse);
+  }
+  // List gets a list of AccountAttachments matching a given set of criteria.
+  public Iterable<AccountAttachment> list(String filter, Object... args) throws RpcException {
+    AccountAttachmentsPlumbing.AccountAttachmentListRequest.Builder builder =
+        AccountAttachmentsPlumbing.AccountAttachmentListRequest.newBuilder();
+    builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
+    ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
+    Object pageSizeOption = this.parent.testOptions.get("PageSize");
+    if (pageSizeOption instanceof Integer) {
+      metaBuilder.setLimit((int) pageSizeOption);
+    }
+    builder.setMeta(metaBuilder);
+
+    Supplier<PageResult<AccountAttachment>> pageFetcher =
+        () -> {
+          // Note: this closure captures and reuses the builder to set the next page
+
+          AccountAttachmentsPlumbing.AccountAttachmentListRequest req = builder.build();
+          AccountAttachmentsPlumbing.AccountAttachmentListResponse plumbingResponse;
+          plumbingResponse =
+              this.stub
+                  .withCallCredentials(
+                      this.parent.getCallCredentials("AccountAttachments.List", req))
+                  .list(req);
+
+          List<AccountAttachment> page =
+              Plumbing.repeatedAccountAttachmentToPorcelain(
+                  plumbingResponse.getAccountAttachmentsList());
+
+          boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
+          builder.setMeta(
+              ListRequestMetadata.newBuilder()
+                  .setCursor(plumbingResponse.getMeta().getNextCursor()));
+
+          return new PageResult<AccountAttachment>(page, hasNextCursor);
+        };
+
+    Iterator<AccountAttachment> iterator = new PageIterator<>(pageFetcher);
+
+    return () -> iterator;
+  }
+}

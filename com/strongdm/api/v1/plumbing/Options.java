@@ -1107,6 +1107,33 @@ public final class Options {
      * @return The error.
      */
     int getError();
+
+    /**
+     *
+     *
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     *
+     * @return The optionsField.
+     */
+    java.lang.String getOptionsField();
+    /**
+     *
+     *
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     *
+     * @return The bytes for optionsField.
+     */
+    com.google.protobuf.ByteString getOptionsFieldBytes();
   }
   /** Protobuf type {@code v1.MessageOptions} */
   public static final class MessageOptions extends com.google.protobuf.GeneratedMessageV3
@@ -1121,6 +1148,7 @@ public final class Options {
 
     private MessageOptions() {
       modelName_ = "";
+      optionsField_ = "";
     }
 
     @java.lang.Override
@@ -1167,6 +1195,13 @@ public final class Options {
             case 15530416:
               {
                 error_ = input.readInt32();
+                break;
+              }
+            case 15530426:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                optionsField_ = s;
                 break;
               }
             default:
@@ -1265,6 +1300,55 @@ public final class Options {
       return error_;
     }
 
+    public static final int OPTIONS_FIELD_FIELD_NUMBER = 1941303;
+    private volatile java.lang.Object optionsField_;
+    /**
+     *
+     *
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     *
+     * @return The optionsField.
+     */
+    public java.lang.String getOptionsField() {
+      java.lang.Object ref = optionsField_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        optionsField_ = s;
+        return s;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     *
+     * @return The bytes for optionsField.
+     */
+    public com.google.protobuf.ByteString getOptionsFieldBytes() {
+      java.lang.Object ref = optionsField_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        optionsField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -1288,6 +1372,9 @@ public final class Options {
       if (error_ != 0) {
         output.writeInt32(1941302, error_);
       }
+      if (!getOptionsFieldBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941303, optionsField_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1305,6 +1392,9 @@ public final class Options {
       }
       if (error_ != 0) {
         size += com.google.protobuf.CodedOutputStream.computeInt32Size(1941302, error_);
+      }
+      if (!getOptionsFieldBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941303, optionsField_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1325,6 +1415,7 @@ public final class Options {
       if (!getModelName().equals(other.getModelName())) return false;
       if (getPorcelain() != other.getPorcelain()) return false;
       if (getError() != other.getError()) return false;
+      if (!getOptionsField().equals(other.getOptionsField())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1342,6 +1433,8 @@ public final class Options {
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getPorcelain());
       hash = (37 * hash) + ERROR_FIELD_NUMBER;
       hash = (53 * hash) + getError();
+      hash = (37 * hash) + OPTIONS_FIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getOptionsField().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1487,6 +1580,8 @@ public final class Options {
 
         error_ = 0;
 
+        optionsField_ = "";
+
         return this;
       }
 
@@ -1516,6 +1611,7 @@ public final class Options {
         result.modelName_ = modelName_;
         result.porcelain_ = porcelain_;
         result.error_ = error_;
+        result.optionsField_ = optionsField_;
         onBuilt();
         return result;
       }
@@ -1577,6 +1673,10 @@ public final class Options {
         }
         if (other.getError() != 0) {
           setError(other.getError());
+        }
+        if (!other.getOptionsField().isEmpty()) {
+          optionsField_ = other.optionsField_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1764,6 +1864,117 @@ public final class Options {
       public Builder clearError() {
 
         error_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object optionsField_ = "";
+      /**
+       *
+       *
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       *
+       * @return The optionsField.
+       */
+      public java.lang.String getOptionsField() {
+        java.lang.Object ref = optionsField_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          optionsField_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       *
+       * @return The bytes for optionsField.
+       */
+      public com.google.protobuf.ByteString getOptionsFieldBytes() {
+        java.lang.Object ref = optionsField_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          optionsField_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       *
+       * @param value The optionsField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptionsField(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        optionsField_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearOptionsField() {
+
+        optionsField_ = getDefaultInstance().getOptionsField();
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       *
+       * @param value The bytes for optionsField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptionsFieldBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        optionsField_ = value;
         onChanged();
         return this;
       }
@@ -3044,19 +3255,20 @@ public final class Options {
           + "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose"
           + "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001("
           + "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t"
-          + "\"L\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t"
-          + "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\"$"
-          + "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016"
-          + "ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rf"
-          + "ield_options\022\035.google.protobuf.FieldOpti"
-          + "ons\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message"
-          + "_options\022\037.google.protobuf.MessageOption"
-          + "s\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_o"
-          + "ptions\022\035.google.protobuf.OneofOptions\030\205\277"
-          + "v \001(\0132\020.v1.OneofOptions:N\n\017service_optio"
-          + "ns\022\037.google.protobuf.ServiceOptions\030\231\277v "
-          + "\001(\0132\022.v1.ServiceOptionsB\036\n\034com.strongdm."
-          + "api.v1.plumbingb\006proto3"
+          + "\"e\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t"
+          + "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027"
+          + "\n\roptions_field\030\267\276v \001(\t\"$\n\014OneofOptions\022"
+          + "\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016ServiceOptions\022"
+          + "\023\n\tmain_noun\030\230\277v \001(\t:H\n\rfield_options\022\035."
+          + "google.protobuf.FieldOptions\030\216\277v \001(\0132\020.v"
+          + "1.FieldOptions:N\n\017message_options\022\037.goog"
+          + "le.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1."
+          + "MessageOptions:H\n\roneof_options\022\035.google"
+          + ".protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.Oneo"
+          + "fOptions:N\n\017service_options\022\037.google.pro"
+          + "tobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Servic"
+          + "eOptionsB\036\n\034com.strongdm.api.v1.plumbing"
+          + "b\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -3076,7 +3288,7 @@ public final class Options {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_MessageOptions_descriptor,
             new java.lang.String[] {
-              "ModelName", "Porcelain", "Error",
+              "ModelName", "Porcelain", "Error", "OptionsField",
             });
     internal_static_v1_OneofOptions_descriptor = getDescriptor().getMessageTypes().get(2);
     internal_static_v1_OneofOptions_fieldAccessorTable =

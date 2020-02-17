@@ -27,6 +27,13 @@ public class Client {
   private int maxRetries;
   private int baseRetryDelay;
   private int maxRetryDelay;
+  private final AccountAttachments accountAttachments;
+
+  // AccountAttachments represent relationships between an account and a role.
+  public AccountAttachments accountAttachments() {
+    return this.accountAttachments;
+  }
+
   private final AccountGrants accountGrants;
 
   // AccountGrants represent relationships between composite roles and the roles
@@ -69,6 +76,16 @@ public class Client {
     return this.roleAttachments;
   }
 
+  private final RoleGrants roleGrants;
+
+  // RoleGrants represent relationships between composite roles and the roles
+  // that make up those composite roles. When a composite role is attached to another
+  // role, the permissions granted to members of the composite role are augmented to
+  // include the permissions granted to members of the attached role.
+  public RoleGrants roleGrants() {
+    return this.roleGrants;
+  }
+
   private final Roles roles;
 
   // Roles are tools for controlling user access to resources. Each Role holds a
@@ -95,11 +112,13 @@ public class Client {
         builder = builder.usePlaintext();
       }
       this.channel = builder.build();
+      this.accountAttachments = new AccountAttachments(this.channel, this);
       this.accountGrants = new AccountGrants(this.channel, this);
       this.accounts = new Accounts(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
       this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);
+      this.roleGrants = new RoleGrants(this.channel, this);
       this.roles = new Roles(this.channel, this);
     } catch (Exception e) {
       throw Plumbing.exceptionToPorcelain(e);
