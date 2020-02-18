@@ -9656,7 +9656,7 @@ public final class RoleGrantsPlumbing {
    *
    * <pre>
    * A RoleGrant connects a resource to a role, granting members of the role
-   * access to it.
+   * access to the resource.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrant}
@@ -10086,7 +10086,7 @@ public final class RoleGrantsPlumbing {
      *
      * <pre>
      * A RoleGrant connects a resource to a role, granting members of the role
-     * access to it.
+     * access to the resource.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrant}
@@ -10704,29 +10704,32 @@ public final class RoleGrantsPlumbing {
           + ".ListResponseMetadata\022.\n\013role_grants\030\002 \003"
           + "(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_li"
           + "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260"
-          + "\363\263\007\001\"\344\002\n\tRoleGrant\0220\n\002id\030\001 \001(\tB$\362\370\263\007\037\242\363\263"
+          + "\363\263\007\001\"\274\003\n\tRoleGrant\0220\n\002id\030\001 \001(\tB$\362\370\263\007\037\242\363\263"
           + "\007\002ID\260\363\263\007\001\312\363\263\007\016RolePermission\022D\n\013resource"
           + "_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014DatasourceID\260\363\263\007\001\300\363"
           + "\263\007\001\312\363\263\007\nDatasource\0224\n\007role_id\030\003 \001(\tB#\362\370\263"
-          + "\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:\250\001\372\370\263\007\030"
-          + "\242\363\263\007\016RolePermission\250\363\263\007\001\222A\207\001*D\n\014A RoleGr"
-          + "ant.\0224https://www.strongdm.com/docs/api/"
-          + "entities#RoleGrant2?\022={ \"id\": \"ug-244\", "
-          + "\"resource_id\": \"rs-111\", \"role_id\":\"r-44"
-          + "4\"}2\356\003\n\nRoleGrants\022\276\001\n\006Create\022\032.v1.RoleG"
-          + "rantCreateRequest\032\033.v1.RoleGrantCreateRe"
-          + "sponse\"{\202\323\344\223\002\023\"\016/v1/roleGrants:\001*\222A_\"]\n\035"
-          + "Learn how to make a RoleGrant\022<https://w"
-          + "ww.strongdm.com/docs/api/services/RoleGr"
-          + "ants#Create\022U\n\003Get\022\027.v1.RoleGrantGetRequ"
-          + "est\032\030.v1.RoleGrantGetResponse\"\033\202\323\344\223\002\025\022\023/"
-          + "v1/roleGrants/{id}\022^\n\006Delete\022\032.v1.RoleGr"
-          + "antDeleteRequest\032\033.v1.RoleGrantDeleteRes"
-          + "ponse\"\033\202\323\344\223\002\025*\023/v1/roleGrants/{id}\022S\n\004Li"
-          + "st\022\030.v1.RoleGrantListRequest\032\031.v1.RoleGr"
-          + "antListResponse\"\026\202\323\344\223\002\020\022\016/v1/roleGrants\032"
-          + "\023\312\371\263\007\016\302\371\263\007\tRoleGrantB2\n\034com.strongdm.api"
-          + ".v1.plumbingB\022RoleGrantsPlumbingb\006proto3"
+          + "\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:\200\002\372\370\263\007p"
+          + "\242\363\263\007\016RolePermission\250\363\263\007\001\302\363\263\007S\242\363\263\007#tf_exa"
+          + "mples/role_grant_resource.txt\252\363\263\007&tf_exa"
+          + "mples/role_grant_data_source.txt\222A\207\001*D\n\014"
+          + "A RoleGrant.\0224https://www.strongdm.com/d"
+          + "ocs/api/entities#RoleGrant2?\022={ \"id\": \"u"
+          + "g-244\", \"resource_id\": \"rs-111\", \"role_i"
+          + "d\":\"r-444\"}2\356\003\n\nRoleGrants\022\276\001\n\006Create\022\032."
+          + "v1.RoleGrantCreateRequest\032\033.v1.RoleGrant"
+          + "CreateResponse\"{\202\323\344\223\002\023\"\016/v1/roleGrants:\001"
+          + "*\222A_\"]\n\035Learn how to make a RoleGrant\022<h"
+          + "ttps://www.strongdm.com/docs/api/service"
+          + "s/RoleGrants#Create\022U\n\003Get\022\027.v1.RoleGran"
+          + "tGetRequest\032\030.v1.RoleGrantGetResponse\"\033\202"
+          + "\323\344\223\002\025\022\023/v1/roleGrants/{id}\022^\n\006Delete\022\032.v"
+          + "1.RoleGrantDeleteRequest\032\033.v1.RoleGrantD"
+          + "eleteResponse\"\033\202\323\344\223\002\025*\023/v1/roleGrants/{i"
+          + "d}\022S\n\004List\022\030.v1.RoleGrantListRequest\032\031.v"
+          + "1.RoleGrantListResponse\"\026\202\323\344\223\002\020\022\016/v1/rol"
+          + "eGrants\032\023\312\371\263\007\016\302\371\263\007\tRoleGrantB2\n\034com.stro"
+          + "ngdm.api.v1.plumbingB\022RoleGrantsPlumbing"
+          + "b\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

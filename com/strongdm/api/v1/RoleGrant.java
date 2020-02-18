@@ -1,7 +1,7 @@
 package com.strongdm.api.v1;
 
 // A RoleGrant connects a resource to a role, granting members of the role
-// access to it.
+// access to the resource.
 public class RoleGrant {
   private String id;
   // Unique identifier of the RoleGrant.

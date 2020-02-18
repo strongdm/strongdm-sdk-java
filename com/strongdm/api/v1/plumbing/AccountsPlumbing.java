@@ -12469,7 +12469,7 @@ public final class AccountsPlumbing {
    *
    *
    * <pre>
-   * An Account is one of many types of users or tokens that can use StrongDM.
+   * An Account is one of many types of users or tokens that can access StrongDM.
    * </pre>
    *
    * Protobuf type {@code v1.Account}
@@ -12885,7 +12885,7 @@ public final class AccountsPlumbing {
      *
      *
      * <pre>
-     * An Account is one of many types of users or tokens that can use StrongDM.
+     * An Account is one of many types of users or tokens that can access StrongDM.
      * </pre>
      *
      * Protobuf type {@code v1.Account}
@@ -15616,35 +15616,37 @@ public final class AccountsPlumbing {
           + "tResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRespons"
           + "eMetadata\022)\n\010accounts\030\002 \003(\0132\013.v1.Account"
           + "B\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Ra"
-          + "teLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\260\001\n\007Account\022"
+          + "teLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\210\002\n\007Account\022"
           + "\030\n\004user\030\001 \001(\0132\010.v1.UserH\000\022\036\n\007service\030\002 \001"
-          + "(\0132\013.v1.ServiceH\000:P\372\370\263\007\005\250\363\263\007\001\222AC*A\n\013An a"
-          + "ccount.\0222https://www.strongdm.com/docs/a"
-          + "pi/entities#AccountB\031\n\007account\022\016\252\370\263\007\t\242\370\263"
-          + "\007\004User\"\321\001\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002I"
-          + "D\260\363\263\007\001\312\363\263\007\004User\022(\n\005email\030\002 \001(\tB\031\362\370\263\007\024\242\363\263"
-          + "\007\005Email\260\363\263\007\001\300\363\263\007\001\0221\n\nfirst_name\030\003 \001(\tB\035\362"
-          + "\370\263\007\030\242\363\263\007\tFirstName\260\363\263\007\001\300\363\263\007\001\022/\n\tlast_nam"
-          + "e\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001:\023\372"
-          + "\370\263\007\016\242\363\263\007\004User\250\363\263\007\001\"r\n\007Service\022&\n\002id\030\001 \001("
-          + "\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n\004name\030\002 "
-          + "\001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001:\023\372\370\263\007\016"
-          + "\242\363\263\007\004User\250\363\263\007\0012\253\004\n\010Accounts\022\264\001\n\006Create\022\030"
-          + ".v1.AccountCreateRequest\032\031.v1.AccountCre"
-          + "ateResponse\"u\202\323\344\223\002\021\"\014/v1/accounts:\001*\222A[\""
-          + "Y\n\033Learn how to make a Account\022:https://"
-          + "www.strongdm.com/docs/api/services/Accou"
-          + "nts#Create\022O\n\003Get\022\025.v1.AccountGetRequest"
-          + "\032\026.v1.AccountGetResponse\"\031\202\323\344\223\002\023\022\021/v1/ac"
-          + "counts/{id}\022[\n\006Update\022\030.v1.AccountUpdate"
-          + "Request\032\031.v1.AccountUpdateResponse\"\034\202\323\344\223"
-          + "\002\026\032\021/v1/accounts/{id}:\001*\022X\n\006Delete\022\030.v1."
-          + "AccountDeleteRequest\032\031.v1.AccountDeleteR"
-          + "esponse\"\031\202\323\344\223\002\023*\021/v1/accounts/{id}\022M\n\004Li"
-          + "st\022\026.v1.AccountListRequest\032\027.v1.AccountL"
-          + "istResponse\"\024\202\323\344\223\002\016\022\014/v1/accounts\032\021\312\371\263\007\014"
-          + "\302\371\263\007\007AccountB0\n\034com.strongdm.api.v1.plum"
-          + "bingB\020AccountsPlumbingb\006proto3"
+          + "(\0132\013.v1.ServiceH\000:\247\001\372\370\263\007\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M"
+          + "\242\363\263\007 tf_examples/account_resource.txt\252\363\263"
+          + "\007#tf_examples/account_data_source.txt\222AC"
+          + "*A\n\013An account.\0222https://www.strongdm.co"
+          + "m/docs/api/entities#AccountB\031\n\007account\022\016"
+          + "\252\370\263\007\t\242\370\263\007\004User\"\321\001\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263"
+          + "\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022(\n\005email\030\002 \001(\tB\031"
+          + "\362\370\263\007\024\242\363\263\007\005Email\260\363\263\007\001\300\363\263\007\001\0221\n\nfirst_name\030"
+          + "\003 \001(\tB\035\362\370\263\007\030\242\363\263\007\tFirstName\260\363\263\007\001\300\363\263\007\001\022/\n\t"
+          + "last_name\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001"
+          + "\300\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\001\"r\n\007Service\022&\n"
+          + "\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n"
+          + "\004name\030\002 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007"
+          + "\001:\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\0012\253\004\n\010Accounts\022\264\001\n\006"
+          + "Create\022\030.v1.AccountCreateRequest\032\031.v1.Ac"
+          + "countCreateResponse\"u\202\323\344\223\002\021\"\014/v1/account"
+          + "s:\001*\222A[\"Y\n\033Learn how to make a Account\022:"
+          + "https://www.strongdm.com/docs/api/servic"
+          + "es/Accounts#Create\022O\n\003Get\022\025.v1.AccountGe"
+          + "tRequest\032\026.v1.AccountGetResponse\"\031\202\323\344\223\002\023"
+          + "\022\021/v1/accounts/{id}\022[\n\006Update\022\030.v1.Accou"
+          + "ntUpdateRequest\032\031.v1.AccountUpdateRespon"
+          + "se\"\034\202\323\344\223\002\026\032\021/v1/accounts/{id}:\001*\022X\n\006Dele"
+          + "te\022\030.v1.AccountDeleteRequest\032\031.v1.Accoun"
+          + "tDeleteResponse\"\031\202\323\344\223\002\023*\021/v1/accounts/{i"
+          + "d}\022M\n\004List\022\026.v1.AccountListRequest\032\027.v1."
+          + "AccountListResponse\"\024\202\323\344\223\002\016\022\014/v1/account"
+          + "s\032\021\312\371\263\007\014\302\371\263\007\007AccountB0\n\034com.strongdm.api"
+          + ".v1.plumbingB\020AccountsPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

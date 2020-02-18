@@ -3,22 +3,22 @@ package com.strongdm.api.v1;
 // Gateway represents a StrongDM CLI installation running in gateway mode.
 public class Gateway implements Node {
   private String id;
-  // Unique identifier of the Relay.
+  // Unique identifier of the Gateway.
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the Relay.
+  // Unique identifier of the Gateway.
   public Gateway setId(String in) {
     this.id = in;
     return this;
   }
 
   private String name;
-  // Unique human-readable name of the Relay.
+  // Unique human-readable name of the Gateway.
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Relay.
+  // Unique human-readable name of the Gateway.
   public Gateway setName(String in) {
     this.name = in;
     return this;
@@ -26,12 +26,12 @@ public class Gateway implements Node {
 
   private String state;
   // The current state of the gateway. One of: "new", "verifying_restart",
-  // "restarting", "started", "stopped", "dead", "unknown",
+  // "restarting", "started", "stopped", "dead", "unknown"
   public String getState() {
     return this.state;
   }
   // The current state of the gateway. One of: "new", "verifying_restart",
-  // "restarting", "started", "stopped", "dead", "unknown",
+  // "restarting", "started", "stopped", "dead", "unknown"
   public Gateway setState(String in) {
     this.state = in;
     return this;

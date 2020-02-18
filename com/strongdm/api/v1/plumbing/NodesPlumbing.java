@@ -14416,7 +14416,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique identifier of the Relay.
+     * Unique identifier of the Gateway.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -14428,7 +14428,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique identifier of the Relay.
+     * Unique identifier of the Gateway.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -14441,7 +14441,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Gateway.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14453,7 +14453,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Gateway.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14467,7 +14467,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The current state of the gateway. One of: "new", "verifying_restart",
-     * "restarting", "started", "stopped", "dead", "unknown",
+     * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
@@ -14481,7 +14481,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The current state of the gateway. One of: "new", "verifying_restart",
-     * "restarting", "started", "stopped", "dead", "unknown",
+     * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
@@ -14671,7 +14671,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique identifier of the Relay.
+     * Unique identifier of the Gateway.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -14693,7 +14693,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique identifier of the Relay.
+     * Unique identifier of the Gateway.
      * </pre>
      *
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -14718,7 +14718,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Gateway.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14740,7 +14740,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Gateway.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14766,7 +14766,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The current state of the gateway. One of: "new", "verifying_restart",
-     * "restarting", "started", "stopped", "dead", "unknown",
+     * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
@@ -14790,7 +14790,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The current state of the gateway. One of: "new", "verifying_restart",
-     * "restarting", "started", "stopped", "dead", "unknown",
+     * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }
@@ -15293,7 +15293,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique identifier of the Relay.
+       * Unique identifier of the Gateway.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -15315,7 +15315,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique identifier of the Relay.
+       * Unique identifier of the Gateway.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -15337,7 +15337,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique identifier of the Relay.
+       * Unique identifier of the Gateway.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -15358,7 +15358,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique identifier of the Relay.
+       * Unique identifier of the Gateway.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -15375,7 +15375,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique identifier of the Relay.
+       * Unique identifier of the Gateway.
        * </pre>
        *
        * <code>string id = 1 [(.v1.field_options) = { ... }</code>
@@ -15399,7 +15399,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Gateway.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15421,7 +15421,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Gateway.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15443,7 +15443,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Gateway.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15464,7 +15464,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Gateway.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15481,7 +15481,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Gateway.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15506,7 +15506,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The current state of the gateway. One of: "new", "verifying_restart",
-       * "restarting", "started", "stopped", "dead", "unknown",
+       * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
        * <code>
@@ -15531,7 +15531,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The current state of the gateway. One of: "new", "verifying_restart",
-       * "restarting", "started", "stopped", "dead", "unknown",
+       * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
        * <code>
@@ -15556,7 +15556,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The current state of the gateway. One of: "new", "verifying_restart",
-       * "restarting", "started", "stopped", "dead", "unknown",
+       * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
        * <code>
@@ -15580,7 +15580,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The current state of the gateway. One of: "new", "verifying_restart",
-       * "restarting", "started", "stopped", "dead", "unknown",
+       * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
        * <code>
@@ -15600,7 +15600,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The current state of the gateway. One of: "new", "verifying_restart",
-       * "restarting", "started", "stopped", "dead", "unknown",
+       * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
        * <code>
@@ -15981,37 +15981,39 @@ public final class NodesPlumbing {
           + "\260\363\263\007\001\"\226\001\n\020NodeListResponse\022&\n\004meta\030\001 \001(\013"
           + "2\030.v1.ListResponseMetadata\022#\n\005nodes\030\002 \003("
           + "\0132\010.v1.NodeB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 "
-          + "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\313"
-          + "\001\n\004Node\022\032\n\005relay\030\001 \001(\0132\t.v1.RelayH\000\022\036\n\007g"
-          + "ateway\030\002 \001(\0132\013.v1.GatewayH\000:o\372\370\263\007\005\250\363\263\007\001\222"
-          + "Ab*:\n\007A node.\022/https://www.strongdm.com/"
-          + "docs/api/entities#Node2$\022\"{ \"id\": \"7\", \""
-          + "name\": \"happy-goat\"}B\026\n\004node\022\016\252\370\263\007\t\242\370\263\007\004"
-          + "Node\"\221\001\n\005Relay\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID"
-          + "\260\363\263\007\001\312\363\263\007\004Node\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004"
-          + "Name\260\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005Stat"
-          + "e\260\363\263\007\001\222A\002@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\377\001\n\007Gat"
-          + "eway\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004"
-          + "Node\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007\001\022"
-          + "(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002@"
-          + "\001\0226\n\016listen_address\030\004 \001(\tB\036\362\370\263\007\031\242\363\263\007\nLis"
-          + "tenAddr\250\363\263\007\001\260\363\263\007\001\0222\n\014bind_address\030\005 \001(\tB"
-          + "\034\362\370\263\007\027\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007"
-          + "\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Create\022\025.v1.Nod"
-          + "eCreateRequest\032\026.v1.NodeCreateResponse\"l"
-          + "\202\323\344\223\002\016\"\t/v1/nodes:\001*\222AU\"S\n\030Learn how to "
-          + "make a Node\0227https://www.strongdm.com/do"
-          + "cs/api/services/Nodes#Create\022F\n\003Get\022\022.v1"
-          + ".NodeGetRequest\032\023.v1.NodeGetResponse\"\026\202\323"
-          + "\344\223\002\020\022\016/v1/nodes/{id}\022R\n\006Update\022\025.v1.Node"
-          + "UpdateRequest\032\026.v1.NodeUpdateResponse\"\031\202"
-          + "\323\344\223\002\023\032\016/v1/nodes/{id}:\001*\022O\n\006Delete\022\025.v1."
-          + "NodeDeleteRequest\032\026.v1.NodeDeleteRespons"
-          + "e\"\026\202\323\344\223\002\020*\016/v1/nodes/{id}\022D\n\004List\022\023.v1.N"
-          + "odeListRequest\032\024.v1.NodeListResponse\"\021\202\323"
-          + "\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004NodeB-\n\034com.s"
-          + "trongdm.api.v1.plumbingB\rNodesPlumbingb\006"
-          + "proto3"
+          + "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\235"
+          + "\002\n\004Node\022\032\n\005relay\030\001 \001(\0132\t.v1.RelayH\000\022\036\n\007g"
+          + "ateway\030\002 \001(\0132\013.v1.GatewayH\000:\300\001\372\370\263\007L\302\363\263\007G"
+          + "\242\363\263\007\035tf_examples/node_resource.txt\252\363\263\007 t"
+          + "f_examples/node_data_source.txt\372\370\263\007\005\250\363\263\007"
+          + "\001\222Ab*:\n\007A node.\022/https://www.strongdm.co"
+          + "m/docs/api/entities#Node2$\022\"{ \"id\": \"7\","
+          + " \"name\": \"happy-goat\"}B\026\n\004node\022\016\252\370\263\007\t\242\370\263"
+          + "\007\004Node\"\221\001\n\005Relay\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002"
+          + "ID\260\363\263\007\001\312\363\263\007\004Node\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263"
+          + "\007\004Name\260\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005St"
+          + "ate\260\363\263\007\001\222A\002@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\211\002\n\007G"
+          + "ateway\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263"
+          + "\007\004Node\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007"
+          + "\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A"
+          + "\002@\001\022;\n\016listen_address\030\004 \001(\tB#\362\370\263\007\036\242\363\263\007\nL"
+          + "istenAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007\001\0227\n\014bind_address"
+          + "\030\005 \001(\tB!\362\370\263\007\034\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007"
+          + "\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Cre"
+          + "ate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCrea"
+          + "teResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001*\222AU\"S\n\030L"
+          + "earn how to make a Node\0227https://www.str"
+          + "ongdm.com/docs/api/services/Nodes#Create"
+          + "\022F\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeGet"
+          + "Response\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id}\022R\n\006Upda"
+          + "te\022\025.v1.NodeUpdateRequest\032\026.v1.NodeUpdat"
+          + "eResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{id}:\001*\022O\n\006"
+          + "Delete\022\025.v1.NodeDeleteRequest\032\026.v1.NodeD"
+          + "eleteResponse\"\026\202\323\344\223\002\020*\016/v1/nodes/{id}\022D\n"
+          + "\004List\022\023.v1.NodeListRequest\032\024.v1.NodeList"
+          + "Response\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004N"
+          + "odeB-\n\034com.strongdm.api.v1.plumbingB\rNod"
+          + "esPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

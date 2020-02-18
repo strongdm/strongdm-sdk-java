@@ -11031,8 +11031,8 @@ public final class AccountAttachmentsPlumbing {
    *
    *
    * <pre>
-   * A AccountAttachment connects a composite role to another role, granting members
-   * of the composite role the permissions granted to the attached role.
+   * A AccountAttachment connects an account to a role, granting the account
+   * the permissions granted to that role.
    * </pre>
    *
    * Protobuf type {@code v1.AccountAttachment}
@@ -11469,8 +11469,8 @@ public final class AccountAttachmentsPlumbing {
      *
      *
      * <pre>
-     * A AccountAttachment connects a composite role to another role, granting members
-     * of the composite role the permissions granted to the attached role.
+     * A AccountAttachment connects an account to a role, granting the account
+     * the permissions granted to that role.
      * </pre>
      *
      * Protobuf type {@code v1.AccountAttachment}
@@ -12114,33 +12114,36 @@ public final class AccountAttachmentsPlumbing {
           + " \001(\0132\030.v1.ListResponseMetadata\022>\n\023accoun"
           + "t_attachments\030\002 \003(\0132\025.v1.AccountAttachme"
           + "ntB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1."
-          + "RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\341\002\n\021Accoun"
+          + "RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\311\003\n\021Accoun"
           + "tAttachment\022*\n\002id\030\001 \001(\tB\036\362\370\263\007\031\242\363\263\007\002ID\260\363\263"
           + "\007\001\312\363\263\007\010UserRole\0227\n\naccount_id\030\002 \001(\tB#\362\370\263"
           + "\007\036\242\363\263\007\006UserID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004User\0224\n\007role"
           + "_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263"
-          + "\007\004Role:\260\001\372\370\263\007\022\242\363\263\007\010UserRole\250\363\263\007\001\222A\225\001*T\n\024"
-          + "A AccountAttachment.\022<https://www.strong"
-          + "dm.com/docs/api/entities#AccountAttachme"
-          + "nt2=\022;{ \"id\": \"aa-244\", \"role_id\": \"r-11"
-          + "1\", \"account_id\":\"a-444\"}2\357\004\n\022AccountAtt"
-          + "achments\022\347\001\n\006Create\022\".v1.AccountAttachme"
-          + "ntCreateRequest\032#.v1.AccountAttachmentCr"
-          + "eateResponse\"\223\001\202\323\344\223\002\033\"\026/v1/accountAttach"
-          + "ments:\001*\222Ao\"m\n%Learn how to make a Accou"
-          + "ntAttachment\022Dhttps://www.strongdm.com/d"
-          + "ocs/api/services/AccountAttachments#Crea"
-          + "te\022m\n\003Get\022\037.v1.AccountAttachmentGetReque"
-          + "st\032 .v1.AccountAttachmentGetResponse\"#\202\323"
-          + "\344\223\002\035\022\033/v1/accountAttachments/{id}\022v\n\006Del"
-          + "ete\022\".v1.AccountAttachmentDeleteRequest\032"
-          + "#.v1.AccountAttachmentDeleteResponse\"#\202\323"
-          + "\344\223\002\035*\033/v1/accountAttachments/{id}\022k\n\004Lis"
-          + "t\022 .v1.AccountAttachmentListRequest\032!.v1"
-          + ".AccountAttachmentListResponse\"\036\202\323\344\223\002\030\022\026"
-          + "/v1/accountAttachments\032\033\312\371\263\007\026\302\371\263\007\021Accoun"
-          + "tAttachmentB:\n\034com.strongdm.api.v1.plumb"
-          + "ingB\032AccountAttachmentsPlumbingb\006proto3"
+          + "\007\004Role:\230\002\372\370\263\007z\242\363\263\007\010UserRole\250\363\263\007\001\302\363\263\007c\242\363\263"
+          + "\007+tf_examples/account_attachment_resourc"
+          + "e.txt\252\363\263\007.tf_examples/account_attachment"
+          + "_data_source.txt\222A\225\001*T\n\024A AccountAttachm"
+          + "ent.\022<https://www.strongdm.com/docs/api/"
+          + "entities#AccountAttachment2=\022;{ \"id\": \"a"
+          + "a-244\", \"role_id\": \"r-111\", \"account_id\""
+          + ":\"a-444\"}2\357\004\n\022AccountAttachments\022\347\001\n\006Cre"
+          + "ate\022\".v1.AccountAttachmentCreateRequest\032"
+          + "#.v1.AccountAttachmentCreateResponse\"\223\001\202"
+          + "\323\344\223\002\033\"\026/v1/accountAttachments:\001*\222Ao\"m\n%L"
+          + "earn how to make a AccountAttachment\022Dht"
+          + "tps://www.strongdm.com/docs/api/services"
+          + "/AccountAttachments#Create\022m\n\003Get\022\037.v1.A"
+          + "ccountAttachmentGetRequest\032 .v1.AccountA"
+          + "ttachmentGetResponse\"#\202\323\344\223\002\035\022\033/v1/accoun"
+          + "tAttachments/{id}\022v\n\006Delete\022\".v1.Account"
+          + "AttachmentDeleteRequest\032#.v1.AccountAtta"
+          + "chmentDeleteResponse\"#\202\323\344\223\002\035*\033/v1/accoun"
+          + "tAttachments/{id}\022k\n\004List\022 .v1.AccountAt"
+          + "tachmentListRequest\032!.v1.AccountAttachme"
+          + "ntListResponse\"\036\202\323\344\223\002\030\022\026/v1/accountAttac"
+          + "hments\032\033\312\371\263\007\026\302\371\263\007\021AccountAttachmentB:\n\034c"
+          + "om.strongdm.api.v1.plumbingB\032AccountAtta"
+          + "chmentsPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

@@ -1134,6 +1134,21 @@ public final class Options {
      * @return The bytes for optionsField.
      */
     com.google.protobuf.ByteString getOptionsFieldBytes();
+
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     *
+     * @return Whether the terraformDocs field is set.
+     */
+    boolean hasTerraformDocs();
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     *
+     * @return The terraformDocs.
+     */
+    com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs();
+    /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+    com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder();
   }
   /** Protobuf type {@code v1.MessageOptions} */
   public static final class MessageOptions extends com.google.protobuf.GeneratedMessageV3
@@ -1202,6 +1217,23 @@ public final class Options {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 optionsField_ = s;
+                break;
+              }
+            case 15530434:
+              {
+                com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder subBuilder = null;
+                if (terraformDocs_ != null) {
+                  subBuilder = terraformDocs_.toBuilder();
+                }
+                terraformDocs_ =
+                    input.readMessage(
+                        com.strongdm.api.v1.plumbing.Options.TerraformDocs.parser(),
+                        extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(terraformDocs_);
+                  terraformDocs_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
             default:
@@ -1349,6 +1381,31 @@ public final class Options {
       }
     }
 
+    public static final int TERRAFORM_DOCS_FIELD_NUMBER = 1941304;
+    private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     *
+     * @return Whether the terraformDocs field is set.
+     */
+    public boolean hasTerraformDocs() {
+      return terraformDocs_ != null;
+    }
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     *
+     * @return The terraformDocs.
+     */
+    public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
+      return terraformDocs_ == null
+          ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance()
+          : terraformDocs_;
+    }
+    /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+    public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
+      return getTerraformDocs();
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -1375,6 +1432,9 @@ public final class Options {
       if (!getOptionsFieldBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941303, optionsField_);
       }
+      if (terraformDocs_ != null) {
+        output.writeMessage(1941304, getTerraformDocs());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1396,6 +1456,10 @@ public final class Options {
       if (!getOptionsFieldBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941303, optionsField_);
       }
+      if (terraformDocs_ != null) {
+        size +=
+            com.google.protobuf.CodedOutputStream.computeMessageSize(1941304, getTerraformDocs());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1416,6 +1480,10 @@ public final class Options {
       if (getPorcelain() != other.getPorcelain()) return false;
       if (getError() != other.getError()) return false;
       if (!getOptionsField().equals(other.getOptionsField())) return false;
+      if (hasTerraformDocs() != other.hasTerraformDocs()) return false;
+      if (hasTerraformDocs()) {
+        if (!getTerraformDocs().equals(other.getTerraformDocs())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1435,6 +1503,10 @@ public final class Options {
       hash = (53 * hash) + getError();
       hash = (37 * hash) + OPTIONS_FIELD_FIELD_NUMBER;
       hash = (53 * hash) + getOptionsField().hashCode();
+      if (hasTerraformDocs()) {
+        hash = (37 * hash) + TERRAFORM_DOCS_FIELD_NUMBER;
+        hash = (53 * hash) + getTerraformDocs().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1582,6 +1654,12 @@ public final class Options {
 
         optionsField_ = "";
 
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = null;
+        } else {
+          terraformDocs_ = null;
+          terraformDocsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1612,6 +1690,11 @@ public final class Options {
         result.porcelain_ = porcelain_;
         result.error_ = error_;
         result.optionsField_ = optionsField_;
+        if (terraformDocsBuilder_ == null) {
+          result.terraformDocs_ = terraformDocs_;
+        } else {
+          result.terraformDocs_ = terraformDocsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1677,6 +1760,9 @@ public final class Options {
         if (!other.getOptionsField().isEmpty()) {
           optionsField_ = other.optionsField_;
           onChanged();
+        }
+        if (other.hasTerraformDocs()) {
+          mergeTerraformDocs(other.getTerraformDocs());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1979,6 +2065,125 @@ public final class Options {
         return this;
       }
 
+      private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs,
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder,
+              com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder>
+          terraformDocsBuilder_;
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       *
+       * @return Whether the terraformDocs field is set.
+       */
+      public boolean hasTerraformDocs() {
+        return terraformDocsBuilder_ != null || terraformDocs_ != null;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       *
+       * @return The terraformDocs.
+       */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
+        if (terraformDocsBuilder_ == null) {
+          return terraformDocs_ == null
+              ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance()
+              : terraformDocs_;
+        } else {
+          return terraformDocsBuilder_.getMessage();
+        }
+      }
+      /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+      public Builder setTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
+        if (terraformDocsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          terraformDocs_ = value;
+          onChanged();
+        } else {
+          terraformDocsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+      public Builder setTerraformDocs(
+          com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder builderForValue) {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = builderForValue.build();
+          onChanged();
+        } else {
+          terraformDocsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+      public Builder mergeTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
+        if (terraformDocsBuilder_ == null) {
+          if (terraformDocs_ != null) {
+            terraformDocs_ =
+                com.strongdm.api.v1.plumbing.Options.TerraformDocs.newBuilder(terraformDocs_)
+                    .mergeFrom(value)
+                    .buildPartial();
+          } else {
+            terraformDocs_ = value;
+          }
+          onChanged();
+        } else {
+          terraformDocsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+      public Builder clearTerraformDocs() {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = null;
+          onChanged();
+        } else {
+          terraformDocs_ = null;
+          terraformDocsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder getTerraformDocsBuilder() {
+
+        onChanged();
+        return getTerraformDocsFieldBuilder().getBuilder();
+      }
+      /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder
+          getTerraformDocsOrBuilder() {
+        if (terraformDocsBuilder_ != null) {
+          return terraformDocsBuilder_.getMessageOrBuilder();
+        } else {
+          return terraformDocs_ == null
+              ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance()
+              : terraformDocs_;
+        }
+      }
+      /** <code>.v1.TerraformDocs terraform_docs = 1941304;</code> */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs,
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder,
+              com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder>
+          getTerraformDocsFieldBuilder() {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocsBuilder_ =
+              new com.google.protobuf.SingleFieldBuilderV3<
+                  com.strongdm.api.v1.plumbing.Options.TerraformDocs,
+                  com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder,
+                  com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder>(
+                  getTerraformDocs(), getParentForChildren(), isClean());
+          terraformDocs_ = null;
+        }
+        return terraformDocsBuilder_;
+      }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2027,6 +2232,734 @@ public final class Options {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.Options.MessageOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+  }
+
+  public interface TerraformDocsOrBuilder
+      extends
+      // @@protoc_insertion_point(interface_extends:v1.TerraformDocs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string resource_example_path = 1941300;</code>
+     *
+     * @return The resourceExamplePath.
+     */
+    java.lang.String getResourceExamplePath();
+    /**
+     * <code>string resource_example_path = 1941300;</code>
+     *
+     * @return The bytes for resourceExamplePath.
+     */
+    com.google.protobuf.ByteString getResourceExamplePathBytes();
+
+    /**
+     * <code>string data_source_example_path = 1941301;</code>
+     *
+     * @return The dataSourceExamplePath.
+     */
+    java.lang.String getDataSourceExamplePath();
+    /**
+     * <code>string data_source_example_path = 1941301;</code>
+     *
+     * @return The bytes for dataSourceExamplePath.
+     */
+    com.google.protobuf.ByteString getDataSourceExamplePathBytes();
+  }
+  /** Protobuf type {@code v1.TerraformDocs} */
+  public static final class TerraformDocs extends com.google.protobuf.GeneratedMessageV3
+      implements
+      // @@protoc_insertion_point(message_implements:v1.TerraformDocs)
+      TerraformDocsOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use TerraformDocs.newBuilder() to construct.
+    private TerraformDocs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private TerraformDocs() {
+      resourceExamplePath_ = "";
+      dataSourceExamplePath_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
+      return new TerraformDocs();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+      return this.unknownFields;
+    }
+
+    private TerraformDocs(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 15530402:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                resourceExamplePath_ = s;
+                break;
+              }
+            case 15530410:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                dataSourceExamplePath_ = s;
+                break;
+              }
+            default:
+              {
+                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_TerraformDocs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.Options
+          .internal_static_v1_TerraformDocs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.class,
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder.class);
+    }
+
+    public static final int RESOURCE_EXAMPLE_PATH_FIELD_NUMBER = 1941300;
+    private volatile java.lang.Object resourceExamplePath_;
+    /**
+     * <code>string resource_example_path = 1941300;</code>
+     *
+     * @return The resourceExamplePath.
+     */
+    public java.lang.String getResourceExamplePath() {
+      java.lang.Object ref = resourceExamplePath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceExamplePath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resource_example_path = 1941300;</code>
+     *
+     * @return The bytes for resourceExamplePath.
+     */
+    public com.google.protobuf.ByteString getResourceExamplePathBytes() {
+      java.lang.Object ref = resourceExamplePath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        resourceExamplePath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_SOURCE_EXAMPLE_PATH_FIELD_NUMBER = 1941301;
+    private volatile java.lang.Object dataSourceExamplePath_;
+    /**
+     * <code>string data_source_example_path = 1941301;</code>
+     *
+     * @return The dataSourceExamplePath.
+     */
+    public java.lang.String getDataSourceExamplePath() {
+      java.lang.Object ref = dataSourceExamplePath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataSourceExamplePath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string data_source_example_path = 1941301;</code>
+     *
+     * @return The bytes for dataSourceExamplePath.
+     */
+    public com.google.protobuf.ByteString getDataSourceExamplePathBytes() {
+      java.lang.Object ref = dataSourceExamplePath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        dataSourceExamplePath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+      if (!getResourceExamplePathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941300, resourceExamplePath_);
+      }
+      if (!getDataSourceExamplePathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941301, dataSourceExamplePath_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getResourceExamplePathBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(1941300, resourceExamplePath_);
+      }
+      if (!getDataSourceExamplePathBytes().isEmpty()) {
+        size +=
+            com.google.protobuf.GeneratedMessageV3.computeStringSize(
+                1941301, dataSourceExamplePath_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.TerraformDocs)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.Options.TerraformDocs other =
+          (com.strongdm.api.v1.plumbing.Options.TerraformDocs) obj;
+
+      if (!getResourceExamplePath().equals(other.getResourceExamplePath())) return false;
+      if (!getDataSourceExamplePath().equals(other.getDataSourceExamplePath())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_EXAMPLE_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceExamplePath().hashCode();
+      hash = (37 * hash) + DATA_SOURCE_EXAMPLE_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getDataSourceExamplePath().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        java.nio.ByteBuffer data) throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        java.nio.ByteBuffer data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseDelimitedFrom(
+        java.io.InputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseDelimitedFrom(
+        java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseDelimitedWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(PARSER, input);
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3.parseWithIOException(
+          PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() {
+      return newBuilder();
+    }
+
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.TerraformDocs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /** Protobuf type {@code v1.TerraformDocs} */
+    public static final class Builder
+        extends com.google.protobuf.GeneratedMessageV3.Builder<Builder>
+        implements
+        // @@protoc_insertion_point(builder_implements:v1.TerraformDocs)
+        com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_TerraformDocs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.Options
+            .internal_static_v1_TerraformDocs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.Options.TerraformDocs.class,
+                com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.Options.TerraformDocs.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      }
+
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceExamplePath_ = "";
+
+        dataSourceExamplePath_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_TerraformDocs_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs build() {
+        com.strongdm.api.v1.plumbing.Options.TerraformDocs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.TerraformDocs result =
+            new com.strongdm.api.v1.plumbing.Options.TerraformDocs(this);
+        result.resourceExamplePath_ = resourceExamplePath_;
+        result.dataSourceExamplePath_ = dataSourceExamplePath_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.setField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder clearField(com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+
+      @java.lang.Override
+      public Builder clearOneof(com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index,
+          java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field, java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.TerraformDocs) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.TerraformDocs) other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.TerraformDocs other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance())
+          return this;
+        if (!other.getResourceExamplePath().isEmpty()) {
+          resourceExamplePath_ = other.resourceExamplePath_;
+          onChanged();
+        }
+        if (!other.getDataSourceExamplePath().isEmpty()) {
+          dataSourceExamplePath_ = other.dataSourceExamplePath_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.Options.TerraformDocs parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage =
+              (com.strongdm.api.v1.plumbing.Options.TerraformDocs) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceExamplePath_ = "";
+      /**
+       * <code>string resource_example_path = 1941300;</code>
+       *
+       * @return The resourceExamplePath.
+       */
+      public java.lang.String getResourceExamplePath() {
+        java.lang.Object ref = resourceExamplePath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceExamplePath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resource_example_path = 1941300;</code>
+       *
+       * @return The bytes for resourceExamplePath.
+       */
+      public com.google.protobuf.ByteString getResourceExamplePathBytes() {
+        java.lang.Object ref = resourceExamplePath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          resourceExamplePath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resource_example_path = 1941300;</code>
+       *
+       * @param value The resourceExamplePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceExamplePath(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        resourceExamplePath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_example_path = 1941300;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceExamplePath() {
+
+        resourceExamplePath_ = getDefaultInstance().getResourceExamplePath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_example_path = 1941300;</code>
+       *
+       * @param value The bytes for resourceExamplePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceExamplePathBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        resourceExamplePath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dataSourceExamplePath_ = "";
+      /**
+       * <code>string data_source_example_path = 1941301;</code>
+       *
+       * @return The dataSourceExamplePath.
+       */
+      public java.lang.String getDataSourceExamplePath() {
+        java.lang.Object ref = dataSourceExamplePath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataSourceExamplePath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string data_source_example_path = 1941301;</code>
+       *
+       * @return The bytes for dataSourceExamplePath.
+       */
+      public com.google.protobuf.ByteString getDataSourceExamplePathBytes() {
+        java.lang.Object ref = dataSourceExamplePath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+              com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+          dataSourceExamplePath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string data_source_example_path = 1941301;</code>
+       *
+       * @param value The dataSourceExamplePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceExamplePath(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        dataSourceExamplePath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_source_example_path = 1941301;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSourceExamplePath() {
+
+        dataSourceExamplePath_ = getDefaultInstance().getDataSourceExamplePath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string data_source_example_path = 1941301;</code>
+       *
+       * @param value The bytes for dataSourceExamplePath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSourceExamplePathBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        dataSourceExamplePath_ = value;
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+      // @@protoc_insertion_point(builder_scope:v1.TerraformDocs)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.TerraformDocs)
+    private static final com.strongdm.api.v1.plumbing.Options.TerraformDocs DEFAULT_INSTANCE;
+
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.TerraformDocs();
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.TerraformDocs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TerraformDocs> PARSER =
+        new com.google.protobuf.AbstractParser<TerraformDocs>() {
+          @java.lang.Override
+          public TerraformDocs parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new TerraformDocs(input, extensionRegistry);
+          }
+        };
+
+    public static com.google.protobuf.Parser<TerraformDocs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TerraformDocs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.TerraformDocs getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
   }
@@ -3234,6 +4167,10 @@ public final class Options {
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_MessageOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+      internal_static_v1_TerraformDocs_descriptor;
+  private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_TerraformDocs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
       internal_static_v1_OneofOptions_descriptor;
   private static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_OneofOptions_fieldAccessorTable;
@@ -3255,20 +4192,23 @@ public final class Options {
           + "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose"
           + "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001("
           + "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t"
-          + "\"e\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t"
-          + "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027"
-          + "\n\roptions_field\030\267\276v \001(\t\"$\n\014OneofOptions\022"
-          + "\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016ServiceOptions\022"
-          + "\023\n\tmain_noun\030\230\277v \001(\t:H\n\rfield_options\022\035."
-          + "google.protobuf.FieldOptions\030\216\277v \001(\0132\020.v"
-          + "1.FieldOptions:N\n\017message_options\022\037.goog"
-          + "le.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1."
-          + "MessageOptions:H\n\roneof_options\022\035.google"
-          + ".protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.Oneo"
-          + "fOptions:N\n\017service_options\022\037.google.pro"
-          + "tobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Servic"
-          + "eOptionsB\036\n\034com.strongdm.api.v1.plumbing"
-          + "b\006proto3"
+          + "\"\222\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001("
+          + "\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022"
+          + "\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform_do"
+          + "cs\030\270\276v \001(\0132\021.v1.TerraformDocs\"T\n\rTerrafo"
+          + "rmDocs\022\037\n\025resource_example_path\030\264\276v \001(\t\022"
+          + "\"\n\030data_source_example_path\030\265\276v \001(\t\"$\n\014O"
+          + "neofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016Ser"
+          + "viceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rfiel"
+          + "d_options\022\035.google.protobuf.FieldOptions"
+          + "\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message_op"
+          + "tions\022\037.google.protobuf.MessageOptions\030\217"
+          + "\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_opti"
+          + "ons\022\035.google.protobuf.OneofOptions\030\205\277v \001"
+          + "(\0132\020.v1.OneofOptions:N\n\017service_options\022"
+          + "\037.google.protobuf.ServiceOptions\030\231\277v \001(\013"
+          + "2\022.v1.ServiceOptionsB\036\n\034com.strongdm.api"
+          + ".v1.plumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -3288,16 +4228,23 @@ public final class Options {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_MessageOptions_descriptor,
             new java.lang.String[] {
-              "ModelName", "Porcelain", "Error", "OptionsField",
+              "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs",
             });
-    internal_static_v1_OneofOptions_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_TerraformDocs_descriptor = getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_TerraformDocs_fieldAccessorTable =
+        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_v1_TerraformDocs_descriptor,
+            new java.lang.String[] {
+              "ResourceExamplePath", "DataSourceExamplePath",
+            });
+    internal_static_v1_OneofOptions_descriptor = getDescriptor().getMessageTypes().get(3);
     internal_static_v1_OneofOptions_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_OneofOptions_descriptor,
             new java.lang.String[] {
               "ModelName",
             });
-    internal_static_v1_ServiceOptions_descriptor = getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_ServiceOptions_descriptor = getDescriptor().getMessageTypes().get(4);
     internal_static_v1_ServiceOptions_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_ServiceOptions_descriptor,

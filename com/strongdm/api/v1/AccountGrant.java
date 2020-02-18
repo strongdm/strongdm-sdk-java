@@ -2,8 +2,8 @@ package com.strongdm.api.v1;
 
 import java.util.Date;
 
-// A AccountGrant connects a composite role to another role, granting members
-// of the composite role the permissions granted to the attached role.
+// An AccountGrant connects an account to a resource, granting the account
+// the ability to connect to that resource.
 public class AccountGrant {
   private String id;
   // Unique identifier of the AccountGrant.

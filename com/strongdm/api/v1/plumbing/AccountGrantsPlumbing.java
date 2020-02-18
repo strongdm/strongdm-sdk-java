@@ -9843,8 +9843,8 @@ public final class AccountGrantsPlumbing {
    *
    *
    * <pre>
-   * A AccountGrant connects a composite role to another role, granting members
-   * of the composite role the permissions granted to the attached role.
+   * An AccountGrant connects an account to a resource, granting the account
+   * the ability to connect to that resource.
    * </pre>
    *
    * Protobuf type {@code v1.AccountGrant}
@@ -10424,8 +10424,8 @@ public final class AccountGrantsPlumbing {
      *
      *
      * <pre>
-     * A AccountGrant connects a composite role to another role, granting members
-     * of the composite role the permissions granted to the attached role.
+     * An AccountGrant connects an account to a resource, granting the account
+     * the ability to connect to that resource.
      * </pre>
      *
      * Protobuf type {@code v1.AccountGrant}
@@ -11468,7 +11468,7 @@ public final class AccountGrantsPlumbing {
           + "2\030.v1.ListResponseMetadata\0224\n\016account_gr"
           + "ants\030\002 \003(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001"
           + "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad"
-          + "ataB\n\362\370\263\007\005\260\363\263\007\001\"\201\004\n\014AccountGrant\022,\n\002id\030\001"
+          + "ataB\n\362\370\263\007\005\260\363\263\007\001\"\337\004\n\014AccountGrant\022,\n\002id\030\001"
           + " \001(\tB \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nPermission\022D"
           + "\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Datasourc"
           + "eID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0227\n\naccount_"
@@ -11476,27 +11476,29 @@ public final class AccountGrantsPlumbing {
           + "\004User\022H\n\nstart_from\030\004 \001(\0132\032.google.proto"
           + "buf.TimestampB\030\362\370\263\007\023\242\363\263\007\tStartFrom\260\363\263\007\001\022"
           + "J\n\013valid_until\030\005 \001(\0132\032.google.protobuf.T"
-          + "imestampB\031\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:\255\001\372\370"
-          + "\263\007\024\242\363\263\007\nPermission\250\363\263\007\001\222A\220\001*J\n\017A Account"
-          + "Grant.\0227https://www.strongdm.com/docs/ap"
-          + "i/entities#AccountGrant2B\022@{ \"id\": \"ug-2"
-          + "44\", \"resource_id\": \"rs-111\", \"account_i"
-          + "d\":\"a-444\"}2\237\004\n\rAccountGrants\022\316\001\n\006Create"
-          + "\022\035.v1.AccountGrantCreateRequest\032\036.v1.Acc"
-          + "ountGrantCreateResponse\"\204\001\202\323\344\223\002\026\"\021/v1/ac"
-          + "countGrants:\001*\222Ae\"c\n Learn how to make a"
-          + " AccountGrant\022?https://www.strongdm.com/"
-          + "docs/api/services/AccountGrants#Create\022^"
-          + "\n\003Get\022\032.v1.AccountGrantGetRequest\032\033.v1.A"
-          + "ccountGrantGetResponse\"\036\202\323\344\223\002\030\022\026/v1/acco"
-          + "untGrants/{id}\022g\n\006Delete\022\035.v1.AccountGra"
-          + "ntDeleteRequest\032\036.v1.AccountGrantDeleteR"
-          + "esponse\"\036\202\323\344\223\002\030*\026/v1/accountGrants/{id}\022"
-          + "\\\n\004List\022\033.v1.AccountGrantListRequest\032\034.v"
-          + "1.AccountGrantListResponse\"\031\202\323\344\223\002\023\022\021/v1/"
-          + "accountGrants\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantB5\n"
-          + "\034com.strongdm.api.v1.plumbingB\025AccountGr"
-          + "antsPlumbingb\006proto3"
+          + "imestampB\031\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:\213\002\372\370"
+          + "\263\007r\242\363\263\007\nPermission\250\363\263\007\001\302\363\263\007Y\242\363\263\007&tf_exam"
+          + "ples/account_grant_resource.txt\252\363\263\007)tf_e"
+          + "xamples/account_grant_data_source.txt\222A\220"
+          + "\001*J\n\017A AccountGrant.\0227https://www.strong"
+          + "dm.com/docs/api/entities#AccountGrant2B\022"
+          + "@{ \"id\": \"ug-244\", \"resource_id\": \"rs-11"
+          + "1\", \"account_id\":\"a-444\"}2\237\004\n\rAccountGra"
+          + "nts\022\316\001\n\006Create\022\035.v1.AccountGrantCreateRe"
+          + "quest\032\036.v1.AccountGrantCreateResponse\"\204\001"
+          + "\202\323\344\223\002\026\"\021/v1/accountGrants:\001*\222Ae\"c\n Learn"
+          + " how to make a AccountGrant\022?https://www"
+          + ".strongdm.com/docs/api/services/AccountG"
+          + "rants#Create\022^\n\003Get\022\032.v1.AccountGrantGet"
+          + "Request\032\033.v1.AccountGrantGetResponse\"\036\202\323"
+          + "\344\223\002\030\022\026/v1/accountGrants/{id}\022g\n\006Delete\022\035"
+          + ".v1.AccountGrantDeleteRequest\032\036.v1.Accou"
+          + "ntGrantDeleteResponse\"\036\202\323\344\223\002\030*\026/v1/accou"
+          + "ntGrants/{id}\022\\\n\004List\022\033.v1.AccountGrantL"
+          + "istRequest\032\034.v1.AccountGrantListResponse"
+          + "\"\031\202\323\344\223\002\023\022\021/v1/accountGrants\032\026\312\371\263\007\021\302\371\263\007\014A"
+          + "ccountGrantB5\n\034com.strongdm.api.v1.plumb"
+          + "ingB\025AccountGrantsPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

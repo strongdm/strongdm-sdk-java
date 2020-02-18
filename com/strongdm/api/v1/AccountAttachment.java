@@ -1,7 +1,7 @@
 package com.strongdm.api.v1;
 
-// A AccountAttachment connects a composite role to another role, granting members
-// of the composite role the permissions granted to the attached role.
+// A AccountAttachment connects an account to a role, granting the account
+// the permissions granted to that role.
 public class AccountAttachment {
   private String id;
   // Unique identifier of the AccountAttachment.
