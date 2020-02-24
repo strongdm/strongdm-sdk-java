@@ -14,14 +14,14 @@
 //
 package com.strongdm.api.v1;
 
-public class Redshift implements Resource {
+public class AKS implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public Redshift setId(String in) {
+  public AKS setId(String in) {
     this.id = in;
     return this;
   }
@@ -32,7 +32,7 @@ public class Redshift implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public Redshift setName(String in) {
+  public AKS setName(String in) {
     this.name = in;
     return this;
   }
@@ -43,7 +43,7 @@ public class Redshift implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public Redshift setHealthy(boolean in) {
+  public AKS setHealthy(boolean in) {
     this.healthy = in;
     return this;
   }
@@ -54,52 +54,8 @@ public class Redshift implements Resource {
     return this.hostname;
   }
 
-  public Redshift setHostname(String in) {
+  public AKS setHostname(String in) {
     this.hostname = in;
-    return this;
-  }
-
-  private String username;
-
-  public String getUsername() {
-    return this.username;
-  }
-
-  public Redshift setUsername(String in) {
-    this.username = in;
-    return this;
-  }
-
-  private String password;
-
-  public String getPassword() {
-    return this.password;
-  }
-
-  public Redshift setPassword(String in) {
-    this.password = in;
-    return this;
-  }
-
-  private String database;
-
-  public String getDatabase() {
-    return this.database;
-  }
-
-  public Redshift setDatabase(String in) {
-    this.database = in;
-    return this;
-  }
-
-  private int portOverride;
-
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-
-  public Redshift setPortOverride(int in) {
-    this.portOverride = in;
     return this;
   }
 
@@ -109,19 +65,74 @@ public class Redshift implements Resource {
     return this.port;
   }
 
-  public Redshift setPort(int in) {
+  public AKS setPort(int in) {
     this.port = in;
     return this;
   }
 
-  private boolean overrideDatabase;
+  private String certificateAuthority;
 
-  public boolean getOverrideDatabase() {
-    return this.overrideDatabase;
+  public String getCertificateAuthority() {
+    return this.certificateAuthority;
   }
 
-  public Redshift setOverrideDatabase(boolean in) {
-    this.overrideDatabase = in;
+  public AKS setCertificateAuthority(String in) {
+    this.certificateAuthority = in;
+    return this;
+  }
+
+  private String certificateAuthorityFilename;
+
+  public String getCertificateAuthorityFilename() {
+    return this.certificateAuthorityFilename;
+  }
+
+  public AKS setCertificateAuthorityFilename(String in) {
+    this.certificateAuthorityFilename = in;
+    return this;
+  }
+
+  private String clientCertificate;
+
+  public String getClientCertificate() {
+    return this.clientCertificate;
+  }
+
+  public AKS setClientCertificate(String in) {
+    this.clientCertificate = in;
+    return this;
+  }
+
+  private String clientCertificateFilename;
+
+  public String getClientCertificateFilename() {
+    return this.clientCertificateFilename;
+  }
+
+  public AKS setClientCertificateFilename(String in) {
+    this.clientCertificateFilename = in;
+    return this;
+  }
+
+  private String clientKey;
+
+  public String getClientKey() {
+    return this.clientKey;
+  }
+
+  public AKS setClientKey(String in) {
+    this.clientKey = in;
+    return this;
+  }
+
+  private String clientKeyFilename;
+
+  public String getClientKeyFilename() {
+    return this.clientKeyFilename;
+  }
+
+  public AKS setClientKeyFilename(String in) {
+    this.clientKeyFilename = in;
     return this;
   }
 }

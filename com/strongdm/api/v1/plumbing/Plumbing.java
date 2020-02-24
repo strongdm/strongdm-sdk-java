@@ -1,3 +1,18 @@
+// Copyright 2020 StrongDM Inc
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
 package com.strongdm.api.v1.plumbing;
 
 import com.google.protobuf.Timestamp;
@@ -916,14 +931,23 @@ public class Plumbing {
     if (plumbing.hasKubernetesBasicAuth()) {
       return kubernetesBasicAuthToPorcelain(plumbing.getKubernetesBasicAuth());
     }
+    if (plumbing.hasKubernetesServiceAccount()) {
+      return kubernetesServiceAccountToPorcelain(plumbing.getKubernetesServiceAccount());
+    }
     if (plumbing.hasAmazonEks()) {
       return amazonEksToPorcelain(plumbing.getAmazonEks());
     }
     if (plumbing.hasGoogleGke()) {
       return googleGkeToPorcelain(plumbing.getGoogleGke());
     }
-    if (plumbing.hasKubernetesServiceAccount()) {
-      return kubernetesServiceAccountToPorcelain(plumbing.getKubernetesServiceAccount());
+    if (plumbing.hasAks()) {
+      return aksToPorcelain(plumbing.getAks());
+    }
+    if (plumbing.hasAksBasicAuth()) {
+      return aksBasicAuthToPorcelain(plumbing.getAksBasicAuth());
+    }
+    if (plumbing.hasAksServiceAccount()) {
+      return aksServiceAccountToPorcelain(plumbing.getAksServiceAccount());
     }
     if (plumbing.hasMemcached()) {
       return memcachedToPorcelain(plumbing.getMemcached());
@@ -1072,6 +1096,13 @@ public class Plumbing {
           kubernetesBasicAuthToPlumbing((com.strongdm.api.v1.KubernetesBasicAuth) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.v1.KubernetesServiceAccount) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setKubernetesServiceAccount(
+          kubernetesServiceAccountToPlumbing(
+              (com.strongdm.api.v1.KubernetesServiceAccount) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.v1.AmazonEKS) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAmazonEks(amazonEksToPlumbing((com.strongdm.api.v1.AmazonEKS) porcelain));
@@ -1082,11 +1113,20 @@ public class Plumbing {
       builder.setGoogleGke(googleGkeToPlumbing((com.strongdm.api.v1.GoogleGKE) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.v1.KubernetesServiceAccount) {
+    if (porcelain instanceof com.strongdm.api.v1.AKS) {
       Resource.Builder builder = Resource.newBuilder();
-      builder.setKubernetesServiceAccount(
-          kubernetesServiceAccountToPlumbing(
-              (com.strongdm.api.v1.KubernetesServiceAccount) porcelain));
+      builder.setAks(aksToPlumbing((com.strongdm.api.v1.AKS) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AKSBasicAuth) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAksBasicAuth(aksBasicAuthToPlumbing((com.strongdm.api.v1.AKSBasicAuth) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AKSServiceAccount) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAksServiceAccount(
+          aksServiceAccountToPlumbing((com.strongdm.api.v1.AKSServiceAccount) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Memcached) {
@@ -1928,6 +1968,56 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.KubernetesServiceAccount kubernetesServiceAccountToPorcelain(
+      KubernetesServiceAccount plumbing) {
+    com.strongdm.api.v1.KubernetesServiceAccount porcelain =
+        new com.strongdm.api.v1.KubernetesServiceAccount();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setToken(plumbing.getToken());
+    return porcelain;
+  }
+
+  public static KubernetesServiceAccount kubernetesServiceAccountToPlumbing(
+      com.strongdm.api.v1.KubernetesServiceAccount porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    KubernetesServiceAccount.Builder builder = KubernetesServiceAccount.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getToken() != null) {
+      builder.setToken(porcelain.getToken());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.KubernetesServiceAccount>
+      repeatedKubernetesServiceAccountToPorcelain(Collection<KubernetesServiceAccount> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> kubernetesServiceAccountToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<KubernetesServiceAccount> repeatedKubernetesServiceAccountToPlumbing(
+      Collection<com.strongdm.api.v1.KubernetesServiceAccount> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> kubernetesServiceAccountToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.AmazonEKS amazonEksToPorcelain(AmazonEKS plumbing) {
     com.strongdm.api.v1.AmazonEKS porcelain = new com.strongdm.api.v1.AmazonEKS();
     porcelain.setId(plumbing.getId());
@@ -2050,10 +2140,125 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.KubernetesServiceAccount kubernetesServiceAccountToPorcelain(
-      KubernetesServiceAccount plumbing) {
-    com.strongdm.api.v1.KubernetesServiceAccount porcelain =
-        new com.strongdm.api.v1.KubernetesServiceAccount();
+  public static com.strongdm.api.v1.AKS aksToPorcelain(AKS plumbing) {
+    com.strongdm.api.v1.AKS porcelain = new com.strongdm.api.v1.AKS();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
+    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
+    porcelain.setClientCertificate(plumbing.getClientCertificate());
+    porcelain.setClientCertificateFilename(plumbing.getClientCertificateFilename());
+    porcelain.setClientKey(plumbing.getClientKey());
+    porcelain.setClientKeyFilename(plumbing.getClientKeyFilename());
+    return porcelain;
+  }
+
+  public static AKS aksToPlumbing(com.strongdm.api.v1.AKS porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AKS.Builder builder = AKS.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority(porcelain.getCertificateAuthority());
+    }
+    if (porcelain.getCertificateAuthorityFilename() != null) {
+      builder.setCertificateAuthorityFilename(porcelain.getCertificateAuthorityFilename());
+    }
+    if (porcelain.getClientCertificate() != null) {
+      builder.setClientCertificate(porcelain.getClientCertificate());
+    }
+    if (porcelain.getClientCertificateFilename() != null) {
+      builder.setClientCertificateFilename(porcelain.getClientCertificateFilename());
+    }
+    if (porcelain.getClientKey() != null) {
+      builder.setClientKey(porcelain.getClientKey());
+    }
+    if (porcelain.getClientKeyFilename() != null) {
+      builder.setClientKeyFilename(porcelain.getClientKeyFilename());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AKS> repeatedAKSToPorcelain(Collection<AKS> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> aksToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AKS> repeatedAKSToPlumbing(Collection<com.strongdm.api.v1.AKS> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> aksToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AKSBasicAuth aksBasicAuthToPorcelain(AKSBasicAuth plumbing) {
+    com.strongdm.api.v1.AKSBasicAuth porcelain = new com.strongdm.api.v1.AKSBasicAuth();
+    porcelain.setId(plumbing.getId());
+    porcelain.setName(plumbing.getName());
+    porcelain.setHealthy(plumbing.getHealthy());
+    porcelain.setHostname(plumbing.getHostname());
+    porcelain.setPort(plumbing.getPort());
+    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setPassword(plumbing.getPassword());
+    return porcelain;
+  }
+
+  public static AKSBasicAuth aksBasicAuthToPlumbing(com.strongdm.api.v1.AKSBasicAuth porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AKSBasicAuth.Builder builder = AKSBasicAuth.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId(porcelain.getId());
+    }
+    if (porcelain.getName() != null) {
+      builder.setName(porcelain.getName());
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname(porcelain.getHostname());
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername(porcelain.getUsername());
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword(porcelain.getPassword());
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AKSBasicAuth> repeatedAKSBasicAuthToPorcelain(
+      Collection<AKSBasicAuth> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> aksBasicAuthToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AKSBasicAuth> repeatedAKSBasicAuthToPlumbing(
+      Collection<com.strongdm.api.v1.AKSBasicAuth> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> aksBasicAuthToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AKSServiceAccount aksServiceAccountToPorcelain(
+      AKSServiceAccount plumbing) {
+    com.strongdm.api.v1.AKSServiceAccount porcelain = new com.strongdm.api.v1.AKSServiceAccount();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
     porcelain.setHealthy(plumbing.getHealthy());
@@ -2063,12 +2268,12 @@ public class Plumbing {
     return porcelain;
   }
 
-  public static KubernetesServiceAccount kubernetesServiceAccountToPlumbing(
-      com.strongdm.api.v1.KubernetesServiceAccount porcelain) {
+  public static AKSServiceAccount aksServiceAccountToPlumbing(
+      com.strongdm.api.v1.AKSServiceAccount porcelain) {
     if (porcelain == null) {
       return null;
     }
-    KubernetesServiceAccount.Builder builder = KubernetesServiceAccount.newBuilder();
+    AKSServiceAccount.Builder builder = AKSServiceAccount.newBuilder();
     if (porcelain.getId() != null) {
       builder.setId(porcelain.getId());
     }
@@ -2086,17 +2291,17 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.KubernetesServiceAccount>
-      repeatedKubernetesServiceAccountToPorcelain(Collection<KubernetesServiceAccount> plumbings) {
+  public static List<com.strongdm.api.v1.AKSServiceAccount> repeatedAKSServiceAccountToPorcelain(
+      Collection<AKSServiceAccount> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> kubernetesServiceAccountToPorcelain(plumbing))
+        .map(plumbing -> aksServiceAccountToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
-  public static List<KubernetesServiceAccount> repeatedKubernetesServiceAccountToPlumbing(
-      Collection<com.strongdm.api.v1.KubernetesServiceAccount> porcelains) {
+  public static List<AKSServiceAccount> repeatedAKSServiceAccountToPlumbing(
+      Collection<com.strongdm.api.v1.AKSServiceAccount> porcelains) {
     return porcelains.stream()
-        .map(porcelain -> kubernetesServiceAccountToPlumbing(porcelain))
+        .map(porcelain -> aksServiceAccountToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

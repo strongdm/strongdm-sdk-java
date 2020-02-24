@@ -14,14 +14,14 @@
 //
 package com.strongdm.api.v1;
 
-public class DynamoDB implements Resource {
+public class AKSServiceAccount implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public DynamoDB setId(String in) {
+  public AKSServiceAccount setId(String in) {
     this.id = in;
     return this;
   }
@@ -32,7 +32,7 @@ public class DynamoDB implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public DynamoDB setName(String in) {
+  public AKSServiceAccount setName(String in) {
     this.name = in;
     return this;
   }
@@ -43,63 +43,41 @@ public class DynamoDB implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public DynamoDB setHealthy(boolean in) {
+  public AKSServiceAccount setHealthy(boolean in) {
     this.healthy = in;
     return this;
   }
 
-  private String accessKey;
+  private String hostname;
 
-  public String getAccessKey() {
-    return this.accessKey;
+  public String getHostname() {
+    return this.hostname;
   }
 
-  public DynamoDB setAccessKey(String in) {
-    this.accessKey = in;
+  public AKSServiceAccount setHostname(String in) {
+    this.hostname = in;
     return this;
   }
 
-  private String secretAccessKey;
+  private int port;
 
-  public String getSecretAccessKey() {
-    return this.secretAccessKey;
+  public int getPort() {
+    return this.port;
   }
 
-  public DynamoDB setSecretAccessKey(String in) {
-    this.secretAccessKey = in;
+  public AKSServiceAccount setPort(int in) {
+    this.port = in;
     return this;
   }
 
-  private String region;
+  private String token;
 
-  public String getRegion() {
-    return this.region;
+  public String getToken() {
+    return this.token;
   }
 
-  public DynamoDB setRegion(String in) {
-    this.region = in;
-    return this;
-  }
-
-  private String endpoint;
-
-  public String getEndpoint() {
-    return this.endpoint;
-  }
-
-  public DynamoDB setEndpoint(String in) {
-    this.endpoint = in;
-    return this;
-  }
-
-  private int portOverride;
-
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-
-  public DynamoDB setPortOverride(int in) {
-    this.portOverride = in;
+  public AKSServiceAccount setToken(String in) {
+    this.token = in;
     return this;
   }
 }

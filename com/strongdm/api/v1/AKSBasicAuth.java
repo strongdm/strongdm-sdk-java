@@ -14,14 +14,14 @@
 //
 package com.strongdm.api.v1;
 
-public class DynamoDB implements Resource {
+public class AKSBasicAuth implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public DynamoDB setId(String in) {
+  public AKSBasicAuth setId(String in) {
     this.id = in;
     return this;
   }
@@ -32,7 +32,7 @@ public class DynamoDB implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public DynamoDB setName(String in) {
+  public AKSBasicAuth setName(String in) {
     this.name = in;
     return this;
   }
@@ -43,63 +43,52 @@ public class DynamoDB implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public DynamoDB setHealthy(boolean in) {
+  public AKSBasicAuth setHealthy(boolean in) {
     this.healthy = in;
     return this;
   }
 
-  private String accessKey;
+  private String hostname;
 
-  public String getAccessKey() {
-    return this.accessKey;
+  public String getHostname() {
+    return this.hostname;
   }
 
-  public DynamoDB setAccessKey(String in) {
-    this.accessKey = in;
+  public AKSBasicAuth setHostname(String in) {
+    this.hostname = in;
     return this;
   }
 
-  private String secretAccessKey;
+  private int port;
 
-  public String getSecretAccessKey() {
-    return this.secretAccessKey;
+  public int getPort() {
+    return this.port;
   }
 
-  public DynamoDB setSecretAccessKey(String in) {
-    this.secretAccessKey = in;
+  public AKSBasicAuth setPort(int in) {
+    this.port = in;
     return this;
   }
 
-  private String region;
+  private String username;
 
-  public String getRegion() {
-    return this.region;
+  public String getUsername() {
+    return this.username;
   }
 
-  public DynamoDB setRegion(String in) {
-    this.region = in;
+  public AKSBasicAuth setUsername(String in) {
+    this.username = in;
     return this;
   }
 
-  private String endpoint;
+  private String password;
 
-  public String getEndpoint() {
-    return this.endpoint;
+  public String getPassword() {
+    return this.password;
   }
 
-  public DynamoDB setEndpoint(String in) {
-    this.endpoint = in;
-    return this;
-  }
-
-  private int portOverride;
-
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-
-  public DynamoDB setPortOverride(int in) {
-    this.portOverride = in;
+  public AKSBasicAuth setPassword(String in) {
+    this.password = in;
     return this;
   }
 }
