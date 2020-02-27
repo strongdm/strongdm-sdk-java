@@ -26,10 +26,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// AccountGrants represent relationships between composite roles and the roles
-// that make up those composite roles. When a composite role is attached to another
-// role, the permissions granted to members of the composite role are augmented to
-// include the permissions granted to members of the attached role.
+// AccountGrants connect a resource directly to an account, giving the account the permission to
+// connect to that resource.
 public class AccountGrants {
   private final AccountGrantsGrpc.AccountGrantsBlockingStub stub;
   private final Client parent;

@@ -9857,8 +9857,7 @@ public final class AccountGrantsPlumbing {
    *
    *
    * <pre>
-   * An AccountGrant connects an account to a resource, granting the account
-   * the ability to connect to that resource.
+   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    *
    * Protobuf type {@code v1.AccountGrant}
@@ -10438,8 +10437,7 @@ public final class AccountGrantsPlumbing {
      *
      *
      * <pre>
-     * An AccountGrant connects an account to a resource, granting the account
-     * the ability to connect to that resource.
+     * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
      * </pre>
      *
      * Protobuf type {@code v1.AccountGrant}

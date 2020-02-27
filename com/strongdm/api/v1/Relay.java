@@ -28,11 +28,11 @@ public class Relay implements Node {
   }
 
   private String name;
-  // Unique human-readable name of the Relay.
+  // Unique human-readable name of the Relay. Generated if not provided on create.
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Relay.
+  // Unique human-readable name of the Relay. Generated if not provided on create.
   public Relay setName(String in) {
     this.name = in;
     return this;

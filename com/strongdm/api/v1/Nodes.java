@@ -26,9 +26,11 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// Nodes are proxies in the strongDM network. They come in two flavors: relays,
-// which communicate with resources, and gateways, which communicate with
-// clients.
+// Nodes make up the strongDM network, and allow your users to connect securely to your resources.
+// There are two types of nodes:
+// 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature
+// of your firewall
+// 1. **Gateways:** a relay that also listens for connections from strongDM clients
 public class Nodes {
   private final NodesGrpc.NodesBlockingStub stub;
   private final Client parent;

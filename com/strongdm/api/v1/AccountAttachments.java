@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// AccountAttachments represent relationships between an account and a role.
+// AccountAttachments assign an account to a role.
 public class AccountAttachments {
   private final AccountAttachmentsGrpc.AccountAttachmentsBlockingStub stub;
   private final Client parent;

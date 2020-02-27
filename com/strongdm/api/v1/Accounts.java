@@ -26,7 +26,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// Accounts are users, services or tokens who connect to and act within the strongDM network.
+// Accounts are users that have access to strongDM.
+// There are two types of accounts:
+// 1. **Regular users:** humans who are authenticated through username and password or SSO
+// 2. **Service users:** machines that are authneticated using a service token
 public class Accounts {
   private final AccountsGrpc.AccountsBlockingStub stub;
   private final Client parent;

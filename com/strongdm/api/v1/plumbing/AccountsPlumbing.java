@@ -12483,7 +12483,10 @@ public final class AccountsPlumbing {
    *
    *
    * <pre>
-   * An Account is one of many types of users or tokens that can access StrongDM.
+   * Accounts are users that have access to strongDM.
+   * There are two types of accounts:
+   * 1. **Regular users:** humans who are authenticated through username and password or SSO
+   * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    *
    * Protobuf type {@code v1.Account}
@@ -12899,7 +12902,10 @@ public final class AccountsPlumbing {
      *
      *
      * <pre>
-     * An Account is one of many types of users or tokens that can access StrongDM.
+     * Accounts are users that have access to strongDM.
+     * There are two types of accounts:
+     * 1. **Regular users:** humans who are authenticated through username and password or SSO
+     * 2. **Service users:** machines that are authneticated using a service token
      * </pre>
      *
      * Protobuf type {@code v1.Account}
@@ -13529,6 +13535,19 @@ public final class AccountsPlumbing {
      * @return The bytes for lastName.
      */
     com.google.protobuf.ByteString getLastNameBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * The User's suspended state.
+     * </pre>
+     *
+     * <code>bool suspended = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The suspended.
+     */
+    boolean getSuspended();
   }
   /**
    *
@@ -13612,6 +13631,11 @@ public final class AccountsPlumbing {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 lastName_ = s;
+                break;
+              }
+            case 40:
+              {
+                suspended_ = input.readBool();
                 break;
               }
             default:
@@ -13835,6 +13859,23 @@ public final class AccountsPlumbing {
       }
     }
 
+    public static final int SUSPENDED_FIELD_NUMBER = 5;
+    private boolean suspended_;
+    /**
+     *
+     *
+     * <pre>
+     * The User's suspended state.
+     * </pre>
+     *
+     * <code>bool suspended = 5 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The suspended.
+     */
+    public boolean getSuspended() {
+      return suspended_;
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -13861,6 +13902,9 @@ public final class AccountsPlumbing {
       if (!getLastNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, lastName_);
       }
+      if (suspended_ != false) {
+        output.writeBool(5, suspended_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13882,6 +13926,9 @@ public final class AccountsPlumbing {
       if (!getLastNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, lastName_);
       }
+      if (suspended_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, suspended_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -13902,6 +13949,7 @@ public final class AccountsPlumbing {
       if (!getEmail().equals(other.getEmail())) return false;
       if (!getFirstName().equals(other.getFirstName())) return false;
       if (!getLastName().equals(other.getLastName())) return false;
+      if (getSuspended() != other.getSuspended()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13921,6 +13969,8 @@ public final class AccountsPlumbing {
       hash = (53 * hash) + getFirstName().hashCode();
       hash = (37 * hash) + LAST_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getLastName().hashCode();
+      hash = (37 * hash) + SUSPENDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSuspended());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14076,6 +14126,8 @@ public final class AccountsPlumbing {
 
         lastName_ = "";
 
+        suspended_ = false;
+
         return this;
       }
 
@@ -14106,6 +14158,7 @@ public final class AccountsPlumbing {
         result.email_ = email_;
         result.firstName_ = firstName_;
         result.lastName_ = lastName_;
+        result.suspended_ = suspended_;
         onBuilt();
         return result;
       }
@@ -14173,6 +14226,9 @@ public final class AccountsPlumbing {
         if (!other.getLastName().isEmpty()) {
           lastName_ = other.lastName_;
           onChanged();
+        }
+        if (other.getSuspended() != false) {
+          setSuspended(other.getSuspended());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14628,6 +14684,57 @@ public final class AccountsPlumbing {
         return this;
       }
 
+      private boolean suspended_;
+      /**
+       *
+       *
+       * <pre>
+       * The User's suspended state.
+       * </pre>
+       *
+       * <code>bool suspended = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The suspended.
+       */
+      public boolean getSuspended() {
+        return suspended_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The User's suspended state.
+       * </pre>
+       *
+       * <code>bool suspended = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The suspended to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuspended(boolean value) {
+
+        suspended_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The User's suspended state.
+       * </pre>
+       *
+       * <code>bool suspended = 5 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearSuspended() {
+
+        suspended_ = false;
+        onChanged();
+        return this;
+      }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14734,6 +14841,19 @@ public final class AccountsPlumbing {
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString getNameBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * The Service's suspended state.
+     * </pre>
+     *
+     * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The suspended.
+     */
+    boolean getSuspended();
   }
   /**
    *
@@ -14801,6 +14921,11 @@ public final class AccountsPlumbing {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 name_ = s;
+                break;
+              }
+            case 24:
+              {
+                suspended_ = input.readBool();
                 break;
               }
             default:
@@ -14930,6 +15055,23 @@ public final class AccountsPlumbing {
       }
     }
 
+    public static final int SUSPENDED_FIELD_NUMBER = 3;
+    private boolean suspended_;
+    /**
+     *
+     *
+     * <pre>
+     * The Service's suspended state.
+     * </pre>
+     *
+     * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
+     *
+     * @return The suspended.
+     */
+    public boolean getSuspended() {
+      return suspended_;
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -14950,6 +15092,9 @@ public final class AccountsPlumbing {
       if (!getNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
+      if (suspended_ != false) {
+        output.writeBool(3, suspended_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14964,6 +15109,9 @@ public final class AccountsPlumbing {
       }
       if (!getNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (suspended_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(3, suspended_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14983,6 +15131,7 @@ public final class AccountsPlumbing {
 
       if (!getId().equals(other.getId())) return false;
       if (!getName().equals(other.getName())) return false;
+      if (getSuspended() != other.getSuspended()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14998,6 +15147,8 @@ public final class AccountsPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + SUSPENDED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSuspended());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15150,6 +15301,8 @@ public final class AccountsPlumbing {
 
         name_ = "";
 
+        suspended_ = false;
+
         return this;
       }
 
@@ -15178,6 +15331,7 @@ public final class AccountsPlumbing {
             new com.strongdm.api.v1.plumbing.AccountsPlumbing.Service(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.suspended_ = suspended_;
         onBuilt();
         return result;
       }
@@ -15237,6 +15391,9 @@ public final class AccountsPlumbing {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.getSuspended() != false) {
+          setSuspended(other.getSuspended());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15480,6 +15637,57 @@ public final class AccountsPlumbing {
         return this;
       }
 
+      private boolean suspended_;
+      /**
+       *
+       *
+       * <pre>
+       * The Service's suspended state.
+       * </pre>
+       *
+       * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return The suspended.
+       */
+      public boolean getSuspended() {
+        return suspended_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The Service's suspended state.
+       * </pre>
+       *
+       * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @param value The suspended to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuspended(boolean value) {
+
+        suspended_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * The Service's suspended state.
+       * </pre>
+       *
+       * <code>bool suspended = 3 [(.v1.field_options) = { ... }</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearSuspended() {
+
+        suspended_ = false;
+        onChanged();
+        return this;
+      }
+
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15637,30 +15845,32 @@ public final class AccountsPlumbing {
           + "\007#tf_examples/account_data_source.txt\222AC"
           + "*A\n\013An account.\0222https://www.strongdm.co"
           + "m/docs/api/entities#AccountB\031\n\007account\022\016"
-          + "\252\370\263\007\t\242\370\263\007\004User\"\321\001\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263"
+          + "\252\370\263\007\t\242\370\263\007\004User\"\365\001\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263"
           + "\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022(\n\005email\030\002 \001(\tB\031"
           + "\362\370\263\007\024\242\363\263\007\005Email\260\363\263\007\001\300\363\263\007\001\0221\n\nfirst_name\030"
           + "\003 \001(\tB\035\362\370\263\007\030\242\363\263\007\tFirstName\260\363\263\007\001\300\363\263\007\001\022/\n\t"
           + "last_name\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001"
-          + "\300\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\001\"r\n\007Service\022&\n"
-          + "\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n"
-          + "\004name\030\002 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007"
-          + "\001:\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\0012\253\004\n\010Accounts\022\264\001\n\006"
-          + "Create\022\030.v1.AccountCreateRequest\032\031.v1.Ac"
-          + "countCreateResponse\"u\202\323\344\223\002\021\"\014/v1/account"
-          + "s:\001*\222A[\"Y\n\033Learn how to make a Account\022:"
-          + "https://www.strongdm.com/docs/api/servic"
-          + "es/Accounts#Create\022O\n\003Get\022\025.v1.AccountGe"
-          + "tRequest\032\026.v1.AccountGetResponse\"\031\202\323\344\223\002\023"
-          + "\022\021/v1/accounts/{id}\022[\n\006Update\022\030.v1.Accou"
-          + "ntUpdateRequest\032\031.v1.AccountUpdateRespon"
-          + "se\"\034\202\323\344\223\002\026\032\021/v1/accounts/{id}:\001*\022X\n\006Dele"
-          + "te\022\030.v1.AccountDeleteRequest\032\031.v1.Accoun"
-          + "tDeleteResponse\"\031\202\323\344\223\002\023*\021/v1/accounts/{i"
-          + "d}\022M\n\004List\022\026.v1.AccountListRequest\032\027.v1."
-          + "AccountListResponse\"\024\202\323\344\223\002\016\022\014/v1/account"
-          + "s\032\021\312\371\263\007\014\302\371\263\007\007AccountB0\n\034com.strongdm.api"
-          + ".v1.plumbingB\020AccountsPlumbingb\006proto3"
+          + "\300\363\263\007\001\022\"\n\tsuspended\030\005 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007"
+          + "\001:\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\001\"\226\001\n\007Service\022&\n\002id"
+          + "\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n\004na"
+          + "me\030\002 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\""
+          + "\n\tsuspended\030\003 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001:\023\372\370\263\007"
+          + "\016\242\363\263\007\004User\250\363\263\007\0012\253\004\n\010Accounts\022\264\001\n\006Create\022"
+          + "\030.v1.AccountCreateRequest\032\031.v1.AccountCr"
+          + "eateResponse\"u\202\323\344\223\002\021\"\014/v1/accounts:\001*\222A["
+          + "\"Y\n\033Learn how to make a Account\022:https:/"
+          + "/www.strongdm.com/docs/api/services/Acco"
+          + "unts#Create\022O\n\003Get\022\025.v1.AccountGetReques"
+          + "t\032\026.v1.AccountGetResponse\"\031\202\323\344\223\002\023\022\021/v1/a"
+          + "ccounts/{id}\022[\n\006Update\022\030.v1.AccountUpdat"
+          + "eRequest\032\031.v1.AccountUpdateResponse\"\034\202\323\344"
+          + "\223\002\026\032\021/v1/accounts/{id}:\001*\022X\n\006Delete\022\030.v1"
+          + ".AccountDeleteRequest\032\031.v1.AccountDelete"
+          + "Response\"\031\202\323\344\223\002\023*\021/v1/accounts/{id}\022M\n\004L"
+          + "ist\022\026.v1.AccountListRequest\032\027.v1.Account"
+          + "ListResponse\"\024\202\323\344\223\002\016\022\014/v1/accounts\032\021\312\371\263\007"
+          + "\014\302\371\263\007\007AccountB0\n\034com.strongdm.api.v1.plu"
+          + "mbingB\020AccountsPlumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -15753,14 +15963,14 @@ public final class AccountsPlumbing {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_User_descriptor,
             new java.lang.String[] {
-              "Id", "Email", "FirstName", "LastName",
+              "Id", "Email", "FirstName", "LastName", "Suspended",
             });
     internal_static_v1_Service_descriptor = getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_Service_descriptor,
             new java.lang.String[] {
-              "Id", "Name",
+              "Id", "Name", "Suspended",
             });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

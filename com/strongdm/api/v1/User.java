@@ -60,4 +60,15 @@ public class User implements Account {
     this.lastName = in;
     return this;
   }
+
+  private boolean suspended;
+  // The User's suspended state.
+  public boolean getSuspended() {
+    return this.suspended;
+  }
+  // The User's suspended state.
+  public User setSuspended(boolean in) {
+    this.suspended = in;
+    return this;
+  }
 }

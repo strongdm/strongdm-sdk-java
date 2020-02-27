@@ -12410,9 +12410,10 @@ public final class NodesPlumbing {
    *
    *
    * <pre>
-   * A Node is a proxy in the strongDM network. They come in two flavors: relays,
-   * which communicate with resources, and gateways, which communicate with
-   * clients.
+   * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
+   * There are two types of nodes:
+   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
+   * 1. **Gateways:** a relay that also listens for connections from strongDM clients
    * </pre>
    *
    * Protobuf type {@code v1.Node}
@@ -12823,9 +12824,10 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * A Node is a proxy in the strongDM network. They come in two flavors: relays,
-     * which communicate with resources, and gateways, which communicate with
-     * clients.
+     * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
+     * There are two types of nodes:
+     * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
+     * 1. **Gateways:** a relay that also listens for connections from strongDM clients
      * </pre>
      *
      * Protobuf type {@code v1.Node}
@@ -13382,7 +13384,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Relay. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -13394,7 +13396,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Relay. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -13592,7 +13594,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Relay. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -13614,7 +13616,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Relay.
+     * Unique human-readable name of the Relay. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14147,7 +14149,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Relay. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14169,7 +14171,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Relay. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14191,7 +14193,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Relay. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14212,7 +14214,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Relay. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14229,7 +14231,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Relay.
+       * Unique human-readable name of the Relay. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14455,7 +14457,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Gateway.
+     * Unique human-readable name of the Gateway. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14467,7 +14469,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Gateway.
+     * Unique human-readable name of the Gateway. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14535,6 +14537,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
+     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14547,6 +14550,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
+     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14732,7 +14736,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Gateway.
+     * Unique human-readable name of the Gateway. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14754,7 +14758,7 @@ public final class NodesPlumbing {
      *
      *
      * <pre>
-     * Unique human-readable name of the Gateway.
+     * Unique human-readable name of the Gateway. Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14878,6 +14882,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
+     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14900,6 +14905,7 @@ public final class NodesPlumbing {
      *
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
+     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -15413,7 +15419,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Gateway.
+       * Unique human-readable name of the Gateway. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15435,7 +15441,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Gateway.
+       * Unique human-readable name of the Gateway. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15457,7 +15463,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Gateway.
+       * Unique human-readable name of the Gateway. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15478,7 +15484,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Gateway.
+       * Unique human-readable name of the Gateway. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15495,7 +15501,7 @@ public final class NodesPlumbing {
        *
        *
        * <pre>
-       * Unique human-readable name of the Gateway.
+       * Unique human-readable name of the Gateway. Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -15747,6 +15753,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
+       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -15769,6 +15776,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
+       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -15791,6 +15799,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
+       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -15812,6 +15821,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
+       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -15829,6 +15839,7 @@ public final class NodesPlumbing {
        *
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
+       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -16006,28 +16017,28 @@ public final class NodesPlumbing {
           + "\007\004Node\"\221\001\n\005Relay\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002"
           + "ID\260\363\263\007\001\312\363\263\007\004Node\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263"
           + "\007\004Name\260\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005St"
-          + "ate\260\363\263\007\001\222A\002@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\211\002\n\007G"
+          + "ate\260\363\263\007\001\222A\002@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\204\002\n\007G"
           + "ateway\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263"
           + "\007\004Node\022!\n\004name\030\002 \001(\tB\023\362\370\263\007\016\242\363\263\007\004Name\260\363\263\007"
           + "\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A"
           + "\002@\001\022;\n\016listen_address\030\004 \001(\tB#\362\370\263\007\036\242\363\263\007\nL"
-          + "istenAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007\001\0227\n\014bind_address"
-          + "\030\005 \001(\tB!\362\370\263\007\034\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007"
-          + "\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Cre"
-          + "ate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCrea"
-          + "teResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001*\222AU\"S\n\030L"
-          + "earn how to make a Node\0227https://www.str"
-          + "ongdm.com/docs/api/services/Nodes#Create"
-          + "\022F\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeGet"
-          + "Response\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id}\022R\n\006Upda"
-          + "te\022\025.v1.NodeUpdateRequest\032\026.v1.NodeUpdat"
-          + "eResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{id}:\001*\022O\n\006"
-          + "Delete\022\025.v1.NodeDeleteRequest\032\026.v1.NodeD"
-          + "eleteResponse\"\026\202\323\344\223\002\020*\016/v1/nodes/{id}\022D\n"
-          + "\004List\022\023.v1.NodeListRequest\032\024.v1.NodeList"
-          + "Response\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004N"
-          + "odeB-\n\034com.strongdm.api.v1.plumbingB\rNod"
-          + "esPlumbingb\006proto3"
+          + "istenAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007\001\0222\n\014bind_address"
+          + "\030\005 \001(\tB\034\362\370\263\007\027\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001:\023\372\370"
+          + "\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Create\022\025"
+          + ".v1.NodeCreateRequest\032\026.v1.NodeCreateRes"
+          + "ponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001*\222AU\"S\n\030Learn "
+          + "how to make a Node\0227https://www.strongdm"
+          + ".com/docs/api/services/Nodes#Create\022F\n\003G"
+          + "et\022\022.v1.NodeGetRequest\032\023.v1.NodeGetRespo"
+          + "nse\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id}\022R\n\006Update\022\025."
+          + "v1.NodeUpdateRequest\032\026.v1.NodeUpdateResp"
+          + "onse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{id}:\001*\022O\n\006Delet"
+          + "e\022\025.v1.NodeDeleteRequest\032\026.v1.NodeDelete"
+          + "Response\"\026\202\323\344\223\002\020*\016/v1/nodes/{id}\022D\n\004List"
+          + "\022\023.v1.NodeListRequest\032\024.v1.NodeListRespo"
+          + "nse\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004NodeB-"
+          + "\n\034com.strongdm.api.v1.plumbingB\rNodesPlu"
+          + "mbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

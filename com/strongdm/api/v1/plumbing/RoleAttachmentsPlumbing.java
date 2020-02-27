@@ -9874,8 +9874,7 @@ public final class RoleAttachmentsPlumbing {
    *
    *
    * <pre>
-   * A RoleAttachment connects a composite role to another role, granting members
-   * of the composite role the permissions granted to the attached role.
+   * A RoleAttachment assigns a role to a composite role.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachment}
@@ -10305,8 +10304,7 @@ public final class RoleAttachmentsPlumbing {
      *
      *
      * <pre>
-     * A RoleAttachment connects a composite role to another role, granting members
-     * of the composite role the permissions granted to the attached role.
+     * A RoleAttachment assigns a role to a composite role.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachment}

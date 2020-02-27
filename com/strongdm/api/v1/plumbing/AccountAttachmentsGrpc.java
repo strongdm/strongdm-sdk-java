@@ -25,7 +25,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  *
  *
  * <pre>
- * AccountAttachments represent relationships between an account and a role.
+ * AccountAttachments assign an account to a role.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -266,7 +266,7 @@ public final class AccountAttachmentsGrpc {
    *
    *
    * <pre>
-   * AccountAttachments represent relationships between an account and a role.
+   * AccountAttachments assign an account to a role.
    * </pre>
    */
   public abstract static class AccountAttachmentsImplBase implements io.grpc.BindableService {
@@ -381,7 +381,7 @@ public final class AccountAttachmentsGrpc {
    *
    *
    * <pre>
-   * AccountAttachments represent relationships between an account and a role.
+   * AccountAttachments assign an account to a role.
    * </pre>
    */
   public static final class AccountAttachmentsStub
@@ -476,7 +476,7 @@ public final class AccountAttachmentsGrpc {
    *
    *
    * <pre>
-   * AccountAttachments represent relationships between an account and a role.
+   * AccountAttachments assign an account to a role.
    * </pre>
    */
   public static final class AccountAttachmentsBlockingStub
@@ -556,7 +556,7 @@ public final class AccountAttachmentsGrpc {
    *
    *
    * <pre>
-   * AccountAttachments represent relationships between an account and a role.
+   * AccountAttachments assign an account to a role.
    * </pre>
    */
   public static final class AccountAttachmentsFutureStub

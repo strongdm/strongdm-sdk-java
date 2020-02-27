@@ -821,6 +821,7 @@ public class Plumbing {
     porcelain.setEmail(plumbing.getEmail());
     porcelain.setFirstName(plumbing.getFirstName());
     porcelain.setLastName(plumbing.getLastName());
+    porcelain.setSuspended(plumbing.getSuspended());
     return porcelain;
   }
 
@@ -841,6 +842,7 @@ public class Plumbing {
     if (porcelain.getLastName() != null) {
       builder.setLastName(porcelain.getLastName());
     }
+    builder.setSuspended(porcelain.getSuspended());
     return builder.build();
   }
 
@@ -860,6 +862,7 @@ public class Plumbing {
     com.strongdm.api.v1.Service porcelain = new com.strongdm.api.v1.Service();
     porcelain.setId(plumbing.getId());
     porcelain.setName(plumbing.getName());
+    porcelain.setSuspended(plumbing.getSuspended());
     return porcelain;
   }
 
@@ -874,6 +877,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName(porcelain.getName());
     }
+    builder.setSuspended(porcelain.getSuspended());
     return builder.build();
   }
 

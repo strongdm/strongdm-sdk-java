@@ -16,8 +16,8 @@ package com.strongdm.api.v1;
 
 import java.util.Date;
 
-// An AccountGrant connects an account to a resource, granting the account
-// the ability to connect to that resource.
+// AccountGrants connect a resource directly to an account, giving the account the permission to
+// connect to that resource.
 public class AccountGrant {
   private String id;
   // Unique identifier of the AccountGrant.

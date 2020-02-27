@@ -9670,7 +9670,7 @@ public final class RoleGrantsPlumbing {
    *
    * <pre>
    * A RoleGrant connects a resource to a role, granting members of the role
-   * access to the resource.
+   * access to that resource.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrant}
@@ -10100,7 +10100,7 @@ public final class RoleGrantsPlumbing {
      *
      * <pre>
      * A RoleGrant connects a resource to a role, granting members of the role
-     * access to the resource.
+     * access to that resource.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrant}

@@ -11045,8 +11045,7 @@ public final class AccountAttachmentsPlumbing {
    *
    *
    * <pre>
-   * A AccountAttachment connects an account to a role, granting the account
-   * the permissions granted to that role.
+   * AccountAttachments assign an account to a role.
    * </pre>
    *
    * Protobuf type {@code v1.AccountAttachment}
@@ -11483,8 +11482,7 @@ public final class AccountAttachmentsPlumbing {
      *
      *
      * <pre>
-     * A AccountAttachment connects an account to a role, granting the account
-     * the permissions granted to that role.
+     * AccountAttachments assign an account to a role.
      * </pre>
      *
      * Protobuf type {@code v1.AccountAttachment}

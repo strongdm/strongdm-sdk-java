@@ -38,4 +38,15 @@ public class Service implements Account {
     this.name = in;
     return this;
   }
+
+  private boolean suspended;
+  // The Service's suspended state.
+  public boolean getSuspended() {
+    return this.suspended;
+  }
+  // The Service's suspended state.
+  public Service setSuspended(boolean in) {
+    this.suspended = in;
+    return this;
+  }
 }

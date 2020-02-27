@@ -25,7 +25,10 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  *
  *
  * <pre>
- * Accounts are users, services or tokens who connect to and act within the strongDM network.
+ * Accounts are users that have access to strongDM.
+ * There are two types of accounts:
+ * 1. **Regular users:** humans who are authenticated through username and password or SSO
+ * 2. **Service users:** machines that are authneticated using a service token
  * </pre>
  */
 @javax.annotation.Generated(
@@ -289,7 +292,10 @@ public final class AccountsGrpc {
    *
    *
    * <pre>
-   * Accounts are users, services or tokens who connect to and act within the strongDM network.
+   * Accounts are users that have access to strongDM.
+   * There are two types of accounts:
+   * 1. **Regular users:** humans who are authenticated through username and password or SSO
+   * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    */
   public abstract static class AccountsImplBase implements io.grpc.BindableService {
@@ -415,7 +421,10 @@ public final class AccountsGrpc {
    *
    *
    * <pre>
-   * Accounts are users, services or tokens who connect to and act within the strongDM network.
+   * Accounts are users that have access to strongDM.
+   * There are two types of accounts:
+   * 1. **Regular users:** humans who are authenticated through username and password or SSO
+   * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    */
   public static final class AccountsStub extends io.grpc.stub.AbstractStub<AccountsStub> {
@@ -517,7 +526,10 @@ public final class AccountsGrpc {
    *
    *
    * <pre>
-   * Accounts are users, services or tokens who connect to and act within the strongDM network.
+   * Accounts are users that have access to strongDM.
+   * There are two types of accounts:
+   * 1. **Regular users:** humans who are authenticated through username and password or SSO
+   * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    */
   public static final class AccountsBlockingStub
@@ -600,7 +612,10 @@ public final class AccountsGrpc {
    *
    *
    * <pre>
-   * Accounts are users, services or tokens who connect to and act within the strongDM network.
+   * Accounts are users that have access to strongDM.
+   * There are two types of accounts:
+   * 1. **Regular users:** humans who are authenticated through username and password or SSO
+   * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    */
   public static final class AccountsFutureStub

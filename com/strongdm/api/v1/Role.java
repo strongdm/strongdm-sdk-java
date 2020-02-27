@@ -14,9 +14,8 @@
 //
 package com.strongdm.api.v1;
 
-// A Role grants users access to a set of resources. Composite roles have no
-// resource associations of their own, but instead grant access to the combined
-// resources of their child roles.
+// A Role is a collection of permissions, and typically corresponds to a team, Active Directory OU,
+// or other organizational unit. Users are granted access to resources by assigning them to roles.
 public class Role {
   private String id;
   // Unique identifier of the Role.

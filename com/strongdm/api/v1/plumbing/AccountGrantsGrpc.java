@@ -25,10 +25,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  *
  *
  * <pre>
- * AccountGrants represent relationships between composite roles and the roles
- * that make up those composite roles. When a composite role is attached to another
- * role, the permissions granted to members of the composite role are augmented to
- * include the permissions granted to members of the attached role.
+ * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -259,10 +256,7 @@ public final class AccountGrantsGrpc {
    *
    *
    * <pre>
-   * AccountGrants represent relationships between composite roles and the roles
-   * that make up those composite roles. When a composite role is attached to another
-   * role, the permissions granted to members of the composite role are augmented to
-   * include the permissions granted to members of the attached role.
+   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public abstract static class AccountGrantsImplBase implements io.grpc.BindableService {
@@ -366,10 +360,7 @@ public final class AccountGrantsGrpc {
    *
    *
    * <pre>
-   * AccountGrants represent relationships between composite roles and the roles
-   * that make up those composite roles. When a composite role is attached to another
-   * role, the permissions granted to members of the composite role are augmented to
-   * include the permissions granted to members of the attached role.
+   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public static final class AccountGrantsStub extends io.grpc.stub.AbstractStub<AccountGrantsStub> {
@@ -455,10 +446,7 @@ public final class AccountGrantsGrpc {
    *
    *
    * <pre>
-   * AccountGrants represent relationships between composite roles and the roles
-   * that make up those composite roles. When a composite role is attached to another
-   * role, the permissions granted to members of the composite role are augmented to
-   * include the permissions granted to members of the attached role.
+   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public static final class AccountGrantsBlockingStub
@@ -530,10 +518,7 @@ public final class AccountGrantsGrpc {
    *
    *
    * <pre>
-   * AccountGrants represent relationships between composite roles and the roles
-   * that make up those composite roles. When a composite role is attached to another
-   * role, the permissions granted to members of the composite role are augmented to
-   * include the permissions granted to members of the attached role.
+   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public static final class AccountGrantsFutureStub

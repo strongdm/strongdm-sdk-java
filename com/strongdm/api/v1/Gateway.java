@@ -28,11 +28,11 @@ public class Gateway implements Node {
   }
 
   private String name;
-  // Unique human-readable name of the Gateway.
+  // Unique human-readable name of the Gateway. Generated if not provided on create.
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Gateway.
+  // Unique human-readable name of the Gateway. Generated if not provided on create.
   public Gateway setName(String in) {
     this.name = in;
     return this;
@@ -64,10 +64,12 @@ public class Gateway implements Node {
 
   private String bindAddress;
   // The hostname/port tuple which the gateway daemon will bind to.
+  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
   public String getBindAddress() {
     return this.bindAddress;
   }
   // The hostname/port tuple which the gateway daemon will bind to.
+  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
   public Gateway setBindAddress(String in) {
     this.bindAddress = in;
     return this;

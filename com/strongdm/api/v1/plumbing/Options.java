@@ -98,6 +98,19 @@ public final class Options {
      * @return The bytes for idType.
      */
     com.google.protobuf.ByteString getIdTypeBytes();
+
+    /**
+     *
+     *
+     * <pre>
+     * sdk_only fields are not mapped directly to fields in our internal models.
+     * </pre>
+     *
+     * <code>bool sdk_only = 1941306;</code>
+     *
+     * @return The sdkOnly.
+     */
+    boolean getSdkOnly();
   }
   /** Protobuf type {@code v1.FieldOptions} */
   public static final class FieldOptions extends com.google.protobuf.GeneratedMessageV3
@@ -176,6 +189,11 @@ public final class Options {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 idType_ = s;
+                break;
+              }
+            case 15530448:
+              {
+                sdkOnly_ = input.readBool();
                 break;
               }
             default:
@@ -333,6 +351,23 @@ public final class Options {
       }
     }
 
+    public static final int SDK_ONLY_FIELD_NUMBER = 1941306;
+    private boolean sdkOnly_;
+    /**
+     *
+     *
+     * <pre>
+     * sdk_only fields are not mapped directly to fields in our internal models.
+     * </pre>
+     *
+     * <code>bool sdk_only = 1941306;</code>
+     *
+     * @return The sdkOnly.
+     */
+    public boolean getSdkOnly() {
+      return sdkOnly_;
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -365,6 +400,9 @@ public final class Options {
       if (!getIdTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941305, idType_);
       }
+      if (sdkOnly_ != false) {
+        output.writeBool(1941306, sdkOnly_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -392,6 +430,9 @@ public final class Options {
       if (!getIdTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941305, idType_);
       }
+      if (sdkOnly_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941306, sdkOnly_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -414,6 +455,7 @@ public final class Options {
       if (getIterable() != other.getIterable()) return false;
       if (getRequired() != other.getRequired()) return false;
       if (!getIdType().equals(other.getIdType())) return false;
+      if (getSdkOnly() != other.getSdkOnly()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -437,6 +479,8 @@ public final class Options {
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getRequired());
       hash = (37 * hash) + ID_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getIdType().hashCode();
+      hash = (37 * hash) + SDK_ONLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSdkOnly());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -587,6 +631,8 @@ public final class Options {
 
         idType_ = "";
 
+        sdkOnly_ = false;
+
         return this;
       }
 
@@ -619,6 +665,7 @@ public final class Options {
         result.iterable_ = iterable_;
         result.required_ = required_;
         result.idType_ = idType_;
+        result.sdkOnly_ = sdkOnly_;
         onBuilt();
         return result;
       }
@@ -690,6 +737,9 @@ public final class Options {
         if (!other.getIdType().isEmpty()) {
           idType_ = other.idType_;
           onChanged();
+        }
+        if (other.getSdkOnly() != false) {
+          setSdkOnly(other.getSdkOnly());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1028,6 +1078,57 @@ public final class Options {
         checkByteStringIsUtf8(value);
 
         idType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean sdkOnly_;
+      /**
+       *
+       *
+       * <pre>
+       * sdk_only fields are not mapped directly to fields in our internal models.
+       * </pre>
+       *
+       * <code>bool sdk_only = 1941306;</code>
+       *
+       * @return The sdkOnly.
+       */
+      public boolean getSdkOnly() {
+        return sdkOnly_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * sdk_only fields are not mapped directly to fields in our internal models.
+       * </pre>
+       *
+       * <code>bool sdk_only = 1941306;</code>
+       *
+       * @param value The sdkOnly to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSdkOnly(boolean value) {
+
+        sdkOnly_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * sdk_only fields are not mapped directly to fields in our internal models.
+       * </pre>
+       *
+       * <code>bool sdk_only = 1941306;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearSdkOnly() {
+
+        sdkOnly_ = false;
         onChanged();
         return this;
       }
@@ -4202,27 +4303,27 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des"
-          + "criptor.proto\"\220\001\n\014FieldOptions\022\016\n\004name\030\264"
+          + "criptor.proto\"\244\001\n\014FieldOptions\022\016\n\004name\030\264"
           + "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose"
           + "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001("
           + "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t"
-          + "\"\222\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001("
-          + "\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022"
-          + "\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform_do"
-          + "cs\030\270\276v \001(\0132\021.v1.TerraformDocs\"T\n\rTerrafo"
-          + "rmDocs\022\037\n\025resource_example_path\030\264\276v \001(\t\022"
-          + "\"\n\030data_source_example_path\030\265\276v \001(\t\"$\n\014O"
-          + "neofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\"%\n\016Ser"
-          + "viceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rfiel"
-          + "d_options\022\035.google.protobuf.FieldOptions"
-          + "\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message_op"
-          + "tions\022\037.google.protobuf.MessageOptions\030\217"
-          + "\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_opti"
-          + "ons\022\035.google.protobuf.OneofOptions\030\205\277v \001"
-          + "(\0132\020.v1.OneofOptions:N\n\017service_options\022"
-          + "\037.google.protobuf.ServiceOptions\030\231\277v \001(\013"
-          + "2\022.v1.ServiceOptionsB\036\n\034com.strongdm.api"
-          + ".v1.plumbingb\006proto3"
+          + "\022\022\n\010sdk_only\030\272\276v \001(\010\"\222\001\n\016MessageOptions\022"
+          + "\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001"
+          + "(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v"
+          + " \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Terr"
+          + "aformDocs\"T\n\rTerraformDocs\022\037\n\025resource_e"
+          + "xample_path\030\264\276v \001(\t\022\"\n\030data_source_examp"
+          + "le_path\030\265\276v \001(\t\"$\n\014OneofOptions\022\024\n\nmodel"
+          + "_name\030\204\277v \001(\t\"%\n\016ServiceOptions\022\023\n\tmain_"
+          + "noun\030\230\277v \001(\t:H\n\rfield_options\022\035.google.p"
+          + "rotobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldO"
+          + "ptions:N\n\017message_options\022\037.google.proto"
+          + "buf.MessageOptions\030\217\277v \001(\0132\022.v1.MessageO"
+          + "ptions:H\n\roneof_options\022\035.google.protobu"
+          + "f.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptions"
+          + ":N\n\017service_options\022\037.google.protobuf.Se"
+          + "rviceOptions\030\231\277v \001(\0132\022.v1.ServiceOptions"
+          + "B\036\n\034com.strongdm.api.v1.plumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -4235,7 +4336,13 @@ public final class Options {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_FieldOptions_descriptor,
             new java.lang.String[] {
-              "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType",
+              "Name",
+              "SqlNullable",
+              "ExposeAsPorcelain",
+              "Iterable",
+              "Required",
+              "IdType",
+              "SdkOnly",
             });
     internal_static_v1_MessageOptions_descriptor = getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable =

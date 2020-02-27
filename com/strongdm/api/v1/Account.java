@@ -14,7 +14,10 @@
 //
 package com.strongdm.api.v1;
 
-// An Account is one of many types of users or tokens that can access StrongDM.
+// Accounts are users that have access to strongDM.
+// There are two types of accounts:
+// 1. **Regular users:** humans who are authenticated through username and password or SSO
+// 2. **Service users:** machines that are authneticated using a service token
 public interface Account {
   // Returns the unique identifier of the Account.
   String getId();
