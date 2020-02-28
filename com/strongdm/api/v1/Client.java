@@ -114,8 +114,13 @@ public class Client {
   public Roles roles() {
     return this.roles;
   }
-  // Creates a new strongDM API client. Pass in the API hostname, port, and authentication token.
-  public Client(String host, int port, String apiAccessKey, String apiSecretKey)
+  // Creates a new strongDM API client.
+  public Client(String apiAccessKey, String apiSecretKey) throws RpcException {
+    this(apiAccessKey, apiSecretKey, new ClientOptions());
+  }
+
+  // Creates a new strongDM API client with extra options.
+  public Client(String apiAccessKey, String apiSecretKey, ClientOptions options)
       throws RpcException {
     this.apiAccessKey = apiAccessKey;
     this.apiSecretKey = Base64.getDecoder().decode(apiSecretKey);
@@ -123,11 +128,12 @@ public class Client {
     this.baseRetryDelay = this.defaultBaseRetryDelay;
     this.maxRetryDelay = this.defaultMaxRetryDelay;
     try {
-      NettyChannelBuilder builder = NettyChannelBuilder.forAddress(host, port);
-      if (port == 443) {
-        builder = builder.useTransportSecurity().sslContext(GrpcSslContexts.forClient().build());
-      } else {
+      NettyChannelBuilder builder =
+          NettyChannelBuilder.forAddress(options.getHost(), options.getPort());
+      if (options.getInsecure()) {
         builder = builder.usePlaintext();
+      } else {
+        builder = builder.useTransportSecurity().sslContext(GrpcSslContexts.forClient().build());
       }
       this.channel = builder.build();
       this.accountAttachments = new AccountAttachments(this.channel, this);
