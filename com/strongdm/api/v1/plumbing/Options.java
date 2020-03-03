@@ -111,6 +111,19 @@ public final class Options {
      * @return The sdkOnly.
      */
     boolean getSdkOnly();
+
+    /**
+     *
+     *
+     * <pre>
+     * computed exposes fields to Terraform even if they are read_only.
+     * </pre>
+     *
+     * <code>bool computed = 1941307;</code>
+     *
+     * @return The computed.
+     */
+    boolean getComputed();
   }
   /** Protobuf type {@code v1.FieldOptions} */
   public static final class FieldOptions extends com.google.protobuf.GeneratedMessageV3
@@ -194,6 +207,11 @@ public final class Options {
             case 15530448:
               {
                 sdkOnly_ = input.readBool();
+                break;
+              }
+            case 15530456:
+              {
+                computed_ = input.readBool();
                 break;
               }
             default:
@@ -368,6 +386,23 @@ public final class Options {
       return sdkOnly_;
     }
 
+    public static final int COMPUTED_FIELD_NUMBER = 1941307;
+    private boolean computed_;
+    /**
+     *
+     *
+     * <pre>
+     * computed exposes fields to Terraform even if they are read_only.
+     * </pre>
+     *
+     * <code>bool computed = 1941307;</code>
+     *
+     * @return The computed.
+     */
+    public boolean getComputed() {
+      return computed_;
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -403,6 +438,9 @@ public final class Options {
       if (sdkOnly_ != false) {
         output.writeBool(1941306, sdkOnly_);
       }
+      if (computed_ != false) {
+        output.writeBool(1941307, computed_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -433,6 +471,9 @@ public final class Options {
       if (sdkOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941306, sdkOnly_);
       }
+      if (computed_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941307, computed_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -456,6 +497,7 @@ public final class Options {
       if (getRequired() != other.getRequired()) return false;
       if (!getIdType().equals(other.getIdType())) return false;
       if (getSdkOnly() != other.getSdkOnly()) return false;
+      if (getComputed() != other.getComputed()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -481,6 +523,8 @@ public final class Options {
       hash = (53 * hash) + getIdType().hashCode();
       hash = (37 * hash) + SDK_ONLY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSdkOnly());
+      hash = (37 * hash) + COMPUTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getComputed());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -633,6 +677,8 @@ public final class Options {
 
         sdkOnly_ = false;
 
+        computed_ = false;
+
         return this;
       }
 
@@ -666,6 +712,7 @@ public final class Options {
         result.required_ = required_;
         result.idType_ = idType_;
         result.sdkOnly_ = sdkOnly_;
+        result.computed_ = computed_;
         onBuilt();
         return result;
       }
@@ -740,6 +787,9 @@ public final class Options {
         }
         if (other.getSdkOnly() != false) {
           setSdkOnly(other.getSdkOnly());
+        }
+        if (other.getComputed() != false) {
+          setComputed(other.getComputed());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1129,6 +1179,57 @@ public final class Options {
       public Builder clearSdkOnly() {
 
         sdkOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean computed_;
+      /**
+       *
+       *
+       * <pre>
+       * computed exposes fields to Terraform even if they are read_only.
+       * </pre>
+       *
+       * <code>bool computed = 1941307;</code>
+       *
+       * @return The computed.
+       */
+      public boolean getComputed() {
+        return computed_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * computed exposes fields to Terraform even if they are read_only.
+       * </pre>
+       *
+       * <code>bool computed = 1941307;</code>
+       *
+       * @param value The computed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComputed(boolean value) {
+
+        computed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * computed exposes fields to Terraform even if they are read_only.
+       * </pre>
+       *
+       * <code>bool computed = 1941307;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearComputed() {
+
+        computed_ = false;
         onChanged();
         return this;
       }
@@ -3096,6 +3197,33 @@ public final class Options {
      * @return The bytes for modelName.
      */
     com.google.protobuf.ByteString getModelNameBytes();
+
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @return A list containing the commonFields.
+     */
+    java.util.List<java.lang.String> getCommonFieldsList();
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @return The count of commonFields.
+     */
+    int getCommonFieldsCount();
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The commonFields at the given index.
+     */
+    java.lang.String getCommonFields(int index);
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the commonFields at the given index.
+     */
+    com.google.protobuf.ByteString getCommonFieldsBytes(int index);
   }
   /** Protobuf type {@code v1.OneofOptions} */
   public static final class OneofOptions extends com.google.protobuf.GeneratedMessageV3
@@ -3110,6 +3238,7 @@ public final class Options {
 
     private OneofOptions() {
       modelName_ = "";
+      commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -3131,6 +3260,7 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3148,6 +3278,16 @@ public final class Options {
                 modelName_ = s;
                 break;
               }
+            case 15531050:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  commonFields_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                commonFields_.add(s);
+                break;
+              }
             default:
               {
                 if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -3162,6 +3302,9 @@ public final class Options {
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          commonFields_ = commonFields_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3215,6 +3358,43 @@ public final class Options {
       }
     }
 
+    public static final int COMMON_FIELDS_FIELD_NUMBER = 1941381;
+    private com.google.protobuf.LazyStringList commonFields_;
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @return A list containing the commonFields.
+     */
+    public com.google.protobuf.ProtocolStringList getCommonFieldsList() {
+      return commonFields_;
+    }
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @return The count of commonFields.
+     */
+    public int getCommonFieldsCount() {
+      return commonFields_.size();
+    }
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @param index The index of the element to return.
+     * @return The commonFields at the given index.
+     */
+    public java.lang.String getCommonFields(int index) {
+      return commonFields_.get(index);
+    }
+    /**
+     * <code>repeated string common_fields = 1941381;</code>
+     *
+     * @param index The index of the value to return.
+     * @return The bytes of the commonFields at the given index.
+     */
+    public com.google.protobuf.ByteString getCommonFieldsBytes(int index) {
+      return commonFields_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -3232,6 +3412,10 @@ public final class Options {
       if (!getModelNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941380, modelName_);
       }
+      for (int i = 0; i < commonFields_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(
+            output, 1941381, commonFields_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3243,6 +3427,14 @@ public final class Options {
       size = 0;
       if (!getModelNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941380, modelName_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < commonFields_.size(); i++) {
+          dataSize += computeStringSizeNoTag(commonFields_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getCommonFieldsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3261,6 +3453,7 @@ public final class Options {
           (com.strongdm.api.v1.plumbing.Options.OneofOptions) obj;
 
       if (!getModelName().equals(other.getModelName())) return false;
+      if (!getCommonFieldsList().equals(other.getCommonFieldsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3274,6 +3467,10 @@ public final class Options {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getModelName().hashCode();
+      if (getCommonFieldsCount() > 0) {
+        hash = (37 * hash) + COMMON_FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommonFieldsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3414,6 +3611,8 @@ public final class Options {
         super.clear();
         modelName_ = "";
 
+        commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -3440,7 +3639,13 @@ public final class Options {
       public com.strongdm.api.v1.plumbing.Options.OneofOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.OneofOptions result =
             new com.strongdm.api.v1.plumbing.Options.OneofOptions(this);
+        int from_bitField0_ = bitField0_;
         result.modelName_ = modelName_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          commonFields_ = commonFields_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.commonFields_ = commonFields_;
         onBuilt();
         return result;
       }
@@ -3497,6 +3702,16 @@ public final class Options {
           modelName_ = other.modelName_;
           onChanged();
         }
+        if (!other.commonFields_.isEmpty()) {
+          if (commonFields_.isEmpty()) {
+            commonFields_ = other.commonFields_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCommonFieldsIsMutable();
+            commonFields_.addAll(other.commonFields_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3526,6 +3741,8 @@ public final class Options {
         }
         return this;
       }
+
+      private int bitField0_;
 
       private java.lang.Object modelName_ = "";
       /**
@@ -3599,6 +3816,120 @@ public final class Options {
         checkByteStringIsUtf8(value);
 
         modelName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList commonFields_ =
+          com.google.protobuf.LazyStringArrayList.EMPTY;
+
+      private void ensureCommonFieldsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          commonFields_ = new com.google.protobuf.LazyStringArrayList(commonFields_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @return A list containing the commonFields.
+       */
+      public com.google.protobuf.ProtocolStringList getCommonFieldsList() {
+        return commonFields_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @return The count of commonFields.
+       */
+      public int getCommonFieldsCount() {
+        return commonFields_.size();
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @param index The index of the element to return.
+       * @return The commonFields at the given index.
+       */
+      public java.lang.String getCommonFields(int index) {
+        return commonFields_.get(index);
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @param index The index of the value to return.
+       * @return The bytes of the commonFields at the given index.
+       */
+      public com.google.protobuf.ByteString getCommonFieldsBytes(int index) {
+        return commonFields_.getByteString(index);
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @param index The index to set the value at.
+       * @param value The commonFields to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommonFields(int index, java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCommonFieldsIsMutable();
+        commonFields_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @param value The commonFields to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCommonFields(java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCommonFieldsIsMutable();
+        commonFields_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @param values The commonFields to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCommonFields(java.lang.Iterable<java.lang.String> values) {
+        ensureCommonFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, commonFields_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearCommonFields() {
+        commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string common_fields = 1941381;</code>
+       *
+       * @param value The bytes of the commonFields to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCommonFieldsBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+        ensureCommonFieldsIsMutable();
+        commonFields_.add(value);
         onChanged();
         return this;
       }
@@ -4303,27 +4634,29 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des"
-          + "criptor.proto\"\244\001\n\014FieldOptions\022\016\n\004name\030\264"
+          + "criptor.proto\"\270\001\n\014FieldOptions\022\016\n\004name\030\264"
           + "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose"
           + "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001("
           + "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t"
-          + "\022\022\n\010sdk_only\030\272\276v \001(\010\"\222\001\n\016MessageOptions\022"
-          + "\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001"
-          + "(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v"
-          + " \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Terr"
-          + "aformDocs\"T\n\rTerraformDocs\022\037\n\025resource_e"
-          + "xample_path\030\264\276v \001(\t\022\"\n\030data_source_examp"
-          + "le_path\030\265\276v \001(\t\"$\n\014OneofOptions\022\024\n\nmodel"
-          + "_name\030\204\277v \001(\t\"%\n\016ServiceOptions\022\023\n\tmain_"
-          + "noun\030\230\277v \001(\t:H\n\rfield_options\022\035.google.p"
-          + "rotobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldO"
-          + "ptions:N\n\017message_options\022\037.google.proto"
-          + "buf.MessageOptions\030\217\277v \001(\0132\022.v1.MessageO"
-          + "ptions:H\n\roneof_options\022\035.google.protobu"
-          + "f.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptions"
-          + ":N\n\017service_options\022\037.google.protobuf.Se"
-          + "rviceOptions\030\231\277v \001(\0132\022.v1.ServiceOptions"
-          + "B\036\n\034com.strongdm.api.v1.plumbingb\006proto3"
+          + "\022\022\n\010sdk_only\030\272\276v \001(\010\022\022\n\010computed\030\273\276v \001(\010"
+          + "\"\222\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001("
+          + "\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022"
+          + "\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform_do"
+          + "cs\030\270\276v \001(\0132\021.v1.TerraformDocs\"T\n\rTerrafo"
+          + "rmDocs\022\037\n\025resource_example_path\030\264\276v \001(\t\022"
+          + "\"\n\030data_source_example_path\030\265\276v \001(\t\"=\n\014O"
+          + "neofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\rcom"
+          + "mon_fields\030\205\277v \003(\t\"%\n\016ServiceOptions\022\023\n\t"
+          + "main_noun\030\230\277v \001(\t:H\n\rfield_options\022\035.goo"
+          + "gle.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.F"
+          + "ieldOptions:N\n\017message_options\022\037.google."
+          + "protobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Mes"
+          + "sageOptions:H\n\roneof_options\022\035.google.pr"
+          + "otobuf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOp"
+          + "tions:N\n\017service_options\022\037.google.protob"
+          + "uf.ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOp"
+          + "tionsB\036\n\034com.strongdm.api.v1.plumbingb\006p"
+          + "roto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -4343,6 +4676,7 @@ public final class Options {
               "Required",
               "IdType",
               "SdkOnly",
+              "Computed",
             });
     internal_static_v1_MessageOptions_descriptor = getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable =
@@ -4363,7 +4697,7 @@ public final class Options {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_v1_OneofOptions_descriptor,
             new java.lang.String[] {
-              "ModelName",
+              "ModelName", "CommonFields",
             });
     internal_static_v1_ServiceOptions_descriptor = getDescriptor().getMessageTypes().get(4);
     internal_static_v1_ServiceOptions_fieldAccessorTable =

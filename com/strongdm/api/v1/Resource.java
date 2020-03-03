@@ -18,4 +18,6 @@ package com.strongdm.api.v1;
 public interface Resource {
   // Returns the unique identifier of the Resource.
   String getId();
+  // Returns the name of the Resource.
+  String getName();
 }
