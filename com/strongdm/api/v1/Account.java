@@ -24,4 +24,6 @@ package com.strongdm.api.v1;
 public interface Account {
   // Returns the unique identifier of the Account.
   String getId();
+  // Returns whether the Account is suspended.
+  boolean getSuspended();
 }

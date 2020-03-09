@@ -10121,14 +10121,14 @@ public final class Spec {
           + "\022\031\n\005limit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining"
           + "\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.g"
           + "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006"
-          + "bucket\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B\363\001\n"
-          + "\034com.strongdm.api.v1.plumbing\222A\321\001\022u\n\010Str"
+          + "bucket\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B\370\001\n"
+          + "\034com.strongdm.api.v1.plumbing\222A\326\001\022w\n\010Str"
           + "ongDM\022\036The infrastructure access API.\"D\n"
           + "\010StrongDM\022\"https://www.strongdm.com/docs"
-          + "/api/\032\024support@strongdm.com2\0031.0\032\020api.st"
-          + "rongdm.comrF\n!Learn more about the stron"
-          + "gDM API\022!https://www.strongdm.com/docs/a"
-          + "pib\006proto3"
+          + "/api/\032\024support@strongdm.com2\0051.0.0\032\020api."
+          + "strongdm.com*\001\002rF\n!Learn more about the "
+          + "strongDM API\022!https://www.strongdm.com/d"
+          + "ocs/apib\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(

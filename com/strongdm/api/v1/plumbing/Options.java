@@ -124,6 +124,19 @@ public final class Options {
      * @return The computed.
      */
     boolean getComputed();
+
+    /**
+     *
+     *
+     * <pre>
+     * force_new forces Terraform to delete and recreate the object if the field changes.
+     * </pre>
+     *
+     * <code>bool force_new = 1941308;</code>
+     *
+     * @return The forceNew.
+     */
+    boolean getForceNew();
   }
   /** Protobuf type {@code v1.FieldOptions} */
   public static final class FieldOptions extends com.google.protobuf.GeneratedMessageV3
@@ -212,6 +225,11 @@ public final class Options {
             case 15530456:
               {
                 computed_ = input.readBool();
+                break;
+              }
+            case 15530464:
+              {
+                forceNew_ = input.readBool();
                 break;
               }
             default:
@@ -403,6 +421,23 @@ public final class Options {
       return computed_;
     }
 
+    public static final int FORCE_NEW_FIELD_NUMBER = 1941308;
+    private boolean forceNew_;
+    /**
+     *
+     *
+     * <pre>
+     * force_new forces Terraform to delete and recreate the object if the field changes.
+     * </pre>
+     *
+     * <code>bool force_new = 1941308;</code>
+     *
+     * @return The forceNew.
+     */
+    public boolean getForceNew() {
+      return forceNew_;
+    }
+
     private byte memoizedIsInitialized = -1;
 
     @java.lang.Override
@@ -441,6 +476,9 @@ public final class Options {
       if (computed_ != false) {
         output.writeBool(1941307, computed_);
       }
+      if (forceNew_ != false) {
+        output.writeBool(1941308, forceNew_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -474,6 +512,9 @@ public final class Options {
       if (computed_ != false) {
         size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941307, computed_);
       }
+      if (forceNew_ != false) {
+        size += com.google.protobuf.CodedOutputStream.computeBoolSize(1941308, forceNew_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -498,6 +539,7 @@ public final class Options {
       if (!getIdType().equals(other.getIdType())) return false;
       if (getSdkOnly() != other.getSdkOnly()) return false;
       if (getComputed() != other.getComputed()) return false;
+      if (getForceNew() != other.getForceNew()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -525,6 +567,8 @@ public final class Options {
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getSdkOnly());
       hash = (37 * hash) + COMPUTED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getComputed());
+      hash = (37 * hash) + FORCE_NEW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getForceNew());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -679,6 +723,8 @@ public final class Options {
 
         computed_ = false;
 
+        forceNew_ = false;
+
         return this;
       }
 
@@ -713,6 +759,7 @@ public final class Options {
         result.idType_ = idType_;
         result.sdkOnly_ = sdkOnly_;
         result.computed_ = computed_;
+        result.forceNew_ = forceNew_;
         onBuilt();
         return result;
       }
@@ -790,6 +837,9 @@ public final class Options {
         }
         if (other.getComputed() != false) {
           setComputed(other.getComputed());
+        }
+        if (other.getForceNew() != false) {
+          setForceNew(other.getForceNew());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1230,6 +1280,57 @@ public final class Options {
       public Builder clearComputed() {
 
         computed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean forceNew_;
+      /**
+       *
+       *
+       * <pre>
+       * force_new forces Terraform to delete and recreate the object if the field changes.
+       * </pre>
+       *
+       * <code>bool force_new = 1941308;</code>
+       *
+       * @return The forceNew.
+       */
+      public boolean getForceNew() {
+        return forceNew_;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * force_new forces Terraform to delete and recreate the object if the field changes.
+       * </pre>
+       *
+       * <code>bool force_new = 1941308;</code>
+       *
+       * @param value The forceNew to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForceNew(boolean value) {
+
+        forceNew_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       *
+       *
+       * <pre>
+       * force_new forces Terraform to delete and recreate the object if the field changes.
+       * </pre>
+       *
+       * <code>bool force_new = 1941308;</code>
+       *
+       * @return This builder for chaining.
+       */
+      public Builder clearForceNew() {
+
+        forceNew_ = false;
         onChanged();
         return this;
       }
@@ -4634,29 +4735,29 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des"
-          + "criptor.proto\"\270\001\n\014FieldOptions\022\016\n\004name\030\264"
+          + "criptor.proto\"\315\001\n\014FieldOptions\022\016\n\004name\030\264"
           + "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose"
           + "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001("
           + "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t"
           + "\022\022\n\010sdk_only\030\272\276v \001(\010\022\022\n\010computed\030\273\276v \001(\010"
-          + "\"\222\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001("
-          + "\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022"
-          + "\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform_do"
-          + "cs\030\270\276v \001(\0132\021.v1.TerraformDocs\"T\n\rTerrafo"
-          + "rmDocs\022\037\n\025resource_example_path\030\264\276v \001(\t\022"
-          + "\"\n\030data_source_example_path\030\265\276v \001(\t\"=\n\014O"
-          + "neofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\rcom"
-          + "mon_fields\030\205\277v \003(\t\"%\n\016ServiceOptions\022\023\n\t"
-          + "main_noun\030\230\277v \001(\t:H\n\rfield_options\022\035.goo"
-          + "gle.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.F"
-          + "ieldOptions:N\n\017message_options\022\037.google."
-          + "protobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Mes"
-          + "sageOptions:H\n\roneof_options\022\035.google.pr"
-          + "otobuf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOp"
-          + "tions:N\n\017service_options\022\037.google.protob"
-          + "uf.ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOp"
-          + "tionsB\036\n\034com.strongdm.api.v1.plumbingb\006p"
-          + "roto3"
+          + "\022\023\n\tforce_new\030\274\276v \001(\010\"\222\001\n\016MessageOptions"
+          + "\022\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v "
+          + "\001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276"
+          + "v \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Ter"
+          + "raformDocs\"T\n\rTerraformDocs\022\037\n\025resource_"
+          + "example_path\030\264\276v \001(\t\022\"\n\030data_source_exam"
+          + "ple_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nmode"
+          + "l_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v \003(\t\""
+          + "%\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:H"
+          + "\n\rfield_options\022\035.google.protobuf.FieldO"
+          + "ptions\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017mess"
+          + "age_options\022\037.google.protobuf.MessageOpt"
+          + "ions\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneo"
+          + "f_options\022\035.google.protobuf.OneofOptions"
+          + "\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017service_op"
+          + "tions\022\037.google.protobuf.ServiceOptions\030\231"
+          + "\277v \001(\0132\022.v1.ServiceOptionsB\036\n\034com.strong"
+          + "dm.api.v1.plumbingb\006proto3"
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
@@ -4677,6 +4778,7 @@ public final class Options {
               "IdType",
               "SdkOnly",
               "Computed",
+              "ForceNew",
             });
     internal_static_v1_MessageOptions_descriptor = getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable =
