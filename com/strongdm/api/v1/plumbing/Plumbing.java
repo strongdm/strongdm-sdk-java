@@ -3599,6 +3599,7 @@ public class Plumbing {
     porcelain.setUsername(plumbing.getUsername());
     porcelain.setPort(plumbing.getPort());
     porcelain.setPublicKey(plumbing.getPublicKey());
+    porcelain.setPortForwarding(plumbing.getPortForwarding());
     return porcelain;
   }
 
@@ -3624,6 +3625,7 @@ public class Plumbing {
     if (porcelain.getPublicKey() != null) {
       builder.setPublicKey(porcelain.getPublicKey());
     }
+    builder.setPortForwarding(porcelain.getPortForwarding());
     return builder.build();
   }
 

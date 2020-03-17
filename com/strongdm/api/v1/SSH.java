@@ -94,4 +94,15 @@ public class SSH implements Resource {
     this.publicKey = in;
     return this;
   }
+
+  private boolean portForwarding;
+
+  public boolean getPortForwarding() {
+    return this.portForwarding;
+  }
+
+  public SSH setPortForwarding(boolean in) {
+    this.portForwarding = in;
+    return this;
+  }
 }
