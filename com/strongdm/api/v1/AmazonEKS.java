@@ -127,4 +127,15 @@ public class AmazonEKS implements Resource {
     this.clusterName = in;
     return this;
   }
+
+  private String roleArn;
+
+  public String getRoleArn() {
+    return this.roleArn;
+  }
+
+  public AmazonEKS setRoleArn(String in) {
+    this.roleArn = in;
+    return this;
+  }
 }

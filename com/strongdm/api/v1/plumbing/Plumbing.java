@@ -2036,6 +2036,7 @@ public class Plumbing {
     porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
     porcelain.setRegion(plumbing.getRegion());
     porcelain.setClusterName(plumbing.getClusterName());
+    porcelain.setRoleArn(plumbing.getRoleArn());
     return porcelain;
   }
 
@@ -2071,6 +2072,9 @@ public class Plumbing {
     }
     if (porcelain.getClusterName() != null) {
       builder.setClusterName(porcelain.getClusterName());
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn(porcelain.getRoleArn());
     }
     return builder.build();
   }
