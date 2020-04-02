@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // AccountGrantDeleteResponse returns information about a AccountGrant that was deleted.
 public class AccountGrantDeleteResponse {
   private DeleteResponseMetadata meta;

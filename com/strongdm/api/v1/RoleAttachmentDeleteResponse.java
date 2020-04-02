@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
 public class RoleAttachmentDeleteResponse {
   private DeleteResponseMetadata meta;

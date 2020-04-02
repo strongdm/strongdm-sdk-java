@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // AccountGrantCreateResponse reports how the AccountGrants were created in the system.
 public class AccountGrantCreateResponse {
   private CreateResponseMetadata meta;

@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // ResourceUpdateResponse returns the fields of a Resource after it has been updated by
 // a ResourceUpdateRequest.
 public class ResourceUpdateResponse {

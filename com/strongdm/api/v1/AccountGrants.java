@@ -55,7 +55,7 @@ public class AccountGrants {
   public AccountGrantCreateResponse create(AccountGrant accountGrant) throws RpcException {
     AccountGrantsPlumbing.AccountGrantCreateRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantCreateRequest.newBuilder();
-    builder.setAccountGrant(Plumbing.accountGrantToPlumbing(accountGrant));
+    builder.setAccountGrant(Plumbing.convertAccountGrantToPlumbing(accountGrant));
     AccountGrantsPlumbing.AccountGrantCreateRequest req = builder.build();
     AccountGrantsPlumbing.AccountGrantCreateResponse plumbingResponse;
     int tries = 0;
@@ -81,7 +81,7 @@ public class AccountGrants {
   public AccountGrantGetResponse get(String id) throws RpcException {
     AccountGrantsPlumbing.AccountGrantGetRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     AccountGrantsPlumbing.AccountGrantGetRequest req = builder.build();
     AccountGrantsPlumbing.AccountGrantGetResponse plumbingResponse;
     int tries = 0;
@@ -107,7 +107,7 @@ public class AccountGrants {
   public AccountGrantDeleteResponse delete(String id) throws RpcException {
     AccountGrantsPlumbing.AccountGrantDeleteRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     AccountGrantsPlumbing.AccountGrantDeleteRequest req = builder.build();
     AccountGrantsPlumbing.AccountGrantDeleteResponse plumbingResponse;
     int tries = 0;

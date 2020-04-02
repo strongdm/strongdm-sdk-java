@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 public class Kubernetes implements Resource {
   private String id;
   // Unique identifier of the Resource.

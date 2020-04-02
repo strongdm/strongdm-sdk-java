@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // RoleGrantGetResponse returns a requested RoleGrant.
 public class RoleGrantGetResponse {
   private GetResponseMetadata meta;

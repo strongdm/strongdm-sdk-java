@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // Accounts are users that have access to strongDM.
 // There are two types of accounts:
 // 1. **Regular users:** humans who are authenticated through username and password or SSO

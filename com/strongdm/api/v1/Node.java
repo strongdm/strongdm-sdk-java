@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // Nodes make up the strongDM network, and allow your users to connect securely to your resources.
 // There are two types of nodes:
 // 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature

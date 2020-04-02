@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // A RoleAttachment assigns a role to a composite role.
 public class RoleAttachment {
   private String id;

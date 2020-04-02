@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // NodeCreateResponse reports how the Nodes were created in the system.
 public class NodeCreateResponse {
   private CreateResponseMetadata meta;

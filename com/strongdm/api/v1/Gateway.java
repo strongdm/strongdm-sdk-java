@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // Gateway represents a StrongDM CLI installation running in gateway mode.
 public class Gateway implements Node {
   private String id;

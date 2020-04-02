@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // AccountAttachments assign an account to a role.
 public class AccountAttachment {
   private String id;

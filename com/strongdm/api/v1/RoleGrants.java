@@ -57,7 +57,7 @@ public class RoleGrants {
   public RoleGrantCreateResponse create(RoleGrant roleGrant) throws RpcException {
     RoleGrantsPlumbing.RoleGrantCreateRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantCreateRequest.newBuilder();
-    builder.setRoleGrant(Plumbing.roleGrantToPlumbing(roleGrant));
+    builder.setRoleGrant(Plumbing.convertRoleGrantToPlumbing(roleGrant));
     RoleGrantsPlumbing.RoleGrantCreateRequest req = builder.build();
     RoleGrantsPlumbing.RoleGrantCreateResponse plumbingResponse;
     int tries = 0;
@@ -83,7 +83,7 @@ public class RoleGrants {
   public RoleGrantGetResponse get(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantGetRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RoleGrantsPlumbing.RoleGrantGetRequest req = builder.build();
     RoleGrantsPlumbing.RoleGrantGetResponse plumbingResponse;
     int tries = 0;
@@ -109,7 +109,7 @@ public class RoleGrants {
   public RoleGrantDeleteResponse delete(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantDeleteRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RoleGrantsPlumbing.RoleGrantDeleteRequest req = builder.build();
     RoleGrantsPlumbing.RoleGrantDeleteResponse plumbingResponse;
     int tries = 0;

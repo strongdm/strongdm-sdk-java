@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // AccountAttachmentCreateResponse reports how the AccountAttachments were created in the system.
 public class AccountAttachmentCreateResponse {
   private CreateResponseMetadata meta;

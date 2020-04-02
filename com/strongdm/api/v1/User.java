@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // A User can connect to resources they are granted directly, or granted
 // via roles.
 public class User implements Account {

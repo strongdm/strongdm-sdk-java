@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // AccountAttachmentCreateOptions specifies extra options for creating an
 // AccountAttachment.
 public class AccountAttachmentCreateOptions {

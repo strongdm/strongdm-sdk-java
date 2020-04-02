@@ -57,7 +57,7 @@ public class Accounts {
   public AccountCreateResponse create(Account account) throws RpcException {
     AccountsPlumbing.AccountCreateRequest.Builder builder =
         AccountsPlumbing.AccountCreateRequest.newBuilder();
-    builder.setAccount(Plumbing.accountToPlumbing(account));
+    builder.setAccount(Plumbing.convertAccountToPlumbing(account));
     AccountsPlumbing.AccountCreateRequest req = builder.build();
     AccountsPlumbing.AccountCreateResponse plumbingResponse;
     int tries = 0;
@@ -83,7 +83,7 @@ public class Accounts {
   public AccountGetResponse get(String id) throws RpcException {
     AccountsPlumbing.AccountGetRequest.Builder builder =
         AccountsPlumbing.AccountGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     AccountsPlumbing.AccountGetRequest req = builder.build();
     AccountsPlumbing.AccountGetResponse plumbingResponse;
     int tries = 0;
@@ -109,7 +109,7 @@ public class Accounts {
   public AccountUpdateResponse update(Account account) throws RpcException {
     AccountsPlumbing.AccountUpdateRequest.Builder builder =
         AccountsPlumbing.AccountUpdateRequest.newBuilder();
-    builder.setAccount(Plumbing.accountToPlumbing(account));
+    builder.setAccount(Plumbing.convertAccountToPlumbing(account));
     AccountsPlumbing.AccountUpdateRequest req = builder.build();
     AccountsPlumbing.AccountUpdateResponse plumbingResponse;
     int tries = 0;
@@ -135,7 +135,7 @@ public class Accounts {
   public AccountDeleteResponse delete(String id) throws RpcException {
     AccountsPlumbing.AccountDeleteRequest.Builder builder =
         AccountsPlumbing.AccountDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     AccountsPlumbing.AccountDeleteRequest req = builder.build();
     AccountsPlumbing.AccountDeleteResponse plumbingResponse;
     int tries = 0;

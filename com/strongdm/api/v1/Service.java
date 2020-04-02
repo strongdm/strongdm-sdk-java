@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // A Service is a service account that can connect to resources they are granted
 // directly, or granted via roles. Services are typically automated jobs.
 public class Service implements Account {

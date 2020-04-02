@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
 public class RoleAttachmentCreateResponse {
   private CreateResponseMetadata meta;

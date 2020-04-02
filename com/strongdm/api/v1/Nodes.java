@@ -57,7 +57,7 @@ public class Nodes {
   // Create registers a new Node.
   public NodeCreateResponse create(Node node) throws RpcException {
     NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
-    builder.setNode(Plumbing.nodeToPlumbing(node));
+    builder.setNode(Plumbing.convertNodeToPlumbing(node));
     NodesPlumbing.NodeCreateRequest req = builder.build();
     NodesPlumbing.NodeCreateResponse plumbingResponse;
     int tries = 0;
@@ -82,7 +82,7 @@ public class Nodes {
   // Get reads one Node by ID.
   public NodeGetResponse get(String id) throws RpcException {
     NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     NodesPlumbing.NodeGetRequest req = builder.build();
     NodesPlumbing.NodeGetResponse plumbingResponse;
     int tries = 0;
@@ -107,7 +107,7 @@ public class Nodes {
   // Update patches a Node by ID.
   public NodeUpdateResponse update(Node node) throws RpcException {
     NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
-    builder.setNode(Plumbing.nodeToPlumbing(node));
+    builder.setNode(Plumbing.convertNodeToPlumbing(node));
     NodesPlumbing.NodeUpdateRequest req = builder.build();
     NodesPlumbing.NodeUpdateResponse plumbingResponse;
     int tries = 0;
@@ -132,7 +132,7 @@ public class Nodes {
   // Delete removes a Node by ID.
   public NodeDeleteResponse delete(String id) throws RpcException {
     NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     NodesPlumbing.NodeDeleteRequest req = builder.build();
     NodesPlumbing.NodeDeleteResponse plumbingResponse;
     int tries = 0;

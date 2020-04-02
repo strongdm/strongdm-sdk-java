@@ -57,7 +57,7 @@ public class RoleAttachments {
   public RoleAttachmentCreateResponse create(RoleAttachment roleAttachment) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentCreateRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentCreateRequest.newBuilder();
-    builder.setRoleAttachment(Plumbing.roleAttachmentToPlumbing(roleAttachment));
+    builder.setRoleAttachment(Plumbing.convertRoleAttachmentToPlumbing(roleAttachment));
     RoleAttachmentsPlumbing.RoleAttachmentCreateRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentCreateResponse plumbingResponse;
     int tries = 0;
@@ -83,7 +83,7 @@ public class RoleAttachments {
   public RoleAttachmentGetResponse get(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentGetRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RoleAttachmentsPlumbing.RoleAttachmentGetRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentGetResponse plumbingResponse;
     int tries = 0;
@@ -109,7 +109,7 @@ public class RoleAttachments {
   public RoleAttachmentDeleteResponse delete(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse plumbingResponse;
     int tries = 0;

@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // RoleGrantCreateResponse reports how the RoleGrants were created in the system.
 public class RoleGrantCreateResponse {
   private CreateResponseMetadata meta;

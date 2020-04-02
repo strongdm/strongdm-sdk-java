@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // NodeDeleteResponse returns information about a Node that was deleted.
 public class NodeDeleteResponse {
   private DeleteResponseMetadata meta;

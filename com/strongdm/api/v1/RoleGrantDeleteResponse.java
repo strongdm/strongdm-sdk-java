@@ -17,7 +17,6 @@
 
 package com.strongdm.api.v1;
 
-
 // RoleGrantDeleteResponse returns information about a RoleGrant that was deleted.
 public class RoleGrantDeleteResponse {
   private DeleteResponseMetadata meta;
