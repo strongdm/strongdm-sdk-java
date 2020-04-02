@@ -73,11 +73,11 @@ public class RoleAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleAttachmentCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one RoleAttachment by ID.
   public RoleAttachmentGetResponse get(String id) throws RpcException {
@@ -99,11 +99,11 @@ public class RoleAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleAttachmentGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleAttachmentGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a RoleAttachment by ID.
   public RoleAttachmentDeleteResponse delete(String id) throws RpcException {
@@ -125,11 +125,11 @@ public class RoleAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleAttachmentDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of RoleAttachments matching a given set of criteria.
   public Iterable<RoleAttachment> list(String filter, Object... args) throws RpcException {
@@ -155,7 +155,8 @@ public class RoleAttachments {
                   .list(req);
 
           List<RoleAttachment> page =
-              Plumbing.repeatedRoleAttachmentToPorcelain(plumbingResponse.getRoleAttachmentsList());
+              Plumbing.convertRepeatedRoleAttachmentToPorcelain(
+                  plumbingResponse.getRoleAttachmentsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

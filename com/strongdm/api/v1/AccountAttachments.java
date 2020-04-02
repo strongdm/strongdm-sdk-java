@@ -79,11 +79,11 @@ public class AccountAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountAttachmentCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one AccountAttachment by ID.
   public AccountAttachmentGetResponse get(String id) throws RpcException {
@@ -105,11 +105,11 @@ public class AccountAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountAttachmentGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountAttachmentGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a AccountAttachment by ID.
   public AccountAttachmentDeleteResponse delete(String id) throws RpcException {
@@ -132,11 +132,11 @@ public class AccountAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountAttachmentDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of AccountAttachments matching a given set of criteria.
   public Iterable<AccountAttachment> list(String filter, Object... args) throws RpcException {
@@ -163,7 +163,7 @@ public class AccountAttachments {
                   .list(req);
 
           List<AccountAttachment> page =
-              Plumbing.repeatedAccountAttachmentToPorcelain(
+              Plumbing.convertRepeatedAccountAttachmentToPorcelain(
                   plumbingResponse.getAccountAttachmentsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";

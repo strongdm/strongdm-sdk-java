@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // AccountDeleteResponse returns information about a Account that was deleted.
 public class AccountDeleteResponse {
   private DeleteResponseMetadata meta;

@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 public class Teradata implements Resource {
   private String id;
   // Unique identifier of the Resource.
@@ -48,6 +49,17 @@ public class Teradata implements Resource {
   // True if the datasource is reachable and the credentials are valid.
   public Teradata setHealthy(boolean in) {
     this.healthy = in;
+    return this;
+  }
+
+  private Tags tags;
+  // Tags is a map of key, value pairs.
+  public Tags getTags() {
+    return this.tags;
+  }
+  // Tags is a map of key, value pairs.
+  public Teradata setTags(Tags in) {
+    this.tags = in;
     return this;
   }
 

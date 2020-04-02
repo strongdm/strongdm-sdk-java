@@ -73,11 +73,11 @@ public class RoleGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleGrantCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleGrantCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one RoleGrant by ID.
   public RoleGrantGetResponse get(String id) throws RpcException {
@@ -99,11 +99,11 @@ public class RoleGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleGrantGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleGrantGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a RoleGrant by ID.
   public RoleGrantDeleteResponse delete(String id) throws RpcException {
@@ -125,11 +125,11 @@ public class RoleGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleGrantDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleGrantDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of RoleGrants matching a given set of criteria.
   public Iterable<RoleGrant> list(String filter, Object... args) throws RpcException {
@@ -155,7 +155,7 @@ public class RoleGrants {
                   .list(req);
 
           List<RoleGrant> page =
-              Plumbing.repeatedRoleGrantToPorcelain(plumbingResponse.getRoleGrantsList());
+              Plumbing.convertRepeatedRoleGrantToPorcelain(plumbingResponse.getRoleGrantsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

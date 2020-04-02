@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // AccountAttachmentGetResponse returns a requested AccountAttachment.
 public class AccountAttachmentGetResponse {
   private GetResponseMetadata meta;

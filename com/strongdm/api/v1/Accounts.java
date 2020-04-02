@@ -73,11 +73,11 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one Account by ID.
   public AccountGetResponse get(String id) throws RpcException {
@@ -99,11 +99,11 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountGetResponseToPorcelain(plumbingResponse);
   }
   // Update patches a Account by ID.
   public AccountUpdateResponse update(Account account) throws RpcException {
@@ -125,11 +125,11 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountUpdateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountUpdateResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a Account by ID.
   public AccountDeleteResponse delete(String id) throws RpcException {
@@ -151,11 +151,11 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of Accounts matching a given set of criteria.
   public Iterable<Account> list(String filter, Object... args) throws RpcException {
@@ -181,7 +181,7 @@ public class Accounts {
                   .list(req);
 
           List<Account> page =
-              Plumbing.repeatedAccountToPorcelain(plumbingResponse.getAccountsList());
+              Plumbing.convertRepeatedAccountToPorcelain(plumbingResponse.getAccountsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

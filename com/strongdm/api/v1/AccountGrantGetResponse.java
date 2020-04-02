@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // AccountGrantGetResponse returns a requested AccountGrant.
 public class AccountGrantGetResponse {
   private GetResponseMetadata meta;

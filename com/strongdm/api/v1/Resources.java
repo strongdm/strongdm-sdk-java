@@ -69,11 +69,11 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.resourceCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertResourceCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one Resource by ID.
   public ResourceGetResponse get(String id) throws RpcException {
@@ -95,11 +95,11 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.resourceGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertResourceGetResponseToPorcelain(plumbingResponse);
   }
   // Update patches a Resource by ID.
   public ResourceUpdateResponse update(Resource resource) throws RpcException {
@@ -121,11 +121,11 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.resourceUpdateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertResourceUpdateResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a Resource by ID.
   public ResourceDeleteResponse delete(String id) throws RpcException {
@@ -147,11 +147,11 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.resourceDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertResourceDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of Resources matching a given set of criteria.
   public Iterable<Resource> list(String filter, Object... args) throws RpcException {
@@ -177,7 +177,7 @@ public class Resources {
                   .list(req);
 
           List<Resource> page =
-              Plumbing.repeatedResourceToPorcelain(plumbingResponse.getResourcesList());
+              Plumbing.convertRepeatedResourceToPorcelain(plumbingResponse.getResourcesList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

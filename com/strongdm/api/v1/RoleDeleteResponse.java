@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // RoleDeleteResponse returns information about a Role that was deleted.
 public class RoleDeleteResponse {
   private DeleteResponseMetadata meta;

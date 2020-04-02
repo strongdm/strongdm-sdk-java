@@ -147,7 +147,7 @@ public class Client {
       this.roleGrants = new RoleGrants(this.channel, this);
       this.roles = new Roles(this.channel, this);
     } catch (Exception e) {
-      throw Plumbing.exceptionToPorcelain(e);
+      throw Plumbing.convertExceptionToPorcelain(e);
     }
     this.testOptions = new HashMap<String, Object>();
   }

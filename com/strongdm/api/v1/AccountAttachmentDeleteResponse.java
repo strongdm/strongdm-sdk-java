@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // AccountAttachmentDeleteResponse returns information about a AccountAttachment that was deleted.
 public class AccountAttachmentDeleteResponse {
   private DeleteResponseMetadata meta;

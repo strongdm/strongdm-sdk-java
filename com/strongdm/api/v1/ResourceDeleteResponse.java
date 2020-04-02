@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // ResourceDeleteResponse returns information about a Resource that was deleted.
 public class ResourceDeleteResponse {
   private DeleteResponseMetadata meta;

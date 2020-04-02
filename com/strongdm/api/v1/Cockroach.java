@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 public class Cockroach implements Resource {
   private String id;
   // Unique identifier of the Resource.
@@ -48,6 +49,17 @@ public class Cockroach implements Resource {
   // True if the datasource is reachable and the credentials are valid.
   public Cockroach setHealthy(boolean in) {
     this.healthy = in;
+    return this;
+  }
+
+  private Tags tags;
+  // Tags is a map of key, value pairs.
+  public Tags getTags() {
+    return this.tags;
+  }
+  // Tags is a map of key, value pairs.
+  public Cockroach setTags(Tags in) {
+    this.tags = in;
     return this;
   }
 

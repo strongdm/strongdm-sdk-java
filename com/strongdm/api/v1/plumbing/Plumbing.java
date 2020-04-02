@@ -64,11 +64,19 @@ public class Plumbing {
         .build();
   }
 
-  public static Date timestampToPorcelain(Timestamp t) {
+  public static Date convertTimestampToPorcelain(Timestamp t) {
     return new Date(t.getSeconds() * 1000 + t.getNanos() / 1000000);
   }
 
-  public static com.strongdm.api.v1.CreateResponseMetadata createResponseMetadataToPorcelain(
+  public static com.strongdm.api.v1.Tags convertTagsToPorcelain(Tags plumbing) {
+    return new com.strongdm.api.v1.Tags();
+  }
+
+  public static Tags tagsToPlumbing(com.strongdm.api.v1.Tags porcelain) {
+    return Tags.newBuilder().build();
+  }
+
+  public static com.strongdm.api.v1.CreateResponseMetadata convertCreateResponseMetadataToPorcelain(
       CreateResponseMetadata plumbing) {
     com.strongdm.api.v1.CreateResponseMetadata porcelain =
         new com.strongdm.api.v1.CreateResponseMetadata();
@@ -85,9 +93,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.CreateResponseMetadata>
-      repeatedCreateResponseMetadataToPorcelain(Collection<CreateResponseMetadata> plumbings) {
+      convertRepeatedCreateResponseMetadataToPorcelain(
+          Collection<CreateResponseMetadata> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> createResponseMetadataToPorcelain(plumbing))
+        .map(plumbing -> convertCreateResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -98,7 +107,7 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.GetResponseMetadata getResponseMetadataToPorcelain(
+  public static com.strongdm.api.v1.GetResponseMetadata convertGetResponseMetadataToPorcelain(
       GetResponseMetadata plumbing) {
     com.strongdm.api.v1.GetResponseMetadata porcelain =
         new com.strongdm.api.v1.GetResponseMetadata();
@@ -115,9 +124,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.GetResponseMetadata>
-      repeatedGetResponseMetadataToPorcelain(Collection<GetResponseMetadata> plumbings) {
+      convertRepeatedGetResponseMetadataToPorcelain(Collection<GetResponseMetadata> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> getResponseMetadataToPorcelain(plumbing))
+        .map(plumbing -> convertGetResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -128,7 +137,7 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.UpdateResponseMetadata updateResponseMetadataToPorcelain(
+  public static com.strongdm.api.v1.UpdateResponseMetadata convertUpdateResponseMetadataToPorcelain(
       UpdateResponseMetadata plumbing) {
     com.strongdm.api.v1.UpdateResponseMetadata porcelain =
         new com.strongdm.api.v1.UpdateResponseMetadata();
@@ -145,9 +154,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.UpdateResponseMetadata>
-      repeatedUpdateResponseMetadataToPorcelain(Collection<UpdateResponseMetadata> plumbings) {
+      convertRepeatedUpdateResponseMetadataToPorcelain(
+          Collection<UpdateResponseMetadata> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> updateResponseMetadataToPorcelain(plumbing))
+        .map(plumbing -> convertUpdateResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -158,7 +168,7 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.DeleteResponseMetadata deleteResponseMetadataToPorcelain(
+  public static com.strongdm.api.v1.DeleteResponseMetadata convertDeleteResponseMetadataToPorcelain(
       DeleteResponseMetadata plumbing) {
     com.strongdm.api.v1.DeleteResponseMetadata porcelain =
         new com.strongdm.api.v1.DeleteResponseMetadata();
@@ -175,9 +185,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.DeleteResponseMetadata>
-      repeatedDeleteResponseMetadataToPorcelain(Collection<DeleteResponseMetadata> plumbings) {
+      convertRepeatedDeleteResponseMetadataToPorcelain(
+          Collection<DeleteResponseMetadata> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> deleteResponseMetadataToPorcelain(plumbing))
+        .map(plumbing -> convertDeleteResponseMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -188,13 +199,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RateLimitMetadata rateLimitMetadataToPorcelain(
+  public static com.strongdm.api.v1.RateLimitMetadata convertRateLimitMetadataToPorcelain(
       RateLimitMetadata plumbing) {
     com.strongdm.api.v1.RateLimitMetadata porcelain = new com.strongdm.api.v1.RateLimitMetadata();
-    porcelain.setLimit(plumbing.getLimit());
-    porcelain.setRemaining(plumbing.getRemaining());
-    porcelain.setResetAt(Plumbing.timestampToPorcelain(plumbing.getResetAt()));
-    porcelain.setBucket(plumbing.getBucket());
+    porcelain.setLimit((plumbing.getLimit()));
+    porcelain.setRemaining((plumbing.getRemaining()));
+    porcelain.setResetAt(Plumbing.convertTimestampToPorcelain(plumbing.getResetAt()));
+    porcelain.setBucket((plumbing.getBucket()));
     return porcelain;
   }
 
@@ -215,10 +226,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RateLimitMetadata> repeatedRateLimitMetadataToPorcelain(
-      Collection<RateLimitMetadata> plumbings) {
+  public static List<com.strongdm.api.v1.RateLimitMetadata>
+      convertRepeatedRateLimitMetadataToPorcelain(Collection<RateLimitMetadata> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> rateLimitMetadataToPorcelain(plumbing))
+        .map(plumbing -> convertRateLimitMetadataToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -230,10 +241,10 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.AccountAttachmentCreateOptions
-      accountAttachmentCreateOptionsToPorcelain(AccountAttachmentCreateOptions plumbing) {
+      convertAccountAttachmentCreateOptionsToPorcelain(AccountAttachmentCreateOptions plumbing) {
     com.strongdm.api.v1.AccountAttachmentCreateOptions porcelain =
         new com.strongdm.api.v1.AccountAttachmentCreateOptions();
-    porcelain.setOverwrite(plumbing.getOverwrite());
+    porcelain.setOverwrite((plumbing.getOverwrite()));
     return porcelain;
   }
 
@@ -248,10 +259,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountAttachmentCreateOptions>
-      repeatedAccountAttachmentCreateOptionsToPorcelain(
+      convertRepeatedAccountAttachmentCreateOptionsToPorcelain(
           Collection<AccountAttachmentCreateOptions> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountAttachmentCreateOptionsToPorcelain(plumbing))
+        .map(plumbing -> convertAccountAttachmentCreateOptionsToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -264,13 +275,13 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.AccountAttachmentCreateResponse
-      accountAttachmentCreateResponseToPorcelain(AccountAttachmentCreateResponse plumbing) {
+      convertAccountAttachmentCreateResponseToPorcelain(AccountAttachmentCreateResponse plumbing) {
     com.strongdm.api.v1.AccountAttachmentCreateResponse porcelain =
         new com.strongdm.api.v1.AccountAttachmentCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
     porcelain.setAccountAttachment(
-        Plumbing.accountAttachmentToPorcelain(plumbing.getAccountAttachment()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+        Plumbing.convertAccountAttachmentToPorcelain(plumbing.getAccountAttachment()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -294,10 +305,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountAttachmentCreateResponse>
-      repeatedAccountAttachmentCreateResponseToPorcelain(
+      convertRepeatedAccountAttachmentCreateResponseToPorcelain(
           Collection<AccountAttachmentCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountAttachmentCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountAttachmentCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -310,13 +321,13 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.AccountAttachmentGetResponse
-      accountAttachmentGetResponseToPorcelain(AccountAttachmentGetResponse plumbing) {
+      convertAccountAttachmentGetResponseToPorcelain(AccountAttachmentGetResponse plumbing) {
     com.strongdm.api.v1.AccountAttachmentGetResponse porcelain =
         new com.strongdm.api.v1.AccountAttachmentGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
     porcelain.setAccountAttachment(
-        Plumbing.accountAttachmentToPorcelain(plumbing.getAccountAttachment()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+        Plumbing.convertAccountAttachmentToPorcelain(plumbing.getAccountAttachment()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -340,10 +351,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountAttachmentGetResponse>
-      repeatedAccountAttachmentGetResponseToPorcelain(
+      convertRepeatedAccountAttachmentGetResponseToPorcelain(
           Collection<AccountAttachmentGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountAttachmentGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountAttachmentGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -355,11 +366,11 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.AccountAttachmentDeleteResponse
-      accountAttachmentDeleteResponseToPorcelain(AccountAttachmentDeleteResponse plumbing) {
+      convertAccountAttachmentDeleteResponseToPorcelain(AccountAttachmentDeleteResponse plumbing) {
     com.strongdm.api.v1.AccountAttachmentDeleteResponse porcelain =
         new com.strongdm.api.v1.AccountAttachmentDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -379,10 +390,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountAttachmentDeleteResponse>
-      repeatedAccountAttachmentDeleteResponseToPorcelain(
+      convertRepeatedAccountAttachmentDeleteResponseToPorcelain(
           Collection<AccountAttachmentDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountAttachmentDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountAttachmentDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -394,12 +405,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountAttachment accountAttachmentToPorcelain(
+  public static com.strongdm.api.v1.AccountAttachment convertAccountAttachmentToPorcelain(
       AccountAttachment plumbing) {
     com.strongdm.api.v1.AccountAttachment porcelain = new com.strongdm.api.v1.AccountAttachment();
-    porcelain.setId(plumbing.getId());
-    porcelain.setAccountId(plumbing.getAccountId());
-    porcelain.setRoleId(plumbing.getRoleId());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setRoleId((plumbing.getRoleId()));
     return porcelain;
   }
 
@@ -421,10 +432,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AccountAttachment> repeatedAccountAttachmentToPorcelain(
-      Collection<AccountAttachment> plumbings) {
+  public static List<com.strongdm.api.v1.AccountAttachment>
+      convertRepeatedAccountAttachmentToPorcelain(Collection<AccountAttachment> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountAttachmentToPorcelain(plumbing))
+        .map(plumbing -> convertAccountAttachmentToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -436,12 +447,12 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.AccountGrantCreateResponse
-      accountGrantCreateResponseToPorcelain(AccountGrantCreateResponse plumbing) {
+      convertAccountGrantCreateResponseToPorcelain(AccountGrantCreateResponse plumbing) {
     com.strongdm.api.v1.AccountGrantCreateResponse porcelain =
         new com.strongdm.api.v1.AccountGrantCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setAccountGrant(Plumbing.accountGrantToPorcelain(plumbing.getAccountGrant()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setAccountGrant(Plumbing.convertAccountGrantToPorcelain(plumbing.getAccountGrant()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -464,10 +475,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountGrantCreateResponse>
-      repeatedAccountGrantCreateResponseToPorcelain(
+      convertRepeatedAccountGrantCreateResponseToPorcelain(
           Collection<AccountGrantCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountGrantCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountGrantCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -478,13 +489,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountGrantGetResponse accountGrantGetResponseToPorcelain(
-      AccountGrantGetResponse plumbing) {
+  public static com.strongdm.api.v1.AccountGrantGetResponse
+      convertAccountGrantGetResponseToPorcelain(AccountGrantGetResponse plumbing) {
     com.strongdm.api.v1.AccountGrantGetResponse porcelain =
         new com.strongdm.api.v1.AccountGrantGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setAccountGrant(Plumbing.accountGrantToPorcelain(plumbing.getAccountGrant()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setAccountGrant(Plumbing.convertAccountGrantToPorcelain(plumbing.getAccountGrant()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -507,9 +518,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountGrantGetResponse>
-      repeatedAccountGrantGetResponseToPorcelain(Collection<AccountGrantGetResponse> plumbings) {
+      convertRepeatedAccountGrantGetResponseToPorcelain(
+          Collection<AccountGrantGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountGrantGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountGrantGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -521,11 +533,11 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.AccountGrantDeleteResponse
-      accountGrantDeleteResponseToPorcelain(AccountGrantDeleteResponse plumbing) {
+      convertAccountGrantDeleteResponseToPorcelain(AccountGrantDeleteResponse plumbing) {
     com.strongdm.api.v1.AccountGrantDeleteResponse porcelain =
         new com.strongdm.api.v1.AccountGrantDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -545,10 +557,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountGrantDeleteResponse>
-      repeatedAccountGrantDeleteResponseToPorcelain(
+      convertRepeatedAccountGrantDeleteResponseToPorcelain(
           Collection<AccountGrantDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountGrantDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountGrantDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -559,13 +571,14 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountGrant accountGrantToPorcelain(AccountGrant plumbing) {
+  public static com.strongdm.api.v1.AccountGrant convertAccountGrantToPorcelain(
+      AccountGrant plumbing) {
     com.strongdm.api.v1.AccountGrant porcelain = new com.strongdm.api.v1.AccountGrant();
-    porcelain.setId(plumbing.getId());
-    porcelain.setResourceId(plumbing.getResourceId());
-    porcelain.setAccountId(plumbing.getAccountId());
-    porcelain.setStartFrom(Plumbing.timestampToPorcelain(plumbing.getStartFrom()));
-    porcelain.setValidUntil(Plumbing.timestampToPorcelain(plumbing.getValidUntil()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setStartFrom(Plumbing.convertTimestampToPorcelain(plumbing.getStartFrom()));
+    porcelain.setValidUntil(Plumbing.convertTimestampToPorcelain(plumbing.getValidUntil()));
     return porcelain;
   }
 
@@ -592,10 +605,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AccountGrant> repeatedAccountGrantToPorcelain(
+  public static List<com.strongdm.api.v1.AccountGrant> convertRepeatedAccountGrantToPorcelain(
       Collection<AccountGrant> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountGrantToPorcelain(plumbing))
+        .map(plumbing -> convertAccountGrantToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -606,14 +619,14 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountCreateResponse accountCreateResponseToPorcelain(
+  public static com.strongdm.api.v1.AccountCreateResponse convertAccountCreateResponseToPorcelain(
       AccountCreateResponse plumbing) {
     com.strongdm.api.v1.AccountCreateResponse porcelain =
         new com.strongdm.api.v1.AccountCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setAccount(Plumbing.accountToPorcelain(plumbing.getAccount()));
-    porcelain.setToken(plumbing.getToken());
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setAccount(Plumbing.convertAccountToPorcelain(plumbing.getAccount()));
+    porcelain.setToken((plumbing.getToken()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -639,9 +652,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountCreateResponse>
-      repeatedAccountCreateResponseToPorcelain(Collection<AccountCreateResponse> plumbings) {
+      convertRepeatedAccountCreateResponseToPorcelain(Collection<AccountCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -652,12 +665,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountGetResponse accountGetResponseToPorcelain(
+  public static com.strongdm.api.v1.AccountGetResponse convertAccountGetResponseToPorcelain(
       AccountGetResponse plumbing) {
     com.strongdm.api.v1.AccountGetResponse porcelain = new com.strongdm.api.v1.AccountGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setAccount(Plumbing.accountToPorcelain(plumbing.getAccount()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setAccount(Plumbing.convertAccountToPorcelain(plumbing.getAccount()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -679,10 +692,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AccountGetResponse> repeatedAccountGetResponseToPorcelain(
-      Collection<AccountGetResponse> plumbings) {
+  public static List<com.strongdm.api.v1.AccountGetResponse>
+      convertRepeatedAccountGetResponseToPorcelain(Collection<AccountGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -693,13 +706,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountUpdateResponse accountUpdateResponseToPorcelain(
+  public static com.strongdm.api.v1.AccountUpdateResponse convertAccountUpdateResponseToPorcelain(
       AccountUpdateResponse plumbing) {
     com.strongdm.api.v1.AccountUpdateResponse porcelain =
         new com.strongdm.api.v1.AccountUpdateResponse();
-    porcelain.setMeta(Plumbing.updateResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setAccount(Plumbing.accountToPorcelain(plumbing.getAccount()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setAccount(Plumbing.convertAccountToPorcelain(plumbing.getAccount()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -722,9 +735,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountUpdateResponse>
-      repeatedAccountUpdateResponseToPorcelain(Collection<AccountUpdateResponse> plumbings) {
+      convertRepeatedAccountUpdateResponseToPorcelain(Collection<AccountUpdateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountUpdateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -735,12 +748,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountDeleteResponse accountDeleteResponseToPorcelain(
+  public static com.strongdm.api.v1.AccountDeleteResponse convertAccountDeleteResponseToPorcelain(
       AccountDeleteResponse plumbing) {
     com.strongdm.api.v1.AccountDeleteResponse porcelain =
         new com.strongdm.api.v1.AccountDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -760,9 +773,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.AccountDeleteResponse>
-      repeatedAccountDeleteResponseToPorcelain(Collection<AccountDeleteResponse> plumbings) {
+      convertRepeatedAccountDeleteResponseToPorcelain(Collection<AccountDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertAccountDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -773,15 +786,15 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Account accountToPorcelain(Account plumbing) {
+  public static com.strongdm.api.v1.Account convertAccountToPorcelain(Account plumbing) {
     if (plumbing == null) {
       return null;
     }
     if (plumbing.hasUser()) {
-      return userToPorcelain(plumbing.getUser());
+      return convertUserToPorcelain(plumbing.getUser());
     }
     if (plumbing.hasService()) {
-      return serviceToPorcelain(plumbing.getService());
+      return convertServiceToPorcelain(plumbing.getService());
     }
     return null;
   }
@@ -803,10 +816,10 @@ public class Plumbing {
     return null;
   }
 
-  public static List<com.strongdm.api.v1.Account> repeatedAccountToPorcelain(
+  public static List<com.strongdm.api.v1.Account> convertRepeatedAccountToPorcelain(
       Collection<Account> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> accountToPorcelain(plumbing))
+        .map(plumbing -> convertAccountToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -817,13 +830,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.User userToPorcelain(User plumbing) {
+  public static com.strongdm.api.v1.User convertUserToPorcelain(User plumbing) {
     com.strongdm.api.v1.User porcelain = new com.strongdm.api.v1.User();
-    porcelain.setId(plumbing.getId());
-    porcelain.setEmail(plumbing.getEmail());
-    porcelain.setFirstName(plumbing.getFirstName());
-    porcelain.setLastName(plumbing.getLastName());
-    porcelain.setSuspended(plumbing.getSuspended());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setEmail((plumbing.getEmail()));
+    porcelain.setFirstName((plumbing.getFirstName()));
+    porcelain.setLastName((plumbing.getLastName()));
+    porcelain.setSuspended((plumbing.getSuspended()));
     return porcelain;
   }
 
@@ -848,9 +861,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.User> repeatedUserToPorcelain(Collection<User> plumbings) {
+  public static List<com.strongdm.api.v1.User> convertRepeatedUserToPorcelain(
+      Collection<User> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> userToPorcelain(plumbing))
+        .map(plumbing -> convertUserToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -860,11 +874,11 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Service serviceToPorcelain(Service plumbing) {
+  public static com.strongdm.api.v1.Service convertServiceToPorcelain(Service plumbing) {
     com.strongdm.api.v1.Service porcelain = new com.strongdm.api.v1.Service();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setSuspended(plumbing.getSuspended());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setSuspended((plumbing.getSuspended()));
     return porcelain;
   }
 
@@ -883,10 +897,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Service> repeatedServiceToPorcelain(
+  public static List<com.strongdm.api.v1.Service> convertRepeatedServiceToPorcelain(
       Collection<Service> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> serviceToPorcelain(plumbing))
+        .map(plumbing -> convertServiceToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -897,141 +911,141 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Resource resourceToPorcelain(Resource plumbing) {
+  public static com.strongdm.api.v1.Resource convertResourceToPorcelain(Resource plumbing) {
     if (plumbing == null) {
       return null;
     }
     if (plumbing.hasAthena()) {
-      return athenaToPorcelain(plumbing.getAthena());
+      return convertAthenaToPorcelain(plumbing.getAthena());
     }
     if (plumbing.hasBigQuery()) {
-      return bigQueryToPorcelain(plumbing.getBigQuery());
+      return convertBigQueryToPorcelain(plumbing.getBigQuery());
     }
     if (plumbing.hasCassandra()) {
-      return cassandraToPorcelain(plumbing.getCassandra());
+      return convertCassandraToPorcelain(plumbing.getCassandra());
     }
     if (plumbing.hasDruid()) {
-      return druidToPorcelain(plumbing.getDruid());
+      return convertDruidToPorcelain(plumbing.getDruid());
     }
     if (plumbing.hasDynamoDb()) {
-      return dynamoDbToPorcelain(plumbing.getDynamoDb());
+      return convertDynamoDBToPorcelain(plumbing.getDynamoDb());
     }
     if (plumbing.hasAmazonEs()) {
-      return amazonEsToPorcelain(plumbing.getAmazonEs());
+      return convertAmazonESToPorcelain(plumbing.getAmazonEs());
     }
     if (plumbing.hasElastic()) {
-      return elasticToPorcelain(plumbing.getElastic());
+      return convertElasticToPorcelain(plumbing.getElastic());
     }
     if (plumbing.hasHttpBasicAuth()) {
-      return httpBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
+      return convertHTTPBasicAuthToPorcelain(plumbing.getHttpBasicAuth());
     }
     if (plumbing.hasHttpNoAuth()) {
-      return httpNoAuthToPorcelain(plumbing.getHttpNoAuth());
+      return convertHTTPNoAuthToPorcelain(plumbing.getHttpNoAuth());
     }
     if (plumbing.hasHttpAuth()) {
-      return httpAuthToPorcelain(plumbing.getHttpAuth());
+      return convertHTTPAuthToPorcelain(plumbing.getHttpAuth());
     }
     if (plumbing.hasKubernetes()) {
-      return kubernetesToPorcelain(plumbing.getKubernetes());
+      return convertKubernetesToPorcelain(plumbing.getKubernetes());
     }
     if (plumbing.hasKubernetesBasicAuth()) {
-      return kubernetesBasicAuthToPorcelain(plumbing.getKubernetesBasicAuth());
+      return convertKubernetesBasicAuthToPorcelain(plumbing.getKubernetesBasicAuth());
     }
     if (plumbing.hasKubernetesServiceAccount()) {
-      return kubernetesServiceAccountToPorcelain(plumbing.getKubernetesServiceAccount());
+      return convertKubernetesServiceAccountToPorcelain(plumbing.getKubernetesServiceAccount());
     }
     if (plumbing.hasAmazonEks()) {
-      return amazonEksToPorcelain(plumbing.getAmazonEks());
+      return convertAmazonEKSToPorcelain(plumbing.getAmazonEks());
     }
     if (plumbing.hasGoogleGke()) {
-      return googleGkeToPorcelain(plumbing.getGoogleGke());
+      return convertGoogleGKEToPorcelain(plumbing.getGoogleGke());
     }
     if (plumbing.hasAks()) {
-      return aksToPorcelain(plumbing.getAks());
+      return convertAKSToPorcelain(plumbing.getAks());
     }
     if (plumbing.hasAksBasicAuth()) {
-      return aksBasicAuthToPorcelain(plumbing.getAksBasicAuth());
+      return convertAKSBasicAuthToPorcelain(plumbing.getAksBasicAuth());
     }
     if (plumbing.hasAksServiceAccount()) {
-      return aksServiceAccountToPorcelain(plumbing.getAksServiceAccount());
+      return convertAKSServiceAccountToPorcelain(plumbing.getAksServiceAccount());
     }
     if (plumbing.hasMemcached()) {
-      return memcachedToPorcelain(plumbing.getMemcached());
+      return convertMemcachedToPorcelain(plumbing.getMemcached());
     }
     if (plumbing.hasMongoLegacyHost()) {
-      return mongoLegacyHostToPorcelain(plumbing.getMongoLegacyHost());
+      return convertMongoLegacyHostToPorcelain(plumbing.getMongoLegacyHost());
     }
     if (plumbing.hasMongoLegacyReplicaset()) {
-      return mongoLegacyReplicasetToPorcelain(plumbing.getMongoLegacyReplicaset());
+      return convertMongoLegacyReplicasetToPorcelain(plumbing.getMongoLegacyReplicaset());
     }
     if (plumbing.hasMongoHost()) {
-      return mongoHostToPorcelain(plumbing.getMongoHost());
+      return convertMongoHostToPorcelain(plumbing.getMongoHost());
     }
     if (plumbing.hasMongoReplicaSet()) {
-      return mongoReplicaSetToPorcelain(plumbing.getMongoReplicaSet());
+      return convertMongoReplicaSetToPorcelain(plumbing.getMongoReplicaSet());
     }
     if (plumbing.hasMysql()) {
-      return mysqlToPorcelain(plumbing.getMysql());
+      return convertMysqlToPorcelain(plumbing.getMysql());
     }
     if (plumbing.hasAuroraMysql()) {
-      return auroraMysqlToPorcelain(plumbing.getAuroraMysql());
+      return convertAuroraMysqlToPorcelain(plumbing.getAuroraMysql());
     }
     if (plumbing.hasClustrix()) {
-      return clustrixToPorcelain(plumbing.getClustrix());
+      return convertClustrixToPorcelain(plumbing.getClustrix());
     }
     if (plumbing.hasMaria()) {
-      return mariaToPorcelain(plumbing.getMaria());
+      return convertMariaToPorcelain(plumbing.getMaria());
     }
     if (plumbing.hasMemsql()) {
-      return memsqlToPorcelain(plumbing.getMemsql());
+      return convertMemsqlToPorcelain(plumbing.getMemsql());
     }
     if (plumbing.hasOracle()) {
-      return oracleToPorcelain(plumbing.getOracle());
+      return convertOracleToPorcelain(plumbing.getOracle());
     }
     if (plumbing.hasPostgres()) {
-      return postgresToPorcelain(plumbing.getPostgres());
+      return convertPostgresToPorcelain(plumbing.getPostgres());
     }
     if (plumbing.hasAuroraPostgres()) {
-      return auroraPostgresToPorcelain(plumbing.getAuroraPostgres());
+      return convertAuroraPostgresToPorcelain(plumbing.getAuroraPostgres());
     }
     if (plumbing.hasGreenplum()) {
-      return greenplumToPorcelain(plumbing.getGreenplum());
+      return convertGreenplumToPorcelain(plumbing.getGreenplum());
     }
     if (plumbing.hasCockroach()) {
-      return cockroachToPorcelain(plumbing.getCockroach());
+      return convertCockroachToPorcelain(plumbing.getCockroach());
     }
     if (plumbing.hasRedshift()) {
-      return redshiftToPorcelain(plumbing.getRedshift());
+      return convertRedshiftToPorcelain(plumbing.getRedshift());
     }
     if (plumbing.hasPresto()) {
-      return prestoToPorcelain(plumbing.getPresto());
+      return convertPrestoToPorcelain(plumbing.getPresto());
     }
     if (plumbing.hasRdp()) {
-      return rdpToPorcelain(plumbing.getRdp());
+      return convertRDPToPorcelain(plumbing.getRdp());
     }
     if (plumbing.hasRedis()) {
-      return redisToPorcelain(plumbing.getRedis());
+      return convertRedisToPorcelain(plumbing.getRedis());
     }
     if (plumbing.hasElasticacheRedis()) {
-      return elasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
+      return convertElasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
     }
     if (plumbing.hasSnowflake()) {
-      return snowflakeToPorcelain(plumbing.getSnowflake());
+      return convertSnowflakeToPorcelain(plumbing.getSnowflake());
     }
     if (plumbing.hasSqlServer()) {
-      return sqlServerToPorcelain(plumbing.getSqlServer());
+      return convertSQLServerToPorcelain(plumbing.getSqlServer());
     }
     if (plumbing.hasSsh()) {
-      return sshToPorcelain(plumbing.getSsh());
+      return convertSSHToPorcelain(plumbing.getSsh());
     }
     if (plumbing.hasSybase()) {
-      return sybaseToPorcelain(plumbing.getSybase());
+      return convertSybaseToPorcelain(plumbing.getSybase());
     }
     if (plumbing.hasSybaseIq()) {
-      return sybaseIqToPorcelain(plumbing.getSybaseIq());
+      return convertSybaseIQToPorcelain(plumbing.getSybaseIq());
     }
     if (plumbing.hasTeradata()) {
-      return teradataToPorcelain(plumbing.getTeradata());
+      return convertTeradataToPorcelain(plumbing.getTeradata());
     }
     return null;
   }
@@ -1273,10 +1287,10 @@ public class Plumbing {
     return null;
   }
 
-  public static List<com.strongdm.api.v1.Resource> repeatedResourceToPorcelain(
+  public static List<com.strongdm.api.v1.Resource> convertRepeatedResourceToPorcelain(
       Collection<Resource> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> resourceToPorcelain(plumbing))
+        .map(plumbing -> convertResourceToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1287,16 +1301,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Athena athenaToPorcelain(Athena plumbing) {
+  public static com.strongdm.api.v1.Athena convertAthenaToPorcelain(Athena plumbing) {
     com.strongdm.api.v1.Athena porcelain = new com.strongdm.api.v1.Athena();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setAccessKey(plumbing.getAccessKey());
-    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setOutput(plumbing.getOutput());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setRegion(plumbing.getRegion());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setOutput((plumbing.getOutput()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRegion((plumbing.getRegion()));
     return porcelain;
   }
 
@@ -1312,6 +1327,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey(porcelain.getAccessKey());
     }
@@ -1328,10 +1346,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Athena> repeatedAthenaToPorcelain(
+  public static List<com.strongdm.api.v1.Athena> convertRepeatedAthenaToPorcelain(
       Collection<Athena> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> athenaToPorcelain(plumbing))
+        .map(plumbing -> convertAthenaToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1342,16 +1360,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.BigQuery bigQueryToPorcelain(BigQuery plumbing) {
+  public static com.strongdm.api.v1.BigQuery convertBigQueryToPorcelain(BigQuery plumbing) {
     com.strongdm.api.v1.BigQuery porcelain = new com.strongdm.api.v1.BigQuery();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setPrivateKey(plumbing.getPrivateKey());
-    porcelain.setProject(plumbing.getProject());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setEndpoint(plumbing.getEndpoint());
-    porcelain.setUsername(plumbing.getUsername());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setPrivateKey((plumbing.getPrivateKey()));
+    porcelain.setProject((plumbing.getProject()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
 
@@ -1367,6 +1386,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getPrivateKey() != null) {
       builder.setPrivateKey(porcelain.getPrivateKey());
     }
@@ -1383,10 +1405,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.BigQuery> repeatedBigQueryToPorcelain(
+  public static List<com.strongdm.api.v1.BigQuery> convertRepeatedBigQueryToPorcelain(
       Collection<BigQuery> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> bigQueryToPorcelain(plumbing))
+        .map(plumbing -> convertBigQueryToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1397,17 +1419,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Cassandra cassandraToPorcelain(Cassandra plumbing) {
+  public static com.strongdm.api.v1.Cassandra convertCassandraToPorcelain(Cassandra plumbing) {
     com.strongdm.api.v1.Cassandra porcelain = new com.strongdm.api.v1.Cassandra();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -1423,6 +1446,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -1438,10 +1464,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Cassandra> repeatedCassandraToPorcelain(
+  public static List<com.strongdm.api.v1.Cassandra> convertRepeatedCassandraToPorcelain(
       Collection<Cassandra> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> cassandraToPorcelain(plumbing))
+        .map(plumbing -> convertCassandraToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1452,16 +1478,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Druid druidToPorcelain(Druid plumbing) {
+  public static com.strongdm.api.v1.Druid convertDruidToPorcelain(Druid plumbing) {
     com.strongdm.api.v1.Druid porcelain = new com.strongdm.api.v1.Druid();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -1477,6 +1504,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -1491,10 +1521,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Druid> repeatedDruidToPorcelain(
+  public static List<com.strongdm.api.v1.Druid> convertRepeatedDruidToPorcelain(
       Collection<Druid> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> druidToPorcelain(plumbing))
+        .map(plumbing -> convertDruidToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1505,16 +1535,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.DynamoDB dynamoDbToPorcelain(DynamoDB plumbing) {
+  public static com.strongdm.api.v1.DynamoDB convertDynamoDBToPorcelain(DynamoDB plumbing) {
     com.strongdm.api.v1.DynamoDB porcelain = new com.strongdm.api.v1.DynamoDB();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setAccessKey(plumbing.getAccessKey());
-    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setRegion(plumbing.getRegion());
-    porcelain.setEndpoint(plumbing.getEndpoint());
-    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     return porcelain;
   }
 
@@ -1530,6 +1561,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getAccessKey() != null) {
       builder.setAccessKey(porcelain.getAccessKey());
     }
@@ -1546,10 +1580,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.DynamoDB> repeatedDynamoDBToPorcelain(
+  public static List<com.strongdm.api.v1.DynamoDB> convertRepeatedDynamoDBToPorcelain(
       Collection<DynamoDB> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> dynamoDbToPorcelain(plumbing))
+        .map(plumbing -> convertDynamoDBToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1560,16 +1594,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AmazonES amazonEsToPorcelain(AmazonES plumbing) {
+  public static com.strongdm.api.v1.AmazonES convertAmazonESToPorcelain(AmazonES plumbing) {
     com.strongdm.api.v1.AmazonES porcelain = new com.strongdm.api.v1.AmazonES();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setRegion(plumbing.getRegion());
-    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setEndpoint(plumbing.getEndpoint());
-    porcelain.setAccessKey(plumbing.getAccessKey());
-    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     return porcelain;
   }
 
@@ -1585,6 +1620,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getRegion() != null) {
       builder.setRegion(porcelain.getRegion());
     }
@@ -1601,10 +1639,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AmazonES> repeatedAmazonESToPorcelain(
+  public static List<com.strongdm.api.v1.AmazonES> convertRepeatedAmazonESToPorcelain(
       Collection<AmazonES> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> amazonEsToPorcelain(plumbing))
+        .map(plumbing -> convertAmazonESToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1615,17 +1653,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Elastic elasticToPorcelain(Elastic plumbing) {
+  public static com.strongdm.api.v1.Elastic convertElasticToPorcelain(Elastic plumbing) {
     com.strongdm.api.v1.Elastic porcelain = new com.strongdm.api.v1.Elastic();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -1641,6 +1680,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -1656,10 +1698,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Elastic> repeatedElasticToPorcelain(
+  public static List<com.strongdm.api.v1.Elastic> convertRepeatedElasticToPorcelain(
       Collection<Elastic> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> elasticToPorcelain(plumbing))
+        .map(plumbing -> convertElasticToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1670,18 +1712,20 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.HTTPBasicAuth httpBasicAuthToPorcelain(HTTPBasicAuth plumbing) {
+  public static com.strongdm.api.v1.HTTPBasicAuth convertHTTPBasicAuthToPorcelain(
+      HTTPBasicAuth plumbing) {
     com.strongdm.api.v1.HTTPBasicAuth porcelain = new com.strongdm.api.v1.HTTPBasicAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setUrl(plumbing.getUrl());
-    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
-    porcelain.setDefaultPath(plumbing.getDefaultPath());
-    porcelain.setSubdomain(plumbing.getSubdomain());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUrl((plumbing.getUrl()));
+    porcelain.setHealthcheckPath((plumbing.getHealthcheckPath()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
+    porcelain.setDefaultPath((plumbing.getDefaultPath()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
     return porcelain;
   }
 
@@ -1697,6 +1741,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getUrl() != null) {
       builder.setUrl(porcelain.getUrl());
     }
@@ -1721,10 +1768,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.HTTPBasicAuth> repeatedHTTPBasicAuthToPorcelain(
+  public static List<com.strongdm.api.v1.HTTPBasicAuth> convertRepeatedHTTPBasicAuthToPorcelain(
       Collection<HTTPBasicAuth> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> httpBasicAuthToPorcelain(plumbing))
+        .map(plumbing -> convertHTTPBasicAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1735,16 +1782,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.HTTPNoAuth httpNoAuthToPorcelain(HTTPNoAuth plumbing) {
+  public static com.strongdm.api.v1.HTTPNoAuth convertHTTPNoAuthToPorcelain(HTTPNoAuth plumbing) {
     com.strongdm.api.v1.HTTPNoAuth porcelain = new com.strongdm.api.v1.HTTPNoAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setUrl(plumbing.getUrl());
-    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
-    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
-    porcelain.setDefaultPath(plumbing.getDefaultPath());
-    porcelain.setSubdomain(plumbing.getSubdomain());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUrl((plumbing.getUrl()));
+    porcelain.setHealthcheckPath((plumbing.getHealthcheckPath()));
+    porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
+    porcelain.setDefaultPath((plumbing.getDefaultPath()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
     return porcelain;
   }
 
@@ -1760,6 +1808,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getUrl() != null) {
       builder.setUrl(porcelain.getUrl());
     }
@@ -1778,10 +1829,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.HTTPNoAuth> repeatedHTTPNoAuthToPorcelain(
+  public static List<com.strongdm.api.v1.HTTPNoAuth> convertRepeatedHTTPNoAuthToPorcelain(
       Collection<HTTPNoAuth> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> httpNoAuthToPorcelain(plumbing))
+        .map(plumbing -> convertHTTPNoAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1792,17 +1843,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.HTTPAuth httpAuthToPorcelain(HTTPAuth plumbing) {
+  public static com.strongdm.api.v1.HTTPAuth convertHTTPAuthToPorcelain(HTTPAuth plumbing) {
     com.strongdm.api.v1.HTTPAuth porcelain = new com.strongdm.api.v1.HTTPAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setUrl(plumbing.getUrl());
-    porcelain.setHealthcheckPath(plumbing.getHealthcheckPath());
-    porcelain.setAuthHeader(plumbing.getAuthHeader());
-    porcelain.setHeadersBlacklist(plumbing.getHeadersBlacklist());
-    porcelain.setDefaultPath(plumbing.getDefaultPath());
-    porcelain.setSubdomain(plumbing.getSubdomain());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUrl((plumbing.getUrl()));
+    porcelain.setHealthcheckPath((plumbing.getHealthcheckPath()));
+    porcelain.setAuthHeader((plumbing.getAuthHeader()));
+    porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
+    porcelain.setDefaultPath((plumbing.getDefaultPath()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
     return porcelain;
   }
 
@@ -1818,6 +1870,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getUrl() != null) {
       builder.setUrl(porcelain.getUrl());
     }
@@ -1839,10 +1894,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.HTTPAuth> repeatedHTTPAuthToPorcelain(
+  public static List<com.strongdm.api.v1.HTTPAuth> convertRepeatedHTTPAuthToPorcelain(
       Collection<HTTPAuth> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> httpAuthToPorcelain(plumbing))
+        .map(plumbing -> convertHTTPAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1853,19 +1908,20 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Kubernetes kubernetesToPorcelain(Kubernetes plumbing) {
+  public static com.strongdm.api.v1.Kubernetes convertKubernetesToPorcelain(Kubernetes plumbing) {
     com.strongdm.api.v1.Kubernetes porcelain = new com.strongdm.api.v1.Kubernetes();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
-    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
-    porcelain.setClientCertificate(plumbing.getClientCertificate());
-    porcelain.setClientCertificateFilename(plumbing.getClientCertificateFilename());
-    porcelain.setClientKey(plumbing.getClientKey());
-    porcelain.setClientKeyFilename(plumbing.getClientKeyFilename());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setCertificateAuthorityFilename((plumbing.getCertificateAuthorityFilename()));
+    porcelain.setClientCertificate((plumbing.getClientCertificate()));
+    porcelain.setClientCertificateFilename((plumbing.getClientCertificateFilename()));
+    porcelain.setClientKey((plumbing.getClientKey()));
+    porcelain.setClientKeyFilename((plumbing.getClientKeyFilename()));
     return porcelain;
   }
 
@@ -1881,6 +1937,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -1906,10 +1965,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Kubernetes> repeatedKubernetesToPorcelain(
+  public static List<com.strongdm.api.v1.Kubernetes> convertRepeatedKubernetesToPorcelain(
       Collection<Kubernetes> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> kubernetesToPorcelain(plumbing))
+        .map(plumbing -> convertKubernetesToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1920,17 +1979,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.KubernetesBasicAuth kubernetesBasicAuthToPorcelain(
+  public static com.strongdm.api.v1.KubernetesBasicAuth convertKubernetesBasicAuthToPorcelain(
       KubernetesBasicAuth plumbing) {
     com.strongdm.api.v1.KubernetesBasicAuth porcelain =
         new com.strongdm.api.v1.KubernetesBasicAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
     return porcelain;
   }
 
@@ -1947,6 +2007,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -1961,9 +2024,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.KubernetesBasicAuth>
-      repeatedKubernetesBasicAuthToPorcelain(Collection<KubernetesBasicAuth> plumbings) {
+      convertRepeatedKubernetesBasicAuthToPorcelain(Collection<KubernetesBasicAuth> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> kubernetesBasicAuthToPorcelain(plumbing))
+        .map(plumbing -> convertKubernetesBasicAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -1974,16 +2037,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.KubernetesServiceAccount kubernetesServiceAccountToPorcelain(
-      KubernetesServiceAccount plumbing) {
+  public static com.strongdm.api.v1.KubernetesServiceAccount
+      convertKubernetesServiceAccountToPorcelain(KubernetesServiceAccount plumbing) {
     com.strongdm.api.v1.KubernetesServiceAccount porcelain =
         new com.strongdm.api.v1.KubernetesServiceAccount();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setToken(plumbing.getToken());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setToken((plumbing.getToken()));
     return porcelain;
   }
 
@@ -2000,6 +2064,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2011,9 +2078,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.KubernetesServiceAccount>
-      repeatedKubernetesServiceAccountToPorcelain(Collection<KubernetesServiceAccount> plumbings) {
+      convertRepeatedKubernetesServiceAccountToPorcelain(
+          Collection<KubernetesServiceAccount> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> kubernetesServiceAccountToPorcelain(plumbing))
+        .map(plumbing -> convertKubernetesServiceAccountToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2024,19 +2092,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AmazonEKS amazonEksToPorcelain(AmazonEKS plumbing) {
+  public static com.strongdm.api.v1.AmazonEKS convertAmazonEKSToPorcelain(AmazonEKS plumbing) {
     com.strongdm.api.v1.AmazonEKS porcelain = new com.strongdm.api.v1.AmazonEKS();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setEndpoint(plumbing.getEndpoint());
-    porcelain.setAccessKey(plumbing.getAccessKey());
-    porcelain.setSecretAccessKey(plumbing.getSecretAccessKey());
-    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
-    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
-    porcelain.setRegion(plumbing.getRegion());
-    porcelain.setClusterName(plumbing.getClusterName());
-    porcelain.setRoleArn(plumbing.getRoleArn());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setCertificateAuthorityFilename((plumbing.getCertificateAuthorityFilename()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setClusterName((plumbing.getClusterName()));
     return porcelain;
   }
 
@@ -2052,6 +2120,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getEndpoint() != null) {
       builder.setEndpoint(porcelain.getEndpoint());
     }
@@ -2073,16 +2144,13 @@ public class Plumbing {
     if (porcelain.getClusterName() != null) {
       builder.setClusterName(porcelain.getClusterName());
     }
-    if (porcelain.getRoleArn() != null) {
-      builder.setRoleArn(porcelain.getRoleArn());
-    }
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AmazonEKS> repeatedAmazonEKSToPorcelain(
+  public static List<com.strongdm.api.v1.AmazonEKS> convertRepeatedAmazonEKSToPorcelain(
       Collection<AmazonEKS> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> amazonEksToPorcelain(plumbing))
+        .map(plumbing -> convertAmazonEKSToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2093,16 +2161,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.GoogleGKE googleGkeToPorcelain(GoogleGKE plumbing) {
+  public static com.strongdm.api.v1.GoogleGKE convertGoogleGKEToPorcelain(GoogleGKE plumbing) {
     com.strongdm.api.v1.GoogleGKE porcelain = new com.strongdm.api.v1.GoogleGKE();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setEndpoint(plumbing.getEndpoint());
-    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
-    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
-    porcelain.setServiceAccountKey(plumbing.getServiceAccountKey());
-    porcelain.setServiceAccountKeyFilename(plumbing.getServiceAccountKeyFilename());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setCertificateAuthorityFilename((plumbing.getCertificateAuthorityFilename()));
+    porcelain.setServiceAccountKey((plumbing.getServiceAccountKey()));
+    porcelain.setServiceAccountKeyFilename((plumbing.getServiceAccountKeyFilename()));
     return porcelain;
   }
 
@@ -2118,6 +2187,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getEndpoint() != null) {
       builder.setEndpoint(porcelain.getEndpoint());
     }
@@ -2136,10 +2208,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.GoogleGKE> repeatedGoogleGKEToPorcelain(
+  public static List<com.strongdm.api.v1.GoogleGKE> convertRepeatedGoogleGKEToPorcelain(
       Collection<GoogleGKE> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> googleGkeToPorcelain(plumbing))
+        .map(plumbing -> convertGoogleGKEToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2150,19 +2222,20 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AKS aksToPorcelain(AKS plumbing) {
+  public static com.strongdm.api.v1.AKS convertAKSToPorcelain(AKS plumbing) {
     com.strongdm.api.v1.AKS porcelain = new com.strongdm.api.v1.AKS();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setCertificateAuthority(plumbing.getCertificateAuthority());
-    porcelain.setCertificateAuthorityFilename(plumbing.getCertificateAuthorityFilename());
-    porcelain.setClientCertificate(plumbing.getClientCertificate());
-    porcelain.setClientCertificateFilename(plumbing.getClientCertificateFilename());
-    porcelain.setClientKey(plumbing.getClientKey());
-    porcelain.setClientKeyFilename(plumbing.getClientKeyFilename());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setCertificateAuthorityFilename((plumbing.getCertificateAuthorityFilename()));
+    porcelain.setClientCertificate((plumbing.getClientCertificate()));
+    porcelain.setClientCertificateFilename((plumbing.getClientCertificateFilename()));
+    porcelain.setClientKey((plumbing.getClientKey()));
+    porcelain.setClientKeyFilename((plumbing.getClientKeyFilename()));
     return porcelain;
   }
 
@@ -2178,6 +2251,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2203,9 +2279,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AKS> repeatedAKSToPorcelain(Collection<AKS> plumbings) {
+  public static List<com.strongdm.api.v1.AKS> convertRepeatedAKSToPorcelain(
+      Collection<AKS> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> aksToPorcelain(plumbing))
+        .map(plumbing -> convertAKSToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2215,15 +2292,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AKSBasicAuth aksBasicAuthToPorcelain(AKSBasicAuth plumbing) {
+  public static com.strongdm.api.v1.AKSBasicAuth convertAKSBasicAuthToPorcelain(
+      AKSBasicAuth plumbing) {
     com.strongdm.api.v1.AKSBasicAuth porcelain = new com.strongdm.api.v1.AKSBasicAuth();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
     return porcelain;
   }
 
@@ -2239,6 +2318,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2252,10 +2334,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AKSBasicAuth> repeatedAKSBasicAuthToPorcelain(
+  public static List<com.strongdm.api.v1.AKSBasicAuth> convertRepeatedAKSBasicAuthToPorcelain(
       Collection<AKSBasicAuth> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> aksBasicAuthToPorcelain(plumbing))
+        .map(plumbing -> convertAKSBasicAuthToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2266,15 +2348,16 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AKSServiceAccount aksServiceAccountToPorcelain(
+  public static com.strongdm.api.v1.AKSServiceAccount convertAKSServiceAccountToPorcelain(
       AKSServiceAccount plumbing) {
     com.strongdm.api.v1.AKSServiceAccount porcelain = new com.strongdm.api.v1.AKSServiceAccount();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setToken(plumbing.getToken());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setToken((plumbing.getToken()));
     return porcelain;
   }
 
@@ -2291,6 +2374,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2301,10 +2387,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AKSServiceAccount> repeatedAKSServiceAccountToPorcelain(
-      Collection<AKSServiceAccount> plumbings) {
+  public static List<com.strongdm.api.v1.AKSServiceAccount>
+      convertRepeatedAKSServiceAccountToPorcelain(Collection<AKSServiceAccount> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> aksServiceAccountToPorcelain(plumbing))
+        .map(plumbing -> convertAKSServiceAccountToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2315,14 +2401,15 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Memcached memcachedToPorcelain(Memcached plumbing) {
+  public static com.strongdm.api.v1.Memcached convertMemcachedToPorcelain(Memcached plumbing) {
     com.strongdm.api.v1.Memcached porcelain = new com.strongdm.api.v1.Memcached();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -2338,6 +2425,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2346,10 +2436,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Memcached> repeatedMemcachedToPorcelain(
+  public static List<com.strongdm.api.v1.Memcached> convertRepeatedMemcachedToPorcelain(
       Collection<Memcached> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> memcachedToPorcelain(plumbing))
+        .map(plumbing -> convertMemcachedToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2360,20 +2450,21 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoLegacyHost mongoLegacyHostToPorcelain(
+  public static com.strongdm.api.v1.MongoLegacyHost convertMongoLegacyHostToPorcelain(
       MongoLegacyHost plumbing) {
     com.strongdm.api.v1.MongoLegacyHost porcelain = new com.strongdm.api.v1.MongoLegacyHost();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setReplicaSet(plumbing.getReplicaSet());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setAuthDatabase((plumbing.getAuthDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setReplicaSet((plumbing.getReplicaSet()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -2390,6 +2481,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2411,10 +2505,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.MongoLegacyHost> repeatedMongoLegacyHostToPorcelain(
+  public static List<com.strongdm.api.v1.MongoLegacyHost> convertRepeatedMongoLegacyHostToPorcelain(
       Collection<MongoLegacyHost> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoLegacyHostToPorcelain(plumbing))
+        .map(plumbing -> convertMongoLegacyHostToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2425,22 +2519,23 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoLegacyReplicaset mongoLegacyReplicasetToPorcelain(
+  public static com.strongdm.api.v1.MongoLegacyReplicaset convertMongoLegacyReplicasetToPorcelain(
       MongoLegacyReplicaset plumbing) {
     com.strongdm.api.v1.MongoLegacyReplicaset porcelain =
         new com.strongdm.api.v1.MongoLegacyReplicaset();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setReplicaSet(plumbing.getReplicaSet());
-    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setAuthDatabase((plumbing.getAuthDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setReplicaSet((plumbing.getReplicaSet()));
+    porcelain.setConnectToReplica((plumbing.getConnectToReplica()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -2457,6 +2552,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2480,9 +2578,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.MongoLegacyReplicaset>
-      repeatedMongoLegacyReplicasetToPorcelain(Collection<MongoLegacyReplicaset> plumbings) {
+      convertRepeatedMongoLegacyReplicasetToPorcelain(Collection<MongoLegacyReplicaset> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoLegacyReplicasetToPorcelain(plumbing))
+        .map(plumbing -> convertMongoLegacyReplicasetToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2493,18 +2591,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoHost mongoHostToPorcelain(MongoHost plumbing) {
+  public static com.strongdm.api.v1.MongoHost convertMongoHostToPorcelain(MongoHost plumbing) {
     com.strongdm.api.v1.MongoHost porcelain = new com.strongdm.api.v1.MongoHost();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setAuthDatabase((plumbing.getAuthDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -2520,6 +2619,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2538,10 +2640,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.MongoHost> repeatedMongoHostToPorcelain(
+  public static List<com.strongdm.api.v1.MongoHost> convertRepeatedMongoHostToPorcelain(
       Collection<MongoHost> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoHostToPorcelain(plumbing))
+        .map(plumbing -> convertMongoHostToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2552,21 +2654,22 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.MongoReplicaSet mongoReplicaSetToPorcelain(
+  public static com.strongdm.api.v1.MongoReplicaSet convertMongoReplicaSetToPorcelain(
       MongoReplicaSet plumbing) {
     com.strongdm.api.v1.MongoReplicaSet porcelain = new com.strongdm.api.v1.MongoReplicaSet();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setAuthDatabase(plumbing.getAuthDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setReplicaSet(plumbing.getReplicaSet());
-    porcelain.setConnectToReplica(plumbing.getConnectToReplica());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setAuthDatabase((plumbing.getAuthDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setReplicaSet((plumbing.getReplicaSet()));
+    porcelain.setConnectToReplica((plumbing.getConnectToReplica()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -2583,6 +2686,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2605,10 +2711,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.MongoReplicaSet> repeatedMongoReplicaSetToPorcelain(
+  public static List<com.strongdm.api.v1.MongoReplicaSet> convertRepeatedMongoReplicaSetToPorcelain(
       Collection<MongoReplicaSet> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mongoReplicaSetToPorcelain(plumbing))
+        .map(plumbing -> convertMongoReplicaSetToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2619,17 +2725,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Mysql mysqlToPorcelain(Mysql plumbing) {
+  public static com.strongdm.api.v1.Mysql convertMysqlToPorcelain(Mysql plumbing) {
     com.strongdm.api.v1.Mysql porcelain = new com.strongdm.api.v1.Mysql();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -2645,6 +2752,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2662,10 +2772,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Mysql> repeatedMysqlToPorcelain(
+  public static List<com.strongdm.api.v1.Mysql> convertRepeatedMysqlToPorcelain(
       Collection<Mysql> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mysqlToPorcelain(plumbing))
+        .map(plumbing -> convertMysqlToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2676,17 +2786,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AuroraMysql auroraMysqlToPorcelain(AuroraMysql plumbing) {
+  public static com.strongdm.api.v1.AuroraMysql convertAuroraMysqlToPorcelain(
+      AuroraMysql plumbing) {
     com.strongdm.api.v1.AuroraMysql porcelain = new com.strongdm.api.v1.AuroraMysql();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -2702,6 +2814,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2719,10 +2834,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AuroraMysql> repeatedAuroraMysqlToPorcelain(
+  public static List<com.strongdm.api.v1.AuroraMysql> convertRepeatedAuroraMysqlToPorcelain(
       Collection<AuroraMysql> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> auroraMysqlToPorcelain(plumbing))
+        .map(plumbing -> convertAuroraMysqlToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2733,17 +2848,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Clustrix clustrixToPorcelain(Clustrix plumbing) {
+  public static com.strongdm.api.v1.Clustrix convertClustrixToPorcelain(Clustrix plumbing) {
     com.strongdm.api.v1.Clustrix porcelain = new com.strongdm.api.v1.Clustrix();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -2759,6 +2875,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2776,10 +2895,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Clustrix> repeatedClustrixToPorcelain(
+  public static List<com.strongdm.api.v1.Clustrix> convertRepeatedClustrixToPorcelain(
       Collection<Clustrix> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> clustrixToPorcelain(plumbing))
+        .map(plumbing -> convertClustrixToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2790,17 +2909,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Maria mariaToPorcelain(Maria plumbing) {
+  public static com.strongdm.api.v1.Maria convertMariaToPorcelain(Maria plumbing) {
     com.strongdm.api.v1.Maria porcelain = new com.strongdm.api.v1.Maria();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -2816,6 +2936,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2833,10 +2956,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Maria> repeatedMariaToPorcelain(
+  public static List<com.strongdm.api.v1.Maria> convertRepeatedMariaToPorcelain(
       Collection<Maria> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> mariaToPorcelain(plumbing))
+        .map(plumbing -> convertMariaToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2847,17 +2970,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Memsql memsqlToPorcelain(Memsql plumbing) {
+  public static com.strongdm.api.v1.Memsql convertMemsqlToPorcelain(Memsql plumbing) {
     com.strongdm.api.v1.Memsql porcelain = new com.strongdm.api.v1.Memsql();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -2873,6 +2997,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2890,10 +3017,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Memsql> repeatedMemsqlToPorcelain(
+  public static List<com.strongdm.api.v1.Memsql> convertRepeatedMemsqlToPorcelain(
       Collection<Memsql> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> memsqlToPorcelain(plumbing))
+        .map(plumbing -> convertMemsqlToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2904,18 +3031,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Oracle oracleToPorcelain(Oracle plumbing) {
+  public static com.strongdm.api.v1.Oracle convertOracleToPorcelain(Oracle plumbing) {
     com.strongdm.api.v1.Oracle porcelain = new com.strongdm.api.v1.Oracle();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -2931,6 +3059,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -2949,10 +3080,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Oracle> repeatedOracleToPorcelain(
+  public static List<com.strongdm.api.v1.Oracle> convertRepeatedOracleToPorcelain(
       Collection<Oracle> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> oracleToPorcelain(plumbing))
+        .map(plumbing -> convertOracleToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -2963,18 +3094,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Postgres postgresToPorcelain(Postgres plumbing) {
+  public static com.strongdm.api.v1.Postgres convertPostgresToPorcelain(Postgres plumbing) {
     com.strongdm.api.v1.Postgres porcelain = new com.strongdm.api.v1.Postgres();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setOverrideDatabase(plumbing.getOverrideDatabase());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
     return porcelain;
   }
 
@@ -2990,6 +3122,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3008,10 +3143,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Postgres> repeatedPostgresToPorcelain(
+  public static List<com.strongdm.api.v1.Postgres> convertRepeatedPostgresToPorcelain(
       Collection<Postgres> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> postgresToPorcelain(plumbing))
+        .map(plumbing -> convertPostgresToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3022,19 +3157,20 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AuroraPostgres auroraPostgresToPorcelain(
+  public static com.strongdm.api.v1.AuroraPostgres convertAuroraPostgresToPorcelain(
       AuroraPostgres plumbing) {
     com.strongdm.api.v1.AuroraPostgres porcelain = new com.strongdm.api.v1.AuroraPostgres();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setOverrideDatabase(plumbing.getOverrideDatabase());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
     return porcelain;
   }
 
@@ -3051,6 +3187,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3069,10 +3208,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.AuroraPostgres> repeatedAuroraPostgresToPorcelain(
+  public static List<com.strongdm.api.v1.AuroraPostgres> convertRepeatedAuroraPostgresToPorcelain(
       Collection<AuroraPostgres> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> auroraPostgresToPorcelain(plumbing))
+        .map(plumbing -> convertAuroraPostgresToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3083,18 +3222,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Greenplum greenplumToPorcelain(Greenplum plumbing) {
+  public static com.strongdm.api.v1.Greenplum convertGreenplumToPorcelain(Greenplum plumbing) {
     com.strongdm.api.v1.Greenplum porcelain = new com.strongdm.api.v1.Greenplum();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setOverrideDatabase(plumbing.getOverrideDatabase());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
     return porcelain;
   }
 
@@ -3110,6 +3250,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3128,10 +3271,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Greenplum> repeatedGreenplumToPorcelain(
+  public static List<com.strongdm.api.v1.Greenplum> convertRepeatedGreenplumToPorcelain(
       Collection<Greenplum> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> greenplumToPorcelain(plumbing))
+        .map(plumbing -> convertGreenplumToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3142,18 +3285,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Cockroach cockroachToPorcelain(Cockroach plumbing) {
+  public static com.strongdm.api.v1.Cockroach convertCockroachToPorcelain(Cockroach plumbing) {
     com.strongdm.api.v1.Cockroach porcelain = new com.strongdm.api.v1.Cockroach();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setOverrideDatabase(plumbing.getOverrideDatabase());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
     return porcelain;
   }
 
@@ -3169,6 +3313,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3187,10 +3334,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Cockroach> repeatedCockroachToPorcelain(
+  public static List<com.strongdm.api.v1.Cockroach> convertRepeatedCockroachToPorcelain(
       Collection<Cockroach> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> cockroachToPorcelain(plumbing))
+        .map(plumbing -> convertCockroachToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3201,18 +3348,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Redshift redshiftToPorcelain(Redshift plumbing) {
+  public static com.strongdm.api.v1.Redshift convertRedshiftToPorcelain(Redshift plumbing) {
     com.strongdm.api.v1.Redshift porcelain = new com.strongdm.api.v1.Redshift();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setOverrideDatabase(plumbing.getOverrideDatabase());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
     return porcelain;
   }
 
@@ -3228,6 +3376,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3246,10 +3397,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Redshift> repeatedRedshiftToPorcelain(
+  public static List<com.strongdm.api.v1.Redshift> convertRepeatedRedshiftToPorcelain(
       Collection<Redshift> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> redshiftToPorcelain(plumbing))
+        .map(plumbing -> convertRedshiftToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3260,18 +3411,19 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Presto prestoToPorcelain(Presto plumbing) {
+  public static com.strongdm.api.v1.Presto convertPrestoToPorcelain(Presto plumbing) {
     com.strongdm.api.v1.Presto porcelain = new com.strongdm.api.v1.Presto();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -3287,6 +3439,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3305,10 +3460,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Presto> repeatedPrestoToPorcelain(
+  public static List<com.strongdm.api.v1.Presto> convertRepeatedPrestoToPorcelain(
       Collection<Presto> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> prestoToPorcelain(plumbing))
+        .map(plumbing -> convertPrestoToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3319,16 +3474,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RDP rdpToPorcelain(RDP plumbing) {
+  public static com.strongdm.api.v1.RDP convertRDPToPorcelain(RDP plumbing) {
     com.strongdm.api.v1.RDP porcelain = new com.strongdm.api.v1.RDP();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -3344,6 +3500,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3358,9 +3517,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RDP> repeatedRDPToPorcelain(Collection<RDP> plumbings) {
+  public static List<com.strongdm.api.v1.RDP> convertRepeatedRDPToPorcelain(
+      Collection<RDP> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> rdpToPorcelain(plumbing))
+        .map(plumbing -> convertRDPToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3370,15 +3530,16 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Redis redisToPorcelain(Redis plumbing) {
+  public static com.strongdm.api.v1.Redis convertRedisToPorcelain(Redis plumbing) {
     com.strongdm.api.v1.Redis porcelain = new com.strongdm.api.v1.Redis();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -3394,6 +3555,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3405,10 +3569,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Redis> repeatedRedisToPorcelain(
+  public static List<com.strongdm.api.v1.Redis> convertRepeatedRedisToPorcelain(
       Collection<Redis> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> redisToPorcelain(plumbing))
+        .map(plumbing -> convertRedisToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3419,17 +3583,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.ElasticacheRedis elasticacheRedisToPorcelain(
+  public static com.strongdm.api.v1.ElasticacheRedis convertElasticacheRedisToPorcelain(
       ElasticacheRedis plumbing) {
     com.strongdm.api.v1.ElasticacheRedis porcelain = new com.strongdm.api.v1.ElasticacheRedis();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setTlsRequired(plumbing.getTlsRequired());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
     return porcelain;
   }
 
@@ -3446,6 +3611,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3458,10 +3626,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.ElasticacheRedis> repeatedElasticacheRedisToPorcelain(
-      Collection<ElasticacheRedis> plumbings) {
+  public static List<com.strongdm.api.v1.ElasticacheRedis>
+      convertRepeatedElasticacheRedisToPorcelain(Collection<ElasticacheRedis> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> elasticacheRedisToPorcelain(plumbing))
+        .map(plumbing -> convertElasticacheRedisToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3472,17 +3640,18 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Snowflake snowflakeToPorcelain(Snowflake plumbing) {
+  public static com.strongdm.api.v1.Snowflake convertSnowflakeToPorcelain(Snowflake plumbing) {
     com.strongdm.api.v1.Snowflake porcelain = new com.strongdm.api.v1.Snowflake();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setSchema(plumbing.getSchema());
-    porcelain.setPortOverride(plumbing.getPortOverride());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setSchema((plumbing.getSchema()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     return porcelain;
   }
 
@@ -3498,6 +3667,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3517,10 +3689,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Snowflake> repeatedSnowflakeToPorcelain(
+  public static List<com.strongdm.api.v1.Snowflake> convertRepeatedSnowflakeToPorcelain(
       Collection<Snowflake> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> snowflakeToPorcelain(plumbing))
+        .map(plumbing -> convertSnowflakeToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3531,19 +3703,20 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.SQLServer sqlServerToPorcelain(SQLServer plumbing) {
+  public static com.strongdm.api.v1.SQLServer convertSQLServerToPorcelain(SQLServer plumbing) {
     com.strongdm.api.v1.SQLServer porcelain = new com.strongdm.api.v1.SQLServer();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setDatabase(plumbing.getDatabase());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setSchema(plumbing.getSchema());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setOverrideDatabase(plumbing.getOverrideDatabase());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSchema((plumbing.getSchema()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
     return porcelain;
   }
 
@@ -3559,6 +3732,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3580,10 +3756,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.SQLServer> repeatedSQLServerToPorcelain(
+  public static List<com.strongdm.api.v1.SQLServer> convertRepeatedSQLServerToPorcelain(
       Collection<SQLServer> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> sqlServerToPorcelain(plumbing))
+        .map(plumbing -> convertSQLServerToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3594,16 +3770,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.SSH sshToPorcelain(SSH plumbing) {
+  public static com.strongdm.api.v1.SSH convertSSHToPorcelain(SSH plumbing) {
     com.strongdm.api.v1.SSH porcelain = new com.strongdm.api.v1.SSH();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setPublicKey(plumbing.getPublicKey());
-    porcelain.setPortForwarding(plumbing.getPortForwarding());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPublicKey((plumbing.getPublicKey()));
+    porcelain.setPortForwarding((plumbing.getPortForwarding()));
     return porcelain;
   }
 
@@ -3619,6 +3796,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3633,9 +3813,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.SSH> repeatedSSHToPorcelain(Collection<SSH> plumbings) {
+  public static List<com.strongdm.api.v1.SSH> convertRepeatedSSHToPorcelain(
+      Collection<SSH> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> sshToPorcelain(plumbing))
+        .map(plumbing -> convertSSHToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3645,16 +3826,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Sybase sybaseToPorcelain(Sybase plumbing) {
+  public static com.strongdm.api.v1.Sybase convertSybaseToPorcelain(Sybase plumbing) {
     com.strongdm.api.v1.Sybase porcelain = new com.strongdm.api.v1.Sybase();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPassword((plumbing.getPassword()));
     return porcelain;
   }
 
@@ -3670,6 +3852,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3684,10 +3869,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Sybase> repeatedSybaseToPorcelain(
+  public static List<com.strongdm.api.v1.Sybase> convertRepeatedSybaseToPorcelain(
       Collection<Sybase> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> sybaseToPorcelain(plumbing))
+        .map(plumbing -> convertSybaseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3698,16 +3883,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.SybaseIQ sybaseIqToPorcelain(SybaseIQ plumbing) {
+  public static com.strongdm.api.v1.SybaseIQ convertSybaseIQToPorcelain(SybaseIQ plumbing) {
     com.strongdm.api.v1.SybaseIQ porcelain = new com.strongdm.api.v1.SybaseIQ();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
-    porcelain.setPassword(plumbing.getPassword());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPassword((plumbing.getPassword()));
     return porcelain;
   }
 
@@ -3723,6 +3909,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3737,10 +3926,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.SybaseIQ> repeatedSybaseIQToPorcelain(
+  public static List<com.strongdm.api.v1.SybaseIQ> convertRepeatedSybaseIQToPorcelain(
       Collection<SybaseIQ> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> sybaseIqToPorcelain(plumbing))
+        .map(plumbing -> convertSybaseIQToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3751,16 +3940,17 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Teradata teradataToPorcelain(Teradata plumbing) {
+  public static com.strongdm.api.v1.Teradata convertTeradataToPorcelain(Teradata plumbing) {
     com.strongdm.api.v1.Teradata porcelain = new com.strongdm.api.v1.Teradata();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setHealthy(plumbing.getHealthy());
-    porcelain.setHostname(plumbing.getHostname());
-    porcelain.setUsername(plumbing.getUsername());
-    porcelain.setPassword(plumbing.getPassword());
-    porcelain.setPortOverride(plumbing.getPortOverride());
-    porcelain.setPort(plumbing.getPort());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
     return porcelain;
   }
 
@@ -3776,6 +3966,9 @@ public class Plumbing {
       builder.setName(porcelain.getName());
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.tagsToPlumbing(porcelain.getTags()));
+    }
     if (porcelain.getHostname() != null) {
       builder.setHostname(porcelain.getHostname());
     }
@@ -3790,10 +3983,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Teradata> repeatedTeradataToPorcelain(
+  public static List<com.strongdm.api.v1.Teradata> convertRepeatedTeradataToPorcelain(
       Collection<Teradata> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> teradataToPorcelain(plumbing))
+        .map(plumbing -> convertTeradataToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3804,13 +3997,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.NodeCreateResponse nodeCreateResponseToPorcelain(
+  public static com.strongdm.api.v1.NodeCreateResponse convertNodeCreateResponseToPorcelain(
       NodeCreateResponse plumbing) {
     com.strongdm.api.v1.NodeCreateResponse porcelain = new com.strongdm.api.v1.NodeCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
-    porcelain.setToken(plumbing.getToken());
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setNode(Plumbing.convertNodeToPorcelain(plumbing.getNode()));
+    porcelain.setToken((plumbing.getToken()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -3835,10 +4028,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.NodeCreateResponse> repeatedNodeCreateResponseToPorcelain(
-      Collection<NodeCreateResponse> plumbings) {
+  public static List<com.strongdm.api.v1.NodeCreateResponse>
+      convertRepeatedNodeCreateResponseToPorcelain(Collection<NodeCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> nodeCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertNodeCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3849,12 +4042,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.NodeGetResponse nodeGetResponseToPorcelain(
+  public static com.strongdm.api.v1.NodeGetResponse convertNodeGetResponseToPorcelain(
       NodeGetResponse plumbing) {
     com.strongdm.api.v1.NodeGetResponse porcelain = new com.strongdm.api.v1.NodeGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setNode(Plumbing.convertNodeToPorcelain(plumbing.getNode()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -3876,10 +4069,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.NodeGetResponse> repeatedNodeGetResponseToPorcelain(
+  public static List<com.strongdm.api.v1.NodeGetResponse> convertRepeatedNodeGetResponseToPorcelain(
       Collection<NodeGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> nodeGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertNodeGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3890,12 +4083,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.NodeUpdateResponse nodeUpdateResponseToPorcelain(
+  public static com.strongdm.api.v1.NodeUpdateResponse convertNodeUpdateResponseToPorcelain(
       NodeUpdateResponse plumbing) {
     com.strongdm.api.v1.NodeUpdateResponse porcelain = new com.strongdm.api.v1.NodeUpdateResponse();
-    porcelain.setMeta(Plumbing.updateResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setNode(Plumbing.nodeToPorcelain(plumbing.getNode()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setNode(Plumbing.convertNodeToPorcelain(plumbing.getNode()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -3917,10 +4110,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.NodeUpdateResponse> repeatedNodeUpdateResponseToPorcelain(
-      Collection<NodeUpdateResponse> plumbings) {
+  public static List<com.strongdm.api.v1.NodeUpdateResponse>
+      convertRepeatedNodeUpdateResponseToPorcelain(Collection<NodeUpdateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> nodeUpdateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertNodeUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3931,11 +4124,11 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.NodeDeleteResponse nodeDeleteResponseToPorcelain(
+  public static com.strongdm.api.v1.NodeDeleteResponse convertNodeDeleteResponseToPorcelain(
       NodeDeleteResponse plumbing) {
     com.strongdm.api.v1.NodeDeleteResponse porcelain = new com.strongdm.api.v1.NodeDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -3954,10 +4147,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.NodeDeleteResponse> repeatedNodeDeleteResponseToPorcelain(
-      Collection<NodeDeleteResponse> plumbings) {
+  public static List<com.strongdm.api.v1.NodeDeleteResponse>
+      convertRepeatedNodeDeleteResponseToPorcelain(Collection<NodeDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> nodeDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertNodeDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -3968,15 +4161,15 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Node nodeToPorcelain(Node plumbing) {
+  public static com.strongdm.api.v1.Node convertNodeToPorcelain(Node plumbing) {
     if (plumbing == null) {
       return null;
     }
     if (plumbing.hasRelay()) {
-      return relayToPorcelain(plumbing.getRelay());
+      return convertRelayToPorcelain(plumbing.getRelay());
     }
     if (plumbing.hasGateway()) {
-      return gatewayToPorcelain(plumbing.getGateway());
+      return convertGatewayToPorcelain(plumbing.getGateway());
     }
     return null;
   }
@@ -3998,9 +4191,10 @@ public class Plumbing {
     return null;
   }
 
-  public static List<com.strongdm.api.v1.Node> repeatedNodeToPorcelain(Collection<Node> plumbings) {
+  public static List<com.strongdm.api.v1.Node> convertRepeatedNodeToPorcelain(
+      Collection<Node> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> nodeToPorcelain(plumbing))
+        .map(plumbing -> convertNodeToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4010,11 +4204,11 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Relay relayToPorcelain(Relay plumbing) {
+  public static com.strongdm.api.v1.Relay convertRelayToPorcelain(Relay plumbing) {
     com.strongdm.api.v1.Relay porcelain = new com.strongdm.api.v1.Relay();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setState(plumbing.getState());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setState((plumbing.getState()));
     return porcelain;
   }
 
@@ -4035,10 +4229,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Relay> repeatedRelayToPorcelain(
+  public static List<com.strongdm.api.v1.Relay> convertRepeatedRelayToPorcelain(
       Collection<Relay> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> relayToPorcelain(plumbing))
+        .map(plumbing -> convertRelayToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4049,13 +4243,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Gateway gatewayToPorcelain(Gateway plumbing) {
+  public static com.strongdm.api.v1.Gateway convertGatewayToPorcelain(Gateway plumbing) {
     com.strongdm.api.v1.Gateway porcelain = new com.strongdm.api.v1.Gateway();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setState(plumbing.getState());
-    porcelain.setListenAddress(plumbing.getListenAddress());
-    porcelain.setBindAddress(plumbing.getBindAddress());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setState((plumbing.getState()));
+    porcelain.setListenAddress((plumbing.getListenAddress()));
+    porcelain.setBindAddress((plumbing.getBindAddress()));
     return porcelain;
   }
 
@@ -4082,10 +4276,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Gateway> repeatedGatewayToPorcelain(
+  public static List<com.strongdm.api.v1.Gateway> convertRepeatedGatewayToPorcelain(
       Collection<Gateway> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> gatewayToPorcelain(plumbing))
+        .map(plumbing -> convertGatewayToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4096,13 +4290,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.ResourceCreateResponse resourceCreateResponseToPorcelain(
+  public static com.strongdm.api.v1.ResourceCreateResponse convertResourceCreateResponseToPorcelain(
       ResourceCreateResponse plumbing) {
     com.strongdm.api.v1.ResourceCreateResponse porcelain =
         new com.strongdm.api.v1.ResourceCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setResource(Plumbing.resourceToPorcelain(plumbing.getResource()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setResource(Plumbing.convertResourceToPorcelain(plumbing.getResource()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4125,9 +4319,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.ResourceCreateResponse>
-      repeatedResourceCreateResponseToPorcelain(Collection<ResourceCreateResponse> plumbings) {
+      convertRepeatedResourceCreateResponseToPorcelain(
+          Collection<ResourceCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> resourceCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertResourceCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4138,13 +4333,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.ResourceGetResponse resourceGetResponseToPorcelain(
+  public static com.strongdm.api.v1.ResourceGetResponse convertResourceGetResponseToPorcelain(
       ResourceGetResponse plumbing) {
     com.strongdm.api.v1.ResourceGetResponse porcelain =
         new com.strongdm.api.v1.ResourceGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setResource(Plumbing.resourceToPorcelain(plumbing.getResource()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setResource(Plumbing.convertResourceToPorcelain(plumbing.getResource()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4167,9 +4362,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.ResourceGetResponse>
-      repeatedResourceGetResponseToPorcelain(Collection<ResourceGetResponse> plumbings) {
+      convertRepeatedResourceGetResponseToPorcelain(Collection<ResourceGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> resourceGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertResourceGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4180,13 +4375,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.ResourceUpdateResponse resourceUpdateResponseToPorcelain(
+  public static com.strongdm.api.v1.ResourceUpdateResponse convertResourceUpdateResponseToPorcelain(
       ResourceUpdateResponse plumbing) {
     com.strongdm.api.v1.ResourceUpdateResponse porcelain =
         new com.strongdm.api.v1.ResourceUpdateResponse();
-    porcelain.setMeta(Plumbing.updateResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setResource(Plumbing.resourceToPorcelain(plumbing.getResource()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setResource(Plumbing.convertResourceToPorcelain(plumbing.getResource()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4209,9 +4404,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.ResourceUpdateResponse>
-      repeatedResourceUpdateResponseToPorcelain(Collection<ResourceUpdateResponse> plumbings) {
+      convertRepeatedResourceUpdateResponseToPorcelain(
+          Collection<ResourceUpdateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> resourceUpdateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertResourceUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4222,12 +4418,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.ResourceDeleteResponse resourceDeleteResponseToPorcelain(
+  public static com.strongdm.api.v1.ResourceDeleteResponse convertResourceDeleteResponseToPorcelain(
       ResourceDeleteResponse plumbing) {
     com.strongdm.api.v1.ResourceDeleteResponse porcelain =
         new com.strongdm.api.v1.ResourceDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4247,9 +4443,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.ResourceDeleteResponse>
-      repeatedResourceDeleteResponseToPorcelain(Collection<ResourceDeleteResponse> plumbings) {
+      convertRepeatedResourceDeleteResponseToPorcelain(
+          Collection<ResourceDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> resourceDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertResourceDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4261,12 +4458,13 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.RoleAttachmentCreateResponse
-      roleAttachmentCreateResponseToPorcelain(RoleAttachmentCreateResponse plumbing) {
+      convertRoleAttachmentCreateResponseToPorcelain(RoleAttachmentCreateResponse plumbing) {
     com.strongdm.api.v1.RoleAttachmentCreateResponse porcelain =
         new com.strongdm.api.v1.RoleAttachmentCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRoleAttachment(Plumbing.roleAttachmentToPorcelain(plumbing.getRoleAttachment()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRoleAttachment(
+        Plumbing.convertRoleAttachmentToPorcelain(plumbing.getRoleAttachment()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4289,10 +4487,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.RoleAttachmentCreateResponse>
-      repeatedRoleAttachmentCreateResponseToPorcelain(
+      convertRepeatedRoleAttachmentCreateResponseToPorcelain(
           Collection<RoleAttachmentCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleAttachmentCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleAttachmentCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4303,13 +4501,14 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleAttachmentGetResponse roleAttachmentGetResponseToPorcelain(
-      RoleAttachmentGetResponse plumbing) {
+  public static com.strongdm.api.v1.RoleAttachmentGetResponse
+      convertRoleAttachmentGetResponseToPorcelain(RoleAttachmentGetResponse plumbing) {
     com.strongdm.api.v1.RoleAttachmentGetResponse porcelain =
         new com.strongdm.api.v1.RoleAttachmentGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRoleAttachment(Plumbing.roleAttachmentToPorcelain(plumbing.getRoleAttachment()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRoleAttachment(
+        Plumbing.convertRoleAttachmentToPorcelain(plumbing.getRoleAttachment()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4332,10 +4531,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.RoleAttachmentGetResponse>
-      repeatedRoleAttachmentGetResponseToPorcelain(
+      convertRepeatedRoleAttachmentGetResponseToPorcelain(
           Collection<RoleAttachmentGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleAttachmentGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleAttachmentGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4347,11 +4546,11 @@ public class Plumbing {
   }
 
   public static com.strongdm.api.v1.RoleAttachmentDeleteResponse
-      roleAttachmentDeleteResponseToPorcelain(RoleAttachmentDeleteResponse plumbing) {
+      convertRoleAttachmentDeleteResponseToPorcelain(RoleAttachmentDeleteResponse plumbing) {
     com.strongdm.api.v1.RoleAttachmentDeleteResponse porcelain =
         new com.strongdm.api.v1.RoleAttachmentDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4371,10 +4570,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.RoleAttachmentDeleteResponse>
-      repeatedRoleAttachmentDeleteResponseToPorcelain(
+      convertRepeatedRoleAttachmentDeleteResponseToPorcelain(
           Collection<RoleAttachmentDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleAttachmentDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleAttachmentDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4385,12 +4584,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleAttachment roleAttachmentToPorcelain(
+  public static com.strongdm.api.v1.RoleAttachment convertRoleAttachmentToPorcelain(
       RoleAttachment plumbing) {
     com.strongdm.api.v1.RoleAttachment porcelain = new com.strongdm.api.v1.RoleAttachment();
-    porcelain.setId(plumbing.getId());
-    porcelain.setCompositeRoleId(plumbing.getCompositeRoleId());
-    porcelain.setAttachedRoleId(plumbing.getAttachedRoleId());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setCompositeRoleId((plumbing.getCompositeRoleId()));
+    porcelain.setAttachedRoleId((plumbing.getAttachedRoleId()));
     return porcelain;
   }
 
@@ -4412,10 +4611,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RoleAttachment> repeatedRoleAttachmentToPorcelain(
+  public static List<com.strongdm.api.v1.RoleAttachment> convertRepeatedRoleAttachmentToPorcelain(
       Collection<RoleAttachment> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleAttachmentToPorcelain(plumbing))
+        .map(plumbing -> convertRoleAttachmentToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4426,13 +4625,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleGrantCreateResponse roleGrantCreateResponseToPorcelain(
-      RoleGrantCreateResponse plumbing) {
+  public static com.strongdm.api.v1.RoleGrantCreateResponse
+      convertRoleGrantCreateResponseToPorcelain(RoleGrantCreateResponse plumbing) {
     com.strongdm.api.v1.RoleGrantCreateResponse porcelain =
         new com.strongdm.api.v1.RoleGrantCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRoleGrant(Plumbing.roleGrantToPorcelain(plumbing.getRoleGrant()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRoleGrant(Plumbing.convertRoleGrantToPorcelain(plumbing.getRoleGrant()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4455,9 +4654,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.RoleGrantCreateResponse>
-      repeatedRoleGrantCreateResponseToPorcelain(Collection<RoleGrantCreateResponse> plumbings) {
+      convertRepeatedRoleGrantCreateResponseToPorcelain(
+          Collection<RoleGrantCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleGrantCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleGrantCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4468,13 +4668,13 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleGrantGetResponse roleGrantGetResponseToPorcelain(
+  public static com.strongdm.api.v1.RoleGrantGetResponse convertRoleGrantGetResponseToPorcelain(
       RoleGrantGetResponse plumbing) {
     com.strongdm.api.v1.RoleGrantGetResponse porcelain =
         new com.strongdm.api.v1.RoleGrantGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRoleGrant(Plumbing.roleGrantToPorcelain(plumbing.getRoleGrant()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRoleGrant(Plumbing.convertRoleGrantToPorcelain(plumbing.getRoleGrant()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4497,9 +4697,9 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.RoleGrantGetResponse>
-      repeatedRoleGrantGetResponseToPorcelain(Collection<RoleGrantGetResponse> plumbings) {
+      convertRepeatedRoleGrantGetResponseToPorcelain(Collection<RoleGrantGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleGrantGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleGrantGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4510,12 +4710,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleGrantDeleteResponse roleGrantDeleteResponseToPorcelain(
-      RoleGrantDeleteResponse plumbing) {
+  public static com.strongdm.api.v1.RoleGrantDeleteResponse
+      convertRoleGrantDeleteResponseToPorcelain(RoleGrantDeleteResponse plumbing) {
     com.strongdm.api.v1.RoleGrantDeleteResponse porcelain =
         new com.strongdm.api.v1.RoleGrantDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4535,9 +4735,10 @@ public class Plumbing {
   }
 
   public static List<com.strongdm.api.v1.RoleGrantDeleteResponse>
-      repeatedRoleGrantDeleteResponseToPorcelain(Collection<RoleGrantDeleteResponse> plumbings) {
+      convertRepeatedRoleGrantDeleteResponseToPorcelain(
+          Collection<RoleGrantDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleGrantDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleGrantDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4548,11 +4749,11 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleGrant roleGrantToPorcelain(RoleGrant plumbing) {
+  public static com.strongdm.api.v1.RoleGrant convertRoleGrantToPorcelain(RoleGrant plumbing) {
     com.strongdm.api.v1.RoleGrant porcelain = new com.strongdm.api.v1.RoleGrant();
-    porcelain.setId(plumbing.getId());
-    porcelain.setResourceId(plumbing.getResourceId());
-    porcelain.setRoleId(plumbing.getRoleId());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setResourceId((plumbing.getResourceId()));
+    porcelain.setRoleId((plumbing.getRoleId()));
     return porcelain;
   }
 
@@ -4573,10 +4774,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RoleGrant> repeatedRoleGrantToPorcelain(
+  public static List<com.strongdm.api.v1.RoleGrant> convertRepeatedRoleGrantToPorcelain(
       Collection<RoleGrant> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleGrantToPorcelain(plumbing))
+        .map(plumbing -> convertRoleGrantToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4587,12 +4788,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleCreateResponse roleCreateResponseToPorcelain(
+  public static com.strongdm.api.v1.RoleCreateResponse convertRoleCreateResponseToPorcelain(
       RoleCreateResponse plumbing) {
     com.strongdm.api.v1.RoleCreateResponse porcelain = new com.strongdm.api.v1.RoleCreateResponse();
-    porcelain.setMeta(Plumbing.createResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRole(Plumbing.convertRoleToPorcelain(plumbing.getRole()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4614,10 +4815,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RoleCreateResponse> repeatedRoleCreateResponseToPorcelain(
-      Collection<RoleCreateResponse> plumbings) {
+  public static List<com.strongdm.api.v1.RoleCreateResponse>
+      convertRepeatedRoleCreateResponseToPorcelain(Collection<RoleCreateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleCreateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleCreateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4628,12 +4829,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleGetResponse roleGetResponseToPorcelain(
+  public static com.strongdm.api.v1.RoleGetResponse convertRoleGetResponseToPorcelain(
       RoleGetResponse plumbing) {
     com.strongdm.api.v1.RoleGetResponse porcelain = new com.strongdm.api.v1.RoleGetResponse();
-    porcelain.setMeta(Plumbing.getResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRole(Plumbing.convertRoleToPorcelain(plumbing.getRole()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4655,10 +4856,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RoleGetResponse> repeatedRoleGetResponseToPorcelain(
+  public static List<com.strongdm.api.v1.RoleGetResponse> convertRepeatedRoleGetResponseToPorcelain(
       Collection<RoleGetResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleGetResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleGetResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4669,12 +4870,12 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleUpdateResponse roleUpdateResponseToPorcelain(
+  public static com.strongdm.api.v1.RoleUpdateResponse convertRoleUpdateResponseToPorcelain(
       RoleUpdateResponse plumbing) {
     com.strongdm.api.v1.RoleUpdateResponse porcelain = new com.strongdm.api.v1.RoleUpdateResponse();
-    porcelain.setMeta(Plumbing.updateResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRole(Plumbing.roleToPorcelain(plumbing.getRole()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRole(Plumbing.convertRoleToPorcelain(plumbing.getRole()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4696,10 +4897,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RoleUpdateResponse> repeatedRoleUpdateResponseToPorcelain(
-      Collection<RoleUpdateResponse> plumbings) {
+  public static List<com.strongdm.api.v1.RoleUpdateResponse>
+      convertRepeatedRoleUpdateResponseToPorcelain(Collection<RoleUpdateResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleUpdateResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleUpdateResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4710,11 +4911,11 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RoleDeleteResponse roleDeleteResponseToPorcelain(
+  public static com.strongdm.api.v1.RoleDeleteResponse convertRoleDeleteResponseToPorcelain(
       RoleDeleteResponse plumbing) {
     com.strongdm.api.v1.RoleDeleteResponse porcelain = new com.strongdm.api.v1.RoleDeleteResponse();
-    porcelain.setMeta(Plumbing.deleteResponseMetadataToPorcelain(plumbing.getMeta()));
-    porcelain.setRateLimit(Plumbing.rateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
     return porcelain;
   }
 
@@ -4733,10 +4934,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.RoleDeleteResponse> repeatedRoleDeleteResponseToPorcelain(
-      Collection<RoleDeleteResponse> plumbings) {
+  public static List<com.strongdm.api.v1.RoleDeleteResponse>
+      convertRepeatedRoleDeleteResponseToPorcelain(Collection<RoleDeleteResponse> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleDeleteResponseToPorcelain(plumbing))
+        .map(plumbing -> convertRoleDeleteResponseToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4747,11 +4948,11 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.Role roleToPorcelain(Role plumbing) {
+  public static com.strongdm.api.v1.Role convertRoleToPorcelain(Role plumbing) {
     com.strongdm.api.v1.Role porcelain = new com.strongdm.api.v1.Role();
-    porcelain.setId(plumbing.getId());
-    porcelain.setName(plumbing.getName());
-    porcelain.setComposite(plumbing.getComposite());
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setComposite((plumbing.getComposite()));
     return porcelain;
   }
 
@@ -4770,9 +4971,10 @@ public class Plumbing {
     return builder.build();
   }
 
-  public static List<com.strongdm.api.v1.Role> repeatedRoleToPorcelain(Collection<Role> plumbings) {
+  public static List<com.strongdm.api.v1.Role> convertRepeatedRoleToPorcelain(
+      Collection<Role> plumbings) {
     return plumbings.stream()
-        .map(plumbing -> roleToPorcelain(plumbing))
+        .map(plumbing -> convertRoleToPorcelain(plumbing))
         .collect(Collectors.toList());
   }
 
@@ -4782,7 +4984,7 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RpcException exceptionToPorcelain(Exception e) {
+  public static com.strongdm.api.v1.RpcException convertExceptionToPorcelain(Exception e) {
     if (!(e instanceof io.grpc.StatusRuntimeException)) {
       return new com.strongdm.api.v1.RpcException(e.getMessage(), 2); // Unknown
     }
@@ -4809,7 +5011,7 @@ public class Plumbing {
               com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata plumbing =
                   any.unpack(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.class);
               return new com.strongdm.api.v1.RateLimitException(
-                  e.getMessage(), Plumbing.rateLimitMetadataToPorcelain(plumbing));
+                  e.getMessage(), Plumbing.convertRateLimitMetadataToPorcelain(plumbing));
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException ex) {

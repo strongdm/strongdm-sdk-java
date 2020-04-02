@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // A Role is a collection of permissions, and typically corresponds to a team, Active Directory OU,
 // or other organizational unit. Users are granted access to resources by assigning them to roles.
 public class Role {

@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 public class Greenplum implements Resource {
   private String id;
   // Unique identifier of the Resource.
@@ -48,6 +49,17 @@ public class Greenplum implements Resource {
   // True if the datasource is reachable and the credentials are valid.
   public Greenplum setHealthy(boolean in) {
     this.healthy = in;
+    return this;
+  }
+
+  private Tags tags;
+  // Tags is a map of key, value pairs.
+  public Tags getTags() {
+    return this.tags;
+  }
+  // Tags is a map of key, value pairs.
+  public Greenplum setTags(Tags in) {
+    this.tags = in;
     return this;
   }
 

@@ -73,11 +73,11 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one Role by ID.
   public RoleGetResponse get(String id) throws RpcException {
@@ -98,11 +98,11 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleGetResponseToPorcelain(plumbingResponse);
   }
   // Update patches a Role by ID.
   public RoleUpdateResponse update(Role role) throws RpcException {
@@ -123,11 +123,11 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleUpdateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleUpdateResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a Role by ID.
   public RoleDeleteResponse delete(String id) throws RpcException {
@@ -148,11 +148,11 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of Roles matching a given set of criteria.
   public Iterable<Role> list(String filter, Object... args) throws RpcException {
@@ -176,7 +176,8 @@ public class Roles {
                   .withCallCredentials(this.parent.getCallCredentials("Roles.List", req))
                   .list(req);
 
-          List<Role> page = Plumbing.repeatedRoleToPorcelain(plumbingResponse.getRolesList());
+          List<Role> page =
+              Plumbing.convertRepeatedRoleToPorcelain(plumbingResponse.getRolesList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 public class AmazonEKS implements Resource {
   private String id;
   // Unique identifier of the Resource.
@@ -48,6 +49,17 @@ public class AmazonEKS implements Resource {
   // True if the datasource is reachable and the credentials are valid.
   public AmazonEKS setHealthy(boolean in) {
     this.healthy = in;
+    return this;
+  }
+
+  private Tags tags;
+  // Tags is a map of key, value pairs.
+  public Tags getTags() {
+    return this.tags;
+  }
+  // Tags is a map of key, value pairs.
+  public AmazonEKS setTags(Tags in) {
+    this.tags = in;
     return this;
   }
 
@@ -125,17 +137,6 @@ public class AmazonEKS implements Resource {
 
   public AmazonEKS setClusterName(String in) {
     this.clusterName = in;
-    return this;
-  }
-
-  private String roleArn;
-
-  public String getRoleArn() {
-    return this.roleArn;
-  }
-
-  public AmazonEKS setRoleArn(String in) {
-    this.roleArn = in;
     return this;
   }
 }

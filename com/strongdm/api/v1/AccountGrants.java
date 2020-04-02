@@ -71,11 +71,11 @@ public class AccountGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountGrantCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountGrantCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one AccountGrant by ID.
   public AccountGrantGetResponse get(String id) throws RpcException {
@@ -97,11 +97,11 @@ public class AccountGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountGrantGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountGrantGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a AccountGrant by ID.
   public AccountGrantDeleteResponse delete(String id) throws RpcException {
@@ -123,11 +123,11 @@ public class AccountGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountGrantDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountGrantDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of AccountGrants matching a given set of criteria.
   public Iterable<AccountGrant> list(String filter, Object... args) throws RpcException {
@@ -153,7 +153,8 @@ public class AccountGrants {
                   .list(req);
 
           List<AccountGrant> page =
-              Plumbing.repeatedAccountGrantToPorcelain(plumbingResponse.getAccountGrantsList());
+              Plumbing.convertRepeatedAccountGrantToPorcelain(
+                  plumbingResponse.getAccountGrantsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 public class BigQuery implements Resource {
   private String id;
   // Unique identifier of the Resource.
@@ -48,6 +49,17 @@ public class BigQuery implements Resource {
   // True if the datasource is reachable and the credentials are valid.
   public BigQuery setHealthy(boolean in) {
     this.healthy = in;
+    return this;
+  }
+
+  private Tags tags;
+  // Tags is a map of key, value pairs.
+  public Tags getTags() {
+    return this.tags;
+  }
+  // Tags is a map of key, value pairs.
+  public BigQuery setTags(Tags in) {
+    this.tags = in;
     return this;
   }
 

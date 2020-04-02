@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // AccountGetResponse returns a requested Account.
 public class AccountGetResponse {
   private GetResponseMetadata meta;

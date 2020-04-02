@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 // RoleCreateResponse reports how the Roles were created in the system. It can
 // communicate partial successes or failures.
 public class RoleCreateResponse {

@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+
 public class ClientOptions {
   private String host;
 
