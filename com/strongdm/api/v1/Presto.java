@@ -51,13 +51,13 @@ public class Presto implements Resource {
     return this;
   }
 
-  private Tags tags;
+  private java.util.Map<String, String> tags;
   // Tags is a map of key, value pairs.
-  public Tags getTags() {
+  public java.util.Map<String, String> getTags() {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public Presto setTags(Tags in) {
+  public Presto setTags(java.util.Map<String, String> in) {
     this.tags = in;
     return this;
   }

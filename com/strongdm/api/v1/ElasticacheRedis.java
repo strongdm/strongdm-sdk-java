@@ -51,13 +51,13 @@ public class ElasticacheRedis implements Resource {
     return this;
   }
 
-  private Tags tags;
+  private java.util.Map<String, String> tags;
   // Tags is a map of key, value pairs.
-  public Tags getTags() {
+  public java.util.Map<String, String> getTags() {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public ElasticacheRedis setTags(Tags in) {
+  public ElasticacheRedis setTags(java.util.Map<String, String> in) {
     this.tags = in;
     return this;
   }

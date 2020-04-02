@@ -68,12 +68,21 @@ public class Plumbing {
     return new Date(t.getSeconds() * 1000 + t.getNanos() / 1000000);
   }
 
-  public static com.strongdm.api.v1.Tags convertTagsToPorcelain(Tags plumbing) {
-    return new com.strongdm.api.v1.Tags();
+  public static java.util.Map<String, String> convertTagsToPorcelain(Tags plumbing) {
+    java.util.HashMap<String, String> porcelain = new java.util.HashMap<String, String>();
+    for (Pair p : plumbing.getPairsList()) {
+      porcelain.put(p.getName(), p.getValue());
+    }
+    return porcelain;
   }
 
-  public static Tags convertTagsToPlumbing(com.strongdm.api.v1.Tags porcelain) {
-    return Tags.newBuilder().build();
+  public static Tags convertTagsToPlumbing(java.util.Map<String, String> porcelain) {
+    Tags.Builder builder = Tags.newBuilder();
+    for (java.util.Map.Entry<String, String> entry : porcelain.entrySet()) {
+      builder.addPairs(
+          Pair.newBuilder().setName(entry.getKey()).setValue(entry.getValue()).build());
+    }
+    return builder.build();
   }
 
   public static com.strongdm.api.v1.CreateResponseMetadata convertCreateResponseMetadataToPorcelain(

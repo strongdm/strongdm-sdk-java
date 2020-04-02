@@ -24,5 +24,5 @@ public interface Resource {
   // Returns the name of the Resource.
   String getName();
   // Returns the tags of the Resource.
-  Tags getTags();
+  java.util.Map<String, String> getTags();
 }
