@@ -182,6 +182,26 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getCustomJavaPorcelainTypeBytes();
+
+    /**
+     * <pre>
+     * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+     * </pre>
+     *
+     * <code>string custom_terraform_porcelain_type = 1941312;</code>
+     * @return The customTerraformPorcelainType.
+     */
+    java.lang.String getCustomTerraformPorcelainType();
+    /**
+     * <pre>
+     * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+     * </pre>
+     *
+     * <code>string custom_terraform_porcelain_type = 1941312;</code>
+     * @return The bytes for customTerraformPorcelainType.
+     */
+    com.google.protobuf.ByteString
+        getCustomTerraformPorcelainTypeBytes();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -201,6 +221,7 @@ public final class Options {
       customConverter_ = "";
       customGoPorcelainType_ = "";
       customJavaPorcelainType_ = "";
+      customTerraformPorcelainType_ = "";
     }
 
     @java.lang.Override
@@ -296,6 +317,12 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               customJavaPorcelainType_ = s;
+              break;
+            }
+            case 15530498: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              customTerraformPorcelainType_ = s;
               break;
             }
             default: {
@@ -625,6 +652,50 @@ public final class Options {
       }
     }
 
+    public static final int CUSTOM_TERRAFORM_PORCELAIN_TYPE_FIELD_NUMBER = 1941312;
+    private volatile java.lang.Object customTerraformPorcelainType_;
+    /**
+     * <pre>
+     * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+     * </pre>
+     *
+     * <code>string custom_terraform_porcelain_type = 1941312;</code>
+     * @return The customTerraformPorcelainType.
+     */
+    public java.lang.String getCustomTerraformPorcelainType() {
+      java.lang.Object ref = customTerraformPorcelainType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customTerraformPorcelainType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+     * </pre>
+     *
+     * <code>string custom_terraform_porcelain_type = 1941312;</code>
+     * @return The bytes for customTerraformPorcelainType.
+     */
+    public com.google.protobuf.ByteString
+        getCustomTerraformPorcelainTypeBytes() {
+      java.lang.Object ref = customTerraformPorcelainType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customTerraformPorcelainType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -674,6 +745,9 @@ public final class Options {
       }
       if (!getCustomJavaPorcelainTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, customJavaPorcelainType_);
+      }
+      if (!getCustomTerraformPorcelainTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, customTerraformPorcelainType_);
       }
       unknownFields.writeTo(output);
     }
@@ -727,6 +801,9 @@ public final class Options {
       if (!getCustomJavaPorcelainTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, customJavaPorcelainType_);
       }
+      if (!getCustomTerraformPorcelainTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, customTerraformPorcelainType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -766,6 +843,8 @@ public final class Options {
           .equals(other.getCustomGoPorcelainType())) return false;
       if (!getCustomJavaPorcelainType()
           .equals(other.getCustomJavaPorcelainType())) return false;
+      if (!getCustomTerraformPorcelainType()
+          .equals(other.getCustomTerraformPorcelainType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -808,6 +887,8 @@ public final class Options {
       hash = (53 * hash) + getCustomGoPorcelainType().hashCode();
       hash = (37 * hash) + CUSTOM_JAVA_PORCELAIN_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getCustomJavaPorcelainType().hashCode();
+      hash = (37 * hash) + CUSTOM_TERRAFORM_PORCELAIN_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomTerraformPorcelainType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -965,6 +1046,8 @@ public final class Options {
 
         customJavaPorcelainType_ = "";
 
+        customTerraformPorcelainType_ = "";
+
         return this;
       }
 
@@ -1003,6 +1086,7 @@ public final class Options {
         result.customConverter_ = customConverter_;
         result.customGoPorcelainType_ = customGoPorcelainType_;
         result.customJavaPorcelainType_ = customJavaPorcelainType_;
+        result.customTerraformPorcelainType_ = customTerraformPorcelainType_;
         onBuilt();
         return result;
       }
@@ -1090,6 +1174,10 @@ public final class Options {
         }
         if (!other.getCustomJavaPorcelainType().isEmpty()) {
           customJavaPorcelainType_ = other.customJavaPorcelainType_;
+          onChanged();
+        }
+        if (!other.getCustomTerraformPorcelainType().isEmpty()) {
+          customTerraformPorcelainType_ = other.customTerraformPorcelainType_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1829,6 +1917,102 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         customJavaPorcelainType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object customTerraformPorcelainType_ = "";
+      /**
+       * <pre>
+       * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+       * </pre>
+       *
+       * <code>string custom_terraform_porcelain_type = 1941312;</code>
+       * @return The customTerraformPorcelainType.
+       */
+      public java.lang.String getCustomTerraformPorcelainType() {
+        java.lang.Object ref = customTerraformPorcelainType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customTerraformPorcelainType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+       * </pre>
+       *
+       * <code>string custom_terraform_porcelain_type = 1941312;</code>
+       * @return The bytes for customTerraformPorcelainType.
+       */
+      public com.google.protobuf.ByteString
+          getCustomTerraformPorcelainTypeBytes() {
+        java.lang.Object ref = customTerraformPorcelainType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customTerraformPorcelainType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+       * </pre>
+       *
+       * <code>string custom_terraform_porcelain_type = 1941312;</code>
+       * @param value The customTerraformPorcelainType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomTerraformPorcelainType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        customTerraformPorcelainType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+       * </pre>
+       *
+       * <code>string custom_terraform_porcelain_type = 1941312;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomTerraformPorcelainType() {
+        
+        customTerraformPorcelainType_ = getDefaultInstance().getCustomTerraformPorcelainType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * custom_terraform_porcelain_type allows you to customize the porcelain field type in terraform
+       * </pre>
+       *
+       * <code>string custom_terraform_porcelain_type = 1941312;</code>
+       * @param value The bytes for customTerraformPorcelainType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomTerraformPorcelainTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        customTerraformPorcelainType_ = value;
         onChanged();
         return this;
       }
@@ -5146,7 +5330,7 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"\263\002\n\014FieldOptions\022\016\n\004name\030\264" +
+      "criptor.proto\"\336\002\n\014FieldOptions\022\016\n\004name\030\264" +
       "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose" +
       "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(" +
       "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t" +
@@ -5154,24 +5338,25 @@ public final class Options {
       "\022\023\n\tforce_new\030\274\276v \001(\010\022\032\n\020custom_converte" +
       "r\030\275\276v \001(\t\022\"\n\030custom_go_porcelain_type\030\276\276" +
       "v \001(\t\022$\n\032custom_java_porcelain_type\030\277\276v " +
-      "\001(\t\"\222\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v" +
-      " \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001" +
-      "(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform" +
-      "_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\"T\n\rTerr" +
-      "aformDocs\022\037\n\025resource_example_path\030\264\276v \001" +
-      "(\t\022\"\n\030data_source_example_path\030\265\276v \001(\t\"=" +
-      "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\r" +
-      "common_fields\030\205\277v \003(\t\"%\n\016ServiceOptions\022" +
-      "\023\n\tmain_noun\030\230\277v \001(\t:H\n\rfield_options\022\035." +
-      "google.protobuf.FieldOptions\030\216\277v \001(\0132\020.v" +
-      "1.FieldOptions:N\n\017message_options\022\037.goog" +
-      "le.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1." +
-      "MessageOptions:H\n\roneof_options\022\035.google" +
-      ".protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.Oneo" +
-      "fOptions:N\n\017service_options\022\037.google.pro" +
-      "tobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Servic" +
-      "eOptionsB\036\n\034com.strongdm.api.v1.plumbing" +
-      "b\006proto3"
+      "\001(\t\022)\n\037custom_terraform_porcelain_type\030\300" +
+      "\276v \001(\t\"\222\001\n\016MessageOptions\022\024\n\nmodel_name\030" +
+      "\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276" +
+      "v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraf" +
+      "orm_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\"T\n\rT" +
+      "erraformDocs\022\037\n\025resource_example_path\030\264\276" +
+      "v \001(\t\022\"\n\030data_source_example_path\030\265\276v \001(" +
+      "\t\"=\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022" +
+      "\027\n\rcommon_fields\030\205\277v \003(\t\"%\n\016ServiceOptio" +
+      "ns\022\023\n\tmain_noun\030\230\277v \001(\t:H\n\rfield_options" +
+      "\022\035.google.protobuf.FieldOptions\030\216\277v \001(\0132" +
+      "\020.v1.FieldOptions:N\n\017message_options\022\037.g" +
+      "oogle.protobuf.MessageOptions\030\217\277v \001(\0132\022." +
+      "v1.MessageOptions:H\n\roneof_options\022\035.goo" +
+      "gle.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.O" +
+      "neofOptions:N\n\017service_options\022\037.google." +
+      "protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Ser" +
+      "viceOptionsB\036\n\034com.strongdm.api.v1.plumb" +
+      "ingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5183,7 +5368,7 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "CustomConverter", "CustomGoPorcelainType", "CustomJavaPorcelainType", });
+        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "CustomConverter", "CustomGoPorcelainType", "CustomJavaPorcelainType", "CustomTerraformPorcelainType", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
