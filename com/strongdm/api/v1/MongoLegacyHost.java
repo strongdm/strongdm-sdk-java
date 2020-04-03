@@ -24,9 +24,8 @@ public class MongoLegacyHost implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public MongoLegacyHost setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class MongoLegacyHost implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public MongoLegacyHost setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,8 @@ public class MongoLegacyHost implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public MongoLegacyHost setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
   }
 
   private java.util.Map<String, String> tags;
@@ -57,9 +54,8 @@ public class MongoLegacyHost implements Resource {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public MongoLegacyHost setTags(java.util.Map<String, String> in) {
+  public void setTags(java.util.Map<String, String> in) {
     this.tags = in;
-    return this;
   }
 
   private String hostname;
@@ -68,9 +64,8 @@ public class MongoLegacyHost implements Resource {
     return this.hostname;
   }
 
-  public MongoLegacyHost setHostname(String in) {
+  public void setHostname(String in) {
     this.hostname = in;
-    return this;
   }
 
   private String authDatabase;
@@ -79,9 +74,8 @@ public class MongoLegacyHost implements Resource {
     return this.authDatabase;
   }
 
-  public MongoLegacyHost setAuthDatabase(String in) {
+  public void setAuthDatabase(String in) {
     this.authDatabase = in;
-    return this;
   }
 
   private int portOverride;
@@ -90,9 +84,8 @@ public class MongoLegacyHost implements Resource {
     return this.portOverride;
   }
 
-  public MongoLegacyHost setPortOverride(int in) {
+  public void setPortOverride(int in) {
     this.portOverride = in;
-    return this;
   }
 
   private String username;
@@ -101,9 +94,8 @@ public class MongoLegacyHost implements Resource {
     return this.username;
   }
 
-  public MongoLegacyHost setUsername(String in) {
+  public void setUsername(String in) {
     this.username = in;
-    return this;
   }
 
   private String password;
@@ -112,9 +104,8 @@ public class MongoLegacyHost implements Resource {
     return this.password;
   }
 
-  public MongoLegacyHost setPassword(String in) {
+  public void setPassword(String in) {
     this.password = in;
-    return this;
   }
 
   private int port;
@@ -123,9 +114,8 @@ public class MongoLegacyHost implements Resource {
     return this.port;
   }
 
-  public MongoLegacyHost setPort(int in) {
+  public void setPort(int in) {
     this.port = in;
-    return this;
   }
 
   private String replicaSet;
@@ -134,9 +124,8 @@ public class MongoLegacyHost implements Resource {
     return this.replicaSet;
   }
 
-  public MongoLegacyHost setReplicaSet(String in) {
+  public void setReplicaSet(String in) {
     this.replicaSet = in;
-    return this;
   }
 
   private boolean tlsRequired;
@@ -145,8 +134,7 @@ public class MongoLegacyHost implements Resource {
     return this.tlsRequired;
   }
 
-  public MongoLegacyHost setTlsRequired(boolean in) {
+  public void setTlsRequired(boolean in) {
     this.tlsRequired = in;
-    return this;
   }
 }

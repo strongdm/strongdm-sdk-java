@@ -24,9 +24,8 @@ public class HTTPAuth implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public HTTPAuth setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class HTTPAuth implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public HTTPAuth setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,8 @@ public class HTTPAuth implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public HTTPAuth setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
   }
 
   private java.util.Map<String, String> tags;
@@ -57,9 +54,8 @@ public class HTTPAuth implements Resource {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public HTTPAuth setTags(java.util.Map<String, String> in) {
+  public void setTags(java.util.Map<String, String> in) {
     this.tags = in;
-    return this;
   }
 
   private String url;
@@ -68,9 +64,8 @@ public class HTTPAuth implements Resource {
     return this.url;
   }
 
-  public HTTPAuth setUrl(String in) {
+  public void setUrl(String in) {
     this.url = in;
-    return this;
   }
 
   private String healthcheckPath;
@@ -79,9 +74,8 @@ public class HTTPAuth implements Resource {
     return this.healthcheckPath;
   }
 
-  public HTTPAuth setHealthcheckPath(String in) {
+  public void setHealthcheckPath(String in) {
     this.healthcheckPath = in;
-    return this;
   }
 
   private String authHeader;
@@ -90,9 +84,8 @@ public class HTTPAuth implements Resource {
     return this.authHeader;
   }
 
-  public HTTPAuth setAuthHeader(String in) {
+  public void setAuthHeader(String in) {
     this.authHeader = in;
-    return this;
   }
 
   private String headersBlacklist;
@@ -101,9 +94,8 @@ public class HTTPAuth implements Resource {
     return this.headersBlacklist;
   }
 
-  public HTTPAuth setHeadersBlacklist(String in) {
+  public void setHeadersBlacklist(String in) {
     this.headersBlacklist = in;
-    return this;
   }
 
   private String defaultPath;
@@ -112,9 +104,8 @@ public class HTTPAuth implements Resource {
     return this.defaultPath;
   }
 
-  public HTTPAuth setDefaultPath(String in) {
+  public void setDefaultPath(String in) {
     this.defaultPath = in;
-    return this;
   }
 
   private String subdomain;
@@ -123,8 +114,7 @@ public class HTTPAuth implements Resource {
     return this.subdomain;
   }
 
-  public HTTPAuth setSubdomain(String in) {
+  public void setSubdomain(String in) {
     this.subdomain = in;
-    return this;
   }
 }

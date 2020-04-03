@@ -24,9 +24,8 @@ public class AKSServiceAccount implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public AKSServiceAccount setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class AKSServiceAccount implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public AKSServiceAccount setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,8 @@ public class AKSServiceAccount implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public AKSServiceAccount setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
   }
 
   private java.util.Map<String, String> tags;
@@ -57,9 +54,8 @@ public class AKSServiceAccount implements Resource {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public AKSServiceAccount setTags(java.util.Map<String, String> in) {
+  public void setTags(java.util.Map<String, String> in) {
     this.tags = in;
-    return this;
   }
 
   private String hostname;
@@ -68,9 +64,8 @@ public class AKSServiceAccount implements Resource {
     return this.hostname;
   }
 
-  public AKSServiceAccount setHostname(String in) {
+  public void setHostname(String in) {
     this.hostname = in;
-    return this;
   }
 
   private int port;
@@ -79,9 +74,8 @@ public class AKSServiceAccount implements Resource {
     return this.port;
   }
 
-  public AKSServiceAccount setPort(int in) {
+  public void setPort(int in) {
     this.port = in;
-    return this;
   }
 
   private String token;
@@ -90,8 +84,7 @@ public class AKSServiceAccount implements Resource {
     return this.token;
   }
 
-  public AKSServiceAccount setToken(String in) {
+  public void setToken(String in) {
     this.token = in;
-    return this;
   }
 }

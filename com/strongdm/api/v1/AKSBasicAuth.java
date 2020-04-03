@@ -24,9 +24,8 @@ public class AKSBasicAuth implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public AKSBasicAuth setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class AKSBasicAuth implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public AKSBasicAuth setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,8 @@ public class AKSBasicAuth implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public AKSBasicAuth setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
   }
 
   private java.util.Map<String, String> tags;
@@ -57,9 +54,8 @@ public class AKSBasicAuth implements Resource {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public AKSBasicAuth setTags(java.util.Map<String, String> in) {
+  public void setTags(java.util.Map<String, String> in) {
     this.tags = in;
-    return this;
   }
 
   private String hostname;
@@ -68,9 +64,8 @@ public class AKSBasicAuth implements Resource {
     return this.hostname;
   }
 
-  public AKSBasicAuth setHostname(String in) {
+  public void setHostname(String in) {
     this.hostname = in;
-    return this;
   }
 
   private int port;
@@ -79,9 +74,8 @@ public class AKSBasicAuth implements Resource {
     return this.port;
   }
 
-  public AKSBasicAuth setPort(int in) {
+  public void setPort(int in) {
     this.port = in;
-    return this;
   }
 
   private String username;
@@ -90,9 +84,8 @@ public class AKSBasicAuth implements Resource {
     return this.username;
   }
 
-  public AKSBasicAuth setUsername(String in) {
+  public void setUsername(String in) {
     this.username = in;
-    return this;
   }
 
   private String password;
@@ -101,8 +94,7 @@ public class AKSBasicAuth implements Resource {
     return this.password;
   }
 
-  public AKSBasicAuth setPassword(String in) {
+  public void setPassword(String in) {
     this.password = in;
-    return this;
   }
 }

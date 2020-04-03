@@ -24,9 +24,8 @@ public class DynamoDB implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public DynamoDB setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class DynamoDB implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public DynamoDB setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,8 @@ public class DynamoDB implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public DynamoDB setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
   }
 
   private java.util.Map<String, String> tags;
@@ -57,9 +54,8 @@ public class DynamoDB implements Resource {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public DynamoDB setTags(java.util.Map<String, String> in) {
+  public void setTags(java.util.Map<String, String> in) {
     this.tags = in;
-    return this;
   }
 
   private String accessKey;
@@ -68,9 +64,8 @@ public class DynamoDB implements Resource {
     return this.accessKey;
   }
 
-  public DynamoDB setAccessKey(String in) {
+  public void setAccessKey(String in) {
     this.accessKey = in;
-    return this;
   }
 
   private String secretAccessKey;
@@ -79,9 +74,8 @@ public class DynamoDB implements Resource {
     return this.secretAccessKey;
   }
 
-  public DynamoDB setSecretAccessKey(String in) {
+  public void setSecretAccessKey(String in) {
     this.secretAccessKey = in;
-    return this;
   }
 
   private String region;
@@ -90,9 +84,8 @@ public class DynamoDB implements Resource {
     return this.region;
   }
 
-  public DynamoDB setRegion(String in) {
+  public void setRegion(String in) {
     this.region = in;
-    return this;
   }
 
   private String endpoint;
@@ -101,9 +94,8 @@ public class DynamoDB implements Resource {
     return this.endpoint;
   }
 
-  public DynamoDB setEndpoint(String in) {
+  public void setEndpoint(String in) {
     this.endpoint = in;
-    return this;
   }
 
   private int portOverride;
@@ -112,8 +104,7 @@ public class DynamoDB implements Resource {
     return this.portOverride;
   }
 
-  public DynamoDB setPortOverride(int in) {
+  public void setPortOverride(int in) {
     this.portOverride = in;
-    return this;
   }
 }

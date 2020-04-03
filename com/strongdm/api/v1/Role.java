@@ -26,9 +26,8 @@ public class Role {
     return this.id;
   }
   // Unique identifier of the Role.
-  public Role setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -37,9 +36,8 @@ public class Role {
     return this.name;
   }
   // Unique human-readable name of the Role.
-  public Role setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean composite;
@@ -48,8 +46,7 @@ public class Role {
     return this.composite;
   }
   // True if the Role is a composite role.
-  public Role setComposite(boolean in) {
+  public void setComposite(boolean in) {
     this.composite = in;
-    return this;
   }
 }

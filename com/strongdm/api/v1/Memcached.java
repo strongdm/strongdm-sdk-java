@@ -24,9 +24,8 @@ public class Memcached implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public Memcached setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class Memcached implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public Memcached setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,8 @@ public class Memcached implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public Memcached setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
   }
 
   private java.util.Map<String, String> tags;
@@ -57,9 +54,8 @@ public class Memcached implements Resource {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public Memcached setTags(java.util.Map<String, String> in) {
+  public void setTags(java.util.Map<String, String> in) {
     this.tags = in;
-    return this;
   }
 
   private String hostname;
@@ -68,9 +64,8 @@ public class Memcached implements Resource {
     return this.hostname;
   }
 
-  public Memcached setHostname(String in) {
+  public void setHostname(String in) {
     this.hostname = in;
-    return this;
   }
 
   private int portOverride;
@@ -79,9 +74,8 @@ public class Memcached implements Resource {
     return this.portOverride;
   }
 
-  public Memcached setPortOverride(int in) {
+  public void setPortOverride(int in) {
     this.portOverride = in;
-    return this;
   }
 
   private int port;
@@ -90,8 +84,7 @@ public class Memcached implements Resource {
     return this.port;
   }
 
-  public Memcached setPort(int in) {
+  public void setPort(int in) {
     this.port = in;
-    return this;
   }
 }

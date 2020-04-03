@@ -25,9 +25,8 @@ public class AccountAttachment {
     return this.id;
   }
   // Unique identifier of the AccountAttachment.
-  public AccountAttachment setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String accountId;
@@ -36,9 +35,8 @@ public class AccountAttachment {
     return this.accountId;
   }
   // The id of the account of this AccountAttachment.
-  public AccountAttachment setAccountId(String in) {
+  public void setAccountId(String in) {
     this.accountId = in;
-    return this;
   }
 
   private String roleId;
@@ -47,8 +45,7 @@ public class AccountAttachment {
     return this.roleId;
   }
   // The id of the attached role of this AccountAttachment.
-  public AccountAttachment setRoleId(String in) {
+  public void setRoleId(String in) {
     this.roleId = in;
-    return this;
   }
 }

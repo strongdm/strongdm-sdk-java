@@ -24,9 +24,8 @@ public class SQLServer implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public SQLServer setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class SQLServer implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public SQLServer setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,8 @@ public class SQLServer implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public SQLServer setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
   }
 
   private java.util.Map<String, String> tags;
@@ -57,9 +54,8 @@ public class SQLServer implements Resource {
     return this.tags;
   }
   // Tags is a map of key, value pairs.
-  public SQLServer setTags(java.util.Map<String, String> in) {
+  public void setTags(java.util.Map<String, String> in) {
     this.tags = in;
-    return this;
   }
 
   private String hostname;
@@ -68,9 +64,8 @@ public class SQLServer implements Resource {
     return this.hostname;
   }
 
-  public SQLServer setHostname(String in) {
+  public void setHostname(String in) {
     this.hostname = in;
-    return this;
   }
 
   private String username;
@@ -79,9 +74,8 @@ public class SQLServer implements Resource {
     return this.username;
   }
 
-  public SQLServer setUsername(String in) {
+  public void setUsername(String in) {
     this.username = in;
-    return this;
   }
 
   private String password;
@@ -90,9 +84,8 @@ public class SQLServer implements Resource {
     return this.password;
   }
 
-  public SQLServer setPassword(String in) {
+  public void setPassword(String in) {
     this.password = in;
-    return this;
   }
 
   private String database;
@@ -101,9 +94,8 @@ public class SQLServer implements Resource {
     return this.database;
   }
 
-  public SQLServer setDatabase(String in) {
+  public void setDatabase(String in) {
     this.database = in;
-    return this;
   }
 
   private int portOverride;
@@ -112,9 +104,8 @@ public class SQLServer implements Resource {
     return this.portOverride;
   }
 
-  public SQLServer setPortOverride(int in) {
+  public void setPortOverride(int in) {
     this.portOverride = in;
-    return this;
   }
 
   private String schema;
@@ -123,9 +114,8 @@ public class SQLServer implements Resource {
     return this.schema;
   }
 
-  public SQLServer setSchema(String in) {
+  public void setSchema(String in) {
     this.schema = in;
-    return this;
   }
 
   private int port;
@@ -134,9 +124,8 @@ public class SQLServer implements Resource {
     return this.port;
   }
 
-  public SQLServer setPort(int in) {
+  public void setPort(int in) {
     this.port = in;
-    return this;
   }
 
   private boolean overrideDatabase;
@@ -145,8 +134,7 @@ public class SQLServer implements Resource {
     return this.overrideDatabase;
   }
 
-  public SQLServer setOverrideDatabase(boolean in) {
+  public void setOverrideDatabase(boolean in) {
     this.overrideDatabase = in;
-    return this;
   }
 }

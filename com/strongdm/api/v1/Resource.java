@@ -23,6 +23,10 @@ public interface Resource {
   String getId();
   // Returns the name of the Resource.
   String getName();
+  // Sets the name of the Resource.
+  void setName(String name);
   // Returns the tags of the Resource.
   java.util.Map<String, String> getTags();
+  // Sets the tags of the Resource.
+  void setTags(java.util.Map<String, String> tags);
 }
