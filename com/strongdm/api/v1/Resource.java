@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-// A Resource is a server or service which clients connect to through relays.
+// A Resource is a database or server for which strongDM manages access.
 public interface Resource {
   // Returns the unique identifier of the Resource.
   String getId();

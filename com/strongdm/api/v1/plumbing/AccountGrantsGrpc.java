@@ -31,7 +31,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
+ * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -193,7 +193,7 @@ public final class AccountGrantsGrpc {
 
   /**
    * <pre>
-   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
+   * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public static abstract class AccountGrantsImplBase implements io.grpc.BindableService {
@@ -274,7 +274,7 @@ public final class AccountGrantsGrpc {
 
   /**
    * <pre>
-   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
+   * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public static final class AccountGrantsStub extends io.grpc.stub.AbstractStub<AccountGrantsStub> {
@@ -340,7 +340,7 @@ public final class AccountGrantsGrpc {
 
   /**
    * <pre>
-   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
+   * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public static final class AccountGrantsBlockingStub extends io.grpc.stub.AbstractStub<AccountGrantsBlockingStub> {
@@ -402,7 +402,7 @@ public final class AccountGrantsGrpc {
 
   /**
    * <pre>
-   * AccountGrants connect a resource directly to an account, giving the account the permission to connect to that resource.
+   * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
   public static final class AccountGrantsFutureStub extends io.grpc.stub.AbstractStub<AccountGrantsFutureStub> {

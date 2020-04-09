@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// AccountGrants connect a resource directly to an account, giving the account the permission to
+// AccountGrants assign a resource directly to an account, giving the account the permission to
 // connect to that resource.
 public class AccountGrants {
   private final AccountGrantsGrpc.AccountGrantsBlockingStub stub;

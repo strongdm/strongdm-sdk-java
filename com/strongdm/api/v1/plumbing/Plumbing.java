@@ -30,6 +30,7 @@ import com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.*;
 import com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.*;
 import com.strongdm.api.v1.plumbing.RolesPlumbing.*;
 import com.strongdm.api.v1.plumbing.Spec.*;
+import com.strongdm.api.v1.plumbing.TagsPlumbing.*;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -70,7 +71,7 @@ public class Plumbing {
 
   public static java.util.Map<String, String> convertTagsToPorcelain(Tags plumbing) {
     java.util.HashMap<String, String> porcelain = new java.util.HashMap<String, String>();
-    for (Pair p : plumbing.getPairsList()) {
+    for (Tags.Pair p : plumbing.getPairsList()) {
       porcelain.put(p.getName(), p.getValue());
     }
     return porcelain;
@@ -80,7 +81,7 @@ public class Plumbing {
     Tags.Builder builder = Tags.newBuilder();
     for (java.util.Map.Entry<String, String> entry : porcelain.entrySet()) {
       builder.addPairs(
-          Pair.newBuilder().setName(entry.getKey()).setValue(entry.getValue()).build());
+          Tags.Pair.newBuilder().setName(entry.getKey()).setValue(entry.getValue()).build());
     }
     return builder.build();
   }

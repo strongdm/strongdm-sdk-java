@@ -53,7 +53,7 @@ public class Client {
 
   private final AccountGrants accountGrants;
 
-  // AccountGrants connect a resource directly to an account, giving the account the permission to
+  // AccountGrants assign a resource directly to an account, giving the account the permission to
   // connect to that resource.
   public AccountGrants accountGrants() {
     return this.accountGrants;
