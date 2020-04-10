@@ -25,9 +25,8 @@ public class RoleGrantDeleteResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public RoleGrantDeleteResponse setMeta(DeleteResponseMetadata in) {
+  public void setMeta(DeleteResponseMetadata in) {
     this.meta = in;
-    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -36,8 +35,7 @@ public class RoleGrantDeleteResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public RoleGrantDeleteResponse setRateLimit(RateLimitMetadata in) {
+  public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
-    return this;
   }
 }

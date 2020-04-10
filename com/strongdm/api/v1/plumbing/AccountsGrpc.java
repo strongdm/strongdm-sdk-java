@@ -1,29 +1,35 @@
 // Copyright 2020 StrongDM Inc
-//
+// 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-//
+// 
 //     http://www.apache.org/licenses/LICENSE-2.0
-//
+// 
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
+// 
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
- *
- *
  * <pre>
  * Accounts are users that have access to strongDM.
  * There are two types of accounts:
@@ -41,237 +47,164 @@ public final class AccountsGrpc {
   public static final String SERVICE_NAME = "v1.Accounts";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>
-      getCreateMethod;
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
       requestType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest.class,
       responseType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>
-      getCreateMethod() {
-    io.grpc.MethodDescriptor<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>
-        getCreateMethod;
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> getCreateMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> getCreateMethod;
     if ((getCreateMethod = AccountsGrpc.getCreateMethod) == null) {
       synchronized (AccountsGrpc.class) {
         if ((getCreateMethod = AccountsGrpc.getCreateMethod) == null) {
-          AccountsGrpc.getCreateMethod =
-              getCreateMethod =
-                  io.grpc.MethodDescriptor
-                      .<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
-                          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>
-                          newBuilder()
-                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
-                      .setSampledToLocalTracing(true)
-                      .setRequestMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest
-                                  .getDefaultInstance()))
-                      .setResponseMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse
-                                  .getDefaultInstance()))
-                      .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Create"))
-                      .build();
+          AccountsGrpc.getCreateMethod = getCreateMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Create"))
+              .build();
         }
       }
     }
     return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>
-      getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
       requestType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest.class,
       responseType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>
-      getGetMethod() {
-    io.grpc.MethodDescriptor<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>
-        getGetMethod;
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> getGetMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> getGetMethod;
     if ((getGetMethod = AccountsGrpc.getGetMethod) == null) {
       synchronized (AccountsGrpc.class) {
         if ((getGetMethod = AccountsGrpc.getGetMethod) == null) {
-          AccountsGrpc.getGetMethod =
-              getGetMethod =
-                  io.grpc.MethodDescriptor
-                      .<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
-                          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>
-                          newBuilder()
-                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
-                      .setSampledToLocalTracing(true)
-                      .setRequestMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest
-                                  .getDefaultInstance()))
-                      .setResponseMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse
-                                  .getDefaultInstance()))
-                      .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Get"))
-                      .build();
+          AccountsGrpc.getGetMethod = getGetMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Get"))
+              .build();
         }
       }
     }
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>
-      getUpdateMethod;
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Update",
       requestType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest.class,
       responseType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>
-      getUpdateMethod() {
-    io.grpc.MethodDescriptor<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>
-        getUpdateMethod;
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> getUpdateMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> getUpdateMethod;
     if ((getUpdateMethod = AccountsGrpc.getUpdateMethod) == null) {
       synchronized (AccountsGrpc.class) {
         if ((getUpdateMethod = AccountsGrpc.getUpdateMethod) == null) {
-          AccountsGrpc.getUpdateMethod =
-              getUpdateMethod =
-                  io.grpc.MethodDescriptor
-                      .<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
-                          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>
-                          newBuilder()
-                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
-                      .setSampledToLocalTracing(true)
-                      .setRequestMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest
-                                  .getDefaultInstance()))
-                      .setResponseMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse
-                                  .getDefaultInstance()))
-                      .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Update"))
-                      .build();
+          AccountsGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Update"))
+              .build();
         }
       }
     }
     return getUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>
-      getDeleteMethod;
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> getDeleteMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Delete",
       requestType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest.class,
       responseType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>
-      getDeleteMethod() {
-    io.grpc.MethodDescriptor<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>
-        getDeleteMethod;
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> getDeleteMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> getDeleteMethod;
     if ((getDeleteMethod = AccountsGrpc.getDeleteMethod) == null) {
       synchronized (AccountsGrpc.class) {
         if ((getDeleteMethod = AccountsGrpc.getDeleteMethod) == null) {
-          AccountsGrpc.getDeleteMethod =
-              getDeleteMethod =
-                  io.grpc.MethodDescriptor
-                      .<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
-                          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>
-                          newBuilder()
-                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
-                      .setSampledToLocalTracing(true)
-                      .setRequestMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest
-                                  .getDefaultInstance()))
-                      .setResponseMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse
-                                  .getDefaultInstance()))
-                      .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Delete"))
-                      .build();
+          AccountsGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("Delete"))
+              .build();
         }
       }
     }
     return getDeleteMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>
-      getListMethod;
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
       requestType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest.class,
       responseType = com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
-          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>
-      getListMethod() {
-    io.grpc.MethodDescriptor<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>
-        getListMethod;
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
+      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> getListMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> getListMethod;
     if ((getListMethod = AccountsGrpc.getListMethod) == null) {
       synchronized (AccountsGrpc.class) {
         if ((getListMethod = AccountsGrpc.getListMethod) == null) {
-          AccountsGrpc.getListMethod =
-              getListMethod =
-                  io.grpc.MethodDescriptor
-                      .<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
-                          com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>
-                          newBuilder()
-                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
-                      .setSampledToLocalTracing(true)
-                      .setRequestMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest
-                                  .getDefaultInstance()))
-                      .setResponseMarshaller(
-                          io.grpc.protobuf.ProtoUtils.marshaller(
-                              com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse
-                                  .getDefaultInstance()))
-                      .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("List"))
-                      .build();
+          AccountsGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest, com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountsMethodDescriptorSupplier("List"))
+              .build();
         }
       }
     }
     return getListMethod;
   }
 
-  /** Creates a new async stub that supports all call types for the service */
+  /**
+   * Creates a new async stub that supports all call types for the service
+   */
   public static AccountsStub newStub(io.grpc.Channel channel) {
     return new AccountsStub(channel);
   }
@@ -279,18 +212,20 @@ public final class AccountsGrpc {
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static AccountsBlockingStub newBlockingStub(io.grpc.Channel channel) {
+  public static AccountsBlockingStub newBlockingStub(
+      io.grpc.Channel channel) {
     return new AccountsBlockingStub(channel);
   }
 
-  /** Creates a new ListenableFuture-style stub that supports unary calls on the service */
-  public static AccountsFutureStub newFutureStub(io.grpc.Channel channel) {
+  /**
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   */
+  public static AccountsFutureStub newFutureStub(
+      io.grpc.Channel channel) {
     return new AccountsFutureStub(channel);
   }
 
   /**
-   *
-   *
    * <pre>
    * Accounts are users that have access to strongDM.
    * There are two types of accounts:
@@ -298,128 +233,100 @@ public final class AccountsGrpc {
    * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    */
-  public abstract static class AccountsImplBase implements io.grpc.BindableService {
+  public static abstract class AccountsImplBase implements io.grpc.BindableService {
 
     /**
-     *
-     *
      * <pre>
      * Create registers a new Account.
      * </pre>
      */
-    public void create(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>
-            responseObserver) {
+    public void create(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * Get reads one Account by ID.
      * </pre>
      */
-    public void get(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>
-            responseObserver) {
+    public void get(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * Update patches a Account by ID.
      * </pre>
      */
-    public void update(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>
-            responseObserver) {
+    public void update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * Delete removes a Account by ID.
      * </pre>
      */
-    public void delete(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>
-            responseObserver) {
+    public void delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * List gets a list of Accounts matching a given set of criteria.
      * </pre>
      */
-    public void list(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>
-            responseObserver) {
+    public void list(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
-    @java.lang.Override
-    public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-              getCreateMethod(),
-              asyncUnaryCall(
-                  new MethodHandlers<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>(
-                      this, METHODID_CREATE)))
+            getCreateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>(
+                  this, METHODID_CREATE)))
           .addMethod(
-              getGetMethod(),
-              asyncUnaryCall(
-                  new MethodHandlers<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>(
-                      this, METHODID_GET)))
+            getGetMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>(
+                  this, METHODID_GET)))
           .addMethod(
-              getUpdateMethod(),
-              asyncUnaryCall(
-                  new MethodHandlers<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>(
-                      this, METHODID_UPDATE)))
+            getUpdateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>(
+                  this, METHODID_UPDATE)))
           .addMethod(
-              getDeleteMethod(),
-              asyncUnaryCall(
-                  new MethodHandlers<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>(
-                      this, METHODID_DELETE)))
+            getDeleteMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>(
+                  this, METHODID_DELETE)))
           .addMethod(
-              getListMethod(),
-              asyncUnaryCall(
-                  new MethodHandlers<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>(
-                      this, METHODID_LIST)))
+            getListMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
+                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>(
+                  this, METHODID_LIST)))
           .build();
     }
   }
 
   /**
-   *
-   *
    * <pre>
    * Accounts are users that have access to strongDM.
    * There are two types of accounts:
@@ -432,99 +339,74 @@ public final class AccountsGrpc {
       super(channel);
     }
 
-    private AccountsStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    private AccountsStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsStub build(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AccountsStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AccountsStub(channel, callOptions);
     }
 
     /**
-     *
-     *
      * <pre>
      * Create registers a new Account.
      * </pre>
      */
-    public void create(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>
-            responseObserver) {
+    public void create(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * Get reads one Account by ID.
      * </pre>
      */
-    public void get(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>
-            responseObserver) {
+    public void get(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * Update patches a Account by ID.
      * </pre>
      */
-    public void update(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>
-            responseObserver) {
+    public void update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * Delete removes a Account by ID.
      * </pre>
      */
-    public void delete(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>
-            responseObserver) {
+    public void delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
-     *
-     *
      * <pre>
      * List gets a list of Accounts matching a given set of criteria.
      * </pre>
      */
-    public void list(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request,
-        io.grpc.stub.StreamObserver<
-                com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>
-            responseObserver) {
+    public void list(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
-   *
-   *
    * <pre>
    * Accounts are users that have access to strongDM.
    * There are two types of accounts:
@@ -532,85 +414,74 @@ public final class AccountsGrpc {
    * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    */
-  public static final class AccountsBlockingStub
-      extends io.grpc.stub.AbstractStub<AccountsBlockingStub> {
+  public static final class AccountsBlockingStub extends io.grpc.stub.AbstractStub<AccountsBlockingStub> {
     private AccountsBlockingStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private AccountsBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    private AccountsBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsBlockingStub build(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AccountsBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AccountsBlockingStub(channel, callOptions);
     }
 
     /**
-     *
-     *
      * <pre>
      * Create registers a new Account.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse create(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request) {
-      return blockingUnaryCall(getChannel(), getCreateMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse create(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * Get reads one Account by ID.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse get(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request) {
-      return blockingUnaryCall(getChannel(), getGetMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse get(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * Update patches a Account by ID.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse update(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request) {
-      return blockingUnaryCall(getChannel(), getUpdateMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * Delete removes a Account by ID.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse delete(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request) {
-      return blockingUnaryCall(getChannel(), getDeleteMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * List gets a list of Accounts matching a given set of criteria.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse list(
-        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request) {
-      return blockingUnaryCall(getChannel(), getListMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse list(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
   /**
-   *
-   *
    * <pre>
    * Accounts are users that have access to strongDM.
    * There are two types of accounts:
@@ -618,84 +489,75 @@ public final class AccountsGrpc {
    * 2. **Service users:** machines that are authneticated using a service token
    * </pre>
    */
-  public static final class AccountsFutureStub
-      extends io.grpc.stub.AbstractStub<AccountsFutureStub> {
+  public static final class AccountsFutureStub extends io.grpc.stub.AbstractStub<AccountsFutureStub> {
     private AccountsFutureStub(io.grpc.Channel channel) {
       super(channel);
     }
 
-    private AccountsFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    private AccountsFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsFutureStub build(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AccountsFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AccountsFutureStub(channel, callOptions);
     }
 
     /**
-     *
-     *
      * <pre>
      * Create registers a new Account.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>
-        create(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request) {
-      return futureUnaryCall(getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> create(
+        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * Get reads one Account by ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>
-        get(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request) {
-      return futureUnaryCall(getChannel().newCall(getGetMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> get(
+        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * Update patches a Account by ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>
-        update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request) {
-      return futureUnaryCall(getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> update(
+        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * Delete removes a Account by ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>
-        delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request) {
-      return futureUnaryCall(getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> delete(
+        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
     /**
-     *
-     *
      * <pre>
      * List gets a list of Accounts matching a given set of criteria.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<
-            com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>
-        list(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request) {
-      return futureUnaryCall(getChannel().newCall(getListMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> list(
+        com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }
 
@@ -705,11 +567,11 @@ public final class AccountsGrpc {
   private static final int METHODID_DELETE = 3;
   private static final int METHODID_LIST = 4;
 
-  private static final class MethodHandlers<Req, Resp>
-      implements io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
-          io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
-          io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
-          io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
+  private static final class MethodHandlers<Req, Resp> implements
+      io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
     private final AccountsImplBase serviceImpl;
     private final int methodId;
 
@@ -723,39 +585,24 @@ public final class AccountsGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE:
-          serviceImpl.create(
-              (com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest) request,
-              (io.grpc.stub.StreamObserver<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>)
-                  responseObserver);
+          serviceImpl.create((com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>) responseObserver);
           break;
         case METHODID_GET:
-          serviceImpl.get(
-              (com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest) request,
-              (io.grpc.stub.StreamObserver<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>)
-                  responseObserver);
+          serviceImpl.get((com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>) responseObserver);
           break;
         case METHODID_UPDATE:
-          serviceImpl.update(
-              (com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest) request,
-              (io.grpc.stub.StreamObserver<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>)
-                  responseObserver);
+          serviceImpl.update((com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>) responseObserver);
           break;
         case METHODID_DELETE:
-          serviceImpl.delete(
-              (com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest) request,
-              (io.grpc.stub.StreamObserver<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>)
-                  responseObserver);
+          serviceImpl.delete((com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>) responseObserver);
           break;
         case METHODID_LIST:
-          serviceImpl.list(
-              (com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest) request,
-              (io.grpc.stub.StreamObserver<
-                      com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>)
-                  responseObserver);
+          serviceImpl.list((com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -773,9 +620,8 @@ public final class AccountsGrpc {
     }
   }
 
-  private abstract static class AccountsBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier,
-          io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+  private static abstract class AccountsBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     AccountsBaseDescriptorSupplier() {}
 
     @java.lang.Override
@@ -789,11 +635,13 @@ public final class AccountsGrpc {
     }
   }
 
-  private static final class AccountsFileDescriptorSupplier extends AccountsBaseDescriptorSupplier {
+  private static final class AccountsFileDescriptorSupplier
+      extends AccountsBaseDescriptorSupplier {
     AccountsFileDescriptorSupplier() {}
   }
 
-  private static final class AccountsMethodDescriptorSupplier extends AccountsBaseDescriptorSupplier
+  private static final class AccountsMethodDescriptorSupplier
+      extends AccountsBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
@@ -815,16 +663,14 @@ public final class AccountsGrpc {
       synchronized (AccountsGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
-          serviceDescriptor =
-              result =
-                  io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-                      .setSchemaDescriptor(new AccountsFileDescriptorSupplier())
-                      .addMethod(getCreateMethod())
-                      .addMethod(getGetMethod())
-                      .addMethod(getUpdateMethod())
-                      .addMethod(getDeleteMethod())
-                      .addMethod(getListMethod())
-                      .build();
+          serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
+              .setSchemaDescriptor(new AccountsFileDescriptorSupplier())
+              .addMethod(getCreateMethod())
+              .addMethod(getGetMethod())
+              .addMethod(getUpdateMethod())
+              .addMethod(getDeleteMethod())
+              .addMethod(getListMethod())
+              .build();
         }
       }
     }

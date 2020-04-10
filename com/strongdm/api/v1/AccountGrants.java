@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// AccountGrants connect a resource directly to an account, giving the account the permission to
+// AccountGrants assign a resource directly to an account, giving the account the permission to
 // connect to that resource.
 public class AccountGrants {
   private final AccountGrantsGrpc.AccountGrantsBlockingStub stub;
@@ -55,7 +55,7 @@ public class AccountGrants {
   public AccountGrantCreateResponse create(AccountGrant accountGrant) throws RpcException {
     AccountGrantsPlumbing.AccountGrantCreateRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantCreateRequest.newBuilder();
-    builder.setAccountGrant(Plumbing.accountGrantToPlumbing(accountGrant));
+    builder.setAccountGrant(Plumbing.convertAccountGrantToPlumbing(accountGrant));
     AccountGrantsPlumbing.AccountGrantCreateRequest req = builder.build();
     AccountGrantsPlumbing.AccountGrantCreateResponse plumbingResponse;
     int tries = 0;
@@ -71,17 +71,17 @@ public class AccountGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountGrantCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountGrantCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one AccountGrant by ID.
   public AccountGrantGetResponse get(String id) throws RpcException {
     AccountGrantsPlumbing.AccountGrantGetRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     AccountGrantsPlumbing.AccountGrantGetRequest req = builder.build();
     AccountGrantsPlumbing.AccountGrantGetResponse plumbingResponse;
     int tries = 0;
@@ -97,17 +97,17 @@ public class AccountGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountGrantGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountGrantGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a AccountGrant by ID.
   public AccountGrantDeleteResponse delete(String id) throws RpcException {
     AccountGrantsPlumbing.AccountGrantDeleteRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     AccountGrantsPlumbing.AccountGrantDeleteRequest req = builder.build();
     AccountGrantsPlumbing.AccountGrantDeleteResponse plumbingResponse;
     int tries = 0;
@@ -123,11 +123,11 @@ public class AccountGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.accountGrantDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertAccountGrantDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of AccountGrants matching a given set of criteria.
   public Iterable<AccountGrant> list(String filter, Object... args) throws RpcException {
@@ -153,7 +153,8 @@ public class AccountGrants {
                   .list(req);
 
           List<AccountGrant> page =
-              Plumbing.repeatedAccountGrantToPorcelain(plumbingResponse.getAccountGrantsList());
+              Plumbing.convertRepeatedAccountGrantToPorcelain(
+                  plumbingResponse.getAccountGrantsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

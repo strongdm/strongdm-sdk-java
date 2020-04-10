@@ -26,9 +26,8 @@ public class RoleGrant {
     return this.id;
   }
   // Unique identifier of the RoleGrant.
-  public RoleGrant setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String resourceId;
@@ -37,9 +36,8 @@ public class RoleGrant {
     return this.resourceId;
   }
   // The id of the resource of this RoleGrant.
-  public RoleGrant setResourceId(String in) {
+  public void setResourceId(String in) {
     this.resourceId = in;
-    return this;
   }
 
   private String roleId;
@@ -48,8 +46,7 @@ public class RoleGrant {
     return this.roleId;
   }
   // The id of the attached role of this RoleGrant.
-  public RoleGrant setRoleId(String in) {
+  public void setRoleId(String in) {
     this.roleId = in;
-    return this;
   }
 }

@@ -25,9 +25,8 @@ public class AccountAttachmentCreateResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public AccountAttachmentCreateResponse setMeta(CreateResponseMetadata in) {
+  public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
-    return this;
   }
 
   private AccountAttachment accountAttachment;
@@ -36,9 +35,8 @@ public class AccountAttachmentCreateResponse {
     return this.accountAttachment;
   }
   // The created AccountAttachment.
-  public AccountAttachmentCreateResponse setAccountAttachment(AccountAttachment in) {
+  public void setAccountAttachment(AccountAttachment in) {
     this.accountAttachment = in;
-    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -47,8 +45,7 @@ public class AccountAttachmentCreateResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public AccountAttachmentCreateResponse setRateLimit(RateLimitMetadata in) {
+  public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
-    return this;
   }
 }

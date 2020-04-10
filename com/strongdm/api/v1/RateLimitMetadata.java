@@ -30,9 +30,8 @@ public class RateLimitMetadata {
   }
   // How many total requests the user/token is authorized to make before being
   // rate limited.
-  public RateLimitMetadata setLimit(long in) {
+  public void setLimit(long in) {
     this.limit = in;
-    return this;
   }
 
   private long remaining;
@@ -41,9 +40,8 @@ public class RateLimitMetadata {
     return this.remaining;
   }
   // How many remaining requests out of the limit are still avaialable.
-  public RateLimitMetadata setRemaining(long in) {
+  public void setRemaining(long in) {
     this.remaining = in;
-    return this;
   }
 
   private Date resetAt;
@@ -52,9 +50,8 @@ public class RateLimitMetadata {
     return this.resetAt;
   }
   // The time when remaining will be reset to limit.
-  public RateLimitMetadata setResetAt(Date in) {
+  public void setResetAt(Date in) {
     this.resetAt = in;
-    return this;
   }
 
   private String bucket;
@@ -65,8 +62,7 @@ public class RateLimitMetadata {
   }
   // The bucket this user/token is associated with, which may be shared between
   // multiple users/tokens.
-  public RateLimitMetadata setBucket(String in) {
+  public void setBucket(String in) {
     this.bucket = in;
-    return this;
   }
 }
