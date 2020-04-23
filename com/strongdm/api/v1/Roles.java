@@ -57,7 +57,7 @@ public class Roles {
   // Create registers a new Role.
   public RoleCreateResponse create(Role role) throws RpcException {
     RolesPlumbing.RoleCreateRequest.Builder builder = RolesPlumbing.RoleCreateRequest.newBuilder();
-    builder.setRole(Plumbing.roleToPlumbing(role));
+    builder.setRole(Plumbing.convertRoleToPlumbing(role));
     RolesPlumbing.RoleCreateRequest req = builder.build();
     RolesPlumbing.RoleCreateResponse plumbingResponse;
     int tries = 0;
@@ -73,16 +73,16 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one Role by ID.
   public RoleGetResponse get(String id) throws RpcException {
     RolesPlumbing.RoleGetRequest.Builder builder = RolesPlumbing.RoleGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RolesPlumbing.RoleGetRequest req = builder.build();
     RolesPlumbing.RoleGetResponse plumbingResponse;
     int tries = 0;
@@ -98,16 +98,16 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleGetResponseToPorcelain(plumbingResponse);
   }
   // Update patches a Role by ID.
   public RoleUpdateResponse update(Role role) throws RpcException {
     RolesPlumbing.RoleUpdateRequest.Builder builder = RolesPlumbing.RoleUpdateRequest.newBuilder();
-    builder.setRole(Plumbing.roleToPlumbing(role));
+    builder.setRole(Plumbing.convertRoleToPlumbing(role));
     RolesPlumbing.RoleUpdateRequest req = builder.build();
     RolesPlumbing.RoleUpdateResponse plumbingResponse;
     int tries = 0;
@@ -123,16 +123,16 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleUpdateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleUpdateResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a Role by ID.
   public RoleDeleteResponse delete(String id) throws RpcException {
     RolesPlumbing.RoleDeleteRequest.Builder builder = RolesPlumbing.RoleDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RolesPlumbing.RoleDeleteRequest req = builder.build();
     RolesPlumbing.RoleDeleteResponse plumbingResponse;
     int tries = 0;
@@ -148,11 +148,11 @@ public class Roles {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of Roles matching a given set of criteria.
   public Iterable<Role> list(String filter, Object... args) throws RpcException {
@@ -176,7 +176,8 @@ public class Roles {
                   .withCallCredentials(this.parent.getCallCredentials("Roles.List", req))
                   .list(req);
 
-          List<Role> page = Plumbing.repeatedRoleToPorcelain(plumbingResponse.getRolesList());
+          List<Role> page =
+              Plumbing.convertRepeatedRoleToPorcelain(plumbingResponse.getRolesList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

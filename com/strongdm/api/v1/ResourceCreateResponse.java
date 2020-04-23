@@ -25,9 +25,8 @@ public class ResourceCreateResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public ResourceCreateResponse setMeta(CreateResponseMetadata in) {
+  public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
-    return this;
   }
 
   private Resource resource;
@@ -36,9 +35,8 @@ public class ResourceCreateResponse {
     return this.resource;
   }
   // The created Resource.
-  public ResourceCreateResponse setResource(Resource in) {
+  public void setResource(Resource in) {
     this.resource = in;
-    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -47,8 +45,7 @@ public class ResourceCreateResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public ResourceCreateResponse setRateLimit(RateLimitMetadata in) {
+  public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
-    return this;
   }
 }

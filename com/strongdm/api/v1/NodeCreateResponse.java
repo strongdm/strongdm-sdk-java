@@ -25,9 +25,8 @@ public class NodeCreateResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public NodeCreateResponse setMeta(CreateResponseMetadata in) {
+  public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
-    return this;
   }
 
   private Node node;
@@ -36,9 +35,8 @@ public class NodeCreateResponse {
     return this.node;
   }
   // The created Node.
-  public NodeCreateResponse setNode(Node in) {
+  public void setNode(Node in) {
     this.node = in;
-    return this;
   }
 
   private String token;
@@ -49,9 +47,8 @@ public class NodeCreateResponse {
   }
   // The auth token generated for the Node. The Node will use this token to
   // authenticate with the strongDM API.
-  public NodeCreateResponse setToken(String in) {
+  public void setToken(String in) {
     this.token = in;
-    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -60,8 +57,7 @@ public class NodeCreateResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public NodeCreateResponse setRateLimit(RateLimitMetadata in) {
+  public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
-    return this;
   }
 }

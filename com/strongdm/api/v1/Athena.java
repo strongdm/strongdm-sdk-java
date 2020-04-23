@@ -24,9 +24,8 @@ public class Athena implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public Athena setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class Athena implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public Athena setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,27 @@ public class Athena implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public Athena setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
+  }
+
+  private java.util.Map<String, String> tags;
+  // Tags is a map of key, value pairs.
+  public java.util.Map<String, String> getTags() {
+    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
+    if (this.tags != null) {
+      m.putAll(this.tags);
+    }
+    return m;
+  }
+  // Tags is a map of key, value pairs.
+  public void setTags(java.util.Map<String, String> in) {
+    if (in == null) {
+      this.tags = null;
+      return;
+    }
+    this.tags = new java.util.HashMap<String, String>();
+    this.tags.putAll(in);
   }
 
   private String accessKey;
@@ -57,9 +73,8 @@ public class Athena implements Resource {
     return this.accessKey;
   }
 
-  public Athena setAccessKey(String in) {
+  public void setAccessKey(String in) {
     this.accessKey = in;
-    return this;
   }
 
   private String secretAccessKey;
@@ -68,9 +83,8 @@ public class Athena implements Resource {
     return this.secretAccessKey;
   }
 
-  public Athena setSecretAccessKey(String in) {
+  public void setSecretAccessKey(String in) {
     this.secretAccessKey = in;
-    return this;
   }
 
   private String output;
@@ -79,9 +93,8 @@ public class Athena implements Resource {
     return this.output;
   }
 
-  public Athena setOutput(String in) {
+  public void setOutput(String in) {
     this.output = in;
-    return this;
   }
 
   private int portOverride;
@@ -90,9 +103,8 @@ public class Athena implements Resource {
     return this.portOverride;
   }
 
-  public Athena setPortOverride(int in) {
+  public void setPortOverride(int in) {
     this.portOverride = in;
-    return this;
   }
 
   private String region;
@@ -101,8 +113,7 @@ public class Athena implements Resource {
     return this.region;
   }
 
-  public Athena setRegion(String in) {
+  public void setRegion(String in) {
     this.region = in;
-    return this;
   }
 }

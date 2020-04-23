@@ -24,9 +24,8 @@ public class SybaseIQ implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public SybaseIQ setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class SybaseIQ implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public SybaseIQ setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,27 @@ public class SybaseIQ implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public SybaseIQ setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
+  }
+
+  private java.util.Map<String, String> tags;
+  // Tags is a map of key, value pairs.
+  public java.util.Map<String, String> getTags() {
+    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
+    if (this.tags != null) {
+      m.putAll(this.tags);
+    }
+    return m;
+  }
+  // Tags is a map of key, value pairs.
+  public void setTags(java.util.Map<String, String> in) {
+    if (in == null) {
+      this.tags = null;
+      return;
+    }
+    this.tags = new java.util.HashMap<String, String>();
+    this.tags.putAll(in);
   }
 
   private String hostname;
@@ -57,9 +73,8 @@ public class SybaseIQ implements Resource {
     return this.hostname;
   }
 
-  public SybaseIQ setHostname(String in) {
+  public void setHostname(String in) {
     this.hostname = in;
-    return this;
   }
 
   private String username;
@@ -68,9 +83,8 @@ public class SybaseIQ implements Resource {
     return this.username;
   }
 
-  public SybaseIQ setUsername(String in) {
+  public void setUsername(String in) {
     this.username = in;
-    return this;
   }
 
   private int portOverride;
@@ -79,9 +93,8 @@ public class SybaseIQ implements Resource {
     return this.portOverride;
   }
 
-  public SybaseIQ setPortOverride(int in) {
+  public void setPortOverride(int in) {
     this.portOverride = in;
-    return this;
   }
 
   private int port;
@@ -90,9 +103,8 @@ public class SybaseIQ implements Resource {
     return this.port;
   }
 
-  public SybaseIQ setPort(int in) {
+  public void setPort(int in) {
     this.port = in;
-    return this;
   }
 
   private String password;
@@ -101,8 +113,7 @@ public class SybaseIQ implements Resource {
     return this.password;
   }
 
-  public SybaseIQ setPassword(String in) {
+  public void setPassword(String in) {
     this.password = in;
-    return this;
   }
 }

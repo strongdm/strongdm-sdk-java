@@ -57,7 +57,7 @@ public class RoleAttachments {
   public RoleAttachmentCreateResponse create(RoleAttachment roleAttachment) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentCreateRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentCreateRequest.newBuilder();
-    builder.setRoleAttachment(Plumbing.roleAttachmentToPlumbing(roleAttachment));
+    builder.setRoleAttachment(Plumbing.convertRoleAttachmentToPlumbing(roleAttachment));
     RoleAttachmentsPlumbing.RoleAttachmentCreateRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentCreateResponse plumbingResponse;
     int tries = 0;
@@ -73,17 +73,17 @@ public class RoleAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleAttachmentCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one RoleAttachment by ID.
   public RoleAttachmentGetResponse get(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentGetRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentGetRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RoleAttachmentsPlumbing.RoleAttachmentGetRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentGetResponse plumbingResponse;
     int tries = 0;
@@ -99,17 +99,17 @@ public class RoleAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleAttachmentGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleAttachmentGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a RoleAttachment by ID.
   public RoleAttachmentDeleteResponse delete(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.Builder builder =
         RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.newBuilder();
-    builder.setId(id);
+    builder.setId((id));
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest req = builder.build();
     RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse plumbingResponse;
     int tries = 0;
@@ -125,11 +125,11 @@ public class RoleAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.exceptionToPorcelain(e);
+        throw Plumbing.convertExceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.roleAttachmentDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.convertRoleAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of RoleAttachments matching a given set of criteria.
   public Iterable<RoleAttachment> list(String filter, Object... args) throws RpcException {
@@ -155,7 +155,8 @@ public class RoleAttachments {
                   .list(req);
 
           List<RoleAttachment> page =
-              Plumbing.repeatedRoleAttachmentToPorcelain(plumbingResponse.getRoleAttachmentsList());
+              Plumbing.convertRepeatedRoleAttachmentToPorcelain(
+                  plumbingResponse.getRoleAttachmentsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

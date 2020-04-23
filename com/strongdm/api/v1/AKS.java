@@ -24,9 +24,8 @@ public class AKS implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public AKS setId(String in) {
+  public void setId(String in) {
     this.id = in;
-    return this;
   }
 
   private String name;
@@ -35,9 +34,8 @@ public class AKS implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public AKS setName(String in) {
+  public void setName(String in) {
     this.name = in;
-    return this;
   }
 
   private boolean healthy;
@@ -46,9 +44,27 @@ public class AKS implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public AKS setHealthy(boolean in) {
+  public void setHealthy(boolean in) {
     this.healthy = in;
-    return this;
+  }
+
+  private java.util.Map<String, String> tags;
+  // Tags is a map of key, value pairs.
+  public java.util.Map<String, String> getTags() {
+    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
+    if (this.tags != null) {
+      m.putAll(this.tags);
+    }
+    return m;
+  }
+  // Tags is a map of key, value pairs.
+  public void setTags(java.util.Map<String, String> in) {
+    if (in == null) {
+      this.tags = null;
+      return;
+    }
+    this.tags = new java.util.HashMap<String, String>();
+    this.tags.putAll(in);
   }
 
   private String hostname;
@@ -57,9 +73,8 @@ public class AKS implements Resource {
     return this.hostname;
   }
 
-  public AKS setHostname(String in) {
+  public void setHostname(String in) {
     this.hostname = in;
-    return this;
   }
 
   private int port;
@@ -68,9 +83,8 @@ public class AKS implements Resource {
     return this.port;
   }
 
-  public AKS setPort(int in) {
+  public void setPort(int in) {
     this.port = in;
-    return this;
   }
 
   private String certificateAuthority;
@@ -79,9 +93,8 @@ public class AKS implements Resource {
     return this.certificateAuthority;
   }
 
-  public AKS setCertificateAuthority(String in) {
+  public void setCertificateAuthority(String in) {
     this.certificateAuthority = in;
-    return this;
   }
 
   private String certificateAuthorityFilename;
@@ -90,9 +103,8 @@ public class AKS implements Resource {
     return this.certificateAuthorityFilename;
   }
 
-  public AKS setCertificateAuthorityFilename(String in) {
+  public void setCertificateAuthorityFilename(String in) {
     this.certificateAuthorityFilename = in;
-    return this;
   }
 
   private String clientCertificate;
@@ -101,9 +113,8 @@ public class AKS implements Resource {
     return this.clientCertificate;
   }
 
-  public AKS setClientCertificate(String in) {
+  public void setClientCertificate(String in) {
     this.clientCertificate = in;
-    return this;
   }
 
   private String clientCertificateFilename;
@@ -112,9 +123,8 @@ public class AKS implements Resource {
     return this.clientCertificateFilename;
   }
 
-  public AKS setClientCertificateFilename(String in) {
+  public void setClientCertificateFilename(String in) {
     this.clientCertificateFilename = in;
-    return this;
   }
 
   private String clientKey;
@@ -123,9 +133,8 @@ public class AKS implements Resource {
     return this.clientKey;
   }
 
-  public AKS setClientKey(String in) {
+  public void setClientKey(String in) {
     this.clientKey = in;
-    return this;
   }
 
   private String clientKeyFilename;
@@ -134,8 +143,7 @@ public class AKS implements Resource {
     return this.clientKeyFilename;
   }
 
-  public AKS setClientKeyFilename(String in) {
+  public void setClientKeyFilename(String in) {
     this.clientKeyFilename = in;
-    return this;
   }
 }
