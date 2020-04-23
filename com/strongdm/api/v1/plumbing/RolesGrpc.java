@@ -1,35 +1,29 @@
 // Copyright 2020 StrongDM Inc
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// 
+//
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ *
+ *
  * <pre>
  * Roles are tools for controlling user access to resources. Each Role holds a
  * list of resources which they grant access to. Composite roles are a special
@@ -48,164 +42,237 @@ public final class RolesGrpc {
   public static final String SERVICE_NAME = "v1.Roles";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse> getCreateMethod;
+  private static volatile io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>
+      getCreateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Create",
       requestType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.class,
       responseType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse> getCreateMethod() {
-    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse> getCreateMethod;
+  public static io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>
+      getCreateMethod() {
+    io.grpc.MethodDescriptor<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>
+        getCreateMethod;
     if ((getCreateMethod = RolesGrpc.getCreateMethod) == null) {
       synchronized (RolesGrpc.class) {
         if ((getCreateMethod = RolesGrpc.getCreateMethod) == null) {
-          RolesGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Create"))
-              .build();
+          RolesGrpc.getCreateMethod =
+              getCreateMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
+                          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Create"))
+                      .build();
         }
       }
     }
     return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse> getGetMethod;
+  private static volatile io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>
+      getGetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Get",
       requestType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.class,
       responseType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse> getGetMethod() {
-    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse> getGetMethod;
+  public static io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>
+      getGetMethod() {
+    io.grpc.MethodDescriptor<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>
+        getGetMethod;
     if ((getGetMethod = RolesGrpc.getGetMethod) == null) {
       synchronized (RolesGrpc.class) {
         if ((getGetMethod = RolesGrpc.getGetMethod) == null) {
-          RolesGrpc.getGetMethod = getGetMethod =
-              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Get"))
-              .build();
+          RolesGrpc.getGetMethod =
+              getGetMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
+                          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Get"))
+                      .build();
         }
       }
     }
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse> getUpdateMethod;
+  private static volatile io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>
+      getUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Update",
       requestType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.class,
       responseType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse> getUpdateMethod() {
-    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse> getUpdateMethod;
+  public static io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>
+      getUpdateMethod() {
+    io.grpc.MethodDescriptor<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>
+        getUpdateMethod;
     if ((getUpdateMethod = RolesGrpc.getUpdateMethod) == null) {
       synchronized (RolesGrpc.class) {
         if ((getUpdateMethod = RolesGrpc.getUpdateMethod) == null) {
-          RolesGrpc.getUpdateMethod = getUpdateMethod =
-              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Update"))
-              .build();
+          RolesGrpc.getUpdateMethod =
+              getUpdateMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
+                          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Update"))
+                      .build();
         }
       }
     }
     return getUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse> getDeleteMethod;
+  private static volatile io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>
+      getDeleteMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Delete",
       requestType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.class,
       responseType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse> getDeleteMethod() {
-    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse> getDeleteMethod;
+  public static io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>
+      getDeleteMethod() {
+    io.grpc.MethodDescriptor<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>
+        getDeleteMethod;
     if ((getDeleteMethod = RolesGrpc.getDeleteMethod) == null) {
       synchronized (RolesGrpc.class) {
         if ((getDeleteMethod = RolesGrpc.getDeleteMethod) == null) {
-          RolesGrpc.getDeleteMethod = getDeleteMethod =
-              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Delete"))
-              .build();
+          RolesGrpc.getDeleteMethod =
+              getDeleteMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
+                          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(new RolesMethodDescriptorSupplier("Delete"))
+                      .build();
         }
       }
     }
     return getDeleteMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse> getListMethod;
+  private static volatile io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>
+      getListMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "List",
       requestType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.class,
       responseType = com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
-      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse> getListMethod() {
-    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse> getListMethod;
+  public static io.grpc.MethodDescriptor<
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
+          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>
+      getListMethod() {
+    io.grpc.MethodDescriptor<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>
+        getListMethod;
     if ((getListMethod = RolesGrpc.getListMethod) == null) {
       synchronized (RolesGrpc.class) {
         if ((getListMethod = RolesGrpc.getListMethod) == null) {
-          RolesGrpc.getListMethod = getListMethod =
-              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest, com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new RolesMethodDescriptorSupplier("List"))
-              .build();
+          RolesGrpc.getListMethod =
+              getListMethod =
+                  io.grpc.MethodDescriptor
+                      .<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
+                          com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>
+                          newBuilder()
+                      .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+                      .setSampledToLocalTracing(true)
+                      .setRequestMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest
+                                  .getDefaultInstance()))
+                      .setResponseMarshaller(
+                          io.grpc.protobuf.ProtoUtils.marshaller(
+                              com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse
+                                  .getDefaultInstance()))
+                      .setSchemaDescriptor(new RolesMethodDescriptorSupplier("List"))
+                      .build();
         }
       }
     }
     return getListMethod;
   }
 
-  /**
-   * Creates a new async stub that supports all call types for the service
-   */
+  /** Creates a new async stub that supports all call types for the service */
   public static RolesStub newStub(io.grpc.Channel channel) {
     return new RolesStub(channel);
   }
@@ -213,20 +280,18 @@ public final class RolesGrpc {
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static RolesBlockingStub newBlockingStub(
-      io.grpc.Channel channel) {
+  public static RolesBlockingStub newBlockingStub(io.grpc.Channel channel) {
     return new RolesBlockingStub(channel);
   }
 
-  /**
-   * Creates a new ListenableFuture-style stub that supports unary calls on the service
-   */
-  public static RolesFutureStub newFutureStub(
-      io.grpc.Channel channel) {
+  /** Creates a new ListenableFuture-style stub that supports unary calls on the service */
+  public static RolesFutureStub newFutureStub(io.grpc.Channel channel) {
     return new RolesFutureStub(channel);
   }
 
   /**
+   *
+   *
    * <pre>
    * Roles are tools for controlling user access to resources. Each Role holds a
    * list of resources which they grant access to. Composite roles are a special
@@ -235,100 +300,123 @@ public final class RolesGrpc {
    * Each user can be a member of one Role or composite role.
    * </pre>
    */
-  public static abstract class RolesImplBase implements io.grpc.BindableService {
+  public abstract static class RolesImplBase implements io.grpc.BindableService {
 
     /**
+     *
+     *
      * <pre>
      * Create registers a new Role.
      * </pre>
      */
-    public void create(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse> responseObserver) {
+    public void create(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>
+            responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * Get reads one Role by ID.
      * </pre>
      */
-    public void get(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse> responseObserver) {
+    public void get(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>
+            responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * Update patches a Role by ID.
      * </pre>
      */
-    public void update(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse> responseObserver) {
+    public void update(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>
+            responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * Delete removes a Role by ID.
      * </pre>
      */
-    public void delete(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse> responseObserver) {
+    public void delete(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>
+            responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
-    public void list(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse> responseObserver) {
+    public void list(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>
+            responseObserver) {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    @java.lang.Override
+    public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getCreateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>(
-                  this, METHODID_CREATE)))
+              getCreateMethod(),
+              asyncUnaryCall(
+                  new MethodHandlers<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest,
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>(
+                      this, METHODID_CREATE)))
           .addMethod(
-            getGetMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>(
-                  this, METHODID_GET)))
+              getGetMethod(),
+              asyncUnaryCall(
+                  new MethodHandlers<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest,
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>(
+                      this, METHODID_GET)))
           .addMethod(
-            getUpdateMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>(
-                  this, METHODID_UPDATE)))
+              getUpdateMethod(),
+              asyncUnaryCall(
+                  new MethodHandlers<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest,
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>(
+                      this, METHODID_UPDATE)))
           .addMethod(
-            getDeleteMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>(
-                  this, METHODID_DELETE)))
+              getDeleteMethod(),
+              asyncUnaryCall(
+                  new MethodHandlers<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest,
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>(
+                      this, METHODID_DELETE)))
           .addMethod(
-            getListMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
-                com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>(
-                  this, METHODID_LIST)))
+              getListMethod(),
+              asyncUnaryCall(
+                  new MethodHandlers<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest,
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>(
+                      this, METHODID_LIST)))
           .build();
     }
   }
 
   /**
+   *
+   *
    * <pre>
    * Roles are tools for controlling user access to resources. Each Role holds a
    * list of resources which they grant access to. Composite roles are a special
@@ -342,74 +430,94 @@ public final class RolesGrpc {
       super(channel);
     }
 
-    private RolesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    private RolesStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RolesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RolesStub build(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RolesStub(channel, callOptions);
     }
 
     /**
+     *
+     *
      * <pre>
      * Create registers a new Role.
      * </pre>
      */
-    public void create(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse> responseObserver) {
+    public void create(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>
+            responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * Get reads one Role by ID.
      * </pre>
      */
-    public void get(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse> responseObserver) {
+    public void get(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>
+            responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * Update patches a Role by ID.
      * </pre>
      */
-    public void update(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse> responseObserver) {
+    public void update(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>
+            responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * Delete removes a Role by ID.
      * </pre>
      */
-    public void delete(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse> responseObserver) {
+    public void delete(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>
+            responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
+     *
+     *
      * <pre>
      * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
-    public void list(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request,
-        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse> responseObserver) {
+    public void list(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>
+            responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   *
+   *
    * <pre>
    * Roles are tools for controlling user access to resources. Each Role holds a
    * list of resources which they grant access to. Composite roles are a special
@@ -423,69 +531,79 @@ public final class RolesGrpc {
       super(channel);
     }
 
-    private RolesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    private RolesBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RolesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RolesBlockingStub build(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RolesBlockingStub(channel, callOptions);
     }
 
     /**
+     *
+     *
      * <pre>
      * Create registers a new Role.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse create(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getCreateMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse create(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request) {
+      return blockingUnaryCall(getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * Get reads one Role by ID.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse get(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getGetMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse get(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request) {
+      return blockingUnaryCall(getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * Update patches a Role by ID.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse update(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse update(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request) {
+      return blockingUnaryCall(getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * Delete removes a Role by ID.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse delete(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse delete(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request) {
+      return blockingUnaryCall(getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
-    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse list(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getListMethod(), getCallOptions(), request);
+    public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse list(
+        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request) {
+      return blockingUnaryCall(getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   *
+   *
    * <pre>
    * Roles are tools for controlling user access to resources. Each Role holds a
    * list of resources which they grant access to. Composite roles are a special
@@ -499,70 +617,78 @@ public final class RolesGrpc {
       super(channel);
     }
 
-    private RolesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    private RolesFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RolesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RolesFutureStub build(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RolesFutureStub(channel, callOptions);
     }
 
     /**
+     *
+     *
      * <pre>
      * Create registers a new Role.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse> create(
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>
+        create(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest request) {
+      return futureUnaryCall(getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * Get reads one Role by ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse> get(
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>
+        get(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest request) {
+      return futureUnaryCall(getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * Update patches a Role by ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse> update(
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>
+        update(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request) {
+      return futureUnaryCall(getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * Delete removes a Role by ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse> delete(
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>
+        delete(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest request) {
+      return futureUnaryCall(getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
     /**
+     *
+     *
      * <pre>
      * List gets a list of Roles matching a given set of criteria.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse> list(
-        com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    public com.google.common.util.concurrent.ListenableFuture<
+            com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>
+        list(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest request) {
+      return futureUnaryCall(getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }
 
@@ -572,11 +698,11 @@ public final class RolesGrpc {
   private static final int METHODID_DELETE = 3;
   private static final int METHODID_LIST = 4;
 
-  private static final class MethodHandlers<Req, Resp> implements
-      io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
+  private static final class MethodHandlers<Req, Resp>
+      implements io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
     private final RolesImplBase serviceImpl;
     private final int methodId;
 
@@ -590,24 +716,39 @@ public final class RolesGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE:
-          serviceImpl.create((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) request,
-              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>) responseObserver);
+          serviceImpl.create(
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateRequest) request,
+              (io.grpc.stub.StreamObserver<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleCreateResponse>)
+                  responseObserver);
           break;
         case METHODID_GET:
-          serviceImpl.get((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) request,
-              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>) responseObserver);
+          serviceImpl.get(
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetRequest) request,
+              (io.grpc.stub.StreamObserver<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleGetResponse>)
+                  responseObserver);
           break;
         case METHODID_UPDATE:
-          serviceImpl.update((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) request,
-              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>) responseObserver);
+          serviceImpl.update(
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest) request,
+              (io.grpc.stub.StreamObserver<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse>)
+                  responseObserver);
           break;
         case METHODID_DELETE:
-          serviceImpl.delete((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) request,
-              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>) responseObserver);
+          serviceImpl.delete(
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteRequest) request,
+              (io.grpc.stub.StreamObserver<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleDeleteResponse>)
+                  responseObserver);
           break;
         case METHODID_LIST:
-          serviceImpl.list((com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) request,
-              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>) responseObserver);
+          serviceImpl.list(
+              (com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListRequest) request,
+              (io.grpc.stub.StreamObserver<
+                      com.strongdm.api.v1.plumbing.RolesPlumbing.RoleListResponse>)
+                  responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -625,8 +766,9 @@ public final class RolesGrpc {
     }
   }
 
-  private static abstract class RolesBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+  private abstract static class RolesBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier,
+          io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     RolesBaseDescriptorSupplier() {}
 
     @java.lang.Override
@@ -640,13 +782,11 @@ public final class RolesGrpc {
     }
   }
 
-  private static final class RolesFileDescriptorSupplier
-      extends RolesBaseDescriptorSupplier {
+  private static final class RolesFileDescriptorSupplier extends RolesBaseDescriptorSupplier {
     RolesFileDescriptorSupplier() {}
   }
 
-  private static final class RolesMethodDescriptorSupplier
-      extends RolesBaseDescriptorSupplier
+  private static final class RolesMethodDescriptorSupplier extends RolesBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
@@ -668,14 +808,16 @@ public final class RolesGrpc {
       synchronized (RolesGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
-          serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new RolesFileDescriptorSupplier())
-              .addMethod(getCreateMethod())
-              .addMethod(getGetMethod())
-              .addMethod(getUpdateMethod())
-              .addMethod(getDeleteMethod())
-              .addMethod(getListMethod())
-              .build();
+          serviceDescriptor =
+              result =
+                  io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
+                      .setSchemaDescriptor(new RolesFileDescriptorSupplier())
+                      .addMethod(getCreateMethod())
+                      .addMethod(getGetMethod())
+                      .addMethod(getUpdateMethod())
+                      .addMethod(getDeleteMethod())
+                      .addMethod(getListMethod())
+                      .build();
         }
       }
     }

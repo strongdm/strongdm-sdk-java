@@ -25,8 +25,9 @@ public class AccountCreateResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public void setMeta(CreateResponseMetadata in) {
+  public AccountCreateResponse setMeta(CreateResponseMetadata in) {
     this.meta = in;
+    return this;
   }
 
   private Account account;
@@ -35,8 +36,9 @@ public class AccountCreateResponse {
     return this.account;
   }
   // The created Account.
-  public void setAccount(Account in) {
+  public AccountCreateResponse setAccount(Account in) {
     this.account = in;
+    return this;
   }
 
   private String token;
@@ -47,8 +49,9 @@ public class AccountCreateResponse {
   }
   // The auth token generated for the Account. The Account will use this token to
   // authenticate with the strongDM API.
-  public void setToken(String in) {
+  public AccountCreateResponse setToken(String in) {
     this.token = in;
+    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -57,7 +60,8 @@ public class AccountCreateResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
+  public AccountCreateResponse setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+    return this;
   }
 }

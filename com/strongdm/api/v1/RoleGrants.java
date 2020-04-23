@@ -57,7 +57,7 @@ public class RoleGrants {
   public RoleGrantCreateResponse create(RoleGrant roleGrant) throws RpcException {
     RoleGrantsPlumbing.RoleGrantCreateRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantCreateRequest.newBuilder();
-    builder.setRoleGrant(Plumbing.convertRoleGrantToPlumbing(roleGrant));
+    builder.setRoleGrant(Plumbing.roleGrantToPlumbing(roleGrant));
     RoleGrantsPlumbing.RoleGrantCreateRequest req = builder.build();
     RoleGrantsPlumbing.RoleGrantCreateResponse plumbingResponse;
     int tries = 0;
@@ -73,17 +73,17 @@ public class RoleGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertRoleGrantCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.roleGrantCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one RoleGrant by ID.
   public RoleGrantGetResponse get(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantGetRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantGetRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     RoleGrantsPlumbing.RoleGrantGetRequest req = builder.build();
     RoleGrantsPlumbing.RoleGrantGetResponse plumbingResponse;
     int tries = 0;
@@ -99,17 +99,17 @@ public class RoleGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertRoleGrantGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.roleGrantGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a RoleGrant by ID.
   public RoleGrantDeleteResponse delete(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantDeleteRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantDeleteRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     RoleGrantsPlumbing.RoleGrantDeleteRequest req = builder.build();
     RoleGrantsPlumbing.RoleGrantDeleteResponse plumbingResponse;
     int tries = 0;
@@ -125,11 +125,11 @@ public class RoleGrants {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertRoleGrantDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.roleGrantDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of RoleGrants matching a given set of criteria.
   public Iterable<RoleGrant> list(String filter, Object... args) throws RpcException {
@@ -155,7 +155,7 @@ public class RoleGrants {
                   .list(req);
 
           List<RoleGrant> page =
-              Plumbing.convertRepeatedRoleGrantToPorcelain(plumbingResponse.getRoleGrantsList());
+              Plumbing.repeatedRoleGrantToPorcelain(plumbingResponse.getRoleGrantsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

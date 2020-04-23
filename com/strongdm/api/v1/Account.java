@@ -26,6 +26,4 @@ public interface Account {
   String getId();
   // Returns whether the Account is suspended.
   boolean getSuspended();
-  // Sets whether the Account is suspended.
-  void setSuspended(boolean suspended);
 }

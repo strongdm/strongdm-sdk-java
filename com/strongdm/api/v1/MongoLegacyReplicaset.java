@@ -24,8 +24,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public void setId(String in) {
+  public MongoLegacyReplicaset setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -34,8 +35,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public void setName(String in) {
+  public MongoLegacyReplicaset setName(String in) {
     this.name = in;
+    return this;
   }
 
   private boolean healthy;
@@ -44,27 +46,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
+  public MongoLegacyReplicaset setHealthy(boolean in) {
     this.healthy = in;
-  }
-
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
+    return this;
   }
 
   private String hostname;
@@ -73,8 +57,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.hostname;
   }
 
-  public void setHostname(String in) {
+  public MongoLegacyReplicaset setHostname(String in) {
     this.hostname = in;
+    return this;
   }
 
   private String authDatabase;
@@ -83,8 +68,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.authDatabase;
   }
 
-  public void setAuthDatabase(String in) {
+  public MongoLegacyReplicaset setAuthDatabase(String in) {
     this.authDatabase = in;
+    return this;
   }
 
   private int portOverride;
@@ -93,8 +79,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.portOverride;
   }
 
-  public void setPortOverride(int in) {
+  public MongoLegacyReplicaset setPortOverride(int in) {
     this.portOverride = in;
+    return this;
   }
 
   private String username;
@@ -103,8 +90,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.username;
   }
 
-  public void setUsername(String in) {
+  public MongoLegacyReplicaset setUsername(String in) {
     this.username = in;
+    return this;
   }
 
   private String password;
@@ -113,8 +101,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.password;
   }
 
-  public void setPassword(String in) {
+  public MongoLegacyReplicaset setPassword(String in) {
     this.password = in;
+    return this;
   }
 
   private int port;
@@ -123,8 +112,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.port;
   }
 
-  public void setPort(int in) {
+  public MongoLegacyReplicaset setPort(int in) {
     this.port = in;
+    return this;
   }
 
   private String replicaSet;
@@ -133,8 +123,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.replicaSet;
   }
 
-  public void setReplicaSet(String in) {
+  public MongoLegacyReplicaset setReplicaSet(String in) {
     this.replicaSet = in;
+    return this;
   }
 
   private boolean connectToReplica;
@@ -143,8 +134,9 @@ public class MongoLegacyReplicaset implements Resource {
     return this.connectToReplica;
   }
 
-  public void setConnectToReplica(boolean in) {
+  public MongoLegacyReplicaset setConnectToReplica(boolean in) {
     this.connectToReplica = in;
+    return this;
   }
 
   private boolean tlsRequired;
@@ -153,7 +145,8 @@ public class MongoLegacyReplicaset implements Resource {
     return this.tlsRequired;
   }
 
-  public void setTlsRequired(boolean in) {
+  public MongoLegacyReplicaset setTlsRequired(boolean in) {
     this.tlsRequired = in;
+    return this;
   }
 }

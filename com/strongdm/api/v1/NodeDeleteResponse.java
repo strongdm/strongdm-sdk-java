@@ -25,8 +25,9 @@ public class NodeDeleteResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public void setMeta(DeleteResponseMetadata in) {
+  public NodeDeleteResponse setMeta(DeleteResponseMetadata in) {
     this.meta = in;
+    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -35,7 +36,8 @@ public class NodeDeleteResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
+  public NodeDeleteResponse setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+    return this;
   }
 }

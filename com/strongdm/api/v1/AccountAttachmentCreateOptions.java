@@ -26,7 +26,8 @@ public class AccountAttachmentCreateOptions {
     return this.overwrite;
   }
   // Overwrite clears all account grants before the attachment.
-  public void setOverwrite(boolean in) {
+  public AccountAttachmentCreateOptions setOverwrite(boolean in) {
     this.overwrite = in;
+    return this;
   }
 }

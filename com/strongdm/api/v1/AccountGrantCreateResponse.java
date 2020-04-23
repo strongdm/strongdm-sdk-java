@@ -25,8 +25,9 @@ public class AccountGrantCreateResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public void setMeta(CreateResponseMetadata in) {
+  public AccountGrantCreateResponse setMeta(CreateResponseMetadata in) {
     this.meta = in;
+    return this;
   }
 
   private AccountGrant accountGrant;
@@ -35,8 +36,9 @@ public class AccountGrantCreateResponse {
     return this.accountGrant;
   }
   // The created AccountGrant.
-  public void setAccountGrant(AccountGrant in) {
+  public AccountGrantCreateResponse setAccountGrant(AccountGrant in) {
     this.accountGrant = in;
+    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -45,7 +47,8 @@ public class AccountGrantCreateResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
+  public AccountGrantCreateResponse setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+    return this;
   }
 }

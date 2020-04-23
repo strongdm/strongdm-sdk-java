@@ -53,7 +53,7 @@ public class Client {
 
   private final AccountGrants accountGrants;
 
-  // AccountGrants assign a resource directly to an account, giving the account the permission to
+  // AccountGrants connect a resource directly to an account, giving the account the permission to
   // connect to that resource.
   public AccountGrants accountGrants() {
     return this.accountGrants;
@@ -147,7 +147,7 @@ public class Client {
       this.roleGrants = new RoleGrants(this.channel, this);
       this.roles = new Roles(this.channel, this);
     } catch (Exception e) {
-      throw Plumbing.convertExceptionToPorcelain(e);
+      throw Plumbing.exceptionToPorcelain(e);
     }
     this.testOptions = new HashMap<String, Object>();
   }

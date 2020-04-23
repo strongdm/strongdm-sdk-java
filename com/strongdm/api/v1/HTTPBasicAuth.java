@@ -24,8 +24,9 @@ public class HTTPBasicAuth implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public void setId(String in) {
+  public HTTPBasicAuth setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -34,8 +35,9 @@ public class HTTPBasicAuth implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public void setName(String in) {
+  public HTTPBasicAuth setName(String in) {
     this.name = in;
+    return this;
   }
 
   private boolean healthy;
@@ -44,27 +46,9 @@ public class HTTPBasicAuth implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
+  public HTTPBasicAuth setHealthy(boolean in) {
     this.healthy = in;
-  }
-
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
+    return this;
   }
 
   private String url;
@@ -73,8 +57,9 @@ public class HTTPBasicAuth implements Resource {
     return this.url;
   }
 
-  public void setUrl(String in) {
+  public HTTPBasicAuth setUrl(String in) {
     this.url = in;
+    return this;
   }
 
   private String healthcheckPath;
@@ -83,8 +68,9 @@ public class HTTPBasicAuth implements Resource {
     return this.healthcheckPath;
   }
 
-  public void setHealthcheckPath(String in) {
+  public HTTPBasicAuth setHealthcheckPath(String in) {
     this.healthcheckPath = in;
+    return this;
   }
 
   private String username;
@@ -93,8 +79,9 @@ public class HTTPBasicAuth implements Resource {
     return this.username;
   }
 
-  public void setUsername(String in) {
+  public HTTPBasicAuth setUsername(String in) {
     this.username = in;
+    return this;
   }
 
   private String password;
@@ -103,8 +90,9 @@ public class HTTPBasicAuth implements Resource {
     return this.password;
   }
 
-  public void setPassword(String in) {
+  public HTTPBasicAuth setPassword(String in) {
     this.password = in;
+    return this;
   }
 
   private String headersBlacklist;
@@ -113,8 +101,9 @@ public class HTTPBasicAuth implements Resource {
     return this.headersBlacklist;
   }
 
-  public void setHeadersBlacklist(String in) {
+  public HTTPBasicAuth setHeadersBlacklist(String in) {
     this.headersBlacklist = in;
+    return this;
   }
 
   private String defaultPath;
@@ -123,8 +112,9 @@ public class HTTPBasicAuth implements Resource {
     return this.defaultPath;
   }
 
-  public void setDefaultPath(String in) {
+  public HTTPBasicAuth setDefaultPath(String in) {
     this.defaultPath = in;
+    return this;
   }
 
   private String subdomain;
@@ -133,7 +123,8 @@ public class HTTPBasicAuth implements Resource {
     return this.subdomain;
   }
 
-  public void setSubdomain(String in) {
+  public HTTPBasicAuth setSubdomain(String in) {
     this.subdomain = in;
+    return this;
   }
 }

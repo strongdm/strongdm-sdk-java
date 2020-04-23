@@ -26,8 +26,9 @@ public class Service implements Account {
     return this.id;
   }
   // Unique identifier of the Service.
-  public void setId(String in) {
+  public Service setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -36,8 +37,9 @@ public class Service implements Account {
     return this.name;
   }
   // Unique human-readable name of the Service.
-  public void setName(String in) {
+  public Service setName(String in) {
     this.name = in;
+    return this;
   }
 
   private boolean suspended;
@@ -46,7 +48,8 @@ public class Service implements Account {
     return this.suspended;
   }
   // The Service's suspended state.
-  public void setSuspended(boolean in) {
+  public Service setSuspended(boolean in) {
     this.suspended = in;
+    return this;
   }
 }

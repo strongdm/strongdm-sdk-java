@@ -53,7 +53,7 @@ public class Resources {
   public ResourceCreateResponse create(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceCreateRequest.Builder builder =
         ResourcesPlumbing.ResourceCreateRequest.newBuilder();
-    builder.setResource(Plumbing.convertResourceToPlumbing(resource));
+    builder.setResource(Plumbing.resourceToPlumbing(resource));
     ResourcesPlumbing.ResourceCreateRequest req = builder.build();
     ResourcesPlumbing.ResourceCreateResponse plumbingResponse;
     int tries = 0;
@@ -69,17 +69,17 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertResourceCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.resourceCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one Resource by ID.
   public ResourceGetResponse get(String id) throws RpcException {
     ResourcesPlumbing.ResourceGetRequest.Builder builder =
         ResourcesPlumbing.ResourceGetRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     ResourcesPlumbing.ResourceGetRequest req = builder.build();
     ResourcesPlumbing.ResourceGetResponse plumbingResponse;
     int tries = 0;
@@ -95,17 +95,17 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertResourceGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.resourceGetResponseToPorcelain(plumbingResponse);
   }
   // Update patches a Resource by ID.
   public ResourceUpdateResponse update(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceUpdateRequest.Builder builder =
         ResourcesPlumbing.ResourceUpdateRequest.newBuilder();
-    builder.setResource(Plumbing.convertResourceToPlumbing(resource));
+    builder.setResource(Plumbing.resourceToPlumbing(resource));
     ResourcesPlumbing.ResourceUpdateRequest req = builder.build();
     ResourcesPlumbing.ResourceUpdateResponse plumbingResponse;
     int tries = 0;
@@ -121,17 +121,17 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertResourceUpdateResponseToPorcelain(plumbingResponse);
+    return Plumbing.resourceUpdateResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a Resource by ID.
   public ResourceDeleteResponse delete(String id) throws RpcException {
     ResourcesPlumbing.ResourceDeleteRequest.Builder builder =
         ResourcesPlumbing.ResourceDeleteRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     ResourcesPlumbing.ResourceDeleteRequest req = builder.build();
     ResourcesPlumbing.ResourceDeleteResponse plumbingResponse;
     int tries = 0;
@@ -147,11 +147,11 @@ public class Resources {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertResourceDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.resourceDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of Resources matching a given set of criteria.
   public Iterable<Resource> list(String filter, Object... args) throws RpcException {
@@ -177,7 +177,7 @@ public class Resources {
                   .list(req);
 
           List<Resource> page =
-              Plumbing.convertRepeatedResourceToPorcelain(plumbingResponse.getResourcesList());
+              Plumbing.repeatedResourceToPorcelain(plumbingResponse.getResourcesList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

@@ -25,8 +25,9 @@ public class AccountDeleteResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public void setMeta(DeleteResponseMetadata in) {
+  public AccountDeleteResponse setMeta(DeleteResponseMetadata in) {
     this.meta = in;
+    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -35,7 +36,8 @@ public class AccountDeleteResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
+  public AccountDeleteResponse setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+    return this;
   }
 }

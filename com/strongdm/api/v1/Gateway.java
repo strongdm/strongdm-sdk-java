@@ -25,8 +25,9 @@ public class Gateway implements Node {
     return this.id;
   }
   // Unique identifier of the Gateway.
-  public void setId(String in) {
+  public Gateway setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -35,8 +36,9 @@ public class Gateway implements Node {
     return this.name;
   }
   // Unique human-readable name of the Gateway. Generated if not provided on create.
-  public void setName(String in) {
+  public Gateway setName(String in) {
     this.name = in;
+    return this;
   }
 
   private String state;
@@ -47,8 +49,9 @@ public class Gateway implements Node {
   }
   // The current state of the gateway. One of: "new", "verifying_restart",
   // "restarting", "started", "stopped", "dead", "unknown"
-  public void setState(String in) {
+  public Gateway setState(String in) {
     this.state = in;
+    return this;
   }
 
   private String listenAddress;
@@ -57,8 +60,9 @@ public class Gateway implements Node {
     return this.listenAddress;
   }
   // The public hostname/port tuple at which the gateway will be accessible to clients.
-  public void setListenAddress(String in) {
+  public Gateway setListenAddress(String in) {
     this.listenAddress = in;
+    return this;
   }
 
   private String bindAddress;
@@ -69,7 +73,8 @@ public class Gateway implements Node {
   }
   // The hostname/port tuple which the gateway daemon will bind to.
   // If not provided on create, set to "0.0.0.0:<listen_address_port>".
-  public void setBindAddress(String in) {
+  public Gateway setBindAddress(String in) {
     this.bindAddress = in;
+    return this;
   }
 }

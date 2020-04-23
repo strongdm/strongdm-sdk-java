@@ -57,11 +57,11 @@ public class AccountAttachments {
       throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.newBuilder();
-    builder.setAccountAttachment(Plumbing.convertAccountAttachmentToPlumbing(accountAttachment));
+    builder.setAccountAttachment(Plumbing.accountAttachmentToPlumbing(accountAttachment));
     if (options.length > 1) {
       throw new BadRequestException("use only one AccountAttachmentCreateOptions per create call");
     } else if (options.length == 1) {
-      builder.setOptions(Plumbing.convertAccountAttachmentCreateOptionsToPlumbing(options[0]));
+      builder.setOptions(Plumbing.accountAttachmentCreateOptionsToPlumbing(options[0]));
     }
     AccountAttachmentsPlumbing.AccountAttachmentCreateRequest req = builder.build();
     AccountAttachmentsPlumbing.AccountAttachmentCreateResponse plumbingResponse;
@@ -79,17 +79,17 @@ public class AccountAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertAccountAttachmentCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.accountAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one AccountAttachment by ID.
   public AccountAttachmentGetResponse get(String id) throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentGetRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentGetRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     AccountAttachmentsPlumbing.AccountAttachmentGetRequest req = builder.build();
     AccountAttachmentsPlumbing.AccountAttachmentGetResponse plumbingResponse;
     int tries = 0;
@@ -105,17 +105,17 @@ public class AccountAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertAccountAttachmentGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.accountAttachmentGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a AccountAttachment by ID.
   public AccountAttachmentDeleteResponse delete(String id) throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest req = builder.build();
     AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse plumbingResponse;
     int tries = 0;
@@ -132,11 +132,11 @@ public class AccountAttachments {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertAccountAttachmentDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.accountAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of AccountAttachments matching a given set of criteria.
   public Iterable<AccountAttachment> list(String filter, Object... args) throws RpcException {
@@ -163,7 +163,7 @@ public class AccountAttachments {
                   .list(req);
 
           List<AccountAttachment> page =
-              Plumbing.convertRepeatedAccountAttachmentToPorcelain(
+              Plumbing.repeatedAccountAttachmentToPorcelain(
                   plumbingResponse.getAccountAttachmentsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";

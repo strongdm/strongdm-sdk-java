@@ -57,7 +57,7 @@ public class Nodes {
   // Create registers a new Node.
   public NodeCreateResponse create(Node node) throws RpcException {
     NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
-    builder.setNode(Plumbing.convertNodeToPlumbing(node));
+    builder.setNode(Plumbing.nodeToPlumbing(node));
     NodesPlumbing.NodeCreateRequest req = builder.build();
     NodesPlumbing.NodeCreateResponse plumbingResponse;
     int tries = 0;
@@ -73,16 +73,16 @@ public class Nodes {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertNodeCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.nodeCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one Node by ID.
   public NodeGetResponse get(String id) throws RpcException {
     NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     NodesPlumbing.NodeGetRequest req = builder.build();
     NodesPlumbing.NodeGetResponse plumbingResponse;
     int tries = 0;
@@ -98,16 +98,16 @@ public class Nodes {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertNodeGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.nodeGetResponseToPorcelain(plumbingResponse);
   }
   // Update patches a Node by ID.
   public NodeUpdateResponse update(Node node) throws RpcException {
     NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
-    builder.setNode(Plumbing.convertNodeToPlumbing(node));
+    builder.setNode(Plumbing.nodeToPlumbing(node));
     NodesPlumbing.NodeUpdateRequest req = builder.build();
     NodesPlumbing.NodeUpdateResponse plumbingResponse;
     int tries = 0;
@@ -123,16 +123,16 @@ public class Nodes {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertNodeUpdateResponseToPorcelain(plumbingResponse);
+    return Plumbing.nodeUpdateResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a Node by ID.
   public NodeDeleteResponse delete(String id) throws RpcException {
     NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     NodesPlumbing.NodeDeleteRequest req = builder.build();
     NodesPlumbing.NodeDeleteResponse plumbingResponse;
     int tries = 0;
@@ -148,11 +148,11 @@ public class Nodes {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertNodeDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.nodeDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of Nodes matching a given set of criteria.
   public Iterable<Node> list(String filter, Object... args) throws RpcException {
@@ -176,8 +176,7 @@ public class Nodes {
                   .withCallCredentials(this.parent.getCallCredentials("Nodes.List", req))
                   .list(req);
 
-          List<Node> page =
-              Plumbing.convertRepeatedNodeToPorcelain(plumbingResponse.getNodesList());
+          List<Node> page = Plumbing.repeatedNodeToPorcelain(plumbingResponse.getNodesList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

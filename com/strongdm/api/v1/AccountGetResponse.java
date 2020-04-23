@@ -25,8 +25,9 @@ public class AccountGetResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public void setMeta(GetResponseMetadata in) {
+  public AccountGetResponse setMeta(GetResponseMetadata in) {
     this.meta = in;
+    return this;
   }
 
   private Account account;
@@ -35,8 +36,9 @@ public class AccountGetResponse {
     return this.account;
   }
   // The requested Account.
-  public void setAccount(Account in) {
+  public AccountGetResponse setAccount(Account in) {
     this.account = in;
+    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -45,7 +47,8 @@ public class AccountGetResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
+  public AccountGetResponse setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+    return this;
   }
 }

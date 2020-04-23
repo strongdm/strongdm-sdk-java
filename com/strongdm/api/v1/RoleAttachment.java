@@ -25,8 +25,9 @@ public class RoleAttachment {
     return this.id;
   }
   // Unique identifier of the RoleAttachment.
-  public void setId(String in) {
+  public RoleAttachment setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String compositeRoleId;
@@ -35,8 +36,9 @@ public class RoleAttachment {
     return this.compositeRoleId;
   }
   // The id of the composite role of this RoleAttachment.
-  public void setCompositeRoleId(String in) {
+  public RoleAttachment setCompositeRoleId(String in) {
     this.compositeRoleId = in;
+    return this;
   }
 
   private String attachedRoleId;
@@ -45,7 +47,8 @@ public class RoleAttachment {
     return this.attachedRoleId;
   }
   // The id of the attached role of this RoleAttachment.
-  public void setAttachedRoleId(String in) {
+  public RoleAttachment setAttachedRoleId(String in) {
     this.attachedRoleId = in;
+    return this;
   }
 }

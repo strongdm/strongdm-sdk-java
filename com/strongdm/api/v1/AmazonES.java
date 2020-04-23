@@ -24,8 +24,9 @@ public class AmazonES implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public void setId(String in) {
+  public AmazonES setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -34,8 +35,9 @@ public class AmazonES implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public void setName(String in) {
+  public AmazonES setName(String in) {
     this.name = in;
+    return this;
   }
 
   private boolean healthy;
@@ -44,27 +46,9 @@ public class AmazonES implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
+  public AmazonES setHealthy(boolean in) {
     this.healthy = in;
-  }
-
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
+    return this;
   }
 
   private String region;
@@ -73,8 +57,9 @@ public class AmazonES implements Resource {
     return this.region;
   }
 
-  public void setRegion(String in) {
+  public AmazonES setRegion(String in) {
     this.region = in;
+    return this;
   }
 
   private String secretAccessKey;
@@ -83,8 +68,9 @@ public class AmazonES implements Resource {
     return this.secretAccessKey;
   }
 
-  public void setSecretAccessKey(String in) {
+  public AmazonES setSecretAccessKey(String in) {
     this.secretAccessKey = in;
+    return this;
   }
 
   private String endpoint;
@@ -93,8 +79,9 @@ public class AmazonES implements Resource {
     return this.endpoint;
   }
 
-  public void setEndpoint(String in) {
+  public AmazonES setEndpoint(String in) {
     this.endpoint = in;
+    return this;
   }
 
   private String accessKey;
@@ -103,8 +90,9 @@ public class AmazonES implements Resource {
     return this.accessKey;
   }
 
-  public void setAccessKey(String in) {
+  public AmazonES setAccessKey(String in) {
     this.accessKey = in;
+    return this;
   }
 
   private int portOverride;
@@ -113,7 +101,8 @@ public class AmazonES implements Resource {
     return this.portOverride;
   }
 
-  public void setPortOverride(int in) {
+  public AmazonES setPortOverride(int in) {
     this.portOverride = in;
+    return this;
   }
 }

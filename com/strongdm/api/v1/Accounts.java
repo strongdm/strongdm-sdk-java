@@ -57,7 +57,7 @@ public class Accounts {
   public AccountCreateResponse create(Account account) throws RpcException {
     AccountsPlumbing.AccountCreateRequest.Builder builder =
         AccountsPlumbing.AccountCreateRequest.newBuilder();
-    builder.setAccount(Plumbing.convertAccountToPlumbing(account));
+    builder.setAccount(Plumbing.accountToPlumbing(account));
     AccountsPlumbing.AccountCreateRequest req = builder.build();
     AccountsPlumbing.AccountCreateResponse plumbingResponse;
     int tries = 0;
@@ -73,17 +73,17 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertAccountCreateResponseToPorcelain(plumbingResponse);
+    return Plumbing.accountCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one Account by ID.
   public AccountGetResponse get(String id) throws RpcException {
     AccountsPlumbing.AccountGetRequest.Builder builder =
         AccountsPlumbing.AccountGetRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     AccountsPlumbing.AccountGetRequest req = builder.build();
     AccountsPlumbing.AccountGetResponse plumbingResponse;
     int tries = 0;
@@ -99,17 +99,17 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertAccountGetResponseToPorcelain(plumbingResponse);
+    return Plumbing.accountGetResponseToPorcelain(plumbingResponse);
   }
   // Update patches a Account by ID.
   public AccountUpdateResponse update(Account account) throws RpcException {
     AccountsPlumbing.AccountUpdateRequest.Builder builder =
         AccountsPlumbing.AccountUpdateRequest.newBuilder();
-    builder.setAccount(Plumbing.convertAccountToPlumbing(account));
+    builder.setAccount(Plumbing.accountToPlumbing(account));
     AccountsPlumbing.AccountUpdateRequest req = builder.build();
     AccountsPlumbing.AccountUpdateResponse plumbingResponse;
     int tries = 0;
@@ -125,17 +125,17 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertAccountUpdateResponseToPorcelain(plumbingResponse);
+    return Plumbing.accountUpdateResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a Account by ID.
   public AccountDeleteResponse delete(String id) throws RpcException {
     AccountsPlumbing.AccountDeleteRequest.Builder builder =
         AccountsPlumbing.AccountDeleteRequest.newBuilder();
-    builder.setId((id));
+    builder.setId(id);
     AccountsPlumbing.AccountDeleteRequest req = builder.build();
     AccountsPlumbing.AccountDeleteResponse plumbingResponse;
     int tries = 0;
@@ -151,11 +151,11 @@ public class Accounts {
           this.parent.jitterSleep(tries);
           continue;
         }
-        throw Plumbing.convertExceptionToPorcelain(e);
+        throw Plumbing.exceptionToPorcelain(e);
       }
       break;
     }
-    return Plumbing.convertAccountDeleteResponseToPorcelain(plumbingResponse);
+    return Plumbing.accountDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of Accounts matching a given set of criteria.
   public Iterable<Account> list(String filter, Object... args) throws RpcException {
@@ -181,7 +181,7 @@ public class Accounts {
                   .list(req);
 
           List<Account> page =
-              Plumbing.convertRepeatedAccountToPorcelain(plumbingResponse.getAccountsList());
+              Plumbing.repeatedAccountToPorcelain(plumbingResponse.getAccountsList());
 
           boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
           builder.setMeta(

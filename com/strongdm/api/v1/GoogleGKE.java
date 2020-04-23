@@ -24,8 +24,9 @@ public class GoogleGKE implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public void setId(String in) {
+  public GoogleGKE setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -34,8 +35,9 @@ public class GoogleGKE implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public void setName(String in) {
+  public GoogleGKE setName(String in) {
     this.name = in;
+    return this;
   }
 
   private boolean healthy;
@@ -44,27 +46,9 @@ public class GoogleGKE implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
+  public GoogleGKE setHealthy(boolean in) {
     this.healthy = in;
-  }
-
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
+    return this;
   }
 
   private String endpoint;
@@ -73,8 +57,9 @@ public class GoogleGKE implements Resource {
     return this.endpoint;
   }
 
-  public void setEndpoint(String in) {
+  public GoogleGKE setEndpoint(String in) {
     this.endpoint = in;
+    return this;
   }
 
   private String certificateAuthority;
@@ -83,8 +68,9 @@ public class GoogleGKE implements Resource {
     return this.certificateAuthority;
   }
 
-  public void setCertificateAuthority(String in) {
+  public GoogleGKE setCertificateAuthority(String in) {
     this.certificateAuthority = in;
+    return this;
   }
 
   private String certificateAuthorityFilename;
@@ -93,8 +79,9 @@ public class GoogleGKE implements Resource {
     return this.certificateAuthorityFilename;
   }
 
-  public void setCertificateAuthorityFilename(String in) {
+  public GoogleGKE setCertificateAuthorityFilename(String in) {
     this.certificateAuthorityFilename = in;
+    return this;
   }
 
   private String serviceAccountKey;
@@ -103,8 +90,9 @@ public class GoogleGKE implements Resource {
     return this.serviceAccountKey;
   }
 
-  public void setServiceAccountKey(String in) {
+  public GoogleGKE setServiceAccountKey(String in) {
     this.serviceAccountKey = in;
+    return this;
   }
 
   private String serviceAccountKeyFilename;
@@ -113,7 +101,8 @@ public class GoogleGKE implements Resource {
     return this.serviceAccountKeyFilename;
   }
 
-  public void setServiceAccountKeyFilename(String in) {
+  public GoogleGKE setServiceAccountKeyFilename(String in) {
     this.serviceAccountKeyFilename = in;
+    return this;
   }
 }

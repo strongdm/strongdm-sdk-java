@@ -25,8 +25,9 @@ public class Relay implements Node {
     return this.id;
   }
   // Unique identifier of the Relay.
-  public void setId(String in) {
+  public Relay setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -35,8 +36,9 @@ public class Relay implements Node {
     return this.name;
   }
   // Unique human-readable name of the Relay. Generated if not provided on create.
-  public void setName(String in) {
+  public Relay setName(String in) {
     this.name = in;
+    return this;
   }
 
   private String state;
@@ -47,7 +49,8 @@ public class Relay implements Node {
   }
   // The current state of the relay. One of: "new", "verifying_restart",
   // "restarting", "started", "stopped", "dead", "unknown",
-  public void setState(String in) {
+  public Relay setState(String in) {
     this.state = in;
+    return this;
   }
 }

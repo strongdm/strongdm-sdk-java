@@ -28,8 +28,9 @@ public class AccountGrant {
     return this.id;
   }
   // Unique identifier of the AccountGrant.
-  public void setId(String in) {
+  public AccountGrant setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String resourceId;
@@ -38,8 +39,9 @@ public class AccountGrant {
     return this.resourceId;
   }
   // The id of the composite role of this AccountGrant.
-  public void setResourceId(String in) {
+  public AccountGrant setResourceId(String in) {
     this.resourceId = in;
+    return this;
   }
 
   private String accountId;
@@ -48,8 +50,9 @@ public class AccountGrant {
     return this.accountId;
   }
   // The id of the attached role of this AccountGrant.
-  public void setAccountId(String in) {
+  public AccountGrant setAccountId(String in) {
     this.accountId = in;
+    return this;
   }
 
   private Date startFrom;
@@ -60,8 +63,9 @@ public class AccountGrant {
   }
   // The timestamp when the resource will be granted. Optional. Both start_at
   // and end_at must be defined together, or not defined at all.
-  public void setStartFrom(Date in) {
+  public AccountGrant setStartFrom(Date in) {
     this.startFrom = in;
+    return this;
   }
 
   private Date validUntil;
@@ -72,7 +76,8 @@ public class AccountGrant {
   }
   // The timestamp when the resource grant will expire. Optional. Both
   // start_at and end_at must be defined together, or not defined at all.
-  public void setValidUntil(Date in) {
+  public AccountGrant setValidUntil(Date in) {
     this.validUntil = in;
+    return this;
   }
 }

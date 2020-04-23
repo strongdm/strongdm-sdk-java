@@ -24,8 +24,9 @@ public class AuroraPostgres implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public void setId(String in) {
+  public AuroraPostgres setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -34,8 +35,9 @@ public class AuroraPostgres implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public void setName(String in) {
+  public AuroraPostgres setName(String in) {
     this.name = in;
+    return this;
   }
 
   private boolean healthy;
@@ -44,27 +46,9 @@ public class AuroraPostgres implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
+  public AuroraPostgres setHealthy(boolean in) {
     this.healthy = in;
-  }
-
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
+    return this;
   }
 
   private String hostname;
@@ -73,8 +57,9 @@ public class AuroraPostgres implements Resource {
     return this.hostname;
   }
 
-  public void setHostname(String in) {
+  public AuroraPostgres setHostname(String in) {
     this.hostname = in;
+    return this;
   }
 
   private String username;
@@ -83,8 +68,9 @@ public class AuroraPostgres implements Resource {
     return this.username;
   }
 
-  public void setUsername(String in) {
+  public AuroraPostgres setUsername(String in) {
     this.username = in;
+    return this;
   }
 
   private String password;
@@ -93,8 +79,9 @@ public class AuroraPostgres implements Resource {
     return this.password;
   }
 
-  public void setPassword(String in) {
+  public AuroraPostgres setPassword(String in) {
     this.password = in;
+    return this;
   }
 
   private String database;
@@ -103,8 +90,9 @@ public class AuroraPostgres implements Resource {
     return this.database;
   }
 
-  public void setDatabase(String in) {
+  public AuroraPostgres setDatabase(String in) {
     this.database = in;
+    return this;
   }
 
   private int portOverride;
@@ -113,8 +101,9 @@ public class AuroraPostgres implements Resource {
     return this.portOverride;
   }
 
-  public void setPortOverride(int in) {
+  public AuroraPostgres setPortOverride(int in) {
     this.portOverride = in;
+    return this;
   }
 
   private int port;
@@ -123,8 +112,9 @@ public class AuroraPostgres implements Resource {
     return this.port;
   }
 
-  public void setPort(int in) {
+  public AuroraPostgres setPort(int in) {
     this.port = in;
+    return this;
   }
 
   private boolean overrideDatabase;
@@ -133,7 +123,8 @@ public class AuroraPostgres implements Resource {
     return this.overrideDatabase;
   }
 
-  public void setOverrideDatabase(boolean in) {
+  public AuroraPostgres setOverrideDatabase(boolean in) {
     this.overrideDatabase = in;
+    return this;
   }
 }

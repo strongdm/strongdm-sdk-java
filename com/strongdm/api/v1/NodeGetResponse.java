@@ -25,8 +25,9 @@ public class NodeGetResponse {
     return this.meta;
   }
   // Reserved for future use.
-  public void setMeta(GetResponseMetadata in) {
+  public NodeGetResponse setMeta(GetResponseMetadata in) {
     this.meta = in;
+    return this;
   }
 
   private Node node;
@@ -35,8 +36,9 @@ public class NodeGetResponse {
     return this.node;
   }
   // The requested Node.
-  public void setNode(Node in) {
+  public NodeGetResponse setNode(Node in) {
     this.node = in;
+    return this;
   }
 
   private RateLimitMetadata rateLimit;
@@ -45,7 +47,8 @@ public class NodeGetResponse {
     return this.rateLimit;
   }
   // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
+  public NodeGetResponse setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+    return this;
   }
 }

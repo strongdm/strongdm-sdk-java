@@ -26,8 +26,9 @@ public class User implements Account {
     return this.id;
   }
   // Unique identifier of the User.
-  public void setId(String in) {
+  public User setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String email;
@@ -36,8 +37,9 @@ public class User implements Account {
     return this.email;
   }
   // The User's email address. Must be unique.
-  public void setEmail(String in) {
+  public User setEmail(String in) {
     this.email = in;
+    return this;
   }
 
   private String firstName;
@@ -46,8 +48,9 @@ public class User implements Account {
     return this.firstName;
   }
   // The User's first name.
-  public void setFirstName(String in) {
+  public User setFirstName(String in) {
     this.firstName = in;
+    return this;
   }
 
   private String lastName;
@@ -56,8 +59,9 @@ public class User implements Account {
     return this.lastName;
   }
   // The User's last name.
-  public void setLastName(String in) {
+  public User setLastName(String in) {
     this.lastName = in;
+    return this;
   }
 
   private boolean suspended;
@@ -66,7 +70,8 @@ public class User implements Account {
     return this.suspended;
   }
   // The User's suspended state.
-  public void setSuspended(boolean in) {
+  public User setSuspended(boolean in) {
     this.suspended = in;
+    return this;
   }
 }

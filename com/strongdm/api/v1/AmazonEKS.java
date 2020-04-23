@@ -24,8 +24,9 @@ public class AmazonEKS implements Resource {
     return this.id;
   }
   // Unique identifier of the Resource.
-  public void setId(String in) {
+  public AmazonEKS setId(String in) {
     this.id = in;
+    return this;
   }
 
   private String name;
@@ -34,8 +35,9 @@ public class AmazonEKS implements Resource {
     return this.name;
   }
   // Unique human-readable name of the Resource.
-  public void setName(String in) {
+  public AmazonEKS setName(String in) {
     this.name = in;
+    return this;
   }
 
   private boolean healthy;
@@ -44,27 +46,9 @@ public class AmazonEKS implements Resource {
     return this.healthy;
   }
   // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
+  public AmazonEKS setHealthy(boolean in) {
     this.healthy = in;
-  }
-
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
+    return this;
   }
 
   private String endpoint;
@@ -73,8 +57,9 @@ public class AmazonEKS implements Resource {
     return this.endpoint;
   }
 
-  public void setEndpoint(String in) {
+  public AmazonEKS setEndpoint(String in) {
     this.endpoint = in;
+    return this;
   }
 
   private String accessKey;
@@ -83,8 +68,9 @@ public class AmazonEKS implements Resource {
     return this.accessKey;
   }
 
-  public void setAccessKey(String in) {
+  public AmazonEKS setAccessKey(String in) {
     this.accessKey = in;
+    return this;
   }
 
   private String secretAccessKey;
@@ -93,8 +79,9 @@ public class AmazonEKS implements Resource {
     return this.secretAccessKey;
   }
 
-  public void setSecretAccessKey(String in) {
+  public AmazonEKS setSecretAccessKey(String in) {
     this.secretAccessKey = in;
+    return this;
   }
 
   private String certificateAuthority;
@@ -103,8 +90,9 @@ public class AmazonEKS implements Resource {
     return this.certificateAuthority;
   }
 
-  public void setCertificateAuthority(String in) {
+  public AmazonEKS setCertificateAuthority(String in) {
     this.certificateAuthority = in;
+    return this;
   }
 
   private String certificateAuthorityFilename;
@@ -113,8 +101,9 @@ public class AmazonEKS implements Resource {
     return this.certificateAuthorityFilename;
   }
 
-  public void setCertificateAuthorityFilename(String in) {
+  public AmazonEKS setCertificateAuthorityFilename(String in) {
     this.certificateAuthorityFilename = in;
+    return this;
   }
 
   private String region;
@@ -123,8 +112,9 @@ public class AmazonEKS implements Resource {
     return this.region;
   }
 
-  public void setRegion(String in) {
+  public AmazonEKS setRegion(String in) {
     this.region = in;
+    return this;
   }
 
   private String clusterName;
@@ -133,8 +123,9 @@ public class AmazonEKS implements Resource {
     return this.clusterName;
   }
 
-  public void setClusterName(String in) {
+  public AmazonEKS setClusterName(String in) {
     this.clusterName = in;
+    return this;
   }
 
   private String roleArn;
@@ -143,7 +134,8 @@ public class AmazonEKS implements Resource {
     return this.roleArn;
   }
 
-  public void setRoleArn(String in) {
+  public AmazonEKS setRoleArn(String in) {
     this.roleArn = in;
+    return this;
   }
 }
