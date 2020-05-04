@@ -1032,6 +1032,9 @@ public class Plumbing {
     if (plumbing.hasRedshift()) {
       return convertRedshiftToPorcelain(plumbing.getRedshift());
     }
+    if (plumbing.hasCitus()) {
+      return convertCitusToPorcelain(plumbing.getCitus());
+    }
     if (plumbing.hasPresto()) {
       return convertPrestoToPorcelain(plumbing.getPresto());
     }
@@ -1252,6 +1255,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.Redshift) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setRedshift(convertRedshiftToPlumbing((com.strongdm.api.v1.Redshift) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Citus) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setCitus(convertCitusToPlumbing((com.strongdm.api.v1.Citus) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Presto) {
@@ -3437,6 +3445,69 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Redshift> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertRedshiftToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.Citus convertCitusToPorcelain(Citus plumbing) {
+    com.strongdm.api.v1.Citus porcelain = new com.strongdm.api.v1.Citus();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    return porcelain;
+  }
+
+  public static Citus convertCitusToPlumbing(com.strongdm.api.v1.Citus porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Citus.Builder builder = Citus.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Citus> convertRepeatedCitusToPorcelain(
+      Collection<Citus> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertCitusToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Citus> convertRepeatedCitusToPlumbing(
+      Collection<com.strongdm.api.v1.Citus> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertCitusToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
