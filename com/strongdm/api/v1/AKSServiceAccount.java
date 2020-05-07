@@ -96,4 +96,14 @@ public class AKSServiceAccount implements Resource {
   public void setToken(String in) {
     this.token = in;
   }
+
+  private String healthcheckNamespace;
+
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
+  }
+
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
+  }
 }

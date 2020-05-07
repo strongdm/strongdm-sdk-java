@@ -106,4 +106,14 @@ public class AKSBasicAuth implements Resource {
   public void setPassword(String in) {
     this.password = in;
   }
+
+  private String healthcheckNamespace;
+
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
+  }
+
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
+  }
 }

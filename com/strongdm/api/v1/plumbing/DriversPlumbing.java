@@ -29262,6 +29262,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getClientKeyFilenameBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.Kubernetes}
@@ -29285,6 +29297,7 @@ public final class DriversPlumbing {
       clientCertificateFilename_ = "";
       clientKey_ = "";
       clientKeyFilename_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -29362,6 +29375,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               clientKeyFilename_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -29825,6 +29844,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 9;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -29862,6 +29917,9 @@ public final class DriversPlumbing {
       }
       if (!getClientKeyFilenameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, clientKeyFilename_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -29908,6 +29966,9 @@ public final class DriversPlumbing {
       }
       if (!getClientKeyFilenameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, clientKeyFilename_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -29965,6 +30026,8 @@ public final class DriversPlumbing {
           .equals(other.getClientKey())) return false;
       if (!getClientKeyFilename()
           .equals(other.getClientKeyFilename())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -30003,6 +30066,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getClientKey().hashCode();
       hash = (37 * hash) + CLIENT_KEY_FILENAME_FIELD_NUMBER;
       hash = (53 * hash) + getClientKeyFilename().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -30164,6 +30229,8 @@ public final class DriversPlumbing {
 
         clientKeyFilename_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -30206,6 +30273,7 @@ public final class DriversPlumbing {
         result.clientCertificateFilename_ = clientCertificateFilename_;
         result.clientKey_ = clientKey_;
         result.clientKeyFilename_ = clientKeyFilename_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -30297,6 +30365,10 @@ public final class DriversPlumbing {
         }
         if (!other.getClientKeyFilename().isEmpty()) {
           clientKeyFilename_ = other.clientKeyFilename_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -31278,6 +31350,82 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -31453,6 +31601,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.KubernetesBasicAuth}
@@ -31472,6 +31632,7 @@ public final class DriversPlumbing {
       hostname_ = "";
       username_ = "";
       password_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -31525,6 +31686,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               password_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -31844,6 +32011,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -31869,6 +32072,9 @@ public final class DriversPlumbing {
       }
       if (!getPasswordBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, password_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -31903,6 +32109,9 @@ public final class DriversPlumbing {
       }
       if (!getPasswordBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, password_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -31952,6 +32161,8 @@ public final class DriversPlumbing {
           .equals(other.getUsername())) return false;
       if (!getPassword()
           .equals(other.getPassword())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -31982,6 +32193,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getUsername().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -32135,6 +32348,8 @@ public final class DriversPlumbing {
 
         password_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -32173,6 +32388,7 @@ public final class DriversPlumbing {
         result.port_ = port_;
         result.username_ = username_;
         result.password_ = password_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -32248,6 +32464,10 @@ public final class DriversPlumbing {
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -32925,6 +33145,82 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -33088,6 +33384,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getTokenBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.KubernetesServiceAccount}
@@ -33106,6 +33414,7 @@ public final class DriversPlumbing {
       name_ = "";
       hostname_ = "";
       token_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -33153,6 +33462,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               token_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -33436,6 +33751,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -33458,6 +33809,9 @@ public final class DriversPlumbing {
       }
       if (!getTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -33489,6 +33843,9 @@ public final class DriversPlumbing {
       }
       if (!getTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -33536,6 +33893,8 @@ public final class DriversPlumbing {
           != other.getPort()) return false;
       if (!getToken()
           .equals(other.getToken())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -33564,6 +33923,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPort();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -33715,6 +34076,8 @@ public final class DriversPlumbing {
 
         token_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -33752,6 +34115,7 @@ public final class DriversPlumbing {
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.token_ = token_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -33823,6 +34187,10 @@ public final class DriversPlumbing {
         }
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -34424,6 +34792,82 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -34653,6 +35097,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getRoleArnBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.AmazonEKS}
@@ -34677,6 +35133,7 @@ public final class DriversPlumbing {
       region_ = "";
       clusterName_ = "";
       roleArn_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -34755,6 +35212,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               roleArn_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -35244,6 +35707,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 9;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -35281,6 +35780,9 @@ public final class DriversPlumbing {
       }
       if (!getRoleArnBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, roleArn_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -35326,6 +35828,9 @@ public final class DriversPlumbing {
       }
       if (!getRoleArnBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, roleArn_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -35383,6 +35888,8 @@ public final class DriversPlumbing {
           .equals(other.getClusterName())) return false;
       if (!getRoleArn()
           .equals(other.getRoleArn())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -35421,6 +35928,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getClusterName().hashCode();
       hash = (37 * hash) + ROLE_ARN_FIELD_NUMBER;
       hash = (53 * hash) + getRoleArn().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -35582,6 +36091,8 @@ public final class DriversPlumbing {
 
         roleArn_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -35624,6 +36135,7 @@ public final class DriversPlumbing {
         result.region_ = region_;
         result.clusterName_ = clusterName_;
         result.roleArn_ = roleArn_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -35716,6 +36228,10 @@ public final class DriversPlumbing {
         }
         if (!other.getRoleArn().isEmpty()) {
           roleArn_ = other.roleArn_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -36743,6 +37259,82 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -36936,6 +37528,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getServiceAccountKeyFilenameBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.GoogleGKE}
@@ -36957,6 +37561,7 @@ public final class DriversPlumbing {
       certificateAuthorityFilename_ = "";
       serviceAccountKey_ = "";
       serviceAccountKeyFilename_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -37017,6 +37622,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               serviceAccountKeyFilename_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -37398,6 +38009,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -37426,6 +38073,9 @@ public final class DriversPlumbing {
       }
       if (!getServiceAccountKeyFilenameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, serviceAccountKeyFilename_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -37462,6 +38112,9 @@ public final class DriversPlumbing {
       }
       if (!getServiceAccountKeyFilenameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, serviceAccountKeyFilename_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -37513,6 +38166,8 @@ public final class DriversPlumbing {
           .equals(other.getServiceAccountKey())) return false;
       if (!getServiceAccountKeyFilename()
           .equals(other.getServiceAccountKeyFilename())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -37545,6 +38200,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getServiceAccountKey().hashCode();
       hash = (37 * hash) + SERVICE_ACCOUNT_KEY_FILENAME_FIELD_NUMBER;
       hash = (53 * hash) + getServiceAccountKeyFilename().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -37700,6 +38357,8 @@ public final class DriversPlumbing {
 
         serviceAccountKeyFilename_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -37739,6 +38398,7 @@ public final class DriversPlumbing {
         result.certificateAuthorityFilename_ = certificateAuthorityFilename_;
         result.serviceAccountKey_ = serviceAccountKey_;
         result.serviceAccountKeyFilename_ = serviceAccountKeyFilename_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -37819,6 +38479,10 @@ public final class DriversPlumbing {
         }
         if (!other.getServiceAccountKeyFilename().isEmpty()) {
           serviceAccountKeyFilename_ = other.serviceAccountKeyFilename_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -38618,6 +39282,82 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -38841,6 +39581,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getClientKeyFilenameBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.AKS}
@@ -38864,6 +39616,7 @@ public final class DriversPlumbing {
       clientCertificateFilename_ = "";
       clientKey_ = "";
       clientKeyFilename_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -38941,6 +39694,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               clientKeyFilename_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -39404,6 +40163,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 9;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -39441,6 +40236,9 @@ public final class DriversPlumbing {
       }
       if (!getClientKeyFilenameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, clientKeyFilename_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -39487,6 +40285,9 @@ public final class DriversPlumbing {
       }
       if (!getClientKeyFilenameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, clientKeyFilename_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -39544,6 +40345,8 @@ public final class DriversPlumbing {
           .equals(other.getClientKey())) return false;
       if (!getClientKeyFilename()
           .equals(other.getClientKeyFilename())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -39582,6 +40385,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getClientKey().hashCode();
       hash = (37 * hash) + CLIENT_KEY_FILENAME_FIELD_NUMBER;
       hash = (53 * hash) + getClientKeyFilename().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -39743,6 +40548,8 @@ public final class DriversPlumbing {
 
         clientKeyFilename_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -39785,6 +40592,7 @@ public final class DriversPlumbing {
         result.clientCertificateFilename_ = clientCertificateFilename_;
         result.clientKey_ = clientKey_;
         result.clientKeyFilename_ = clientKeyFilename_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -39876,6 +40684,10 @@ public final class DriversPlumbing {
         }
         if (!other.getClientKeyFilename().isEmpty()) {
           clientKeyFilename_ = other.clientKeyFilename_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -40857,6 +41669,82 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -41032,6 +41920,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.AKSBasicAuth}
@@ -41051,6 +41951,7 @@ public final class DriversPlumbing {
       hostname_ = "";
       username_ = "";
       password_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -41104,6 +42005,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               password_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -41423,6 +42330,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -41448,6 +42391,9 @@ public final class DriversPlumbing {
       }
       if (!getPasswordBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, password_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -41482,6 +42428,9 @@ public final class DriversPlumbing {
       }
       if (!getPasswordBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, password_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -41531,6 +42480,8 @@ public final class DriversPlumbing {
           .equals(other.getUsername())) return false;
       if (!getPassword()
           .equals(other.getPassword())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -41561,6 +42512,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getUsername().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -41714,6 +42667,8 @@ public final class DriversPlumbing {
 
         password_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -41752,6 +42707,7 @@ public final class DriversPlumbing {
         result.port_ = port_;
         result.username_ = username_;
         result.password_ = password_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -41827,6 +42783,10 @@ public final class DriversPlumbing {
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -42504,6 +43464,82 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -42667,6 +43703,18 @@ public final class DriversPlumbing {
      */
     com.google.protobuf.ByteString
         getTokenBytes();
+
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    java.lang.String getHealthcheckNamespace();
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes();
   }
   /**
    * Protobuf type {@code v1.AKSServiceAccount}
@@ -42685,6 +43733,7 @@ public final class DriversPlumbing {
       name_ = "";
       hostname_ = "";
       token_ = "";
+      healthcheckNamespace_ = "";
     }
 
     @java.lang.Override
@@ -42732,6 +43781,12 @@ public final class DriversPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               token_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckNamespace_ = s;
               break;
             }
             case 262146: {
@@ -43015,6 +44070,42 @@ public final class DriversPlumbing {
       }
     }
 
+    public static final int HEALTHCHECK_NAMESPACE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object healthcheckNamespace_;
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The healthcheckNamespace.
+     */
+    public java.lang.String getHealthcheckNamespace() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckNamespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The bytes for healthcheckNamespace.
+     */
+    public com.google.protobuf.ByteString
+        getHealthcheckNamespaceBytes() {
+      java.lang.Object ref = healthcheckNamespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckNamespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -43037,6 +44128,9 @@ public final class DriversPlumbing {
       }
       if (!getTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -43068,6 +44162,9 @@ public final class DriversPlumbing {
       }
       if (!getTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
+      }
+      if (!getHealthcheckNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, healthcheckNamespace_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -43115,6 +44212,8 @@ public final class DriversPlumbing {
           != other.getPort()) return false;
       if (!getToken()
           .equals(other.getToken())) return false;
+      if (!getHealthcheckNamespace()
+          .equals(other.getHealthcheckNamespace())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -43143,6 +44242,8 @@ public final class DriversPlumbing {
       hash = (53 * hash) + getPort();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckNamespace().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -43294,6 +44395,8 @@ public final class DriversPlumbing {
 
         token_ = "";
 
+        healthcheckNamespace_ = "";
+
         return this;
       }
 
@@ -43331,6 +44434,7 @@ public final class DriversPlumbing {
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.token_ = token_;
+        result.healthcheckNamespace_ = healthcheckNamespace_;
         onBuilt();
         return result;
       }
@@ -43402,6 +44506,10 @@ public final class DriversPlumbing {
         }
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          onChanged();
+        }
+        if (!other.getHealthcheckNamespace().isEmpty()) {
+          healthcheckNamespace_ = other.healthcheckNamespace_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -44000,6 +45108,82 @@ public final class DriversPlumbing {
   checkByteStringIsUtf8(value);
         
         token_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object healthcheckNamespace_ = "";
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The healthcheckNamespace.
+       */
+      public java.lang.String getHealthcheckNamespace() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckNamespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The bytes for healthcheckNamespace.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckNamespaceBytes() {
+        java.lang.Object ref = healthcheckNamespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckNamespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckNamespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckNamespace() {
+        
+        healthcheckNamespace_ = getDefaultInstance().getHealthcheckNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_namespace = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The bytes for healthcheckNamespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckNamespace_ = value;
         onChanged();
         return this;
       }
@@ -94780,7 +95964,7 @@ public final class DriversPlumbing {
       "\222A\002@\000\022C\n\014default_path\030\005 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362" +
       "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022@\n\tsu" +
       "bdomain\030\006 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\373\005\n\nKub" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\001:\n\372\370\263\007\005\250\363\263\007\001\"\325\006\n\nKub" +
       "ernetes\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
       "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healt" +
       "hy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 " +
@@ -94799,46 +95983,55 @@ public final class DriversPlumbing {
       "\002@\000\022A\n\nclient_key\030\007 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
       "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022J\n\023client" +
       "_key_filename\030\010 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\263" +
-      "\003\n\023KubernetesBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002" +
-      "@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\004port\030\002 \001(\005B" +
-      "5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\222A\005:\003443\222A\002@\000\022?\n\010username\030\003 \001(\tB-\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022" +
-      "?\n\010password\030\004 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\364\002\n" +
-      "\030KubernetesServiceAccount\022\030\n\002id\030\200\200\002 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001" +
-      "\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\004port\030\002 \001" +
-      "(\005B5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\222A\005:\003443\222A\002@\000\022<\n\005token\030\003 \001(\tB-\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000:" +
-      "\n\372\370\263\007\005\250\363\263\007\001\"\331\005\n\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001" +
-      "\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022?\n\010endpoint\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022A\n\naccess_k" +
-      "ey\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022H\n\021secret_access_key\030\003 \001" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022X\n\025healthchec" +
+      "k_namespace\030\t \001(\tB9\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\t:\007default\222A\002@\000:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"\215\004\n\023KubernetesBasicAuth\022\030\n\002id\030\200" +
+      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263" +
+      "\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\004p" +
+      "ort\030\002 \001(\005B5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\222A\005:\003443\222A\002@\000\022?\n\010username\030\003 \001" +
       "(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\001\222A\002@\000\022L\n\025certificate_authority\030\004 \001(\t" +
-      "B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\001\222A\002@\000\022U\n\036certificate_authority_filenam" +
-      "e\030\005 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\222A\002@\000\022=\n\006region\030\006 \001(\tB-\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n" +
-      "\014cluster_name\030\007 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010role_arn\030\010" +
-      " \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\250\004\n\tGoogleGKE\022\030\n" +
+      "\363\263\007\000\222A\002@\000\022?\n\010password\030\004 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022X\n\025he" +
+      "althcheck_namespace\030\005 \001(\tB9\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\t:\007default\222" +
+      "A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\316\003\n\030KubernetesServiceAc" +
+      "count\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030" +
+      "\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy" +
+      "\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(" +
+      "\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\222A\002@\000\022C\n\004port\030\002 \001(\005B5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
+      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\005:\003443\222A\002@\000\022<\n" +
+      "\005token\030\003 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022X\n\025healthcheck_names" +
+      "pace\030\004 \001(\tB9\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\222A\t:\007default\222A\002@\000:\n\372\370\263\007\005\250\363\263\007" +
+      "\001\"\263\006\n\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022" +
+      "\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004t" +
+      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010end" +
+      "point\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022A\n\naccess_key\030\002 \001(\tB-" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\222A\002@\000\022H\n\021secret_access_key\030\003 \001(\tB-\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022" +
+      "L\n\025certificate_authority\030\004 \001(\tB-\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022U\n" +
+      "\036certificate_authority_filename\030\005 \001(\tB-\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222" +
+      "A\002@\000\022=\n\006region\030\006 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\014cluster_n" +
+      "ame\030\007 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010role_arn\030\010 \001(\tB-\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@" +
+      "\000\022X\n\025healthcheck_namespace\030\t \001(\tB9\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\t:\007d" +
+      "efault\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\202\005\n\tGoogleGKE\022\030\n" +
       "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB" +
       "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010" +
       "B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
@@ -94852,45 +96045,54 @@ public final class DriversPlumbing {
       "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@" +
       "\000\022S\n\034service_account_key_filename\030\005 \001(\tB" +
       "-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\364\005\n\003AKS\022\030\n\002id\030\200\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007" +
-      "\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
-      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\004port\030\002 " +
-      "\001(\005B5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\222A\005:\003443\222A\002@\000\022L\n\025certificate_author" +
-      "ity\030\003 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022U\n\036certificate_authorit" +
-      "y_filename\030\004 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022I\n\022client_certif" +
-      "icate\030\005 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022R\n\033client_certificate" +
-      "_filename\030\006 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022A\n\nclient_key\030\007 \001" +
-      "(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\001\222A\002@\000\022J\n\023client_key_filename\030\010 \001(\tB-" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\254\003\n\014AKSBasicAuth\022\030\n\002id" +
-      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362" +
-      "\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n" +
-      "\004port\030\002 \001(\005B5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\005:\003443\222A\002@\000\022?\n\010username\030\003" +
-      " \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\222A\002@\000\022?\n\010password\030\004 \001(\tB-\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000:\n\372\370" +
-      "\263\007\005\250\363\263\007\001\"\355\002\n\021AKSServiceAccount\022\030\n\002id\030\200\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005" +
-      "\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\004por" +
-      "t\030\002 \001(\005B5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\222A\005:\003443\222A\002@\000\022<\n\005token\030\003 \001(\tB-\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222" +
+      "\000\222A\002@\000\022X\n\025healthcheck_namespace\030\006 \001(\tB9\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222" +
+      "A\t:\007default\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\316\006\n\003AKS\022\030\n\002" +
+      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B" +
+      "\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022" +
+      "C\n\004port\030\002 \001(\005B5\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\005:\003443\222A\002@\000\022L\n\025certific" +
+      "ate_authority\030\003 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022U\n\036certificat" +
+      "e_authority_filename\030\004 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022I\n\022cli" +
+      "ent_certificate\030\005 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022R\n\033client_c" +
+      "ertificate_filename\030\006 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022A\n\nclie" +
+      "nt_key\030\007 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022J\n\023client_key_filena" +
+      "me\030\010 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022X\n\025healthcheck_namespace" +
+      "\030\t \001(\tB9\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\222A\t:\007default\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\206\004" +
+      "\n\014AKSBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"" +
+      "\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004ta" +
+      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010host" +
+      "name\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\004port\030\002 \001(\005B5\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\005:\00344" +
+      "3\222A\002@\000\022?\n\010username\030\003 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010passw" +
+      "ord\030\004 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022X\n\025healthcheck_namespac" +
+      "e\030\005 \001(\tB9\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\222A\t:\007default\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\307" +
+      "\003\n\021AKSServiceAccount\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
+      "\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001" +
+      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?" +
+      "\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022C\n\004port\030\002 \001(\005B5\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222" +
+      "A\005:\003443\222A\002@\000\022<\n\005token\030\003 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022X\n\025he" +
+      "althcheck_namespace\030\004 \001(\tB9\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\t:\007default\222" +
       "A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\357\002\n\tMemcached\022\030\n\002id\030\200\200\002" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
       "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005" +
@@ -94978,7 +96180,7 @@ public final class DriversPlumbing {
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
       "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005" +
       "\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370",
       "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010use" +
       "rname\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
       "\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010password\030\003 \001(\tB-\362\370" +
@@ -94996,7 +96198,7 @@ public final class DriversPlumbing {
       "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022" +
       "?\n\010username\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362" +
       "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010password\030\003 \001" +
-      "(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350",
+      "(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
       "\363\263\007\001\222A\002@\000\022?\n\010database\030\004 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362" +
       "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022D\n\rpo" +
       "rt_override\030\005 \001(\005B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362" +
@@ -95370,49 +96572,49 @@ public final class DriversPlumbing {
     internal_static_v1_Kubernetes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Kubernetes_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "CertificateAuthority", "CertificateAuthorityFilename", "ClientCertificate", "ClientCertificateFilename", "ClientKey", "ClientKeyFilename", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "CertificateAuthority", "CertificateAuthorityFilename", "ClientCertificate", "ClientCertificateFilename", "ClientKey", "ClientKeyFilename", "HealthcheckNamespace", });
     internal_static_v1_KubernetesBasicAuth_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_KubernetesBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KubernetesBasicAuth_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Username", "Password", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
     internal_static_v1_KubernetesServiceAccount_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_v1_KubernetesServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KubernetesServiceAccount_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Token", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Token", "HealthcheckNamespace", });
     internal_static_v1_AmazonEKS_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_v1_AmazonEKS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AmazonEKS_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Endpoint", "AccessKey", "SecretAccessKey", "CertificateAuthority", "CertificateAuthorityFilename", "Region", "ClusterName", "RoleArn", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Endpoint", "AccessKey", "SecretAccessKey", "CertificateAuthority", "CertificateAuthorityFilename", "Region", "ClusterName", "RoleArn", "HealthcheckNamespace", });
     internal_static_v1_GoogleGKE_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_v1_GoogleGKE_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GoogleGKE_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Endpoint", "CertificateAuthority", "CertificateAuthorityFilename", "ServiceAccountKey", "ServiceAccountKeyFilename", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Endpoint", "CertificateAuthority", "CertificateAuthorityFilename", "ServiceAccountKey", "ServiceAccountKeyFilename", "HealthcheckNamespace", });
     internal_static_v1_AKS_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_v1_AKS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKS_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "CertificateAuthority", "CertificateAuthorityFilename", "ClientCertificate", "ClientCertificateFilename", "ClientKey", "ClientKeyFilename", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "CertificateAuthority", "CertificateAuthorityFilename", "ClientCertificate", "ClientCertificateFilename", "ClientKey", "ClientKeyFilename", "HealthcheckNamespace", });
     internal_static_v1_AKSBasicAuth_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_v1_AKSBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKSBasicAuth_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Username", "Password", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
     internal_static_v1_AKSServiceAccount_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_v1_AKSServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKSServiceAccount_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Token", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Token", "HealthcheckNamespace", });
     internal_static_v1_Memcached_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_v1_Memcached_fieldAccessorTable = new

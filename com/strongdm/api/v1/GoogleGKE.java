@@ -116,4 +116,14 @@ public class GoogleGKE implements Resource {
   public void setServiceAccountKeyFilename(String in) {
     this.serviceAccountKeyFilename = in;
   }
+
+  private String healthcheckNamespace;
+
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
+  }
+
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
+  }
 }

@@ -1952,6 +1952,7 @@ public class Plumbing {
     porcelain.setClientCertificateFilename((plumbing.getClientCertificateFilename()));
     porcelain.setClientKey((plumbing.getClientKey()));
     porcelain.setClientKeyFilename((plumbing.getClientKeyFilename()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -1992,6 +1993,9 @@ public class Plumbing {
     if (porcelain.getClientKeyFilename() != null) {
       builder.setClientKeyFilename((porcelain.getClientKeyFilename()));
     }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
     return builder.build();
   }
 
@@ -2021,6 +2025,7 @@ public class Plumbing {
     porcelain.setPort((plumbing.getPort()));
     porcelain.setUsername((plumbing.getUsername()));
     porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -2050,6 +2055,9 @@ public class Plumbing {
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
     }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
     return builder.build();
   }
 
@@ -2078,6 +2086,7 @@ public class Plumbing {
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setToken((plumbing.getToken()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -2103,6 +2112,9 @@ public class Plumbing {
     builder.setPort(porcelain.getPort());
     if (porcelain.getToken() != null) {
       builder.setToken((porcelain.getToken()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
     }
     return builder.build();
   }
@@ -2136,6 +2148,7 @@ public class Plumbing {
     porcelain.setRegion((plumbing.getRegion()));
     porcelain.setClusterName((plumbing.getClusterName()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -2178,6 +2191,9 @@ public class Plumbing {
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
     }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
     return builder.build();
   }
 
@@ -2206,6 +2222,7 @@ public class Plumbing {
     porcelain.setCertificateAuthorityFilename((plumbing.getCertificateAuthorityFilename()));
     porcelain.setServiceAccountKey((plumbing.getServiceAccountKey()));
     porcelain.setServiceAccountKeyFilename((plumbing.getServiceAccountKeyFilename()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -2239,6 +2256,9 @@ public class Plumbing {
     if (porcelain.getServiceAccountKeyFilename() != null) {
       builder.setServiceAccountKeyFilename((porcelain.getServiceAccountKeyFilename()));
     }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
     return builder.build();
   }
 
@@ -2270,6 +2290,7 @@ public class Plumbing {
     porcelain.setClientCertificateFilename((plumbing.getClientCertificateFilename()));
     porcelain.setClientKey((plumbing.getClientKey()));
     porcelain.setClientKeyFilename((plumbing.getClientKeyFilename()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -2310,6 +2331,9 @@ public class Plumbing {
     if (porcelain.getClientKeyFilename() != null) {
       builder.setClientKeyFilename((porcelain.getClientKeyFilename()));
     }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
     return builder.build();
   }
 
@@ -2338,6 +2362,7 @@ public class Plumbing {
     porcelain.setPort((plumbing.getPort()));
     porcelain.setUsername((plumbing.getUsername()));
     porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -2367,6 +2392,9 @@ public class Plumbing {
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
     }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
     return builder.build();
   }
 
@@ -2394,6 +2422,7 @@ public class Plumbing {
     porcelain.setHostname((plumbing.getHostname()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setToken((plumbing.getToken()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
     return porcelain;
   }
 
@@ -2419,6 +2448,9 @@ public class Plumbing {
     builder.setPort(porcelain.getPort());
     if (porcelain.getToken() != null) {
       builder.setToken((porcelain.getToken()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
     }
     return builder.build();
   }
