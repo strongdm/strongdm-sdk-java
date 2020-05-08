@@ -1056,6 +1056,9 @@ public class Plumbing {
     if (plumbing.hasSsh()) {
       return convertSSHToPorcelain(plumbing.getSsh());
     }
+    if (plumbing.hasSshCert()) {
+      return convertSSHCertToPorcelain(plumbing.getSshCert());
+    }
     if (plumbing.hasSybase()) {
       return convertSybaseToPorcelain(plumbing.getSybase());
     }
@@ -1296,6 +1299,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.SSH) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setSsh(convertSSHToPlumbing((com.strongdm.api.v1.SSH) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.SSHCert) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setSshCert(convertSSHCertToPlumbing((com.strongdm.api.v1.SSHCert) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Sybase) {
@@ -3957,6 +3965,59 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.SSH> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertSSHToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.SSHCert convertSSHCertToPorcelain(SSHCert plumbing) {
+    com.strongdm.api.v1.SSHCert porcelain = new com.strongdm.api.v1.SSHCert();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortForwarding((plumbing.getPortForwarding()));
+    return porcelain;
+  }
+
+  public static SSHCert convertSSHCertToPlumbing(com.strongdm.api.v1.SSHCert porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SSHCert.Builder builder = SSHCert.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortForwarding(porcelain.getPortForwarding());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.SSHCert> convertRepeatedSSHCertToPorcelain(
+      Collection<SSHCert> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertSSHCertToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SSHCert> convertRepeatedSSHCertToPlumbing(
+      Collection<com.strongdm.api.v1.SSHCert> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertSSHCertToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
