@@ -8482,7 +8482,7 @@ public final class Spec {
 
     /**
      * <pre>
-     * The time when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -8491,7 +8491,7 @@ public final class Spec {
     boolean hasResetAt();
     /**
      * <pre>
-     * The time when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -8500,7 +8500,7 @@ public final class Spec {
     com.google.protobuf.Timestamp getResetAt();
     /**
      * <pre>
-     * The time when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -8510,7 +8510,7 @@ public final class Spec {
     /**
      * <pre>
      * The bucket this user/token is associated with, which may be shared between
-     * multiple users/tokens. 
+     * multiple users/tokens.
      * </pre>
      *
      * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -8520,7 +8520,7 @@ public final class Spec {
     /**
      * <pre>
      * The bucket this user/token is associated with, which may be shared between
-     * multiple users/tokens. 
+     * multiple users/tokens.
      * </pre>
      *
      * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -8532,7 +8532,7 @@ public final class Spec {
   /**
    * <pre>
    * RateLimitMetadata contains information about remaining requests avaialable
-   * to the user over some timeframe. 
+   * to the user over some timeframe.
    * </pre>
    *
    * Protobuf type {@code v1.RateLimitMetadata}
@@ -8674,7 +8674,7 @@ public final class Spec {
     private com.google.protobuf.Timestamp resetAt_;
     /**
      * <pre>
-     * The time when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -8685,7 +8685,7 @@ public final class Spec {
     }
     /**
      * <pre>
-     * The time when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -8696,7 +8696,7 @@ public final class Spec {
     }
     /**
      * <pre>
-     * The time when remaining will be reset to limit. 
+     * The time when remaining will be reset to limit.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -8710,7 +8710,7 @@ public final class Spec {
     /**
      * <pre>
      * The bucket this user/token is associated with, which may be shared between
-     * multiple users/tokens. 
+     * multiple users/tokens.
      * </pre>
      *
      * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -8731,7 +8731,7 @@ public final class Spec {
     /**
      * <pre>
      * The bucket this user/token is associated with, which may be shared between
-     * multiple users/tokens. 
+     * multiple users/tokens.
      * </pre>
      *
      * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -8948,7 +8948,7 @@ public final class Spec {
     /**
      * <pre>
      * RateLimitMetadata contains information about remaining requests avaialable
-     * to the user over some timeframe. 
+     * to the user over some timeframe.
      * </pre>
      *
      * Protobuf type {@code v1.RateLimitMetadata}
@@ -9216,7 +9216,7 @@ public final class Spec {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> resetAtBuilder_;
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9227,7 +9227,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9242,7 +9242,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9262,7 +9262,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9280,7 +9280,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9302,7 +9302,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9320,7 +9320,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9332,7 +9332,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9347,7 +9347,7 @@ public final class Spec {
       }
       /**
        * <pre>
-       * The time when remaining will be reset to limit. 
+       * The time when remaining will be reset to limit.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
@@ -9370,7 +9370,7 @@ public final class Spec {
       /**
        * <pre>
        * The bucket this user/token is associated with, which may be shared between
-       * multiple users/tokens. 
+       * multiple users/tokens.
        * </pre>
        *
        * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -9391,7 +9391,7 @@ public final class Spec {
       /**
        * <pre>
        * The bucket this user/token is associated with, which may be shared between
-       * multiple users/tokens. 
+       * multiple users/tokens.
        * </pre>
        *
        * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -9413,7 +9413,7 @@ public final class Spec {
       /**
        * <pre>
        * The bucket this user/token is associated with, which may be shared between
-       * multiple users/tokens. 
+       * multiple users/tokens.
        * </pre>
        *
        * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -9433,7 +9433,7 @@ public final class Spec {
       /**
        * <pre>
        * The bucket this user/token is associated with, which may be shared between
-       * multiple users/tokens. 
+       * multiple users/tokens.
        * </pre>
        *
        * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -9448,7 +9448,7 @@ public final class Spec {
       /**
        * <pre>
        * The bucket this user/token is associated with, which may be shared between
-       * multiple users/tokens. 
+       * multiple users/tokens.
        * </pre>
        *
        * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
@@ -9618,48 +9618,40 @@ public final class Spec {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\nspec.proto\022\002v1\032\roptions.proto\032,protoc-" +
-      "gen-swagger/options/annotations.proto\032\037g" +
-      "oogle/protobuf/timestamp.proto\"^\n\022Alread" +
-      "yExistsError\022%\n\006entity\030\001 \001(\tB\025\362\370\263\007\020\242\363\263\007\006" +
-      "Entity\260\363\263\007\001:!\372\370\263\007\034\242\363\263\007\022AlreadyExistsErro" +
-      "r\260\363\263\007\006\"T\n\rNotFoundError\022%\n\006entity\030\001 \001(\tB" +
-      "\025\362\370\263\007\020\242\363\263\007\006Entity\260\363\263\007\001:\034\372\370\263\007\027\242\363\263\007\rNotFou" +
-      "ndError\260\363\263\007\005\"1\n\017BadRequestError:\036\372\370\263\007\031\242\363" +
-      "\263\007\017BadRequestError\260\363\263\007\003\"9\n\023Authenticatio" +
-      "nError:\"\372\370\263\007\035\242\363\263\007\023AuthenticationError\260\363\263" +
-      "\007\020\"1\n\017PermissionError:\036\372\370\263\007\031\242\363\263\007\017Permiss" +
-      "ionError\260\363\263\007\007\"-\n\rInternalError:\034\372\370\263\007\027\242\363\263" +
-      "\007\rInternalError\260\363\263\007\r\"f\n\016RateLimitError\0225" +
-      "\n\nrate_limit\030\001 \001(\0132\025.v1.RateLimitMetadat" +
-      "aB\n\362\370\263\007\005\260\363\263\007\001:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260" +
-      "\363\263\007\010\"\027\n\025CreateRequestMetadata\"$\n\026CreateR" +
-      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetReques" +
-      "tMetadata\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"\027\n\025UpdateRequestMetadata\"$\n\026UpdateR" +
-      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteReq" +
-      "uestMetadata\"$\n\026DeleteResponseMetadata:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMetadata\022\016\n\006cur" +
-      "sor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":" +
-      "\n\024ListResponseMetadata\022\023\n\013next_cursor\030\001 " +
-      "\001(\t\022\r\n\005total\030\002 \001(\005\"\257\001\n\021RateLimitMetadata" +
-      "\022\031\n\005limit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining" +
-      "\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006" +
-      "bucket\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B\370\001\n" +
-      "\034com.strongdm.api.v1.plumbing\222A\326\001\022w\n\010Str" +
-      "ongDM\022\036The infrastructure access API.\"D\n" +
-      "\010StrongDM\022\"https://www.strongdm.com/docs" +
-      "/api/\032\024support@strongdm.com2\0051.0.0\032\020api." +
-      "strongdm.com*\001\002rF\n!Learn more about the " +
-      "strongDM API\022!https://www.strongdm.com/d" +
-      "ocs/apib\006proto3"
+      "\n\nspec.proto\022\002v1\032\roptions.proto\032\037google/" +
+      "protobuf/timestamp.proto\"^\n\022AlreadyExist" +
+      "sError\022%\n\006entity\030\001 \001(\tB\025\362\370\263\007\020\242\363\263\007\006Entity" +
+      "\260\363\263\007\001:!\372\370\263\007\034\242\363\263\007\022AlreadyExistsError\260\363\263\007\006" +
+      "\"T\n\rNotFoundError\022%\n\006entity\030\001 \001(\tB\025\362\370\263\007\020" +
+      "\242\363\263\007\006Entity\260\363\263\007\001:\034\372\370\263\007\027\242\363\263\007\rNotFoundErro" +
+      "r\260\363\263\007\005\"1\n\017BadRequestError:\036\372\370\263\007\031\242\363\263\007\017Bad" +
+      "RequestError\260\363\263\007\003\"9\n\023AuthenticationError" +
+      ":\"\372\370\263\007\035\242\363\263\007\023AuthenticationError\260\363\263\007\020\"1\n\017" +
+      "PermissionError:\036\372\370\263\007\031\242\363\263\007\017PermissionErr" +
+      "or\260\363\263\007\007\"-\n\rInternalError:\034\372\370\263\007\027\242\363\263\007\rInte" +
+      "rnalError\260\363\263\007\r\"f\n\016RateLimitError\0225\n\nrate" +
+      "_limit\030\001 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260\363\263\007\010\"\027" +
+      "\n\025CreateRequestMetadata\"$\n\026CreateRespons" +
+      "eMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRequestMetad" +
+      "ata\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027" +
+      "\n\025UpdateRequestMetadata\"$\n\026UpdateRespons" +
+      "eMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMe" +
+      "tadata\"$\n\026DeleteResponseMetadata:\n\372\370\263\007\005\250" +
+      "\363\263\007\001\"B\n\023ListRequestMetadata\022\016\n\006cursor\030\001 " +
+      "\001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024List" +
+      "ResponseMetadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n" +
+      "\005total\030\002 \001(\005\"\257\001\n\021RateLimitMetadata\022\031\n\005li" +
+      "mit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.google." +
+      "protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket" +
+      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B\036\n\034com.st" +
+      "rongdm.api.v1.plumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_v1_AlreadyExistsError_descriptor =
@@ -9772,13 +9764,11 @@ public final class Spec {
         new java.lang.String[] { "Limit", "Remaining", "ResetAt", "Bucket", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Swagger);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

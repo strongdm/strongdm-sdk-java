@@ -41,12 +41,14 @@ public class Relay implements Node {
 
   private String state;
   // The current state of the relay. One of: "new", "verifying_restart",
-  // "restarting", "started", "stopped", "dead", "unknown",
+  // "awaiting_restart", "restarting", "started", "stopped", "dead",
+  // "unknown".
   public String getState() {
     return this.state;
   }
   // The current state of the relay. One of: "new", "verifying_restart",
-  // "restarting", "started", "stopped", "dead", "unknown",
+  // "awaiting_restart", "restarting", "started", "stopped", "dead",
+  // "unknown".
   public void setState(String in) {
     this.state = in;
   }

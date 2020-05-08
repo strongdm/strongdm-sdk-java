@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-public class AKSServiceAccount implements Resource {
+public class Citus implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -77,6 +77,46 @@ public class AKSServiceAccount implements Resource {
     this.hostname = in;
   }
 
+  private String username;
+
+  public String getUsername() {
+    return this.username;
+  }
+
+  public void setUsername(String in) {
+    this.username = in;
+  }
+
+  private String password;
+
+  public String getPassword() {
+    return this.password;
+  }
+
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private String database;
+
+  public String getDatabase() {
+    return this.database;
+  }
+
+  public void setDatabase(String in) {
+    this.database = in;
+  }
+
+  private int portOverride;
+
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
   private int port;
 
   public int getPort() {
@@ -87,23 +127,13 @@ public class AKSServiceAccount implements Resource {
     this.port = in;
   }
 
-  private String token;
+  private boolean overrideDatabase;
 
-  public String getToken() {
-    return this.token;
+  public boolean getOverrideDatabase() {
+    return this.overrideDatabase;
   }
 
-  public void setToken(String in) {
-    this.token = in;
-  }
-
-  private String healthcheckNamespace;
-
-  public String getHealthcheckNamespace() {
-    return this.healthcheckNamespace;
-  }
-
-  public void setHealthcheckNamespace(String in) {
-    this.healthcheckNamespace = in;
+  public void setOverrideDatabase(boolean in) {
+    this.overrideDatabase = in;
   }
 }

@@ -147,14 +147,13 @@ public class AmazonEKS implements Resource {
     this.roleArn = in;
   }
 
-  private String roleArn;
+  private String healthcheckNamespace;
 
-  public String getRoleArn() {
-    return this.roleArn;
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
   }
 
-  public AmazonEKS setRoleArn(String in) {
-    this.roleArn = in;
-    return this;
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
   }
 }

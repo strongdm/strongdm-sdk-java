@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-public class AKSServiceAccount implements Resource {
+public class SSHCert implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -77,6 +77,16 @@ public class AKSServiceAccount implements Resource {
     this.hostname = in;
   }
 
+  private String username;
+
+  public String getUsername() {
+    return this.username;
+  }
+
+  public void setUsername(String in) {
+    this.username = in;
+  }
+
   private int port;
 
   public int getPort() {
@@ -87,23 +97,13 @@ public class AKSServiceAccount implements Resource {
     this.port = in;
   }
 
-  private String token;
+  private boolean portForwarding;
 
-  public String getToken() {
-    return this.token;
+  public boolean getPortForwarding() {
+    return this.portForwarding;
   }
 
-  public void setToken(String in) {
-    this.token = in;
-  }
-
-  private String healthcheckNamespace;
-
-  public String getHealthcheckNamespace() {
-    return this.healthcheckNamespace;
-  }
-
-  public void setHealthcheckNamespace(String in) {
-    this.healthcheckNamespace = in;
+  public void setPortForwarding(boolean in) {
+    this.portForwarding = in;
   }
 }

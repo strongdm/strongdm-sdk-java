@@ -146,4 +146,14 @@ public class AKS implements Resource {
   public void setClientKeyFilename(String in) {
     this.clientKeyFilename = in;
   }
+
+  private String healthcheckNamespace;
+
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
+  }
+
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
+  }
 }
