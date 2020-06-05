@@ -91118,6 +91118,12 @@ public final class DriversPlumbing {
      * @return The portForwarding.
      */
     boolean getPortForwarding();
+
+    /**
+     * <code>bool allow_deprecated_key_exchanges = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The allowDeprecatedKeyExchanges.
+     */
+    boolean getAllowDeprecatedKeyExchanges();
   }
   /**
    * Protobuf type {@code v1.SSH}
@@ -91195,6 +91201,11 @@ public final class DriversPlumbing {
             case 40: {
 
               portForwarding_ = input.readBool();
+              break;
+            }
+            case 48: {
+
+              allowDeprecatedKeyExchanges_ = input.readBool();
               break;
             }
             case 262146: {
@@ -91524,6 +91535,16 @@ public final class DriversPlumbing {
       return portForwarding_;
     }
 
+    public static final int ALLOW_DEPRECATED_KEY_EXCHANGES_FIELD_NUMBER = 6;
+    private boolean allowDeprecatedKeyExchanges_;
+    /**
+     * <code>bool allow_deprecated_key_exchanges = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The allowDeprecatedKeyExchanges.
+     */
+    public boolean getAllowDeprecatedKeyExchanges() {
+      return allowDeprecatedKeyExchanges_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -91552,6 +91573,9 @@ public final class DriversPlumbing {
       }
       if (portForwarding_ != false) {
         output.writeBool(5, portForwarding_);
+      }
+      if (allowDeprecatedKeyExchanges_ != false) {
+        output.writeBool(6, allowDeprecatedKeyExchanges_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -91590,6 +91614,10 @@ public final class DriversPlumbing {
       if (portForwarding_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, portForwarding_);
+      }
+      if (allowDeprecatedKeyExchanges_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, allowDeprecatedKeyExchanges_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -91641,6 +91669,8 @@ public final class DriversPlumbing {
           .equals(other.getPublicKey())) return false;
       if (getPortForwarding()
           != other.getPortForwarding()) return false;
+      if (getAllowDeprecatedKeyExchanges()
+          != other.getAllowDeprecatedKeyExchanges()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -91674,6 +91704,9 @@ public final class DriversPlumbing {
       hash = (37 * hash) + PORT_FORWARDING_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPortForwarding());
+      hash = (37 * hash) + ALLOW_DEPRECATED_KEY_EXCHANGES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowDeprecatedKeyExchanges());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -91829,6 +91862,8 @@ public final class DriversPlumbing {
 
         portForwarding_ = false;
 
+        allowDeprecatedKeyExchanges_ = false;
+
         return this;
       }
 
@@ -91868,6 +91903,7 @@ public final class DriversPlumbing {
         result.port_ = port_;
         result.publicKey_ = publicKey_;
         result.portForwarding_ = portForwarding_;
+        result.allowDeprecatedKeyExchanges_ = allowDeprecatedKeyExchanges_;
         onBuilt();
         return result;
       }
@@ -91947,6 +91983,9 @@ public final class DriversPlumbing {
         }
         if (other.getPortForwarding() != false) {
           setPortForwarding(other.getPortForwarding());
+        }
+        if (other.getAllowDeprecatedKeyExchanges() != false) {
+          setAllowDeprecatedKeyExchanges(other.getAllowDeprecatedKeyExchanges());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -92653,6 +92692,36 @@ public final class DriversPlumbing {
         onChanged();
         return this;
       }
+
+      private boolean allowDeprecatedKeyExchanges_ ;
+      /**
+       * <code>bool allow_deprecated_key_exchanges = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The allowDeprecatedKeyExchanges.
+       */
+      public boolean getAllowDeprecatedKeyExchanges() {
+        return allowDeprecatedKeyExchanges_;
+      }
+      /**
+       * <code>bool allow_deprecated_key_exchanges = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The allowDeprecatedKeyExchanges to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowDeprecatedKeyExchanges(boolean value) {
+        
+        allowDeprecatedKeyExchanges_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool allow_deprecated_key_exchanges = 6 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowDeprecatedKeyExchanges() {
+        
+        allowDeprecatedKeyExchanges_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -92822,6 +92891,12 @@ public final class DriversPlumbing {
      * @return The portForwarding.
      */
     boolean getPortForwarding();
+
+    /**
+     * <code>bool allow_deprecated_key_exchanges = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The allowDeprecatedKeyExchanges.
+     */
+    boolean getAllowDeprecatedKeyExchanges();
   }
   /**
    * Protobuf type {@code v1.SSHCert}
@@ -92892,6 +92967,11 @@ public final class DriversPlumbing {
             case 32: {
 
               portForwarding_ = input.readBool();
+              break;
+            }
+            case 40: {
+
+              allowDeprecatedKeyExchanges_ = input.readBool();
               break;
             }
             case 262146: {
@@ -93185,6 +93265,16 @@ public final class DriversPlumbing {
       return portForwarding_;
     }
 
+    public static final int ALLOW_DEPRECATED_KEY_EXCHANGES_FIELD_NUMBER = 5;
+    private boolean allowDeprecatedKeyExchanges_;
+    /**
+     * <code>bool allow_deprecated_key_exchanges = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * @return The allowDeprecatedKeyExchanges.
+     */
+    public boolean getAllowDeprecatedKeyExchanges() {
+      return allowDeprecatedKeyExchanges_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -93210,6 +93300,9 @@ public final class DriversPlumbing {
       }
       if (portForwarding_ != false) {
         output.writeBool(4, portForwarding_);
+      }
+      if (allowDeprecatedKeyExchanges_ != false) {
+        output.writeBool(5, allowDeprecatedKeyExchanges_);
       }
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
@@ -93245,6 +93338,10 @@ public final class DriversPlumbing {
       if (portForwarding_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, portForwarding_);
+      }
+      if (allowDeprecatedKeyExchanges_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, allowDeprecatedKeyExchanges_);
       }
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
@@ -93294,6 +93391,8 @@ public final class DriversPlumbing {
           != other.getPort()) return false;
       if (getPortForwarding()
           != other.getPortForwarding()) return false;
+      if (getAllowDeprecatedKeyExchanges()
+          != other.getAllowDeprecatedKeyExchanges()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -93325,6 +93424,9 @@ public final class DriversPlumbing {
       hash = (37 * hash) + PORT_FORWARDING_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPortForwarding());
+      hash = (37 * hash) + ALLOW_DEPRECATED_KEY_EXCHANGES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAllowDeprecatedKeyExchanges());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -93478,6 +93580,8 @@ public final class DriversPlumbing {
 
         portForwarding_ = false;
 
+        allowDeprecatedKeyExchanges_ = false;
+
         return this;
       }
 
@@ -93516,6 +93620,7 @@ public final class DriversPlumbing {
         result.username_ = username_;
         result.port_ = port_;
         result.portForwarding_ = portForwarding_;
+        result.allowDeprecatedKeyExchanges_ = allowDeprecatedKeyExchanges_;
         onBuilt();
         return result;
       }
@@ -93591,6 +93696,9 @@ public final class DriversPlumbing {
         }
         if (other.getPortForwarding() != false) {
           setPortForwarding(other.getPortForwarding());
+        }
+        if (other.getAllowDeprecatedKeyExchanges() != false) {
+          setAllowDeprecatedKeyExchanges(other.getAllowDeprecatedKeyExchanges());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -94218,6 +94326,36 @@ public final class DriversPlumbing {
       public Builder clearPortForwarding() {
         
         portForwarding_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean allowDeprecatedKeyExchanges_ ;
+      /**
+       * <code>bool allow_deprecated_key_exchanges = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return The allowDeprecatedKeyExchanges.
+       */
+      public boolean getAllowDeprecatedKeyExchanges() {
+        return allowDeprecatedKeyExchanges_;
+      }
+      /**
+       * <code>bool allow_deprecated_key_exchanges = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @param value The allowDeprecatedKeyExchanges to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAllowDeprecatedKeyExchanges(boolean value) {
+        
+        allowDeprecatedKeyExchanges_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool allow_deprecated_key_exchanges = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAllowDeprecatedKeyExchanges() {
+        
+        allowDeprecatedKeyExchanges_ = false;
         onChanged();
         return this;
       }
@@ -100343,7 +100481,7 @@ public final class DriversPlumbing {
       "\022D\n\004port\030\007 \001(\005B6\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
       "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\006:\0041433\222A\002@\000\022H\n\021overri" +
       "de_database\030\010 \001(\010B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\366\003\n" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\315\004\n" +
       "\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201" +
       "\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030" +
       "\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\013" +
@@ -100356,57 +100494,61 @@ public final class DriversPlumbing {
       "B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263" +
       "\007\000\222A\002@\001\022P\n\017port_forwarding\030\005 \001(\010B7\362\370\263\007\005\260" +
       "\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\007:\005f" +
-      "alse\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\267\003\n\007SSHCert\022\030\n\002id\030" +
-      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370" +
-      "\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010" +
-      "username\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022B\n\004port\030\003 \001(\005B4\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\004" +
-      ":\00222\222A\002@\000\022P\n\017port_forwarding\030\004 \001(\010B7\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\007:" +
-      "\005false\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\355\003\n\006Sybase\022\030\n\002id" +
-      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362" +
-      "\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n" +
-      "\010username\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022D\n\rport_override\030" +
-      "\003 \001(\005B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263" +
-      "\007\005\350\363\263\007\000\222A\002@\001\022D\n\004port\030\004 \001(\005B6\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\006:\0042638\222A\002" +
-      "@\000\022?\n\010password\030\005 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"" +
-      "\357\003\n\010SybaseIQ\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
-      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007" +
-      "healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags" +
-      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostna" +
-      "me\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010username\030\002 \001(\tB-\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000" +
-      "\022D\n\rport_override\030\003 \001(\005B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\222A\002@\001\022D\n\004port\030\004" +
-      " \001(\005B6\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\222A\006:\0042638\222A\002@\000\022?\n\010password\030\005 \001(\tB-" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001" +
-      "\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\357\003\n\010Teradata\022\030\n\002id\030\200\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005" +
-      "\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010use" +
-      "rname\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010password\030\003 \001(\tB-\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A" +
-      "\002@\000\022D\n\rport_override\030\004 \001(\005B-\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\222A\002@\001\022D\n\004por" +
-      "t\030\005 \001(\005B6\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\222A\006:\0041025\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001B/\n\034c" +
-      "om.strongdm.api.v1.plumbingB\017DriversPlum" +
-      "bingb\006proto3"
+      "alse\222A\002@\000\022U\n\036allow_deprecated_key_exchan" +
+      "ges\030\006 \001(\010B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\216\004\n\007SSHCert" +
+      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
+      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 " +
+      "\001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v" +
+      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A" +
+      "\002@\000\022?\n\010username\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022B\n\004port\030\003 \001" +
+      "(\005B4\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\222A\004:\00222\222A\002@\000\022P\n\017port_forwarding\030\004 \001(" +
+      "\010B7\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\222A\007:\005false\222A\002@\000\022U\n\036allow_deprecated_k" +
+      "ey_exchanges\030\005 \001(\010B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\355\003" +
+      "\n\006Sybase\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
+      "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007heal" +
+      "thy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002" +
+      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001" +
+      " \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\222A\002@\000\022?\n\010username\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022D\n\r" +
+      "port_override\030\003 \001(\005B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\222A\002@\001\022D\n\004port\030\004 \001(\005" +
+      "B6\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\222A\006:\0042638\222A\002@\000\022?\n\010password\030\005 \001(\tB-\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@" +
+      "\000:\n\372\370\263\007\005\250\363\263\007\001\"\357\003\n\010SybaseIQ\022\030\n\002id\030\200\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007" +
+      "\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022?\n\010hostname\030\001 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
+      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010usernam" +
+      "e\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\222A\002@\000\022D\n\rport_override\030\003 \001(\005B-\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\222" +
+      "A\002@\001\022D\n\004port\030\004 \001(\005B6\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\006:\0042638\222A\002@\000\022?\n\010pa" +
+      "ssword\030\005 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001\"\357\003\n\010Tera" +
+      "data\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201" +
+      "\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\"\n\007healthy\030" +
+      "\202\200\002 \001(\010B\017\362\370\263\007\005\260\363\263\007\001\222A\002@\001\022$\n\004tags\030\203\200\002 \001(\013" +
+      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022?\n\010hostname\030\001 \001(\t" +
+      "B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\222A\002@\000\022?\n\010username\030\002 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\002@\000\022?\n\010pass" +
+      "word\030\003 \001(\tB-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\001\222A\002@\000\022D\n\rport_override\030\004 \001(\005" +
+      "B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263" +
+      "\007\000\222A\002@\001\022D\n\004port\030\005 \001(\005B6\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\006:\0041025\222A\002@\000:\n\372" +
+      "\370\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api.v1.plumbin" +
+      "gB\017DriversPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -100678,13 +100820,13 @@ public final class DriversPlumbing {
     internal_static_v1_SSH_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SSH_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Port", "PublicKey", "PortForwarding", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Port", "PublicKey", "PortForwarding", "AllowDeprecatedKeyExchanges", });
     internal_static_v1_SSHCert_descriptor =
       getDescriptor().getMessageTypes().get(44);
     internal_static_v1_SSHCert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SSHCert_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Port", "PortForwarding", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Port", "PortForwarding", "AllowDeprecatedKeyExchanges", });
     internal_static_v1_Sybase_descriptor =
       getDescriptor().getMessageTypes().get(45);
     internal_static_v1_Sybase_fieldAccessorTable = new

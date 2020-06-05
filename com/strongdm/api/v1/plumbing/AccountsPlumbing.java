@@ -11967,6 +11967,33 @@ public final class AccountsPlumbing {
      * @return The suspended.
      */
     boolean getSuspended();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
   }
   /**
    * <pre>
@@ -12049,6 +12076,19 @@ public final class AccountsPlumbing {
             case 40: {
 
               suspended_ = input.readBool();
+              break;
+            }
+            case 50: {
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -12273,6 +12313,41 @@ public final class AccountsPlumbing {
       return suspended_;
     }
 
+    public static final int TAGS_FIELD_NUMBER = 6;
+    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12302,6 +12377,9 @@ public final class AccountsPlumbing {
       if (suspended_ != false) {
         output.writeBool(5, suspended_);
       }
+      if (tags_ != null) {
+        output.writeMessage(6, getTags());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12326,6 +12404,10 @@ public final class AccountsPlumbing {
       if (suspended_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, suspended_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getTags());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12352,6 +12434,11 @@ public final class AccountsPlumbing {
           .equals(other.getLastName())) return false;
       if (getSuspended()
           != other.getSuspended()) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12374,6 +12461,10 @@ public final class AccountsPlumbing {
       hash = (37 * hash) + SUSPENDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSuspended());
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12522,6 +12613,12 @@ public final class AccountsPlumbing {
 
         suspended_ = false;
 
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
         return this;
       }
 
@@ -12553,6 +12650,11 @@ public final class AccountsPlumbing {
         result.firstName_ = firstName_;
         result.lastName_ = lastName_;
         result.suspended_ = suspended_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -12619,6 +12721,9 @@ public final class AccountsPlumbing {
         }
         if (other.getSuspended() != false) {
           setSuspended(other.getSuspended());
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13074,6 +13179,161 @@ public final class AccountsPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13180,6 +13440,33 @@ public final class AccountsPlumbing {
      * @return The suspended.
      */
     boolean getSuspended();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
   }
   /**
    * <pre>
@@ -13248,6 +13535,19 @@ public final class AccountsPlumbing {
             case 24: {
 
               suspended_ = input.readBool();
+              break;
+            }
+            case 34: {
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -13384,6 +13684,41 @@ public final class AccountsPlumbing {
       return suspended_;
     }
 
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13407,6 +13742,9 @@ public final class AccountsPlumbing {
       if (suspended_ != false) {
         output.writeBool(3, suspended_);
       }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13425,6 +13763,10 @@ public final class AccountsPlumbing {
       if (suspended_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, suspended_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13447,6 +13789,11 @@ public final class AccountsPlumbing {
           .equals(other.getName())) return false;
       if (getSuspended()
           != other.getSuspended()) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13465,6 +13812,10 @@ public final class AccountsPlumbing {
       hash = (37 * hash) + SUSPENDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSuspended());
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13609,6 +13960,12 @@ public final class AccountsPlumbing {
 
         suspended_ = false;
 
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
         return this;
       }
 
@@ -13638,6 +13995,11 @@ public final class AccountsPlumbing {
         result.id_ = id_;
         result.name_ = name_;
         result.suspended_ = suspended_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -13696,6 +14058,9 @@ public final class AccountsPlumbing {
         }
         if (other.getSuspended() != false) {
           setSuspended(other.getSuspended());
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13959,6 +14324,161 @@ public final class AccountsPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14089,72 +14609,75 @@ public final class AccountsPlumbing {
       "\n\016accounts.proto\022\002v1\032\034google/api/annotat" +
       "ions.proto\032,protoc-gen-swagger/options/a" +
       "nnotations.proto\032\roptions.proto\032\nspec.pr" +
-      "oto\"i\n\024AccountCreateRequest\022\'\n\004meta\030\001 \001(" +
-      "\0132\031.v1.CreateRequestMetadata\022(\n\007account\030" +
-      "\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\"\332\001\n\025Accou" +
-      "ntCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Crea" +
-      "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007accoun" +
-      "t\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005toke" +
-      "n\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\0225\n\nrate_limit\030\004" +
-      " \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:" +
-      "\n\372\370\263\007\005\250\363\263\007\001\"Q\n\021AccountGetRequest\022$\n\004meta" +
-      "\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\"\264\001\n\022AccountGetResponse\0221\n" +
-      "\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370" +
+      "oto\032\ntags.proto\"i\n\024AccountCreateRequest\022" +
+      "\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadata" +
+      "\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\"\332\001\n\025AccountCreateResponse\0224\n\004meta\030\001 \001" +
+      "(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\036\n\005token\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\0225\n\n" +
+      "rate_limit\030\004 \001(\0132\025.v1.RateLimitMetadataB" +
+      "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Q\n\021AccountGetReq" +
+      "uest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetada" +
+      "ta\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\264\001\n\022AccountGe" +
+      "tResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponse" +
+      "MetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007account\030\002 \001(\0132\013." +
+      "v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001" +
+      "(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"u\n\024AccountUpdateRequest\022\'\n\004met" +
+      "a\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id" +
+      "\030\002 \001(\t\022(\n\007account\030\003 \001(\0132\013.v1.AccountB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\"\272\001\n\025AccountUpdateResponse\0224\n\004me" +
+      "ta\030\001 \001(\0132\032.v1.UpdateResponseMetadataB\n\362\370" +
       "\263\007\005\260\363\263\007\001\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n" +
       "\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Rate" +
-      "LimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"u\n" +
-      "\024AccountUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
-      ".UpdateRequestMetadata\022\n\n\002id\030\002 \001(\t\022(\n\007ac" +
-      "count\030\003 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\"\272\001\n" +
-      "\025AccountUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v" +
-      "1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007" +
-      "account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\0225" +
-      "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat" +
-      "aB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n\024AccountDele" +
-      "teRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteReque" +
-      "stMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\220\001\n\025A" +
-      "ccountDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1." +
-      "DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nra" +
-      "te_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n\022AccountListRequ" +
-      "est\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetada" +
-      "ta\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\237\001\n\023Accou" +
-      "ntListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRe" +
-      "sponseMetadata\022)\n\010accounts\030\002 \003(\0132\013.v1.Ac" +
-      "countB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025." +
-      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\324\001\n\007Acc" +
-      "ount\022\030\n\004user\030\001 \001(\0132\010.v1.UserH\000\022\036\n\007servic" +
-      "e\030\002 \001(\0132\013.v1.ServiceH\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007R\302" +
-      "\363\263\007M\242\363\263\007 tf_examples/account_resource.tx" +
-      "t\252\363\263\007#tf_examples/account_data_source.tx" +
-      "tB,\n\007account\022!\252\370\263\007\t\242\370\263\007\004User\252\370\263\007\016\252\370\263\007\tsu" +
-      "spended\"\365\001\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002" +
-      "ID\260\363\263\007\001\312\363\263\007\004User\022(\n\005email\030\002 \001(\tB\031\362\370\263\007\024\242\363" +
-      "\263\007\005Email\260\363\263\007\001\300\363\263\007\001\0221\n\nfirst_name\030\003 \001(\tB\035" +
-      "\362\370\263\007\030\242\363\263\007\tFirstName\260\363\263\007\001\300\363\263\007\001\022/\n\tlast_na" +
-      "me\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"" +
-      "\n\tsuspended\030\005 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001:\023\372\370\263\007" +
-      "\016\242\363\263\007\004User\250\363\263\007\001\"\226\001\n\007Service\022&\n\002id\030\001 \001(\tB" +
-      "\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n\004name\030\002 \001(" +
-      "\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"\n\tsuspe" +
-      "nded\030\003 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004U" +
-      "ser\250\363\263\007\0012\253\004\n\010Accounts\022\264\001\n\006Create\022\030.v1.Ac" +
-      "countCreateRequest\032\031.v1.AccountCreateRes" +
-      "ponse\"u\202\323\344\223\002\021\"\014/v1/accounts:\001*\222A[\"Y\n\033Lea" +
-      "rn how to make a Account\022:https://www.st" +
-      "rongdm.com/docs/api/services/Accounts#Cr" +
-      "eate\022O\n\003Get\022\025.v1.AccountGetRequest\032\026.v1." +
-      "AccountGetResponse\"\031\202\323\344\223\002\023\022\021/v1/accounts" +
-      "/{id}\022[\n\006Update\022\030.v1.AccountUpdateReques" +
-      "t\032\031.v1.AccountUpdateResponse\"\034\202\323\344\223\002\026\032\021/v" +
-      "1/accounts/{id}:\001*\022X\n\006Delete\022\030.v1.Accoun" +
-      "tDeleteRequest\032\031.v1.AccountDeleteRespons" +
-      "e\"\031\202\323\344\223\002\023*\021/v1/accounts/{id}\022M\n\004List\022\026.v" +
-      "1.AccountListRequest\032\027.v1.AccountListRes" +
-      "ponse\"\024\202\323\344\223\002\016\022\014/v1/accounts\032\021\312\371\263\007\014\302\371\263\007\007A" +
-      "ccountB0\n\034com.strongdm.api.v1.plumbingB\020" +
-      "AccountsPlumbingb\006proto3"
+      "LimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n" +
+      "\024AccountDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
+      ".DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\"\220\001\n\025AccountDeleteResponse\0224\n\004meta" +
+      "\030\001 \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimi" +
+      "tMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n\022Acc" +
+      "ountListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListR" +
+      "equestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\"\237\001\n\023AccountListResponse\022&\n\004meta\030\001 \001(\013" +
+      "2\030.v1.ListResponseMetadata\022)\n\010accounts\030\002" +
+      " \003(\0132\013.v1.AccountB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_li" +
+      "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\"\324\001\n\007Account\022\030\n\004user\030\001 \001(\0132\010.v1.User" +
+      "H\000\022\036\n\007service\030\002 \001(\0132\013.v1.ServiceH\000:a\372\370\263\007" +
+      "\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf_examples/account" +
+      "_resource.txt\252\363\263\007#tf_examples/account_da" +
+      "ta_source.txtB,\n\007account\022!\252\370\263\007\t\242\370\263\007\004User" +
+      "\252\370\263\007\016\252\370\263\007\tsuspended\"\242\002\n\004User\022&\n\002id\030\001 \001(\t" +
+      "B\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022(\n\005email\030\002 " +
+      "\001(\tB\031\362\370\263\007\024\242\363\263\007\005Email\260\363\263\007\001\300\363\263\007\001\0221\n\nfirst_" +
+      "name\030\003 \001(\tB\035\362\370\263\007\030\242\363\263\007\tFirstName\260\363\263\007\001\300\363\263\007" +
+      "\001\022/\n\tlast_name\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName" +
+      "\260\363\263\007\001\300\363\263\007\001\022\"\n\tsuspended\030\005 \001(\010B\017\362\370\263\007\n\260\363\263\007" +
+      "\001\320\363\263\007\001\022+\n\004tags\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263" +
+      "\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\001\"\303\001\n\007Ser" +
+      "vice\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004" +
+      "User\022*\n\004name\030\002 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363" +
+      "\263\007\001\300\363\263\007\001\022\"\n\tsuspended\030\003 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320" +
+      "\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004" +
+      "Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\0012\253\004\n\010Accou" +
+      "nts\022\264\001\n\006Create\022\030.v1.AccountCreateRequest" +
+      "\032\031.v1.AccountCreateResponse\"u\202\323\344\223\002\021\"\014/v1" +
+      "/accounts:\001*\222A[\"Y\n\033Learn how to make a A" +
+      "ccount\022:https://www.strongdm.com/docs/ap" +
+      "i/services/Accounts#Create\022O\n\003Get\022\025.v1.A" +
+      "ccountGetRequest\032\026.v1.AccountGetResponse" +
+      "\"\031\202\323\344\223\002\023\022\021/v1/accounts/{id}\022[\n\006Update\022\030." +
+      "v1.AccountUpdateRequest\032\031.v1.AccountUpda" +
+      "teResponse\"\034\202\323\344\223\002\026\032\021/v1/accounts/{id}:\001*" +
+      "\022X\n\006Delete\022\030.v1.AccountDeleteRequest\032\031.v" +
+      "1.AccountDeleteResponse\"\031\202\323\344\223\002\023*\021/v1/acc" +
+      "ounts/{id}\022M\n\004List\022\026.v1.AccountListReque" +
+      "st\032\027.v1.AccountListResponse\"\024\202\323\344\223\002\016\022\014/v1" +
+      "/accounts\032\021\312\371\263\007\014\302\371\263\007\007AccountB0\n\034com.stro" +
+      "ngdm.api.v1.plumbingB\020AccountsPlumbingb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14163,6 +14686,7 @@ public final class AccountsPlumbing {
           grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
+          com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
         });
     internal_static_v1_AccountCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14235,13 +14759,13 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Service_descriptor,
-        new java.lang.String[] { "Id", "Name", "Suspended", });
+        new java.lang.String[] { "Id", "Name", "Suspended", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -14256,6 +14780,7 @@ public final class AccountsPlumbing {
     grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
+    com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

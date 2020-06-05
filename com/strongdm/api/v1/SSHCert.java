@@ -106,4 +106,14 @@ public class SSHCert implements Resource {
   public void setPortForwarding(boolean in) {
     this.portForwarding = in;
   }
+
+  private boolean allowDeprecatedKeyExchanges;
+
+  public boolean getAllowDeprecatedKeyExchanges() {
+    return this.allowDeprecatedKeyExchanges;
+  }
+
+  public void setAllowDeprecatedKeyExchanges(boolean in) {
+    this.allowDeprecatedKeyExchanges = in;
+  }
 }
