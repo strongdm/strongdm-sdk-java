@@ -31,7 +31,7 @@ def grpcVersion = '1.25.0'
 def protobufVersion = '3.10.0'
 def protocVersion = protobufVersion
 def jsonVersion = '20190722'
-def releaseVersion = '0.1.1'
+def releaseVersion = System.getenv('JAVA_SDK_VERSION')
 
 // for more info on dependency annotations:
 // https://docs.gradle.org/current/userguide/building_java_projects.html#sec:java_dependency_management_overview
