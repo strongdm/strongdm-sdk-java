@@ -2,9 +2,13 @@
 
 plugins {
     id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id "com.jfrog.bintray" version "1.8.4"
 }
 
 jar.baseName = 'com.strongdm.api'
+group = 'io.github.strongdm'
 
 // for more info on sourceset annotations:
 // https://docs.gradle.org/current/userguide/building_java_projects.html#sec:compile
@@ -27,7 +31,7 @@ def grpcVersion = '1.25.0'
 def protobufVersion = '3.10.0'
 def protocVersion = protobufVersion
 def jsonVersion = '20190722'
-
+def releaseVersion = System.getenv('JAVA_SDK_VERSION')
 
 // for more info on dependency annotations:
 // https://docs.gradle.org/current/userguide/building_java_projects.html#sec:java_dependency_management_overview
@@ -41,4 +45,81 @@ dependencies {
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
-version = '1.0'
+version = releaseVersion
+
+java {
+    withJavadocJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'strongdm-sdk-java'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = 'strongdm-sdk-java'
+                description = 'strongDM SDK'
+                url = 'https://github.com/strongdm/strongdm-sdk-java'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'strongdm'
+                        name = 'strongDM Engineering'
+                        email = 'support@strongdm.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com:strongdm/strongdm-sdk-java.git'
+                    developerConnection = 'scm:git:ssh://github.com:strongdm/strongdm-sdk-java.git'
+                    url = 'https://github.com/strongdm/strongdm-sdk-java'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url = "https://github.com/strongdm/strongdm-sdk-java"
+        }
+    }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    publications = ['mavenJava']
+    pkg {
+        repo = 'strongdm-sdk-java'
+        name = 'strongdm-sdk-java'
+        userOrg = 'strongdm'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/strongdm/strongdm-sdk-java.git'
+        version {
+            name = releaseVersion
+            desc = 'strongDM Java SDK'
+            released  = new Date()
+            vcsTag = releaseVersion
+            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+        }
+    }
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+    exclude 'com/strongdm/api/v1/plumbing/**'
+}
+

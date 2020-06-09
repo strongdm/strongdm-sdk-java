@@ -10787,6 +10787,33 @@ public final class RolesPlumbing {
      * @return The composite.
      */
     boolean getComposite();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
   }
   /**
    * <pre>
@@ -10854,6 +10881,19 @@ public final class RolesPlumbing {
             case 24: {
 
               composite_ = input.readBool();
+              break;
+            }
+            case 34: {
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -10990,6 +11030,41 @@ public final class RolesPlumbing {
       return composite_;
     }
 
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11013,6 +11088,9 @@ public final class RolesPlumbing {
       if (composite_ != false) {
         output.writeBool(3, composite_);
       }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11031,6 +11109,10 @@ public final class RolesPlumbing {
       if (composite_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, composite_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11053,6 +11135,11 @@ public final class RolesPlumbing {
           .equals(other.getName())) return false;
       if (getComposite()
           != other.getComposite()) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11071,6 +11158,10 @@ public final class RolesPlumbing {
       hash = (37 * hash) + COMPOSITE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getComposite());
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11214,6 +11305,12 @@ public final class RolesPlumbing {
 
         composite_ = false;
 
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
         return this;
       }
 
@@ -11243,6 +11340,11 @@ public final class RolesPlumbing {
         result.id_ = id_;
         result.name_ = name_;
         result.composite_ = composite_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -11301,6 +11403,9 @@ public final class RolesPlumbing {
         }
         if (other.getComposite() != false) {
           setComposite(other.getComposite());
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11564,6 +11669,161 @@ public final class RolesPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11684,60 +11944,61 @@ public final class RolesPlumbing {
       "\n\013roles.proto\022\002v1\032\034google/api/annotation" +
       "s.proto\032,protoc-gen-swagger/options/anno" +
       "tations.proto\032\roptions.proto\032\nspec.proto" +
-      "\"`\n\021RoleCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
-      ".CreateRequestMetadata\022\"\n\004role\030\002 \001(\0132\010.v" +
-      "1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\261\001\n\022RoleCreateRespons" +
-      "e\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
-      "eLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N" +
-      "\n\016RoleGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetR" +
-      "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\253" +
-      "\001\n\017RoleGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.Ge" +
-      "tResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 " +
-      "\001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030" +
-      "\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"l\n\021RoleUpdateRequest\022\'\n\004met" +
-      "a\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id" +
-      "\030\002 \001(\t\022\"\n\004role\030\003 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\261\001\n\022RoleUpdateResponse\0224\n\004meta\030\001 \001(\0132" +
-      "\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nr" +
-      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n" +
-      "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDeleteRequ" +
-      "est\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMeta" +
-      "data\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\215\001\n\022RoleDel" +
-      "eteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRes" +
-      "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030" +
-      "\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleListRequest\022%\n\004meta\030" +
-      "\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filter" +
-      "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\226\001\n\020RoleListResponse\022" +
-      "&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\022" +
-      "#\n\005roles\030\002 \003(\0132\010.v1.RoleB\n\362\370\263\007\005\270\363\263\007\001\0225\n\n" +
-      "rate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\"\225\002\n\004Role\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242" +
-      "\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Role\022&\n\004name\030\002 \001(\tB\030\362\370\263\007" +
-      "\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\0220\n\tcomposite\030\003 \001(\010B" +
-      "\035\362\370\263\007\030\242\363\263\007\tComposite\260\363\263\007\001\340\363\263\007\001:\212\001\372\370\263\007Z\242\363" +
-      "\263\007\004Role\250\363\263\007\001\302\363\263\007G\242\363\263\007\035tf_examples/role_r" +
-      "esource.txt\252\363\263\007 tf_examples/role_data_so" +
-      "urce.txt\222A(2&\022${ \"id\": \"r-7\", \"name\": \"h" +
-      "appy-goat\"}2\362\003\n\005Roles\022\245\001\n\006Create\022\025.v1.Ro" +
-      "leCreateRequest\032\026.v1.RoleCreateResponse\"" +
-      "l\202\323\344\223\002\016\"\t/v1/roles:\001*\222AU\"S\n\030Learn how to" +
-      " make a Role\0227https://www.strongdm.com/d" +
-      "ocs/api/services/Roles#Create\022F\n\003Get\022\022.v" +
-      "1.RoleGetRequest\032\023.v1.RoleGetResponse\"\026\202" +
-      "\323\344\223\002\020\022\016/v1/roles/{id}\022R\n\006Update\022\025.v1.Rol" +
-      "eUpdateRequest\032\026.v1.RoleUpdateResponse\"\031" +
-      "\202\323\344\223\002\023\032\016/v1/roles/{id}:\001*\022O\n\006Delete\022\025.v1" +
-      ".RoleDeleteRequest\032\026.v1.RoleDeleteRespon" +
-      "se\"\026\202\323\344\223\002\020*\016/v1/roles/{id}\022D\n\004List\022\023.v1." +
-      "RoleListRequest\032\024.v1.RoleListResponse\"\021\202" +
-      "\323\344\223\002\013\022\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004RoleB-\n\034com." +
-      "strongdm.api.v1.plumbingB\rRolesPlumbingb" +
-      "\006proto3"
+      "\032\ntags.proto\"`\n\021RoleCreateRequest\022\'\n\004met" +
+      "a\030\001 \001(\0132\031.v1.CreateRequestMetadata\022\"\n\004ro" +
+      "le\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\261\001\n\022RoleC" +
+      "reateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateR" +
+      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(" +
+      "\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 " +
+      "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"N\n\016RoleGetRequest\022$\n\004meta\030\001 \001" +
+      "(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\"\253\001\n\017RoleGetResponse\0221\n\004meta\030\001" +
+      " \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\0225\n" +
+      "\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadata" +
+      "B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021RoleUpdateRe" +
+      "quest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMe" +
+      "tadata\022\n\n\002id\030\002 \001(\t\022\"\n\004role\030\003 \001(\0132\010.v1.Ro" +
+      "leB\n\362\370\263\007\005\260\363\263\007\001\"\261\001\n\022RoleUpdateResponse\0224\n" +
+      "\004meta\030\001 \001(\0132\032.v1.UpdateResponseMetadataB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLim" +
+      "itMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021Ro" +
+      "leDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Delet" +
+      "eRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\"\215\001\n\022RoleDeleteResponse\0224\n\004meta\030\001 \001(\0132\032." +
+      "v1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n" +
+      "\nrate_limit\030\002 \001(\0132\025.v1.RateLimitMetadata" +
+      "B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleListRequ" +
+      "est\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetada" +
+      "ta\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\226\001\n\020RoleL" +
+      "istResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRespo" +
+      "nseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.RoleB\n\362\370" +
+      "\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLi" +
+      "mitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\302\002\n\004Role\022&\n\002id\030\001" +
+      " \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Role\022&\n\004name" +
+      "\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\0220\n\tcomp" +
+      "osite\030\003 \001(\010B\035\362\370\263\007\030\242\363\263\007\tComposite\260\363\263\007\001\340\363\263" +
+      "\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Ta" +
+      "gs\260\363\263\007\001:\212\001\372\370\263\007Z\242\363\263\007\004Role\250\363\263\007\001\302\363\263\007G\242\363\263\007\035t" +
+      "f_examples/role_resource.txt\252\363\263\007 tf_exam" +
+      "ples/role_data_source.txt\222A(2&\022${ \"id\": " +
+      "\"r-7\", \"name\": \"happy-goat\"}2\362\003\n\005Roles\022\245" +
+      "\001\n\006Create\022\025.v1.RoleCreateRequest\032\026.v1.Ro" +
+      "leCreateResponse\"l\202\323\344\223\002\016\"\t/v1/roles:\001*\222A" +
+      "U\"S\n\030Learn how to make a Role\0227https://w" +
+      "ww.strongdm.com/docs/api/services/Roles#" +
+      "Create\022F\n\003Get\022\022.v1.RoleGetRequest\032\023.v1.R" +
+      "oleGetResponse\"\026\202\323\344\223\002\020\022\016/v1/roles/{id}\022R" +
+      "\n\006Update\022\025.v1.RoleUpdateRequest\032\026.v1.Rol" +
+      "eUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/roles/{id}:" +
+      "\001*\022O\n\006Delete\022\025.v1.RoleDeleteRequest\032\026.v1" +
+      ".RoleDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/roles/{" +
+      "id}\022D\n\004List\022\023.v1.RoleListRequest\032\024.v1.Ro" +
+      "leListResponse\"\021\202\323\344\223\002\013\022\t/v1/roles\032\016\312\371\263\007\t" +
+      "\302\371\263\007\004RoleB-\n\034com.strongdm.api.v1.plumbin" +
+      "gB\rRolesPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11746,6 +12007,7 @@ public final class RolesPlumbing {
           grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
+          com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
         });
     internal_static_v1_RoleCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -11812,7 +12074,7 @@ public final class RolesPlumbing {
     internal_static_v1_Role_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Role_descriptor,
-        new java.lang.String[] { "Id", "Name", "Composite", });
+        new java.lang.String[] { "Id", "Name", "Composite", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -11827,6 +12089,7 @@ public final class RolesPlumbing {
     grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
+    com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

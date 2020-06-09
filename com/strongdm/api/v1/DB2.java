@@ -17,37 +17,35 @@
 
 package com.strongdm.api.v1;
 
-// A Role is a collection of permissions, and typically corresponds to a team, Active Directory OU,
-// or other organizational unit. Users are granted access to resources by assigning them to roles.
-public class Role {
+public class DB2 implements Resource {
   private String id;
-  // Unique identifier of the Role.
+  // Unique identifier of the Resource.
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the Role.
+  // Unique identifier of the Resource.
   public void setId(String in) {
     this.id = in;
   }
 
   private String name;
-  // Unique human-readable name of the Role.
+  // Unique human-readable name of the Resource.
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Role.
+  // Unique human-readable name of the Resource.
   public void setName(String in) {
     this.name = in;
   }
 
-  private boolean composite;
-  // True if the Role is a composite role.
-  public boolean getComposite() {
-    return this.composite;
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
   }
-  // True if the Role is a composite role.
-  public void setComposite(boolean in) {
-    this.composite = in;
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
   }
 
   private java.util.Map<String, String> tags;
@@ -67,5 +65,65 @@ public class Role {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private String hostname;
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public void setHostname(String in) {
+    this.hostname = in;
+  }
+
+  private String username;
+
+  public String getUsername() {
+    return this.username;
+  }
+
+  public void setUsername(String in) {
+    this.username = in;
+  }
+
+  private String password;
+
+  public String getPassword() {
+    return this.password;
+  }
+
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private String database;
+
+  public String getDatabase() {
+    return this.database;
+  }
+
+  public void setDatabase(String in) {
+    this.database = in;
+  }
+
+  private int portOverride;
+
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
+  private int port;
+
+  public int getPort() {
+    return this.port;
+  }
+
+  public void setPort(int in) {
+    this.port = in;
   }
 }

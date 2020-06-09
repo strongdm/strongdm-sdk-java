@@ -11941,6 +11941,33 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getStateBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
   }
   /**
    * <pre>
@@ -12010,6 +12037,19 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               state_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -12180,6 +12220,41 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12203,6 +12278,9 @@ public final class NodesPlumbing {
       if (!getStateBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
       }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12220,6 +12298,10 @@ public final class NodesPlumbing {
       }
       if (!getStateBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12242,6 +12324,11 @@ public final class NodesPlumbing {
           .equals(other.getName())) return false;
       if (!getState()
           .equals(other.getState())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12259,6 +12346,10 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + getState().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12402,6 +12493,12 @@ public final class NodesPlumbing {
 
         state_ = "";
 
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
         return this;
       }
 
@@ -12431,6 +12528,11 @@ public final class NodesPlumbing {
         result.id_ = id_;
         result.name_ = name_;
         result.state_ = state_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -12490,6 +12592,9 @@ public final class NodesPlumbing {
         if (!other.getState().isEmpty()) {
           state_ = other.state_;
           onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12817,6 +12922,161 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12977,6 +13237,33 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getBindAddressBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
   }
   /**
    * <pre>
@@ -13060,6 +13347,19 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               bindAddress_ = s;
+              break;
+            }
+            case 50: {
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -13318,6 +13618,41 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int TAGS_FIELD_NUMBER = 6;
+    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+     */
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13347,6 +13682,9 @@ public final class NodesPlumbing {
       if (!getBindAddressBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bindAddress_);
       }
+      if (tags_ != null) {
+        output.writeMessage(6, getTags());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13370,6 +13708,10 @@ public final class NodesPlumbing {
       }
       if (!getBindAddressBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bindAddress_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getTags());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13396,6 +13738,11 @@ public final class NodesPlumbing {
           .equals(other.getListenAddress())) return false;
       if (!getBindAddress()
           .equals(other.getBindAddress())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13417,6 +13764,10 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getListenAddress().hashCode();
       hash = (37 * hash) + BIND_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getBindAddress().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13564,6 +13915,12 @@ public final class NodesPlumbing {
 
         bindAddress_ = "";
 
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
         return this;
       }
 
@@ -13595,6 +13952,11 @@ public final class NodesPlumbing {
         result.state_ = state_;
         result.listenAddress_ = listenAddress_;
         result.bindAddress_ = bindAddress_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -13662,6 +14024,9 @@ public final class NodesPlumbing {
         if (!other.getBindAddress().isEmpty()) {
           bindAddress_ = other.bindAddress_;
           onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14181,6 +14546,161 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14311,70 +14831,73 @@ public final class NodesPlumbing {
       "\n\013nodes.proto\022\002v1\032\034google/api/annotation" +
       "s.proto\032,protoc-gen-swagger/options/anno" +
       "tations.proto\032\roptions.proto\032\nspec.proto" +
-      "\"`\n\021NodeCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
-      ".CreateRequestMetadata\022\"\n\004node\030\002 \001(\0132\010.v" +
-      "1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\022NodeCreateRespons" +
-      "e\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005token\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363" +
-      "\263\007\001\0225\n\nrate_limit\030\004 \001(\0132\025.v1.RateLimitMe" +
-      "tadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016NodeGe" +
-      "tRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMe" +
-      "tadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\253\001\n\017NodeG" +
-      "etResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRespons" +
-      "eMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1" +
-      ".NodeB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025." +
-      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"l\n\021NodeUpdateRequest\022\'\n\004meta\030\001 \001(\0132" +
-      "\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002 \001(\t\022\"" +
-      "\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\261\001\n\022N" +
-      "odeUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Upd" +
-      "ateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030" +
-      "\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limi" +
-      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteRequest\022\'\n\004m" +
-      "eta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002" +
-      "id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\215\001\n\022NodeDeleteRespo" +
-      "nse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMet" +
-      "adataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025." +
-      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"T\n\017NodeListRequest\022%\n\004meta\030\001 \001(\0132\027." +
-      "v1.ListRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\"\226\001\n\020NodeListResponse\022&\n\004meta\030" +
-      "\001 \001(\0132\030.v1.ListResponseMetadata\022#\n\005nodes" +
-      "\030\002 \003(\0132\010.v1.NodeB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_lim" +
-      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\"\356\001\n\004Node\022\032\n\005relay\030\001 \001(\0132\t.v1.RelayH\000" +
-      "\022\036\n\007gateway\030\002 \001(\0132\013.v1.GatewayH\000:\221\001\372\370\263\007L" +
-      "\302\363\263\007G\242\363\263\007\035tf_examples/node_resource.txt\252" +
-      "\363\263\007 tf_examples/node_data_source.txt\372\370\263\007" +
-      "\005\250\363\263\007\001\222A321\022/{\"relay\": { \"id\": \"n-7\", \"n" +
-      "ame\": \"happy-goat\"}}B\026\n\004node\022\016\252\370\263\007\t\242\370\263\007\004" +
-      "Node\"\226\001\n\005Relay\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID" +
-      "\260\363\263\007\001\312\363\263\007\004Node\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004" +
-      "Name\260\363\263\007\001\330\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007" +
-      "\005State\260\363\263\007\001\222A\002@\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\230\002" +
-      "\n\007Gateway\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001" +
-      "\312\363\263\007\004Node\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260" +
-      "\363\263\007\001\330\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005Stat" +
-      "e\260\363\263\007\001\222A\002@\001\022@\n\016listen_address\030\004 \001(\tB(\362\370\263" +
-      "\007#\242\363\263\007\nListenAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022<\n" +
-      "\014bind_address\030\005 \001(\tB&\362\370\263\007!\242\363\263\007\010BindAddr\250" +
-      "\363\263\007\001\260\363\263\007\001\330\363\263\007\001\340\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001" +
-      "2\362\003\n\005Nodes\022\245\001\n\006Create\022\025.v1.NodeCreateReq" +
-      "uest\032\026.v1.NodeCreateResponse\"l\202\323\344\223\002\016\"\t/v" +
-      "1/nodes:\001*\222AU\"S\n\030Learn how to make a Nod" +
-      "e\0227https://www.strongdm.com/docs/api/ser" +
-      "vices/Nodes#Create\022F\n\003Get\022\022.v1.NodeGetRe" +
-      "quest\032\023.v1.NodeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/" +
-      "nodes/{id}\022R\n\006Update\022\025.v1.NodeUpdateRequ" +
-      "est\032\026.v1.NodeUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1" +
-      "/nodes/{id}:\001*\022O\n\006Delete\022\025.v1.NodeDelete" +
-      "Request\032\026.v1.NodeDeleteResponse\"\026\202\323\344\223\002\020*" +
-      "\016/v1/nodes/{id}\022D\n\004List\022\023.v1.NodeListReq" +
-      "uest\032\024.v1.NodeListResponse\"\021\202\323\344\223\002\013\022\t/v1/" +
-      "nodes\032\016\312\371\263\007\t\302\371\263\007\004NodeB-\n\034com.strongdm.ap" +
-      "i.v1.plumbingB\rNodesPlumbingb\006proto3"
+      "\032\ntags.proto\"`\n\021NodeCreateRequest\022\'\n\004met" +
+      "a\030\001 \001(\0132\031.v1.CreateRequestMetadata\022\"\n\004no" +
+      "de\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\022NodeC" +
+      "reateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateR" +
+      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(" +
+      "\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005token\030\003 \001(\tB\017" +
+      "\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\0225\n\nrate_limit\030\004 \001(\0132\025.v1" +
+      ".RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263" +
+      "\007\001\"N\n\016NodeGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1." +
+      "GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\"\253\001\n\017NodeGetResponse\0221\n\004meta\030\001 \001(\0132\027.v" +
+      "1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004nod" +
+      "e\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_li" +
+      "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021NodeUpdateRequest\022\'\n" +
+      "\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n" +
+      "\n\002id\030\002 \001(\t\022\"\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\"\261\001\n\022NodeUpdateResponse\0224\n\004meta\030\001 " +
+      "\001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "5\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetada" +
+      "taB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDelete" +
+      "Request\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequest" +
+      "Metadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\215\001\n\022Nod" +
+      "eDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delet" +
+      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_li" +
+      "mit\030\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeListRequest\022%\n\004m" +
+      "eta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fi" +
+      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\226\001\n\020NodeListRespo" +
+      "nse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetad" +
+      "ata\022#\n\005nodes\030\002 \003(\0132\010.v1.NodeB\n\362\370\263\007\005\270\363\263\007\001" +
+      "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001\"\356\001\n\004Node\022\032\n\005relay\030\001 \001(\0132" +
+      "\t.v1.RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v1.Gatew" +
+      "ayH\000:\221\001\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_examples/node_r" +
+      "esource.txt\252\363\263\007 tf_examples/node_data_so" +
+      "urce.txt\372\370\263\007\005\250\363\263\007\001\222A321\022/{\"relay\": { \"id" +
+      "\": \"n-7\", \"name\": \"happy-goat\"}}B\026\n\004node" +
+      "\022\016\252\370\263\007\t\242\370\263\007\004Node\"\303\001\n\005Relay\022&\n\002id\030\001 \001(\tB\032" +
+      "\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Node\022&\n\004name\030\002 \001(\t" +
+      "B\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\330\363\263\007\001\022(\n\005state\030\003 \001(" +
+      "\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002@\001\022+\n\004tags\030\004 \001" +
+      "(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016" +
+      "\242\363\263\007\004Node\250\363\263\007\001\"\305\002\n\007Gateway\022&\n\002id\030\001 \001(\tB\032" +
+      "\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Node\022&\n\004name\030\002 \001(\t" +
+      "B\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\330\363\263\007\001\022(\n\005state\030\003 \001(" +
+      "\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002@\001\022@\n\016listen_a" +
+      "ddress\030\004 \001(\tB(\362\370\263\007#\242\363\263\007\nListenAddr\250\363\263\007\001\260" +
+      "\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022<\n\014bind_address\030\005 \001(\tB&\362\370" +
+      "\263\007!\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001\330\363\263\007\001\340\363\263\007\001\022+\n\004" +
+      "tags\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007" +
+      "\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Cre" +
+      "ate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCrea" +
+      "teResponse\"l\202\323\344\223\002\016\"\t/v1/nodes:\001*\222AU\"S\n\030L" +
+      "earn how to make a Node\0227https://www.str" +
+      "ongdm.com/docs/api/services/Nodes#Create" +
+      "\022F\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeGet" +
+      "Response\"\026\202\323\344\223\002\020\022\016/v1/nodes/{id}\022R\n\006Upda" +
+      "te\022\025.v1.NodeUpdateRequest\032\026.v1.NodeUpdat" +
+      "eResponse\"\031\202\323\344\223\002\023\032\016/v1/nodes/{id}:\001*\022O\n\006" +
+      "Delete\022\025.v1.NodeDeleteRequest\032\026.v1.NodeD" +
+      "eleteResponse\"\026\202\323\344\223\002\020*\016/v1/nodes/{id}\022D\n" +
+      "\004List\022\023.v1.NodeListRequest\032\024.v1.NodeList" +
+      "Response\"\021\202\323\344\223\002\013\022\t/v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004N" +
+      "odeB-\n\034com.strongdm.api.v1.plumbingB\rNod" +
+      "esPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14383,6 +14906,7 @@ public final class NodesPlumbing {
           grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
+          com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
         });
     internal_static_v1_NodeCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14455,13 +14979,13 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", });
+        new java.lang.String[] { "Id", "Name", "State", "Tags", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -14478,6 +15002,7 @@ public final class NodesPlumbing {
     grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
+    com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
