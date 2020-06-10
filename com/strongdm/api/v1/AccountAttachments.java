@@ -52,17 +52,11 @@ public class AccountAttachments {
     return new AccountAttachments(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
   // Create registers a new AccountAttachment.
-  public AccountAttachmentCreateResponse create(
-      AccountAttachment accountAttachment, AccountAttachmentCreateOptions... options)
+  public AccountAttachmentCreateResponse create(AccountAttachment accountAttachment)
       throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.newBuilder();
     builder.setAccountAttachment(Plumbing.convertAccountAttachmentToPlumbing(accountAttachment));
-    if (options.length > 1) {
-      throw new BadRequestException("use only one AccountAttachmentCreateOptions per create call");
-    } else if (options.length == 1) {
-      builder.setOptions(Plumbing.convertAccountAttachmentCreateOptionsToPlumbing(options[0]));
-    }
     AccountAttachmentsPlumbing.AccountAttachmentCreateRequest req = builder.build();
     AccountAttachmentsPlumbing.AccountAttachmentCreateResponse plumbingResponse;
     int tries = 0;

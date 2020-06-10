@@ -85,33 +85,6 @@ public final class AccountAttachmentsPlumbing {
      * <code>.v1.AccountAttachment account_attachment = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentOrBuilder getAccountAttachmentOrBuilder();
-
-    /**
-     * <pre>
-     * Options specifies extra options for creating the AccountAttachment.
-     * </pre>
-     *
-     * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-     * @return Whether the options field is set.
-     */
-    boolean hasOptions();
-    /**
-     * <pre>
-     * Options specifies extra options for creating the AccountAttachment.
-     * </pre>
-     *
-     * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-     * @return The options.
-     */
-    com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions getOptions();
-    /**
-     * <pre>
-     * Options specifies extra options for creating the AccountAttachment.
-     * </pre>
-     *
-     * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptionsOrBuilder getOptionsOrBuilder();
   }
   /**
    * <pre>
@@ -185,19 +158,6 @@ public final class AccountAttachmentsPlumbing {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(accountAttachment_);
                 accountAttachment_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder subBuilder = null;
-              if (options_ != null) {
-                subBuilder = options_.toBuilder();
-              }
-              options_ = input.readMessage(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(options_);
-                options_ = subBuilder.buildPartial();
               }
 
               break;
@@ -304,41 +264,6 @@ public final class AccountAttachmentsPlumbing {
       return getAccountAttachment();
     }
 
-    public static final int OPTIONS_FIELD_NUMBER = 3;
-    private com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions options_;
-    /**
-     * <pre>
-     * Options specifies extra options for creating the AccountAttachment.
-     * </pre>
-     *
-     * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-     * @return Whether the options field is set.
-     */
-    public boolean hasOptions() {
-      return options_ != null;
-    }
-    /**
-     * <pre>
-     * Options specifies extra options for creating the AccountAttachment.
-     * </pre>
-     *
-     * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-     * @return The options.
-     */
-    public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions getOptions() {
-      return options_ == null ? com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.getDefaultInstance() : options_;
-    }
-    /**
-     * <pre>
-     * Options specifies extra options for creating the AccountAttachment.
-     * </pre>
-     *
-     * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-     */
-    public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptionsOrBuilder getOptionsOrBuilder() {
-      return getOptions();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -359,9 +284,6 @@ public final class AccountAttachmentsPlumbing {
       if (accountAttachment_ != null) {
         output.writeMessage(2, getAccountAttachment());
       }
-      if (options_ != null) {
-        output.writeMessage(3, getOptions());
-      }
       unknownFields.writeTo(output);
     }
 
@@ -378,10 +300,6 @@ public final class AccountAttachmentsPlumbing {
       if (accountAttachment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getAccountAttachment());
-      }
-      if (options_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -408,11 +326,6 @@ public final class AccountAttachmentsPlumbing {
         if (!getAccountAttachment()
             .equals(other.getAccountAttachment())) return false;
       }
-      if (hasOptions() != other.hasOptions()) return false;
-      if (hasOptions()) {
-        if (!getOptions()
-            .equals(other.getOptions())) return false;
-      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -431,10 +344,6 @@ public final class AccountAttachmentsPlumbing {
       if (hasAccountAttachment()) {
         hash = (37 * hash) + ACCOUNT_ATTACHMENT_FIELD_NUMBER;
         hash = (53 * hash) + getAccountAttachment().hashCode();
-      }
-      if (hasOptions()) {
-        hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -586,12 +495,6 @@ public final class AccountAttachmentsPlumbing {
           accountAttachment_ = null;
           accountAttachmentBuilder_ = null;
         }
-        if (optionsBuilder_ == null) {
-          options_ = null;
-        } else {
-          options_ = null;
-          optionsBuilder_ = null;
-        }
         return this;
       }
 
@@ -627,11 +530,6 @@ public final class AccountAttachmentsPlumbing {
           result.accountAttachment_ = accountAttachment_;
         } else {
           result.accountAttachment_ = accountAttachmentBuilder_.build();
-        }
-        if (optionsBuilder_ == null) {
-          result.options_ = options_;
-        } else {
-          result.options_ = optionsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -686,9 +584,6 @@ public final class AccountAttachmentsPlumbing {
         }
         if (other.hasAccountAttachment()) {
           mergeAccountAttachment(other.getAccountAttachment());
-        }
-        if (other.hasOptions()) {
-          mergeOptions(other.getOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1028,161 +923,6 @@ public final class AccountAttachmentsPlumbing {
         }
         return accountAttachmentBuilder_;
       }
-
-      private com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions options_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptionsOrBuilder> optionsBuilder_;
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       * @return Whether the options field is set.
-       */
-      public boolean hasOptions() {
-        return optionsBuilder_ != null || options_ != null;
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       * @return The options.
-       */
-      public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions getOptions() {
-        if (optionsBuilder_ == null) {
-          return options_ == null ? com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.getDefaultInstance() : options_;
-        } else {
-          return optionsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setOptions(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions value) {
-        if (optionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          options_ = value;
-          onChanged();
-        } else {
-          optionsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setOptions(
-          com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder builderForValue) {
-        if (optionsBuilder_ == null) {
-          options_ = builderForValue.build();
-          onChanged();
-        } else {
-          optionsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeOptions(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions value) {
-        if (optionsBuilder_ == null) {
-          if (options_ != null) {
-            options_ =
-              com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.newBuilder(options_).mergeFrom(value).buildPartial();
-          } else {
-            options_ = value;
-          }
-          onChanged();
-        } else {
-          optionsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearOptions() {
-        if (optionsBuilder_ == null) {
-          options_ = null;
-          onChanged();
-        } else {
-          options_ = null;
-          optionsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder getOptionsBuilder() {
-        
-        onChanged();
-        return getOptionsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptionsOrBuilder getOptionsOrBuilder() {
-        if (optionsBuilder_ != null) {
-          return optionsBuilder_.getMessageOrBuilder();
-        } else {
-          return options_ == null ?
-              com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.getDefaultInstance() : options_;
-        }
-      }
-      /**
-       * <pre>
-       * Options specifies extra options for creating the AccountAttachment.
-       * </pre>
-       *
-       * <code>.v1.AccountAttachmentCreateOptions options = 3 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptionsOrBuilder> 
-          getOptionsFieldBuilder() {
-        if (optionsBuilder_ == null) {
-          optionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptionsOrBuilder>(
-                  getOptions(),
-                  getParentForChildren(),
-                  isClean());
-          options_ = null;
-        }
-        return optionsBuilder_;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1231,523 +971,6 @@ public final class AccountAttachmentsPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AccountAttachmentCreateOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AccountAttachmentCreateOptions)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Overwrite clears all account grants before the attachment.
-     * </pre>
-     *
-     * <code>bool overwrite = 1 [(.v1.field_options) = { ... }</code>
-     * @return The overwrite.
-     */
-    boolean getOverwrite();
-  }
-  /**
-   * <pre>
-   * AccountAttachmentCreateOptions specifies extra options for creating an
-   * AccountAttachment.
-   * </pre>
-   *
-   * Protobuf type {@code v1.AccountAttachmentCreateOptions}
-   */
-  public  static final class AccountAttachmentCreateOptions extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AccountAttachmentCreateOptions)
-      AccountAttachmentCreateOptionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AccountAttachmentCreateOptions.newBuilder() to construct.
-    private AccountAttachmentCreateOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AccountAttachmentCreateOptions() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AccountAttachmentCreateOptions();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AccountAttachmentCreateOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              overwrite_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.internal_static_v1_AccountAttachmentCreateOptions_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.internal_static_v1_AccountAttachmentCreateOptions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.class, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder.class);
-    }
-
-    public static final int OVERWRITE_FIELD_NUMBER = 1;
-    private boolean overwrite_;
-    /**
-     * <pre>
-     * Overwrite clears all account grants before the attachment.
-     * </pre>
-     *
-     * <code>bool overwrite = 1 [(.v1.field_options) = { ... }</code>
-     * @return The overwrite.
-     */
-    public boolean getOverwrite() {
-      return overwrite_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (overwrite_ != false) {
-        output.writeBool(1, overwrite_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (overwrite_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, overwrite_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions other = (com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions) obj;
-
-      if (getOverwrite()
-          != other.getOverwrite()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OVERWRITE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getOverwrite());
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * AccountAttachmentCreateOptions specifies extra options for creating an
-     * AccountAttachment.
-     * </pre>
-     *
-     * Protobuf type {@code v1.AccountAttachmentCreateOptions}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AccountAttachmentCreateOptions)
-        com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.internal_static_v1_AccountAttachmentCreateOptions_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.internal_static_v1_AccountAttachmentCreateOptions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.class, com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        overwrite_ = false;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.internal_static_v1_AccountAttachmentCreateOptions_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions build() {
-        com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions buildPartial() {
-        com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions result = new com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions(this);
-        result.overwrite_ = overwrite_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions other) {
-        if (other == com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions.getDefaultInstance()) return this;
-        if (other.getOverwrite() != false) {
-          setOverwrite(other.getOverwrite());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private boolean overwrite_ ;
-      /**
-       * <pre>
-       * Overwrite clears all account grants before the attachment.
-       * </pre>
-       *
-       * <code>bool overwrite = 1 [(.v1.field_options) = { ... }</code>
-       * @return The overwrite.
-       */
-      public boolean getOverwrite() {
-        return overwrite_;
-      }
-      /**
-       * <pre>
-       * Overwrite clears all account grants before the attachment.
-       * </pre>
-       *
-       * <code>bool overwrite = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The overwrite to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOverwrite(boolean value) {
-        
-        overwrite_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Overwrite clears all account grants before the attachment.
-       * </pre>
-       *
-       * <code>bool overwrite = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOverwrite() {
-        
-        overwrite_ = false;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.AccountAttachmentCreateOptions)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.AccountAttachmentCreateOptions)
-    private static final com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions();
-    }
-
-    public static com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AccountAttachmentCreateOptions>
-        PARSER = new com.google.protobuf.AbstractParser<AccountAttachmentCreateOptions>() {
-      @java.lang.Override
-      public AccountAttachmentCreateOptions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AccountAttachmentCreateOptions(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AccountAttachmentCreateOptions> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AccountAttachmentCreateOptions> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10135,11 +9358,6 @@ public final class AccountAttachmentsPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AccountAttachmentCreateRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AccountAttachmentCreateOptions_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AccountAttachmentCreateOptions_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccountAttachmentCreateResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10191,68 +9409,64 @@ public final class AccountAttachmentsPlumbing {
       "\n\031account_attachments.proto\022\002v1\032\034google/" +
       "api/annotations.proto\032,protoc-gen-swagge" +
       "r/options/annotations.proto\032\roptions.pro" +
-      "to\032\nspec.proto\"\334\001\n\036AccountAttachmentCrea" +
+      "to\032\nspec.proto\"\233\001\n\036AccountAttachmentCrea" +
       "teRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateReque" +
       "stMetadata\022=\n\022account_attachment\030\002 \001(\0132\025" +
-      ".v1.AccountAttachmentB\n\362\370\263\007\005\260\363\263\007\001\022?\n\007opt" +
-      "ions\030\003 \001(\0132\".v1.AccountAttachmentCreateO" +
-      "ptionsB\n\362\370\263\007\005\260\363\263\007\001:\021\372\370\263\007\014\272\363\263\007\007options\"K\n" +
-      "\036AccountAttachmentCreateOptions\022\035\n\toverw" +
-      "rite\030\001 \001(\010B\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\331\001\n\037A" +
-      "ccountAttachmentCreateResponse\0224\n\004meta\030\001" +
-      " \001(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022=\n\022account_attachment\030\002 \001(\0132\025.v1.Ac" +
-      "countAttachmentB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limi" +
-      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"[\n\033AccountAttachmentGetRe" +
-      "quest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetad" +
-      "ata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\323\001\n\034AccountA" +
-      "ttachmentGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1." +
-      "GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022=\n\022accou" +
-      "nt_attachment\030\002 \001(\0132\025.v1.AccountAttachme" +
-      "ntB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1." +
-      "RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007" +
-      "\001\"a\n\036AccountAttachmentDeleteRequest\022\'\n\004m" +
-      "eta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002" +
-      "id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\232\001\n\037AccountAttachme" +
-      "ntDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Dele" +
-      "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_l" +
-      "imit\030\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"a\n\034AccountAttachmentLi" +
-      "stRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequest" +
-      "Metadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\276\001\n" +
-      "\035AccountAttachmentListResponse\022&\n\004meta\030\001" +
-      " \001(\0132\030.v1.ListResponseMetadata\022>\n\023accoun" +
-      "t_attachments\030\002 \003(\0132\025.v1.AccountAttachme" +
-      "ntB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1." +
-      "RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\362\002\n\021Accoun" +
-      "tAttachment\022*\n\002id\030\001 \001(\tB\036\362\370\263\007\031\242\363\263\007\002ID\260\363\263" +
-      "\007\001\312\363\263\007\010UserRole\0227\n\naccount_id\030\002 \001(\tB#\362\370\263" +
-      "\007\036\242\363\263\007\006UserID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004User\0224\n\007role" +
-      "_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263" +
-      "\007\004Role:\301\001\372\370\263\007z\242\363\263\007\010UserRole\250\363\263\007\001\302\363\263\007c\242\363\263" +
-      "\007+tf_examples/account_attachment_resourc" +
-      "e.txt\252\363\263\007.tf_examples/account_attachment" +
-      "_data_source.txt\222A?2=\022;{ \"id\": \"aa-244\"," +
-      " \"role_id\": \"r-111\", \"account_id\":\"a-444" +
-      "\"}2\363\004\n\022AccountAttachments\022\350\001\n\006Create\022\".v" +
-      "1.AccountAttachmentCreateRequest\032#.v1.Ac" +
-      "countAttachmentCreateResponse\"\224\001\202\323\344\223\002\034\"\027" +
-      "/v1/account_attachments:\001*\222Ao\"m\n%Learn h" +
-      "ow to make a AccountAttachment\022Dhttps://" +
-      "www.strongdm.com/docs/api/services/Accou" +
-      "ntAttachments#Create\022n\n\003Get\022\037.v1.Account" +
-      "AttachmentGetRequest\032 .v1.AccountAttachm" +
-      "entGetResponse\"$\202\323\344\223\002\036\022\034/v1/account_atta" +
-      "chments/{id}\022w\n\006Delete\022\".v1.AccountAttac" +
-      "hmentDeleteRequest\032#.v1.AccountAttachmen" +
-      "tDeleteResponse\"$\202\323\344\223\002\036*\034/v1/account_att" +
-      "achments/{id}\022l\n\004List\022 .v1.AccountAttach" +
-      "mentListRequest\032!.v1.AccountAttachmentLi" +
-      "stResponse\"\037\202\323\344\223\002\031\022\027/v1/account_attachme" +
-      "nts\032\033\312\371\263\007\026\302\371\263\007\021AccountAttachmentB:\n\034com." +
-      "strongdm.api.v1.plumbingB\032AccountAttachm" +
-      "entsPlumbingb\006proto3"
+      ".v1.AccountAttachmentB\n\362\370\263\007\005\260\363\263\007\001:\021\372\370\263\007\014" +
+      "\272\363\263\007\007options\"\331\001\n\037AccountAttachmentCreate" +
+      "Response\0224\n\004meta\030\001 \001(\0132\032.v1.CreateRespon" +
+      "seMetadataB\n\362\370\263\007\005\260\363\263\007\001\022=\n\022account_attach" +
+      "ment\030\002 \001(\0132\025.v1.AccountAttachmentB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimit" +
+      "MetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"[\n\033Acco" +
+      "untAttachmentGetRequest\022$\n\004meta\030\001 \001(\0132\026." +
+      "v1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\"\323\001\n\034AccountAttachmentGetResponse\0221" +
+      "\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022=\n\022account_attachment\030\002 \001(\0132\025." +
+      "v1.AccountAttachmentB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate" +
+      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"a\n\036AccountAttachment" +
+      "DeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteR" +
+      "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\232" +
+      "\001\n\037AccountAttachmentDeleteResponse\0224\n\004me" +
+      "ta\030\001 \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025.v1.RateLi" +
+      "mitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"a\n\034A" +
+      "ccountAttachmentListRequest\022%\n\004meta\030\001 \001(" +
+      "\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\"\276\001\n\035AccountAttachmentList" +
+      "Response\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponse" +
+      "Metadata\022>\n\023account_attachments\030\002 \003(\0132\025." +
+      "v1.AccountAttachmentB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate" +
+      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\"\362\002\n\021AccountAttachment\022*\n\002id\030\001 \001(" +
+      "\tB\036\362\370\263\007\031\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\010UserRole\0227\n\nacc" +
+      "ount_id\030\002 \001(\tB#\362\370\263\007\036\242\363\263\007\006UserID\260\363\263\007\001\300\363\263\007" +
+      "\001\312\363\263\007\004User\0224\n\007role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006R" +
+      "oleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:\301\001\372\370\263\007z\242\363\263\007\010Use" +
+      "rRole\250\363\263\007\001\302\363\263\007c\242\363\263\007+tf_examples/account_" +
+      "attachment_resource.txt\252\363\263\007.tf_examples/" +
+      "account_attachment_data_source.txt\222A?2=\022" +
+      ";{ \"id\": \"aa-244\", \"role_id\": \"r-111\", \"" +
+      "account_id\":\"a-444\"}2\363\004\n\022AccountAttachme" +
+      "nts\022\350\001\n\006Create\022\".v1.AccountAttachmentCre" +
+      "ateRequest\032#.v1.AccountAttachmentCreateR" +
+      "esponse\"\224\001\202\323\344\223\002\034\"\027/v1/account_attachment" +
+      "s:\001*\222Ao\"m\n%Learn how to make a AccountAt" +
+      "tachment\022Dhttps://www.strongdm.com/docs/" +
+      "api/services/AccountAttachments#Create\022n" +
+      "\n\003Get\022\037.v1.AccountAttachmentGetRequest\032 " +
+      ".v1.AccountAttachmentGetResponse\"$\202\323\344\223\002\036" +
+      "\022\034/v1/account_attachments/{id}\022w\n\006Delete" +
+      "\022\".v1.AccountAttachmentDeleteRequest\032#.v" +
+      "1.AccountAttachmentDeleteResponse\"$\202\323\344\223\002" +
+      "\036*\034/v1/account_attachments/{id}\022l\n\004List\022" +
+      " .v1.AccountAttachmentListRequest\032!.v1.A" +
+      "ccountAttachmentListResponse\"\037\202\323\344\223\002\031\022\027/v" +
+      "1/account_attachments\032\033\312\371\263\007\026\302\371\263\007\021Account" +
+      "AttachmentB:\n\034com.strongdm.api.v1.plumbi" +
+      "ngB\032AccountAttachmentsPlumbingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10267,57 +9481,51 @@ public final class AccountAttachmentsPlumbing {
     internal_static_v1_AccountAttachmentCreateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentCreateRequest_descriptor,
-        new java.lang.String[] { "Meta", "AccountAttachment", "Options", });
-    internal_static_v1_AccountAttachmentCreateOptions_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_v1_AccountAttachmentCreateOptions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AccountAttachmentCreateOptions_descriptor,
-        new java.lang.String[] { "Overwrite", });
+        new java.lang.String[] { "Meta", "AccountAttachment", });
     internal_static_v1_AccountAttachmentCreateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_v1_AccountAttachmentCreateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentCreateResponse_descriptor,
         new java.lang.String[] { "Meta", "AccountAttachment", "RateLimit", });
     internal_static_v1_AccountAttachmentGetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_v1_AccountAttachmentGetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentGetRequest_descriptor,
         new java.lang.String[] { "Meta", "Id", });
     internal_static_v1_AccountAttachmentGetResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_v1_AccountAttachmentGetResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentGetResponse_descriptor,
         new java.lang.String[] { "Meta", "AccountAttachment", "RateLimit", });
     internal_static_v1_AccountAttachmentDeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_v1_AccountAttachmentDeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentDeleteRequest_descriptor,
         new java.lang.String[] { "Meta", "Id", });
     internal_static_v1_AccountAttachmentDeleteResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_v1_AccountAttachmentDeleteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentDeleteResponse_descriptor,
         new java.lang.String[] { "Meta", "RateLimit", });
     internal_static_v1_AccountAttachmentListRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_v1_AccountAttachmentListRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentListRequest_descriptor,
         new java.lang.String[] { "Meta", "Filter", });
     internal_static_v1_AccountAttachmentListResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_v1_AccountAttachmentListResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachmentListResponse_descriptor,
         new java.lang.String[] { "Meta", "AccountAttachments", "RateLimit", });
     internal_static_v1_AccountAttachment_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_v1_AccountAttachment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountAttachment_descriptor,
