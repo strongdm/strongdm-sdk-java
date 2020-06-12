@@ -25,4 +25,8 @@ package com.strongdm.api.v1;
 public interface Node {
   // Returns the unique identifier of the Node.
   String getId();
+  // Returns the tags of the Node.
+  java.util.Map<String, String> getTags();
+  // Sets the tags of the Node.
+  void setTags(java.util.Map<String, String> tags);
 }

@@ -250,40 +250,6 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.AccountAttachmentCreateOptions
-      convertAccountAttachmentCreateOptionsToPorcelain(AccountAttachmentCreateOptions plumbing) {
-    com.strongdm.api.v1.AccountAttachmentCreateOptions porcelain =
-        new com.strongdm.api.v1.AccountAttachmentCreateOptions();
-    porcelain.setOverwrite((plumbing.getOverwrite()));
-    return porcelain;
-  }
-
-  public static AccountAttachmentCreateOptions convertAccountAttachmentCreateOptionsToPlumbing(
-      com.strongdm.api.v1.AccountAttachmentCreateOptions porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    AccountAttachmentCreateOptions.Builder builder = AccountAttachmentCreateOptions.newBuilder();
-    builder.setOverwrite(porcelain.getOverwrite());
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.AccountAttachmentCreateOptions>
-      convertRepeatedAccountAttachmentCreateOptionsToPorcelain(
-          Collection<AccountAttachmentCreateOptions> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertAccountAttachmentCreateOptionsToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<AccountAttachmentCreateOptions>
-      convertRepeatedAccountAttachmentCreateOptionsToPlumbing(
-          Collection<com.strongdm.api.v1.AccountAttachmentCreateOptions> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertAccountAttachmentCreateOptionsToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
   public static com.strongdm.api.v1.AccountAttachmentCreateResponse
       convertAccountAttachmentCreateResponseToPorcelain(AccountAttachmentCreateResponse plumbing) {
     com.strongdm.api.v1.AccountAttachmentCreateResponse porcelain =

@@ -28,4 +28,8 @@ public interface Account {
   boolean getSuspended();
   // Sets whether the Account is suspended.
   void setSuspended(boolean suspended);
+  // Returns the tags of the Account.
+  java.util.Map<String, String> getTags();
+  // Sets the tags of the Account.
+  void setTags(java.util.Map<String, String> tags);
 }
