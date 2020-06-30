@@ -1,4 +1,4 @@
-# strongDM SDK for Python
+# strongDM SDK for Java
 
 This is the official [strongDM](https://www.strongdm.com/) SDK for the Java programming language.
 
@@ -32,18 +32,18 @@ $ export SDM_API_SECRET_KEY=<YOUR SECRET KEY>
 The following code lists all registered users:
 
 ```java
-	try {
-		client = new Client(System.getenv("SDM_API_ACCESS_KEY"),System.getenv("SDM_API_SECRET_KEY"));
-		Iterable<Account> resp = client.accounts().list("");
-		for (Account n : resp) {
-			if (n instanceof User) {
-				User u = (User)n;
-				System.out.println(u.getEmail());
-			}
+try {
+	client = new Client(System.getenv("SDM_API_ACCESS_KEY"),System.getenv("SDM_API_SECRET_KEY"));
+	Iterable<Account> resp = client.accounts().list("");
+	for (Account n : resp) {
+		if (n instanceof User) {
+			User u = (User)n;
+			System.out.println(u.getEmail());
 		}
-	} catch (Exception e) {
-		e.printStackTrace();
 	}
+} catch (Exception e) {
+	e.printStackTrace();
+}
 ```
 
 ## Useful Links
