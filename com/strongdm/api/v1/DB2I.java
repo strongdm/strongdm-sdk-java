@@ -97,16 +97,6 @@ public class DB2I implements Resource {
     this.password = in;
   }
 
-  private String database;
-
-  public String getDatabase() {
-    return this.database;
-  }
-
-  public void setDatabase(String in) {
-    this.database = in;
-  }
-
   private int portOverride;
 
   public int getPortOverride() {
