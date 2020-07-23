@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-public class DB2 implements Resource {
+public class DB2LUW implements Resource {
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
