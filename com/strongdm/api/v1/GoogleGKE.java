@@ -17,112 +17,93 @@
 
 package com.strongdm.api.v1;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Collection;
-import java.util.Date;
+public class GoogleGKE implements Resource {
+  private String id;
+  // Unique identifier of the Resource.
+  public String getId() {
+    return this.id;
+  }
+  // Unique identifier of the Resource.
+  public void setId(String in) {
+    this.id = in;
+  }
 
+  private String name;
+  // Unique human-readable name of the Resource.
+  public String getName() {
+    return this.name;
+  }
+  // Unique human-readable name of the Resource.
+  public void setName(String in) {
+    this.name = in;
+  }
 
-public class GoogleGKE
-    implements Resource
-    {
-    private String id;
-    // Unique identifier of the Resource.
-    public String getId() {
-        return this.id;
-    }
-    // Unique identifier of the Resource.
-    public void setId(String in) {
-        this.id = in;
-    }
-    private String name;
-    // Unique human-readable name of the Resource.
-    public String getName() {
-        return this.name;
-    }
-    // Unique human-readable name of the Resource.
-    public void setName(String in) {
-        this.name = in;
-    }
-    private boolean healthy;
-    // True if the datasource is reachable and the credentials are valid.
-    public boolean getHealthy() {
-        return this.healthy;
-    }
-    // True if the datasource is reachable and the credentials are valid.
-    public void setHealthy(boolean in) {
-        this.healthy = in;
-    }
-    private java.util.Map<String, String> tags;
-    // Tags is a map of key, value pairs.
-    public java.util.Map<String, String> getTags() {
-        java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-        if (this.tags != null) {
-            m.putAll(this.tags);
-        }
-        return m;
-    }
-    // Tags is a map of key, value pairs.
-    public void setTags(java.util.Map<String, String> in) {
-        if (in == null) {
-            this.tags = null;
-            return;
-        }
-        this.tags = new java.util.HashMap<String, String>();
-        this.tags.putAll(in);
-    }
-    private String endpoint;
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
 
-    public String getEndpoint() {
-        return this.endpoint;
+  private java.util.Map<String, String> tags;
+  // Tags is a map of key, value pairs.
+  public java.util.Map<String, String> getTags() {
+    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
+    if (this.tags != null) {
+      m.putAll(this.tags);
     }
+    return m;
+  }
+  // Tags is a map of key, value pairs.
+  public void setTags(java.util.Map<String, String> in) {
+    if (in == null) {
+      this.tags = null;
+      return;
+    }
+    this.tags = new java.util.HashMap<String, String>();
+    this.tags.putAll(in);
+  }
 
-    public void setEndpoint(String in) {
-        this.endpoint = in;
-    }
-    private String certificateAuthority;
+  private String endpoint;
 
-    public String getCertificateAuthority() {
-        return this.certificateAuthority;
-    }
+  public String getEndpoint() {
+    return this.endpoint;
+  }
 
-    public void setCertificateAuthority(String in) {
-        this.certificateAuthority = in;
-    }
-    private String certificateAuthorityFilename;
+  public void setEndpoint(String in) {
+    this.endpoint = in;
+  }
 
-    public String getCertificateAuthorityFilename() {
-        return this.certificateAuthorityFilename;
-    }
+  private String certificateAuthority;
 
-    public void setCertificateAuthorityFilename(String in) {
-        this.certificateAuthorityFilename = in;
-    }
-    private String serviceAccountKey;
+  public String getCertificateAuthority() {
+    return this.certificateAuthority;
+  }
 
-    public String getServiceAccountKey() {
-        return this.serviceAccountKey;
-    }
+  public void setCertificateAuthority(String in) {
+    this.certificateAuthority = in;
+  }
 
-    public void setServiceAccountKey(String in) {
-        this.serviceAccountKey = in;
-    }
-    private String serviceAccountKeyFilename;
+  private String serviceAccountKey;
 
-    public String getServiceAccountKeyFilename() {
-        return this.serviceAccountKeyFilename;
-    }
+  public String getServiceAccountKey() {
+    return this.serviceAccountKey;
+  }
 
-    public void setServiceAccountKeyFilename(String in) {
-        this.serviceAccountKeyFilename = in;
-    }
-    private String healthcheckNamespace;
+  public void setServiceAccountKey(String in) {
+    this.serviceAccountKey = in;
+  }
 
-    public String getHealthcheckNamespace() {
-        return this.healthcheckNamespace;
-    }
+  private String healthcheckNamespace;
 
-    public void setHealthcheckNamespace(String in) {
-        this.healthcheckNamespace = in;
-    }
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
+  }
+
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
+  }
 }

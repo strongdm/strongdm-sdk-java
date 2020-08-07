@@ -17,11 +17,101 @@
 
 package com.strongdm.api.v1;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Collection;
-import java.util.Date;
+public class Kubernetes implements Resource {
+  private String id;
+  // Unique identifier of the Resource.
+  public String getId() {
+    return this.id;
+  }
+  // Unique identifier of the Resource.
+  public void setId(String in) {
+    this.id = in;
+  }
 
+  private String name;
+  // Unique human-readable name of the Resource.
+  public String getName() {
+    return this.name;
+  }
+  // Unique human-readable name of the Resource.
+  public void setName(String in) {
+    this.name = in;
+  }
+
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
+
+  private java.util.Map<String, String> tags;
+  // Tags is a map of key, value pairs.
+  public java.util.Map<String, String> getTags() {
+    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
+    if (this.tags != null) {
+      m.putAll(this.tags);
+    }
+    return m;
+  }
+  // Tags is a map of key, value pairs.
+  public void setTags(java.util.Map<String, String> in) {
+    if (in == null) {
+      this.tags = null;
+      return;
+    }
+    this.tags = new java.util.HashMap<String, String>();
+    this.tags.putAll(in);
+  }
+
+  private String hostname;
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public void setHostname(String in) {
+    this.hostname = in;
+  }
+
+  private int port;
+
+  public int getPort() {
+    return this.port;
+  }
+
+  public void setPort(int in) {
+    this.port = in;
+  }
+
+  private String certificateAuthority;
+
+  public String getCertificateAuthority() {
+    return this.certificateAuthority;
+  }
+
+  public void setCertificateAuthority(String in) {
+    this.certificateAuthority = in;
+  }
+
+  private String clientCertificate;
+
+  public String getClientCertificate() {
+    return this.clientCertificate;
+  }
+
+  public void setClientCertificate(String in) {
+    this.clientCertificate = in;
+  }
+
+  private String clientKey;
+
+  public String getClientKey() {
+    return this.clientKey;
+  }
 
 public class Kubernetes
     implements Resource
@@ -108,19 +198,6 @@ public class Kubernetes
         this.certificateAuthorityFilename = in;
     }
     private String clientCertificate;
-
-    public String getClientCertificate() {
-        return this.clientCertificate;
-    }
-
-    public void setClientCertificate(String in) {
-        this.clientCertificate = in;
-    }
-    private String clientCertificateFilename;
-
-    public String getClientCertificateFilename() {
-        return this.clientCertificateFilename;
-    }
 
     public void setClientCertificateFilename(String in) {
         this.clientCertificateFilename = in;
