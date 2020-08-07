@@ -51,7 +51,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.AlreadyExistsError}
    */
-  public static final class AlreadyExistsError extends
+  public  static final class AlreadyExistsError extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AlreadyExistsError)
       AlreadyExistsErrorOrBuilder {
@@ -138,7 +138,6 @@ public final class Spec {
      * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
      * @return The entity.
      */
-    @java.lang.Override
     public java.lang.String getEntity() {
       java.lang.Object ref = entity_;
       if (ref instanceof java.lang.String) {
@@ -155,7 +154,6 @@ public final class Spec {
      * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for entity.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getEntityBytes() {
       java.lang.Object ref = entity_;
@@ -627,7 +625,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.NotFoundError}
    */
-  public static final class NotFoundError extends
+  public  static final class NotFoundError extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NotFoundError)
       NotFoundErrorOrBuilder {
@@ -714,7 +712,6 @@ public final class Spec {
      * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
      * @return The entity.
      */
-    @java.lang.Override
     public java.lang.String getEntity() {
       java.lang.Object ref = entity_;
       if (ref instanceof java.lang.String) {
@@ -731,7 +728,6 @@ public final class Spec {
      * <code>string entity = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for entity.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getEntityBytes() {
       java.lang.Object ref = entity_;
@@ -1191,7 +1187,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.BadRequestError}
    */
-  public static final class BadRequestError extends
+  public  static final class BadRequestError extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.BadRequestError)
       BadRequestErrorOrBuilder {
@@ -1617,7 +1613,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.AuthenticationError}
    */
-  public static final class AuthenticationError extends
+  public  static final class AuthenticationError extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AuthenticationError)
       AuthenticationErrorOrBuilder {
@@ -2043,7 +2039,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.PermissionError}
    */
-  public static final class PermissionError extends
+  public  static final class PermissionError extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.PermissionError)
       PermissionErrorOrBuilder {
@@ -2469,7 +2465,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.InternalError}
    */
-  public static final class InternalError extends
+  public  static final class InternalError extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.InternalError)
       InternalErrorOrBuilder {
@@ -2910,7 +2906,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.RateLimitError}
    */
-  public static final class RateLimitError extends
+  public  static final class RateLimitError extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RateLimitError)
       RateLimitErrorOrBuilder {
@@ -3003,7 +2999,6 @@ public final class Spec {
      * <code>.v1.RateLimitMetadata rate_limit = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -3011,14 +3006,12 @@ public final class Spec {
      * <code>.v1.RateLimitMetadata rate_limit = 1 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
     /**
      * <code>.v1.RateLimitMetadata rate_limit = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -3524,7 +3517,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.CreateRequestMetadata}
    */
-  public static final class CreateRequestMetadata extends
+  public  static final class CreateRequestMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.CreateRequestMetadata)
       CreateRequestMetadataOrBuilder {
@@ -3950,7 +3943,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.CreateResponseMetadata}
    */
-  public static final class CreateResponseMetadata extends
+  public  static final class CreateResponseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.CreateResponseMetadata)
       CreateResponseMetadataOrBuilder {
@@ -4376,7 +4369,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.GetRequestMetadata}
    */
-  public static final class GetRequestMetadata extends
+  public  static final class GetRequestMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.GetRequestMetadata)
       GetRequestMetadataOrBuilder {
@@ -4802,7 +4795,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.GetResponseMetadata}
    */
-  public static final class GetResponseMetadata extends
+  public  static final class GetResponseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.GetResponseMetadata)
       GetResponseMetadataOrBuilder {
@@ -5228,7 +5221,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.UpdateRequestMetadata}
    */
-  public static final class UpdateRequestMetadata extends
+  public  static final class UpdateRequestMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.UpdateRequestMetadata)
       UpdateRequestMetadataOrBuilder {
@@ -5654,7 +5647,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.UpdateResponseMetadata}
    */
-  public static final class UpdateResponseMetadata extends
+  public  static final class UpdateResponseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.UpdateResponseMetadata)
       UpdateResponseMetadataOrBuilder {
@@ -6080,7 +6073,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.DeleteRequestMetadata}
    */
-  public static final class DeleteRequestMetadata extends
+  public  static final class DeleteRequestMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.DeleteRequestMetadata)
       DeleteRequestMetadataOrBuilder {
@@ -6506,7 +6499,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.DeleteResponseMetadata}
    */
-  public static final class DeleteResponseMetadata extends
+  public  static final class DeleteResponseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.DeleteResponseMetadata)
       DeleteResponseMetadataOrBuilder {
@@ -6980,7 +6973,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.ListRequestMetadata}
    */
-  public static final class ListRequestMetadata extends
+  public  static final class ListRequestMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.ListRequestMetadata)
       ListRequestMetadataOrBuilder {
@@ -7083,7 +7076,6 @@ public final class Spec {
      * <code>string cursor = 1;</code>
      * @return The cursor.
      */
-    @java.lang.Override
     public java.lang.String getCursor() {
       java.lang.Object ref = cursor_;
       if (ref instanceof java.lang.String) {
@@ -7106,7 +7098,6 @@ public final class Spec {
      * <code>string cursor = 1;</code>
      * @return The bytes for cursor.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getCursorBytes() {
       java.lang.Object ref = cursor_;
@@ -7132,7 +7123,6 @@ public final class Spec {
      * <code>int32 page = 2;</code>
      * @return The page.
      */
-    @java.lang.Override
     public int getPage() {
       return page_;
     }
@@ -7148,7 +7138,6 @@ public final class Spec {
      * <code>int32 limit = 3;</code>
      * @return The limit.
      */
-    @java.lang.Override
     public int getLimit() {
       return limit_;
     }
@@ -7611,7 +7600,6 @@ public final class Spec {
        * <code>int32 page = 2;</code>
        * @return The page.
        */
-      @java.lang.Override
       public int getPage() {
         return page_;
       }
@@ -7657,7 +7645,6 @@ public final class Spec {
        * <code>int32 limit = 3;</code>
        * @return The limit.
        */
-      @java.lang.Override
       public int getLimit() {
         return limit_;
       }
@@ -7792,7 +7779,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.ListResponseMetadata}
    */
-  public static final class ListResponseMetadata extends
+  public  static final class ListResponseMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.ListResponseMetadata)
       ListResponseMetadataOrBuilder {
@@ -7890,7 +7877,6 @@ public final class Spec {
      * <code>string next_cursor = 1;</code>
      * @return The nextCursor.
      */
-    @java.lang.Override
     public java.lang.String getNextCursor() {
       java.lang.Object ref = nextCursor_;
       if (ref instanceof java.lang.String) {
@@ -7913,7 +7899,6 @@ public final class Spec {
      * <code>string next_cursor = 1;</code>
      * @return The bytes for nextCursor.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNextCursorBytes() {
       java.lang.Object ref = nextCursor_;
@@ -7939,7 +7924,6 @@ public final class Spec {
      * <code>int32 total = 2;</code>
      * @return The total.
      */
-    @java.lang.Override
     public int getTotal() {
       return total_;
     }
@@ -8384,7 +8368,6 @@ public final class Spec {
        * <code>int32 total = 2;</code>
        * @return The total.
        */
-      @java.lang.Override
       public int getTotal() {
         return total_;
       }
@@ -8554,7 +8537,7 @@ public final class Spec {
    *
    * Protobuf type {@code v1.RateLimitMetadata}
    */
-  public static final class RateLimitMetadata extends
+  public  static final class RateLimitMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RateLimitMetadata)
       RateLimitMetadataOrBuilder {
@@ -8669,7 +8652,6 @@ public final class Spec {
      * <code>int64 limit = 1 [(.v1.field_options) = { ... }</code>
      * @return The limit.
      */
-    @java.lang.Override
     public long getLimit() {
       return limit_;
     }
@@ -8684,7 +8666,6 @@ public final class Spec {
      * <code>int64 remaining = 2 [(.v1.field_options) = { ... }</code>
      * @return The remaining.
      */
-    @java.lang.Override
     public long getRemaining() {
       return remaining_;
     }
@@ -8699,7 +8680,6 @@ public final class Spec {
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the resetAt field is set.
      */
-    @java.lang.Override
     public boolean hasResetAt() {
       return resetAt_ != null;
     }
@@ -8711,7 +8691,6 @@ public final class Spec {
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      * @return The resetAt.
      */
-    @java.lang.Override
     public com.google.protobuf.Timestamp getResetAt() {
       return resetAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : resetAt_;
     }
@@ -8722,7 +8701,6 @@ public final class Spec {
      *
      * <code>.google.protobuf.Timestamp reset_at = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getResetAtOrBuilder() {
       return getResetAt();
     }
@@ -8738,7 +8716,6 @@ public final class Spec {
      * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
      * @return The bucket.
      */
-    @java.lang.Override
     public java.lang.String getBucket() {
       java.lang.Object ref = bucket_;
       if (ref instanceof java.lang.String) {
@@ -8760,7 +8737,6 @@ public final class Spec {
      * <code>string bucket = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for bucket.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getBucketBytes() {
       java.lang.Object ref = bucket_;
@@ -9158,7 +9134,6 @@ public final class Spec {
        * <code>int64 limit = 1 [(.v1.field_options) = { ... }</code>
        * @return The limit.
        */
-      @java.lang.Override
       public long getLimit() {
         return limit_;
       }
@@ -9203,7 +9178,6 @@ public final class Spec {
        * <code>int64 remaining = 2 [(.v1.field_options) = { ... }</code>
        * @return The remaining.
        */
-      @java.lang.Override
       public long getRemaining() {
         return remaining_;
       }

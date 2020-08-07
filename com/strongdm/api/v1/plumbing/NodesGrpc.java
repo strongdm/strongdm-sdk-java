@@ -31,10 +31,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
- * There are two types of nodes:
- * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
- * 1. **Gateways:** a relay that also listens for connections from strongDM clients
+ * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
+ * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
+ * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -227,10 +226,9 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-   * There are two types of nodes:
-   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
-   * 1. **Gateways:** a relay that also listens for connections from strongDM clients
+   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
+   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
+   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
   public static abstract class NodesImplBase implements io.grpc.BindableService {
@@ -328,10 +326,9 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-   * There are two types of nodes:
-   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
-   * 1. **Gateways:** a relay that also listens for connections from strongDM clients
+   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
+   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
+   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
   public static final class NodesStub extends io.grpc.stub.AbstractStub<NodesStub> {
@@ -408,10 +405,9 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-   * There are two types of nodes:
-   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
-   * 1. **Gateways:** a relay that also listens for connections from strongDM clients
+   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
+   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
+   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
   public static final class NodesBlockingStub extends io.grpc.stub.AbstractStub<NodesBlockingStub> {
@@ -483,10 +479,9 @@ public final class NodesGrpc {
 
   /**
    * <pre>
-   * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-   * There are two types of nodes:
-   * 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature of your firewall
-   * 1. **Gateways:** a relay that also listens for connections from strongDM clients
+   * Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
+   * - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
+   * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
   public static final class NodesFutureStub extends io.grpc.stub.AbstractStub<NodesFutureStub> {

@@ -94,7 +94,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentCreateRequest}
    */
-  public static final class RoleAttachmentCreateRequest extends
+  public  static final class RoleAttachmentCreateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentCreateRequest)
       RoleAttachmentCreateRequestOrBuilder {
@@ -204,7 +204,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -216,7 +215,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -227,7 +225,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -242,7 +239,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the roleAttachment field is set.
      */
-    @java.lang.Override
     public boolean hasRoleAttachment() {
       return roleAttachment_ != null;
     }
@@ -254,7 +250,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      * @return The roleAttachment.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment getRoleAttachment() {
       return roleAttachment_ == null ? com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment.getDefaultInstance() : roleAttachment_;
     }
@@ -265,7 +260,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentOrBuilder getRoleAttachmentOrBuilder() {
       return getRoleAttachment();
     }
@@ -1074,7 +1068,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentCreateResponse}
    */
-  public static final class RoleAttachmentCreateResponse extends
+  public  static final class RoleAttachmentCreateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentCreateResponse)
       RoleAttachmentCreateResponseOrBuilder {
@@ -1197,7 +1191,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -1209,7 +1202,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -1220,7 +1212,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -1235,7 +1226,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the roleAttachment field is set.
      */
-    @java.lang.Override
     public boolean hasRoleAttachment() {
       return roleAttachment_ != null;
     }
@@ -1247,7 +1237,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      * @return The roleAttachment.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment getRoleAttachment() {
       return roleAttachment_ == null ? com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment.getDefaultInstance() : roleAttachment_;
     }
@@ -1258,7 +1247,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentOrBuilder getRoleAttachmentOrBuilder() {
       return getRoleAttachment();
     }
@@ -1273,7 +1261,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -1285,7 +1272,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -1296,7 +1282,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -2255,7 +2240,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentGetRequest}
    */
-  public static final class RoleAttachmentGetRequest extends
+  public  static final class RoleAttachmentGetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentGetRequest)
       RoleAttachmentGetRequestOrBuilder {
@@ -2359,7 +2344,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -2371,7 +2355,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -2382,7 +2365,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -2397,7 +2379,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -2418,7 +2399,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -3164,7 +3144,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentGetResponse}
    */
-  public static final class RoleAttachmentGetResponse extends
+  public  static final class RoleAttachmentGetResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentGetResponse)
       RoleAttachmentGetResponseOrBuilder {
@@ -3287,7 +3267,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -3299,7 +3278,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -3310,7 +3288,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -3325,7 +3302,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the roleAttachment field is set.
      */
-    @java.lang.Override
     public boolean hasRoleAttachment() {
       return roleAttachment_ != null;
     }
@@ -3337,7 +3313,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      * @return The roleAttachment.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment getRoleAttachment() {
       return roleAttachment_ == null ? com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment.getDefaultInstance() : roleAttachment_;
     }
@@ -3348,7 +3323,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.RoleAttachment role_attachment = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentOrBuilder getRoleAttachmentOrBuilder() {
       return getRoleAttachment();
     }
@@ -3363,7 +3337,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -3375,7 +3348,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -3386,7 +3358,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -4345,7 +4316,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentDeleteRequest}
    */
-  public static final class RoleAttachmentDeleteRequest extends
+  public  static final class RoleAttachmentDeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentDeleteRequest)
       RoleAttachmentDeleteRequestOrBuilder {
@@ -4449,7 +4420,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -4461,7 +4431,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -4472,7 +4441,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -4487,7 +4455,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -4508,7 +4475,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -5227,7 +5193,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentDeleteResponse}
    */
-  public static final class RoleAttachmentDeleteResponse extends
+  public  static final class RoleAttachmentDeleteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentDeleteResponse)
       RoleAttachmentDeleteResponseOrBuilder {
@@ -5337,7 +5303,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -5349,7 +5314,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -5360,7 +5324,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -5375,7 +5338,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -5387,7 +5349,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -5398,7 +5359,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -6172,7 +6132,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentListRequest}
    */
-  public static final class RoleAttachmentListRequest extends
+  public  static final class RoleAttachmentListRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentListRequest)
       RoleAttachmentListRequestOrBuilder {
@@ -6276,7 +6236,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -6288,7 +6247,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -6299,7 +6257,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -6314,7 +6271,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The filter.
      */
-    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -6335,7 +6291,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for filter.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -7099,7 +7054,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachmentListResponse}
    */
-  public static final class RoleAttachmentListResponse extends
+  public  static final class RoleAttachmentListResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentListResponse)
       RoleAttachmentListResponseOrBuilder {
@@ -7223,7 +7178,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -7235,7 +7189,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -7246,7 +7199,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -7260,7 +7212,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>repeated .v1.RoleAttachment role_attachments = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public java.util.List<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment> getRoleAttachmentsList() {
       return roleAttachments_;
     }
@@ -7271,7 +7222,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>repeated .v1.RoleAttachment role_attachments = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentOrBuilder> 
         getRoleAttachmentsOrBuilderList() {
       return roleAttachments_;
@@ -7283,7 +7233,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>repeated .v1.RoleAttachment role_attachments = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public int getRoleAttachmentsCount() {
       return roleAttachments_.size();
     }
@@ -7294,7 +7243,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>repeated .v1.RoleAttachment role_attachments = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachment getRoleAttachments(int index) {
       return roleAttachments_.get(index);
     }
@@ -7305,7 +7253,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>repeated .v1.RoleAttachment role_attachments = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentOrBuilder getRoleAttachmentsOrBuilder(
         int index) {
       return roleAttachments_.get(index);
@@ -7321,7 +7268,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -7333,7 +7279,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -7344,7 +7289,6 @@ public final class RoleAttachmentsPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -8501,7 +8445,7 @@ public final class RoleAttachmentsPlumbing {
    *
    * Protobuf type {@code v1.RoleAttachment}
    */
-  public static final class RoleAttachment extends
+  public  static final class RoleAttachment extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachment)
       RoleAttachmentOrBuilder {
@@ -8606,7 +8550,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -8627,7 +8570,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -8652,7 +8594,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
      * @return The compositeRoleId.
      */
-    @java.lang.Override
     public java.lang.String getCompositeRoleId() {
       java.lang.Object ref = compositeRoleId_;
       if (ref instanceof java.lang.String) {
@@ -8673,7 +8614,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string composite_role_id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for compositeRoleId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getCompositeRoleIdBytes() {
       java.lang.Object ref = compositeRoleId_;
@@ -8698,7 +8638,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
      * @return The attachedRoleId.
      */
-    @java.lang.Override
     public java.lang.String getAttachedRoleId() {
       java.lang.Object ref = attachedRoleId_;
       if (ref instanceof java.lang.String) {
@@ -8719,7 +8658,6 @@ public final class RoleAttachmentsPlumbing {
      * <code>string attached_role_id = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for attachedRoleId.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getAttachedRoleIdBytes() {
       java.lang.Object ref = attachedRoleId_;

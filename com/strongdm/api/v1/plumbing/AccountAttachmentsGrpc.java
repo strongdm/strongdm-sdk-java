@@ -31,7 +31,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * AccountAttachments assign an account to a role.
+ * AccountAttachments assign an account to a role or composite role.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -193,7 +193,7 @@ public final class AccountAttachmentsGrpc {
 
   /**
    * <pre>
-   * AccountAttachments assign an account to a role.
+   * AccountAttachments assign an account to a role or composite role.
    * </pre>
    */
   public static abstract class AccountAttachmentsImplBase implements io.grpc.BindableService {
@@ -274,7 +274,7 @@ public final class AccountAttachmentsGrpc {
 
   /**
    * <pre>
-   * AccountAttachments assign an account to a role.
+   * AccountAttachments assign an account to a role or composite role.
    * </pre>
    */
   public static final class AccountAttachmentsStub extends io.grpc.stub.AbstractStub<AccountAttachmentsStub> {
@@ -340,7 +340,7 @@ public final class AccountAttachmentsGrpc {
 
   /**
    * <pre>
-   * AccountAttachments assign an account to a role.
+   * AccountAttachments assign an account to a role or composite role.
    * </pre>
    */
   public static final class AccountAttachmentsBlockingStub extends io.grpc.stub.AbstractStub<AccountAttachmentsBlockingStub> {
@@ -402,7 +402,7 @@ public final class AccountAttachmentsGrpc {
 
   /**
    * <pre>
-   * AccountAttachments assign an account to a role.
+   * AccountAttachments assign an account to a role or composite role.
    * </pre>
    */
   public static final class AccountAttachmentsFutureStub extends io.grpc.stub.AbstractStub<AccountAttachmentsFutureStub> {

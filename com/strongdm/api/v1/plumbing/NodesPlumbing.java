@@ -94,7 +94,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeCreateRequest}
    */
-  public static final class NodeCreateRequest extends
+  public  static final class NodeCreateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeCreateRequest)
       NodeCreateRequestOrBuilder {
@@ -204,7 +204,6 @@ public final class NodesPlumbing {
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -216,7 +215,6 @@ public final class NodesPlumbing {
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -227,7 +225,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -242,7 +239,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
-    @java.lang.Override
     public boolean hasNode() {
       return node_ != null;
     }
@@ -254,7 +250,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
@@ -265,7 +260,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
       return getNode();
     }
@@ -1096,7 +1090,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeCreateResponse}
    */
-  public static final class NodeCreateResponse extends
+  public  static final class NodeCreateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeCreateResponse)
       NodeCreateResponseOrBuilder {
@@ -1226,7 +1220,6 @@ public final class NodesPlumbing {
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -1238,7 +1231,6 @@ public final class NodesPlumbing {
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -1249,7 +1241,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -1264,7 +1255,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
-    @java.lang.Override
     public boolean hasNode() {
       return node_ != null;
     }
@@ -1276,7 +1266,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
@@ -1287,7 +1276,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
       return getNode();
     }
@@ -1303,7 +1291,6 @@ public final class NodesPlumbing {
      * <code>string token = 3 [(.v1.field_options) = { ... }</code>
      * @return The token.
      */
-    @java.lang.Override
     public java.lang.String getToken() {
       java.lang.Object ref = token_;
       if (ref instanceof java.lang.String) {
@@ -1325,7 +1312,6 @@ public final class NodesPlumbing {
      * <code>string token = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for token.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getTokenBytes() {
       java.lang.Object ref = token_;
@@ -1350,7 +1336,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -1362,7 +1347,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -1373,7 +1357,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 4 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -2450,7 +2433,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeGetRequest}
    */
-  public static final class NodeGetRequest extends
+  public  static final class NodeGetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeGetRequest)
       NodeGetRequestOrBuilder {
@@ -2554,7 +2537,6 @@ public final class NodesPlumbing {
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -2566,7 +2548,6 @@ public final class NodesPlumbing {
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -2577,7 +2558,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -2592,7 +2572,6 @@ public final class NodesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -2613,7 +2592,6 @@ public final class NodesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -3359,7 +3337,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeGetResponse}
    */
-  public static final class NodeGetResponse extends
+  public  static final class NodeGetResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeGetResponse)
       NodeGetResponseOrBuilder {
@@ -3482,7 +3460,6 @@ public final class NodesPlumbing {
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -3494,7 +3471,6 @@ public final class NodesPlumbing {
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -3505,7 +3481,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -3520,7 +3495,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
-    @java.lang.Override
     public boolean hasNode() {
       return node_ != null;
     }
@@ -3532,7 +3506,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
@@ -3543,7 +3516,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
       return getNode();
     }
@@ -3558,7 +3530,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -3570,7 +3541,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -3581,7 +3551,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -4572,7 +4541,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeUpdateRequest}
    */
-  public static final class NodeUpdateRequest extends
+  public  static final class NodeUpdateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeUpdateRequest)
       NodeUpdateRequestOrBuilder {
@@ -4689,7 +4658,6 @@ public final class NodesPlumbing {
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -4701,7 +4669,6 @@ public final class NodesPlumbing {
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -4712,7 +4679,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.UpdateRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -4729,7 +4695,6 @@ public final class NodesPlumbing {
      * <code>string id = 2;</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -4752,7 +4717,6 @@ public final class NodesPlumbing {
      * <code>string id = 2;</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -4777,7 +4741,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
-    @java.lang.Override
     public boolean hasNode() {
       return node_ != null;
     }
@@ -4789,7 +4752,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
@@ -4800,7 +4762,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.Node node = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
       return getNode();
     }
@@ -5733,7 +5694,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeUpdateResponse}
    */
-  public static final class NodeUpdateResponse extends
+  public  static final class NodeUpdateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeUpdateResponse)
       NodeUpdateResponseOrBuilder {
@@ -5856,7 +5817,6 @@ public final class NodesPlumbing {
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -5868,7 +5828,6 @@ public final class NodesPlumbing {
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -5879,7 +5838,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -5894,7 +5852,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the node field is set.
      */
-    @java.lang.Override
     public boolean hasNode() {
       return node_ != null;
     }
@@ -5906,7 +5863,6 @@ public final class NodesPlumbing {
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      * @return The node.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNode() {
       return node_ == null ? com.strongdm.api.v1.plumbing.NodesPlumbing.Node.getDefaultInstance() : node_;
     }
@@ -5917,7 +5873,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.Node node = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodeOrBuilder() {
       return getNode();
     }
@@ -5932,7 +5887,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -5944,7 +5898,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -5955,7 +5908,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -6915,7 +6867,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeDeleteRequest}
    */
-  public static final class NodeDeleteRequest extends
+  public  static final class NodeDeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeDeleteRequest)
       NodeDeleteRequestOrBuilder {
@@ -7019,7 +6971,6 @@ public final class NodesPlumbing {
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -7031,7 +6982,6 @@ public final class NodesPlumbing {
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -7042,7 +6992,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -7057,7 +7006,6 @@ public final class NodesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -7078,7 +7026,6 @@ public final class NodesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -7797,7 +7744,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeDeleteResponse}
    */
-  public static final class NodeDeleteResponse extends
+  public  static final class NodeDeleteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeDeleteResponse)
       NodeDeleteResponseOrBuilder {
@@ -7907,7 +7854,6 @@ public final class NodesPlumbing {
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -7919,7 +7865,6 @@ public final class NodesPlumbing {
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -7930,7 +7875,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -7945,7 +7889,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -7957,7 +7900,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -7968,7 +7910,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -8742,7 +8683,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeListRequest}
    */
-  public static final class NodeListRequest extends
+  public  static final class NodeListRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeListRequest)
       NodeListRequestOrBuilder {
@@ -8846,7 +8787,6 @@ public final class NodesPlumbing {
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -8858,7 +8798,6 @@ public final class NodesPlumbing {
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -8869,7 +8808,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.ListRequestMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -8884,7 +8822,6 @@ public final class NodesPlumbing {
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The filter.
      */
-    @java.lang.Override
     public java.lang.String getFilter() {
       java.lang.Object ref = filter_;
       if (ref instanceof java.lang.String) {
@@ -8905,7 +8842,6 @@ public final class NodesPlumbing {
      * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for filter.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getFilterBytes() {
       java.lang.Object ref = filter_;
@@ -9669,7 +9605,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.NodeListResponse}
    */
-  public static final class NodeListResponse extends
+  public  static final class NodeListResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.NodeListResponse)
       NodeListResponseOrBuilder {
@@ -9793,7 +9729,6 @@ public final class NodesPlumbing {
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
-    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -9805,7 +9740,6 @@ public final class NodesPlumbing {
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      * @return The meta.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -9816,7 +9750,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.ListResponseMetadata meta = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -9830,7 +9763,6 @@ public final class NodesPlumbing {
      *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public java.util.List<com.strongdm.api.v1.plumbing.NodesPlumbing.Node> getNodesList() {
       return nodes_;
     }
@@ -9841,7 +9773,6 @@ public final class NodesPlumbing {
      *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder> 
         getNodesOrBuilderList() {
       return nodes_;
@@ -9853,7 +9784,6 @@ public final class NodesPlumbing {
      *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public int getNodesCount() {
       return nodes_.size();
     }
@@ -9864,7 +9794,6 @@ public final class NodesPlumbing {
      *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Node getNodes(int index) {
       return nodes_.get(index);
     }
@@ -9875,7 +9804,6 @@ public final class NodesPlumbing {
      *
      * <code>repeated .v1.Node nodes = 2 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeOrBuilder getNodesOrBuilder(
         int index) {
       return nodes_.get(index);
@@ -9891,7 +9819,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
-    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -9903,7 +9830,6 @@ public final class NodesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -9914,7 +9840,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -11046,7 +10971,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.Node}
    */
-  public static final class Node extends
+  public  static final class Node extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.Node)
       NodeOrBuilder {
@@ -11194,7 +11119,6 @@ public final class NodesPlumbing {
      * <code>.v1.Relay relay = 1;</code>
      * @return Whether the relay field is set.
      */
-    @java.lang.Override
     public boolean hasRelay() {
       return nodeCase_ == 1;
     }
@@ -11202,7 +11126,6 @@ public final class NodesPlumbing {
      * <code>.v1.Relay relay = 1;</code>
      * @return The relay.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Relay getRelay() {
       if (nodeCase_ == 1) {
          return (com.strongdm.api.v1.plumbing.NodesPlumbing.Relay) node_;
@@ -11212,7 +11135,6 @@ public final class NodesPlumbing {
     /**
      * <code>.v1.Relay relay = 1;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.RelayOrBuilder getRelayOrBuilder() {
       if (nodeCase_ == 1) {
          return (com.strongdm.api.v1.plumbing.NodesPlumbing.Relay) node_;
@@ -11225,7 +11147,6 @@ public final class NodesPlumbing {
      * <code>.v1.Gateway gateway = 2;</code>
      * @return Whether the gateway field is set.
      */
-    @java.lang.Override
     public boolean hasGateway() {
       return nodeCase_ == 2;
     }
@@ -11233,7 +11154,6 @@ public final class NodesPlumbing {
      * <code>.v1.Gateway gateway = 2;</code>
      * @return The gateway.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway getGateway() {
       if (nodeCase_ == 2) {
          return (com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway) node_;
@@ -11243,7 +11163,6 @@ public final class NodesPlumbing {
     /**
      * <code>.v1.Gateway gateway = 2;</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.NodesPlumbing.GatewayOrBuilder getGatewayOrBuilder() {
       if (nodeCase_ == 2) {
          return (com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway) node_;
@@ -11633,7 +11552,6 @@ public final class NodesPlumbing {
        * <code>.v1.Relay relay = 1;</code>
        * @return Whether the relay field is set.
        */
-      @java.lang.Override
       public boolean hasRelay() {
         return nodeCase_ == 1;
       }
@@ -11641,7 +11559,6 @@ public final class NodesPlumbing {
        * <code>.v1.Relay relay = 1;</code>
        * @return The relay.
        */
-      @java.lang.Override
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Relay getRelay() {
         if (relayBuilder_ == null) {
           if (nodeCase_ == 1) {
@@ -11735,7 +11652,6 @@ public final class NodesPlumbing {
       /**
        * <code>.v1.Relay relay = 1;</code>
        */
-      @java.lang.Override
       public com.strongdm.api.v1.plumbing.NodesPlumbing.RelayOrBuilder getRelayOrBuilder() {
         if ((nodeCase_ == 1) && (relayBuilder_ != null)) {
           return relayBuilder_.getMessageOrBuilder();
@@ -11774,7 +11690,6 @@ public final class NodesPlumbing {
        * <code>.v1.Gateway gateway = 2;</code>
        * @return Whether the gateway field is set.
        */
-      @java.lang.Override
       public boolean hasGateway() {
         return nodeCase_ == 2;
       }
@@ -11782,7 +11697,6 @@ public final class NodesPlumbing {
        * <code>.v1.Gateway gateway = 2;</code>
        * @return The gateway.
        */
-      @java.lang.Override
       public com.strongdm.api.v1.plumbing.NodesPlumbing.Gateway getGateway() {
         if (gatewayBuilder_ == null) {
           if (nodeCase_ == 2) {
@@ -11876,7 +11790,6 @@ public final class NodesPlumbing {
       /**
        * <code>.v1.Gateway gateway = 2;</code>
        */
-      @java.lang.Override
       public com.strongdm.api.v1.plumbing.NodesPlumbing.GatewayOrBuilder getGatewayOrBuilder() {
         if ((nodeCase_ == 2) && (gatewayBuilder_ != null)) {
           return gatewayBuilder_.getMessageOrBuilder();
@@ -11987,7 +11900,7 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * Unique human-readable name of the Relay. Generated if not provided on create.
+     * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -11996,7 +11909,7 @@ public final class NodesPlumbing {
     java.lang.String getName();
     /**
      * <pre>
-     * Unique human-readable name of the Relay. Generated if not provided on create.
+     * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -12063,7 +11976,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.Relay}
    */
-  public static final class Relay extends
+  public  static final class Relay extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.Relay)
       RelayOrBuilder {
@@ -12181,7 +12094,6 @@ public final class NodesPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -12202,7 +12114,6 @@ public final class NodesPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -12221,13 +12132,12 @@ public final class NodesPlumbing {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Unique human-readable name of the Relay. Generated if not provided on create.
+     * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -12242,13 +12152,12 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Unique human-readable name of the Relay. Generated if not provided on create.
+     * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -12275,7 +12184,6 @@ public final class NodesPlumbing {
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
      * @return The state.
      */
-    @java.lang.Override
     public java.lang.String getState() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
@@ -12298,7 +12206,6 @@ public final class NodesPlumbing {
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
      * @return The bytes for state.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStateBytes() {
       java.lang.Object ref = state_;
@@ -12323,7 +12230,6 @@ public final class NodesPlumbing {
      * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
      * @return Whether the tags field is set.
      */
-    @java.lang.Override
     public boolean hasTags() {
       return tags_ != null;
     }
@@ -12335,7 +12241,6 @@ public final class NodesPlumbing {
      * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
      * @return The tags.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
       return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
     }
@@ -12346,7 +12251,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
     }
@@ -12820,7 +12724,7 @@ public final class NodesPlumbing {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Unique human-readable name of the Relay. Generated if not provided on create.
+       * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -12840,7 +12744,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Relay. Generated if not provided on create.
+       * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -12861,7 +12765,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Relay. Generated if not provided on create.
+       * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -12880,7 +12784,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Relay. Generated if not provided on create.
+       * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -12894,7 +12798,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Relay. Generated if not provided on create.
+       * Unique human-readable name of the Relay. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -13252,7 +13156,7 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * Unique human-readable name of the Gateway. Generated if not provided on create.
+     * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -13261,7 +13165,7 @@ public final class NodesPlumbing {
     java.lang.String getName();
     /**
      * <pre>
-     * Unique human-readable name of the Gateway. Generated if not provided on create.
+     * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -13368,7 +13272,7 @@ public final class NodesPlumbing {
    *
    * Protobuf type {@code v1.Gateway}
    */
-  public static final class Gateway extends
+  public  static final class Gateway extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.Gateway)
       GatewayOrBuilder {
@@ -13500,7 +13404,6 @@ public final class NodesPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
-    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -13521,7 +13424,6 @@ public final class NodesPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -13540,13 +13442,12 @@ public final class NodesPlumbing {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Unique human-readable name of the Gateway. Generated if not provided on create.
+     * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
-    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -13561,13 +13462,12 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Unique human-readable name of the Gateway. Generated if not provided on create.
+     * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
      * </pre>
      *
      * <code>string name = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -13593,7 +13493,6 @@ public final class NodesPlumbing {
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
      * @return The state.
      */
-    @java.lang.Override
     public java.lang.String getState() {
       java.lang.Object ref = state_;
       if (ref instanceof java.lang.String) {
@@ -13615,7 +13514,6 @@ public final class NodesPlumbing {
      * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
      * @return The bytes for state.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getStateBytes() {
       java.lang.Object ref = state_;
@@ -13640,7 +13538,6 @@ public final class NodesPlumbing {
      * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
      * @return The listenAddress.
      */
-    @java.lang.Override
     public java.lang.String getListenAddress() {
       java.lang.Object ref = listenAddress_;
       if (ref instanceof java.lang.String) {
@@ -13661,7 +13558,6 @@ public final class NodesPlumbing {
      * <code>string listen_address = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for listenAddress.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getListenAddressBytes() {
       java.lang.Object ref = listenAddress_;
@@ -13687,7 +13583,6 @@ public final class NodesPlumbing {
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
      * @return The bindAddress.
      */
-    @java.lang.Override
     public java.lang.String getBindAddress() {
       java.lang.Object ref = bindAddress_;
       if (ref instanceof java.lang.String) {
@@ -13709,7 +13604,6 @@ public final class NodesPlumbing {
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for bindAddress.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getBindAddressBytes() {
       java.lang.Object ref = bindAddress_;
@@ -13734,7 +13628,6 @@ public final class NodesPlumbing {
      * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
      * @return Whether the tags field is set.
      */
-    @java.lang.Override
     public boolean hasTags() {
       return tags_ != null;
     }
@@ -13746,7 +13639,6 @@ public final class NodesPlumbing {
      * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
      * @return The tags.
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
       return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
     }
@@ -13757,7 +13649,6 @@ public final class NodesPlumbing {
      *
      * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
      */
-    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
     }
@@ -14265,7 +14156,7 @@ public final class NodesPlumbing {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Unique human-readable name of the Gateway. Generated if not provided on create.
+       * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14285,7 +14176,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Gateway. Generated if not provided on create.
+       * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14306,7 +14197,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Gateway. Generated if not provided on create.
+       * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14325,7 +14216,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Gateway. Generated if not provided on create.
+       * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
@@ -14339,7 +14230,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Unique human-readable name of the Gateway. Generated if not provided on create.
+       * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and hyphens (no spaces, underscores, or other special characters). Generated if not provided on create.
        * </pre>
        *
        * <code>string name = 2 [(.v1.field_options) = { ... }</code>
