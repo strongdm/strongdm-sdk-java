@@ -23,6 +23,7 @@ import com.strongdm.api.v1.BadRequestException;
 import com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.*;
 import com.strongdm.api.v1.plumbing.AccountGrantsPlumbing.*;
 import com.strongdm.api.v1.plumbing.AccountsPlumbing.*;
+import com.strongdm.api.v1.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.v1.plumbing.DriversPlumbing.*;
 import com.strongdm.api.v1.plumbing.NodesPlumbing.*;
 import com.strongdm.api.v1.plumbing.ResourcesPlumbing.*;
@@ -897,6 +898,53 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Service> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertServiceToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.ControlPanelGetSSHCAPublicKeyResponse
+      convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(
+          ControlPanelGetSSHCAPublicKeyResponse plumbing) {
+    com.strongdm.api.v1.ControlPanelGetSSHCAPublicKeyResponse porcelain =
+        new com.strongdm.api.v1.ControlPanelGetSSHCAPublicKeyResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setPublicKey((plumbing.getPublicKey()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ControlPanelGetSSHCAPublicKeyResponse
+      convertControlPanelGetSSHCAPublicKeyResponseToPlumbing(
+          com.strongdm.api.v1.ControlPanelGetSSHCAPublicKeyResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ControlPanelGetSSHCAPublicKeyResponse.Builder builder =
+        ControlPanelGetSSHCAPublicKeyResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getPublicKey() != null) {
+      builder.setPublicKey((porcelain.getPublicKey()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.ControlPanelGetSSHCAPublicKeyResponse>
+      convertRepeatedControlPanelGetSSHCAPublicKeyResponseToPorcelain(
+          Collection<ControlPanelGetSSHCAPublicKeyResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ControlPanelGetSSHCAPublicKeyResponse>
+      convertRepeatedControlPanelGetSSHCAPublicKeyResponseToPlumbing(
+          Collection<com.strongdm.api.v1.ControlPanelGetSSHCAPublicKeyResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertControlPanelGetSSHCAPublicKeyResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

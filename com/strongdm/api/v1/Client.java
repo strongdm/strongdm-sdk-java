@@ -68,6 +68,13 @@ public class Client {
     return this.accounts;
   }
 
+  private final ControlPanel controlPanel;
+
+  // ControlPanel contains all administrative controls.
+  public ControlPanel controlPanel() {
+    return this.controlPanel;
+  }
+
   private final Nodes nodes;
 
   // Nodes make up the strongDM network, and allow your users to connect securely to your resources.
@@ -141,6 +148,7 @@ public class Client {
       this.accountAttachments = new AccountAttachments(this.channel, this);
       this.accountGrants = new AccountGrants(this.channel, this);
       this.accounts = new Accounts(this.channel, this);
+      this.controlPanel = new ControlPanel(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
       this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);
