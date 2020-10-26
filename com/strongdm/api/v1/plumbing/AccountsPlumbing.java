@@ -14674,8 +14674,9 @@ public final class AccountsPlumbing {
       "\323\344\223\002\023*\021/v1/accounts/{id}\022M\n\004List\022\026.v1.Ac" +
       "countListRequest\032\027.v1.AccountListRespons" +
       "e\"\024\202\323\344\223\002\016\022\014/v1/accounts\032\021\312\371\263\007\014\302\371\263\007\007Accou" +
-      "ntB0\n\034com.strongdm.api.v1.plumbingB\020Acco" +
-      "untsPlumbingb\006proto3"
+      "ntBd\n\034com.strongdm.api.v1.plumbingB\020Acco" +
+      "untsPlumbingZ2github.com/strongdm/strong" +
+      "dm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

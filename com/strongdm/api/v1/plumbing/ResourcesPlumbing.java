@@ -10837,9 +10837,10 @@ public final class ResourcesPlumbing {
       "ResourceDeleteResponse\"\032\202\323\344\223\002\024*\022/v1/reso" +
       "urces/{id}\022P\n\004List\022\027.v1.ResourceListRequ" +
       "est\032\030.v1.ResourceListResponse\"\025\202\323\344\223\002\017\022\r/" +
-      "v1/resources\032\022\312\371\263\007\r\302\371\263\007\010ResourceB1\n\034com." +
+      "v1/resources\032\022\312\371\263\007\r\302\371\263\007\010ResourceBe\n\034com." +
       "strongdm.api.v1.plumbingB\021ResourcesPlumb" +
-      "ingb\006proto3"
+      "ingZ2github.com/strongdm/strongdm-sdk-go" +
+      "/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

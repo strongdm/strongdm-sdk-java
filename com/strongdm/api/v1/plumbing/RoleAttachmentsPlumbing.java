@@ -9463,8 +9463,10 @@ public final class RoleAttachmentsPlumbing {
       "d}\022c\n\004List\022\035.v1.RoleAttachmentListReques" +
       "t\032\036.v1.RoleAttachmentListResponse\"\034\202\323\344\223\002" +
       "\026\022\024/v1/role_attachments\032\030\312\371\263\007\023\302\371\263\007\016RoleA" +
-      "ttachmentB7\n\034com.strongdm.api.v1.plumbin" +
-      "gB\027RoleAttachmentsPlumbingb\006proto3"
+      "ttachmentBk\n\034com.strongdm.api.v1.plumbin" +
+      "gB\027RoleAttachmentsPlumbingZ2github.com/s" +
+      "trongdm/strongdm-sdk-go/internal/v1;v1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -9645,8 +9645,10 @@ public final class Spec {
       "mit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003" +
       "B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.google." +
       "protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket" +
-      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B\036\n\034com.st" +
-      "rongdm.api.v1.plumbingb\006proto3"
+      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001BR\n\034com.st" +
+      "rongdm.api.v1.plumbingZ2github.com/stron" +
+      "gdm/strongdm-sdk-go/internal/v1;v1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

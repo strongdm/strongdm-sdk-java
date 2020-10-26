@@ -11997,8 +11997,9 @@ public final class RolesPlumbing {
       ".RoleDeleteResponse\"\026\202\323\344\223\002\020*\016/v1/roles/{" +
       "id}\022D\n\004List\022\023.v1.RoleListRequest\032\024.v1.Ro" +
       "leListResponse\"\021\202\323\344\223\002\013\022\t/v1/roles\032\016\312\371\263\007\t" +
-      "\302\371\263\007\004RoleB-\n\034com.strongdm.api.v1.plumbin" +
-      "gB\rRolesPlumbingb\006proto3"
+      "\302\371\263\007\004RoleBa\n\034com.strongdm.api.v1.plumbin" +
+      "gB\rRolesPlumbingZ2github.com/strongdm/st" +
+      "rongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

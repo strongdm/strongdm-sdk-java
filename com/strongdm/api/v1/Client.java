@@ -123,6 +123,13 @@ public class Client {
   public Roles roles() {
     return this.roles;
   }
+
+  private final SecretStores secretStores;
+
+  // SecretStores are ...
+  public SecretStores secretStores() {
+    return this.secretStores;
+  }
   // Creates a new strongDM API client.
   public Client(String apiAccessKey, String apiSecretKey) throws RpcException {
     this(apiAccessKey, apiSecretKey, new ClientOptions());
@@ -154,6 +161,7 @@ public class Client {
       this.roleAttachments = new RoleAttachments(this.channel, this);
       this.roleGrants = new RoleGrants(this.channel, this);
       this.roles = new Roles(this.channel, this);
+      this.secretStores = new SecretStores(this.channel, this);
     } catch (Exception e) {
       throw Plumbing.convertExceptionToPorcelain(e);
     }

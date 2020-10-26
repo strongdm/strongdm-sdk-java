@@ -101223,8 +101223,10 @@ public final class DriversPlumbing {
       "ide\030\004 \001(\005B-\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
       "\001\362\370\263\007\005\350\363\263\007\000\222A\002@\001\022D\n\004port\030\005 \001(\005B6\362\370\263\007\005\260\363\263" +
       "\007\001\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\222A\006:\004102" +
-      "5\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001B/\n\034com.strongdm.api.v" +
-      "1.plumbingB\017DriversPlumbingb\006proto3"
+      "5\222A\002@\000:\n\372\370\263\007\005\250\363\263\007\001Bc\n\034com.strongdm.api.v" +
+      "1.plumbingB\017DriversPlumbingZ2github.com/" +
+      "strongdm/strongdm-sdk-go/internal/v1;v1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

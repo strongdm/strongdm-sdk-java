@@ -10015,9 +10015,10 @@ public final class AccountGrantsPlumbing {
       "account_grants/{id}\022]\n\004List\022\033.v1.Account" +
       "GrantListRequest\032\034.v1.AccountGrantListRe" +
       "sponse\"\032\202\323\344\223\002\024\022\022/v1/account_grants\032\026\312\371\263\007" +
-      "\021\302\371\263\007\014AccountGrantB5\n\034com.strongdm.api.v" +
-      "1.plumbingB\025AccountGrantsPlumbingb\006proto" +
-      "3"
+      "\021\302\371\263\007\014AccountGrantBi\n\034com.strongdm.api.v" +
+      "1.plumbingB\025AccountGrantsPlumbingZ2githu" +
+      "b.com/strongdm/strongdm-sdk-go/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -136,6 +136,28 @@ public final class Options {
      * @return The sensitive.
      */
     boolean getSensitive();
+
+    /**
+     * <pre>
+     * cast this field, without checking the cast is valid, to the given server type 
+     * on conversion
+     * </pre>
+     *
+     * <code>string cast_to = 1941311;</code>
+     * @return The castTo.
+     */
+    java.lang.String getCastTo();
+    /**
+     * <pre>
+     * cast this field, without checking the cast is valid, to the given server type 
+     * on conversion
+     * </pre>
+     *
+     * <code>string cast_to = 1941311;</code>
+     * @return The bytes for castTo.
+     */
+    com.google.protobuf.ByteString
+        getCastToBytes();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -152,6 +174,7 @@ public final class Options {
     private FieldOptions() {
       name_ = "";
       idType_ = "";
+      castTo_ = "";
     }
 
     @java.lang.Override
@@ -239,6 +262,12 @@ public final class Options {
             case 15530480: {
 
               sensitive_ = input.readBool();
+              break;
+            }
+            case 15530490: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              castTo_ = s;
               break;
             }
             default: {
@@ -458,6 +487,52 @@ public final class Options {
       return sensitive_;
     }
 
+    public static final int CAST_TO_FIELD_NUMBER = 1941311;
+    private volatile java.lang.Object castTo_;
+    /**
+     * <pre>
+     * cast this field, without checking the cast is valid, to the given server type 
+     * on conversion
+     * </pre>
+     *
+     * <code>string cast_to = 1941311;</code>
+     * @return The castTo.
+     */
+    public java.lang.String getCastTo() {
+      java.lang.Object ref = castTo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        castTo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * cast this field, without checking the cast is valid, to the given server type 
+     * on conversion
+     * </pre>
+     *
+     * <code>string cast_to = 1941311;</code>
+     * @return The bytes for castTo.
+     */
+    public com.google.protobuf.ByteString
+        getCastToBytes() {
+      java.lang.Object ref = castTo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        castTo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -504,6 +579,9 @@ public final class Options {
       }
       if (sensitive_ != false) {
         output.writeBool(1941310, sensitive_);
+      }
+      if (!getCastToBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, castTo_);
       }
       unknownFields.writeTo(output);
     }
@@ -556,6 +634,9 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941310, sensitive_);
       }
+      if (!getCastToBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, castTo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -593,6 +674,8 @@ public final class Options {
           != other.getWriteOnly()) return false;
       if (getSensitive()
           != other.getSensitive()) return false;
+      if (!getCastTo()
+          .equals(other.getCastTo())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -635,6 +718,8 @@ public final class Options {
       hash = (37 * hash) + SENSITIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSensitive());
+      hash = (37 * hash) + CAST_TO_FIELD_NUMBER;
+      hash = (53 * hash) + getCastTo().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -790,6 +875,8 @@ public final class Options {
 
         sensitive_ = false;
 
+        castTo_ = "";
+
         return this;
       }
 
@@ -827,6 +914,7 @@ public final class Options {
         result.forceNew_ = forceNew_;
         result.writeOnly_ = writeOnly_;
         result.sensitive_ = sensitive_;
+        result.castTo_ = castTo_;
         onBuilt();
         return result;
       }
@@ -909,6 +997,10 @@ public final class Options {
         }
         if (other.getSensitive() != false) {
           setSensitive(other.getSensitive());
+        }
+        if (!other.getCastTo().isEmpty()) {
+          castTo_ = other.castTo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1426,6 +1518,107 @@ public final class Options {
       public Builder clearSensitive() {
         
         sensitive_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object castTo_ = "";
+      /**
+       * <pre>
+       * cast this field, without checking the cast is valid, to the given server type 
+       * on conversion
+       * </pre>
+       *
+       * <code>string cast_to = 1941311;</code>
+       * @return The castTo.
+       */
+      public java.lang.String getCastTo() {
+        java.lang.Object ref = castTo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          castTo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cast this field, without checking the cast is valid, to the given server type 
+       * on conversion
+       * </pre>
+       *
+       * <code>string cast_to = 1941311;</code>
+       * @return The bytes for castTo.
+       */
+      public com.google.protobuf.ByteString
+          getCastToBytes() {
+        java.lang.Object ref = castTo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          castTo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * cast this field, without checking the cast is valid, to the given server type 
+       * on conversion
+       * </pre>
+       *
+       * <code>string cast_to = 1941311;</code>
+       * @param value The castTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCastTo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        castTo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cast this field, without checking the cast is valid, to the given server type 
+       * on conversion
+       * </pre>
+       *
+       * <code>string cast_to = 1941311;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCastTo() {
+        
+        castTo_ = getDefaultInstance().getCastTo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * cast this field, without checking the cast is valid, to the given server type 
+       * on conversion
+       * </pre>
+       *
+       * <code>string cast_to = 1941311;</code>
+       * @param value The bytes for castTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCastToBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        castTo_ = value;
         onChanged();
         return this;
       }
@@ -6307,36 +6500,38 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"\370\001\n\014FieldOptions\022\016\n\004name\030\264" +
+      "criptor.proto\"\213\002\n\014FieldOptions\022\016\n\004name\030\264" +
       "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose" +
       "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(" +
       "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t" +
       "\022\022\n\010sdk_only\030\272\276v \001(\010\022\022\n\010computed\030\273\276v \001(\010" +
       "\022\023\n\tforce_new\030\274\276v \001(\010\022\024\n\nwrite_only\030\275\276v " +
-      "\001(\010\022\023\n\tsensitive\030\276\276v \001(\010\"\307\001\n\016MessageOpti" +
-      "ons\022\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265" +
-      "\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field" +
-      "\030\267\276v \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1." +
-      "TerraformDocs\0223\n\006custom\030\271\276v \001(\0132!.v1.Cus" +
-      "tomPorcelainMessageOptions\"\266\001\n\035CustomPor" +
-      "celainMessageOptions\022\023\n\tconverter\030\275\276v \001(" +
-      "\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_p" +
-      "orcelain_type\030\277\276v \001(\t\022\"\n\030terraform_porce" +
-      "lain_type\030\300\276v \001(\t\022 \n\026openapi_porcelain_t" +
-      "ype\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource" +
-      "_example_path\030\264\276v \001(\t\022\"\n\030data_source_exa" +
-      "mple_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nmod" +
-      "el_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v \003(\t" +
-      "\"%\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t:" +
-      "H\n\rfield_options\022\035.google.protobuf.Field" +
-      "Options\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017mes" +
-      "sage_options\022\037.google.protobuf.MessageOp" +
-      "tions\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\rone" +
-      "of_options\022\035.google.protobuf.OneofOption" +
-      "s\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017service_o" +
-      "ptions\022\037.google.protobuf.ServiceOptions\030" +
-      "\231\277v \001(\0132\022.v1.ServiceOptionsB\036\n\034com.stron" +
-      "gdm.api.v1.plumbingb\006proto3"
+      "\001(\010\022\023\n\tsensitive\030\276\276v \001(\010\022\021\n\007cast_to\030\277\276v " +
+      "\001(\t\"\307\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v" +
+      " \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001" +
+      "(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform" +
+      "_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n\006cust" +
+      "om\030\271\276v \001(\0132!.v1.CustomPorcelainMessageOp" +
+      "tions\"\266\001\n\035CustomPorcelainMessageOptions\022" +
+      "\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_typ" +
+      "e\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t" +
+      "\022\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022 \n\026" +
+      "openapi_porcelain_type\030\301\276v \001(\t\"T\n\rTerraf" +
+      "ormDocs\022\037\n\025resource_example_path\030\264\276v \001(\t" +
+      "\022\"\n\030data_source_example_path\030\265\276v \001(\t\"=\n\014" +
+      "OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\rco" +
+      "mmon_fields\030\205\277v \003(\t\"%\n\016ServiceOptions\022\023\n" +
+      "\tmain_noun\030\230\277v \001(\t:H\n\rfield_options\022\035.go" +
+      "ogle.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1." +
+      "FieldOptions:N\n\017message_options\022\037.google" +
+      ".protobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Me" +
+      "ssageOptions:H\n\roneof_options\022\035.google.p" +
+      "rotobuf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofO" +
+      "ptions:N\n\017service_options\022\037.google.proto" +
+      "buf.ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceO" +
+      "ptionsBR\n\034com.strongdm.api.v1.plumbingZ2" +
+      "github.com/strongdm/strongdm-sdk-go/inte" +
+      "rnal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6348,7 +6543,7 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", });
+        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CastTo", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable = new

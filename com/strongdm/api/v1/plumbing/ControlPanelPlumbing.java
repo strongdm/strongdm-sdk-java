@@ -1888,9 +1888,10 @@ public final class ControlPanelPlumbing {
       "trolPanel\022\212\001\n\021GetSSHCAPublicKey\022(.v1.Con" +
       "trolPanelGetSSHCAPublicKeyRequest\032).v1.C" +
       "ontrolPanelGetSSHCAPublicKeyResponse\" \202\323" +
-      "\344\223\002\032\022\030/v1/control_panel/ssh/caB4\n\034com.st" +
+      "\344\223\002\032\022\030/v1/control_panel/ssh/caBh\n\034com.st" +
       "rongdm.api.v1.plumbingB\024ControlPanelPlum" +
-      "bingb\006proto3"
+      "bingZ2github.com/strongdm/strongdm-sdk-g" +
+      "o/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

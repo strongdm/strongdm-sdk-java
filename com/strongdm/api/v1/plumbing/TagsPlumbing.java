@@ -1567,8 +1567,9 @@ public final class TagsPlumbing {
       "\200\001\352\363\263\007\004tags\362\363\263\007\004Tags\372\363\263\007\035java.util.Map<S" +
       "tring, String>\202\364\263\007\007TypeMap\212\364\263\007;{\"type\":\"" +
       "object\", \"additionalProperties\":{\"type\":" +
-      "\"string\"}}B,\n\034com.strongdm.api.v1.plumbi" +
-      "ngB\014TagsPlumbingb\006proto3"
+      "\"string\"}}B`\n\034com.strongdm.api.v1.plumbi" +
+      "ngB\014TagsPlumbingZ2github.com/strongdm/st" +
+      "rongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

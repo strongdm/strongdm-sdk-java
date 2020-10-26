@@ -9465,8 +9465,10 @@ public final class AccountAttachmentsPlumbing {
       " .v1.AccountAttachmentListRequest\032!.v1.A" +
       "ccountAttachmentListResponse\"\037\202\323\344\223\002\031\022\027/v" +
       "1/account_attachments\032\033\312\371\263\007\026\302\371\263\007\021Account" +
-      "AttachmentB:\n\034com.strongdm.api.v1.plumbi" +
-      "ngB\032AccountAttachmentsPlumbingb\006proto3"
+      "AttachmentBn\n\034com.strongdm.api.v1.plumbi" +
+      "ngB\032AccountAttachmentsPlumbingZ2github.c" +
+      "om/strongdm/strongdm-sdk-go/internal/v1;" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
