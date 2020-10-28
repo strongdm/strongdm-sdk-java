@@ -126,7 +126,7 @@ public class Client {
 
   private final SecretStores secretStores;
 
-  // SecretStores are ...
+  // SecretStores are servers where resource secrets (passwords, keys) are stored.
   public SecretStores secretStores() {
     return this.secretStores;
   }

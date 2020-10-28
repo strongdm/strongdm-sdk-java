@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// SecretStores are ...
+// SecretStores are servers where resource secrets (passwords, keys) are stored.
 public class SecretStores {
   private final SecretStoresGrpc.SecretStoresBlockingStub stub;
   private final Client parent;

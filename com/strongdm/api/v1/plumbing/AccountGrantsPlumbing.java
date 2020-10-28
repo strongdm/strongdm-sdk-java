@@ -9988,7 +9988,7 @@ public final class AccountGrantsPlumbing {
       "2\030.v1.ListResponseMetadata\0224\n\016account_gr" +
       "ants\030\002 \003(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001" +
       "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001\"\222\004\n\014AccountGrant\022,\n\002id\030\001" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001\"\226\004\n\014AccountGrant\022,\n\002id\030\001" +
       " \001(\tB \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nPermission\022D" +
       "\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Datasourc" +
       "eID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0227\n\naccount_" +
@@ -9996,29 +9996,29 @@ public final class AccountGrantsPlumbing {
       "\004User\022H\n\nstart_from\030\004 \001(\0132\032.google.proto" +
       "buf.TimestampB\030\362\370\263\007\023\242\363\263\007\tStartFrom\260\363\263\007\001\022" +
       "J\n\013valid_until\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestampB\031\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:\276\001\372\370" +
-      "\263\007r\242\363\263\007\nPermission\250\363\263\007\001\302\363\263\007Y\242\363\263\007&tf_exam" +
-      "ples/account_grant_resource.txt\252\363\263\007)tf_e" +
-      "xamples/account_grant_data_source.txt\222AD" +
-      "2B\022@{ \"id\": \"ag-244\", \"resource_id\": \"rs" +
-      "-111\", \"account_id\":\"a-444\"}2\243\004\n\rAccount" +
-      "Grants\022\317\001\n\006Create\022\035.v1.AccountGrantCreat" +
-      "eRequest\032\036.v1.AccountGrantCreateResponse" +
-      "\"\205\001\202\323\344\223\002\027\"\022/v1/account_grants:\001*\222Ae\"c\n L" +
-      "earn how to make a AccountGrant\022?https:/" +
-      "/www.strongdm.com/docs/api/services/Acco" +
-      "untGrants#Create\022_\n\003Get\022\032.v1.AccountGran" +
-      "tGetRequest\032\033.v1.AccountGrantGetResponse" +
-      "\"\037\202\323\344\223\002\031\022\027/v1/account_grants/{id}\022h\n\006Del" +
-      "ete\022\035.v1.AccountGrantDeleteRequest\032\036.v1." +
-      "AccountGrantDeleteResponse\"\037\202\323\344\223\002\031*\027/v1/" +
-      "account_grants/{id}\022]\n\004List\022\033.v1.Account" +
-      "GrantListRequest\032\034.v1.AccountGrantListRe" +
-      "sponse\"\032\202\323\344\223\002\024\022\022/v1/account_grants\032\026\312\371\263\007" +
-      "\021\302\371\263\007\014AccountGrantBi\n\034com.strongdm.api.v" +
-      "1.plumbingB\025AccountGrantsPlumbingZ2githu" +
-      "b.com/strongdm/strongdm-sdk-go/internal/" +
-      "v1;v1b\006proto3"
+      "imestampB\031\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:\302\001\372\370" +
+      "\263\007v\242\363\263\007\016DatasourceUser\250\363\263\007\001\302\363\263\007Y\242\363\263\007&tf_" +
+      "examples/account_grant_resource.txt\252\363\263\007)" +
+      "tf_examples/account_grant_data_source.tx" +
+      "t\222AD2B\022@{ \"id\": \"ag-244\", \"resource_id\":" +
+      " \"rs-111\", \"account_id\":\"a-444\"}2\243\004\n\rAcc" +
+      "ountGrants\022\317\001\n\006Create\022\035.v1.AccountGrantC" +
+      "reateRequest\032\036.v1.AccountGrantCreateResp" +
+      "onse\"\205\001\202\323\344\223\002\027\"\022/v1/account_grants:\001*\222Ae\"" +
+      "c\n Learn how to make a AccountGrant\022?htt" +
+      "ps://www.strongdm.com/docs/api/services/" +
+      "AccountGrants#Create\022_\n\003Get\022\032.v1.Account" +
+      "GrantGetRequest\032\033.v1.AccountGrantGetResp" +
+      "onse\"\037\202\323\344\223\002\031\022\027/v1/account_grants/{id}\022h\n" +
+      "\006Delete\022\035.v1.AccountGrantDeleteRequest\032\036" +
+      ".v1.AccountGrantDeleteResponse\"\037\202\323\344\223\002\031*\027" +
+      "/v1/account_grants/{id}\022]\n\004List\022\033.v1.Acc" +
+      "ountGrantListRequest\032\034.v1.AccountGrantLi" +
+      "stResponse\"\032\202\323\344\223\002\024\022\022/v1/account_grants\032\026" +
+      "\312\371\263\007\021\302\371\263\007\014AccountGrantBi\n\034com.strongdm.a" +
+      "pi.v1.plumbingB\025AccountGrantsPlumbingZ2g" +
+      "ithub.com/strongdm/strongdm-sdk-go/inter" +
+      "nal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

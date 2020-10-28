@@ -1758,6 +1758,12 @@ public final class Options {
      * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
      */
     com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder getCustomOrBuilder();
+
+    /**
+     * <code>bool private_sdk = 1941306;</code>
+     * @return The privateSdk.
+     */
+    boolean getPrivateSdk();
   }
   /**
    * Protobuf type {@code v1.MessageOptions}
@@ -1852,6 +1858,11 @@ public final class Options {
                 custom_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 15530448: {
+
+              privateSdk_ = input.readBool();
               break;
             }
             default: {
@@ -2038,6 +2049,16 @@ public final class Options {
       return getCustom();
     }
 
+    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941306;
+    private boolean privateSdk_;
+    /**
+     * <code>bool private_sdk = 1941306;</code>
+     * @return The privateSdk.
+     */
+    public boolean getPrivateSdk() {
+      return privateSdk_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2070,6 +2091,9 @@ public final class Options {
       if (custom_ != null) {
         output.writeMessage(1941305, getCustom());
       }
+      if (privateSdk_ != false) {
+        output.writeBool(1941306, privateSdk_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2100,6 +2124,10 @@ public final class Options {
       if (custom_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1941305, getCustom());
+      }
+      if (privateSdk_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941306, privateSdk_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2134,6 +2162,8 @@ public final class Options {
         if (!getCustom()
             .equals(other.getCustom())) return false;
       }
+      if (getPrivateSdk()
+          != other.getPrivateSdk()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2162,6 +2192,9 @@ public final class Options {
         hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
         hash = (53 * hash) + getCustom().hashCode();
       }
+      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPrivateSdk());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2315,6 +2348,8 @@ public final class Options {
           custom_ = null;
           customBuilder_ = null;
         }
+        privateSdk_ = false;
+
         return this;
       }
 
@@ -2355,6 +2390,7 @@ public final class Options {
         } else {
           result.custom_ = customBuilder_.build();
         }
+        result.privateSdk_ = privateSdk_;
         onBuilt();
         return result;
       }
@@ -2422,6 +2458,9 @@ public final class Options {
         }
         if (other.hasCustom()) {
           mergeCustom(other.getCustom());
+        }
+        if (other.getPrivateSdk() != false) {
+          setPrivateSdk(other.getPrivateSdk());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2937,6 +2976,36 @@ public final class Options {
           custom_ = null;
         }
         return customBuilder_;
+      }
+
+      private boolean privateSdk_ ;
+      /**
+       * <code>bool private_sdk = 1941306;</code>
+       * @return The privateSdk.
+       */
+      public boolean getPrivateSdk() {
+        return privateSdk_;
+      }
+      /**
+       * <code>bool private_sdk = 1941306;</code>
+       * @param value The privateSdk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateSdk(boolean value) {
+        
+        privateSdk_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool private_sdk = 1941306;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateSdk() {
+        
+        privateSdk_ = false;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5865,6 +5934,12 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getMainNounBytes();
+
+    /**
+     * <code>bool private_sdk = 1941401;</code>
+     * @return The privateSdk.
+     */
+    boolean getPrivateSdk();
   }
   /**
    * Protobuf type {@code v1.ServiceOptions}
@@ -5916,6 +5991,11 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               mainNoun_ = s;
+              break;
+            }
+            case 15531208: {
+
+              privateSdk_ = input.readBool();
               break;
             }
             default: {
@@ -5986,6 +6066,16 @@ public final class Options {
       }
     }
 
+    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941401;
+    private boolean privateSdk_;
+    /**
+     * <code>bool private_sdk = 1941401;</code>
+     * @return The privateSdk.
+     */
+    public boolean getPrivateSdk() {
+      return privateSdk_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6003,6 +6093,9 @@ public final class Options {
       if (!getMainNounBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941400, mainNoun_);
       }
+      if (privateSdk_ != false) {
+        output.writeBool(1941401, privateSdk_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6014,6 +6107,10 @@ public final class Options {
       size = 0;
       if (!getMainNounBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941400, mainNoun_);
+      }
+      if (privateSdk_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941401, privateSdk_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6032,6 +6129,8 @@ public final class Options {
 
       if (!getMainNoun()
           .equals(other.getMainNoun())) return false;
+      if (getPrivateSdk()
+          != other.getPrivateSdk()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6045,6 +6144,9 @@ public final class Options {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MAIN_NOUN_FIELD_NUMBER;
       hash = (53 * hash) + getMainNoun().hashCode();
+      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPrivateSdk());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6180,6 +6282,8 @@ public final class Options {
         super.clear();
         mainNoun_ = "";
 
+        privateSdk_ = false;
+
         return this;
       }
 
@@ -6207,6 +6311,7 @@ public final class Options {
       public com.strongdm.api.v1.plumbing.Options.ServiceOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.ServiceOptions result = new com.strongdm.api.v1.plumbing.Options.ServiceOptions(this);
         result.mainNoun_ = mainNoun_;
+        result.privateSdk_ = privateSdk_;
         onBuilt();
         return result;
       }
@@ -6258,6 +6363,9 @@ public final class Options {
         if (!other.getMainNoun().isEmpty()) {
           mainNoun_ = other.mainNoun_;
           onChanged();
+        }
+        if (other.getPrivateSdk() != false) {
+          setPrivateSdk(other.getPrivateSdk());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6360,6 +6468,36 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         mainNoun_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean privateSdk_ ;
+      /**
+       * <code>bool private_sdk = 1941401;</code>
+       * @return The privateSdk.
+       */
+      public boolean getPrivateSdk() {
+        return privateSdk_;
+      }
+      /**
+       * <code>bool private_sdk = 1941401;</code>
+       * @param value The privateSdk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateSdk(boolean value) {
+        
+        privateSdk_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool private_sdk = 1941401;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateSdk() {
+        
+        privateSdk_ = false;
         onChanged();
         return this;
       }
@@ -6507,31 +6645,32 @@ public final class Options {
       "\022\022\n\010sdk_only\030\272\276v \001(\010\022\022\n\010computed\030\273\276v \001(\010" +
       "\022\023\n\tforce_new\030\274\276v \001(\010\022\024\n\nwrite_only\030\275\276v " +
       "\001(\010\022\023\n\tsensitive\030\276\276v \001(\010\022\021\n\007cast_to\030\277\276v " +
-      "\001(\t\"\307\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v" +
+      "\001(\t\"\336\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v" +
       " \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001" +
       "(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform" +
       "_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n\006cust" +
       "om\030\271\276v \001(\0132!.v1.CustomPorcelainMessageOp" +
-      "tions\"\266\001\n\035CustomPorcelainMessageOptions\022" +
-      "\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_typ" +
-      "e\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t" +
-      "\022\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022 \n\026" +
-      "openapi_porcelain_type\030\301\276v \001(\t\"T\n\rTerraf" +
-      "ormDocs\022\037\n\025resource_example_path\030\264\276v \001(\t" +
-      "\022\"\n\030data_source_example_path\030\265\276v \001(\t\"=\n\014" +
-      "OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\rco" +
-      "mmon_fields\030\205\277v \003(\t\"%\n\016ServiceOptions\022\023\n" +
-      "\tmain_noun\030\230\277v \001(\t:H\n\rfield_options\022\035.go" +
-      "ogle.protobuf.FieldOptions\030\216\277v \001(\0132\020.v1." +
-      "FieldOptions:N\n\017message_options\022\037.google" +
-      ".protobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Me" +
-      "ssageOptions:H\n\roneof_options\022\035.google.p" +
-      "rotobuf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofO" +
-      "ptions:N\n\017service_options\022\037.google.proto" +
-      "buf.ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceO" +
-      "ptionsBR\n\034com.strongdm.api.v1.plumbingZ2" +
-      "github.com/strongdm/strongdm-sdk-go/inte" +
-      "rnal/v1;v1b\006proto3"
+      "tions\022\025\n\013private_sdk\030\272\276v \001(\010\"\266\001\n\035CustomP" +
+      "orcelainMessageOptions\022\023\n\tconverter\030\275\276v " +
+      "\001(\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java" +
+      "_porcelain_type\030\277\276v \001(\t\022\"\n\030terraform_por" +
+      "celain_type\030\300\276v \001(\t\022 \n\026openapi_porcelain" +
+      "_type\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resour" +
+      "ce_example_path\030\264\276v \001(\t\022\"\n\030data_source_e" +
+      "xample_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nm" +
+      "odel_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v \003" +
+      "(\t\"<\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(" +
+      "\t\022\025\n\013private_sdk\030\231\277v \001(\010:H\n\rfield_option" +
+      "s\022\035.google.protobuf.FieldOptions\030\216\277v \001(\013" +
+      "2\020.v1.FieldOptions:N\n\017message_options\022\037." +
+      "google.protobuf.MessageOptions\030\217\277v \001(\0132\022" +
+      ".v1.MessageOptions:H\n\roneof_options\022\035.go" +
+      "ogle.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1." +
+      "OneofOptions:N\n\017service_options\022\037.google" +
+      ".protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Se" +
+      "rviceOptionsBR\n\034com.strongdm.api.v1.plum" +
+      "bingZ2github.com/strongdm/strongdm-sdk-g" +
+      "o/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6549,7 +6688,7 @@ public final class Options {
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", });
+        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", });
     internal_static_v1_CustomPorcelainMessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable = new
@@ -6573,7 +6712,7 @@ public final class Options {
     internal_static_v1_ServiceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ServiceOptions_descriptor,
-        new java.lang.String[] { "MainNoun", });
+        new java.lang.String[] { "MainNoun", "PrivateSdk", });
     fieldOptions.internalInit(descriptor.getExtensions().get(0));
     messageOptions.internalInit(descriptor.getExtensions().get(1));
     oneofOptions.internalInit(descriptor.getExtensions().get(2));

@@ -31,7 +31,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * SecretStores are ...
+ * SecretStores are servers where resource secrets (passwords, keys) are stored.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -224,7 +224,7 @@ public final class SecretStoresGrpc {
 
   /**
    * <pre>
-   * SecretStores are ...
+   * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
   public static abstract class SecretStoresImplBase implements io.grpc.BindableService {
@@ -319,7 +319,7 @@ public final class SecretStoresGrpc {
 
   /**
    * <pre>
-   * SecretStores are ...
+   * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
   public static final class SecretStoresStub extends io.grpc.stub.AbstractStub<SecretStoresStub> {
@@ -393,7 +393,7 @@ public final class SecretStoresGrpc {
 
   /**
    * <pre>
-   * SecretStores are ...
+   * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
   public static final class SecretStoresBlockingStub extends io.grpc.stub.AbstractStub<SecretStoresBlockingStub> {
@@ -462,7 +462,7 @@ public final class SecretStoresGrpc {
 
   /**
    * <pre>
-   * SecretStores are ...
+   * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
   public static final class SecretStoresFutureStub extends io.grpc.stub.AbstractStub<SecretStoresFutureStub> {
