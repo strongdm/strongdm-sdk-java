@@ -45,6 +45,37 @@ public final class AccessRulesGrpc {
   public static final String SERVICE_NAME = "v1.AccessRules";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest,
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse> getPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Plan",
+      requestType = com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.class,
+      responseType = com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest,
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse> getPlanMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse> getPlanMethod;
+    if ((getPlanMethod = AccessRulesGrpc.getPlanMethod) == null) {
+      synchronized (AccessRulesGrpc.class) {
+        if ((getPlanMethod = AccessRulesGrpc.getPlanMethod) == null) {
+          AccessRulesGrpc.getPlanMethod = getPlanMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Plan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccessRulesMethodDescriptorSupplier("Plan"))
+              .build();
+        }
+      }
+    }
+    return getPlanMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleCreateRequest,
       com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleCreateResponse> getCreateMethod;
 
@@ -107,6 +138,37 @@ public final class AccessRulesGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest,
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.class,
+      responseType = com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest,
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse> getUpdateMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse> getUpdateMethod;
+    if ((getUpdateMethod = AccessRulesGrpc.getUpdateMethod) == null) {
+      synchronized (AccessRulesGrpc.class) {
+        if ((getUpdateMethod = AccessRulesGrpc.getUpdateMethod) == null) {
+          AccessRulesGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccessRulesMethodDescriptorSupplier("Update"))
+              .build();
+        }
+      }
+    }
+    return getUpdateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteRequest,
       com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteResponse> getDeleteMethod;
 
@@ -136,6 +198,37 @@ public final class AccessRulesGrpc {
       }
     }
     return getDeleteMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest,
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.class,
+      responseType = com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest,
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse> getListMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse> getListMethod;
+    if ((getListMethod = AccessRulesGrpc.getListMethod) == null) {
+      synchronized (AccessRulesGrpc.class) {
+        if ((getListMethod = AccessRulesGrpc.getListMethod) == null) {
+          AccessRulesGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccessRulesMethodDescriptorSupplier("List"))
+              .build();
+        }
+      }
+    }
+    return getListMethod;
   }
 
   /**
@@ -171,6 +264,16 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Plan registers a new AccessRule.
+     * </pre>
+     */
+    public void plan(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create registers a new AccessRule.
      * </pre>
      */
@@ -191,6 +294,16 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Update patches a AccessRule by ID.
+     * </pre>
+     */
+    public void update(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Delete removes a AccessRule by ID.
      * </pre>
      */
@@ -199,8 +312,25 @@ public final class AccessRulesGrpc {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * List gets a list of Access Rules matching a given set of criteria.
+     * </pre>
+     */
+    public void list(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getPlanMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest,
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse>(
+                  this, METHODID_PLAN)))
           .addMethod(
             getCreateMethod(),
             asyncUnaryCall(
@@ -216,12 +346,26 @@ public final class AccessRulesGrpc {
                 com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleGetResponse>(
                   this, METHODID_GET)))
           .addMethod(
+            getUpdateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest,
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse>(
+                  this, METHODID_UPDATE)))
+          .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteRequest,
                 com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteResponse>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getListMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest,
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse>(
+                  this, METHODID_LIST)))
           .build();
     }
   }
@@ -250,6 +394,17 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Plan registers a new AccessRule.
+     * </pre>
+     */
+    public void plan(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create registers a new AccessRule.
      * </pre>
      */
@@ -272,6 +427,17 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Update patches a AccessRule by ID.
+     * </pre>
+     */
+    public void update(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Delete removes a AccessRule by ID.
      * </pre>
      */
@@ -279,6 +445,17 @@ public final class AccessRulesGrpc {
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List gets a list of Access Rules matching a given set of criteria.
+     * </pre>
+     */
+    public void list(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -306,6 +483,16 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Plan registers a new AccessRule.
+     * </pre>
+     */
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse plan(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Create registers a new AccessRule.
      * </pre>
      */
@@ -326,12 +513,32 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Update patches a AccessRule by ID.
+     * </pre>
+     */
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse update(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Delete removes a AccessRule by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteResponse delete(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List gets a list of Access Rules matching a given set of criteria.
+     * </pre>
+     */
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse list(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
@@ -359,6 +566,17 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Plan registers a new AccessRule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse> plan(
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Create registers a new AccessRule.
      * </pre>
      */
@@ -381,6 +599,17 @@ public final class AccessRulesGrpc {
 
     /**
      * <pre>
+     * Update patches a AccessRule by ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse> update(
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Delete removes a AccessRule by ID.
      * </pre>
      */
@@ -389,11 +618,25 @@ public final class AccessRulesGrpc {
       return futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * List gets a list of Access Rules matching a given set of criteria.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse> list(
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_CREATE = 0;
-  private static final int METHODID_GET = 1;
-  private static final int METHODID_DELETE = 2;
+  private static final int METHODID_PLAN = 0;
+  private static final int METHODID_CREATE = 1;
+  private static final int METHODID_GET = 2;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_LIST = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -412,6 +655,10 @@ public final class AccessRulesGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_PLAN:
+          serviceImpl.plan((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse>) responseObserver);
+          break;
         case METHODID_CREATE:
           serviceImpl.create((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleCreateRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleCreateResponse>) responseObserver);
@@ -420,9 +667,17 @@ public final class AccessRulesGrpc {
           serviceImpl.get((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleGetRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleGetResponse>) responseObserver);
           break;
+        case METHODID_UPDATE:
+          serviceImpl.update((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse>) responseObserver);
+          break;
         case METHODID_DELETE:
           serviceImpl.delete((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleDeleteResponse>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -485,9 +740,12 @@ public final class AccessRulesGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AccessRulesFileDescriptorSupplier())
+              .addMethod(getPlanMethod())
               .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
+              .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getListMethod())
               .build();
         }
       }

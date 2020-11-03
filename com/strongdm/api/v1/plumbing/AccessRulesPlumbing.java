@@ -93,7 +93,7 @@ public final class AccessRulesPlumbing {
    *
    * Protobuf type {@code v1.AccessRuleCreateRequest}
    */
-  public  static final class AccessRuleCreateRequest extends
+  public static final class AccessRuleCreateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AccessRuleCreateRequest)
       AccessRuleCreateRequestOrBuilder {
@@ -203,6 +203,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
+    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -214,6 +215,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      * @return The meta.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -224,6 +226,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.CreateRequestMetadata meta = 1;</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -238,6 +241,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the accessRule field is set.
      */
+    @java.lang.Override
     public boolean hasAccessRule() {
       return accessRule_ != null;
     }
@@ -249,6 +253,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      * @return The accessRule.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
       return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
     }
@@ -259,6 +264,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
       return getAccessRule();
     }
@@ -1066,7 +1072,7 @@ public final class AccessRulesPlumbing {
    *
    * Protobuf type {@code v1.AccessRuleCreateResponse}
    */
-  public  static final class AccessRuleCreateResponse extends
+  public static final class AccessRuleCreateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AccessRuleCreateResponse)
       AccessRuleCreateResponseOrBuilder {
@@ -1189,6 +1195,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
+    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -1200,6 +1207,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -1210,6 +1218,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -1224,6 +1233,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the accessRule field is set.
      */
+    @java.lang.Override
     public boolean hasAccessRule() {
       return accessRule_ != null;
     }
@@ -1235,6 +1245,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      * @return The accessRule.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
       return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
     }
@@ -1245,6 +1256,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
       return getAccessRule();
     }
@@ -1259,6 +1271,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
+    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -1270,6 +1283,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -1280,6 +1294,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -2238,7 +2253,7 @@ public final class AccessRulesPlumbing {
    *
    * Protobuf type {@code v1.AccessRuleGetRequest}
    */
-  public  static final class AccessRuleGetRequest extends
+  public static final class AccessRuleGetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AccessRuleGetRequest)
       AccessRuleGetRequestOrBuilder {
@@ -2342,6 +2357,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
+    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -2353,6 +2369,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      * @return The meta.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -2363,6 +2380,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.GetRequestMetadata meta = 1;</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -2377,6 +2395,7 @@ public final class AccessRulesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -2397,6 +2416,7 @@ public final class AccessRulesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -3142,7 +3162,7 @@ public final class AccessRulesPlumbing {
    *
    * Protobuf type {@code v1.AccessRuleGetResponse}
    */
-  public  static final class AccessRuleGetResponse extends
+  public static final class AccessRuleGetResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AccessRuleGetResponse)
       AccessRuleGetResponseOrBuilder {
@@ -3265,6 +3285,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
+    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -3276,6 +3297,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.GetResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -3286,6 +3308,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.GetResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.GetResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -3300,6 +3323,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the accessRule field is set.
      */
+    @java.lang.Override
     public boolean hasAccessRule() {
       return accessRule_ != null;
     }
@@ -3311,6 +3335,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      * @return The accessRule.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
       return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
     }
@@ -3321,6 +3346,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
       return getAccessRule();
     }
@@ -3335,6 +3361,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
+    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -3346,6 +3373,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -3356,6 +3384,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -4256,6 +4285,2381 @@ public final class AccessRulesPlumbing {
 
   }
 
+  public interface AccessRuleUpdateRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AccessRuleUpdateRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The unique identifier of the access rule to update. If an ID is already
+     * specified in the `access_rule` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The unique identifier of the access rule to update. If an ID is already
+     * specified in the `access_rule` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Parameters to overwrite the specified access rule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRule field is set.
+     */
+    boolean hasAccessRule();
+    /**
+     * <pre>
+     * Parameters to overwrite the specified access rule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+     * @return The accessRule.
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule();
+    /**
+     * <pre>
+     * Parameters to overwrite the specified access rule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder();
+  }
+  /**
+   * <pre>
+   * AccessRuleUpdateRequest identifies an Access Rule by ID and provides fields
+   * to update on that Access Rule record.
+   * </pre>
+   *
+   * Protobuf type {@code v1.AccessRuleUpdateRequest}
+   */
+  public static final class AccessRuleUpdateRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AccessRuleUpdateRequest)
+      AccessRuleUpdateRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessRuleUpdateRequest.newBuilder() to construct.
+    private AccessRuleUpdateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessRuleUpdateRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessRuleUpdateRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessRuleUpdateRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder subBuilder = null;
+              if (accessRule_ != null) {
+                subBuilder = accessRule_.toBuilder();
+              }
+              accessRule_ = input.readMessage(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessRule_);
+                accessRule_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The unique identifier of the access rule to update. If an ID is already
+     * specified in the `access_rule` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier of the access rule to update. If an ID is already
+     * specified in the `access_rule` field, this field is not required. If an ID is
+     * specified in both places, they must match.
+     * </pre>
+     *
+     * <code>string id = 2;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_RULE_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule accessRule_;
+    /**
+     * <pre>
+     * Parameters to overwrite the specified access rule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRule field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessRule() {
+      return accessRule_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters to overwrite the specified access rule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+     * @return The accessRule.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
+      return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+    }
+    /**
+     * <pre>
+     * Parameters to overwrite the specified access rule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
+      return getAccessRule();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
+      }
+      if (accessRule_ != null) {
+        output.writeMessage(3, getAccessRule());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
+      }
+      if (accessRule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAccessRule());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest other = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (hasAccessRule() != other.hasAccessRule()) return false;
+      if (hasAccessRule()) {
+        if (!getAccessRule()
+            .equals(other.getAccessRule())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      if (hasAccessRule()) {
+        hash = (37 * hash) + ACCESS_RULE_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessRule().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccessRuleUpdateRequest identifies an Access Rule by ID and provides fields
+     * to update on that Access Rule record.
+     * </pre>
+     *
+     * Protobuf type {@code v1.AccessRuleUpdateRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AccessRuleUpdateRequest)
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        id_ = "";
+
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = null;
+        } else {
+          accessRule_ = null;
+          accessRuleBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest build() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest buildPartial() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest result = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.id_ = id_;
+        if (accessRuleBuilder_ == null) {
+          result.accessRule_ = accessRule_;
+        } else {
+          result.accessRule_ = accessRuleBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest other) {
+        if (other == com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.hasAccessRule()) {
+          mergeAccessRule(other.getAccessRule());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The unique identifier of the access rule to update. If an ID is already
+       * specified in the `access_rule` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the access rule to update. If an ID is already
+       * specified in the `access_rule` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the access rule to update. If an ID is already
+       * specified in the `access_rule` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the access rule to update. If an ID is already
+       * specified in the `access_rule` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the access rule to update. If an ID is already
+       * specified in the `access_rule` field, this field is not required. If an ID is
+       * specified in both places, they must match.
+       * </pre>
+       *
+       * <code>string id = 2;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule accessRule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> accessRuleBuilder_;
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the accessRule field is set.
+       */
+      public boolean hasAccessRule() {
+        return accessRuleBuilder_ != null || accessRule_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       * @return The accessRule.
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
+        if (accessRuleBuilder_ == null) {
+          return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+        } else {
+          return accessRuleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRule(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRuleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRule_ = value;
+          onChanged();
+        } else {
+          accessRuleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRule(
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder builderForValue) {
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessRuleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAccessRule(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRuleBuilder_ == null) {
+          if (accessRule_ != null) {
+            accessRule_ =
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.newBuilder(accessRule_).mergeFrom(value).buildPartial();
+          } else {
+            accessRule_ = value;
+          }
+          onChanged();
+        } else {
+          accessRuleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAccessRule() {
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = null;
+          onChanged();
+        } else {
+          accessRule_ = null;
+          accessRuleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder getAccessRuleBuilder() {
+        
+        onChanged();
+        return getAccessRuleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
+        if (accessRuleBuilder_ != null) {
+          return accessRuleBuilder_.getMessageOrBuilder();
+        } else {
+          return accessRule_ == null ?
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to overwrite the specified access rule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> 
+          getAccessRuleFieldBuilder() {
+        if (accessRuleBuilder_ == null) {
+          accessRuleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder>(
+                  getAccessRule(),
+                  getParentForChildren(),
+                  isClean());
+          accessRule_ = null;
+        }
+        return accessRuleBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AccessRuleUpdateRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AccessRuleUpdateRequest)
+    private static final com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest();
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessRuleUpdateRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AccessRuleUpdateRequest>() {
+      @java.lang.Override
+      public AccessRuleUpdateRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessRuleUpdateRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessRuleUpdateRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessRuleUpdateRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccessRuleUpdateResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AccessRuleUpdateResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * The updated AccessRule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRule field is set.
+     */
+    boolean hasAccessRule();
+    /**
+     * <pre>
+     * The updated AccessRule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return The accessRule.
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule();
+    /**
+     * <pre>
+     * The updated AccessRule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * AccessRuleUpdateResponse returns the fields of an Access Rule after it has
+   * been updated by a AccessRuleUpdateRequest.
+   * </pre>
+   *
+   * Protobuf type {@code v1.AccessRuleUpdateResponse}
+   */
+  public static final class AccessRuleUpdateResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AccessRuleUpdateResponse)
+      AccessRuleUpdateResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessRuleUpdateResponse.newBuilder() to construct.
+    private AccessRuleUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessRuleUpdateResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessRuleUpdateResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessRuleUpdateResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder subBuilder = null;
+              if (accessRule_ != null) {
+                subBuilder = accessRule_.toBuilder();
+              }
+              accessRule_ = input.readMessage(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessRule_);
+                accessRule_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ACCESS_RULE_FIELD_NUMBER = 2;
+    private com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule accessRule_;
+    /**
+     * <pre>
+     * The updated AccessRule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRule field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessRule() {
+      return accessRule_ != null;
+    }
+    /**
+     * <pre>
+     * The updated AccessRule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return The accessRule.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
+      return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+    }
+    /**
+     * <pre>
+     * The updated AccessRule.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
+      return getAccessRule();
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (accessRule_ != null) {
+        output.writeMessage(2, getAccessRule());
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (accessRule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAccessRule());
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse other = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasAccessRule() != other.hasAccessRule()) return false;
+      if (hasAccessRule()) {
+        if (!getAccessRule()
+            .equals(other.getAccessRule())) return false;
+      }
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasAccessRule()) {
+        hash = (37 * hash) + ACCESS_RULE_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessRule().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccessRuleUpdateResponse returns the fields of an Access Rule after it has
+     * been updated by a AccessRuleUpdateRequest.
+     * </pre>
+     *
+     * Protobuf type {@code v1.AccessRuleUpdateResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AccessRuleUpdateResponse)
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = null;
+        } else {
+          accessRule_ = null;
+          accessRuleBuilder_ = null;
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleUpdateResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse build() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse buildPartial() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse result = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (accessRuleBuilder_ == null) {
+          result.accessRule_ = accessRule_;
+        } else {
+          result.accessRule_ = accessRuleBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse other) {
+        if (other == com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasAccessRule()) {
+          mergeAccessRule(other.getAccessRule());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.UpdateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.UpdateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule accessRule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> accessRuleBuilder_;
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the accessRule field is set.
+       */
+      public boolean hasAccessRule() {
+        return accessRuleBuilder_ != null || accessRule_ != null;
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       * @return The accessRule.
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
+        if (accessRuleBuilder_ == null) {
+          return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+        } else {
+          return accessRuleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRule(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRuleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRule_ = value;
+          onChanged();
+        } else {
+          accessRuleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRule(
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder builderForValue) {
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessRuleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAccessRule(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRuleBuilder_ == null) {
+          if (accessRule_ != null) {
+            accessRule_ =
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.newBuilder(accessRule_).mergeFrom(value).buildPartial();
+          } else {
+            accessRule_ = value;
+          }
+          onChanged();
+        } else {
+          accessRuleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAccessRule() {
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = null;
+          onChanged();
+        } else {
+          accessRule_ = null;
+          accessRuleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder getAccessRuleBuilder() {
+        
+        onChanged();
+        return getAccessRuleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
+        if (accessRuleBuilder_ != null) {
+          return accessRuleBuilder_.getMessageOrBuilder();
+        } else {
+          return accessRule_ == null ?
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+        }
+      }
+      /**
+       * <pre>
+       * The updated AccessRule.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> 
+          getAccessRuleFieldBuilder() {
+        if (accessRuleBuilder_ == null) {
+          accessRuleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder>(
+                  getAccessRule(),
+                  getParentForChildren(),
+                  isClean());
+          accessRule_ = null;
+        }
+        return accessRuleBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AccessRuleUpdateResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AccessRuleUpdateResponse)
+    private static final com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse();
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessRuleUpdateResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AccessRuleUpdateResponse>() {
+      @java.lang.Override
+      public AccessRuleUpdateResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessRuleUpdateResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessRuleUpdateResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessRuleUpdateResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleUpdateResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AccessRuleDeleteRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.AccessRuleDeleteRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -4314,7 +6718,7 @@ public final class AccessRulesPlumbing {
    *
    * Protobuf type {@code v1.AccessRuleDeleteRequest}
    */
-  public  static final class AccessRuleDeleteRequest extends
+  public static final class AccessRuleDeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AccessRuleDeleteRequest)
       AccessRuleDeleteRequestOrBuilder {
@@ -4418,6 +6822,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return Whether the meta field is set.
      */
+    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -4429,6 +6834,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      * @return The meta.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadata.getDefaultInstance() : meta_;
     }
@@ -4439,6 +6845,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.DeleteRequestMetadata meta = 1;</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteRequestMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -4453,6 +6860,7 @@ public final class AccessRulesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -4473,6 +6881,7 @@ public final class AccessRulesPlumbing {
      * <code>string id = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -5191,7 +7600,7 @@ public final class AccessRulesPlumbing {
    *
    * Protobuf type {@code v1.AccessRuleDeleteResponse}
    */
-  public  static final class AccessRuleDeleteResponse extends
+  public static final class AccessRuleDeleteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AccessRuleDeleteResponse)
       AccessRuleDeleteResponseOrBuilder {
@@ -5301,6 +7710,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the meta field is set.
      */
+    @java.lang.Override
     public boolean hasMeta() {
       return meta_ != null;
     }
@@ -5312,6 +7722,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      * @return The meta.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata getMeta() {
       return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadata.getDefaultInstance() : meta_;
     }
@@ -5322,6 +7733,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.DeleteResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.DeleteResponseMetadataOrBuilder getMetaOrBuilder() {
       return getMeta();
     }
@@ -5336,6 +7748,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the rateLimit field is set.
      */
+    @java.lang.Override
     public boolean hasRateLimit() {
       return rateLimit_ != null;
     }
@@ -5347,6 +7760,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      * @return The rateLimit.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
       return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
     }
@@ -5357,6 +7771,7 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.RateLimitMetadata rate_limit = 2 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
       return getRateLimit();
     }
@@ -6072,6 +8487,2322 @@ public final class AccessRulesPlumbing {
 
   }
 
+  public interface AccessRuleListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AccessRuleListRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * <pre>
+   * AccessRuleListRequest specifies criteria for retrieving a list of AccessRules.
+   * </pre>
+   *
+   * Protobuf type {@code v1.AccessRuleListRequest}
+   */
+  public static final class AccessRuleListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AccessRuleListRequest)
+      AccessRuleListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessRuleListRequest.newBuilder() to construct.
+    private AccessRuleListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessRuleListRequest() {
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessRuleListRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessRuleListRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!getFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!getFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest other = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccessRuleListRequest specifies criteria for retrieving a list of AccessRules.
+     * </pre>
+     *
+     * Protobuf type {@code v1.AccessRuleListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AccessRuleListRequest)
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest build() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest buildPartial() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest result = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest other) {
+        if (other == com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AccessRuleListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AccessRuleListRequest)
+    private static final com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest();
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessRuleListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AccessRuleListRequest>() {
+      @java.lang.Override
+      public AccessRuleListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessRuleListRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessRuleListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessRuleListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccessRuleListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AccessRuleListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule> 
+        getAccessRulesList();
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRules(int index);
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    int getAccessRulesCount();
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> 
+        getAccessRulesOrBuilderList();
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRulesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * AccessRuleListResponse returns a list of AccessRules that meet the criteria of a
+   * AccessRuleListRequest.
+   * </pre>
+   *
+   * Protobuf type {@code v1.AccessRuleListResponse}
+   */
+  public static final class AccessRuleListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AccessRuleListResponse)
+      AccessRuleListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessRuleListResponse.newBuilder() to construct.
+    private AccessRuleListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessRuleListResponse() {
+      accessRules_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessRuleListResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessRuleListResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                accessRules_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              accessRules_.add(
+                  input.readMessage(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          accessRules_ = java.util.Collections.unmodifiableList(accessRules_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ACCESS_RULES_FIELD_NUMBER = 2;
+    private java.util.List<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule> accessRules_;
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule> getAccessRulesList() {
+      return accessRules_;
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> 
+        getAccessRulesOrBuilderList() {
+      return accessRules_;
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getAccessRulesCount() {
+      return accessRules_.size();
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRules(int index) {
+      return accessRules_.get(index);
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRulesOrBuilder(
+        int index) {
+      return accessRules_.get(index);
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      for (int i = 0; i < accessRules_.size(); i++) {
+        output.writeMessage(2, accessRules_.get(i));
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      for (int i = 0; i < accessRules_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, accessRules_.get(i));
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse other = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getAccessRulesList()
+          .equals(other.getAccessRulesList())) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (getAccessRulesCount() > 0) {
+        hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessRulesList().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccessRuleListResponse returns a list of AccessRules that meet the criteria of a
+     * AccessRuleListRequest.
+     * </pre>
+     *
+     * Protobuf type {@code v1.AccessRuleListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AccessRuleListResponse)
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAccessRulesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (accessRulesBuilder_ == null) {
+          accessRules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          accessRulesBuilder_.clear();
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRuleListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse build() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse buildPartial() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse result = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (accessRulesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            accessRules_ = java.util.Collections.unmodifiableList(accessRules_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.accessRules_ = accessRules_;
+        } else {
+          result.accessRules_ = accessRulesBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse other) {
+        if (other == com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (accessRulesBuilder_ == null) {
+          if (!other.accessRules_.isEmpty()) {
+            if (accessRules_.isEmpty()) {
+              accessRules_ = other.accessRules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAccessRulesIsMutable();
+              accessRules_.addAll(other.accessRules_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accessRules_.isEmpty()) {
+            if (accessRulesBuilder_.isEmpty()) {
+              accessRulesBuilder_.dispose();
+              accessRulesBuilder_ = null;
+              accessRules_ = other.accessRules_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              accessRulesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccessRulesFieldBuilder() : null;
+            } else {
+              accessRulesBuilder_.addAllMessages(other.accessRules_);
+            }
+          }
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.util.List<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule> accessRules_ =
+        java.util.Collections.emptyList();
+      private void ensureAccessRulesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          accessRules_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule>(accessRules_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> accessRulesBuilder_;
+
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule> getAccessRulesList() {
+        if (accessRulesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accessRules_);
+        } else {
+          return accessRulesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public int getAccessRulesCount() {
+        if (accessRulesBuilder_ == null) {
+          return accessRules_.size();
+        } else {
+          return accessRulesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRules(int index) {
+        if (accessRulesBuilder_ == null) {
+          return accessRules_.get(index);
+        } else {
+          return accessRulesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRules(
+          int index, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccessRulesIsMutable();
+          accessRules_.set(index, value);
+          onChanged();
+        } else {
+          accessRulesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRules(
+          int index, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder builderForValue) {
+        if (accessRulesBuilder_ == null) {
+          ensureAccessRulesIsMutable();
+          accessRules_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accessRulesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAccessRules(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccessRulesIsMutable();
+          accessRules_.add(value);
+          onChanged();
+        } else {
+          accessRulesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAccessRules(
+          int index, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRulesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccessRulesIsMutable();
+          accessRules_.add(index, value);
+          onChanged();
+        } else {
+          accessRulesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAccessRules(
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder builderForValue) {
+        if (accessRulesBuilder_ == null) {
+          ensureAccessRulesIsMutable();
+          accessRules_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accessRulesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAccessRules(
+          int index, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder builderForValue) {
+        if (accessRulesBuilder_ == null) {
+          ensureAccessRulesIsMutable();
+          accessRules_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accessRulesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllAccessRules(
+          java.lang.Iterable<? extends com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule> values) {
+        if (accessRulesBuilder_ == null) {
+          ensureAccessRulesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accessRules_);
+          onChanged();
+        } else {
+          accessRulesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAccessRules() {
+        if (accessRulesBuilder_ == null) {
+          accessRules_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          accessRulesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeAccessRules(int index) {
+        if (accessRulesBuilder_ == null) {
+          ensureAccessRulesIsMutable();
+          accessRules_.remove(index);
+          onChanged();
+        } else {
+          accessRulesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder getAccessRulesBuilder(
+          int index) {
+        return getAccessRulesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRulesOrBuilder(
+          int index) {
+        if (accessRulesBuilder_ == null) {
+          return accessRules_.get(index);  } else {
+          return accessRulesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> 
+           getAccessRulesOrBuilderList() {
+        if (accessRulesBuilder_ != null) {
+          return accessRulesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accessRules_);
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder addAccessRulesBuilder() {
+        return getAccessRulesFieldBuilder().addBuilder(
+            com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder addAccessRulesBuilder(
+          int index) {
+        return getAccessRulesFieldBuilder().addBuilder(
+            index, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.AccessRule access_rules = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder> 
+           getAccessRulesBuilderList() {
+        return getAccessRulesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> 
+          getAccessRulesFieldBuilder() {
+        if (accessRulesBuilder_ == null) {
+          accessRulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder>(
+                  accessRules_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accessRules_ = null;
+        }
+        return accessRulesBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AccessRuleListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AccessRuleListResponse)
+    private static final com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse();
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessRuleListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AccessRuleListResponse>() {
+      @java.lang.Override
+      public AccessRuleListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessRuleListResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessRuleListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessRuleListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AccessRuleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.AccessRule)
       com.google.protobuf.MessageOrBuilder {
@@ -6203,6 +10934,17 @@ public final class AccessRulesPlumbing {
      * <code>.v1.Tags tags = 5 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * AffectedResources reports how many resources are actually loaded by
+     * this AccessRule.
+     * </pre>
+     *
+     * <code>int64 affected_resources = 6 [(.v1.field_options) = { ... }</code>
+     * @return The affectedResources.
+     */
+    long getAffectedResources();
   }
   /**
    * <pre>
@@ -6212,7 +10954,7 @@ public final class AccessRulesPlumbing {
    *
    * Protobuf type {@code v1.AccessRule}
    */
-  public  static final class AccessRule extends
+  public static final class AccessRule extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.AccessRule)
       AccessRuleOrBuilder {
@@ -6299,6 +11041,11 @@ public final class AccessRulesPlumbing {
 
               break;
             }
+            case 48: {
+
+              affectedResources_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6344,6 +11091,7 @@ public final class AccessRulesPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -6364,6 +11112,7 @@ public final class AccessRulesPlumbing {
      * <code>string id = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -6388,6 +11137,7 @@ public final class AccessRulesPlumbing {
      * <code>string resource_type = 2 [(.v1.field_options) = { ... }</code>
      * @return The resourceType.
      */
+    @java.lang.Override
     public java.lang.String getResourceType() {
       java.lang.Object ref = resourceType_;
       if (ref instanceof java.lang.String) {
@@ -6408,6 +11158,7 @@ public final class AccessRulesPlumbing {
      * <code>string resource_type = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for resourceType.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResourceTypeBytes() {
       java.lang.Object ref = resourceType_;
@@ -6432,6 +11183,7 @@ public final class AccessRulesPlumbing {
      * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
      * @return The roleId.
      */
+    @java.lang.Override
     public java.lang.String getRoleId() {
       java.lang.Object ref = roleId_;
       if (ref instanceof java.lang.String) {
@@ -6452,6 +11204,7 @@ public final class AccessRulesPlumbing {
      * <code>string role_id = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for roleId.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRoleIdBytes() {
       java.lang.Object ref = roleId_;
@@ -6527,6 +11280,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.Tags tags = 5 [(.v1.field_options) = { ... }</code>
      * @return Whether the tags field is set.
      */
+    @java.lang.Override
     public boolean hasTags() {
       return tags_ != null;
     }
@@ -6538,6 +11292,7 @@ public final class AccessRulesPlumbing {
      * <code>.v1.Tags tags = 5 [(.v1.field_options) = { ... }</code>
      * @return The tags.
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
       return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
     }
@@ -6548,8 +11303,25 @@ public final class AccessRulesPlumbing {
      *
      * <code>.v1.Tags tags = 5 [(.v1.field_options) = { ... }</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int AFFECTED_RESOURCES_FIELD_NUMBER = 6;
+    private long affectedResources_;
+    /**
+     * <pre>
+     * AffectedResources reports how many resources are actually loaded by
+     * this AccessRule.
+     * </pre>
+     *
+     * <code>int64 affected_resources = 6 [(.v1.field_options) = { ... }</code>
+     * @return The affectedResources.
+     */
+    @java.lang.Override
+    public long getAffectedResources() {
+      return affectedResources_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6581,6 +11353,9 @@ public final class AccessRulesPlumbing {
       if (tags_ != null) {
         output.writeMessage(5, getTags());
       }
+      if (affectedResources_ != 0L) {
+        output.writeInt64(6, affectedResources_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6611,6 +11386,10 @@ public final class AccessRulesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getTags());
       }
+      if (affectedResources_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, affectedResources_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6639,6 +11418,8 @@ public final class AccessRulesPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (getAffectedResources()
+          != other.getAffectedResources()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6664,6 +11445,9 @@ public final class AccessRulesPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + AFFECTED_RESOURCES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAffectedResources());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6816,6 +11600,8 @@ public final class AccessRulesPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        affectedResources_ = 0L;
+
         return this;
       }
 
@@ -6856,6 +11642,7 @@ public final class AccessRulesPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.affectedResources_ = affectedResources_;
         onBuilt();
         return result;
       }
@@ -6928,6 +11715,9 @@ public final class AccessRulesPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (other.getAffectedResources() != 0L) {
+          setAffectedResources(other.getAffectedResources());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7547,6 +12337,52 @@ public final class AccessRulesPlumbing {
         }
         return tagsBuilder_;
       }
+
+      private long affectedResources_ ;
+      /**
+       * <pre>
+       * AffectedResources reports how many resources are actually loaded by
+       * this AccessRule.
+       * </pre>
+       *
+       * <code>int64 affected_resources = 6 [(.v1.field_options) = { ... }</code>
+       * @return The affectedResources.
+       */
+      @java.lang.Override
+      public long getAffectedResources() {
+        return affectedResources_;
+      }
+      /**
+       * <pre>
+       * AffectedResources reports how many resources are actually loaded by
+       * this AccessRule.
+       * </pre>
+       *
+       * <code>int64 affected_resources = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The affectedResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAffectedResources(long value) {
+        
+        affectedResources_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AffectedResources reports how many resources are actually loaded by
+       * this AccessRule.
+       * </pre>
+       *
+       * <code>int64 affected_resources = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAffectedResources() {
+        
+        affectedResources_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7600,6 +12436,2003 @@ public final class AccessRulesPlumbing {
 
   }
 
+  public interface AccessRulePlanRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AccessRulePlanRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Parameters to define the new AccessRule plan.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRule field is set.
+     */
+    boolean hasAccessRule();
+    /**
+     * <pre>
+     * Parameters to define the new AccessRule plan.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return The accessRule.
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule();
+    /**
+     * <pre>
+     * Parameters to define the new AccessRule plan.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder();
+  }
+  /**
+   * <pre>
+   * AccessRulePlanRequest specifies parameters for a new access rule.
+   * </pre>
+   *
+   * Protobuf type {@code v1.AccessRulePlanRequest}
+   */
+  public static final class AccessRulePlanRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AccessRulePlanRequest)
+      AccessRulePlanRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessRulePlanRequest.newBuilder() to construct.
+    private AccessRulePlanRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessRulePlanRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessRulePlanRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessRulePlanRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder subBuilder = null;
+              if (accessRule_ != null) {
+                subBuilder = accessRule_.toBuilder();
+              }
+              accessRule_ = input.readMessage(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(accessRule_);
+                accessRule_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int ACCESS_RULE_FIELD_NUMBER = 2;
+    private com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule accessRule_;
+    /**
+     * <pre>
+     * Parameters to define the new AccessRule plan.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return Whether the accessRule field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccessRule() {
+      return accessRule_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters to define the new AccessRule plan.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     * @return The accessRule.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
+      return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+    }
+    /**
+     * <pre>
+     * Parameters to define the new AccessRule plan.
+     * </pre>
+     *
+     * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
+      return getAccessRule();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (accessRule_ != null) {
+        output.writeMessage(2, getAccessRule());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (accessRule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAccessRule());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest other = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (hasAccessRule() != other.hasAccessRule()) return false;
+      if (hasAccessRule()) {
+        if (!getAccessRule()
+            .equals(other.getAccessRule())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (hasAccessRule()) {
+        hash = (37 * hash) + ACCESS_RULE_FIELD_NUMBER;
+        hash = (53 * hash) + getAccessRule().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccessRulePlanRequest specifies parameters for a new access rule.
+     * </pre>
+     *
+     * Protobuf type {@code v1.AccessRulePlanRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AccessRulePlanRequest)
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = null;
+        } else {
+          accessRule_ = null;
+          accessRuleBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest build() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest buildPartial() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest result = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (accessRuleBuilder_ == null) {
+          result.accessRule_ = accessRule_;
+        } else {
+          result.accessRule_ = accessRuleBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest other) {
+        if (other == com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.hasAccessRule()) {
+          mergeAccessRule(other.getAccessRule());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule accessRule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> accessRuleBuilder_;
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       * @return Whether the accessRule field is set.
+       */
+      public boolean hasAccessRule() {
+        return accessRuleBuilder_ != null || accessRule_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       * @return The accessRule.
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule getAccessRule() {
+        if (accessRuleBuilder_ == null) {
+          return accessRule_ == null ? com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+        } else {
+          return accessRuleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRule(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRuleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRule_ = value;
+          onChanged();
+        } else {
+          accessRuleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAccessRule(
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder builderForValue) {
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessRuleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAccessRule(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule value) {
+        if (accessRuleBuilder_ == null) {
+          if (accessRule_ != null) {
+            accessRule_ =
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.newBuilder(accessRule_).mergeFrom(value).buildPartial();
+          } else {
+            accessRule_ = value;
+          }
+          onChanged();
+        } else {
+          accessRuleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAccessRule() {
+        if (accessRuleBuilder_ == null) {
+          accessRule_ = null;
+          onChanged();
+        } else {
+          accessRule_ = null;
+          accessRuleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder getAccessRuleBuilder() {
+        
+        onChanged();
+        return getAccessRuleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder getAccessRuleOrBuilder() {
+        if (accessRuleBuilder_ != null) {
+          return accessRuleBuilder_.getMessageOrBuilder();
+        } else {
+          return accessRule_ == null ?
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.getDefaultInstance() : accessRule_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters to define the new AccessRule plan.
+       * </pre>
+       *
+       * <code>.v1.AccessRule access_rule = 2 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder> 
+          getAccessRuleFieldBuilder() {
+        if (accessRuleBuilder_ == null) {
+          accessRuleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRule.Builder, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRuleOrBuilder>(
+                  getAccessRule(),
+                  getParentForChildren(),
+                  isClean());
+          accessRule_ = null;
+        }
+        return accessRuleBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AccessRulePlanRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AccessRulePlanRequest)
+    private static final com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest();
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessRulePlanRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AccessRulePlanRequest>() {
+      @java.lang.Override
+      public AccessRulePlanRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessRulePlanRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessRulePlanRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessRulePlanRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AccessRulePlanResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AccessRulePlanResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * Count of affected resources.
+     * </pre>
+     *
+     * <code>int64 affected_resources = 2 [(.v1.field_options) = { ... }</code>
+     * @return The affectedResources.
+     */
+    long getAffectedResources();
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * AccessRulePlanResponse reports how the AccessRule would be created in the
+   * system.
+   * </pre>
+   *
+   * Protobuf type {@code v1.AccessRulePlanResponse}
+   */
+  public static final class AccessRulePlanResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AccessRulePlanResponse)
+      AccessRulePlanResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessRulePlanResponse.newBuilder() to construct.
+    private AccessRulePlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessRulePlanResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessRulePlanResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AccessRulePlanResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              affectedResources_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Reserved for future use.
+     * </pre>
+     *
+     * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int AFFECTED_RESOURCES_FIELD_NUMBER = 2;
+    private long affectedResources_;
+    /**
+     * <pre>
+     * Count of affected resources.
+     * </pre>
+     *
+     * <code>int64 affected_resources = 2 [(.v1.field_options) = { ... }</code>
+     * @return The affectedResources.
+     */
+    @java.lang.Override
+    public long getAffectedResources() {
+      return affectedResources_;
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (affectedResources_ != 0L) {
+        output.writeInt64(2, affectedResources_);
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (affectedResources_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, affectedResources_);
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse other = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (getAffectedResources()
+          != other.getAffectedResources()) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + AFFECTED_RESOURCES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAffectedResources());
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccessRulePlanResponse reports how the AccessRule would be created in the
+     * system.
+     * </pre>
+     *
+     * Protobuf type {@code v1.AccessRulePlanResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AccessRulePlanResponse)
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.class, com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        affectedResources_ = 0L;
+
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.internal_static_v1_AccessRulePlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse build() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse buildPartial() {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse result = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.affectedResources_ = affectedResources_;
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse other) {
+        if (other == com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (other.getAffectedResources() != 0L) {
+          setAffectedResources(other.getAffectedResources());
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Reserved for future use.
+       * </pre>
+       *
+       * <code>.v1.CreateResponseMetadata meta = 1 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.CreateResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private long affectedResources_ ;
+      /**
+       * <pre>
+       * Count of affected resources.
+       * </pre>
+       *
+       * <code>int64 affected_resources = 2 [(.v1.field_options) = { ... }</code>
+       * @return The affectedResources.
+       */
+      @java.lang.Override
+      public long getAffectedResources() {
+        return affectedResources_;
+      }
+      /**
+       * <pre>
+       * Count of affected resources.
+       * </pre>
+       *
+       * <code>int64 affected_resources = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The affectedResources to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAffectedResources(long value) {
+        
+        affectedResources_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Count of affected resources.
+       * </pre>
+       *
+       * <code>int64 affected_resources = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAffectedResources() {
+        
+        affectedResources_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AccessRulePlanResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AccessRulePlanResponse)
+    private static final com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse();
+    }
+
+    public static com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessRulePlanResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AccessRulePlanResponse>() {
+      @java.lang.Override
+      public AccessRulePlanResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AccessRulePlanResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessRulePlanResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessRulePlanResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.AccessRulesPlumbing.AccessRulePlanResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccessRuleCreateRequest_descriptor;
   private static final 
@@ -7621,6 +14454,16 @@ public final class AccessRulesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AccessRuleGetResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AccessRuleUpdateRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AccessRuleUpdateRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AccessRuleUpdateResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AccessRuleUpdateResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccessRuleDeleteRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -7631,10 +14474,30 @@ public final class AccessRulesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AccessRuleDeleteResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AccessRuleListRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AccessRuleListRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AccessRuleListResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AccessRuleListResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_AccessRule_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AccessRule_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AccessRulePlanRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AccessRulePlanRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AccessRulePlanResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AccessRulePlanResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7663,36 +14526,72 @@ public final class AccessRulesPlumbing {
       "B\n\362\370\263\007\005\260\363\263\007\001\022/\n\013access_rule\030\002 \001(\0132\016.v1.A" +
       "ccessRuleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(" +
       "\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\024\372\370" +
-      "\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\001\"f\n\027AccessRuleDeleteRe" +
-      "quest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMe" +
-      "tadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263" +
-      "\007\001\"\235\001\n\030AccessRuleDeleteResponse\0224\n\004meta\030" +
-      "\001 \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimit" +
-      "MetadataB\n\362\370\263\007\005\260\363\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263" +
-      "\007\001\"\341\002\n\nAccessRule\022,\n\002id\030\001 \001(\tB \362\370\263\007\033\242\363\263\007" +
-      "\002ID\260\363\263\007\001\312\363\263\007\nAccessRule\0226\n\rresource_type" +
-      "\030\002 \001(\tB\037\362\370\263\007\032\242\363\263\007\013DBTypeAlias\250\363\263\007\001\260\363\263\007\001\022" +
-      "4\n\007role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300" +
-      "\363\263\007\001\312\363\263\007\004Role\022A\n\014resource_ids\030\004 \003(\tB+\362\370\263" +
-      "\007&\242\363\263\007\rDatasourceIDs\260\363\263\007\001\312\363\263\007\nDatasource" +
-      "\022+\n\004tags\030\005 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags" +
-      "\260\363\263\007\001:G\372\370\263\007\031\242\363\263\007\nAccessRule\250\363\263\007\001\320\363\263\007\001\222A&" +
-      "2$\022\"{ \"id\": \"ar-7\", \"dbtype\": \"redis\"}2\265" +
-      "\003\n\013AccessRules\022\306\001\n\006Create\022\033.v1.AccessRul" +
-      "eCreateRequest\032\034.v1.AccessRuleCreateResp" +
-      "onse\"\200\001\202\323\344\223\002\025\"\020/v1/access_rules:\001*\222Ab\"`\n" +
-      "\037Learn how to make an AccessRule\022=https:" +
-      "//www.strongdm.com/docs/api/services/Acc" +
-      "essRules#Create\022Y\n\003Get\022\030.v1.AccessRuleGe" +
-      "tRequest\032\031.v1.AccessRuleGetResponse\"\035\202\323\344" +
-      "\223\002\027\022\025/v1/access_rules/{id}\022b\n\006Delete\022\033.v" +
-      "1.AccessRuleDeleteRequest\032\034.v1.AccessRul" +
-      "eDeleteResponse\"\035\202\323\344\223\002\027*\025/v1/access_rule" +
-      "s/{id}\032\036\312\371\263\007\017\302\371\263\007\nAccessRule\312\371\263\007\005\310\371\263\007\001Bg" +
-      "\n\034com.strongdm.api.v1.plumbingB\023AccessRu" +
-      "lesPlumbingZ2github.com/strongdm/strongd" +
-      "m-sdk-go/internal/v1;v1b\006proto3"
+      "\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\001\"\213\001\n\027AccessRuleUpdateR" +
+      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestM" +
+      "etadata\022\n\n\002id\030\002 \001(\t\022/\n\013access_rule\030\003 \001(\013" +
+      "2\016.v1.AccessRuleB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001" +
+      "\"\316\001\n\030AccessRuleUpdateResponse\0224\n\004meta\030\001 " +
+      "\001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022/\n\013access_rule\030\002 \001(\0132\016.v1.AccessRule" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372" +
+      "\370\263\007\005\320\363\263\007\001\"f\n\027AccessRuleDeleteRequest\022\'\n\004" +
+      "meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n" +
+      "\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\235\001\n\030Ac" +
+      "cessRuleDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v" +
+      "1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\n" +
+      "rate_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB" +
+      "\n\362\370\263\007\005\260\363\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\001\"f\n\025Acc" +
+      "essRuleListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.Li" +
+      "stRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\265\001\n\026AccessRuleListResp" +
+      "onse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMeta" +
+      "data\0220\n\014access_rules\030\002 \003(\0132\016.v1.AccessRu" +
+      "leB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1." +
+      "RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007" +
+      "\001\"\244\003\n\nAccessRule\022,\n\002id\030\001 \001(\tB \362\370\263\007\033\242\363\263\007\002" +
+      "ID\260\363\263\007\001\312\363\263\007\nAccessRule\0226\n\rresource_type\030" +
+      "\002 \001(\tB\037\362\370\263\007\032\242\363\263\007\013DBTypeAlias\250\363\263\007\001\260\363\263\007\001\0224" +
+      "\n\007role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363" +
+      "\263\007\001\312\363\263\007\004Role\022A\n\014resource_ids\030\004 \003(\tB+\362\370\263\007" +
+      "&\242\363\263\007\rDatasourceIDs\260\363\263\007\001\312\363\263\007\nDatasource\022" +
+      "+\n\004tags\030\005 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260" +
+      "\363\263\007\001\022A\n\022affected_resources\030\006 \001(\003B%\362\370\263\007 \242" +
+      "\363\263\007\021AffectedResources\260\363\263\007\001\330\363\263\007\001:G\372\370\263\007\031\242\363" +
+      "\263\007\nAccessRule\250\363\263\007\001\320\363\263\007\001\222A&2$\022\"{ \"id\": \"a" +
+      "r-7\", \"dbtype\": \"redis\"}\"}\n\025AccessRulePl" +
+      "anRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateReque" +
+      "stMetadata\022/\n\013access_rule\030\002 \001(\0132\016.v1.Acc" +
+      "essRuleB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\303\001\n\026Acce" +
+      "ssRulePlanResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cr" +
+      "eateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022&\n\022affe" +
+      "cted_resources\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate" +
+      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:\024\372\370\263\007\005\320\363\263\007\001\372\370\263\007\005\250\363\263\007\0012\273\006\n\013Access" +
+      "Rules\022\303\001\n\004Plan\022\031.v1.AccessRulePlanReques" +
+      "t\032\032.v1.AccessRulePlanResponse\"\203\001\202\323\344\223\002\032\"\025" +
+      "/v1/access_rules/plan:\001*\222A`\"^\n\037Learn how" +
+      " to make an AccessRule\022;https://www.stro" +
+      "ngdm.com/docs/api/services/AccessRules#P" +
+      "lan\022\306\001\n\006Create\022\033.v1.AccessRuleCreateRequ" +
+      "est\032\034.v1.AccessRuleCreateResponse\"\200\001\202\323\344\223" +
+      "\002\025\"\020/v1/access_rules:\001*\222Ab\"`\n\037Learn how " +
+      "to make an AccessRule\022=https://www.stron" +
+      "gdm.com/docs/api/services/AccessRules#Cr" +
+      "eate\022Y\n\003Get\022\030.v1.AccessRuleGetRequest\032\031." +
+      "v1.AccessRuleGetResponse\"\035\202\323\344\223\002\027\022\025/v1/ac" +
+      "cess_rules/{id}\022e\n\006Update\022\033.v1.AccessRul" +
+      "eUpdateRequest\032\034.v1.AccessRuleUpdateResp" +
+      "onse\" \202\323\344\223\002\032\032\025/v1/access_rules/{id}:\001*\022b" +
+      "\n\006Delete\022\033.v1.AccessRuleDeleteRequest\032\034." +
+      "v1.AccessRuleDeleteResponse\"\035\202\323\344\223\002\027*\025/v1" +
+      "/access_rules/{id}\022W\n\004List\022\031.v1.AccessRu" +
+      "leListRequest\032\032.v1.AccessRuleListRespons" +
+      "e\"\030\202\323\344\223\002\022\022\020/v1/access_rules\032\036\312\371\263\007\017\302\371\263\007\nA" +
+      "ccessRule\312\371\263\007\005\310\371\263\007\001Bg\n\034com.strongdm.api." +
+      "v1.plumbingB\023AccessRulesPlumbingZ2github" +
+      ".com/strongdm/strongdm-sdk-go/internal/v" +
+      "1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7727,24 +14626,60 @@ public final class AccessRulesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRuleGetResponse_descriptor,
         new java.lang.String[] { "Meta", "AccessRule", "RateLimit", });
-    internal_static_v1_AccessRuleDeleteRequest_descriptor =
+    internal_static_v1_AccessRuleUpdateRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_AccessRuleUpdateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AccessRuleUpdateRequest_descriptor,
+        new java.lang.String[] { "Meta", "Id", "AccessRule", });
+    internal_static_v1_AccessRuleUpdateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_AccessRuleUpdateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AccessRuleUpdateResponse_descriptor,
+        new java.lang.String[] { "Meta", "AccessRule", "RateLimit", });
+    internal_static_v1_AccessRuleDeleteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_v1_AccessRuleDeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRuleDeleteRequest_descriptor,
         new java.lang.String[] { "Meta", "Id", });
     internal_static_v1_AccessRuleDeleteResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_v1_AccessRuleDeleteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRuleDeleteResponse_descriptor,
         new java.lang.String[] { "Meta", "RateLimit", });
+    internal_static_v1_AccessRuleListRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_v1_AccessRuleListRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AccessRuleListRequest_descriptor,
+        new java.lang.String[] { "Meta", "Filter", });
+    internal_static_v1_AccessRuleListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_v1_AccessRuleListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AccessRuleListResponse_descriptor,
+        new java.lang.String[] { "Meta", "AccessRules", "RateLimit", });
     internal_static_v1_AccessRule_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_v1_AccessRule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccessRule_descriptor,
-        new java.lang.String[] { "Id", "ResourceType", "RoleId", "ResourceIds", "Tags", });
+        new java.lang.String[] { "Id", "ResourceType", "RoleId", "ResourceIds", "Tags", "AffectedResources", });
+    internal_static_v1_AccessRulePlanRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_v1_AccessRulePlanRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AccessRulePlanRequest_descriptor,
+        new java.lang.String[] { "Meta", "AccessRule", });
+    internal_static_v1_AccessRulePlanResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_v1_AccessRulePlanResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AccessRulePlanResponse_descriptor,
+        new java.lang.String[] { "Meta", "AffectedResources", "RateLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

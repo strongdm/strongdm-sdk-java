@@ -65,7 +65,7 @@ public final class TagsPlumbing {
    *
    * Protobuf type {@code v1.Tags}
    */
-  public  static final class Tags extends
+  public static final class Tags extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.Tags)
       TagsOrBuilder {
@@ -184,7 +184,7 @@ public final class TagsPlumbing {
     /**
      * Protobuf type {@code v1.Tags.Pair}
      */
-    public  static final class Pair extends
+    public static final class Pair extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:v1.Tags.Pair)
         PairOrBuilder {
@@ -278,6 +278,7 @@ public final class TagsPlumbing {
        * <code>string name = 1;</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
@@ -294,6 +295,7 @@ public final class TagsPlumbing {
        * <code>string name = 1;</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
@@ -314,6 +316,7 @@ public final class TagsPlumbing {
        * <code>string value = 2;</code>
        * @return The value.
        */
+      @java.lang.Override
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
@@ -330,6 +333,7 @@ public final class TagsPlumbing {
        * <code>string value = 2;</code>
        * @return The bytes for value.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getValueBytes() {
         java.lang.Object ref = value_;
@@ -872,12 +876,14 @@ public final class TagsPlumbing {
     /**
      * <code>repeated .v1.Tags.Pair pairs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Pair> getPairsList() {
       return pairs_;
     }
     /**
      * <code>repeated .v1.Tags.Pair pairs = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.PairOrBuilder> 
         getPairsOrBuilderList() {
       return pairs_;
@@ -885,18 +891,21 @@ public final class TagsPlumbing {
     /**
      * <code>repeated .v1.Tags.Pair pairs = 1;</code>
      */
+    @java.lang.Override
     public int getPairsCount() {
       return pairs_.size();
     }
     /**
      * <code>repeated .v1.Tags.Pair pairs = 1;</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Pair getPairs(int index) {
       return pairs_.get(index);
     }
     /**
      * <code>repeated .v1.Tags.Pair pairs = 1;</code>
      */
+    @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.PairOrBuilder getPairsOrBuilder(
         int index) {
       return pairs_.get(index);

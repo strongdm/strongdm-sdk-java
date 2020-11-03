@@ -20,69 +20,15 @@ package com.strongdm.api.v1;
 // A SecretStore is a server where resource secrets (passwords, keys) are stored.
 // Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support@strongdm.com to
 // request access to the beta.
-public class SecretStore {
-  private String id;
-  // option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-  // example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-  // };
-  // Unique identifier of the SecretStore.
-  public String getId() {
-    return this.id;
-  }
-  // option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-  // example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-  // };
-  // Unique identifier of the SecretStore.
-  public void setId(String in) {
-    this.id = in;
-  }
-
-  private String name;
-  // Unique human-readable name of the SecretStore.
-  public String getName() {
-    return this.name;
-  }
-  // Unique human-readable name of the SecretStore.
-  public void setName(String in) {
-    this.name = in;
-  }
-
-  private String serverAddress;
-
-  public String getServerAddress() {
-    return this.serverAddress;
-  }
-
-  public void setServerAddress(String in) {
-    this.serverAddress = in;
-  }
-
-  private String kind;
-
-  public String getKind() {
-    return this.kind;
-  }
-
-  public void setKind(String in) {
-    this.kind = in;
-  }
-
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
-  }
+public interface SecretStore {
+  // Returns the unique identifier of the SecretStore.
+  String getId();
+  // Returns the tags of the SecretStore.
+  java.util.Map<String, String> getTags();
+  // Sets the tags of the SecretStore.
+  void setTags(java.util.Map<String, String> tags);
+  // Returns the name of the SecretStore.
+  String getName();
+  // Sets the name of the SecretStore.
+  void setName(String name);
 }
