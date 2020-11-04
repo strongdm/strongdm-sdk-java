@@ -13055,16 +13055,16 @@ public final class SecretStoresPlumbing {
         getServerAddressBytes();
 
     /**
-     * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The caCertPath.
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The cACertPath.
      */
-    java.lang.String getCaCertPath();
+    java.lang.String getCACertPath();
     /**
-     * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for caCertPath.
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for cACertPath.
      */
     com.google.protobuf.ByteString
-        getCaCertPathBytes();
+        getCACertPathBytes();
 
     /**
      * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
@@ -13133,7 +13133,7 @@ public final class SecretStoresPlumbing {
       id_ = "";
       name_ = "";
       serverAddress_ = "";
-      caCertPath_ = "";
+      cACertPath_ = "";
       clientCertPath_ = "";
       clientKeyPath_ = "";
     }
@@ -13189,7 +13189,7 @@ public final class SecretStoresPlumbing {
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              caCertPath_ = s;
+              cACertPath_ = s;
               break;
             }
             case 42: {
@@ -13386,37 +13386,37 @@ public final class SecretStoresPlumbing {
     }
 
     public static final int CA_CERT_PATH_FIELD_NUMBER = 4;
-    private volatile java.lang.Object caCertPath_;
+    private volatile java.lang.Object cACertPath_;
     /**
-     * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The caCertPath.
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The cACertPath.
      */
     @java.lang.Override
-    public java.lang.String getCaCertPath() {
-      java.lang.Object ref = caCertPath_;
+    public java.lang.String getCACertPath() {
+      java.lang.Object ref = cACertPath_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        caCertPath_ = s;
+        cACertPath_ = s;
         return s;
       }
     }
     /**
-     * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for caCertPath.
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for cACertPath.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCaCertPathBytes() {
-      java.lang.Object ref = caCertPath_;
+        getCACertPathBytes() {
+      java.lang.Object ref = cACertPath_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        caCertPath_ = b;
+        cACertPath_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -13560,8 +13560,8 @@ public final class SecretStoresPlumbing {
       if (!getServerAddressBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
       }
-      if (!getCaCertPathBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, caCertPath_);
+      if (!getCACertPathBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cACertPath_);
       }
       if (!getClientCertPathBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientCertPath_);
@@ -13590,8 +13590,8 @@ public final class SecretStoresPlumbing {
       if (!getServerAddressBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
       }
-      if (!getCaCertPathBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, caCertPath_);
+      if (!getCACertPathBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cACertPath_);
       }
       if (!getClientCertPathBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientCertPath_);
@@ -13624,8 +13624,8 @@ public final class SecretStoresPlumbing {
           .equals(other.getName())) return false;
       if (!getServerAddress()
           .equals(other.getServerAddress())) return false;
-      if (!getCaCertPath()
-          .equals(other.getCaCertPath())) return false;
+      if (!getCACertPath()
+          .equals(other.getCACertPath())) return false;
       if (!getClientCertPath()
           .equals(other.getClientCertPath())) return false;
       if (!getClientKeyPath()
@@ -13653,7 +13653,7 @@ public final class SecretStoresPlumbing {
       hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getServerAddress().hashCode();
       hash = (37 * hash) + CA_CERT_PATH_FIELD_NUMBER;
-      hash = (53 * hash) + getCaCertPath().hashCode();
+      hash = (53 * hash) + getCACertPath().hashCode();
       hash = (37 * hash) + CLIENT_CERT_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getClientCertPath().hashCode();
       hash = (37 * hash) + CLIENT_KEY_PATH_FIELD_NUMBER;
@@ -13801,7 +13801,7 @@ public final class SecretStoresPlumbing {
 
         serverAddress_ = "";
 
-        caCertPath_ = "";
+        cACertPath_ = "";
 
         clientCertPath_ = "";
 
@@ -13842,7 +13842,7 @@ public final class SecretStoresPlumbing {
         result.id_ = id_;
         result.name_ = name_;
         result.serverAddress_ = serverAddress_;
-        result.caCertPath_ = caCertPath_;
+        result.cACertPath_ = cACertPath_;
         result.clientCertPath_ = clientCertPath_;
         result.clientKeyPath_ = clientKeyPath_;
         if (tagsBuilder_ == null) {
@@ -13910,8 +13910,8 @@ public final class SecretStoresPlumbing {
           serverAddress_ = other.serverAddress_;
           onChanged();
         }
-        if (!other.getCaCertPath().isEmpty()) {
-          caCertPath_ = other.caCertPath_;
+        if (!other.getCACertPath().isEmpty()) {
+          cACertPath_ = other.cACertPath_;
           onChanged();
         }
         if (!other.getClientCertPath().isEmpty()) {
@@ -14237,78 +14237,78 @@ public final class SecretStoresPlumbing {
         return this;
       }
 
-      private java.lang.Object caCertPath_ = "";
+      private java.lang.Object cACertPath_ = "";
       /**
-       * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @return The caCertPath.
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * @return The cACertPath.
        */
-      public java.lang.String getCaCertPath() {
-        java.lang.Object ref = caCertPath_;
+      public java.lang.String getCACertPath() {
+        java.lang.Object ref = cACertPath_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          caCertPath_ = s;
+          cACertPath_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for caCertPath.
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for cACertPath.
        */
       public com.google.protobuf.ByteString
-          getCaCertPathBytes() {
-        java.lang.Object ref = caCertPath_;
+          getCACertPathBytes() {
+        java.lang.Object ref = cACertPath_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          caCertPath_ = b;
+          cACertPath_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @param value The caCertPath to set.
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The cACertPath to set.
        * @return This builder for chaining.
        */
-      public Builder setCaCertPath(
+      public Builder setCACertPath(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        caCertPath_ = value;
+        cACertPath_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
-      public Builder clearCaCertPath() {
+      public Builder clearCACertPath() {
         
-        caCertPath_ = getDefaultInstance().getCaCertPath();
+        cACertPath_ = getDefaultInstance().getCACertPath();
         onChanged();
         return this;
       }
       /**
-       * <code>string ca_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for caCertPath to set.
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for cACertPath to set.
        * @return This builder for chaining.
        */
-      public Builder setCaCertPathBytes(
+      public Builder setCACertPathBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        caCertPath_ = value;
+        cACertPath_ = value;
         onChanged();
         return this;
       }
@@ -14790,42 +14790,45 @@ public final class SecretStoresPlumbing {
       "SStoreH\000\022*\n\013vault_token\030\002 \001(\0132\023.v1.Vault" +
       "TokenStoreH\000:\n\372\370\263\007\005\250\363\263\007\001BA\n\014secret_store" +
       "\0221\252\370\263\007\020\242\370\263\007\013SecretStore\252\370\263\007\t\252\370\263\007\004tags\252\370\263" +
-      "\007\t\252\370\263\007\004name\"\361\001\n\017VaultTokenStore\022-\n\002id\030\001 " +
+      "\007\t\252\370\263\007\004name\"\247\002\n\017VaultTokenStore\022-\n\002id\030\001 " +
       "\001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\013SecretStore\022&" +
-      "\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>" +
-      "\n\016server_address\030\003 \001(\tB&\362\370\263\007!\242\363\263\007\rServer" +
-      "Address\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v" +
-      "1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\032\372\370\263\007\025\242\363\263\007\013S" +
-      "ecretStore\250\363\263\007\001\"\251\003\n\rVaultTLSStore\022-\n\002id\030" +
-      "\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\013SecretStore" +
-      "\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001" +
-      "\022>\n\016server_address\030\003 \001(\tB&\362\370\263\007!\242\363\263\007\rServ" +
-      "erAddress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\0224\n\014ca_cert_path" +
-      "\030\004 \001(\tB\036\362\370\263\007\031\242\363\263\007\nCACertPath\260\363\263\007\001\320\363\263\007\001\022A" +
-      "\n\020client_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016Clie" +
-      "ntCertPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_" +
-      "path\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001" +
-      "\300\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007" +
-      "\016\242\363\263\007\004Tags\260\363\263\007\001:\032\372\370\263\007\025\242\363\263\007\013SecretStore\250\363" +
-      "\263\007\0012\370\004\n\014SecretStores\022\311\001\n\006Create\022\034.v1.Sec" +
-      "retStoreCreateRequest\032\035.v1.SecretStoreCr" +
-      "eateResponse\"\201\001\202\323\344\223\002\025\"\020/v1/secretstores:" +
-      "\001*\222Ac\"a\n\037Learn how to make a SecretStore" +
-      "\022>https://www.strongdm.com/docs/api/serv" +
-      "ices/SecretStores#Create\022[\n\003Get\022\031.v1.Sec" +
-      "retStoreGetRequest\032\032.v1.SecretStoreGetRe" +
-      "sponse\"\035\202\323\344\223\002\027\022\025/v1/secretstores/{id}\022g\n" +
-      "\006Update\022\034.v1.SecretStoreUpdateRequest\032\035." +
-      "v1.SecretStoreUpdateResponse\" \202\323\344\223\002\032\032\025/v" +
-      "1/secretstores/{id}:\001*\022d\n\006Delete\022\034.v1.Se" +
-      "cretStoreDeleteRequest\032\035.v1.SecretStoreD" +
-      "eleteResponse\"\035\202\323\344\223\002\027*\025/v1/secretstores/" +
-      "{id}\022Y\n\004List\022\032.v1.SecretStoreListRequest" +
-      "\032\033.v1.SecretStoreListResponse\"\030\202\323\344\223\002\022\022\020/" +
-      "v1/secretstores\032\025\312\371\263\007\020\302\371\263\007\013SecretStoreBh" +
-      "\n\034com.strongdm.api.v1.plumbingB\024SecretSt" +
-      "oresPlumbingZ2github.com/strongdm/strong" +
-      "dm-sdk-go/internal/v1;v1b\006proto3"
+      "\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022V" +
+      "\n\016server_address\030\003 \001(\tB>\362\370\263\0079\242\363\263\007\rServer" +
+      "Address\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\372\363\263\007\007address\202\364\263\007\007a" +
+      "ddress\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263" +
+      "\007\004Tags\260\363\263\007\001:8\372\370\263\0073\242\363\263\007\013SecretStore\250\363\263\007\001\332" +
+      "\363\263\007\nvaultToken\342\363\263\007\nvaultToken\"\333\003\n\rVaultT" +
+      "LSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363" +
+      "\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004" +
+      "Name\260\363\263\007\001\300\363\263\007\001\022V\n\016server_address\030\003 \001(\tB>" +
+      "\362\370\263\0079\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\372\363" +
+      "\263\007\007address\202\364\263\007\007address\0224\n\014CA_cert_path\030\004" +
+      " \001(\tB\036\362\370\263\007\031\242\363\263\007\nCACertPath\260\363\263\007\001\320\363\263\007\001\022A\n\020" +
+      "client_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016Client" +
+      "CertPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_pa" +
+      "th\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363" +
+      "\263\007\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242" +
+      "\363\263\007\004Tags\260\363\263\007\001:4\372\370\263\007/\242\363\263\007\013SecretStore\250\363\263\007" +
+      "\001\332\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS2\370\004\n\014SecretSt" +
+      "ores\022\311\001\n\006Create\022\034.v1.SecretStoreCreateRe" +
+      "quest\032\035.v1.SecretStoreCreateResponse\"\201\001\202" +
+      "\323\344\223\002\025\"\020/v1/secretstores:\001*\222Ac\"a\n\037Learn h" +
+      "ow to make a SecretStore\022>https://www.st" +
+      "rongdm.com/docs/api/services/SecretStore" +
+      "s#Create\022[\n\003Get\022\031.v1.SecretStoreGetReque" +
+      "st\032\032.v1.SecretStoreGetResponse\"\035\202\323\344\223\002\027\022\025" +
+      "/v1/secretstores/{id}\022g\n\006Update\022\034.v1.Sec" +
+      "retStoreUpdateRequest\032\035.v1.SecretStoreUp" +
+      "dateResponse\" \202\323\344\223\002\032\032\025/v1/secretstores/{" +
+      "id}:\001*\022d\n\006Delete\022\034.v1.SecretStoreDeleteR" +
+      "equest\032\035.v1.SecretStoreDeleteResponse\"\035\202" +
+      "\323\344\223\002\027*\025/v1/secretstores/{id}\022Y\n\004List\022\032.v" +
+      "1.SecretStoreListRequest\032\033.v1.SecretStor" +
+      "eListResponse\"\030\202\323\344\223\002\022\022\020/v1/secretstores\032" +
+      "\025\312\371\263\007\020\302\371\263\007\013SecretStoreBh\n\034com.strongdm.a" +
+      "pi.v1.plumbingB\024SecretStoresPlumbingZ2gi" +
+      "thub.com/strongdm/strongdm-sdk-go/intern" +
+      "al/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14913,7 +14916,7 @@ public final class SecretStoresPlumbing {
     internal_static_v1_VaultTLSStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "ServerAddress", "CaCertPath", "ClientCertPath", "ClientKeyPath", "Tags", });
+        new java.lang.String[] { "Id", "Name", "ServerAddress", "CACertPath", "ClientCertPath", "ClientKeyPath", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

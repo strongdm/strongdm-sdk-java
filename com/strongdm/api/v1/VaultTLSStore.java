@@ -56,11 +56,11 @@ public class VaultTLSStore implements SecretStore {
 
   private String caCertPath;
 
-  public String getCaCertPath() {
+  public String getCACertPath() {
     return this.caCertPath;
   }
 
-  public void setCaCertPath(String in) {
+  public void setCACertPath(String in) {
     this.caCertPath = in;
   }
 

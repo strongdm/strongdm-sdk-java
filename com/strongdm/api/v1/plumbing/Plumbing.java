@@ -5591,7 +5591,7 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setServerAddress((plumbing.getServerAddress()));
-    porcelain.setCaCertPath((plumbing.getCaCertPath()));
+    porcelain.setCACertPath((plumbing.getCACertPath()));
     porcelain.setClientCertPath((plumbing.getClientCertPath()));
     porcelain.setClientKeyPath((plumbing.getClientKeyPath()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -5613,8 +5613,8 @@ public class Plumbing {
     if (porcelain.getServerAddress() != null) {
       builder.setServerAddress((porcelain.getServerAddress()));
     }
-    if (porcelain.getCaCertPath() != null) {
-      builder.setCaCertPath((porcelain.getCaCertPath()));
+    if (porcelain.getCACertPath() != null) {
+      builder.setCACertPath((porcelain.getCACertPath()));
     }
     if (porcelain.getClientCertPath() != null) {
       builder.setClientCertPath((porcelain.getClientCertPath()));

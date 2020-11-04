@@ -138,26 +138,28 @@ public final class Options {
     boolean getSensitive();
 
     /**
-     * <pre>
-     * cast this field, without checking the cast is valid, to the given server type 
-     * on conversion
-     * </pre>
-     *
-     * <code>string cast_to = 1941311;</code>
-     * @return The castTo.
+     * <code>string cli_name = 1941311;</code>
+     * @return The cliName.
      */
-    java.lang.String getCastTo();
+    java.lang.String getCliName();
     /**
-     * <pre>
-     * cast this field, without checking the cast is valid, to the given server type 
-     * on conversion
-     * </pre>
-     *
-     * <code>string cast_to = 1941311;</code>
-     * @return The bytes for castTo.
+     * <code>string cli_name = 1941311;</code>
+     * @return The bytes for cliName.
      */
     com.google.protobuf.ByteString
-        getCastToBytes();
+        getCliNameBytes();
+
+    /**
+     * <code>string json_name = 1941312;</code>
+     * @return The jsonName.
+     */
+    java.lang.String getJsonName();
+    /**
+     * <code>string json_name = 1941312;</code>
+     * @return The bytes for jsonName.
+     */
+    com.google.protobuf.ByteString
+        getJsonNameBytes();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -174,7 +176,8 @@ public final class Options {
     private FieldOptions() {
       name_ = "";
       idType_ = "";
-      castTo_ = "";
+      cliName_ = "";
+      jsonName_ = "";
     }
 
     @java.lang.Override
@@ -267,7 +270,13 @@ public final class Options {
             case 15530490: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              castTo_ = s;
+              cliName_ = s;
+              break;
+            }
+            case 15530498: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jsonName_ = s;
               break;
             }
             default: {
@@ -500,48 +509,76 @@ public final class Options {
       return sensitive_;
     }
 
-    public static final int CAST_TO_FIELD_NUMBER = 1941311;
-    private volatile java.lang.Object castTo_;
+    public static final int CLI_NAME_FIELD_NUMBER = 1941311;
+    private volatile java.lang.Object cliName_;
     /**
-     * <pre>
-     * cast this field, without checking the cast is valid, to the given server type 
-     * on conversion
-     * </pre>
-     *
-     * <code>string cast_to = 1941311;</code>
-     * @return The castTo.
+     * <code>string cli_name = 1941311;</code>
+     * @return The cliName.
      */
     @java.lang.Override
-    public java.lang.String getCastTo() {
-      java.lang.Object ref = castTo_;
+    public java.lang.String getCliName() {
+      java.lang.Object ref = cliName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        castTo_ = s;
+        cliName_ = s;
         return s;
       }
     }
     /**
-     * <pre>
-     * cast this field, without checking the cast is valid, to the given server type 
-     * on conversion
-     * </pre>
-     *
-     * <code>string cast_to = 1941311;</code>
-     * @return The bytes for castTo.
+     * <code>string cli_name = 1941311;</code>
+     * @return The bytes for cliName.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCastToBytes() {
-      java.lang.Object ref = castTo_;
+        getCliNameBytes() {
+      java.lang.Object ref = cliName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        castTo_ = b;
+        cliName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JSON_NAME_FIELD_NUMBER = 1941312;
+    private volatile java.lang.Object jsonName_;
+    /**
+     * <code>string json_name = 1941312;</code>
+     * @return The jsonName.
+     */
+    @java.lang.Override
+    public java.lang.String getJsonName() {
+      java.lang.Object ref = jsonName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jsonName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string json_name = 1941312;</code>
+     * @return The bytes for jsonName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJsonNameBytes() {
+      java.lang.Object ref = jsonName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jsonName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -595,8 +632,11 @@ public final class Options {
       if (sensitive_ != false) {
         output.writeBool(1941310, sensitive_);
       }
-      if (!getCastToBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, castTo_);
+      if (!getCliNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, cliName_);
+      }
+      if (!getJsonNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, jsonName_);
       }
       unknownFields.writeTo(output);
     }
@@ -649,8 +689,11 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941310, sensitive_);
       }
-      if (!getCastToBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, castTo_);
+      if (!getCliNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, cliName_);
+      }
+      if (!getJsonNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, jsonName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -689,8 +732,10 @@ public final class Options {
           != other.getWriteOnly()) return false;
       if (getSensitive()
           != other.getSensitive()) return false;
-      if (!getCastTo()
-          .equals(other.getCastTo())) return false;
+      if (!getCliName()
+          .equals(other.getCliName())) return false;
+      if (!getJsonName()
+          .equals(other.getJsonName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -733,8 +778,10 @@ public final class Options {
       hash = (37 * hash) + SENSITIVE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSensitive());
-      hash = (37 * hash) + CAST_TO_FIELD_NUMBER;
-      hash = (53 * hash) + getCastTo().hashCode();
+      hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCliName().hashCode();
+      hash = (37 * hash) + JSON_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getJsonName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -890,7 +937,9 @@ public final class Options {
 
         sensitive_ = false;
 
-        castTo_ = "";
+        cliName_ = "";
+
+        jsonName_ = "";
 
         return this;
       }
@@ -929,7 +978,8 @@ public final class Options {
         result.forceNew_ = forceNew_;
         result.writeOnly_ = writeOnly_;
         result.sensitive_ = sensitive_;
-        result.castTo_ = castTo_;
+        result.cliName_ = cliName_;
+        result.jsonName_ = jsonName_;
         onBuilt();
         return result;
       }
@@ -1013,8 +1063,12 @@ public final class Options {
         if (other.getSensitive() != false) {
           setSensitive(other.getSensitive());
         }
-        if (!other.getCastTo().isEmpty()) {
-          castTo_ = other.castTo_;
+        if (!other.getCliName().isEmpty()) {
+          cliName_ = other.cliName_;
+          onChanged();
+        }
+        if (!other.getJsonName().isEmpty()) {
+          jsonName_ = other.jsonName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1546,103 +1600,154 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object castTo_ = "";
+      private java.lang.Object cliName_ = "";
       /**
-       * <pre>
-       * cast this field, without checking the cast is valid, to the given server type 
-       * on conversion
-       * </pre>
-       *
-       * <code>string cast_to = 1941311;</code>
-       * @return The castTo.
+       * <code>string cli_name = 1941311;</code>
+       * @return The cliName.
        */
-      public java.lang.String getCastTo() {
-        java.lang.Object ref = castTo_;
+      public java.lang.String getCliName() {
+        java.lang.Object ref = cliName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          castTo_ = s;
+          cliName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <pre>
-       * cast this field, without checking the cast is valid, to the given server type 
-       * on conversion
-       * </pre>
-       *
-       * <code>string cast_to = 1941311;</code>
-       * @return The bytes for castTo.
+       * <code>string cli_name = 1941311;</code>
+       * @return The bytes for cliName.
        */
       public com.google.protobuf.ByteString
-          getCastToBytes() {
-        java.lang.Object ref = castTo_;
+          getCliNameBytes() {
+        java.lang.Object ref = cliName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          castTo_ = b;
+          cliName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <pre>
-       * cast this field, without checking the cast is valid, to the given server type 
-       * on conversion
-       * </pre>
-       *
-       * <code>string cast_to = 1941311;</code>
-       * @param value The castTo to set.
+       * <code>string cli_name = 1941311;</code>
+       * @param value The cliName to set.
        * @return This builder for chaining.
        */
-      public Builder setCastTo(
+      public Builder setCliName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        castTo_ = value;
+        cliName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * cast this field, without checking the cast is valid, to the given server type 
-       * on conversion
-       * </pre>
-       *
-       * <code>string cast_to = 1941311;</code>
+       * <code>string cli_name = 1941311;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCastTo() {
+      public Builder clearCliName() {
         
-        castTo_ = getDefaultInstance().getCastTo();
+        cliName_ = getDefaultInstance().getCliName();
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * cast this field, without checking the cast is valid, to the given server type 
-       * on conversion
-       * </pre>
-       *
-       * <code>string cast_to = 1941311;</code>
-       * @param value The bytes for castTo to set.
+       * <code>string cli_name = 1941311;</code>
+       * @param value The bytes for cliName to set.
        * @return This builder for chaining.
        */
-      public Builder setCastToBytes(
+      public Builder setCliNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        castTo_ = value;
+        cliName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jsonName_ = "";
+      /**
+       * <code>string json_name = 1941312;</code>
+       * @return The jsonName.
+       */
+      public java.lang.String getJsonName() {
+        java.lang.Object ref = jsonName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jsonName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string json_name = 1941312;</code>
+       * @return The bytes for jsonName.
+       */
+      public com.google.protobuf.ByteString
+          getJsonNameBytes() {
+        java.lang.Object ref = jsonName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jsonName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string json_name = 1941312;</code>
+       * @param value The jsonName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jsonName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_name = 1941312;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonName() {
+        
+        jsonName_ = getDefaultInstance().getJsonName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_name = 1941312;</code>
+       * @param value The bytes for jsonName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jsonName_ = value;
         onChanged();
         return this;
       }
@@ -1788,6 +1893,30 @@ public final class Options {
      * @return The privateSdk.
      */
     boolean getPrivateSdk();
+
+    /**
+     * <code>string cli_name = 1941307;</code>
+     * @return The cliName.
+     */
+    java.lang.String getCliName();
+    /**
+     * <code>string cli_name = 1941307;</code>
+     * @return The bytes for cliName.
+     */
+    com.google.protobuf.ByteString
+        getCliNameBytes();
+
+    /**
+     * <code>string json_name = 1941308;</code>
+     * @return The jsonName.
+     */
+    java.lang.String getJsonName();
+    /**
+     * <code>string json_name = 1941308;</code>
+     * @return The bytes for jsonName.
+     */
+    com.google.protobuf.ByteString
+        getJsonNameBytes();
   }
   /**
    * Protobuf type {@code v1.MessageOptions}
@@ -1804,6 +1933,8 @@ public final class Options {
     private MessageOptions() {
       modelName_ = "";
       optionsField_ = "";
+      cliName_ = "";
+      jsonName_ = "";
     }
 
     @java.lang.Override
@@ -1887,6 +2018,18 @@ public final class Options {
             case 15530448: {
 
               privateSdk_ = input.readBool();
+              break;
+            }
+            case 15530458: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cliName_ = s;
+              break;
+            }
+            case 15530466: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jsonName_ = s;
               break;
             }
             default: {
@@ -2096,6 +2239,82 @@ public final class Options {
       return privateSdk_;
     }
 
+    public static final int CLI_NAME_FIELD_NUMBER = 1941307;
+    private volatile java.lang.Object cliName_;
+    /**
+     * <code>string cli_name = 1941307;</code>
+     * @return The cliName.
+     */
+    @java.lang.Override
+    public java.lang.String getCliName() {
+      java.lang.Object ref = cliName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cliName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string cli_name = 1941307;</code>
+     * @return The bytes for cliName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCliNameBytes() {
+      java.lang.Object ref = cliName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cliName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int JSON_NAME_FIELD_NUMBER = 1941308;
+    private volatile java.lang.Object jsonName_;
+    /**
+     * <code>string json_name = 1941308;</code>
+     * @return The jsonName.
+     */
+    @java.lang.Override
+    public java.lang.String getJsonName() {
+      java.lang.Object ref = jsonName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jsonName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string json_name = 1941308;</code>
+     * @return The bytes for jsonName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJsonNameBytes() {
+      java.lang.Object ref = jsonName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jsonName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2130,6 +2349,12 @@ public final class Options {
       }
       if (privateSdk_ != false) {
         output.writeBool(1941306, privateSdk_);
+      }
+      if (!getCliNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, cliName_);
+      }
+      if (!getJsonNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941308, jsonName_);
       }
       unknownFields.writeTo(output);
     }
@@ -2166,6 +2391,12 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941306, privateSdk_);
       }
+      if (!getCliNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, cliName_);
+      }
+      if (!getJsonNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941308, jsonName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2201,6 +2432,10 @@ public final class Options {
       }
       if (getPrivateSdk()
           != other.getPrivateSdk()) return false;
+      if (!getCliName()
+          .equals(other.getCliName())) return false;
+      if (!getJsonName()
+          .equals(other.getJsonName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2232,6 +2467,10 @@ public final class Options {
       hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPrivateSdk());
+      hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCliName().hashCode();
+      hash = (37 * hash) + JSON_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getJsonName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2387,6 +2626,10 @@ public final class Options {
         }
         privateSdk_ = false;
 
+        cliName_ = "";
+
+        jsonName_ = "";
+
         return this;
       }
 
@@ -2428,6 +2671,8 @@ public final class Options {
           result.custom_ = customBuilder_.build();
         }
         result.privateSdk_ = privateSdk_;
+        result.cliName_ = cliName_;
+        result.jsonName_ = jsonName_;
         onBuilt();
         return result;
       }
@@ -2498,6 +2743,14 @@ public final class Options {
         }
         if (other.getPrivateSdk() != false) {
           setPrivateSdk(other.getPrivateSdk());
+        }
+        if (!other.getCliName().isEmpty()) {
+          cliName_ = other.cliName_;
+          onChanged();
+        }
+        if (!other.getJsonName().isEmpty()) {
+          jsonName_ = other.jsonName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3044,6 +3297,158 @@ public final class Options {
       public Builder clearPrivateSdk() {
         
         privateSdk_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cliName_ = "";
+      /**
+       * <code>string cli_name = 1941307;</code>
+       * @return The cliName.
+       */
+      public java.lang.String getCliName() {
+        java.lang.Object ref = cliName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cliName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string cli_name = 1941307;</code>
+       * @return The bytes for cliName.
+       */
+      public com.google.protobuf.ByteString
+          getCliNameBytes() {
+        java.lang.Object ref = cliName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cliName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string cli_name = 1941307;</code>
+       * @param value The cliName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCliName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cliName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cli_name = 1941307;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCliName() {
+        
+        cliName_ = getDefaultInstance().getCliName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string cli_name = 1941307;</code>
+       * @param value The bytes for cliName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCliNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cliName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jsonName_ = "";
+      /**
+       * <code>string json_name = 1941308;</code>
+       * @return The jsonName.
+       */
+      public java.lang.String getJsonName() {
+        java.lang.Object ref = jsonName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jsonName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string json_name = 1941308;</code>
+       * @return The bytes for jsonName.
+       */
+      public com.google.protobuf.ByteString
+          getJsonNameBytes() {
+        java.lang.Object ref = jsonName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jsonName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string json_name = 1941308;</code>
+       * @param value The jsonName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jsonName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_name = 1941308;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonName() {
+        
+        jsonName_ = getDefaultInstance().getJsonName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_name = 1941308;</code>
+       * @param value The bytes for jsonName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jsonName_ = value;
         onChanged();
         return this;
       }
@@ -6698,39 +7103,41 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"\213\002\n\014FieldOptions\022\016\n\004name\030\264" +
+      "criptor.proto\"\241\002\n\014FieldOptions\022\016\n\004name\030\264" +
       "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose" +
       "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(" +
       "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t" +
       "\022\022\n\010sdk_only\030\272\276v \001(\010\022\022\n\010computed\030\273\276v \001(\010" +
       "\022\023\n\tforce_new\030\274\276v \001(\010\022\024\n\nwrite_only\030\275\276v " +
-      "\001(\010\022\023\n\tsensitive\030\276\276v \001(\010\022\021\n\007cast_to\030\277\276v " +
-      "\001(\t\"\336\001\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v" +
-      " \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001" +
-      "(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform" +
-      "_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n\006cust" +
-      "om\030\271\276v \001(\0132!.v1.CustomPorcelainMessageOp" +
-      "tions\022\025\n\013private_sdk\030\272\276v \001(\010\"\266\001\n\035CustomP" +
-      "orcelainMessageOptions\022\023\n\tconverter\030\275\276v " +
-      "\001(\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java" +
-      "_porcelain_type\030\277\276v \001(\t\022\"\n\030terraform_por" +
-      "celain_type\030\300\276v \001(\t\022 \n\026openapi_porcelain" +
-      "_type\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resour" +
-      "ce_example_path\030\264\276v \001(\t\022\"\n\030data_source_e" +
-      "xample_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nm" +
-      "odel_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v \003" +
-      "(\t\"<\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(" +
-      "\t\022\025\n\013private_sdk\030\231\277v \001(\010:H\n\rfield_option" +
-      "s\022\035.google.protobuf.FieldOptions\030\216\277v \001(\013" +
-      "2\020.v1.FieldOptions:N\n\017message_options\022\037." +
-      "google.protobuf.MessageOptions\030\217\277v \001(\0132\022" +
-      ".v1.MessageOptions:H\n\roneof_options\022\035.go" +
-      "ogle.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1." +
-      "OneofOptions:N\n\017service_options\022\037.google" +
-      ".protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Se" +
-      "rviceOptionsBR\n\034com.strongdm.api.v1.plum" +
-      "bingZ2github.com/strongdm/strongdm-sdk-g" +
-      "o/internal/v1;v1b\006proto3"
+      "\001(\010\022\023\n\tsensitive\030\276\276v \001(\010\022\022\n\010cli_name\030\277\276v" +
+      " \001(\t\022\023\n\tjson_name\030\300\276v \001(\t\"\207\002\n\016MessageOpt" +
+      "ions\022\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030" +
+      "\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_fiel" +
+      "d\030\267\276v \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1" +
+      ".TerraformDocs\0223\n\006custom\030\271\276v \001(\0132!.v1.Cu" +
+      "stomPorcelainMessageOptions\022\025\n\013private_s" +
+      "dk\030\272\276v \001(\010\022\022\n\010cli_name\030\273\276v \001(\t\022\023\n\tjson_n" +
+      "ame\030\274\276v \001(\t\"\266\001\n\035CustomPorcelainMessageOp" +
+      "tions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcela" +
+      "in_type\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277" +
+      "\276v \001(\t\022\"\n\030terraform_porcelain_type\030\300\276v \001" +
+      "(\t\022 \n\026openapi_porcelain_type\030\301\276v \001(\t\"T\n\r" +
+      "TerraformDocs\022\037\n\025resource_example_path\030\264" +
+      "\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v \001" +
+      "(\t\"=\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t" +
+      "\022\027\n\rcommon_fields\030\205\277v \003(\t\"<\n\016ServiceOpti" +
+      "ons\022\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030" +
+      "\231\277v \001(\010:H\n\rfield_options\022\035.google.protob" +
+      "uf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOption" +
+      "s:N\n\017message_options\022\037.google.protobuf.M" +
+      "essageOptions\030\217\277v \001(\0132\022.v1.MessageOption" +
+      "s:H\n\roneof_options\022\035.google.protobuf.One" +
+      "ofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017s" +
+      "ervice_options\022\037.google.protobuf.Service" +
+      "Options\030\231\277v \001(\0132\022.v1.ServiceOptionsBR\n\034c" +
+      "om.strongdm.api.v1.plumbingZ2github.com/" +
+      "strongdm/strongdm-sdk-go/internal/v1;v1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6742,13 +7149,13 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CastTo", });
+        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "JsonName", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", });
+        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", "CliName", "JsonName", });
     internal_static_v1_CustomPorcelainMessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable = new
