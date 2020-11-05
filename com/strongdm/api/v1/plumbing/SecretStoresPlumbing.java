@@ -10810,32 +10810,32 @@ public final class SecretStoresPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
      * @return Whether the vaultTls field is set.
      */
     boolean hasVaultTls();
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
      * @return The vaultTls.
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getVaultTls();
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder();
 
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2;</code>
+     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
      * @return Whether the vaultToken field is set.
      */
     boolean hasVaultToken();
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2;</code>
+     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
      * @return The vaultToken.
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getVaultToken();
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2;</code>
+     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder();
 
@@ -10994,7 +10994,7 @@ public final class SecretStoresPlumbing {
 
     public static final int VAULT_TLS_FIELD_NUMBER = 1;
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
      * @return Whether the vaultTls field is set.
      */
     @java.lang.Override
@@ -11002,7 +11002,7 @@ public final class SecretStoresPlumbing {
       return secretStoreCase_ == 1;
     }
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
      * @return The vaultTls.
      */
     @java.lang.Override
@@ -11013,7 +11013,7 @@ public final class SecretStoresPlumbing {
       return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
     }
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
      */
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder() {
@@ -11025,7 +11025,7 @@ public final class SecretStoresPlumbing {
 
     public static final int VAULT_TOKEN_FIELD_NUMBER = 2;
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2;</code>
+     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
      * @return Whether the vaultToken field is set.
      */
     @java.lang.Override
@@ -11033,7 +11033,7 @@ public final class SecretStoresPlumbing {
       return secretStoreCase_ == 2;
     }
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2;</code>
+     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
      * @return The vaultToken.
      */
     @java.lang.Override
@@ -11044,7 +11044,7 @@ public final class SecretStoresPlumbing {
       return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
     }
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2;</code>
+     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
      */
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder() {
@@ -11431,7 +11431,7 @@ public final class SecretStoresPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder> vaultTlsBuilder_;
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        * @return Whether the vaultTls field is set.
        */
       @java.lang.Override
@@ -11439,7 +11439,7 @@ public final class SecretStoresPlumbing {
         return secretStoreCase_ == 1;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        * @return The vaultTls.
        */
       @java.lang.Override
@@ -11457,7 +11457,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        */
       public Builder setVaultTls(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore value) {
         if (vaultTlsBuilder_ == null) {
@@ -11473,7 +11473,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        */
       public Builder setVaultTls(
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder builderForValue) {
@@ -11487,7 +11487,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        */
       public Builder mergeVaultTls(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore value) {
         if (vaultTlsBuilder_ == null) {
@@ -11509,7 +11509,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        */
       public Builder clearVaultTls() {
         if (vaultTlsBuilder_ == null) {
@@ -11528,13 +11528,13 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        */
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder getVaultTlsBuilder() {
         return getVaultTlsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        */
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder() {
@@ -11548,7 +11548,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1;</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder> 
@@ -11572,7 +11572,7 @@ public final class SecretStoresPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder> vaultTokenBuilder_;
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        * @return Whether the vaultToken field is set.
        */
       @java.lang.Override
@@ -11580,7 +11580,7 @@ public final class SecretStoresPlumbing {
         return secretStoreCase_ == 2;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        * @return The vaultToken.
        */
       @java.lang.Override
@@ -11598,7 +11598,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        */
       public Builder setVaultToken(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore value) {
         if (vaultTokenBuilder_ == null) {
@@ -11614,7 +11614,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        */
       public Builder setVaultToken(
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder builderForValue) {
@@ -11628,7 +11628,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        */
       public Builder mergeVaultToken(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore value) {
         if (vaultTokenBuilder_ == null) {
@@ -11650,7 +11650,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        */
       public Builder clearVaultToken() {
         if (vaultTokenBuilder_ == null) {
@@ -11669,13 +11669,13 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        */
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder getVaultTokenBuilder() {
         return getVaultTokenFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        */
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder() {
@@ -11689,7 +11689,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2;</code>
+       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder> 
@@ -13055,12 +13055,12 @@ public final class SecretStoresPlumbing {
         getServerAddressBytes();
 
     /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
      * @return The cACertPath.
      */
     java.lang.String getCACertPath();
     /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
      * @return The bytes for cACertPath.
      */
     com.google.protobuf.ByteString
@@ -13388,7 +13388,7 @@ public final class SecretStoresPlumbing {
     public static final int CA_CERT_PATH_FIELD_NUMBER = 4;
     private volatile java.lang.Object cACertPath_;
     /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
      * @return The cACertPath.
      */
     @java.lang.Override
@@ -13405,7 +13405,7 @@ public final class SecretStoresPlumbing {
       }
     }
     /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
      * @return The bytes for cACertPath.
      */
     @java.lang.Override
@@ -14239,7 +14239,7 @@ public final class SecretStoresPlumbing {
 
       private java.lang.Object cACertPath_ = "";
       /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
        * @return The cACertPath.
        */
       public java.lang.String getCACertPath() {
@@ -14255,7 +14255,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
        * @return The bytes for cACertPath.
        */
       public com.google.protobuf.ByteString
@@ -14272,7 +14272,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
        * @param value The cACertPath to set.
        * @return This builder for chaining.
        */
@@ -14287,7 +14287,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearCACertPath() {
@@ -14297,7 +14297,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
        * @param value The bytes for cACertPath to set.
        * @return This builder for chaining.
        */
@@ -14785,50 +14785,51 @@ public final class SecretStoresPlumbing {
       "ponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMet" +
       "adata\0222\n\rsecret_stores\030\002 \003(\0132\017.v1.Secret" +
       "StoreB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025." +
-      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\260\001\n\013Sec" +
-      "retStore\022&\n\tvault_tls\030\001 \001(\0132\021.v1.VaultTL" +
-      "SStoreH\000\022*\n\013vault_token\030\002 \001(\0132\023.v1.Vault" +
-      "TokenStoreH\000:\n\372\370\263\007\005\250\363\263\007\001BA\n\014secret_store" +
-      "\0221\252\370\263\007\020\242\370\263\007\013SecretStore\252\370\263\007\t\252\370\263\007\004tags\252\370\263" +
-      "\007\t\252\370\263\007\004name\"\247\002\n\017VaultTokenStore\022-\n\002id\030\001 " +
-      "\001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\013SecretStore\022&" +
-      "\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022V" +
-      "\n\016server_address\030\003 \001(\tB>\362\370\263\0079\242\363\263\007\rServer" +
-      "Address\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\372\363\263\007\007address\202\364\263\007\007a" +
-      "ddress\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263" +
-      "\007\004Tags\260\363\263\007\001:8\372\370\263\0073\242\363\263\007\013SecretStore\250\363\263\007\001\332" +
-      "\363\263\007\nvaultToken\342\363\263\007\nvaultToken\"\333\003\n\rVaultT" +
-      "LSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363" +
-      "\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004" +
-      "Name\260\363\263\007\001\300\363\263\007\001\022V\n\016server_address\030\003 \001(\tB>" +
-      "\362\370\263\0079\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\372\363" +
-      "\263\007\007address\202\364\263\007\007address\0224\n\014CA_cert_path\030\004" +
-      " \001(\tB\036\362\370\263\007\031\242\363\263\007\nCACertPath\260\363\263\007\001\320\363\263\007\001\022A\n\020" +
-      "client_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016Client" +
-      "CertPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_pa" +
-      "th\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363" +
-      "\263\007\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242" +
-      "\363\263\007\004Tags\260\363\263\007\001:4\372\370\263\007/\242\363\263\007\013SecretStore\250\363\263\007" +
-      "\001\332\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS2\370\004\n\014SecretSt" +
-      "ores\022\311\001\n\006Create\022\034.v1.SecretStoreCreateRe" +
-      "quest\032\035.v1.SecretStoreCreateResponse\"\201\001\202" +
-      "\323\344\223\002\025\"\020/v1/secretstores:\001*\222Ac\"a\n\037Learn h" +
-      "ow to make a SecretStore\022>https://www.st" +
-      "rongdm.com/docs/api/services/SecretStore" +
-      "s#Create\022[\n\003Get\022\031.v1.SecretStoreGetReque" +
-      "st\032\032.v1.SecretStoreGetResponse\"\035\202\323\344\223\002\027\022\025" +
-      "/v1/secretstores/{id}\022g\n\006Update\022\034.v1.Sec" +
-      "retStoreUpdateRequest\032\035.v1.SecretStoreUp" +
-      "dateResponse\" \202\323\344\223\002\032\032\025/v1/secretstores/{" +
-      "id}:\001*\022d\n\006Delete\022\034.v1.SecretStoreDeleteR" +
-      "equest\032\035.v1.SecretStoreDeleteResponse\"\035\202" +
-      "\323\344\223\002\027*\025/v1/secretstores/{id}\022Y\n\004List\022\032.v" +
-      "1.SecretStoreListRequest\032\033.v1.SecretStor" +
-      "eListResponse\"\030\202\323\344\223\002\022\022\020/v1/secretstores\032" +
-      "\025\312\371\263\007\020\302\371\263\007\013SecretStoreBh\n\034com.strongdm.a" +
-      "pi.v1.plumbingB\024SecretStoresPlumbingZ2gi" +
-      "thub.com/strongdm/strongdm-sdk-go/intern" +
-      "al/v1;v1b\006proto3"
+      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\306\001\n\013Sec" +
+      "retStore\0220\n\tvault_tls\030\001 \001(\0132\021.v1.VaultTL" +
+      "SStoreH\000R\010vaultTLS\0226\n\013vault_token\030\002 \001(\0132" +
+      "\023.v1.VaultTokenStoreH\000R\nvaultToken:\n\372\370\263\007" +
+      "\005\250\363\263\007\001BA\n\014secret_store\0221\252\370\263\007\020\242\370\263\007\013Secret" +
+      "Store\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\247\002\n\017Va" +
+      "ultTokenStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260" +
+      "\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007" +
+      "\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022V\n\016server_address\030\003" +
+      " \001(\tB>\362\370\263\0079\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320" +
+      "\363\263\007\001\372\363\263\007\007address\202\364\263\007\007address\022+\n\004tags\030\004 \001" +
+      "(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:8\372\370\263\0073" +
+      "\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\nvaultToken\342\363\263\007" +
+      "\nvaultToken\"\351\003\n\rVaultTLSStore\022-\n\002id\030\001 \001(" +
+      "\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004" +
+      "name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022V\n\016" +
+      "server_address\030\003 \001(\tB>\362\370\263\0079\242\363\263\007\rServerAd" +
+      "dress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\372\363\263\007\007address\202\364\263\007\007add" +
+      "ress\022B\n\014CA_cert_path\030\004 \001(\tB\036\362\370\263\007\031\242\363\263\007\nCA" +
+      "CertPath\260\363\263\007\001\320\363\263\007\001R\014ca_cert_path\022A\n\020clie" +
+      "nt_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016ClientCert" +
+      "Path\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_path\030\006" +
+      " \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363\263\007\001\320" +
+      "\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004" +
+      "Tags\260\363\263\007\001:4\372\370\263\007/\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263" +
+      "\007\010vaultTLS\342\363\263\007\010vaultTLS2\370\004\n\014SecretStores" +
+      "\022\311\001\n\006Create\022\034.v1.SecretStoreCreateReques" +
+      "t\032\035.v1.SecretStoreCreateResponse\"\201\001\202\323\344\223\002" +
+      "\025\"\020/v1/secretstores:\001*\222Ac\"a\n\037Learn how t" +
+      "o make a SecretStore\022>https://www.strong" +
+      "dm.com/docs/api/services/SecretStores#Cr" +
+      "eate\022[\n\003Get\022\031.v1.SecretStoreGetRequest\032\032" +
+      ".v1.SecretStoreGetResponse\"\035\202\323\344\223\002\027\022\025/v1/" +
+      "secretstores/{id}\022g\n\006Update\022\034.v1.SecretS" +
+      "toreUpdateRequest\032\035.v1.SecretStoreUpdate" +
+      "Response\" \202\323\344\223\002\032\032\025/v1/secretstores/{id}:" +
+      "\001*\022d\n\006Delete\022\034.v1.SecretStoreDeleteReque" +
+      "st\032\035.v1.SecretStoreDeleteResponse\"\035\202\323\344\223\002" +
+      "\027*\025/v1/secretstores/{id}\022Y\n\004List\022\032.v1.Se" +
+      "cretStoreListRequest\032\033.v1.SecretStoreLis" +
+      "tResponse\"\030\202\323\344\223\002\022\022\020/v1/secretstores\032\025\312\371\263" +
+      "\007\020\302\371\263\007\013SecretStoreBh\n\034com.strongdm.api.v" +
+      "1.plumbingB\024SecretStoresPlumbingZ2github" +
+      ".com/strongdm/strongdm-sdk-go/internal/v" +
+      "1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
