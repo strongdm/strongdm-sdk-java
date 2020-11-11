@@ -9468,74 +9468,66 @@ public final class RoleAttachmentsPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026role_attachments.proto\022\002v1\032\034google/api" +
-      "/annotations.proto\032.protoc-gen-openapiv2" +
-      "/options/annotations.proto\032\roptions.prot" +
-      "o\032\nspec.proto\"\177\n\033RoleAttachmentCreateReq" +
-      "uest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMet" +
-      "adata\0227\n\017role_attachment\030\002 \001(\0132\022.v1.Role" +
-      "AttachmentB\n\362\370\263\007\005\260\363\263\007\001\"\332\001\n\034RoleAttachmen" +
-      "tCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Creat" +
-      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017role_at" +
-      "tachment\030\002 \001(\0132\022.v1.RoleAttachmentB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimi" +
-      "tMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363" +
-      "\263\007\001\"X\n\030RoleAttachmentGetRequest\022$\n\004meta\030" +
-      "\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\"\324\001\n\031RoleAttachmentGetRespo" +
-      "nse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetada" +
-      "taB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017role_attachment\030\002 \001(\0132" +
-      "\022.v1.RoleAttachmentB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_" +
-      "limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"^\n\033RoleAtta" +
-      "chmentDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.D" +
-      "eleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\"\241\001\n\034RoleAttachmentDeleteResponse\0224\n" +
-      "\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(\0132\025.v1.Rat" +
-      "eLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370" +
-      "\263\007\005\250\363\263\007\001\"^\n\031RoleAttachmentListRequest\022%\n" +
-      "\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006" +
-      "filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\277\001\n\032RoleAttachm" +
-      "entListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
-      "esponseMetadata\0228\n\020role_attachments\030\002 \003(" +
-      "\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrat" +
+      "\n\026role_attachments.proto\022\002v1\032\roptions.pr" +
+      "oto\032\nspec.proto\"\177\n\033RoleAttachmentCreateR" +
+      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestM" +
+      "etadata\0227\n\017role_attachment\030\002 \001(\0132\022.v1.Ro" +
+      "leAttachmentB\n\362\370\263\007\005\260\363\263\007\001\"\332\001\n\034RoleAttachm" +
+      "entCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cre" +
+      "ateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017role_" +
+      "attachment\030\002 \001(\0132\022.v1.RoleAttachmentB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLi" +
+      "mitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005" +
+      "\250\363\263\007\001\"X\n\030RoleAttachmentGetRequest\022$\n\004met" +
+      "a\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\324\001\n\031RoleAttachmentGetRes" +
+      "ponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMeta" +
+      "dataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017role_attachment\030\002 \001(" +
+      "\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrat" +
       "e_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\226\003\n\016RoleAttachment\0220\n" +
-      "\002id\030\001 \001(\tB$\362\370\263\007\037\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\016RoleAtt" +
-      "achment\022G\n\021composite_role_id\030\002 \001(\tB,\362\370\263\007" +
-      "\'\242\363\263\007\017CompositeRoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role" +
-      "\022=\n\020attached_role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006Ro" +
-      "leID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:\311\001\372\370\263\007t\242\363\263\007\010Role" +
-      "Role\250\363\263\007\001\302\363\263\007]\242\363\263\007(tf_examples/role_atta" +
-      "chment_resource.txt\252\363\263\007+tf_examples/role" +
-      "_attachment_data_source.txt\222AM2K{ \"id\": " +
-      "\"ra-244\", \"composite_role_id\": \"r-111\", " +
-      "\"attached_role_id\":\"r-444\"}2\303\004\n\017RoleAtta" +
-      "chments\022\331\001\n\006Create\022\037.v1.RoleAttachmentCr" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"^\n\033RoleAt" +
+      "tachmentDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
+      ".DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\"\241\001\n\034RoleAttachmentDeleteResponse\022" +
+      "4\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadat" +
+      "aB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(\0132\025.v1.R" +
+      "ateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"^\n\031RoleAttachmentListRequest\022" +
+      "%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032" +
+      "\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\277\001\n\032RoleAttac" +
+      "hmentListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Lis" +
+      "tResponseMetadata\0228\n\020role_attachments\030\002 " +
+      "\003(\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nr" +
+      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\305\002\n\016RoleAttachment\022" +
+      "0\n\002id\030\001 \001(\tB$\362\370\263\007\037\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\016RoleA" +
+      "ttachment\022G\n\021composite_role_id\030\002 \001(\tB,\362\370" +
+      "\263\007\'\242\363\263\007\017CompositeRoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Ro" +
+      "le\022=\n\020attached_role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006" +
+      "RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:y\372\370\263\007t\242\363\263\007\010Rol" +
+      "eRole\250\363\263\007\001\302\363\263\007]\242\363\263\007(tf_examples/role_att" +
+      "achment_resource.txt\252\363\263\007+tf_examples/rol" +
+      "e_attachment_data_source.txt2\223\004\n\017RoleAtt" +
+      "achments\022y\n\006Create\022\037.v1.RoleAttachmentCr" +
       "eateRequest\032 .v1.RoleAttachmentCreateRes" +
-      "ponse\"\213\001\202\323\344\223\002\031\"\024/v1/role_attachments:\001*\222" +
-      "Ai\"g\n\"Learn how to make a RoleAttachment" +
-      "\022Ahttps://www.strongdm.com/docs/api/serv" +
-      "ices/RoleAttachments#Create\022e\n\003Get\022\034.v1." +
-      "RoleAttachmentGetRequest\032\035.v1.RoleAttach" +
-      "mentGetResponse\"!\202\323\344\223\002\033\022\031/v1/role_attach" +
-      "ments/{id}\022n\n\006Delete\022\037.v1.RoleAttachment" +
+      "ponse\",\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role_" +
+      "attachments\022t\n\003Get\022\034.v1.RoleAttachmentGe" +
+      "tRequest\032\035.v1.RoleAttachmentGetResponse\"" +
+      "0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/role_attachm" +
+      "ents/{id}\022\200\001\n\006Delete\022\037.v1.RoleAttachment" +
       "DeleteRequest\032 .v1.RoleAttachmentDeleteR" +
-      "esponse\"!\202\323\344\223\002\033*\031/v1/role_attachments/{i" +
-      "d}\022c\n\004List\022\035.v1.RoleAttachmentListReques" +
-      "t\032\036.v1.RoleAttachmentListResponse\"\034\202\323\344\223\002" +
-      "\026\022\024/v1/role_attachments\032\030\312\371\263\007\023\302\371\263\007\016RoleA" +
-      "ttachmentBk\n\034com.strongdm.api.v1.plumbin" +
-      "gB\027RoleAttachmentsPlumbingZ2github.com/s" +
-      "trongdm/strongdm-sdk-go/internal/v1;v1b\006" +
-      "proto3"
+      "esponse\"3\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\036\252\363\263\007\031/v1/r" +
+      "ole_attachments/{id}\022r\n\004List\022\035.v1.RoleAt" +
+      "tachmentListRequest\032\036.v1.RoleAttachmentL" +
+      "istResponse\"+\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\031\252\363\263\007\024/v1/" +
+      "role_attachments\032\030\312\371\263\007\023\302\371\263\007\016RoleAttachme" +
+      "ntBk\n\034com.strongdm.api.v1.plumbingB\027Role" +
+      "AttachmentsPlumbingZ2github.com/strongdm" +
+      "/strongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
         });
@@ -9595,16 +9587,12 @@ public final class RoleAttachmentsPlumbing {
         new java.lang.String[] { "Id", "CompositeRoleId", "AttachedRoleId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
   }

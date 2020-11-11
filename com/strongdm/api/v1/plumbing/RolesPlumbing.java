@@ -12023,73 +12023,67 @@ public final class RolesPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013roles.proto\022\002v1\032\034google/api/annotation" +
-      "s.proto\032.protoc-gen-openapiv2/options/an" +
-      "notations.proto\032\roptions.proto\032\nspec.pro" +
-      "to\032\ntags.proto\"`\n\021RoleCreateRequest\022\'\n\004m" +
-      "eta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022\"\n\004" +
-      "role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\273\001\n\022Rol" +
-      "eCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Creat" +
-      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 " +
-      "\001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030" +
-      "\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016RoleGetRequest" +
-      "\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026" +
-      "\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\265\001\n\017RoleGetRespon" +
-      "se\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadat" +
-      "aB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateL" +
-      "imitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007" +
-      "\005\250\363\263\007\001\"l\n\021RoleUpdateRequest\022\'\n\004meta\030\001 \001(" +
-      "\0132\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002 \001(\t" +
-      "\022\"\n\004role\030\003 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\273\001\n" +
-      "\022RoleUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.U" +
-      "pdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004rol" +
-      "e\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_li" +
-      "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDelete" +
-      "Request\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequest" +
-      "Metadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\227\001\n\022Rol" +
-      "eDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delet" +
-      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_li" +
-      "mit\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleListRe" +
-      "quest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMeta" +
-      "data\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\240\001\n\020Rol" +
-      "eListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRes" +
-      "ponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.RoleB\n" +
-      "\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Rate" +
-      "LimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\300\002\n\004" +
-      "Role\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004" +
-      "Role\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300" +
-      "\363\263\007\001\0220\n\tcomposite\030\003 \001(\010B\035\362\370\263\007\030\242\363\263\007\tCompo" +
-      "site\260\363\263\007\001\340\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023" +
-      "\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\210\001\372\370\263\007Z\242\363\263\007\004Role\250\363\263\007" +
-      "\001\302\363\263\007G\242\363\263\007\035tf_examples/role_resource.txt" +
-      "\252\363\263\007 tf_examples/role_data_source.txt\222A&" +
-      "2${ \"id\": \"r-7\", \"name\": \"happy-goat\"}2\362" +
-      "\003\n\005Roles\022\245\001\n\006Create\022\025.v1.RoleCreateReque" +
-      "st\032\026.v1.RoleCreateResponse\"l\202\323\344\223\002\016\"\t/v1/" +
-      "roles:\001*\222AU\"S\n\030Learn how to make a Role\022" +
-      "7https://www.strongdm.com/docs/api/servi" +
-      "ces/Roles#Create\022F\n\003Get\022\022.v1.RoleGetRequ" +
-      "est\032\023.v1.RoleGetResponse\"\026\202\323\344\223\002\020\022\016/v1/ro" +
-      "les/{id}\022R\n\006Update\022\025.v1.RoleUpdateReques" +
-      "t\032\026.v1.RoleUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/r" +
-      "oles/{id}:\001*\022O\n\006Delete\022\025.v1.RoleDeleteRe" +
-      "quest\032\026.v1.RoleDeleteResponse\"\026\202\323\344\223\002\020*\016/" +
-      "v1/roles/{id}\022D\n\004List\022\023.v1.RoleListReque" +
-      "st\032\024.v1.RoleListResponse\"\021\202\323\344\223\002\013\022\t/v1/ro" +
-      "les\032\016\312\371\263\007\t\302\371\263\007\004RoleBa\n\034com.strongdm.api." +
-      "v1.plumbingB\rRolesPlumbingZ2github.com/s" +
-      "trongdm/strongdm-sdk-go/internal/v1;v1b\006" +
-      "proto3"
+      "\n\013roles.proto\022\002v1\032\roptions.proto\032\nspec.p" +
+      "roto\032\ntags.proto\"`\n\021RoleCreateRequest\022\'\n" +
+      "\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022\"" +
+      "\n\004role\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\273\001\n\022R" +
+      "oleCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cre" +
+      "ateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030" +
+      "\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limi" +
+      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016RoleGetReque" +
+      "st\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata" +
+      "\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\265\001\n\017RoleGetResp" +
+      "onse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetad" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\002 \001(\0132\010.v1.RoleB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
+      "eLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"l\n\021RoleUpdateRequest\022\'\n\004meta\030\001 " +
+      "\001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002 \001" +
+      "(\t\022\"\n\004role\030\003 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\"\273" +
+      "\001\n\022RoleUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1" +
+      ".UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004r" +
+      "ole\030\002 \001(\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_" +
+      "limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021RoleDele" +
+      "teRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteReque" +
+      "stMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\227\001\n\022R" +
+      "oleDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Del" +
+      "eteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_" +
+      "limit\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017RoleList" +
+      "Request\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMe" +
+      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\240\001\n\020R" +
+      "oleListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
+      "esponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.Role" +
+      "B\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\226\002" +
+      "\n\004Role\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263" +
+      "\007\004Role\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007" +
+      "\001\300\363\263\007\001\0220\n\tcomposite\030\003 \001(\010B\035\362\370\263\007\030\242\363\263\007\tCom" +
+      "posite\260\363\263\007\001\340\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.Tags" +
+      "B\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:_\372\370\263\007Z\242\363\263\007\004Role\250\363\263" +
+      "\007\001\302\363\263\007G\242\363\263\007\035tf_examples/role_resource.tx" +
+      "t\252\363\263\007 tf_examples/role_data_source.txt2\342" +
+      "\003\n\005Roles\022Z\n\006Create\022\025.v1.RoleCreateReques" +
+      "t\032\026.v1.RoleCreateResponse\"!\202\371\263\007\t\242\363\263\007\004pos" +
+      "t\202\371\263\007\016\252\363\263\007\t/v1/roles\022U\n\003Get\022\022.v1.RoleGet" +
+      "Request\032\023.v1.RoleGetResponse\"%\202\371\263\007\010\242\363\263\007\003" +
+      "get\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022^\n\006Update\022\025." +
+      "v1.RoleUpdateRequest\032\026.v1.RoleUpdateResp" +
+      "onse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/roles/{" +
+      "id}\022a\n\006Delete\022\025.v1.RoleDeleteRequest\032\026.v" +
+      "1.RoleDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371" +
+      "\263\007\023\252\363\263\007\016/v1/roles/{id}\022S\n\004List\022\023.v1.Role" +
+      "ListRequest\032\024.v1.RoleListResponse\" \202\371\263\007\010" +
+      "\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004R" +
+      "oleBa\n\034com.strongdm.api.v1.plumbingB\rRol" +
+      "esPlumbingZ2github.com/strongdm/strongdm" +
+      "-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
           com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
@@ -12162,16 +12156,12 @@ public final class RolesPlumbing {
         new java.lang.String[] { "Id", "Name", "Composite", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
     com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();

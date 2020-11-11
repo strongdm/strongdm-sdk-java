@@ -1887,27 +1887,26 @@ public final class ControlPanelPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023control_panel.proto\022\002v1\032\034google/api/an" +
-      "notations.proto\032\roptions.proto\032\nspec.pro" +
-      "to\"L\n$ControlPanelGetSSHCAPublicKeyReque" +
-      "st\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata" +
-      "\"\307\001\n%ControlPanelGetSSHCAPublicKeyRespon" +
-      "se\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadat" +
-      "aB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\npublic_key\030\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimit" +
-      "MetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263" +
-      "\007\0012\233\001\n\014ControlPanel\022\212\001\n\021GetSSHCAPublicKe" +
-      "y\022(.v1.ControlPanelGetSSHCAPublicKeyRequ" +
-      "est\032).v1.ControlPanelGetSSHCAPublicKeyRe" +
-      "sponse\" \202\323\344\223\002\032\022\030/v1/control_panel/ssh/ca" +
-      "Bh\n\034com.strongdm.api.v1.plumbingB\024Contro" +
-      "lPanelPlumbingZ2github.com/strongdm/stro" +
-      "ngdm-sdk-go/internal/v1;v1b\006proto3"
+      "\n\023control_panel.proto\022\002v1\032\roptions.proto" +
+      "\032\nspec.proto\"L\n$ControlPanelGetSSHCAPubl" +
+      "icKeyRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetReque" +
+      "stMetadata\"\307\001\n%ControlPanelGetSSHCAPubli" +
+      "cKeyResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRespo" +
+      "nseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\npublic_key\030\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1" +
+      ".RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001" +
+      ":\n\372\370\263\007\005\250\363\263\007\0012\252\001\n\014ControlPanel\022\231\001\n\021GetSSH" +
+      "CAPublicKey\022(.v1.ControlPanelGetSSHCAPub" +
+      "licKeyRequest\032).v1.ControlPanelGetSSHCAP" +
+      "ublicKeyResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007" +
+      "\030/v1/control_panel/ssh/caBh\n\034com.strongd" +
+      "m.api.v1.plumbingB\024ControlPanelPlumbingZ" +
+      "2github.com/strongdm/strongdm-sdk-go/int" +
+      "ernal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
         });
@@ -1925,12 +1924,11 @@ public final class ControlPanelPlumbing {
         new java.lang.String[] { "Meta", "PublicKey", "RateLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.methodOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
   }
