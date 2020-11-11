@@ -1891,18 +1891,18 @@ public final class ControlPanelPlumbing {
       "notations.proto\032\roptions.proto\032\nspec.pro" +
       "to\"L\n$ControlPanelGetSSHCAPublicKeyReque" +
       "st\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata" +
-      "\"\275\001\n%ControlPanelGetSSHCAPublicKeyRespon" +
+      "\"\307\001\n%ControlPanelGetSSHCAPublicKeyRespon" +
       "se\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadat" +
       "aB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\npublic_key\030\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimit" +
-      "MetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\233\001\n\014Con" +
-      "trolPanel\022\212\001\n\021GetSSHCAPublicKey\022(.v1.Con" +
-      "trolPanelGetSSHCAPublicKeyRequest\032).v1.C" +
-      "ontrolPanelGetSSHCAPublicKeyResponse\" \202\323" +
-      "\344\223\002\032\022\030/v1/control_panel/ssh/caBh\n\034com.st" +
-      "rongdm.api.v1.plumbingB\024ControlPanelPlum" +
-      "bingZ2github.com/strongdm/strongdm-sdk-g" +
-      "o/internal/v1;v1b\006proto3"
+      "\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimit" +
+      "MetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263" +
+      "\007\0012\233\001\n\014ControlPanel\022\212\001\n\021GetSSHCAPublicKe" +
+      "y\022(.v1.ControlPanelGetSSHCAPublicKeyRequ" +
+      "est\032).v1.ControlPanelGetSSHCAPublicKeyRe" +
+      "sponse\" \202\323\344\223\002\032\022\030/v1/control_panel/ssh/ca" +
+      "Bh\n\034com.strongdm.api.v1.plumbingB\024Contro" +
+      "lPanelPlumbingZ2github.com/strongdm/stro" +
+      "ngdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

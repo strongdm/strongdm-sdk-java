@@ -14714,84 +14714,86 @@ public final class AccountsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\016accounts.proto\022\002v1\032\034google/api/annotat" +
-      "ions.proto\032,protoc-gen-swagger/options/a" +
-      "nnotations.proto\032\roptions.proto\032\nspec.pr" +
-      "oto\032\ntags.proto\"i\n\024AccountCreateRequest\022" +
-      "\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadata" +
-      "\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\332\001\n\025AccountCreateResponse\0224\n\004meta\030\001 \001" +
-      "(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022\036\n\005token\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\0225\n\n" +
-      "rate_limit\030\004 \001(\0132\025.v1.RateLimitMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Q\n\021AccountGetReq" +
-      "uest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetada" +
-      "ta\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\264\001\n\022AccountGe" +
-      "tResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponse" +
-      "MetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007account\030\002 \001(\0132\013." +
-      "v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001" +
-      "(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372" +
-      "\370\263\007\005\250\363\263\007\001\"u\n\024AccountUpdateRequest\022\'\n\004met" +
-      "a\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id" +
-      "\030\002 \001(\t\022(\n\007account\030\003 \001(\0132\013.v1.AccountB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\"\272\001\n\025AccountUpdateResponse\0224\n\004me" +
-      "ta\030\001 \001(\0132\032.v1.UpdateResponseMetadataB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Rate" +
-      "LimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n" +
-      "\024AccountDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
-      ".DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\"\220\001\n\025AccountDeleteResponse\0224\n\004meta" +
-      "\030\001 \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimi" +
-      "tMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n\022Acc" +
-      "ountListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListR" +
-      "equestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\237\001\n\023AccountListResponse\022&\n\004meta\030\001 \001(\013" +
-      "2\030.v1.ListResponseMetadata\022)\n\010accounts\030\002" +
-      " \003(\0132\013.v1.AccountB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_li" +
-      "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\"\342\001\n\007Account\022\030\n\004user\030\001 \001(\0132\010.v1.User" +
-      "H\000\022\036\n\007service\030\002 \001(\0132\013.v1.ServiceH\000:a\372\370\263\007" +
-      "\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf_examples/account" +
-      "_resource.txt\252\363\263\007#tf_examples/account_da" +
-      "ta_source.txtB:\n\007account\022/\252\370\263\007\t\242\370\263\007\004User" +
-      "\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263\007\004tags\"\242\002\n\004Us" +
-      "er\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Us" +
-      "er\022(\n\005email\030\002 \001(\tB\031\362\370\263\007\024\242\363\263\007\005Email\260\363\263\007\001\300" +
-      "\363\263\007\001\0221\n\nfirst_name\030\003 \001(\tB\035\362\370\263\007\030\242\363\263\007\tFirs" +
-      "tName\260\363\263\007\001\300\363\263\007\001\022/\n\tlast_name\030\004 \001(\tB\034\362\370\263\007" +
-      "\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"\n\tsuspended\030\005 " +
-      "\001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\006 \001(\0132\010.v1." +
-      "TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Use" +
-      "r\250\363\263\007\001\"\303\001\n\007Service\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263" +
-      "\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n\004name\030\002 \001(\tB\034\362\370\263\007\027\242" +
-      "\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"\n\tsuspended\030\003 \001(" +
-      "\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.Ta" +
-      "gsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004User\250" +
-      "\363\263\007\0012\253\004\n\010Accounts\022\264\001\n\006Create\022\030.v1.Accoun" +
-      "tCreateRequest\032\031.v1.AccountCreateRespons" +
-      "e\"u\202\323\344\223\002\021\"\014/v1/accounts:\001*\222A[\"Y\n\033Learn h" +
-      "ow to make a Account\022:https://www.strong" +
-      "dm.com/docs/api/services/Accounts#Create" +
-      "\022O\n\003Get\022\025.v1.AccountGetRequest\032\026.v1.Acco" +
-      "untGetResponse\"\031\202\323\344\223\002\023\022\021/v1/accounts/{id" +
-      "}\022[\n\006Update\022\030.v1.AccountUpdateRequest\032\031." +
-      "v1.AccountUpdateResponse\"\034\202\323\344\223\002\026\032\021/v1/ac" +
-      "counts/{id}:\001*\022X\n\006Delete\022\030.v1.AccountDel" +
-      "eteRequest\032\031.v1.AccountDeleteResponse\"\031\202" +
-      "\323\344\223\002\023*\021/v1/accounts/{id}\022M\n\004List\022\026.v1.Ac" +
-      "countListRequest\032\027.v1.AccountListRespons" +
-      "e\"\024\202\323\344\223\002\016\022\014/v1/accounts\032\021\312\371\263\007\014\302\371\263\007\007Accou" +
-      "ntBd\n\034com.strongdm.api.v1.plumbingB\020Acco" +
-      "untsPlumbingZ2github.com/strongdm/strong" +
-      "dm-sdk-go/internal/v1;v1b\006proto3"
+      "ions.proto\032.protoc-gen-openapiv2/options" +
+      "/annotations.proto\032\roptions.proto\032\nspec." +
+      "proto\032\ntags.proto\"i\n\024AccountCreateReques" +
+      "t\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMetada" +
+      "ta\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\"\344\001\n\025AccountCreateResponse\0224\n\004meta\030\001" +
+      " \001(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022(\n\007account\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\036\n\005token\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\022?" +
+      "\n\nrate_limit\030\004 \001(\0132\025.v1.RateLimitMetadat" +
+      "aB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Q\n\021A" +
+      "ccountGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetR" +
+      "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\276" +
+      "\001\n\022AccountGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1" +
+      ".GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007acco" +
+      "unt\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nra" +
+      "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"u\n\024Accou" +
+      "ntUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Updat" +
+      "eRequestMetadata\022\n\n\002id\030\002 \001(\t\022(\n\007account\030" +
+      "\003 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\"\304\001\n\025Accou" +
+      "ntUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Upda" +
+      "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022(\n\007accoun" +
+      "t\030\002 \001(\0132\013.v1.AccountB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate" +
+      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n\024Account" +
+      "DeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteR" +
+      "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\232" +
+      "\001\n\025AccountDeleteResponse\0224\n\004meta\030\001 \001(\0132\032" +
+      ".v1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?" +
+      "\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimitMetadat" +
+      "aB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"W\n\022A" +
+      "ccountListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.Lis" +
+      "tRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\"\251\001\n\023AccountListResponse\022&\n\004meta\030\001 \001" +
+      "(\0132\030.v1.ListResponseMetadata\022)\n\010accounts" +
+      "\030\002 \003(\0132\013.v1.AccountB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_" +
+      "limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\342\001\n\007Account\022\030\n\004user\030\001 \001" +
+      "(\0132\010.v1.UserH\000\022\036\n\007service\030\002 \001(\0132\013.v1.Ser" +
+      "viceH\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf_exam" +
+      "ples/account_resource.txt\252\363\263\007#tf_example" +
+      "s/account_data_source.txtB:\n\007account\022/\252\370" +
+      "\263\007\t\242\370\263\007\004User\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263\007" +
+      "\004tags\"\242\002\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID" +
+      "\260\363\263\007\001\312\363\263\007\004User\022(\n\005email\030\002 \001(\tB\031\362\370\263\007\024\242\363\263\007" +
+      "\005Email\260\363\263\007\001\300\363\263\007\001\0221\n\nfirst_name\030\003 \001(\tB\035\362\370" +
+      "\263\007\030\242\363\263\007\tFirstName\260\363\263\007\001\300\363\263\007\001\022/\n\tlast_name" +
+      "\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"\n\t" +
+      "suspended\030\005 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022+\n\004tags" +
+      "\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372" +
+      "\370\263\007\016\242\363\263\007\004User\250\363\263\007\001\"\303\001\n\007Service\022&\n\002id\030\001 \001" +
+      "(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n\004name\030\002" +
+      " \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"\n\tsu" +
+      "spended\030\003 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\004" +
+      " \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263" +
+      "\007\016\242\363\263\007\004User\250\363\263\007\0012\253\004\n\010Accounts\022\264\001\n\006Create" +
+      "\022\030.v1.AccountCreateRequest\032\031.v1.AccountC" +
+      "reateResponse\"u\202\323\344\223\002\021\"\014/v1/accounts:\001*\222A" +
+      "[\"Y\n\033Learn how to make a Account\022:https:" +
+      "//www.strongdm.com/docs/api/services/Acc" +
+      "ounts#Create\022O\n\003Get\022\025.v1.AccountGetReque" +
+      "st\032\026.v1.AccountGetResponse\"\031\202\323\344\223\002\023\022\021/v1/" +
+      "accounts/{id}\022[\n\006Update\022\030.v1.AccountUpda" +
+      "teRequest\032\031.v1.AccountUpdateResponse\"\034\202\323" +
+      "\344\223\002\026\032\021/v1/accounts/{id}:\001*\022X\n\006Delete\022\030.v" +
+      "1.AccountDeleteRequest\032\031.v1.AccountDelet" +
+      "eResponse\"\031\202\323\344\223\002\023*\021/v1/accounts/{id}\022M\n\004" +
+      "List\022\026.v1.AccountListRequest\032\027.v1.Accoun" +
+      "tListResponse\"\024\202\323\344\223\002\016\022\014/v1/accounts\032\021\312\371\263" +
+      "\007\014\302\371\263\007\007AccountBd\n\034com.strongdm.api.v1.pl" +
+      "umbingB\020AccountsPlumbingZ2github.com/str" +
+      "ongdm/strongdm-sdk-go/internal/v1;v1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
           com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
@@ -14877,7 +14879,7 @@ public final class AccountsPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.oneofOptions);
@@ -14885,7 +14887,7 @@ public final class AccountsPlumbing {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
     com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();

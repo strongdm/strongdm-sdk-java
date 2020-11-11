@@ -12012,7 +12012,7 @@ public final class NodesPlumbing {
      * "unknown".
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The state.
      */
     java.lang.String getState();
@@ -12023,7 +12023,7 @@ public final class NodesPlumbing {
      * "unknown".
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for state.
      */
     com.google.protobuf.ByteString
@@ -12272,7 +12272,7 @@ public final class NodesPlumbing {
      * "unknown".
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The state.
      */
     @java.lang.Override
@@ -12295,7 +12295,7 @@ public final class NodesPlumbing {
      * "unknown".
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for state.
      */
     @java.lang.Override
@@ -12921,7 +12921,7 @@ public final class NodesPlumbing {
        * "unknown".
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The state.
        */
       public java.lang.String getState() {
@@ -12943,7 +12943,7 @@ public final class NodesPlumbing {
        * "unknown".
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for state.
        */
       public com.google.protobuf.ByteString
@@ -12966,7 +12966,7 @@ public final class NodesPlumbing {
        * "unknown".
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The state to set.
        * @return This builder for chaining.
        */
@@ -12987,7 +12987,7 @@ public final class NodesPlumbing {
        * "unknown".
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearState() {
@@ -13003,7 +13003,7 @@ public final class NodesPlumbing {
        * "unknown".
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for state to set.
        * @return This builder for chaining.
        */
@@ -13276,7 +13276,7 @@ public final class NodesPlumbing {
      * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The state.
      */
     java.lang.String getState();
@@ -13286,7 +13286,7 @@ public final class NodesPlumbing {
      * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for state.
      */
     com.google.protobuf.ByteString
@@ -13590,7 +13590,7 @@ public final class NodesPlumbing {
      * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The state.
      */
     @java.lang.Override
@@ -13612,7 +13612,7 @@ public final class NodesPlumbing {
      * "restarting", "started", "stopped", "dead", "unknown"
      * </pre>
      *
-     * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for state.
      */
     @java.lang.Override
@@ -14365,7 +14365,7 @@ public final class NodesPlumbing {
        * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The state.
        */
       public java.lang.String getState() {
@@ -14386,7 +14386,7 @@ public final class NodesPlumbing {
        * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for state.
        */
       public com.google.protobuf.ByteString
@@ -14408,7 +14408,7 @@ public final class NodesPlumbing {
        * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The state to set.
        * @return This builder for chaining.
        */
@@ -14428,7 +14428,7 @@ public final class NodesPlumbing {
        * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearState() {
@@ -14443,7 +14443,7 @@ public final class NodesPlumbing {
        * "restarting", "started", "stopped", "dead", "unknown"
        * </pre>
        *
-       * <code>string state = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string state = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for state to set.
        * @return This builder for chaining.
        */
@@ -14938,83 +14938,84 @@ public final class NodesPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\013nodes.proto\022\002v1\032\034google/api/annotation" +
-      "s.proto\032,protoc-gen-swagger/options/anno" +
-      "tations.proto\032\roptions.proto\032\nspec.proto" +
-      "\032\ntags.proto\"`\n\021NodeCreateRequest\022\'\n\004met" +
-      "a\030\001 \001(\0132\031.v1.CreateRequestMetadata\022\"\n\004no" +
-      "de\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\022NodeC" +
-      "reateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateR" +
-      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(" +
-      "\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005token\030\003 \001(\tB\017" +
-      "\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\0225\n\nrate_limit\030\004 \001(\0132\025.v1" +
-      ".RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263" +
-      "\007\001\"N\n\016NodeGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1." +
-      "GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\253\001\n\017NodeGetResponse\0221\n\004meta\030\001 \001(\0132\027.v" +
-      "1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004nod" +
-      "e\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_li" +
-      "mit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l\n\021NodeUpdateRequest\022\'\n" +
-      "\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n" +
-      "\n\002id\030\002 \001(\t\022\"\n\004node\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\"\261\001\n\022NodeUpdateResponse\0224\n\004meta\030\001 " +
-      "\001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "5\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetada" +
-      "taB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDelete" +
-      "Request\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequest" +
-      "Metadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\215\001\n\022Nod" +
-      "eDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delet" +
-      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_li" +
-      "mit\030\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeListRequest\022%\n\004m" +
-      "eta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fi" +
-      "lter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\226\001\n\020NodeListRespo" +
-      "nse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetad" +
-      "ata\022#\n\005nodes\030\002 \003(\0132\010.v1.NodeB\n\362\370\263\007\005\270\363\263\007\001" +
-      "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001\"\374\001\n\004Node\022\032\n\005relay\030\001 \001(\0132" +
-      "\t.v1.RelayH\000\022\036\n\007gateway\030\002 \001(\0132\013.v1.Gatew" +
-      "ayH\000:\221\001\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_examples/node_r" +
-      "esource.txt\252\363\263\007 tf_examples/node_data_so" +
-      "urce.txt\372\370\263\007\005\250\363\263\007\001\222A321\022/{\"relay\": { \"id" +
-      "\": \"n-7\", \"name\": \"happy-goat\"}}B$\n\004node" +
-      "\022\034\252\370\263\007\t\242\370\263\007\004Node\252\370\263\007\t\252\370\263\007\004tags\"\303\001\n\005Relay" +
-      "\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Node" +
-      "\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\330\363\263\007\001" +
-      "\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002" +
-      "@\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Ta" +
-      "gs\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\305\002\n\007Gateway" +
-      "\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Node" +
-      "\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\330\363\263\007\001" +
-      "\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005State\260\363\263\007\001\222A\002" +
-      "@\001\022@\n\016listen_address\030\004 \001(\tB(\362\370\263\007#\242\363\263\007\nLi" +
-      "stenAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022<\n\014bind_add" +
-      "ress\030\005 \001(\tB&\362\370\263\007!\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001" +
-      "\330\363\263\007\001\340\363\263\007\001\022+\n\004tags\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007" +
-      "\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\362\003\n" +
-      "\005Nodes\022\245\001\n\006Create\022\025.v1.NodeCreateRequest" +
-      "\032\026.v1.NodeCreateResponse\"l\202\323\344\223\002\016\"\t/v1/no" +
-      "des:\001*\222AU\"S\n\030Learn how to make a Node\0227h" +
-      "ttps://www.strongdm.com/docs/api/service" +
-      "s/Nodes#Create\022F\n\003Get\022\022.v1.NodeGetReques" +
-      "t\032\023.v1.NodeGetResponse\"\026\202\323\344\223\002\020\022\016/v1/node" +
-      "s/{id}\022R\n\006Update\022\025.v1.NodeUpdateRequest\032" +
-      "\026.v1.NodeUpdateResponse\"\031\202\323\344\223\002\023\032\016/v1/nod" +
-      "es/{id}:\001*\022O\n\006Delete\022\025.v1.NodeDeleteRequ" +
-      "est\032\026.v1.NodeDeleteResponse\"\026\202\323\344\223\002\020*\016/v1" +
-      "/nodes/{id}\022D\n\004List\022\023.v1.NodeListRequest" +
-      "\032\024.v1.NodeListResponse\"\021\202\323\344\223\002\013\022\t/v1/node" +
-      "s\032\016\312\371\263\007\t\302\371\263\007\004NodeBa\n\034com.strongdm.api.v1" +
-      ".plumbingB\rNodesPlumbingZ2github.com/str" +
-      "ongdm/strongdm-sdk-go/internal/v1;v1b\006pr" +
-      "oto3"
+      "s.proto\032.protoc-gen-openapiv2/options/an" +
+      "notations.proto\032\roptions.proto\032\nspec.pro" +
+      "to\032\ntags.proto\"`\n\021NodeCreateRequest\022\'\n\004m" +
+      "eta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022\"\n\004" +
+      "node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\333\001\n\022Nod" +
+      "eCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Creat" +
+      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 " +
+      "\001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005token\030\003 \001(\t" +
+      "B\017\362\370\263\007\n\260\363\263\007\001\360\363\263\007\001\022?\n\nrate_limit\030\004 \001(\0132\025." +
+      "v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263" +
+      "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"N\n\016NodeGetRequest\022$\n\004meta" +
+      "\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\"\265\001\n\017NodeGetResponse\0221\n\004me" +
+      "ta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMeta" +
+      "dataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"l" +
+      "\n\021NodeUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.U" +
+      "pdateRequestMetadata\022\n\n\002id\030\002 \001(\t\022\"\n\004node" +
+      "\030\003 \001(\0132\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\"\273\001\n\022NodeUpd" +
+      "ateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateRes" +
+      "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004node\030\002 \001(\0132" +
+      "\010.v1.NodeB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(" +
+      "\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\021NodeDeleteRequest\022" +
+      "\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata" +
+      "\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\227\001\n\022NodeDeleteR" +
+      "esponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRespons" +
+      "eMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(" +
+      "\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"T\n\017NodeListRequest\022%\n" +
+      "\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006" +
+      "filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\240\001\n\020NodeListRes" +
+      "ponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMet" +
+      "adata\022#\n\005nodes\030\002 \003(\0132\010.v1.NodeB\n\362\370\263\007\005\270\363\263" +
+      "\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMet" +
+      "adataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\372\001\n\004Node\022\032\n\005" +
+      "relay\030\001 \001(\0132\t.v1.RelayH\000\022\036\n\007gateway\030\002 \001(" +
+      "\0132\013.v1.GatewayH\000:\217\001\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_exa" +
+      "mples/node_resource.txt\252\363\263\007 tf_examples/" +
+      "node_data_source.txt\372\370\263\007\005\250\363\263\007\001\222A12/{\"rel" +
+      "ay\": { \"id\": \"n-7\", \"name\": \"happy-goat\"" +
+      "}}B$\n\004node\022\034\252\370\263\007\t\242\370\263\007\004Node\252\370\263\007\t\252\370\263\007\004tags" +
+      "\"\303\001\n\005Relay\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007" +
+      "\001\312\363\263\007\004Node\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name" +
+      "\260\363\263\007\001\330\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005Sta" +
+      "te\260\363\263\007\001\222A\002@\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370" +
+      "\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\305" +
+      "\002\n\007Gateway\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007" +
+      "\001\312\363\263\007\004Node\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name" +
+      "\260\363\263\007\001\330\363\263\007\001\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\017\242\363\263\007\005Sta" +
+      "te\260\363\263\007\001\222A\002@\001\022@\n\016listen_address\030\004 \001(\tB(\362\370" +
+      "\263\007#\242\363\263\007\nListenAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022<" +
+      "\n\014bind_address\030\005 \001(\tB&\362\370\263\007!\242\363\263\007\010BindAddr" +
+      "\250\363\263\007\001\260\363\263\007\001\330\363\263\007\001\340\363\263\007\001\022+\n\004tags\030\006 \001(\0132\010.v1." +
+      "TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Nod" +
+      "e\250\363\263\007\0012\362\003\n\005Nodes\022\245\001\n\006Create\022\025.v1.NodeCre" +
+      "ateRequest\032\026.v1.NodeCreateResponse\"l\202\323\344\223" +
+      "\002\016\"\t/v1/nodes:\001*\222AU\"S\n\030Learn how to make" +
+      " a Node\0227https://www.strongdm.com/docs/a" +
+      "pi/services/Nodes#Create\022F\n\003Get\022\022.v1.Nod" +
+      "eGetRequest\032\023.v1.NodeGetResponse\"\026\202\323\344\223\002\020" +
+      "\022\016/v1/nodes/{id}\022R\n\006Update\022\025.v1.NodeUpda" +
+      "teRequest\032\026.v1.NodeUpdateResponse\"\031\202\323\344\223\002" +
+      "\023\032\016/v1/nodes/{id}:\001*\022O\n\006Delete\022\025.v1.Node" +
+      "DeleteRequest\032\026.v1.NodeDeleteResponse\"\026\202" +
+      "\323\344\223\002\020*\016/v1/nodes/{id}\022D\n\004List\022\023.v1.NodeL" +
+      "istRequest\032\024.v1.NodeListResponse\"\021\202\323\344\223\002\013" +
+      "\022\t/v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004NodeBa\n\034com.stron" +
+      "gdm.api.v1.plumbingB\rNodesPlumbingZ2gith" +
+      "ub.com/strongdm/strongdm-sdk-go/internal" +
+      "/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
           com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
@@ -15100,9 +15101,9 @@ public final class NodesPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.oneofOptions);
@@ -15110,7 +15111,7 @@ public final class NodesPlumbing {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
     com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();

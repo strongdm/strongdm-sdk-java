@@ -9469,44 +9469,45 @@ public final class RoleGrantsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\021role_grants.proto\022\002v1\032\034google/api/anno" +
-      "tations.proto\032,protoc-gen-swagger/option" +
-      "s/annotations.proto\032\roptions.proto\032\nspec" +
-      ".proto\"p\n\026RoleGrantCreateRequest\022\'\n\004meta" +
-      "\030\001 \001(\0132\031.v1.CreateRequestMetadata\022-\n\nrol" +
-      "e_grant\030\002 \001(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\"\301\001\n\027RoleGrantCreateResponse\0224\n\004meta\030\001 \001" +
-      "(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022-\n\nrole_grant\030\002 \001(\0132\r.v1.RoleGrantB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateL" +
-      "imitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"S\n\023" +
-      "RoleGrantGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.G" +
-      "etRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\"\273\001\n\024RoleGrantGetResponse\0221\n\004meta\030\001 \001(\013" +
-      "2\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022-\n" +
-      "\nrole_grant\030\002 \001(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
-      "etadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Y\n\026RoleG" +
-      "rantDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Del" +
-      "eteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\222\001\n\027RoleGrantDeleteResponse\0224\n\004meta\030\001" +
-      " \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimitM" +
-      "etadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Y\n\024RoleG" +
-      "rantListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListR" +
-      "equestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\"\246\001\n\025RoleGrantListResponse\022&\n\004meta\030\001 \001" +
-      "(\0132\030.v1.ListResponseMetadata\022.\n\013role_gra" +
-      "nts\030\002 \003(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\270\363\263\007\001\0225\n\n" +
-      "rate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\"\365\002\n\tRoleGrant\0220\n\002id\030\001 \001(\tB$\362" +
-      "\370\263\007\037\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\016RolePermission\022D\n\013r" +
-      "esource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014DatasourceID" +
-      "\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0224\n\007role_id\030\003 \001" +
-      "(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:" +
-      "\271\001\372\370\263\007p\242\363\263\007\016DatasourceRole\250\363\263\007\001\302\363\263\007S\242\363\263\007" +
-      "#tf_examples/role_grant_resource.txt\252\363\263\007" +
-      "&tf_examples/role_grant_data_source.txt\222" +
-      "AA2?\022={ \"id\": \"rg-244\", \"resource_id\": \"" +
+      "tations.proto\032.protoc-gen-openapiv2/opti" +
+      "ons/annotations.proto\032\roptions.proto\032\nsp" +
+      "ec.proto\"p\n\026RoleGrantCreateRequest\022\'\n\004me" +
+      "ta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022-\n\nr" +
+      "ole_grant\030\002 \001(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\"\313\001\n\027RoleGrantCreateResponse\0224\n\004meta\030\001" +
+      " \001(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022-\n\nrole_grant\030\002 \001(\0132\r.v1.RoleGrantB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
+      "eLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"S\n\023RoleGrantGetRequest\022$\n\004meta\030" +
+      "\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\"\305\001\n\024RoleGrantGetResponse\0221" +
+      "\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022-\n\nrole_grant\030\002 \001(\0132\r.v1.RoleG" +
+      "rantB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v" +
+      "1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007" +
+      "\001:\n\372\370\263\007\005\250\363\263\007\001\"Y\n\026RoleGrantDeleteRequest\022" +
+      "\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata" +
+      "\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\234\001\n\027RoleGrantDe" +
+      "leteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRe" +
+      "sponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit" +
+      "\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Y\n\024RoleGrantList" +
+      "Request\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMe" +
+      "tadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\260\001\n\025R" +
+      "oleGrantListResponse\022&\n\004meta\030\001 \001(\0132\030.v1." +
+      "ListResponseMetadata\022.\n\013role_grants\030\002 \003(" +
+      "\0132\r.v1.RoleGrantB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_lim" +
+      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\220\364\263\007\001\"\363\002\n\tRoleGrant\0220\n\002id\030\001 \001(\tB" +
+      "$\362\370\263\007\037\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\016RolePermission\022D\n" +
+      "\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Datasource" +
+      "ID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0224\n\007role_id\030\003" +
+      " \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Rol" +
+      "e:\267\001\372\370\263\007p\242\363\263\007\016DatasourceRole\250\363\263\007\001\302\363\263\007S\242\363" +
+      "\263\007#tf_examples/role_grant_resource.txt\252\363" +
+      "\263\007&tf_examples/role_grant_data_source.tx" +
+      "t\222A?2={ \"id\": \"rg-244\", \"resource_id\": \"" +
       "rs-111\", \"role_id\":\"r-444\"}2\362\003\n\nRoleGran" +
       "ts\022\277\001\n\006Create\022\032.v1.RoleGrantCreateReques" +
       "t\032\033.v1.RoleGrantCreateResponse\"|\202\323\344\223\002\024\"\017" +
@@ -9528,7 +9529,7 @@ public final class RoleGrantsPlumbing {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
         });
@@ -9589,15 +9590,15 @@ public final class RoleGrantsPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
   }

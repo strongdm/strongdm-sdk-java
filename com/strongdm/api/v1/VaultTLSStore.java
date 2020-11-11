@@ -19,16 +19,10 @@ package com.strongdm.api.v1;
 
 public class VaultTLSStore implements SecretStore {
   private String id;
-  // option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-  // example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-  // };
   // Unique identifier of the SecretStore.
   public String getId() {
     return this.id;
   }
-  // option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-  // example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-  // };
   // Unique identifier of the SecretStore.
   public void setId(String in) {
     this.id = in;

@@ -2367,19 +2367,19 @@ public final class AuditsPlumbing {
       "ns.proto\032\roptions.proto\032\nspec.proto\032\022acc" +
       "ess_rules.proto\"c\n\025GetAccessRulesRequest" +
       "\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\030" +
-      "\n\004when\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\312\001\n" +
+      "\n\004when\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\324\001\n" +
       "\026GetAccessRulesResponse\0221\n\004meta\030\001 \001(\0132\027." +
       "v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0220\n\014ac" +
       "cess_rules\030\002 \003(\0132\016.v1.AccessRuleB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
-      "etadataB\n\362\370\263\007\005\260\363\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007" +
-      "\0012\214\001\n\006Audits\022g\n\016GetAccessRules\022\031.v1.GetA" +
-      "ccessRulesRequest\032\032.v1.GetAccessRulesRes" +
-      "ponse\"\036\202\323\344\223\002\030\022\026/v1/audit/access_rules\032\031\312" +
-      "\371\263\007\n\302\371\263\007\005Audit\312\371\263\007\005\310\371\263\007\001Bb\n\034com.strongdm" +
-      ".api.v1.plumbingB\016AuditsPlumbingZ2github" +
-      ".com/strongdm/strongdm-sdk-go/internal/v" +
-      "1;v1b\006proto3"
+      "\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
+      "etadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\250\363\263\007" +
+      "\001\372\370\263\007\005\320\363\263\007\0012\214\001\n\006Audits\022g\n\016GetAccessRules" +
+      "\022\031.v1.GetAccessRulesRequest\032\032.v1.GetAcce" +
+      "ssRulesResponse\"\036\202\323\344\223\002\030\022\026/v1/audit/acces" +
+      "s_rules\032\031\312\371\263\007\n\302\371\263\007\005Audit\312\371\263\007\005\310\371\263\007\001Bb\n\034co" +
+      "m.strongdm.api.v1.plumbingB\016AuditsPlumbi" +
+      "ngZ2github.com/strongdm/strongdm-sdk-go/" +
+      "internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

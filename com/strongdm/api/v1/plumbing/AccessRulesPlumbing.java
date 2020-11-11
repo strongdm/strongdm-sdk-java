@@ -14508,96 +14508,97 @@ public final class AccessRulesPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\022access_rules.proto\022\002v1\032\034google/api/ann" +
-      "otations.proto\032,protoc-gen-swagger/optio" +
-      "ns/annotations.proto\032\roptions.proto\032\nspe" +
-      "c.proto\032\ntags.proto\"\177\n\027AccessRuleCreateR" +
-      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestM" +
-      "etadata\022/\n\013access_rule\030\002 \001(\0132\016.v1.Access" +
-      "RuleB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\316\001\n\030AccessR" +
-      "uleCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cre" +
-      "ateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022/\n\013acces" +
-      "s_rule\030\002 \001(\0132\016.v1.AccessRuleB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001:\024\372\370\263\007\005\320\363\263\007\001\372\370\263\007\005\250\363\263\007\001\"`\n" +
-      "\024AccessRuleGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1" +
-      ".GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\310\001\n\025AccessRuleGetRespons" +
-      "e\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadata" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022/\n\013access_rule\030\002 \001(\0132\016.v1.A" +
-      "ccessRuleB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(" +
-      "\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\024\372\370" +
-      "\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\001\"\213\001\n\027AccessRuleUpdateR" +
-      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestM" +
-      "etadata\022\n\n\002id\030\002 \001(\t\022/\n\013access_rule\030\003 \001(\013" +
-      "2\016.v1.AccessRuleB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001" +
-      "\"\316\001\n\030AccessRuleUpdateResponse\0224\n\004meta\030\001 " +
-      "\001(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022/\n\013access_rule\030\002 \001(\0132\016.v1.AccessRule" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
-      "teLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372" +
-      "\370\263\007\005\320\363\263\007\001\"f\n\027AccessRuleDeleteRequest\022\'\n\004" +
-      "meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n" +
-      "\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\235\001\n\030Ac" +
-      "cessRuleDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v" +
-      "1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\n" +
-      "rate_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\001\"f\n\025Acc" +
-      "essRuleListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.Li" +
-      "stRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\265\001\n\026AccessRuleListResp" +
-      "onse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMeta" +
-      "data\0220\n\014access_rules\030\002 \003(\0132\016.v1.AccessRu" +
-      "leB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1." +
-      "RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007" +
-      "\001\"\244\003\n\nAccessRule\022,\n\002id\030\001 \001(\tB \362\370\263\007\033\242\363\263\007\002" +
-      "ID\260\363\263\007\001\312\363\263\007\nAccessRule\0226\n\rresource_type\030" +
-      "\002 \001(\tB\037\362\370\263\007\032\242\363\263\007\013DBTypeAlias\250\363\263\007\001\260\363\263\007\001\0224" +
-      "\n\007role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363" +
-      "\263\007\001\312\363\263\007\004Role\022A\n\014resource_ids\030\004 \003(\tB+\362\370\263\007" +
-      "&\242\363\263\007\rDatasourceIDs\260\363\263\007\001\312\363\263\007\nDatasource\022" +
-      "+\n\004tags\030\005 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260" +
-      "\363\263\007\001\022A\n\022affected_resources\030\006 \001(\003B%\362\370\263\007 \242" +
-      "\363\263\007\021AffectedResources\260\363\263\007\001\330\363\263\007\001:G\372\370\263\007\031\242\363" +
-      "\263\007\nAccessRule\250\363\263\007\001\320\363\263\007\001\222A&2$\022\"{ \"id\": \"a" +
-      "r-7\", \"dbtype\": \"redis\"}\"}\n\025AccessRulePl" +
-      "anRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateReque" +
-      "stMetadata\022/\n\013access_rule\030\002 \001(\0132\016.v1.Acc" +
-      "essRuleB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\303\001\n\026Acce" +
-      "ssRulePlanResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cr" +
-      "eateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022&\n\022affe" +
-      "cted_resources\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate" +
-      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:\024\372\370\263\007\005\320\363\263\007\001\372\370\263\007\005\250\363\263\007\0012\273\006\n\013Access" +
-      "Rules\022\303\001\n\004Plan\022\031.v1.AccessRulePlanReques" +
-      "t\032\032.v1.AccessRulePlanResponse\"\203\001\202\323\344\223\002\032\"\025" +
-      "/v1/access_rules/plan:\001*\222A`\"^\n\037Learn how" +
-      " to make an AccessRule\022;https://www.stro" +
-      "ngdm.com/docs/api/services/AccessRules#P" +
-      "lan\022\306\001\n\006Create\022\033.v1.AccessRuleCreateRequ" +
-      "est\032\034.v1.AccessRuleCreateResponse\"\200\001\202\323\344\223" +
-      "\002\025\"\020/v1/access_rules:\001*\222Ab\"`\n\037Learn how " +
-      "to make an AccessRule\022=https://www.stron" +
-      "gdm.com/docs/api/services/AccessRules#Cr" +
-      "eate\022Y\n\003Get\022\030.v1.AccessRuleGetRequest\032\031." +
-      "v1.AccessRuleGetResponse\"\035\202\323\344\223\002\027\022\025/v1/ac" +
-      "cess_rules/{id}\022e\n\006Update\022\033.v1.AccessRul" +
-      "eUpdateRequest\032\034.v1.AccessRuleUpdateResp" +
-      "onse\" \202\323\344\223\002\032\032\025/v1/access_rules/{id}:\001*\022b" +
-      "\n\006Delete\022\033.v1.AccessRuleDeleteRequest\032\034." +
-      "v1.AccessRuleDeleteResponse\"\035\202\323\344\223\002\027*\025/v1" +
-      "/access_rules/{id}\022W\n\004List\022\031.v1.AccessRu" +
-      "leListRequest\032\032.v1.AccessRuleListRespons" +
-      "e\"\030\202\323\344\223\002\022\022\020/v1/access_rules\032\036\312\371\263\007\017\302\371\263\007\nA" +
-      "ccessRule\312\371\263\007\005\310\371\263\007\001Bg\n\034com.strongdm.api." +
-      "v1.plumbingB\023AccessRulesPlumbingZ2github" +
-      ".com/strongdm/strongdm-sdk-go/internal/v" +
-      "1;v1b\006proto3"
+      "otations.proto\032.protoc-gen-openapiv2/opt" +
+      "ions/annotations.proto\032\roptions.proto\032\ns" +
+      "pec.proto\032\ntags.proto\"\177\n\027AccessRuleCreat" +
+      "eRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateReques" +
+      "tMetadata\022/\n\013access_rule\030\002 \001(\0132\016.v1.Acce" +
+      "ssRuleB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\330\001\n\030Acces" +
+      "sRuleCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.C" +
+      "reateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022/\n\013acc" +
+      "ess_rule\030\002 \001(\0132\016.v1.AccessRuleB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMet" +
+      "adataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\320\363\263\007\001\372" +
+      "\370\263\007\005\250\363\263\007\001\"`\n\024AccessRuleGetRequest\022$\n\004met" +
+      "a\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\322\001\n\025AccessRu" +
+      "leGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResp" +
+      "onseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022/\n\013access_rule\030" +
+      "\002 \001(\0132\016.v1.AccessRuleB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrat" +
+      "e_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\001" +
+      "\"\213\001\n\027AccessRuleUpdateRequest\022\'\n\004meta\030\001 \001" +
+      "(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002 \001(" +
+      "\t\022/\n\013access_rule\030\003 \001(\0132\016.v1.AccessRuleB\n" +
+      "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\330\001\n\030AccessRuleUpd" +
+      "ateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateRes" +
+      "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022/\n\013access_rule" +
+      "\030\002 \001(\0132\016.v1.AccessRuleB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nra" +
+      "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007" +
+      "\001\"f\n\027AccessRuleDeleteRequest\022\'\n\004meta\030\001 \001" +
+      "(\0132\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\247\001\n\030AccessRule" +
+      "DeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delete" +
+      "ResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_lim" +
+      "it\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\001\"f\n\025A" +
+      "ccessRuleListRequest\022%\n\004meta\030\001 \001(\0132\027.v1." +
+      "ListRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007\001\"\277\001\n\026AccessRuleListRe" +
+      "sponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMe" +
+      "tadata\0220\n\014access_rules\030\002 \003(\0132\016.v1.Access" +
+      "RuleB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v" +
+      "1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007" +
+      "\001:\n\372\370\263\007\005\320\363\263\007\001\"\242\003\n\nAccessRule\022,\n\002id\030\001 \001(\t" +
+      "B \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nAccessRule\0226\n\rre" +
+      "source_type\030\002 \001(\tB\037\362\370\263\007\032\242\363\263\007\013DBTypeAlias" +
+      "\250\363\263\007\001\260\363\263\007\001\0224\n\007role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006R" +
+      "oleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role\022A\n\014resource_ids" +
+      "\030\004 \003(\tB+\362\370\263\007&\242\363\263\007\rDatasourceIDs\260\363\263\007\001\312\363\263\007" +
+      "\nDatasource\022+\n\004tags\030\005 \001(\0132\010.v1.TagsB\023\362\370\263" +
+      "\007\016\242\363\263\007\004Tags\260\363\263\007\001\022A\n\022affected_resources\030\006" +
+      " \001(\003B%\362\370\263\007 \242\363\263\007\021AffectedResources\260\363\263\007\001\330\363" +
+      "\263\007\001:E\372\370\263\007\031\242\363\263\007\nAccessRule\250\363\263\007\001\320\363\263\007\001\222A$2\"" +
+      "{ \"id\": \"ar-7\", \"dbtype\": \"redis\"}\"}\n\025Ac" +
+      "cessRulePlanRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.C" +
+      "reateRequestMetadata\022/\n\013access_rule\030\002 \001(" +
+      "\0132\016.v1.AccessRuleB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\320\363\263\007" +
+      "\001\"\315\001\n\026AccessRulePlanResponse\0224\n\004meta\030\001 \001" +
+      "(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022&\n\022affected_resources\030\002 \001(\003B\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMet" +
+      "adataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\320\363\263\007\001\372" +
+      "\370\263\007\005\250\363\263\007\0012\273\006\n\013AccessRules\022\303\001\n\004Plan\022\031.v1." +
+      "AccessRulePlanRequest\032\032.v1.AccessRulePla" +
+      "nResponse\"\203\001\202\323\344\223\002\032\"\025/v1/access_rules/pla" +
+      "n:\001*\222A`\"^\n\037Learn how to make an AccessRu" +
+      "le\022;https://www.strongdm.com/docs/api/se" +
+      "rvices/AccessRules#Plan\022\306\001\n\006Create\022\033.v1." +
+      "AccessRuleCreateRequest\032\034.v1.AccessRuleC" +
+      "reateResponse\"\200\001\202\323\344\223\002\025\"\020/v1/access_rules" +
+      ":\001*\222Ab\"`\n\037Learn how to make an AccessRul" +
+      "e\022=https://www.strongdm.com/docs/api/ser" +
+      "vices/AccessRules#Create\022Y\n\003Get\022\030.v1.Acc" +
+      "essRuleGetRequest\032\031.v1.AccessRuleGetResp" +
+      "onse\"\035\202\323\344\223\002\027\022\025/v1/access_rules/{id}\022e\n\006U" +
+      "pdate\022\033.v1.AccessRuleUpdateRequest\032\034.v1." +
+      "AccessRuleUpdateResponse\" \202\323\344\223\002\032\032\025/v1/ac" +
+      "cess_rules/{id}:\001*\022b\n\006Delete\022\033.v1.Access" +
+      "RuleDeleteRequest\032\034.v1.AccessRuleDeleteR" +
+      "esponse\"\035\202\323\344\223\002\027*\025/v1/access_rules/{id}\022W" +
+      "\n\004List\022\031.v1.AccessRuleListRequest\032\032.v1.A" +
+      "ccessRuleListResponse\"\030\202\323\344\223\002\022\022\020/v1/acces" +
+      "s_rules\032\036\312\371\263\007\017\302\371\263\007\nAccessRule\312\371\263\007\005\310\371\263\007\001B" +
+      "g\n\034com.strongdm.api.v1.plumbingB\023AccessR" +
+      "ulesPlumbingZ2github.com/strongdm/strong" +
+      "dm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
           com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
@@ -14683,15 +14684,15 @@ public final class AccessRulesPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
     com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();

@@ -150,16 +150,34 @@ public final class Options {
         getCliNameBytes();
 
     /**
-     * <code>string json_name = 1941312;</code>
-     * @return The jsonName.
+     * <code>string cli_json_name = 1941312;</code>
+     * @return The cliJsonName.
      */
-    java.lang.String getJsonName();
+    java.lang.String getCliJsonName();
     /**
-     * <code>string json_name = 1941312;</code>
-     * @return The bytes for jsonName.
+     * <code>string cli_json_name = 1941312;</code>
+     * @return The bytes for cliJsonName.
      */
     com.google.protobuf.ByteString
-        getJsonNameBytes();
+        getCliJsonNameBytes();
+
+    /**
+     * <code>string json_gateway_name = 1941313;</code>
+     * @return The jsonGatewayName.
+     */
+    java.lang.String getJsonGatewayName();
+    /**
+     * <code>string json_gateway_name = 1941313;</code>
+     * @return The bytes for jsonGatewayName.
+     */
+    com.google.protobuf.ByteString
+        getJsonGatewayNameBytes();
+
+    /**
+     * <code>bool hide_from_json_gateway = 1941314;</code>
+     * @return The hideFromJsonGateway.
+     */
+    boolean getHideFromJsonGateway();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -177,7 +195,8 @@ public final class Options {
       name_ = "";
       idType_ = "";
       cliName_ = "";
-      jsonName_ = "";
+      cliJsonName_ = "";
+      jsonGatewayName_ = "";
     }
 
     @java.lang.Override
@@ -276,7 +295,18 @@ public final class Options {
             case 15530498: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              jsonName_ = s;
+              cliJsonName_ = s;
+              break;
+            }
+            case 15530506: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jsonGatewayName_ = s;
+              break;
+            }
+            case 15530512: {
+
+              hideFromJsonGateway_ = input.readBool();
               break;
             }
             default: {
@@ -547,42 +577,91 @@ public final class Options {
       }
     }
 
-    public static final int JSON_NAME_FIELD_NUMBER = 1941312;
-    private volatile java.lang.Object jsonName_;
+    public static final int CLI_JSON_NAME_FIELD_NUMBER = 1941312;
+    private volatile java.lang.Object cliJsonName_;
     /**
-     * <code>string json_name = 1941312;</code>
-     * @return The jsonName.
+     * <code>string cli_json_name = 1941312;</code>
+     * @return The cliJsonName.
      */
     @java.lang.Override
-    public java.lang.String getJsonName() {
-      java.lang.Object ref = jsonName_;
+    public java.lang.String getCliJsonName() {
+      java.lang.Object ref = cliJsonName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jsonName_ = s;
+        cliJsonName_ = s;
         return s;
       }
     }
     /**
-     * <code>string json_name = 1941312;</code>
-     * @return The bytes for jsonName.
+     * <code>string cli_json_name = 1941312;</code>
+     * @return The bytes for cliJsonName.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getJsonNameBytes() {
-      java.lang.Object ref = jsonName_;
+        getCliJsonNameBytes() {
+      java.lang.Object ref = cliJsonName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jsonName_ = b;
+        cliJsonName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int JSON_GATEWAY_NAME_FIELD_NUMBER = 1941313;
+    private volatile java.lang.Object jsonGatewayName_;
+    /**
+     * <code>string json_gateway_name = 1941313;</code>
+     * @return The jsonGatewayName.
+     */
+    @java.lang.Override
+    public java.lang.String getJsonGatewayName() {
+      java.lang.Object ref = jsonGatewayName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jsonGatewayName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string json_gateway_name = 1941313;</code>
+     * @return The bytes for jsonGatewayName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJsonGatewayNameBytes() {
+      java.lang.Object ref = jsonGatewayName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jsonGatewayName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER = 1941314;
+    private boolean hideFromJsonGateway_;
+    /**
+     * <code>bool hide_from_json_gateway = 1941314;</code>
+     * @return The hideFromJsonGateway.
+     */
+    @java.lang.Override
+    public boolean getHideFromJsonGateway() {
+      return hideFromJsonGateway_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -635,8 +714,14 @@ public final class Options {
       if (!getCliNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, cliName_);
       }
-      if (!getJsonNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, jsonName_);
+      if (!getCliJsonNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, cliJsonName_);
+      }
+      if (!getJsonGatewayNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941313, jsonGatewayName_);
+      }
+      if (hideFromJsonGateway_ != false) {
+        output.writeBool(1941314, hideFromJsonGateway_);
       }
       unknownFields.writeTo(output);
     }
@@ -692,8 +777,15 @@ public final class Options {
       if (!getCliNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, cliName_);
       }
-      if (!getJsonNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, jsonName_);
+      if (!getCliJsonNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, cliJsonName_);
+      }
+      if (!getJsonGatewayNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941313, jsonGatewayName_);
+      }
+      if (hideFromJsonGateway_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941314, hideFromJsonGateway_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -734,8 +826,12 @@ public final class Options {
           != other.getSensitive()) return false;
       if (!getCliName()
           .equals(other.getCliName())) return false;
-      if (!getJsonName()
-          .equals(other.getJsonName())) return false;
+      if (!getCliJsonName()
+          .equals(other.getCliJsonName())) return false;
+      if (!getJsonGatewayName()
+          .equals(other.getJsonGatewayName())) return false;
+      if (getHideFromJsonGateway()
+          != other.getHideFromJsonGateway()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -780,8 +876,13 @@ public final class Options {
           getSensitive());
       hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCliName().hashCode();
-      hash = (37 * hash) + JSON_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getJsonName().hashCode();
+      hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCliJsonName().hashCode();
+      hash = (37 * hash) + JSON_GATEWAY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getJsonGatewayName().hashCode();
+      hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHideFromJsonGateway());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -939,7 +1040,11 @@ public final class Options {
 
         cliName_ = "";
 
-        jsonName_ = "";
+        cliJsonName_ = "";
+
+        jsonGatewayName_ = "";
+
+        hideFromJsonGateway_ = false;
 
         return this;
       }
@@ -979,7 +1084,9 @@ public final class Options {
         result.writeOnly_ = writeOnly_;
         result.sensitive_ = sensitive_;
         result.cliName_ = cliName_;
-        result.jsonName_ = jsonName_;
+        result.cliJsonName_ = cliJsonName_;
+        result.jsonGatewayName_ = jsonGatewayName_;
+        result.hideFromJsonGateway_ = hideFromJsonGateway_;
         onBuilt();
         return result;
       }
@@ -1067,9 +1174,16 @@ public final class Options {
           cliName_ = other.cliName_;
           onChanged();
         }
-        if (!other.getJsonName().isEmpty()) {
-          jsonName_ = other.jsonName_;
+        if (!other.getCliJsonName().isEmpty()) {
+          cliJsonName_ = other.cliJsonName_;
           onChanged();
+        }
+        if (!other.getJsonGatewayName().isEmpty()) {
+          jsonGatewayName_ = other.jsonGatewayName_;
+          onChanged();
+        }
+        if (other.getHideFromJsonGateway() != false) {
+          setHideFromJsonGateway(other.getHideFromJsonGateway());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1676,78 +1790,185 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object jsonName_ = "";
+      private java.lang.Object cliJsonName_ = "";
       /**
-       * <code>string json_name = 1941312;</code>
-       * @return The jsonName.
+       * <code>string cli_json_name = 1941312;</code>
+       * @return The cliJsonName.
        */
-      public java.lang.String getJsonName() {
-        java.lang.Object ref = jsonName_;
+      public java.lang.String getCliJsonName() {
+        java.lang.Object ref = cliJsonName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          jsonName_ = s;
+          cliJsonName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string json_name = 1941312;</code>
-       * @return The bytes for jsonName.
+       * <code>string cli_json_name = 1941312;</code>
+       * @return The bytes for cliJsonName.
        */
       public com.google.protobuf.ByteString
-          getJsonNameBytes() {
-        java.lang.Object ref = jsonName_;
+          getCliJsonNameBytes() {
+        java.lang.Object ref = cliJsonName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          jsonName_ = b;
+          cliJsonName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string json_name = 1941312;</code>
-       * @param value The jsonName to set.
+       * <code>string cli_json_name = 1941312;</code>
+       * @param value The cliJsonName to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonName(
+      public Builder setCliJsonName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        jsonName_ = value;
+        cliJsonName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string json_name = 1941312;</code>
+       * <code>string cli_json_name = 1941312;</code>
        * @return This builder for chaining.
        */
-      public Builder clearJsonName() {
+      public Builder clearCliJsonName() {
         
-        jsonName_ = getDefaultInstance().getJsonName();
+        cliJsonName_ = getDefaultInstance().getCliJsonName();
         onChanged();
         return this;
       }
       /**
-       * <code>string json_name = 1941312;</code>
-       * @param value The bytes for jsonName to set.
+       * <code>string cli_json_name = 1941312;</code>
+       * @param value The bytes for cliJsonName to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonNameBytes(
+      public Builder setCliJsonNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        jsonName_ = value;
+        cliJsonName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jsonGatewayName_ = "";
+      /**
+       * <code>string json_gateway_name = 1941313;</code>
+       * @return The jsonGatewayName.
+       */
+      public java.lang.String getJsonGatewayName() {
+        java.lang.Object ref = jsonGatewayName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jsonGatewayName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string json_gateway_name = 1941313;</code>
+       * @return The bytes for jsonGatewayName.
+       */
+      public com.google.protobuf.ByteString
+          getJsonGatewayNameBytes() {
+        java.lang.Object ref = jsonGatewayName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jsonGatewayName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string json_gateway_name = 1941313;</code>
+       * @param value The jsonGatewayName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonGatewayName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jsonGatewayName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_gateway_name = 1941313;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonGatewayName() {
+        
+        jsonGatewayName_ = getDefaultInstance().getJsonGatewayName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_gateway_name = 1941313;</code>
+       * @param value The bytes for jsonGatewayName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonGatewayNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jsonGatewayName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean hideFromJsonGateway_ ;
+      /**
+       * <code>bool hide_from_json_gateway = 1941314;</code>
+       * @return The hideFromJsonGateway.
+       */
+      @java.lang.Override
+      public boolean getHideFromJsonGateway() {
+        return hideFromJsonGateway_;
+      }
+      /**
+       * <code>bool hide_from_json_gateway = 1941314;</code>
+       * @param value The hideFromJsonGateway to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHideFromJsonGateway(boolean value) {
+        
+        hideFromJsonGateway_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool hide_from_json_gateway = 1941314;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHideFromJsonGateway() {
+        
+        hideFromJsonGateway_ = false;
         onChanged();
         return this;
       }
@@ -1907,16 +2128,34 @@ public final class Options {
         getCliNameBytes();
 
     /**
-     * <code>string json_name = 1941308;</code>
-     * @return The jsonName.
+     * <code>string cli_json_name = 1941308;</code>
+     * @return The cliJsonName.
      */
-    java.lang.String getJsonName();
+    java.lang.String getCliJsonName();
     /**
-     * <code>string json_name = 1941308;</code>
-     * @return The bytes for jsonName.
+     * <code>string cli_json_name = 1941308;</code>
+     * @return The bytes for cliJsonName.
      */
     com.google.protobuf.ByteString
-        getJsonNameBytes();
+        getCliJsonNameBytes();
+
+    /**
+     * <code>string json_gateway_name = 1941309;</code>
+     * @return The jsonGatewayName.
+     */
+    java.lang.String getJsonGatewayName();
+    /**
+     * <code>string json_gateway_name = 1941309;</code>
+     * @return The bytes for jsonGatewayName.
+     */
+    com.google.protobuf.ByteString
+        getJsonGatewayNameBytes();
+
+    /**
+     * <code>bool hide_from_json_gateway = 1941310;</code>
+     * @return The hideFromJsonGateway.
+     */
+    boolean getHideFromJsonGateway();
   }
   /**
    * Protobuf type {@code v1.MessageOptions}
@@ -1934,7 +2173,8 @@ public final class Options {
       modelName_ = "";
       optionsField_ = "";
       cliName_ = "";
-      jsonName_ = "";
+      cliJsonName_ = "";
+      jsonGatewayName_ = "";
     }
 
     @java.lang.Override
@@ -2029,7 +2269,18 @@ public final class Options {
             case 15530466: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              jsonName_ = s;
+              cliJsonName_ = s;
+              break;
+            }
+            case 15530474: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jsonGatewayName_ = s;
+              break;
+            }
+            case 15530480: {
+
+              hideFromJsonGateway_ = input.readBool();
               break;
             }
             default: {
@@ -2277,42 +2528,91 @@ public final class Options {
       }
     }
 
-    public static final int JSON_NAME_FIELD_NUMBER = 1941308;
-    private volatile java.lang.Object jsonName_;
+    public static final int CLI_JSON_NAME_FIELD_NUMBER = 1941308;
+    private volatile java.lang.Object cliJsonName_;
     /**
-     * <code>string json_name = 1941308;</code>
-     * @return The jsonName.
+     * <code>string cli_json_name = 1941308;</code>
+     * @return The cliJsonName.
      */
     @java.lang.Override
-    public java.lang.String getJsonName() {
-      java.lang.Object ref = jsonName_;
+    public java.lang.String getCliJsonName() {
+      java.lang.Object ref = cliJsonName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jsonName_ = s;
+        cliJsonName_ = s;
         return s;
       }
     }
     /**
-     * <code>string json_name = 1941308;</code>
-     * @return The bytes for jsonName.
+     * <code>string cli_json_name = 1941308;</code>
+     * @return The bytes for cliJsonName.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getJsonNameBytes() {
-      java.lang.Object ref = jsonName_;
+        getCliJsonNameBytes() {
+      java.lang.Object ref = cliJsonName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jsonName_ = b;
+        cliJsonName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int JSON_GATEWAY_NAME_FIELD_NUMBER = 1941309;
+    private volatile java.lang.Object jsonGatewayName_;
+    /**
+     * <code>string json_gateway_name = 1941309;</code>
+     * @return The jsonGatewayName.
+     */
+    @java.lang.Override
+    public java.lang.String getJsonGatewayName() {
+      java.lang.Object ref = jsonGatewayName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jsonGatewayName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string json_gateway_name = 1941309;</code>
+     * @return The bytes for jsonGatewayName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJsonGatewayNameBytes() {
+      java.lang.Object ref = jsonGatewayName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jsonGatewayName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER = 1941310;
+    private boolean hideFromJsonGateway_;
+    /**
+     * <code>bool hide_from_json_gateway = 1941310;</code>
+     * @return The hideFromJsonGateway.
+     */
+    @java.lang.Override
+    public boolean getHideFromJsonGateway() {
+      return hideFromJsonGateway_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2353,8 +2653,14 @@ public final class Options {
       if (!getCliNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, cliName_);
       }
-      if (!getJsonNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941308, jsonName_);
+      if (!getCliJsonNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941308, cliJsonName_);
+      }
+      if (!getJsonGatewayNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941309, jsonGatewayName_);
+      }
+      if (hideFromJsonGateway_ != false) {
+        output.writeBool(1941310, hideFromJsonGateway_);
       }
       unknownFields.writeTo(output);
     }
@@ -2394,8 +2700,15 @@ public final class Options {
       if (!getCliNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, cliName_);
       }
-      if (!getJsonNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941308, jsonName_);
+      if (!getCliJsonNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941308, cliJsonName_);
+      }
+      if (!getJsonGatewayNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941309, jsonGatewayName_);
+      }
+      if (hideFromJsonGateway_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941310, hideFromJsonGateway_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2434,8 +2747,12 @@ public final class Options {
           != other.getPrivateSdk()) return false;
       if (!getCliName()
           .equals(other.getCliName())) return false;
-      if (!getJsonName()
-          .equals(other.getJsonName())) return false;
+      if (!getCliJsonName()
+          .equals(other.getCliJsonName())) return false;
+      if (!getJsonGatewayName()
+          .equals(other.getJsonGatewayName())) return false;
+      if (getHideFromJsonGateway()
+          != other.getHideFromJsonGateway()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2469,8 +2786,13 @@ public final class Options {
           getPrivateSdk());
       hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCliName().hashCode();
-      hash = (37 * hash) + JSON_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getJsonName().hashCode();
+      hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCliJsonName().hashCode();
+      hash = (37 * hash) + JSON_GATEWAY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getJsonGatewayName().hashCode();
+      hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHideFromJsonGateway());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2628,7 +2950,11 @@ public final class Options {
 
         cliName_ = "";
 
-        jsonName_ = "";
+        cliJsonName_ = "";
+
+        jsonGatewayName_ = "";
+
+        hideFromJsonGateway_ = false;
 
         return this;
       }
@@ -2672,7 +2998,9 @@ public final class Options {
         }
         result.privateSdk_ = privateSdk_;
         result.cliName_ = cliName_;
-        result.jsonName_ = jsonName_;
+        result.cliJsonName_ = cliJsonName_;
+        result.jsonGatewayName_ = jsonGatewayName_;
+        result.hideFromJsonGateway_ = hideFromJsonGateway_;
         onBuilt();
         return result;
       }
@@ -2748,9 +3076,16 @@ public final class Options {
           cliName_ = other.cliName_;
           onChanged();
         }
-        if (!other.getJsonName().isEmpty()) {
-          jsonName_ = other.jsonName_;
+        if (!other.getCliJsonName().isEmpty()) {
+          cliJsonName_ = other.cliJsonName_;
           onChanged();
+        }
+        if (!other.getJsonGatewayName().isEmpty()) {
+          jsonGatewayName_ = other.jsonGatewayName_;
+          onChanged();
+        }
+        if (other.getHideFromJsonGateway() != false) {
+          setHideFromJsonGateway(other.getHideFromJsonGateway());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3377,78 +3712,185 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object jsonName_ = "";
+      private java.lang.Object cliJsonName_ = "";
       /**
-       * <code>string json_name = 1941308;</code>
-       * @return The jsonName.
+       * <code>string cli_json_name = 1941308;</code>
+       * @return The cliJsonName.
        */
-      public java.lang.String getJsonName() {
-        java.lang.Object ref = jsonName_;
+      public java.lang.String getCliJsonName() {
+        java.lang.Object ref = cliJsonName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          jsonName_ = s;
+          cliJsonName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string json_name = 1941308;</code>
-       * @return The bytes for jsonName.
+       * <code>string cli_json_name = 1941308;</code>
+       * @return The bytes for cliJsonName.
        */
       public com.google.protobuf.ByteString
-          getJsonNameBytes() {
-        java.lang.Object ref = jsonName_;
+          getCliJsonNameBytes() {
+        java.lang.Object ref = cliJsonName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          jsonName_ = b;
+          cliJsonName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string json_name = 1941308;</code>
-       * @param value The jsonName to set.
+       * <code>string cli_json_name = 1941308;</code>
+       * @param value The cliJsonName to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonName(
+      public Builder setCliJsonName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        jsonName_ = value;
+        cliJsonName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string json_name = 1941308;</code>
+       * <code>string cli_json_name = 1941308;</code>
        * @return This builder for chaining.
        */
-      public Builder clearJsonName() {
+      public Builder clearCliJsonName() {
         
-        jsonName_ = getDefaultInstance().getJsonName();
+        cliJsonName_ = getDefaultInstance().getCliJsonName();
         onChanged();
         return this;
       }
       /**
-       * <code>string json_name = 1941308;</code>
-       * @param value The bytes for jsonName to set.
+       * <code>string cli_json_name = 1941308;</code>
+       * @param value The bytes for cliJsonName to set.
        * @return This builder for chaining.
        */
-      public Builder setJsonNameBytes(
+      public Builder setCliJsonNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        jsonName_ = value;
+        cliJsonName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object jsonGatewayName_ = "";
+      /**
+       * <code>string json_gateway_name = 1941309;</code>
+       * @return The jsonGatewayName.
+       */
+      public java.lang.String getJsonGatewayName() {
+        java.lang.Object ref = jsonGatewayName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jsonGatewayName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string json_gateway_name = 1941309;</code>
+       * @return The bytes for jsonGatewayName.
+       */
+      public com.google.protobuf.ByteString
+          getJsonGatewayNameBytes() {
+        java.lang.Object ref = jsonGatewayName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jsonGatewayName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string json_gateway_name = 1941309;</code>
+       * @param value The jsonGatewayName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonGatewayName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jsonGatewayName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_gateway_name = 1941309;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonGatewayName() {
+        
+        jsonGatewayName_ = getDefaultInstance().getJsonGatewayName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string json_gateway_name = 1941309;</code>
+       * @param value The bytes for jsonGatewayName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonGatewayNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jsonGatewayName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean hideFromJsonGateway_ ;
+      /**
+       * <code>bool hide_from_json_gateway = 1941310;</code>
+       * @return The hideFromJsonGateway.
+       */
+      @java.lang.Override
+      public boolean getHideFromJsonGateway() {
+        return hideFromJsonGateway_;
+      }
+      /**
+       * <code>bool hide_from_json_gateway = 1941310;</code>
+       * @param value The hideFromJsonGateway to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHideFromJsonGateway(boolean value) {
+        
+        hideFromJsonGateway_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool hide_from_json_gateway = 1941310;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHideFromJsonGateway() {
+        
+        hideFromJsonGateway_ = false;
         onChanged();
         return this;
       }
@@ -7103,41 +7545,44 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"\241\002\n\014FieldOptions\022\016\n\004name\030\264" +
+      "criptor.proto\"\344\002\n\014FieldOptions\022\016\n\004name\030\264" +
       "\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035\n\023expose" +
       "_as_porcelain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(" +
       "\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type\030\271\276v \001(\t" +
       "\022\022\n\010sdk_only\030\272\276v \001(\010\022\022\n\010computed\030\273\276v \001(\010" +
       "\022\023\n\tforce_new\030\274\276v \001(\010\022\024\n\nwrite_only\030\275\276v " +
       "\001(\010\022\023\n\tsensitive\030\276\276v \001(\010\022\022\n\010cli_name\030\277\276v" +
-      " \001(\t\022\023\n\tjson_name\030\300\276v \001(\t\"\207\002\n\016MessageOpt" +
-      "ions\022\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030" +
-      "\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_fiel" +
-      "d\030\267\276v \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1" +
-      ".TerraformDocs\0223\n\006custom\030\271\276v \001(\0132!.v1.Cu" +
-      "stomPorcelainMessageOptions\022\025\n\013private_s" +
-      "dk\030\272\276v \001(\010\022\022\n\010cli_name\030\273\276v \001(\t\022\023\n\tjson_n" +
-      "ame\030\274\276v \001(\t\"\266\001\n\035CustomPorcelainMessageOp" +
-      "tions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcela" +
-      "in_type\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277" +
-      "\276v \001(\t\022\"\n\030terraform_porcelain_type\030\300\276v \001" +
-      "(\t\022 \n\026openapi_porcelain_type\030\301\276v \001(\t\"T\n\r" +
-      "TerraformDocs\022\037\n\025resource_example_path\030\264" +
-      "\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v \001" +
-      "(\t\"=\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t" +
-      "\022\027\n\rcommon_fields\030\205\277v \003(\t\"<\n\016ServiceOpti" +
-      "ons\022\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030" +
-      "\231\277v \001(\010:H\n\rfield_options\022\035.google.protob" +
-      "uf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOption" +
-      "s:N\n\017message_options\022\037.google.protobuf.M" +
-      "essageOptions\030\217\277v \001(\0132\022.v1.MessageOption" +
-      "s:H\n\roneof_options\022\035.google.protobuf.One" +
-      "ofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017s" +
-      "ervice_options\022\037.google.protobuf.Service" +
-      "Options\030\231\277v \001(\0132\022.v1.ServiceOptionsBR\n\034c" +
-      "om.strongdm.api.v1.plumbingZ2github.com/" +
-      "strongdm/strongdm-sdk-go/internal/v1;v1b" +
-      "\006proto3"
+      " \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022\033\n\021json_ga" +
+      "teway_name\030\301\276v \001(\t\022 \n\026hide_from_json_gat" +
+      "eway\030\302\276v \001(\010\"\312\002\n\016MessageOptions\022\024\n\nmodel" +
+      "_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005er" +
+      "ror\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016" +
+      "terraform_docs\030\270\276v \001(\0132\021.v1.TerraformDoc" +
+      "s\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPorcelain" +
+      "MessageOptions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n" +
+      "\010cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001" +
+      "(\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026hide_" +
+      "from_json_gateway\030\276\276v \001(\010\"\266\001\n\035CustomPorc" +
+      "elainMessageOptions\022\023\n\tconverter\030\275\276v \001(\t" +
+      "\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_po" +
+      "rcelain_type\030\277\276v \001(\t\022\"\n\030terraform_porcel" +
+      "ain_type\030\300\276v \001(\t\022 \n\026openapi_porcelain_ty" +
+      "pe\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource_" +
+      "example_path\030\264\276v \001(\t\022\"\n\030data_source_exam" +
+      "ple_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nmode" +
+      "l_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v \003(\t\"" +
+      "<\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\025" +
+      "\n\013private_sdk\030\231\277v \001(\010:H\n\rfield_options\022\035" +
+      ".google.protobuf.FieldOptions\030\216\277v \001(\0132\020." +
+      "v1.FieldOptions:N\n\017message_options\022\037.goo" +
+      "gle.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1" +
+      ".MessageOptions:H\n\roneof_options\022\035.googl" +
+      "e.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.One" +
+      "ofOptions:N\n\017service_options\022\037.google.pr" +
+      "otobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Servi" +
+      "ceOptionsBR\n\034com.strongdm.api.v1.plumbin" +
+      "gZ2github.com/strongdm/strongdm-sdk-go/i" +
+      "nternal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7149,13 +7594,13 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "JsonName", });
+        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", "CliName", "JsonName", });
+        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
     internal_static_v1_CustomPorcelainMessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable = new

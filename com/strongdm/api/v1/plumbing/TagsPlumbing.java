@@ -1570,15 +1570,16 @@ public final class TagsPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntags.proto\022\002v1\032\roptions.proto\"\330\001\n\004Tags" +
-      "\022\034\n\005pairs\030\001 \003(\0132\r.v1.Tags.Pair\032#\n\004Pair\022\014" +
-      "\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\214\001\372\370\263\007\206\001\312\363\263\007" +
-      "\200\001\352\363\263\007\004tags\362\363\263\007\004Tags\372\363\263\007\035java.util.Map<S" +
-      "tring, String>\202\364\263\007\007TypeMap\212\364\263\007;{\"type\":\"" +
-      "object\", \"additionalProperties\":{\"type\":" +
-      "\"string\"}}B`\n\034com.strongdm.api.v1.plumbi" +
-      "ngB\014TagsPlumbingZ2github.com/strongdm/st" +
-      "rongdm-sdk-go/internal/v1;v1b\006proto3"
+      "\n\ntags.proto\022\002v1\032\roptions.proto\"\351\001\n\004Tags" +
+      "\022\034\n\005pairs\030\001 \003(\0132\r.v1.Tags.Pair\032/\n\004Pair\022\014" +
+      "\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\n\372\370\263\007\005\360\363\263\007\001:" +
+      "\221\001\372\370\263\007\213\001\312\363\263\007\200\001\352\363\263\007\004tags\362\363\263\007\004Tags\372\363\263\007\035jav" +
+      "a.util.Map<String, String>\202\364\263\007\007TypeMap\212\364" +
+      "\263\007;{\"type\":\"object\", \"additionalProperti" +
+      "es\":{\"type\":\"string\"}}\360\363\263\007\001B`\n\034com.stron" +
+      "gdm.api.v1.plumbingB\014TagsPlumbingZ2githu" +
+      "b.com/strongdm/strongdm-sdk-go/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

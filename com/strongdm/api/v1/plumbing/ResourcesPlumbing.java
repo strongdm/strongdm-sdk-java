@@ -10867,53 +10867,54 @@ public final class ResourcesPlumbing {
       "drivers.proto\"l\n\025ResourceCreateRequest\022\'" +
       "\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022" +
       "*\n\010resource\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\"\275\001\n\026ResourceCreateResponse\0224\n\004meta\030\001" +
+      "\263\007\001\"\307\001\n\026ResourceCreateResponse\0224\n\004meta\030\001" +
       " \001(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v1.ResourceB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\004 \001(\0132\025.v1.RateLi" +
-      "mitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"R\n\022R" +
-      "esourceGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.Get" +
-      "RequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"" +
-      "\267\001\n\023ResourceGetResponse\0221\n\004meta\030\001 \001(\0132\027." +
-      "v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010re" +
-      "source\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\0225" +
-      "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat" +
-      "aB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"x\n\025ResourceUpd" +
-      "ateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequ" +
-      "estMetadata\022\n\n\002id\030\002 \001(\t\022*\n\010resource\030\003 \001(" +
-      "\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\"\275\001\n\026Resource" +
-      "UpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Update" +
-      "ResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resource" +
-      "\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate" +
-      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\025ResourceDeleteReq" +
-      "uest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMet" +
-      "adata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\221\001\n\026Resour" +
-      "ceDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Dele" +
-      "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_l" +
-      "imit\030\002 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\023ResourceListRequest" +
+      "\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\004 \001(\0132\025.v1.RateLi" +
+      "mitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005" +
+      "\250\363\263\007\001\"R\n\022ResourceGetRequest\022$\n\004meta\030\001 \001(" +
+      "\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\"\301\001\n\023ResourceGetResponse\0221\n\004met" +
+      "a\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v1.ResourceB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLi" +
+      "mitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005" +
+      "\250\363\263\007\001\"x\n\025ResourceUpdateRequest\022\'\n\004meta\030\001" +
+      " \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002 " +
+      "\001(\t\022*\n\010resource\030\003 \001(\0132\014.v1.ResourceB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\"\307\001\n\026ResourceUpdateResponse\0224\n\004me" +
+      "ta\030\001 \001(\0132\032.v1.UpdateResponseMetadataB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v1.Resource" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"X\n\025ResourceDeleteRequest\022\'\n\004me" +
+      "ta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002i" +
+      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\233\001\n\026ResourceDeleteRe" +
+      "sponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponse" +
+      "MetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(\013" +
+      "2\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
+      "\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\023ResourceListRequest" +
       "\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022" +
-      "\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\242\001\n\024Resource" +
+      "\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\254\001\n\024Resource" +
       "ListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResp" +
       "onseMetadata\022+\n\tresources\030\002 \003(\0132\014.v1.Res" +
-      "ourceB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025." +
-      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\0012\335\003\n\tRes" +
-      "ources\022Y\n\006Create\022\031.v1.ResourceCreateRequ" +
-      "est\032\032.v1.ResourceCreateResponse\"\030\202\323\344\223\002\022\"" +
-      "\r/v1/resources:\001*\022R\n\003Get\022\026.v1.ResourceGe" +
-      "tRequest\032\027.v1.ResourceGetResponse\"\032\202\323\344\223\002" +
-      "\024\022\022/v1/resources/{id}\022^\n\006Update\022\031.v1.Res" +
-      "ourceUpdateRequest\032\032.v1.ResourceUpdateRe" +
-      "sponse\"\035\202\323\344\223\002\027\032\022/v1/resources/{id}:\001*\022[\n" +
-      "\006Delete\022\031.v1.ResourceDeleteRequest\032\032.v1." +
-      "ResourceDeleteResponse\"\032\202\323\344\223\002\024*\022/v1/reso" +
-      "urces/{id}\022P\n\004List\022\027.v1.ResourceListRequ" +
-      "est\032\030.v1.ResourceListResponse\"\025\202\323\344\223\002\017\022\r/" +
-      "v1/resources\032\022\312\371\263\007\r\302\371\263\007\010ResourceBe\n\034com." +
-      "strongdm.api.v1.plumbingB\021ResourcesPlumb" +
-      "ingZ2github.com/strongdm/strongdm-sdk-go" +
-      "/internal/v1;v1b\006proto3"
+      "ourceB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025." +
+      "v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263" +
+      "\007\0012\335\003\n\tResources\022Y\n\006Create\022\031.v1.Resource" +
+      "CreateRequest\032\032.v1.ResourceCreateRespons" +
+      "e\"\030\202\323\344\223\002\022\"\r/v1/resources:\001*\022R\n\003Get\022\026.v1." +
+      "ResourceGetRequest\032\027.v1.ResourceGetRespo" +
+      "nse\"\032\202\323\344\223\002\024\022\022/v1/resources/{id}\022^\n\006Updat" +
+      "e\022\031.v1.ResourceUpdateRequest\032\032.v1.Resour" +
+      "ceUpdateResponse\"\035\202\323\344\223\002\027\032\022/v1/resources/" +
+      "{id}:\001*\022[\n\006Delete\022\031.v1.ResourceDeleteReq" +
+      "uest\032\032.v1.ResourceDeleteResponse\"\032\202\323\344\223\002\024" +
+      "*\022/v1/resources/{id}\022P\n\004List\022\027.v1.Resour" +
+      "ceListRequest\032\030.v1.ResourceListResponse\"" +
+      "\025\202\323\344\223\002\017\022\r/v1/resources\032\022\312\371\263\007\r\302\371\263\007\010Resour" +
+      "ceBe\n\034com.strongdm.api.v1.plumbingB\021Reso" +
+      "urcesPlumbingZ2github.com/strongdm/stron" +
+      "gdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -9655,26 +9655,26 @@ public final class Spec {
       ":\"\372\370\263\007\035\242\363\263\007\023AuthenticationError\260\363\263\007\020\"1\n\017" +
       "PermissionError:\036\372\370\263\007\031\242\363\263\007\017PermissionErr" +
       "or\260\363\263\007\007\"-\n\rInternalError:\034\372\370\263\007\027\242\363\263\007\rInte" +
-      "rnalError\260\363\263\007\r\"f\n\016RateLimitError\0225\n\nrate" +
-      "_limit\030\001 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:\035\372\370\263\007\030\242\363\263\007\016RateLimitError\260\363\263\007\010\"\027" +
-      "\n\025CreateRequestMetadata\"$\n\026CreateRespons" +
-      "eMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRequestMetad" +
-      "ata\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027" +
-      "\n\025UpdateRequestMetadata\"$\n\026UpdateRespons" +
-      "eMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMe" +
-      "tadata\"$\n\026DeleteResponseMetadata:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"B\n\023ListRequestMetadata\022\016\n\006cursor\030\001 " +
-      "\001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\":\n\024List" +
-      "ResponseMetadata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n" +
-      "\005total\030\002 \001(\005\"\257\001\n\021RateLimitMetadata\022\031\n\005li" +
-      "mit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032.google." +
-      "protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket" +
-      "\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001BR\n\034com.st" +
-      "rongdm.api.v1.plumbingZ2github.com/stron" +
-      "gdm/strongdm-sdk-go/internal/v1;v1b\006prot" +
-      "o3"
+      "rnalError\260\363\263\007\r\"p\n\016RateLimitError\022?\n\nrate" +
+      "_limit\030\001 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\035\372\370\263\007\030\242\363\263\007\016RateLimitEr" +
+      "ror\260\363\263\007\010\"\027\n\025CreateRequestMetadata\"$\n\026Cre" +
+      "ateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRe" +
+      "questMetadata\"!\n\023GetResponseMetadata:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"\027\n\025UpdateRequestMetadata\"$\n\026Upd" +
+      "ateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025Delet" +
+      "eRequestMetadata\"$\n\026DeleteResponseMetada" +
+      "ta:\n\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMetadata\022\016\n" +
+      "\006cursor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001" +
+      "(\005\":\n\024ListResponseMetadata\022\023\n\013next_curso" +
+      "r\030\001 \001(\t\022\r\n\005total\030\002 \001(\005\"\257\001\n\021RateLimitMeta" +
+      "data\022\031\n\005limit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremai" +
+      "ning\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\013" +
+      "2\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\032\n\006bucket\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001" +
+      "BR\n\034com.strongdm.api.v1.plumbingZ2github" +
+      ".com/strongdm/strongdm-sdk-go/internal/v" +
+      "1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

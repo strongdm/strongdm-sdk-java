@@ -10025,50 +10025,51 @@ public final class AccountGrantsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\024account_grants.proto\022\002v1\032\034google/api/a" +
-      "nnotations.proto\032,protoc-gen-swagger/opt" +
-      "ions/annotations.proto\032\037google/protobuf/" +
-      "timestamp.proto\032\roptions.proto\032\nspec.pro" +
-      "to\"y\n\031AccountGrantCreateRequest\022\'\n\004meta\030" +
-      "\001 \001(\0132\031.v1.CreateRequestMetadata\0223\n\racco" +
-      "unt_grant\030\002 \001(\0132\020.v1.AccountGrantB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\"\312\001\n\032AccountGrantCreateResponse\0224\n\004" +
-      "meta\030\001 \001(\0132\032.v1.CreateResponseMetadataB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\0132\020.v1.A" +
-      "ccountGrantB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 " +
-      "\001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"V\n\026AccountGrantGetRequest\022$\n\004" +
-      "meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id" +
-      "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\304\001\n\027AccountGrantGetRe" +
-      "sponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMet" +
-      "adataB\n\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\013" +
-      "2\020.v1.AccountGrantB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_l" +
-      "imit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n\362\370\263\007\005" +
-      "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\031AccountGrantDeleteR" +
-      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestM" +
-      "etadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\225\001\n\032Acco" +
-      "untGrantDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v" +
-      "1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\n" +
-      "rate_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\027AccountGrantL" +
-      "istRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListReques" +
-      "tMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\257\001" +
-      "\n\030AccountGrantListResponse\022&\n\004meta\030\001 \001(\013" +
-      "2\030.v1.ListResponseMetadata\0224\n\016account_gr" +
-      "ants\030\002 \003(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001" +
-      "\0225\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
-      "ataB\n\362\370\263\007\005\260\363\263\007\001\"\226\004\n\014AccountGrant\022,\n\002id\030\001" +
-      " \001(\tB \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nPermission\022D" +
-      "\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Datasourc" +
-      "eID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0227\n\naccount_" +
-      "id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006UserID\260\363\263\007\001\300\363\263\007\001\312\363\263\007" +
-      "\004User\022H\n\nstart_from\030\004 \001(\0132\032.google.proto" +
-      "buf.TimestampB\030\362\370\263\007\023\242\363\263\007\tStartFrom\260\363\263\007\001\022" +
-      "J\n\013valid_until\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestampB\031\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:\302\001\372\370" +
-      "\263\007v\242\363\263\007\016DatasourceUser\250\363\263\007\001\302\363\263\007Y\242\363\263\007&tf_" +
-      "examples/account_grant_resource.txt\252\363\263\007)" +
-      "tf_examples/account_grant_data_source.tx" +
-      "t\222AD2B\022@{ \"id\": \"ag-244\", \"resource_id\":" +
+      "nnotations.proto\032.protoc-gen-openapiv2/o" +
+      "ptions/annotations.proto\032\037google/protobu" +
+      "f/timestamp.proto\032\roptions.proto\032\nspec.p" +
+      "roto\"y\n\031AccountGrantCreateRequest\022\'\n\004met" +
+      "a\030\001 \001(\0132\031.v1.CreateRequestMetadata\0223\n\rac" +
+      "count_grant\030\002 \001(\0132\020.v1.AccountGrantB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\"\324\001\n\032AccountGrantCreateResponse\0224" +
+      "\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetadata" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\0132\020.v1" +
+      ".AccountGrantB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030" +
+      "\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"V\n\026AccountGrantGe" +
+      "tRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMe" +
+      "tadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\316\001\n\027Accou" +
+      "ntGrantGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.Ge" +
+      "tResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0223\n\raccount" +
+      "_grant\030\002 \001(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMet" +
+      "adataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"" +
+      "\\\n\031AccountGrantDeleteRequest\022\'\n\004meta\030\001 \001" +
+      "(\0132\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\"\237\001\n\032AccountGrantDeleteResp" +
+      "onse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMe" +
+      "tadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(\0132\025" +
+      ".v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364" +
+      "\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\027AccountGrantListReque" +
+      "st\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadat" +
+      "a\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\271\001\n\030Accoun" +
+      "tGrantListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Li" +
+      "stResponseMetadata\0224\n\016account_grants\030\002 \003" +
+      "(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate" +
+      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\224\004\n\014AccountGrant\022,\n\002id" +
+      "\030\001 \001(\tB \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nPermission" +
+      "\022D\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Datasou" +
+      "rceID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0227\n\naccoun" +
+      "t_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006UserID\260\363\263\007\001\300\363\263\007\001\312\363" +
+      "\263\007\004User\022H\n\nstart_from\030\004 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\030\362\370\263\007\023\242\363\263\007\tStartFrom\260\363\263\007" +
+      "\001\022J\n\013valid_until\030\005 \001(\0132\032.google.protobuf" +
+      ".TimestampB\031\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:\300\001" +
+      "\372\370\263\007v\242\363\263\007\016DatasourceUser\250\363\263\007\001\302\363\263\007Y\242\363\263\007&t" +
+      "f_examples/account_grant_resource.txt\252\363\263" +
+      "\007)tf_examples/account_grant_data_source." +
+      "txt\222AB2@{ \"id\": \"ag-244\", \"resource_id\":" +
       " \"rs-111\", \"account_id\":\"a-444\"}2\243\004\n\rAcc" +
       "ountGrants\022\317\001\n\006Create\022\035.v1.AccountGrantC" +
       "reateRequest\032\036.v1.AccountGrantCreateResp" +
@@ -10092,7 +10093,7 @@ public final class AccountGrantsPlumbing {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
@@ -10154,15 +10155,15 @@ public final class AccountGrantsPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();

@@ -10810,32 +10810,32 @@ public final class SecretStoresPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the vaultTls field is set.
      */
     boolean hasVaultTls();
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
      * @return The vaultTls.
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getVaultTls();
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder();
 
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the vaultToken field is set.
      */
     boolean hasVaultToken();
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
      * @return The vaultToken.
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getVaultToken();
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder();
 
@@ -10994,7 +10994,7 @@ public final class SecretStoresPlumbing {
 
     public static final int VAULT_TLS_FIELD_NUMBER = 1;
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
      * @return Whether the vaultTls field is set.
      */
     @java.lang.Override
@@ -11002,7 +11002,7 @@ public final class SecretStoresPlumbing {
       return secretStoreCase_ == 1;
     }
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
      * @return The vaultTls.
      */
     @java.lang.Override
@@ -11013,7 +11013,7 @@ public final class SecretStoresPlumbing {
       return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
     }
     /**
-     * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder() {
@@ -11025,7 +11025,7 @@ public final class SecretStoresPlumbing {
 
     public static final int VAULT_TOKEN_FIELD_NUMBER = 2;
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
      * @return Whether the vaultToken field is set.
      */
     @java.lang.Override
@@ -11033,7 +11033,7 @@ public final class SecretStoresPlumbing {
       return secretStoreCase_ == 2;
     }
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
      * @return The vaultToken.
      */
     @java.lang.Override
@@ -11044,7 +11044,7 @@ public final class SecretStoresPlumbing {
       return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
     }
     /**
-     * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder() {
@@ -11431,7 +11431,7 @@ public final class SecretStoresPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder> vaultTlsBuilder_;
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        * @return Whether the vaultTls field is set.
        */
       @java.lang.Override
@@ -11439,7 +11439,7 @@ public final class SecretStoresPlumbing {
         return secretStoreCase_ == 1;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        * @return The vaultTls.
        */
       @java.lang.Override
@@ -11457,7 +11457,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setVaultTls(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore value) {
         if (vaultTlsBuilder_ == null) {
@@ -11473,7 +11473,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder setVaultTls(
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder builderForValue) {
@@ -11487,7 +11487,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeVaultTls(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore value) {
         if (vaultTlsBuilder_ == null) {
@@ -11509,7 +11509,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearVaultTls() {
         if (vaultTlsBuilder_ == null) {
@@ -11528,13 +11528,13 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder getVaultTlsBuilder() {
         return getVaultTlsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder() {
@@ -11548,7 +11548,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTLSStore vault_tls = 1[json_name = "vaultTLS"];</code>
+       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder> 
@@ -11572,7 +11572,7 @@ public final class SecretStoresPlumbing {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder> vaultTokenBuilder_;
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        * @return Whether the vaultToken field is set.
        */
       @java.lang.Override
@@ -11580,7 +11580,7 @@ public final class SecretStoresPlumbing {
         return secretStoreCase_ == 2;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        * @return The vaultToken.
        */
       @java.lang.Override
@@ -11598,7 +11598,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setVaultToken(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore value) {
         if (vaultTokenBuilder_ == null) {
@@ -11614,7 +11614,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setVaultToken(
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder builderForValue) {
@@ -11628,7 +11628,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder mergeVaultToken(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore value) {
         if (vaultTokenBuilder_ == null) {
@@ -11650,7 +11650,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder clearVaultToken() {
         if (vaultTokenBuilder_ == null) {
@@ -11669,13 +11669,13 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        */
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder getVaultTokenBuilder() {
         return getVaultTokenFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder() {
@@ -11689,7 +11689,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>.v1.VaultTokenStore vault_token = 2[json_name = "vaultToken"];</code>
+       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder> 
@@ -11768,9 +11768,6 @@ public final class SecretStoresPlumbing {
 
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -11780,9 +11777,6 @@ public final class SecretStoresPlumbing {
     java.lang.String getId();
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -11966,9 +11960,6 @@ public final class SecretStoresPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -11990,9 +11981,6 @@ public final class SecretStoresPlumbing {
     }
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -12505,9 +12493,6 @@ public final class SecretStoresPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -12528,9 +12513,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -12552,9 +12534,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -12574,9 +12553,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -12591,9 +12567,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -12998,9 +12971,6 @@ public final class SecretStoresPlumbing {
 
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -13010,9 +12980,6 @@ public final class SecretStoresPlumbing {
     java.lang.String getId();
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -13055,12 +13022,12 @@ public final class SecretStoresPlumbing {
         getServerAddressBytes();
 
     /**
-     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The cACertPath.
      */
     java.lang.String getCACertPath();
     /**
-     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for cACertPath.
      */
     com.google.protobuf.ByteString
@@ -13253,9 +13220,6 @@ public final class SecretStoresPlumbing {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -13277,9 +13241,6 @@ public final class SecretStoresPlumbing {
     }
     /**
      * <pre>
-     * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-     *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-     * };
      * Unique identifier of the SecretStore.
      * </pre>
      *
@@ -13388,7 +13349,7 @@ public final class SecretStoresPlumbing {
     public static final int CA_CERT_PATH_FIELD_NUMBER = 4;
     private volatile java.lang.Object cACertPath_;
     /**
-     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The cACertPath.
      */
     @java.lang.Override
@@ -13405,7 +13366,7 @@ public final class SecretStoresPlumbing {
       }
     }
     /**
-     * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for cACertPath.
      */
     @java.lang.Override
@@ -13957,9 +13918,6 @@ public final class SecretStoresPlumbing {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -13980,9 +13938,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -14004,9 +13959,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -14026,9 +13978,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -14043,9 +13992,6 @@ public final class SecretStoresPlumbing {
       }
       /**
        * <pre>
-       * option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {
-       *     example: { value: '{ "id": "r-7", "name": "happy-goat"}' }
-       * };
        * Unique identifier of the SecretStore.
        * </pre>
        *
@@ -14239,7 +14185,7 @@ public final class SecretStoresPlumbing {
 
       private java.lang.Object cACertPath_ = "";
       /**
-       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @return The cACertPath.
        */
       public java.lang.String getCACertPath() {
@@ -14255,7 +14201,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @return The bytes for cACertPath.
        */
       public com.google.protobuf.ByteString
@@ -14272,7 +14218,7 @@ public final class SecretStoresPlumbing {
         }
       }
       /**
-       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @param value The cACertPath to set.
        * @return This builder for chaining.
        */
@@ -14287,7 +14233,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearCACertPath() {
@@ -14297,7 +14243,7 @@ public final class SecretStoresPlumbing {
         return this;
       }
       /**
-       * <code>string CA_cert_path = 4[json_name = "ca_cert_path", (.v1.field_options) = { ... }</code>
+       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for cACertPath to set.
        * @return This builder for chaining.
        */
@@ -14747,95 +14693,96 @@ public final class SecretStoresPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\023secret_stores.proto\022\002v1\032\034google/api/an" +
-      "notations.proto\032,protoc-gen-swagger/opti" +
-      "ons/annotations.proto\032\roptions.proto\032\nsp" +
-      "ec.proto\032\ntags.proto\"v\n\030SecretStoreCreat" +
-      "eRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateReques" +
-      "tMetadata\0221\n\014secret_store\030\002 \001(\0132\017.v1.Sec" +
-      "retStoreB\n\362\370\263\007\005\260\363\263\007\001\"\307\001\n\031SecretStoreCrea" +
-      "teResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResp" +
+      "notations.proto\032.protoc-gen-openapiv2/op" +
+      "tions/annotations.proto\032\roptions.proto\032\n" +
+      "spec.proto\032\ntags.proto\"v\n\030SecretStoreCre" +
+      "ateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequ" +
+      "estMetadata\0221\n\014secret_store\030\002 \001(\0132\017.v1.S" +
+      "ecretStoreB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\031SecretStoreCr" +
+      "eateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateRe" +
+      "sponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014secret_sto" +
+      "re\030\002 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\022?\n" +
+      "\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadata" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"U\n\025Se" +
+      "cretStoreGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1.G" +
+      "etRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\"\313\001\n\026SecretStoreGetResponse\0221\n\004meta\030\001 \001" +
+      "(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "1\n\014secret_store\030\002 \001(\0132\017.v1.SecretStoreB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Rate" +
+      "LimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263" +
+      "\007\005\250\363\263\007\001\"\202\001\n\030SecretStoreUpdateRequest\022\'\n\004" +
+      "meta\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n" +
+      "\002id\030\002 \001(\t\0221\n\014secret_store\030\003 \001(\0132\017.v1.Sec" +
+      "retStoreB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\031SecretStoreUpda" +
+      "teResponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateResp" +
       "onseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014secret_store" +
-      "\030\002 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nr" +
-      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\n" +
-      "\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"U\n\025SecretStoreGet" +
-      "Request\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMet" +
-      "adata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\301\001\n\026Secret" +
-      "StoreGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetR" +
-      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014secret_st" +
-      "ore\030\002 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\0225" +
-      "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat" +
-      "aB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\202\001\n\030SecretStor" +
-      "eUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Update" +
-      "RequestMetadata\022\n\n\002id\030\002 \001(\t\0221\n\014secret_st" +
-      "ore\030\003 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\"\307" +
-      "\001\n\031SecretStoreUpdateResponse\0224\n\004meta\030\001 \001" +
-      "(\0132\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\0221\n\014secret_store\030\002 \001(\0132\017.v1.SecretStor" +
-      "eB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025.v1.R" +
-      "ateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001" +
-      "\"[\n\030SecretStoreDeleteRequest\022\'\n\004meta\030\001 \001" +
-      "(\0132\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\"\224\001\n\031SecretStoreDeleteRespo" +
-      "nse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMet" +
-      "adataB\n\362\370\263\007\005\260\363\263\007\001\0225\n\nrate_limit\030\002 \001(\0132\025." +
-      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"[\n\026SecretStoreListRequest\022%\n\004meta\030\001" +
-      " \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030" +
-      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\254\001\n\027SecretStoreListRes" +
-      "ponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMet" +
-      "adata\0222\n\rsecret_stores\030\002 \003(\0132\017.v1.Secret" +
-      "StoreB\n\362\370\263\007\005\270\363\263\007\001\0225\n\nrate_limit\030\003 \001(\0132\025." +
-      "v1.RateLimitMetadataB\n\362\370\263\007\005\260\363\263\007\001\"\306\001\n\013Sec" +
-      "retStore\0220\n\tvault_tls\030\001 \001(\0132\021.v1.VaultTL" +
-      "SStoreH\000R\010vaultTLS\0226\n\013vault_token\030\002 \001(\0132" +
-      "\023.v1.VaultTokenStoreH\000R\nvaultToken:\n\372\370\263\007" +
-      "\005\250\363\263\007\001BA\n\014secret_store\0221\252\370\263\007\020\242\370\263\007\013Secret" +
-      "Store\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\247\002\n\017Va" +
-      "ultTokenStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260" +
-      "\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007" +
-      "\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022V\n\016server_address\030\003" +
-      " \001(\tB>\362\370\263\0079\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320" +
-      "\363\263\007\001\372\363\263\007\007address\202\364\263\007\007address\022+\n\004tags\030\004 \001" +
-      "(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:8\372\370\263\0073" +
-      "\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\nvaultToken\342\363\263\007" +
-      "\nvaultToken\"\351\003\n\rVaultTLSStore\022-\n\002id\030\001 \001(" +
-      "\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004" +
-      "name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022V\n\016" +
-      "server_address\030\003 \001(\tB>\362\370\263\0079\242\363\263\007\rServerAd" +
-      "dress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\372\363\263\007\007address\202\364\263\007\007add" +
-      "ress\022B\n\014CA_cert_path\030\004 \001(\tB\036\362\370\263\007\031\242\363\263\007\nCA" +
-      "CertPath\260\363\263\007\001\320\363\263\007\001R\014ca_cert_path\022A\n\020clie" +
-      "nt_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016ClientCert" +
-      "Path\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_path\030\006" +
-      " \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363\263\007\001\320" +
-      "\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004" +
-      "Tags\260\363\263\007\001:4\372\370\263\007/\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263" +
-      "\007\010vaultTLS\342\363\263\007\010vaultTLS2\370\004\n\014SecretStores" +
-      "\022\311\001\n\006Create\022\034.v1.SecretStoreCreateReques" +
-      "t\032\035.v1.SecretStoreCreateResponse\"\201\001\202\323\344\223\002" +
-      "\025\"\020/v1/secretstores:\001*\222Ac\"a\n\037Learn how t" +
-      "o make a SecretStore\022>https://www.strong" +
-      "dm.com/docs/api/services/SecretStores#Cr" +
-      "eate\022[\n\003Get\022\031.v1.SecretStoreGetRequest\032\032" +
-      ".v1.SecretStoreGetResponse\"\035\202\323\344\223\002\027\022\025/v1/" +
-      "secretstores/{id}\022g\n\006Update\022\034.v1.SecretS" +
-      "toreUpdateRequest\032\035.v1.SecretStoreUpdate" +
-      "Response\" \202\323\344\223\002\032\032\025/v1/secretstores/{id}:" +
-      "\001*\022d\n\006Delete\022\034.v1.SecretStoreDeleteReque" +
-      "st\032\035.v1.SecretStoreDeleteResponse\"\035\202\323\344\223\002" +
-      "\027*\025/v1/secretstores/{id}\022Y\n\004List\022\032.v1.Se" +
-      "cretStoreListRequest\032\033.v1.SecretStoreLis" +
-      "tResponse\"\030\202\323\344\223\002\022\022\020/v1/secretstores\032\025\312\371\263" +
-      "\007\020\302\371\263\007\013SecretStoreBh\n\034com.strongdm.api.v" +
-      "1.plumbingB\024SecretStoresPlumbingZ2github" +
-      ".com/strongdm/strongdm-sdk-go/internal/v" +
-      "1;v1b\006proto3"
+      "\030\002 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nr" +
+      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"[\n\030Secr" +
+      "etStoreDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1." +
+      "DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\"\236\001\n\031SecretStoreDeleteResponse\0224\n\004m" +
+      "eta\030\001 \001(\0132\032.v1.DeleteResponseMetadataB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(\0132\025.v1.RateL" +
+      "imitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007" +
+      "\005\250\363\263\007\001\"[\n\026SecretStoreListRequest\022%\n\004meta" +
+      "\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filte" +
+      "r\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\266\001\n\027SecretStoreListR" +
+      "esponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseM" +
+      "etadata\0222\n\rsecret_stores\030\002 \003(\0132\017.v1.Secr" +
+      "etStoreB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132" +
+      "\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220" +
+      "\364\263\007\001\"\332\001\n\013SecretStore\022:\n\tvault_tls\030\001 \001(\0132" +
+      "\021.v1.VaultTLSStoreB\022\362\370\263\007\r\212\364\263\007\010vaultTLSH\000" +
+      "\022@\n\013vault_token\030\002 \001(\0132\023.v1.VaultTokenSto" +
+      "reB\024\362\370\263\007\017\212\364\263\007\nvaultTokenH\000:\n\372\370\263\007\005\250\363\263\007\001BA" +
+      "\n\014secret_store\0221\252\370\263\007\020\242\370\263\007\013SecretStore\252\370\263" +
+      "\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\236\002\n\017VaultToken" +
+      "Store\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007" +
+      "\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Na" +
+      "me\260\363\263\007\001\300\363\263\007\001\022>\n\016server_address\030\003 \001(\tB&\362\370" +
+      "\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022+\n\004" +
+      "tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007" +
+      "\001:G\372\370\263\007B\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\nvaultT" +
+      "oken\342\363\263\007\nvaultToken\352\363\263\007\nvaultToken\"\341\003\n\rV" +
+      "aultTLSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363" +
+      "\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023" +
+      "\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_address\030\003 " +
+      "\001(\tB&\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363" +
+      "\263\007\001\022E\n\014CA_cert_path\030\004 \001(\tB/\362\370\263\007*\242\363\263\007\nCAC" +
+      "ertPath\260\363\263\007\001\320\363\263\007\001\212\364\263\007\014ca_cert_path\022A\n\020cl" +
+      "ient_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016ClientCe" +
+      "rtPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_path" +
+      "\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363\263\007" +
+      "\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263" +
+      "\007\004Tags\260\363\263\007\001:A\372\370\263\007<\242\363\263\007\013SecretStore\250\363\263\007\001\332" +
+      "\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS\352\363\263\007\010vaultTLS2\370" +
+      "\004\n\014SecretStores\022\311\001\n\006Create\022\034.v1.SecretSt" +
+      "oreCreateRequest\032\035.v1.SecretStoreCreateR" +
+      "esponse\"\201\001\202\323\344\223\002\025\"\020/v1/secretstores:\001*\222Ac" +
+      "\"a\n\037Learn how to make a SecretStore\022>htt" +
+      "ps://www.strongdm.com/docs/api/services/" +
+      "SecretStores#Create\022[\n\003Get\022\031.v1.SecretSt" +
+      "oreGetRequest\032\032.v1.SecretStoreGetRespons" +
+      "e\"\035\202\323\344\223\002\027\022\025/v1/secretstores/{id}\022g\n\006Upda" +
+      "te\022\034.v1.SecretStoreUpdateRequest\032\035.v1.Se" +
+      "cretStoreUpdateResponse\" \202\323\344\223\002\032\032\025/v1/sec" +
+      "retstores/{id}:\001*\022d\n\006Delete\022\034.v1.SecretS" +
+      "toreDeleteRequest\032\035.v1.SecretStoreDelete" +
+      "Response\"\035\202\323\344\223\002\027*\025/v1/secretstores/{id}\022" +
+      "Y\n\004List\022\032.v1.SecretStoreListRequest\032\033.v1" +
+      ".SecretStoreListResponse\"\030\202\323\344\223\002\022\022\020/v1/se" +
+      "cretstores\032\025\312\371\263\007\020\302\371\263\007\013SecretStoreBh\n\034com" +
+      ".strongdm.api.v1.plumbingB\024SecretStoresP" +
+      "lumbingZ2github.com/strongdm/strongdm-sd" +
+      "k-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
           com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
@@ -14921,7 +14868,7 @@ public final class SecretStoresPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.oneofOptions);
@@ -14929,7 +14876,7 @@ public final class SecretStoresPlumbing {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
     com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();
