@@ -2375,7 +2375,7 @@ public final class AuditsPlumbing {
       "\024\372\370\263\007\005\250\363\263\007\001\372\370\263\007\005\320\363\263\007\0012\233\001\n\006Audits\022v\n\016GetA" +
       "ccessRules\022\031.v1.GetAccessRulesRequest\032\032." +
       "v1.GetAccessRulesResponse\"-\202\371\263\007\010\242\363\263\007\003get" +
-      "\202\371\263\007\033\252\363\263\007\026/v1/audit/access_rules\032\031\312\371\263\007\n\302" +
+      "\202\371\263\007\033\252\363\263\007\026/v1/audit/access-rules\032\031\312\371\263\007\n\302" +
       "\371\263\007\005Audit\312\371\263\007\005\310\371\263\007\001Bb\n\034com.strongdm.api." +
       "v1.plumbingB\016AuditsPlumbingZ2github.com/" +
       "strongdm/strongdm-sdk-go/internal/v1;v1b" +

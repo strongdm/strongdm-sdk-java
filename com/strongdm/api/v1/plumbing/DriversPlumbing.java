@@ -11599,6 +11599,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
      * @return The accessKey.
      */
@@ -11667,6 +11687,7 @@ public final class DriversPlumbing {
     private Athena() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       accessKey_ = "";
       secretAccessKey_ = "";
       output_ = "";
@@ -11760,6 +11781,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -11937,6 +11964,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ACCESS_KEY_FIELD_NUMBER = 1;
@@ -12143,6 +12216,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12182,6 +12258,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12208,6 +12287,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getAccessKey()
           .equals(other.getAccessKey())) return false;
       if (!getSecretAccessKey()
@@ -12240,6 +12321,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getAccessKey().hashCode();
       hash = (37 * hash) + SECRET_ACCESS_KEY_FIELD_NUMBER;
@@ -12395,6 +12478,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         accessKey_ = "";
 
         secretAccessKey_ = "";
@@ -12439,6 +12524,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.accessKey_ = accessKey_;
         result.secretAccessKey_ = secretAccessKey_;
         result.output_ = output_;
@@ -12505,6 +12591,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getAccessKey().isEmpty()) {
           accessKey_ = other.accessKey_;
@@ -12942,6 +13032,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object accessKey_ = "";
@@ -13413,6 +13599,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string private_key = 1 [(.v1.field_options) = { ... }</code>
      * @return The privateKey.
      */
@@ -13481,6 +13687,7 @@ public final class DriversPlumbing {
     private BigQuery() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       privateKey_ = "";
       project_ = "";
       endpoint_ = "";
@@ -13574,6 +13781,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -13751,6 +13964,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int PRIVATE_KEY_FIELD_NUMBER = 1;
@@ -13957,6 +14216,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13996,6 +14258,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14022,6 +14287,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getPrivateKey()
           .equals(other.getPrivateKey())) return false;
       if (!getProject()
@@ -14054,6 +14321,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + PRIVATE_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKey().hashCode();
       hash = (37 * hash) + PROJECT_FIELD_NUMBER;
@@ -14209,6 +14478,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         privateKey_ = "";
 
         project_ = "";
@@ -14253,6 +14524,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.privateKey_ = privateKey_;
         result.project_ = project_;
         result.portOverride_ = portOverride_;
@@ -14319,6 +14591,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getPrivateKey().isEmpty()) {
           privateKey_ = other.privateKey_;
@@ -14756,6 +15032,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object privateKey_ = "";
@@ -15227,6 +15599,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -15295,6 +15687,7 @@ public final class DriversPlumbing {
     private Cassandra() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -15391,6 +15784,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -15568,6 +15967,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -15761,6 +16206,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15805,6 +16253,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15831,6 +16282,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -15865,6 +16318,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -16023,6 +16478,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -16069,6 +16526,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -16136,6 +16594,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -16575,6 +17037,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -17032,6 +17590,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -17100,6 +17678,7 @@ public final class DriversPlumbing {
     private DB2I() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -17196,6 +17775,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -17373,6 +17958,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -17566,6 +18197,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17610,6 +18244,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17636,6 +18273,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -17670,6 +18309,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -17828,6 +18469,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -17874,6 +18517,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -17941,6 +18585,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -18380,6 +19028,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -18837,6 +19581,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -18911,6 +19675,7 @@ public final class DriversPlumbing {
     private DB2LUW() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -19009,6 +19774,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -19186,6 +19957,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -19406,6 +20223,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19449,6 +20269,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19475,6 +20298,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -19509,6 +20334,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -19666,6 +20493,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -19712,6 +20541,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -19779,6 +20609,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -20219,6 +21053,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -20721,6 +21651,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -20783,6 +21733,7 @@ public final class DriversPlumbing {
     private Druid() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -20874,6 +21825,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -21053,6 +22010,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -21230,6 +22233,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -21270,6 +22276,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -21296,6 +22305,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPortOverride()
@@ -21328,6 +22339,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
@@ -21483,6 +22496,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         portOverride_ = 0;
@@ -21527,6 +22542,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.portOverride_ = portOverride_;
         result.username_ = username_;
@@ -21593,6 +22609,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -22031,6 +23051,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -22455,6 +23571,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
      * @return The accessKey.
      */
@@ -22523,6 +23659,7 @@ public final class DriversPlumbing {
     private DynamoDB() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       accessKey_ = "";
       secretAccessKey_ = "";
       region_ = "";
@@ -22616,6 +23753,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -22793,6 +23936,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ACCESS_KEY_FIELD_NUMBER = 1;
@@ -22999,6 +24188,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -23038,6 +24230,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -23064,6 +24259,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getAccessKey()
           .equals(other.getAccessKey())) return false;
       if (!getSecretAccessKey()
@@ -23096,6 +24293,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getAccessKey().hashCode();
       hash = (37 * hash) + SECRET_ACCESS_KEY_FIELD_NUMBER;
@@ -23251,6 +24450,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         accessKey_ = "";
 
         secretAccessKey_ = "";
@@ -23295,6 +24496,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.accessKey_ = accessKey_;
         result.secretAccessKey_ = secretAccessKey_;
         result.region_ = region_;
@@ -23361,6 +24563,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getAccessKey().isEmpty()) {
           accessKey_ = other.accessKey_;
@@ -23798,6 +25004,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object accessKey_ = "";
@@ -24269,6 +25571,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string region = 1 [(.v1.field_options) = { ... }</code>
      * @return The region.
      */
@@ -24337,6 +25659,7 @@ public final class DriversPlumbing {
     private AmazonES() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       region_ = "";
       secretAccessKey_ = "";
       endpoint_ = "";
@@ -24430,6 +25753,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -24607,6 +25936,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int REGION_FIELD_NUMBER = 1;
@@ -24813,6 +26188,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -24852,6 +26230,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -24878,6 +26259,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getRegion()
           .equals(other.getRegion())) return false;
       if (!getSecretAccessKey()
@@ -24910,6 +26293,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + REGION_FIELD_NUMBER;
       hash = (53 * hash) + getRegion().hashCode();
       hash = (37 * hash) + SECRET_ACCESS_KEY_FIELD_NUMBER;
@@ -25065,6 +26450,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         region_ = "";
 
         secretAccessKey_ = "";
@@ -25109,6 +26496,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.region_ = region_;
         result.secretAccessKey_ = secretAccessKey_;
         result.endpoint_ = endpoint_;
@@ -25175,6 +26563,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getRegion().isEmpty()) {
           region_ = other.region_;
@@ -25612,6 +27004,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object region_ = "";
@@ -26083,6 +27571,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -26151,6 +27659,7 @@ public final class DriversPlumbing {
     private Elastic() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -26247,6 +27756,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -26424,6 +27939,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -26617,6 +28178,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -26661,6 +28225,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -26687,6 +28254,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -26721,6 +28290,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -26879,6 +28450,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -26925,6 +28498,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -26992,6 +28566,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -27431,6 +29009,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -27888,6 +29562,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string url = 1 [(.v1.field_options) = { ... }</code>
      * @return The url.
      */
@@ -27986,6 +29680,7 @@ public final class DriversPlumbing {
     private HTTPBasicAuth() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       url_ = "";
       healthcheckPath_ = "";
       username_ = "";
@@ -28095,6 +29790,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -28272,6 +29973,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int URL_FIELD_NUMBER = 1;
@@ -28587,6 +30334,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -28631,6 +30381,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -28657,6 +30410,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
       if (!getHealthcheckPath()
@@ -28693,6 +30448,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + HEALTHCHECK_PATH_FIELD_NUMBER;
@@ -28852,6 +30609,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         url_ = "";
 
         healthcheckPath_ = "";
@@ -28900,6 +30659,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.url_ = url_;
         result.healthcheckPath_ = healthcheckPath_;
         result.username_ = username_;
@@ -28968,6 +30728,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
@@ -29414,6 +31178,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object url_ = "";
@@ -30082,6 +31942,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string url = 1 [(.v1.field_options) = { ... }</code>
      * @return The url.
      */
@@ -30156,6 +32036,7 @@ public final class DriversPlumbing {
     private HTTPNoAuth() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       url_ = "";
       healthcheckPath_ = "";
       headersBlacklist_ = "";
@@ -30251,6 +32132,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -30428,6 +32315,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int URL_FIELD_NUMBER = 1;
@@ -30661,6 +32594,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -30699,6 +32635,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -30725,6 +32664,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
       if (!getHealthcheckPath()
@@ -30757,6 +32698,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + HEALTHCHECK_PATH_FIELD_NUMBER;
@@ -30912,6 +32855,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         url_ = "";
 
         healthcheckPath_ = "";
@@ -30956,6 +32901,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.url_ = url_;
         result.healthcheckPath_ = healthcheckPath_;
         result.headersBlacklist_ = headersBlacklist_;
@@ -31022,6 +32968,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
@@ -31460,6 +33410,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object url_ = "";
@@ -31976,6 +34022,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string url = 1 [(.v1.field_options) = { ... }</code>
      * @return The url.
      */
@@ -32062,6 +34128,7 @@ public final class DriversPlumbing {
     private HTTPAuth() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       url_ = "";
       healthcheckPath_ = "";
       authHeader_ = "";
@@ -32164,6 +34231,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -32341,6 +34414,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int URL_FIELD_NUMBER = 1;
@@ -32615,6 +34734,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -32656,6 +34778,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -32682,6 +34807,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
       if (!getHealthcheckPath()
@@ -32716,6 +34843,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
       hash = (37 * hash) + HEALTHCHECK_PATH_FIELD_NUMBER;
@@ -32873,6 +35002,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         url_ = "";
 
         healthcheckPath_ = "";
@@ -32919,6 +35050,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.url_ = url_;
         result.healthcheckPath_ = healthcheckPath_;
         result.authHeader_ = authHeader_;
@@ -32986,6 +35118,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
@@ -33428,6 +35564,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object url_ = "";
@@ -34020,6 +36252,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -34100,6 +36352,7 @@ public final class DriversPlumbing {
     private Kubernetes() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       certificateAuthority_ = "";
       clientCertificate_ = "";
@@ -34200,6 +36453,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -34377,6 +36636,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -34624,6 +36929,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -34666,6 +36974,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -34692,6 +37003,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPort()
@@ -34726,6 +37039,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
@@ -34883,6 +37198,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         port_ = 0;
@@ -34929,6 +37246,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.certificateAuthority_ = certificateAuthority_;
@@ -34996,6 +37314,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -35437,6 +37759,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -35984,6 +38402,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -36052,6 +38490,7 @@ public final class DriversPlumbing {
     private KubernetesBasicAuth() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -36145,6 +38584,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -36322,6 +38767,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -36528,6 +39019,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -36567,6 +39061,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -36593,6 +39090,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPort()
@@ -36625,6 +39124,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
@@ -36780,6 +39281,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         port_ = 0;
@@ -36824,6 +39327,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.username_ = username_;
@@ -36890,6 +39394,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -37327,6 +39835,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -37798,6 +40402,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -37854,6 +40478,7 @@ public final class DriversPlumbing {
     private KubernetesServiceAccount() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       token_ = "";
       healthcheckNamespace_ = "";
@@ -37940,6 +40565,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -38119,6 +40750,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -38282,6 +40959,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -38318,6 +40998,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -38344,6 +41027,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPort()
@@ -38374,6 +41059,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
@@ -38527,6 +41214,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         port_ = 0;
@@ -38569,6 +41258,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.token_ = token_;
@@ -38634,6 +41324,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -39069,6 +41763,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -39462,6 +42252,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
      * @return The endpoint.
      */
@@ -39572,6 +42382,7 @@ public final class DriversPlumbing {
     private AmazonEKS() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       endpoint_ = "";
       accessKey_ = "";
       secretAccessKey_ = "";
@@ -39688,6 +42499,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -39865,6 +42682,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ENDPOINT_FIELD_NUMBER = 1;
@@ -40221,6 +43084,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -40268,6 +43134,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -40294,6 +43163,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getEndpoint()
           .equals(other.getEndpoint())) return false;
       if (!getAccessKey()
@@ -40332,6 +43203,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getEndpoint().hashCode();
       hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
@@ -40493,6 +43366,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         endpoint_ = "";
 
         accessKey_ = "";
@@ -40543,6 +43418,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.endpoint_ = endpoint_;
         result.accessKey_ = accessKey_;
         result.secretAccessKey_ = secretAccessKey_;
@@ -40612,6 +43488,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getEndpoint().isEmpty()) {
           endpoint_ = other.endpoint_;
@@ -41062,6 +43942,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object endpoint_ = "";
@@ -41806,6 +44782,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string endpoint = 1 [(.v1.field_options) = { ... }</code>
      * @return The endpoint.
      */
@@ -41868,6 +44864,7 @@ public final class DriversPlumbing {
     private GoogleGKE() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       endpoint_ = "";
       certificateAuthority_ = "";
       serviceAccountKey_ = "";
@@ -41956,6 +44953,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -42133,6 +45136,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ENDPOINT_FIELD_NUMBER = 1;
@@ -42325,6 +45374,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -42360,6 +45412,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -42386,6 +45441,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getEndpoint()
           .equals(other.getEndpoint())) return false;
       if (!getCertificateAuthority()
@@ -42416,6 +45473,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getEndpoint().hashCode();
       hash = (37 * hash) + CERTIFICATE_AUTHORITY_FIELD_NUMBER;
@@ -42569,6 +45628,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         endpoint_ = "";
 
         certificateAuthority_ = "";
@@ -42611,6 +45672,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.endpoint_ = endpoint_;
         result.certificateAuthority_ = certificateAuthority_;
         result.serviceAccountKey_ = serviceAccountKey_;
@@ -42676,6 +45738,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getEndpoint().isEmpty()) {
           endpoint_ = other.endpoint_;
@@ -43110,6 +46176,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object endpoint_ = "";
@@ -43550,6 +46712,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -43630,6 +46812,7 @@ public final class DriversPlumbing {
     private AKS() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       certificateAuthority_ = "";
       clientCertificate_ = "";
@@ -43730,6 +46913,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -43907,6 +47096,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -44154,6 +47389,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -44196,6 +47434,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -44222,6 +47463,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPort()
@@ -44256,6 +47499,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
@@ -44413,6 +47658,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         port_ = 0;
@@ -44459,6 +47706,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.certificateAuthority_ = certificateAuthority_;
@@ -44526,6 +47774,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -44967,6 +48219,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -45514,6 +48862,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -45582,6 +48950,7 @@ public final class DriversPlumbing {
     private AKSBasicAuth() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -45675,6 +49044,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -45852,6 +49227,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -46058,6 +49479,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -46097,6 +49521,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -46123,6 +49550,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPort()
@@ -46155,6 +49584,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
@@ -46310,6 +49741,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         port_ = 0;
@@ -46354,6 +49787,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.username_ = username_;
@@ -46420,6 +49854,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -46857,6 +50295,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -47328,6 +50862,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -47384,6 +50938,7 @@ public final class DriversPlumbing {
     private AKSServiceAccount() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       token_ = "";
       healthcheckNamespace_ = "";
@@ -47470,6 +51025,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -47649,6 +51210,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -47812,6 +51419,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -47848,6 +51458,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -47874,6 +51487,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPort()
@@ -47904,6 +51519,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_FIELD_NUMBER;
@@ -48057,6 +51674,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         port_ = 0;
@@ -48099,6 +51718,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.port_ = port_;
         result.token_ = token_;
@@ -48164,6 +51784,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -48599,6 +52223,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -48992,6 +52712,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -49030,6 +52770,7 @@ public final class DriversPlumbing {
     private Memcached() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
     }
 
@@ -49107,6 +52848,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -49286,6 +53033,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -49381,6 +53174,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -49415,6 +53211,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -49441,6 +53240,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPortOverride()
@@ -49469,6 +53270,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
@@ -49620,6 +53423,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         portOverride_ = 0;
@@ -49660,6 +53465,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.portOverride_ = portOverride_;
         result.port_ = port_;
@@ -49724,6 +53530,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -50154,6 +53964,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -50426,6 +54332,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -50518,6 +54444,7 @@ public final class DriversPlumbing {
     private MongoLegacyHost() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       authDatabase_ = "";
       username_ = "";
@@ -50628,6 +54555,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -50805,6 +54738,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -51080,6 +55059,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -51130,6 +55112,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -51156,6 +55141,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getAuthDatabase()
@@ -51194,6 +55181,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + AUTH_DATABASE_FIELD_NUMBER;
@@ -51356,6 +55345,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         authDatabase_ = "";
@@ -51406,6 +55397,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.authDatabase_ = authDatabase_;
         result.portOverride_ = portOverride_;
@@ -51475,6 +55467,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -51922,6 +55918,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -52531,6 +56623,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -52629,6 +56741,7 @@ public final class DriversPlumbing {
     private MongoLegacyReplicaset() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       authDatabase_ = "";
       username_ = "";
@@ -52744,6 +56857,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -52921,6 +57040,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -53210,6 +57375,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -53264,6 +57432,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -53290,6 +57461,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getAuthDatabase()
@@ -53330,6 +57503,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + AUTH_DATABASE_FIELD_NUMBER;
@@ -53495,6 +57670,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         authDatabase_ = "";
@@ -53547,6 +57724,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.authDatabase_ = authDatabase_;
         result.portOverride_ = portOverride_;
@@ -53617,6 +57795,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -54067,6 +58249,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -54707,6 +58985,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -54787,6 +59085,7 @@ public final class DriversPlumbing {
     private MongoHost() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       authDatabase_ = "";
       username_ = "";
@@ -54890,6 +59189,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -55067,6 +59372,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -55301,6 +59652,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -55348,6 +59702,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -55374,6 +59731,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getAuthDatabase()
@@ -55410,6 +59769,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + AUTH_DATABASE_FIELD_NUMBER;
@@ -55570,6 +59931,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         authDatabase_ = "";
@@ -55618,6 +59981,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.authDatabase_ = authDatabase_;
         result.portOverride_ = portOverride_;
@@ -55686,6 +60050,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -56129,6 +60497,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -56662,6 +61126,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -56760,6 +61244,7 @@ public final class DriversPlumbing {
     private MongoReplicaSet() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       authDatabase_ = "";
       username_ = "";
@@ -56875,6 +61360,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -57052,6 +61543,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -57341,6 +61878,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -57395,6 +61935,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -57421,6 +61964,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getAuthDatabase()
@@ -57461,6 +62006,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + AUTH_DATABASE_FIELD_NUMBER;
@@ -57626,6 +62173,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         authDatabase_ = "";
@@ -57678,6 +62227,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.authDatabase_ = authDatabase_;
         result.portOverride_ = portOverride_;
@@ -57748,6 +62298,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -58198,6 +62752,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -58838,6 +63488,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -58912,6 +63582,7 @@ public final class DriversPlumbing {
     private Mysql() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -59010,6 +63681,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -59187,6 +63864,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -59407,6 +64130,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -59450,6 +64176,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -59476,6 +64205,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -59510,6 +64241,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -59667,6 +64400,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -59713,6 +64448,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -59780,6 +64516,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -60220,6 +64960,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -60722,6 +65558,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -60796,6 +65652,7 @@ public final class DriversPlumbing {
     private AuroraMysql() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -60894,6 +65751,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -61071,6 +65934,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -61291,6 +66200,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -61334,6 +66246,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -61360,6 +66275,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -61394,6 +66311,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -61551,6 +66470,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -61597,6 +66518,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -61664,6 +66586,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -62104,6 +67030,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -62606,6 +67628,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -62680,6 +67722,7 @@ public final class DriversPlumbing {
     private Clustrix() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -62778,6 +67821,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -62955,6 +68004,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -63175,6 +68270,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -63218,6 +68316,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -63244,6 +68345,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -63278,6 +68381,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -63435,6 +68540,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -63481,6 +68588,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -63548,6 +68656,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -63988,6 +69100,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -64490,6 +69698,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -64564,6 +69792,7 @@ public final class DriversPlumbing {
     private Maria() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -64662,6 +69891,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -64839,6 +70074,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -65059,6 +70340,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -65102,6 +70386,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -65128,6 +70415,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -65162,6 +70451,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -65319,6 +70610,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -65365,6 +70658,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -65432,6 +70726,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -65872,6 +71170,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -66374,6 +71768,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -66448,6 +71862,7 @@ public final class DriversPlumbing {
     private Memsql() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -66546,6 +71961,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -66723,6 +72144,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -66943,6 +72410,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -66986,6 +72456,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -67012,6 +72485,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -67046,6 +72521,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -67203,6 +72680,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -67249,6 +72728,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -67316,6 +72796,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -67756,6 +73240,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -68258,6 +73838,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -68338,6 +73938,7 @@ public final class DriversPlumbing {
     private Oracle() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -68441,6 +74042,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -68618,6 +74225,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -68852,6 +74505,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -68899,6 +74555,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -68925,6 +74584,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -68961,6 +74622,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -69121,6 +74784,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -69169,6 +74834,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -69237,6 +74903,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -69680,6 +75350,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -70213,6 +75979,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -70293,6 +76079,7 @@ public final class DriversPlumbing {
     private Postgres() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -70396,6 +76183,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -70573,6 +76366,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -70807,6 +76646,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -70854,6 +76696,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -70880,6 +76725,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -70916,6 +76763,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -71076,6 +76925,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -71124,6 +76975,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -71192,6 +77044,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -71635,6 +77491,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -72168,6 +78120,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -72248,6 +78220,7 @@ public final class DriversPlumbing {
     private AuroraPostgres() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -72351,6 +78324,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -72528,6 +78507,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -72762,6 +78787,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -72809,6 +78837,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -72835,6 +78866,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -72871,6 +78904,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -73031,6 +79066,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -73079,6 +79116,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -73147,6 +79185,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -73590,6 +79632,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -74123,6 +80261,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -74203,6 +80361,7 @@ public final class DriversPlumbing {
     private Greenplum() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -74306,6 +80465,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -74483,6 +80648,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -74717,6 +80928,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -74764,6 +80978,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -74790,6 +81007,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -74826,6 +81045,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -74986,6 +81207,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -75034,6 +81257,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -75102,6 +81326,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -75545,6 +81773,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -76078,6 +82402,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -76158,6 +82502,7 @@ public final class DriversPlumbing {
     private Cockroach() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -76261,6 +82606,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -76438,6 +82789,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -76672,6 +83069,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -76719,6 +83119,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -76745,6 +83148,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -76781,6 +83186,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -76941,6 +83348,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -76989,6 +83398,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -77057,6 +83467,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -77500,6 +83914,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -78033,6 +84543,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -78113,6 +84643,7 @@ public final class DriversPlumbing {
     private Redshift() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -78216,6 +84747,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -78393,6 +84930,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -78627,6 +85210,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -78674,6 +85260,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -78700,6 +85289,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -78736,6 +85327,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -78896,6 +85489,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -78944,6 +85539,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -79012,6 +85608,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -79455,6 +86055,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -79988,6 +86684,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -80068,6 +86784,7 @@ public final class DriversPlumbing {
     private Citus() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -80171,6 +86888,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -80348,6 +87071,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -80582,6 +87351,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -80629,6 +87401,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -80655,6 +87430,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -80691,6 +87468,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -80851,6 +87630,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -80899,6 +87680,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -80967,6 +87749,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -81410,6 +88196,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -81943,6 +88825,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -82023,6 +88925,7 @@ public final class DriversPlumbing {
     private Presto() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       password_ = "";
       database_ = "";
@@ -82126,6 +89029,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -82303,6 +89212,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -82537,6 +89492,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -82584,6 +89542,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -82610,6 +89571,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getPassword()
@@ -82646,6 +89609,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
@@ -82806,6 +89771,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         password_ = "";
@@ -82854,6 +89821,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.password_ = password_;
         result.database_ = database_;
@@ -82922,6 +89890,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -83365,6 +90337,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -83898,6 +90966,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -83960,6 +91048,7 @@ public final class DriversPlumbing {
     private RDP() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -84051,6 +91140,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -84230,6 +91325,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -84407,6 +91548,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -84447,6 +91591,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -84473,6 +91620,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -84505,6 +91654,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -84660,6 +91811,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -84704,6 +91857,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -84770,6 +91924,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -85208,6 +92366,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -85632,6 +92886,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -85682,6 +92956,7 @@ public final class DriversPlumbing {
     private Redis() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       password_ = "";
     }
@@ -85766,6 +93041,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -85945,6 +93226,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -86081,6 +93408,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -86118,6 +93448,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -86144,6 +93477,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPortOverride()
@@ -86174,6 +93509,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
@@ -86327,6 +93664,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         portOverride_ = 0;
@@ -86369,6 +93708,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.portOverride_ = portOverride_;
         result.password_ = password_;
@@ -86434,6 +93774,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -86868,6 +94212,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -87216,6 +94656,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -87272,6 +94732,7 @@ public final class DriversPlumbing {
     private ElasticacheRedis() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       password_ = "";
     }
@@ -87361,6 +94822,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -87540,6 +95007,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -87690,6 +95203,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -87731,6 +95247,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -87757,6 +95276,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (getPortOverride()
@@ -87789,6 +95310,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + PORT_OVERRIDE_FIELD_NUMBER;
@@ -87945,6 +95468,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         portOverride_ = 0;
@@ -87989,6 +95514,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.portOverride_ = portOverride_;
         result.password_ = password_;
@@ -88055,6 +95581,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -88492,6 +96022,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -88871,6 +96497,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -88951,6 +96597,7 @@ public final class DriversPlumbing {
     private Snowflake() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -89051,6 +96698,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -89228,6 +96881,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -89475,6 +97174,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -89517,6 +97219,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -89543,6 +97248,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -89577,6 +97284,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -89734,6 +97443,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -89780,6 +97491,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -89847,6 +97559,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -90288,6 +98004,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -90835,6 +98647,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -90927,6 +98759,7 @@ public final class DriversPlumbing {
     private SQLServer() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -91037,6 +98870,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -91214,6 +99053,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -91489,6 +99374,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -91539,6 +99427,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -91565,6 +99456,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -91603,6 +99496,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -91765,6 +99660,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -91815,6 +99712,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -91884,6 +99782,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -92331,6 +100233,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -92940,6 +100938,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -93008,6 +101026,7 @@ public final class DriversPlumbing {
     private SSH() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       publicKey_ = "";
@@ -93104,6 +101123,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -93281,6 +101306,52 @@ public final class DriversPlumbing {
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
       return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int HOSTNAME_FIELD_NUMBER = 1;
@@ -93474,6 +101545,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -93518,6 +101592,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -93544,6 +101621,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -93578,6 +101657,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -93737,6 +101818,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -93783,6 +101866,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.port_ = port_;
@@ -93850,6 +101934,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -94289,6 +102377,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -94746,6 +102930,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -94802,6 +103006,7 @@ public final class DriversPlumbing {
     private SSHCert() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
     }
@@ -94891,6 +103096,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -95070,6 +103281,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -95220,6 +103477,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -95261,6 +103521,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -95287,6 +103550,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -95319,6 +103584,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -95476,6 +103743,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -95520,6 +103789,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.port_ = port_;
@@ -95586,6 +103856,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -96023,6 +104297,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -96402,6 +104772,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -96464,6 +104854,7 @@ public final class DriversPlumbing {
     private Sybase() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -96555,6 +104946,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -96734,6 +105131,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -96911,6 +105354,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -96951,6 +105397,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -96977,6 +105426,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -97009,6 +105460,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -97164,6 +105617,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -97208,6 +105663,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.portOverride_ = portOverride_;
@@ -97274,6 +105730,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -97712,6 +106172,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -98136,6 +106692,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -98198,6 +106774,7 @@ public final class DriversPlumbing {
     private SybaseIQ() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -98289,6 +106866,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -98468,6 +107051,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -98645,6 +107274,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -98685,6 +107317,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -98711,6 +107346,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -98743,6 +107380,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -98898,6 +107537,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -98942,6 +107583,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.portOverride_ = portOverride_;
@@ -99008,6 +107650,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -99446,6 +108092,102 @@ public final class DriversPlumbing {
         return tagsBuilder_;
       }
 
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object hostname_ = "";
       /**
        * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
@@ -99870,6 +108612,26 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
      * <code>string hostname = 1 [(.v1.field_options) = { ... }</code>
      * @return The hostname.
      */
@@ -99932,6 +108694,7 @@ public final class DriversPlumbing {
     private Teradata() {
       id_ = "";
       name_ = "";
+      secretStoreId_ = "";
       hostname_ = "";
       username_ = "";
       password_ = "";
@@ -100023,6 +108786,12 @@ public final class DriversPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
               break;
             }
             default: {
@@ -100202,6 +108971,52 @@ public final class DriversPlumbing {
       return getTags();
     }
 
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int HOSTNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object hostname_;
     /**
@@ -100379,6 +109194,9 @@ public final class DriversPlumbing {
       if (tags_ != null) {
         output.writeMessage(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -100419,6 +109237,9 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(32771, getTags());
       }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -100445,6 +109266,8 @@ public final class DriversPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
       if (!getHostname()
           .equals(other.getHostname())) return false;
       if (!getUsername()
@@ -100477,6 +109300,8 @@ public final class DriversPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getHostname().hashCode();
       hash = (37 * hash) + USERNAME_FIELD_NUMBER;
@@ -100632,6 +109457,8 @@ public final class DriversPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        secretStoreId_ = "";
+
         hostname_ = "";
 
         username_ = "";
@@ -100676,6 +109503,7 @@ public final class DriversPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.secretStoreId_ = secretStoreId_;
         result.hostname_ = hostname_;
         result.username_ = username_;
         result.password_ = password_;
@@ -100742,6 +109570,10 @@ public final class DriversPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
         }
         if (!other.getHostname().isEmpty()) {
           hostname_ = other.hostname_;
@@ -101178,6 +110010,102 @@ public final class DriversPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object hostname_ = "";
@@ -101777,7 +110705,7 @@ public final class DriversPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\rdrivers.proto\022\002v1\032\roptions.proto\032\ntags" +
-      ".proto\"\215\027\n\010Resource\022.\n\006athena\030d \001(\0132\n.v1" +
+      ".proto\"\246\027\n\010Resource\022.\n\006athena\030d \001(\0132\n.v1" +
       ".AthenaB\020\362\370\263\007\013\212\364\263\007\006athenaH\000\0226\n\tbig_query" +
       "\030\310\001 \001(\0132\014.v1.BigQueryB\022\362\370\263\007\r\212\364\263\007\010bigquer" +
       "yH\000\0228\n\tcassandra\030\254\002 \001(\0132\r.v1.CassandraB\023" +
@@ -101850,72 +110778,54 @@ public final class DriversPlumbing {
       "aB\022\362\370\263\007\r\212\364\263\007\010teradataH\000:c\372\370\263\007T\302\363\263\007O\242\363\263\007!" +
       "tf_examples/resource_resource.txt\252\363\263\007$tf" +
       "_examples/resource_data_source.txt\372\370\263\007\005\250" +
-      "\363\263\007\001B(\n\010resource\022\034\252\370\263\007\t\252\370\263\007\004name\252\370\263\007\t\252\370\263" +
-      "\007\004tags\"\235\006\n\006Athena\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
-      "\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
-      "\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022t\n\naccess_key\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263" +
-      "\007\021aws-access-key-id\362\370\263\007\016\202\364\263\007\taccessKey\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\205" +
-      "\001\n\021secret_access_key\030\002 \001(\tBj\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\032\372\363\263\007\025aws-secret-access-key\362\370\263\007\024\202\364\263\007\017s" +
-      "ecretAccessKey\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022n\n\006output\030\003 \001(\tB^\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\027\372\363\263\007\022s3-output-location\362\370\263\007\013\202\364\263\007\006" +
-      "output\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\022v\n\rport_override\030\004 \001(\005B_\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOv" +
-      "erride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\001\022b\n\006region\030\005 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372" +
-      "\363\263\007\006region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370" +
-      "\263\007\013\332\363\263\007\006athena\372\370\263\007\013\342\363\263\007\006athena\372\370\263\007\013\352\363\263\007\006" +
-      "athena\"\200\006\n\010BigQuery\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
-      "\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230" +
-      "\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022p\n\013private_key\030\001 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020" +
-      "\372\363\263\007\013private-key\362\370\263\007\017\202\364\263\007\nprivateKey\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022e\n\007" +
-      "project\030\002 \001(\tBT\362\370\263\007\005\260\363\263\007\001\362\370\263\007\014\372\363\263\007\007proje" +
-      "ct\362\370\263\007\014\202\364\263\007\007project\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\003 \001" +
-      "(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263" +
-      "\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010endpoint\030\004 \001(\tBV\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010end" +
-      "point\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\022h\n\010username\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
-      "\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250\363" +
-      "\263\007\001\372\370\263\007\r\332\363\263\007\010bigquery\372\370\263\007\r\342\363\263\007\010bigquery\372" +
-      "\370\263\007\r\352\363\263\007\010bigquery\"\340\006\n\tCassandra\022\030\n\002id\030\200\200" +
-      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
-      "gsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003" +
-      " \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202" +
-      "\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\004 \001(\005B_\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014" +
-      "portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014tls_requir" +
-      "ed\030\006 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-requir" +
-      "ed\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tcas" +
-      "sandra\372\370\263\007\016\342\363\263\007\tcassandra\372\370\263\007\016\352\363\263\007\tcassa" +
-      "ndra\"\314\006\n\004DB2I\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n" +
-      "\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$" +
-      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010" +
+      "\363\263\007\001BA\n\010resource\0225\252\370\263\007\t\252\370\263\007\004name\252\370\263\007\t\252\370\263" +
+      "\007\004tags\252\370\263\007\024\252\370\263\007\017secret_store_id\"\304\006\n\006Athe" +
+      "na\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
+      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
+      "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
+      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022t\n\naccess_key\030\001" +
+      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021aws-access-key" +
+      "-id\362\370\263\007\016\202\364\263\007\taccessKey\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\205\001\n\021secret_access" +
+      "_key\030\002 \001(\tBj\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025aws-secr" +
+      "et-access-key\362\370\263\007\024\202\364\263\007\017secretAccessKey\362\370" +
+      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022n" +
+      "\n\006output\030\003 \001(\tB^\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022s3-o" +
+      "utput-location\362\370\263\007\013\202\364\263\007\006output\362\370\263\007\005\300\363\263\007\001" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_o" +
+      "verride\030\004 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-" +
+      "override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022b\n\006region" +
+      "\030\005 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006region\362\370\263\007\013\202" +
+      "\364\263\007\006region\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006athena\372\370" +
+      "\263\007\013\342\363\263\007\006athena\372\370\263\007\013\352\363\263\007\006athena\"\247\006\n\010BigQu" +
+      "ery\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200" +
+      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202" +
+      "\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002" +
+      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_sto" +
+      "re_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022p\n\013private_key" +
+      "\030\001 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013private-key\362" +
+      "\370\263\007\017\202\364\263\007\nprivateKey\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022e\n\007project\030\002 \001(\tBT\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\014\372\363\263\007\007project\362\370\263\007\014\202\364\263\007\007proje" +
+      "ct\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022v\n\rport_override\030\003 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverri" +
+      "de\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\001\022h\n\010endpoint\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
+      "\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username" +
+      "\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007" +
+      "\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010bigq" +
+      "uery\372\370\263\007\r\342\363\263\007\010bigquery\372\370\263\007\r\352\363\263\007\010bigquery" +
+      "\"\207\007\n\tCassandra\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'" +
+      "\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022" +
+      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n" +
+      "\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010" +
       "hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010host" +
       "name\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
       "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\t" +
@@ -101929,455 +110839,498 @@ public final class DriversPlumbing {
       "\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004po" +
       "rt\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202" +
       "\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\022k\n\014tls_required\030\007 \001(\010BU\362\370\263\007\005\260\363\263" +
+      "\263\007\005\230\364\263\007\000\022k\n\014tls_required\030\006 \001(\010BU\362\370\263\007\005\260\363\263" +
       "\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:4\372" +
-      "\370\263\007\005\250\363\263\007\001\372\370\263\007\t\332\363\263\007\004db2i\372\370\263\007\t\342\363\263\007\004db2i\372\370\263" +
-      "\007\t\352\363\263\007\004db2i\"\321\006\n\006DB2LUW\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
-      "\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010usern" +
-      "ame\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362" +
-      "\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passw" +
-      "ord\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_ov" +
-      "erride\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-o" +
-      "verride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 " +
-      "\001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004p" +
-      "ort\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006db2luw\372\370\263\007\013\342\363\263\007" +
-      "\006db2luw\372\370\263\007\013\352\363\263\007\006db2luw\"\343\005\n\005Druid\022\030\n\002id\030" +
-      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
-      "TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostna" +
-      "me\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\022v\n\rport_override\030\002 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverri" +
-      "de\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\001\022h\n\010username\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
-      "\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password" +
-      "\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007" +
-      "\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001" +
-      "\372\370\263\007\n\332\363\263\007\005druid\372\370\263\007\n\342\363\263\007\005druid\372\370\263\007\n\352\363\263\007\005" +
-      "druid\"\223\006\n\010DynamoDB\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022r\n\naccess_key\030\001 \001(\tB^\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363" +
-      "\263\007\raccess-key-id\362\370\263\007\020\202\364\263\007\013accessKeyId\362\370\263" +
-      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\201\001" +
-      "\n\021secret_access_key\030\002 \001(\tBf\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\026\372\363\263\007\021secret-access-key\362\370\263\007\024\202\364\263\007\017secret" +
-      "AccessKey\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362" +
-      "\370\263\007\005\230\364\263\007\000\022b\n\006region\030\003 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\013\372\363\263\007\006region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010endpoin" +
-      "t\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263" +
-      "\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001(\005B_" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372" +
+      "\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tcassandra\372\370\263\007\016\342\363\263\007\tca" +
+      "ssandra\372\370\263\007\016\352\363\263\007\tcassandra\"\363\006\n\004DB2I\022\030\n\002i" +
+      "d\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v" +
+      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostn" +
+      "ame\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
+      "\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010passwor" +
+      "d\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263" +
+      "\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\004 \001(\005B_" +
       "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364" +
       "\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006dyn" +
-      "amo\372\370\263\007\013\342\363\263\007\006dynamo\372\370\263\007\013\352\363\263\007\006dynamo\"\231\006\n\010" +
-      "AmazonES\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
-      "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007heal" +
-      "thy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tag" +
-      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022b\n\006regio" +
-      "n\030\001 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006region\362\370\263\007\013" +
-      "\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\022\201\001\n\021secret_access_key\030\002 \001(\tB" +
-      "f\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021secret-access-key\362\370" +
-      "\263\007\024\202\364\263\007\017secretAccessKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010endpoint\030\003 \001(" +
-      "\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007" +
-      "\010endpoint\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\022r\n\naccess_key\030\004 \001(\tB^\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\022\372\363\263\007\raccess-key-id\362\370\263\007\020\202\364\263\007\013access" +
-      "KeyId\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\022v\n\rport_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOve" +
-      "rride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\001:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010amazones\372\370\263\007\r" +
-      "\342\363\263\007\010amazones\372\370\263\007\r\352\363\263\007\010amazones\"\330\006\n\007Elas" +
-      "tic\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014tls_req" +
+      "uired\030\007 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-req" +
+      "uired\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:4\372\370\263\007\005\250\363\263\007\001\372\370\263\007\t\332\363\263\007\004" +
+      "db2i\372\370\263\007\t\342\363\263\007\004db2i\372\370\263\007\t\352\363\263\007\004db2i\"\370\006\n\006DB2" +
+      "LUW\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200" +
       "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202" +
       "\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002" +
-      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001" +
-      " \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202" +
-      "\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h" +
-      "\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010pa" +
-      "ssword\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022v\n\rport_overrid" +
-      "e\030\004 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-overri" +
-      "de\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\005 \001(\005BN" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k" +
-      "\n\014tls_required\030\006 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263" +
-      "\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372" +
-      "\370\263\007\014\332\363\263\007\007elastic\372\370\263\007\014\342\363\263\007\007elastic\372\370\263\007\014\352\363" +
-      "\263\007\007elastic\"\360\007\n\rHTTPBasicAuth\022\030\n\002id\030\200\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022Y\n\003url\030\001 \001(\tBL\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022u\n\020healthcheck_pa" +
-      "th\030\002 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013health-pat" +
-      "h\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\003 \001(\tB" +
+      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_sto" +
+      "re_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 " +
+      "\001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364" +
+      "\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n" +
+      "\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010pas" +
+      "sword\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(" +
+      "\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007" +
+      "\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001(\005B_\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014por" +
+      "tOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t" +
+      "\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013" +
+      "\332\363\263\007\006db2luw\372\370\263\007\013\342\363\263\007\006db2luw\372\370\263\007\013\352\363\263\007\006db2" +
+      "luw\"\212\006\n\005Druid\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n" +
+      "\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$" +
+      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
+      "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010h" +
+      "ostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostn" +
+      "ame\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\002" +
+      " \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362" +
+      "\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010username\030\003 \001(\tB" +
       "V\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010u" +
       "sername\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
       "\007\005\230\364\263\007\000\022h\n\010password\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
       "\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021he" +
-      "aders_blacklist\030\005 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363" +
-      "\263\007\021headers-blacklist\362\370\263\007\025\202\364\263\007\020headersBla" +
-      "cklist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\022s\n\014default_path\030\006 \001(\tB]\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\021\372\363\263\007\014default-path\362\370\263\007\020\202\364\263\007\013defaultP" +
-      "ath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\022k\n\tsubdomain\030\007 \001(\tBX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372" +
-      "\363\263\007\tsubdomain\362\370\263\007\016\202\364\263\007\tsubdomain\362\370\263\007\005\300\363\263" +
-      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250" +
-      "\363\263\007\001\372\370\263\007\016\332\363\263\007\thttpBasic\372\370\263\007\016\342\363\263\007\thttpBas" +
-      "ic\372\370\263\007\016\352\363\263\007\thttpBasic\"\234\006\n\nHTTPNoAuth\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
-      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022Y\n\003url\030\001 \001(\tBL\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022u\n\020health" +
-      "check_path\030\002 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013he" +
-      "alth-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021header" +
-      "s_blacklist\030\003 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021h" +
-      "eaders-blacklist\362\370\263\007\025\202\364\263\007\020headersBlackli" +
-      "st\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\022s\n\014default_path\030\004 \001(\tB]\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\021\372\363\263\007\014default-path\362\370\263\007\020\202\364\263\007\013defaultPath\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022" +
-      "k\n\tsubdomain\030\005 \001(\tBX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\t" +
-      "subdomain\362\370\263\007\016\202\364\263\007\tsubdomain\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:F\372\370\263\007\005\250\363\263\007\001" +
-      "\372\370\263\007\017\332\363\263\007\nhttpNoAuth\372\370\263\007\017\342\363\263\007\nhttpNoAuth" +
-      "\372\370\263\007\017\352\363\263\007\nhttpNoAuth\"\206\007\n\010HTTPAuth\022\030\n\002id\030" +
-      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
-      "TagsB\n\362\370\263\007\005\260\363\263\007\001\022Y\n\003url\030\001 \001(\tBL\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022u\n\020healthche" +
-      "ck_path\030\002 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013healt" +
-      "h-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022p\n\013auth_heade" +
-      "r\030\003 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013auth-header" +
-      "\362\370\263\007\017\202\364\263\007\nauthHeader\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021headers_blackli" +
-      "st\030\004 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021headers-bl" +
-      "acklist\362\370\263\007\025\202\364\263\007\020headersBlacklist\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022s\n\014def" +
-      "ault_path\030\005 \001(\tB]\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014def" +
-      "ault-path\362\370\263\007\020\202\364\263\007\013defaultPath\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\tsubdom" +
-      "ain\030\006 \001(\tBX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdomain" +
-      "\362\370\263\007\016\202\364\263\007\tsubdomain\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007" +
-      "\010httpAuth\372\370\263\007\r\342\363\263\007\010httpAuth\372\370\263\007\r\352\363\263\007\010htt" +
-      "pAuth\"\304\007\n\nKubernetes\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004por" +
+      "t\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364" +
+      "\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005druid\372\370\263\007\n\342" +
+      "\363\263\007\005druid\372\370\263\007\n\352\363\263\007\005druid\"\272\006\n\010DynamoDB\022\030\n" +
+      "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030" +
+      "\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\naccess_key\030\001 \001(\tB" +
+      "^\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raccess-key-id\362\370\263\007\020\202" +
+      "\364\263\007\013accessKeyId\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\201\001\n\021secret_access_key\030\002 " +
+      "\001(\tBf\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021secret-access-k" +
+      "ey\362\370\263\007\024\202\364\263\007\017secretAccessKey\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022b\n\006region\030\003 " +
+      "\001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006region\362\370\263\007\013\202\364\263\007" +
+      "\006region\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\022h\n\010endpoint\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rpor" +
+      "t_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rpo" +
+      "rt-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001::\372\370\263\007\005" +
+      "\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006dynamo\372\370\263\007\013\342\363\263\007\006dynamo\372\370\263" +
+      "\007\013\352\363\263\007\006dynamo\"\300\006\n\010AmazonES\022\030\n\002id\030\200\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022b\n\006region\030\001 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\013\372\363\263\007\006region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\201\001\n\021secret_" +
+      "access_key\030\002 \001(\tBf\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021se" +
+      "cret-access-key\362\370\263\007\024\202\364\263\007\017secretAccessKey" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
+      "\022h\n\010endpoint\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
+      "endpoint\362\370\263\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022r\n\naccess_key" +
+      "\030\004 \001(\tB^\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raccess-key-i" +
+      "d\362\370\263\007\020\202\364\263\007\013accessKeyId\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030" +
+      "\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override" +
+      "\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332" +
+      "\363\263\007\010amazones\372\370\263\007\r\342\363\263\007\010amazones\372\370\263\007\r\352\363\263\007\010" +
+      "amazones\"\377\006\n\007Elastic\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007" +
       "\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
       "\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
       "\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\002 " +
-      "\001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004p" +
-      "ort\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\022\216\001\n\025certificate_authority\030\003 \001(\tBo\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-authority\362\370" +
-      "\263\007\031\202\364\263\007\024certificateAuthority\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\205\001\n\022client_" +
-      "certificate\030\005 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022c" +
-      "lient-certificate\362\370\263\007\026\202\364\263\007\021clientCertifi" +
-      "cate\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230" +
-      "\364\263\007\000\022m\n\nclient_key\030\007 \001(\tBY\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\017\372\363\263\007\nclient-key\362\370\263\007\016\202\364\263\007\tclientKey\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025" +
-      "healthcheck_namespace\030\t \001(\tBo\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\032\372\363\263\007\025healthcheck-namespace\362\370\263\007\031\202\364\263\007\024" +
-      "healthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:F\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\332\363\263" +
-      "\007\nkubernetes\372\370\263\007\017\342\363\263\007\nkubernetes\372\370\263\007\017\352\363\263" +
-      "\007\nkubernetes\"\306\006\n\023KubernetesBasicAuth\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
-      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hos" +
-      "tname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\022\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007" +
-      "\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022q\n\010username\030\003 \001(\tB_\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp-username\362\370\263\007\021\202\364\263" +
-      "\007\014httpUsername\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022q\n\010password\030\004 \001(\tB_\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp-password\362\370\263\007\021\202\364\263\007\014htt" +
-      "pPassword\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362" +
-      "\370\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\005 \001(" +
-      "\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-names" +
-      "pace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:a\372\370\263\007" +
-      "\005\250\363\263\007\001\372\370\263\007\030\332\363\263\007\023kuberneteshttpbasic\372\370\263\007\030" +
-      "\342\363\263\007\023kuberneteshttpbasic\372\370\263\007\030\352\363\263\007\023kubern" +
-      "eteshttpbasic\"\334\005\n\030KubernetesServiceAccou" +
-      "nt\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
-      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
-      "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 " +
-      "\001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364" +
-      "\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022f\n\005token\030\003 \001(\t" +
-      "BW\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tapi-token\362\370\263\007\r\202\364\263\007" +
-      "\010apiToken\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362" +
-      "\370\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\004 \001(" +
-      "\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-names" +
-      "pace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:p\372\370\263\007" +
-      "\005\250\363\263\007\001\372\370\263\007\035\332\363\263\007\030kubernetesserviceaccount" +
-      "\372\370\263\007\035\342\363\263\007\030kubernetesserviceaccount\372\370\263\007\035\352" +
-      "\363\263\007\030kubernetesserviceaccount\"\245\t\n\tAmazonE" +
-      "KS\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
-      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
-      "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010endpoint\030\001 " +
-      "\001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364" +
-      "\263\007\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\022r\n\naccess_key\030\002 \001(\tB^\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\022\372\363\263\007\raccess-key-id\362\370\263\007\020\202\364\263\007\013acce" +
-      "ssKeyId\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\022\201\001\n\021secret_access_key\030\003 \001(\tBf\362\370\263",
-      "\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021secret-access-key\362\370\263\007\024\202" +
-      "\364\263\007\017secretAccessKey\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025certificate_auth" +
-      "ority\030\004 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certifi" +
-      "cate-authority\362\370\263\007\031\202\364\263\007\024certificateAutho" +
-      "rity\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230" +
-      "\364\263\007\000\022b\n\006region\030\006 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263" +
-      "\007\006region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022s\n\014cluster_name" +
-      "\030\007 \001(\tB]\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014cluster-name" +
-      "\362\370\263\007\020\202\364\263\007\013clusterName\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022g\n\010role_arn\030\010 \001(\tB" +
-      "U\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010role-arn\362\370\263\007\014\202\364\263\007\007r" +
-      "oleArn\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\t \001(\tBo" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespac" +
-      "e\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363" +
-      "\263\007\001\372\370\263\007\016\332\363\263\007\tamazoneks\372\370\263\007\016\342\363\263\007\tamazonek" +
-      "s\372\370\263\007\016\352\363\263\007\tamazoneks\"\367\005\n\tGoogleGKE\022\030\n\002id" +
-      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1" +
-      ".TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010endpoint\030\001 \001(\tBV\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpo" +
-      "int\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\022\216\001\n\025certificate_authority\030\002 \001(\tBo\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-authority\362\370" +
-      "\263\007\031\202\364\263\007\024certificateAuthority\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\211\001\n\023service" +
-      "_account_key\030\004 \001(\tBl\362\370\263\007\005\260\363\263\007\001\362\370\263\007\030\372\363\263\007\023" +
-      "service-account-key\362\370\263\007\030\202\364\263\007\023service-acc" +
-      "ount-key\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370" +
-      "\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\006 \001(\t" +
-      "Bo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namesp" +
-      "ace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005" +
-      "\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tgooglegke\372\370\263\007\016\342\363\263\007\tgoogle" +
-      "gke\372\370\263\007\016\352\363\263\007\tgooglegke\"\250\007\n\003AKS\022\030\n\002id\030\200\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
-      "sB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362" +
-      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022" +
-      "\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362" +
-      "\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025certificate_authority\030" +
-      "\003 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-a" +
-      "uthority\362\370\263\007\031\202\364\263\007\024certificateAuthority\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\205" +
-      "\001\n\022client_certificate\030\005 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\027\372\363\263\007\022client-certificate\362\370\263\007\026\202\364\263\007\021cli" +
-      "entCertificate\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022m\n\nclient_key\030\007 \001(\tBY\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\nclient-key\362\370\263\007\016\202\364\263\007\tclie" +
-      "ntKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005" +
-      "\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\t \001(\tBo\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespace" +
-      "\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:1\372\370\263\007\005\250\363\263" +
-      "\007\001\372\370\263\007\010\332\363\263\007\003aks\372\370\263\007\010\342\363\263\007\003aks\372\370\263\007\010\352\363\263\007\003ak" +
-      "s\"\252\006\n\014AKSBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
-      "\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\002 \001(" +
-      "\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004por" +
-      "t\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\022q\n\010username\030\003 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007" +
-      "\rhttp-username\362\370\263\007\021\202\364\263\007\014httpUsername\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022q\n\010" +
-      "password\030\004 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp" +
-      "-password\362\370\263\007\021\202\364\263\007\014httpPassword\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025heal" +
-      "thcheck_namespace\030\005 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032" +
-      "\372\363\263\007\025healthcheck-namespace\362\370\263\007\031\202\364\263\007\024heal" +
-      "thcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:L\372\370\263\007\005\250\363\263\007\001\372\370\263\007\021\332\363\263\007\014ak" +
-      "shttpbasic\372\370\263\007\021\342\363\263\007\014akshttpbasic\372\370\263\007\021\352\363\263" +
-      "\007\014akshttpbasic\"\300\005\n\021AKSServiceAccount\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
-      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hos" +
-      "tname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\022\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007" +
-      "\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022f\n\005token\030\003 \001(\tBW\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tapi-token\362\370\263\007\r\202\364\263\007\010apiTo" +
-      "ken\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\000\022\216\001\n\025healthcheck_namespace\030\004 \001(\tBo\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespace\362\370" +
-      "\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:[\372\370\263\007\005\250\363\263\007\001" +
-      "\372\370\263\007\026\332\363\263\007\021aksserviceaccount\372\370\263\007\026\342\363\263\007\021aks" +
-      "serviceaccount\372\370\263\007\026\352\363\263\007\021aksserviceaccoun" +
-      "t\"\237\004\n\tMemcached\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022" +
-      "\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001" +
-      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h" +
-      "\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010ho" +
-      "stname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_overrid" +
-      "e\030\002 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-overri" +
-      "de\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\003 \001(\005BN" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C" +
-      "\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tmemcached\372\370\263\007\016\342\363\263\007\tm" +
-      "emcached\372\370\263\007\016\352\363\263\007\tmemcached\"\304\010\n\017MongoLeg" +
-      "acyHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
+      "\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
+      "\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username" +
+      "\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007" +
+      "\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password" +
+      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
+      "\022v\n\rport_override\030\004 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022" +
+      "\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001" +
+      "\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port" +
+      "\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014tls_required\030\006 \001(\010BU\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003" +
+      "tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014\332\363\263\007\007elastic\372\370\263\007\014\342\363\263" +
+      "\007\007elastic\372\370\263\007\014\352\363\263\007\007elastic\"\227\010\n\rHTTPBasic" +
+      "Auth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201" +
+      "\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030" +
+      "\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200" +
+      "\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_st" +
+      "ore_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022Y\n\003url\030\001 \001(\tB" +
+      "L\362\370\263\007\005\260\363\263\007\001\362\370\263\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022u\n" +
+      "\020healthcheck_path\030\002 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020" +
+      "\372\363\263\007\013health-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010" +
+      "username\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010user" +
+      "name\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\004 \001(\t" +
+      "BV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010" +
+      "password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\000\022\202\001\n\021headers_blacklist\030\005 \001(\tBg\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021headers-blacklist\362\370\263\007\025" +
+      "\202\364\263\007\020headersBlacklist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022s\n\014default_path\030\006 " +
+      "\001(\tB]\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014default-path\362\370\263" +
+      "\007\020\202\364\263\007\013defaultPath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\tsubdomain\030\007 \001(\tBX\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdomain\362\370\263\007\016\202\364\263\007\tsu" +
+      "bdomain\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\thttpBasic\372\370" +
+      "\263\007\016\342\363\263\007\thttpBasic\372\370\263\007\016\352\363\263\007\thttpBasic\"\303\006\n" +
+      "\nHTTPNoAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n" +
+      "\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007h" +
+      "ealthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004" +
+      "tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017se" +
+      "cret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022Y\n\003url" +
+      "\030\001 \001(\tBL\362\370\263\007\005\260\363\263\007\001\362\370\263\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007" +
+      "\003url\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\022u\n\020healthcheck_path\030\002 \001(\tB[\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\020\372\363\263\007\013health-path\362\370\263\007\017\202\364\263\007\nhealthP" +
+      "ath\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\022\202\001\n\021headers_blacklist\030\003 \001(\tBg\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\026\372\363\263\007\021headers-blacklist\362\370\263\007\025\202\364\263\007\020" +
+      "headersBlacklist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022s\n\014default_path\030\004 \001(\tB]" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014default-path\362\370\263\007\020\202\364\263" +
+      "\007\013defaultPath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\tsubdomain\030\005 \001(\tBX\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdomain\362\370\263\007\016\202\364\263\007\tsubdoma" +
+      "in\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000:F\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\332\363\263\007\nhttpNoAuth\372\370\263\007\017\342" +
+      "\363\263\007\nhttpNoAuth\372\370\263\007\017\352\363\263\007\nhttpNoAuth\"\255\007\n\010H" +
+      "TTPAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
       "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healt" +
       "hy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags" +
-      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostna" +
+      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret" +
+      "_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022Y\n\003url\030\001 \001" +
+      "(\tBL\362\370\263\007\005\260\363\263\007\001\362\370\263\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url" +
+      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\022u\n\020healthcheck_path\030\002 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\020\372\363\263\007\013health-path\362\370\263\007\017\202\364\263\007\nhealthPath\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022" +
+      "p\n\013auth_header\030\003 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263" +
+      "\007\013auth-header\362\370\263\007\017\202\364\263\007\nauthHeader\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021he" +
+      "aders_blacklist\030\004 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363" +
+      "\263\007\021headers-blacklist\362\370\263\007\025\202\364\263\007\020headersBla" +
+      "cklist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\022s\n\014default_path\030\005 \001(\tB]\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\021\372\363\263\007\014default-path\362\370\263\007\020\202\364\263\007\013defaultP" +
+      "ath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\022k\n\tsubdomain\030\006 \001(\tBX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372" +
+      "\363\263\007\tsubdomain\362\370\263\007\016\202\364\263\007\tsubdomain\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250" +
+      "\363\263\007\001\372\370\263\007\r\332\363\263\007\010httpAuth\372\370\263\007\r\342\363\263\007\010httpAuth" +
+      "\372\370\263\007\r\352\363\263\007\010httpAuth\"\353\007\n\nKubernetes\022\030\n\002id\030" +
+      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostnam" +
+      "e\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\022\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004por" +
+      "t\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025certificate_authorit" +
+      "y\030\003 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate" +
+      "-authority\362\370\263\007\031\202\364\263\007\024certificateAuthority" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
+      "\022\205\001\n\022client_certificate\030\005 \001(\tBi\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\027\372\363\263\007\022client-certificate\362\370\263\007\026\202\364\263\007\021c" +
+      "lientCertificate\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022m\n\nclient_key\030\007 \001(\tBY\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\nclient-key\362\370\263\007\016\202\364\263\007\tcl" +
+      "ientKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263" +
+      "\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\t \001(\tB" +
+      "o\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespa" +
+      "ce\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:F\372\370\263\007\005\250" +
+      "\363\263\007\001\372\370\263\007\017\332\363\263\007\nkubernetes\372\370\263\007\017\342\363\263\007\nkubern" +
+      "etes\372\370\263\007\017\352\363\263\007\nkubernetes\"\355\006\n\023KubernetesB" +
+      "asicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
+      "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007heal" +
+      "thy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tag" +
+      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secre" +
+      "t_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostna" +
       "me\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370" +
       "\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rauth_database\030\002 \001(\tB" +
-      "_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rauth-database\362\370\263\007\021\202" +
-      "\364\263\007\014authDatabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\003 \001(\005B" +
-      "_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202" +
-      "\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010username\030\004 \001(\tBV\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010userna" +
-      "me\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\022h\n\010password\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
-      "\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\006 \001" +
-      "(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004po" +
-      "rt\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\022p\n\013replica_set\030\007 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020" +
-      "\372\363\263\007\013replica-set\362\370\263\007\017\202\364\263\007\nreplicaSet\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014" +
-      "tls_required\030\010 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014" +
-      "tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263" +
-      "\007\n\332\363\263\007\005mongo\372\370\263\007\n\342\363\263\007\005mongo\372\370\263\007\n\352\363\263\007\005mon" +
-      "go\"\362\t\n\025MongoLegacyReplicaset\022\030\n\002id\030\200\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263" +
-      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n" +
-      "\rauth_database\030\002 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
-      "\007\rauth-database\362\370\263\007\021\202\364\263\007\014authDatabase\362\370\263" +
-      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n" +
-      "\rport_override\030\003 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
-      "\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n" +
-      "\010username\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010use" +
-      "rname\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\005 \001(" +
-      "\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007" +
-      "\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362" +
-      "\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t" +
-      "\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022p\n\013replica_set\030\007" +
-      " \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013replica-set\362\370\263" +
-      "\007\017\202\364\263\007\nreplicaSet\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\204\001\n\022connect_to_replica" +
-      "\030\010 \001(\010Bh\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022connect-to-r" +
-      "eplica\362\370\263\007\025\202\364\263\007\020connectToReplica\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014tls_" +
-      "required\030\t \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-" +
-      "required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:X\372\370\263\007\005\250\363\263\007\001\372\370\263\007\025\332\363" +
-      "\263\007\020mongo-replicaset\372\370\263\007\025\342\363\263\007\020mongo-repli" +
-      "caset\372\370\263\007\025\352\363\263\007\020mongo-replicaset\"\330\007\n\tMong" +
-      "oHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030" +
-      "\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy" +
-      "\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203" +
-      "\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname" +
-      "\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007" +
-      "\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rauth_database\030\002 \001(\tB_\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rauth-database\362\370\263\007\021\202\364\263" +
-      "\007\014authDatabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\003 \001(\005B_\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263" +
-      "\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010username\030\004 \001(\tBV\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022q\n\010userna" +
+      "me\030\003 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp-usern" +
+      "ame\362\370\263\007\021\202\364\263\007\014httpUsername\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022q\n\010password\030\004 " +
+      "\001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp-password\362\370" +
+      "\263\007\021\202\364\263\007\014httpPassword\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_nam" +
+      "espace\030\005 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025health" +
+      "check-namespace\362\370\263\007\031\202\364\263\007\024healthcheckName" +
+      "space\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007\030\332\363\263\007\023kuberneteshtt" +
+      "pbasic\372\370\263\007\030\342\363\263\007\023kuberneteshttpbasic\372\370\263\007\030" +
+      "\352\363\263\007\023kuberneteshttpbasic\"\203\006\n\030KubernetesS" +
+      "erviceAccount\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n" +
+      "\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$" +
+      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
+      "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010h" +
+      "ostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostn" +
+      "ame\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\002 \001(\005BN\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005" +
+      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022f\n\005t" +
+      "oken\030\003 \001(\tBW\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tapi-toke" +
+      "n\362\370\263\007\r\202\364\263\007\010apiToken\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_name" +
+      "space\030\004 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthc",
+      "heck-namespace\362\370\263\007\031\202\364\263\007\024healthcheckNames" +
+      "pace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000:p\372\370\263\007\005\250\363\263\007\001\372\370\263\007\035\332\363\263\007\030kubernetesserv" +
+      "iceaccount\372\370\263\007\035\342\363\263\007\030kubernetesserviceacc" +
+      "ount\372\370\263\007\035\352\363\263\007\030kubernetesserviceaccount\"\314" +
+      "\t\n\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
+      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
+      "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
+      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017s" +
+      "ecret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010en" +
+      "dpoint\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoi" +
+      "nt\362\370\263\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022r\n\naccess_key\030\002 \001(\t" +
+      "B^\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raccess-key-id\362\370\263\007\020" +
+      "\202\364\263\007\013accessKeyId\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\201\001\n\021secret_access_key\030\003" +
+      " \001(\tBf\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021secret-access-" +
+      "key\362\370\263\007\024\202\364\263\007\017secretAccessKey\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025certifi" +
+      "cate_authority\030\004 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263" +
+      "\007\025certificate-authority\362\370\263\007\031\202\364\263\007\024certifi" +
+      "cateAuthority\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\001\362\370\263\007\005\230\364\263\007\000\022b\n\006region\030\006 \001(\tBR\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\013\372\363\263\007\006region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022s\n\014clu" +
+      "ster_name\030\007 \001(\tB]\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014clu" +
+      "ster-name\362\370\263\007\020\202\364\263\007\013clusterName\362\370\263\007\005\300\363\263\007\001" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022g\n\010role_a" +
+      "rn\030\010 \001(\tBU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010role-arn\362\370" +
+      "\263\007\014\202\364\263\007\007roleArn\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespac" +
+      "e\030\t \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck" +
+      "-namespace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace" +
       "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\022h\n\010password\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\006 \001(\005" +
-      "BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\022k\n\014tls_required\030\010 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372" +
-      "\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263\007" +
-      "\001\372\370\263\007\016\332\363\263\007\tmongoHost\372\370\263\007\016\342\363\263\007\tmongoHost\372" +
-      "\370\263\007\016\352\363\263\007\tmongoHost\"\351\t\n\017MongoReplicaSet\022\030" +
+      ":C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tamazoneks\372\370\263\007\016\342\363\263\007" +
+      "\tamazoneks\372\370\263\007\016\352\363\263\007\tamazoneks\"\236\006\n\tGoogle" +
+      "GKE\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200" +
+      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202" +
+      "\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002" +
+      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_sto" +
+      "re_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010endpoint\030\001 " +
+      "\001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364" +
+      "\263\007\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025certificate_authority\030\002 " +
+      "\001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-aut" +
+      "hority\362\370\263\007\031\202\364\263\007\024certificateAuthority\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\211\001\n" +
+      "\023service_account_key\030\004 \001(\tBl\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\030\372\363\263\007\023service-account-key\362\370\263\007\030\202\364\263\007\023ser" +
+      "vice-account-key\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespa" +
+      "ce\030\006 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthchec" +
+      "k-namespace\362\370\263\007\031\202\364\263\007\024healthcheckNamespac" +
+      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tgooglegke\372\370\263\007\016\342\363\263" +
+      "\007\tgooglegke\372\370\263\007\016\352\363\263\007\tgooglegke\"\317\007\n\003AKS\022\030" +
       "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\t" +
       "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(" +
       "\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132" +
-      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tB" +
+      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id" +
+      "\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010ho" +
+      "stname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\022\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263" +
+      "\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025certificate_aut" +
+      "hority\030\003 \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certif" +
+      "icate-authority\362\370\263\007\031\202\364\263\007\024certificateAuth" +
+      "ority\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005" +
+      "\230\364\263\007\000\022\205\001\n\022client_certificate\030\005 \001(\tBi\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022client-certificate\362\370\263\007\026\202" +
+      "\364\263\007\021clientCertificate\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022m\n\nclient_key\030\007 \001(" +
+      "\tBY\362\370\263\007\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\nclient-key\362\370\263\007\016\202\364" +
+      "\263\007\tclientKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\t" +
+      " \001(\tBo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-na" +
+      "mespace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:1\372" +
+      "\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003aks\372\370\263\007\010\342\363\263\007\003aks\372\370\263\007\010" +
+      "\352\363\263\007\003aks\"\321\006\n\014AKSBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004por" +
+      "t\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364" +
+      "\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\022q\n\010username\030\003 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\022\372\363\263\007\rhttp-username\362\370\263\007\021\202\364\263\007\014httpUserna" +
+      "me\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022q\n\010password\030\004 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
+      "\007\rhttp-password\362\370\263\007\021\202\364\263\007\014httpPassword\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\216\001" +
+      "\n\025healthcheck_namespace\030\005 \001(\tBo\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespace\362\370\263\007\031\202\364\263" +
+      "\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:L\372\370\263\007\005\250\363\263\007\001\372\370\263\007\021\332" +
+      "\363\263\007\014akshttpbasic\372\370\263\007\021\342\363\263\007\014akshttpbasic\372\370" +
+      "\263\007\021\352\363\263\007\014akshttpbasic\"\347\005\n\021AKSServiceAccou" +
+      "nt\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
+      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
+      "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
+      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001" +
+      "(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263" +
+      "\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\002 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022f\n\005token\030\003 \001(\tB" +
+      "W\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tapi-token\362\370\263\007\r\202\364\263\007\010" +
+      "apiToken\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\000\022\216\001\n\025healthcheck_namespace\030\004 \001(\t" +
+      "Bo\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namesp" +
+      "ace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:[\372\370\263\007\005" +
+      "\250\363\263\007\001\372\370\263\007\026\332\363\263\007\021aksserviceaccount\372\370\263\007\026\342\363\263" +
+      "\007\021aksserviceaccount\372\370\263\007\026\352\363\263\007\021aksservicea" +
+      "ccount\"\306\004\n\tMemcached\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
+      "\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
+      "\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
+      "\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_ove" +
+      "rride\030\002 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-ov" +
+      "erride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\003 \001" +
+      "(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004po" +
+      "rt\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tmemcached\372\370\263\007\016\342\363" +
+      "\263\007\tmemcached\372\370\263\007\016\352\363\263\007\tmemcached\"\353\010\n\017Mong" +
+      "oLegacyHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n" +
+      "\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007h" +
+      "ealthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004" +
+      "tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017se" +
+      "cret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hos" +
+      "tname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostnam" +
+      "e\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rauth_database\030\002 \001" +
+      "(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rauth-database\362\370\263" +
+      "\007\021\202\364\263\007\014authDatabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\003 \001" +
+      "(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263" +
+      "\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010username\030\004 \001(\tBV\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010use" +
+      "rname\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\022h\n\010password\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
+      "\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030" +
+      "\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007" +
+      "\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\022p\n\013replica_set\030\007 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\020\372\363\263\007\013replica-set\362\370\263\007\017\202\364\263\007\nreplicaSet\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022" +
+      "k\n\014tls_required\030\010 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363" +
+      "\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007\n\332\363\263\007\005mongo\372\370\263\007\n\342\363\263\007\005mongo\372\370\263\007\n\352\363\263\007\005" +
+      "mongo\"\231\n\n\025MongoLegacyReplicaset\022\030\n\002id\030\200\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022" +
+      "v\n\rauth_database\030\002 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372" +
+      "\363\263\007\rauth-database\362\370\263\007\021\202\364\263\007\014authDatabase\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022" +
+      "v\n\rport_override\030\003 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372" +
+      "\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022" +
+      "h\n\010username\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010u" +
+      "sername\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\005 " +
+      "\001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364" +
+      "\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022p\n\013replica_set" +
+      "\030\007 \001(\tB[\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013replica-set\362" +
+      "\370\263\007\017\202\364\263\007\nreplicaSet\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\204\001\n\022connect_to_repli" +
+      "ca\030\010 \001(\010Bh\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022connect-to" +
+      "-replica\362\370\263\007\025\202\364\263\007\020connectToReplica\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014tl" +
+      "s_required\030\t \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tl" +
+      "s-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:X\372\370\263\007\005\250\363\263\007\001\372\370\263\007\025" +
+      "\332\363\263\007\020mongo-replicaset\372\370\263\007\025\342\363\263\007\020mongo-rep" +
+      "licaset\372\370\263\007\025\352\363\263\007\020mongo-replicaset\"\377\007\n\tMo" +
+      "ngoHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
+      "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healt" +
+      "hy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags" +
+      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret" +
+      "_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostnam" +
+      "e\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263" +
+      "\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rauth_database\030\002 \001(\tB_" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rauth-database\362\370\263\007\021\202\364" +
+      "\263\007\014authDatabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\003 \001(\005B_" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364" +
+      "\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010username\030\004 \001(\tBV\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usernam" +
+      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\022h\n\010password\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\006 \001(" +
+      "\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004por" +
+      "t\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\022k\n\014tls_required\030\010 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021" +
+      "\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007\016\332\363\263\007\tmongoHost\372\370\263\007\016\342\363\263\007\tmongoHost" +
+      "\372\370\263\007\016\352\363\263\007\tmongoHost\"\220\n\n\017MongoReplicaSet\022" +
+      "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(" +
+      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001" +
+      "(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\013" +
+      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_i" +
+      "d\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tB" +
       "V\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010h" +
       "ostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
       "\007\005\230\364\263\007\000\022v\n\rauth_database\030\002 \001(\tB_\362\370\263\007\005\260\363\263" +
@@ -102404,15 +111357,153 @@ public final class DriversPlumbing {
       "\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007" +
       "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:U\372\370\263\007\005\250\363" +
       "\263\007\001\372\370\263\007\024\332\363\263\007\017mongoReplicaSet\372\370\263\007\024\342\363\263\007\017mo" +
-      "ngoReplicaSet\372\370\263\007\024\352\363\263\007\017mongoReplicaSet\"\315" +
+      "ngoReplicaSet\372\370\263\007\024\352\363\263\007\017mongoReplicaSet\"\364" +
       "\006\n\005Mysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
       "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007heal" +
       "thy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tag" +
-      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostn" +
+      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secre" +
+      "t_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostna" +
+      "me\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370" +
+      "\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010userna" +
+      "me\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
+      "\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database" +
+      "\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007" +
+      "\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001(\005B_\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263" +
+      "\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007\n\332\363\263\007\005mysql\372\370\263\007\n\342\363\263\007\005mysql\372\370\263\007\n\352\363\263\007\005" +
+      "mysql\"\217\007\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
+      "\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
+      "\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010usernam" +
+      "e\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263" +
+      "\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passwor" +
+      "d\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007" +
+      "\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_over" +
+      "ride\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-ove" +
+      "rride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(" +
+      "\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004por" +
+      "t\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000:L\372\370\263\007\005\250\363\263\007\001\372\370\263\007\021\332\363\263\007\014aurora-mysql\372\370\263\007\021" +
+      "\342\363\263\007\014aurora-mysql\372\370\263\007\021\352\363\263\007\014aurora-mysql\"" +
+      "\200\007\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
+      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
+      "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
+      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017s" +
+      "ecret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010ho" +
+      "stname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostna" +
+      "me\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010us" +
+      "ername\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010data" +
+      "base\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database" +
+      "\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001(" +
+      "\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007" +
+      "\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250" +
+      "\363\263\007\001\372\370\263\007\r\332\363\263\007\010clustrix\372\370\263\007\r\342\363\263\007\010clustrix" +
+      "\372\370\263\007\r\352\363\263\007\010clustrix\"\364\006\n\005Maria\022\030\n\002id\030\200\200\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010" +
+      "username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010user" +
+      "name\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\t" +
+      "BV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010" +
+      "password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300" +
+      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rpo" +
+      "rt_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rp" +
+      "ort-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004po" +
+      "rt\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202" +
+      "\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005maria\372\370\263\007\n" +
+      "\342\363\263\007\005maria\372\370\263\007\n\352\363\263\007\005maria\"\370\006\n\006Memsql\022\030\n\002" +
+      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
+      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
+      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010host" +
+      "name\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
+      "\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010passwo" +
+      "rd\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370" +
+      "\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010databa" +
+      "se\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022v\n\rport_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverri" +
+      "de\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004po" +
+      "rt\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006me" +
+      "msql\372\370\263\007\013\342\363\263\007\006memsql\372\370\263\007\013\352\363\263\007\006memsql\"\345\007\n" +
+      "\006Oracle\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
+      "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healt" +
+      "hy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags" +
+      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret" +
+      "_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostnam" +
+      "e\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263" +
+      "\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usernam" +
+      "e\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030" +
+      "\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r" +
+      "\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_over" +
+      "ride\030\006 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-ove" +
+      "rride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022k\n\014tls_requi" +
+      "red\030\007 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-requi" +
+      "red\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006or" +
+      "acle\372\370\263\007\013\342\363\263\007\006oracle\372\370\263\007\013\352\363\263\007\006oracle\"\205\010\n" +
+      "\010Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
+      "ame\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007hea" +
+      "lthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004ta" +
+      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secr" +
+      "et_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostn" +
       "ame\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362" +
       "\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
       "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usern" +
+      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usern",
       "ame\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
       "\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
       "\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362" +
@@ -102424,77 +111515,121 @@ public final class DriversPlumbing {
       "\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005" +
       "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007" +
       "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007" +
-      "\001\372\370\263\007\n\332\363\263\007\005mysql\372\370\263\007\n\342\363\263\007\005mysql\372\370\263\007\n\352\363\263\007" +
-      "\005mysql\"\350\006\n\013AuroraMysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
-      "\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010usern" +
-      "ame\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362" +
-      "\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passw" +
-      "ord\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_ov" +
-      "erride\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-o" +
-      "verride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 " +
-      "\001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004p" +
-      "ort\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000:L\372\370\263\007\005\250\363\263\007\001\372\370\263\007\021\332\363\263\007\014aurora-mysql\372\370\263" +
-      "\007\021\342\363\263\007\014aurora-mysql\372\370\263\007\021\352\363\263\007\014aurora-mysq" +
-      "l\"\331\006\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'" +
-      "\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022" +
-      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n" +
-      "\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hos" +
-      "tname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(" +
-      "\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007" +
-      "\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010d" +
-      "atabase\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010datab" +
-      "ase\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005" +
-      " \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362" +
-      "\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263" +
-      "\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010clustrix\372\370\263\007\r\342\363\263\007\010clust" +
-      "rix\372\370\263\007\r\352\363\263\007\010clustrix\"\315\006\n\005Maria\022\030\n\002id\030\200\200" +
-      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
-      "gsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003" +
-      " \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202" +
-      "\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v" +
-      "\n\rport_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363" +
-      "\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\" +
-      "\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370" +
-      "\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005maria\372" +
-      "\370\263\007\n\342\363\263\007\005maria\372\370\263\007\n\352\363\263\007\005maria\"\321\006\n\006Memsql" +
-      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
-      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 " +
-      "\001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021overri" +
+      "de_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021o" +
+      "verride-database\362\370\263\007\025\202\364\263\007\020overrideDataba" +
+      "se\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010postgres\372\370\263\007\r\342\363\263" +
+      "\007\010postgres\372\370\263\007\r\352\363\263\007\010postgres\"\240\010\n\016AuroraP" +
+      "ostgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
+      "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healt" +
+      "hy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags" +
+      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret" +
+      "_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostnam" +
+      "e\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263" +
+      "\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usernam" +
+      "e\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030" +
+      "\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r" +
+      "\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001(\005B_\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007" +
+      "\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021override" +
+      "_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021ove" +
+      "rride-database\362\370\263\007\025\202\364\263\007\020overrideDatabase" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      ":U\372\370\263\007\005\250\363\263\007\001\372\370\263\007\024\332\363\263\007\017aurora-postgres\372\370\263" +
+      "\007\024\342\363\263\007\017aurora-postgres\372\370\263\007\024\352\363\263\007\017aurora-p" +
+      "ostgres\"\211\010\n\tGreenplum\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
+      "\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
+      "\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010usernam" +
+      "e\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263" +
+      "\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passwor" +
+      "d\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007" +
+      "\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_over" +
+      "ride\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-ove" +
+      "rride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(" +
+      "\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004por" +
+      "t\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\022\202\001\n\021override_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020ov" +
+      "errideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tgree" +
+      "nplum\372\370\263\007\016\342\363\263\007\tgreenplum\372\370\263\007\016\352\363\263\007\tgreenp" +
+      "lum\"\211\010\n\tCockroach\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010h" +
+      "ostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 " +
+      "\001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364" +
+      "\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n" +
+      "\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010dat" +
+      "abase\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override" +
+      "\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-overrid" +
+      "e\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001" +
+      "\n\021override_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020overri" +
+      "deDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tcockroac" +
+      "h\372\370\263\007\016\342\363\263\007\tcockroach\372\370\263\007\016\352\363\263\007\tcockroach\"" +
+      "\205\010\n\010Redshift\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
+      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
+      "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
+      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017s" +
+      "ecret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010ho" +
+      "stname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostna" +
+      "me\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010us" +
+      "ername\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010data" +
+      "base\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database" +
+      "\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001(" +
+      "\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007" +
+      "\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021ove" +
+      "rride_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263" +
+      "\007\021override-database\362\370\263\007\025\202\364\263\007\020overrideDat" +
+      "abase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010redshift\372\370\263\007\r" +
+      "\342\363\263\007\010redshift\372\370\263\007\r\352\363\263\007\010redshift\"\371\007\n\005Citu" +
+      "s\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 " +
+      "\001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002" +
+      " \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001" +
+      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store" +
+      "_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(" +
       "\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007" +
       "\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
       "\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362" +
@@ -102510,136 +111645,120 @@ public final class DriversPlumbing {
       "verride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
       "\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363" +
       "\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363" +
-      "\263\007\006memsql\372\370\263\007\013\342\363\263\007\006memsql\372\370\263\007\013\352\363\263\007\006memsq" +
-      "l\"\276\007\n\006Oracle\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
-      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
-      "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
-      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010h" +
-      "ostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostn" +
-      "ame\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tB" +
-      "V\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010u" +
-      "sername\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010dat" +
-      "abase\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010databas" +
-      "e\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rpor" +
-      "t_override\030\006 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rpo" +
-      "rt-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022k\n\014tls" +
-      "_required\030\007 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls" +
-      "-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332" +
-      "\363\263\007\006oracle\372\370\263\007\013\342\363\263\007\006oracle\372\370\263\007\013\352\363\263\007\006orac" +
-      "le\"\336\007\n\010Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022" +
-      "\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001" +
-      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h" +
-      "\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010ho" +
-      "stname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001" +
-      "(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263" +
-      "\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010" +
-      "database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010data" +
-      "base\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030" +
-      "\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override" +
-      "\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
-      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n" +
-      "\021override_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020overrid" +
-      "eDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010postgres\372" +
-      "\370\263\007\r\342\363\263\007\010postgres\372\370\263\007\r\352\363\263\007\010postgres\"\371\007\n\016" +
-      "AuroraPostgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'" +
-      "\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022" +
-      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n" +
-      "\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hos" +
-      "tname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(" +
-      "\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007" +
-      "\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010d" +
-      "atabase\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010datab" +
-      "ase\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005",
-      " \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362" +
-      "\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021" +
-      "override_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026" +
-      "\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020override" +
-      "Database\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000:U\372\370\263\007\005\250\363\263\007\001\372\370\263\007\024\332\363\263\007\017aurora-pos" +
-      "tgres\372\370\263\007\024\342\363\263\007\017aurora-postgres\372\370\263\007\024\352\363\263\007\017" +
-      "aurora-postgres\"\342\007\n\tGreenplum\022\030\n\002id\030\200\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h" +
-      "\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010us" +
-      "ername\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001" +
-      "(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263" +
-      "\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001" +
-      "\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\r" +
-      "port_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007" +
-      "\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004" +
-      "port\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007" +
-      "\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021override_database\030\007 \001(\010Bg" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263" +
-      "\007\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016" +
-      "\332\363\263\007\tgreenplum\372\370\263\007\016\342\363\263\007\tgreenplum\372\370\263\007\016\352\363" +
-      "\263\007\tgreenplum\"\342\007\n\tCockroach\022\030\n\002id\030\200\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010u" +
-      "sername\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010usern" +
-      "ame\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tB" +
-      "V\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010p" +
-      "assword\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263" +
-      "\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rpor" +
-      "t_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rpo" +
-      "rt-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004por" +
-      "t\030\006 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364" +
-      "\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\022\202\001\n\021override_database\030\007 \001(\010Bg\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202" +
-      "\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263" +
-      "\007\tcockroach\372\370\263\007\016\342\363\263\007\tcockroach\372\370\263\007\016\352\363\263\007\t" +
-      "cockroach\"\336\007\n\010Redshift\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021override_datab" +
+      "ase\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-" +
+      "database\362\370\263\007\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007" +
+      "\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005citus\372\370\263\007\n\342\363\263\007\005citus\372\370\263\007" +
+      "\n\352\363\263\007\005citus\"\345\007\n\006Presto\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370" +
       "\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
       "\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
       "\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
+      "\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010passwo" +
+      "rd\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370" +
+      "\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030\003 \001(\tBV\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010databa" +
+      "se\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022v\n\rport_override\030\004 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverri" +
+      "de\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\001\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004po" +
+      "rt\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\006 \001(\tBV\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010userna" +
+      "me\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022k\n\014tls_required\030\007 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363" +
+      "\263\007\001\372\370\263\007\013\332\363\263\007\006presto\372\370\263\007\013\342\363\263\007\006presto\372\370\263\007\013" +
+      "\352\363\263\007\006presto\"\202\006\n\003RDP\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
+      "\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230" +
+      "\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030" +
+      "\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r" +
+      "\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022" +
+      "v\n\rport_override\030\004 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372" +
+      "\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022" +
+      "\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362" +
+      "\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003rdp\372\370" +
+      "\263\007\010\342\363\263\007\003rdp\372\370\263\007\010\352\363\263\007\003rdp\"\240\005\n\005Redis\022\030\n\002id" +
+      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1" +
+      ".TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostna" +
+      "me\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022v\n\rport_override\030\002 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverri" +
+      "de\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\001\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
+      "\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\004 \001" +
+      "(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004po" +
+      "rt\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005redis\372\370\263\007\n\342\363\263\007\005r" +
+      "edis\372\370\263\007\n\352\363\263\007\005redis\"\236\006\n\020ElasticacheRedis" +
+      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
+      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 " +
+      "\001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(" +
+      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_" +
+      "id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\t" +
+      "BV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010" +
+      "hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\022v\n\rport_override\030\002 \001(\005B_\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014port" +
+      "Override\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\001\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022\\\n\004po" +
+      "rt\030\004 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202" +
+      "\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\022k\n\014tls_required\030\005 \001(\010BU\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:=\372" +
+      "\370\263\007\005\250\363\263\007\001\372\370\263\007\014\332\363\263\007\007ecredis\372\370\263\007\014\342\363\263\007\007ecre" +
+      "dis\372\370\263\007\014\352\363\263\007\007ecredis\"\212\007\n\tSnowflake\022\030\n\002id" +
+      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1" +
+      ".TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostna" +
+      "me\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
+      "\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password" +
+      "\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007" +
+      "\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(\tBV\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database" +
+      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\022b\n\006schema\030\005 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006sc" +
+      "hema\362\370\263\007\013\202\364\263\007\006schema\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\006 " +
+      "\001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370" +
+      "\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263" +
+      "\007\tsnowflake\372\370\263\007\016\342\363\263\007\tsnowflake\372\370\263\007\016\352\363\263\007\t" +
+      "snowflake\"\341\010\n\tSQLServer\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005" +
       "\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
       "\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007" +
       "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010usern" +
@@ -102653,268 +111772,124 @@ public final class DriversPlumbing {
       "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_ov" +
       "erride\030\005 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-o" +
       "verride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 " +
-      "\001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004p" +
-      "ort\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\022\202\001\n\021override_database\030\007 \001(\010Bg\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020" +
-      "overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010re" +
-      "dshift\372\370\263\007\r\342\363\263\007\010redshift\372\370\263\007\r\352\363\263\007\010redshi" +
-      "ft\"\322\007\n\005Citus\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
-      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
-      "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
-      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010h" +
-      "ostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostn" +
-      "ame\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tB" +
-      "V\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010u" +
-      "sername\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010dat" +
-      "abase\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010databas" +
-      "e\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001" +
-      "(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263" +
-      "\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\006 \001(\005BN\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021ov" +
-      "erride_database\030\007 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363" +
-      "\263\007\021override-database\362\370\263\007\025\202\364\263\007\020overrideDa" +
-      "tabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005citus\372\370\263\007\n\342\363" +
-      "\263\007\005citus\372\370\263\007\n\352\363\263\007\005citus\"\276\007\n\006Presto\022\030\n\002id" +
-      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1" +
-      ".TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostn" +
-      "ame\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\022h\n\010password\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010databas" +
-      "e\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263" +
-      "\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\004 \001(\005B_" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364" +
-      "\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022b\n\006schema\030" +
+      "\006 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006schema\362\370\263\007\013\202\364" +
+      "\263\007\006schema\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\007 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t" +
+      "\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\202\001\n\021override_dat" +
+      "abase\030\010 \001(\010Bg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021overrid" +
+      "e-database\362\370\263\007\025\202\364\263\007\020overrideDatabase\362\370\263\007" +
+      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370" +
+      "\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005mssql\372\370\263\007\n\342\363\263\007\005mssql\372\370" +
+      "\263\007\n\352\363\263\007\005mssql\"\267\007\n\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
+      "\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
+      "\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362" +
       "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010usernam" +
-      "e\030\006 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263" +
-      "\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014tls_required\030\007 \001(\010BU\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007" +
-      "\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006presto\372\370\263\007\013\342\363\263" +
-      "\007\006presto\372\370\263\007\013\352\363\263\007\006presto\"\333\005\n\003RDP\022\030\n\002id\030\200" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostnam" +
-      "e\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
-      "\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030" +
-      "\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r" +
-      "\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\004 \001(\005B_\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007" +
-      "\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362" +
+      "e\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263" +
+      "\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\003 \001(\005BN\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022m\n\npublic_" +
+      "key\030\004 \001(\tBY\362\370\263\007\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\npublic-ke" +
+      "y\362\370\263\007\016\202\364\263\007\tpublicKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022|\n\017port_forwarding\030" +
+      "\005 \001(\010Bc\362\370\263\007\005\260\363\263\007\001\362\370\263\007\024\372\363\263\007\017port-forwardi" +
+      "ng\362\370\263\007\023\202\364\263\007\016portForwarding\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\247\001\n\036allow_dep" +
+      "recated_key_exchanges\030\006 \001(\010B\177\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007#\372\363\263\007\036allow-deprecated-key-exchanges\362" +
+      "\370\263\007 \202\364\263\007\033allowDeprecatedKeyExchanges\362\370\263\007" +
+      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:1\372\370" +
+      "\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003ssh\372\370\263\007\010\342\363\263\007\003ssh\372\370\263\007\010\352" +
+      "\363\263\007\003ssh\"\330\006\n\007SSHCert\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
+      "\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230" +
+      "\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030" +
+      "\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r" +
+      "\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\003 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362" +
       "\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372" +
-      "\370\263\007\010\332\363\263\007\003rdp\372\370\263\007\010\342\363\263\007\003rdp\372\370\263\007\010\352\363\263\007\003rdp\"\371" +
-      "\004\n\005Redis\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
-      "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007heal" +
-      "thy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tag" +
-      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostn" +
-      "ame\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362" +
-      "\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\002 \001(\005" +
-      "B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021" +
-      "\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010password\030\003 \001(\tBV\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passw" +
-      "ord\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\000\022\\\n\004port\030\004 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004p" +
-      "ort\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005r" +
-      "edis\372\370\263\007\n\342\363\263\007\005redis\372\370\263\007\n\352\363\263\007\005redis\"\367\005\n\020E" +
-      "lasticacheRedis\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022" +
-      "\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001" +
-      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h" +
-      "\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010ho" +
-      "stname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_overrid" +
-      "e\030\002 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-overri" +
-      "de\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022h\n\010password\030\003 \001" +
-      "(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263" +
-      "\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001" +
-      "\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\004 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022k\n\014tls_required" +
-      "\030\005 \001(\010BU\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required" +
-      "\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014\332\363\263\007\007ecred" +
-      "is\372\370\263\007\014\342\363\263\007\007ecredis\372\370\263\007\014\352\363\263\007\007ecredis\"\343\006\n" +
-      "\tSnowflake\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004" +
-      "name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007he" +
-      "althy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004t" +
-      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hos" +
-      "tname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostnam" +
-      "e\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010use" +
-      "rname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022|\n\017port_forw" +
+      "arding\030\004 \001(\010Bc\362\370\263\007\005\260\363\263\007\001\362\370\263\007\024\372\363\263\007\017port-f" +
+      "orwarding\362\370\263\007\023\202\364\263\007\016portForwarding\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\247\001\n\036al" +
+      "low_deprecated_key_exchanges\030\005 \001(\010B\177\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007#\372\363\263\007\036allow-deprecated-key-exc" +
+      "hanges\362\370\263\007 \202\364\263\007\033allowDeprecatedKeyExchan" +
+      "ges\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014\332\363\263\007\007sshCert\372\370\263\007\014\342\363\263" +
+      "\007\007sshCert\372\370\263\007\014\352\363\263\007\007sshCert\"\216\006\n\006Sybase\022\030\n" +
+      "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030" +
+      "\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hos" +
+      "tname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
+      "\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007" +
+      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_" +
+      "override\030\003 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport" +
+      "-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030" +
+      "\004 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007" +
+      "\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\022h\n\010password\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
       "\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010datab" +
-      "ase\030\004 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362" +
-      "\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022b\n\006schema\030\005 \001(\tBR\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006schema\362\370\263\007\013\202\364\263\007\006schema\362\370\263" +
-      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n" +
-      "\rport_override\030\006 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
-      "\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001:C\372" +
-      "\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tsnowflake\372\370\263\007\016\342\363\263\007\tsn" +
-      "owflake\372\370\263\007\016\352\363\263\007\tsnowflake\"\272\010\n\tSQLServer" +
-      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
-      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 " +
-      "\001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(" +
-      "\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007" +
-      "\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010p" +
-      "assword\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010passw" +
-      "ord\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022h\n\010database\030\004 \001(\tB" +
-      "V\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010d" +
-      "atabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\022v\n\rport_override\030\005 \001(\005B_\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portO" +
-      "verride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\001\022b\n\006schema\030\006 \001(\tBR\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013" +
-      "\372\363\263\007\006schema\362\370\263\007\013\202\364\263\007\006schema\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004port\030\007 \001(" +
-      "\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004por" +
-      "t\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\022\202\001\n\021override_database\030\010 \001(\010Bg\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020ov" +
-      "errideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005mssq" +
-      "l\372\370\263\007\n\342\363\263\007\005mssql\372\370\263\007\n\352\363\263\007\005mssql\"\220\007\n\003SSH\022" +
-      "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(" +
-      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001" +
-      "(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\013" +
-      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\t" +
-      "BV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010" +
-      "hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300" +
-      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004po" +
-      "rt\030\003 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202" +
-      "\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\022m\n\npublic_key\030\004 \001(\tBY\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\017\372\363\263\007\npublic-key\362\370\263\007\016\202\364\263\007\tpublicKey\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022" +
-      "|\n\017port_forwarding\030\005 \001(\010Bc\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\024\372\363\263\007\017port-forwarding\362\370\263\007\023\202\364\263\007\016portForwa" +
-      "rding\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\022\247\001\n\036allow_deprecated_key_exchanges" +
-      "\030\006 \001(\010B\177\362\370\263\007\005\260\363\263\007\001\362\370\263\007#\372\363\263\007\036allow-deprec" +
-      "ated-key-exchanges\362\370\263\007 \202\364\263\007\033allowDepreca" +
-      "tedKeyExchanges\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003ssh" +
-      "\372\370\263\007\010\342\363\263\007\003ssh\372\370\263\007\010\352\363\263\007\003ssh\"\261\006\n\007SSHCert\022\030" +
-      "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\t" +
-      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(" +
-      "\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132" +
-      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tB" +
-      "V\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010h" +
-      "ostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363" +
-      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022\\\n\004por" +
-      "t\030\003 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364" +
-      "\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\022|\n\017port_forwarding\030\004 \001(\010Bc\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\024\372\363\263\007\017port-forwarding\362\370\263\007\023\202\364\263\007\016p" +
-      "ortForwarding\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\022\247\001\n\036allow_deprecated_key_e" +
-      "xchanges\030\005 \001(\010B\177\362\370\263\007\005\260\363\263\007\001\362\370\263\007#\372\363\263\007\036allo" +
-      "w-deprecated-key-exchanges\362\370\263\007 \202\364\263\007\033allo" +
-      "wDeprecatedKeyExchanges\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014" +
-      "\332\363\263\007\007sshCert\372\370\263\007\014\342\363\263\007\007sshCert\372\370\263\007\014\352\363\263\007\007s" +
-      "shCert\"\347\005\n\006Sybase\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363" +
+      "\263\007\001\372\370\263\007\013\332\363\263\007\006sybase\372\370\263\007\013\342\363\263\007\006sybase\372\370\263\007\013" +
+      "\352\363\263\007\006sybase\"\226\006\n\010SybaseIQ\022\030\n\002id\030\200\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010user" +
+      "name\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username" +
+      "\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\003 \001(" +
+      "\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007" +
+      "\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\004 \001(\005BN\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010pass" +
+      "word\030\005 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password" +
+      "\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010" +
+      "sybaseIQ\372\370\263\007\r\342\363\263\007\010sybaseIQ\372\370\263\007\r\352\363\263\007\010syba" +
+      "seIQ\"\226\006\n\010Teradata\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
       "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
       "\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
       "\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002" +
-      " \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202" +
-      "\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\003 \001(\005B_\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014" +
-      "portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\004 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\005" +
-      " \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202" +
-      "\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006sybase" +
-      "\372\370\263\007\013\342\363\263\007\006sybase\372\370\263\007\013\352\363\263\007\006sybase\"\357\005\n\010Syb" +
-      "aseIQ\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030" +
-      "\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy" +
-      "\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203" +
-      "\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname" +
-      "\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007" +
-      "\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\022v\n\rport_override\030\003 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022" +
-      "\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001" +
-      "\022\\\n\004port\030\004 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port" +
-      "\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\005 \001(\tBV\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
-      ":@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010sybaseIQ\372\370\263\007\r\342\363\263\007\010" +
-      "sybaseIQ\372\370\263\007\r\352\363\263\007\010sybaseIQ\"\357\005\n\010Teradata\022" +
-      "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(" +
-      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001" +
-      "(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\013" +
-      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022h\n\010hostname\030\001 \001(\t" +
-      "BV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010" +
-      "hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\022h\n\010username\030\002 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300" +
-      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010pa" +
-      "ssword\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010passwo" +
-      "rd\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022v\n\rport_override\030\004 " +
-      "\001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370" +
-      "\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n\004port\030\005 \001(\005BN\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007" +
-      "\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010teradata\372\370\263\007\r\342\363\263\007\010terada" +
-      "ta\372\370\263\007\r\352\363\263\007\010teradataBc\n\034com.strongdm.api" +
-      ".v1.plumbingB\017DriversPlumbingZ2github.co" +
-      "m/strongdm/strongdm-sdk-go/internal/v1;v" +
-      "1b\006proto3"
+      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "h\n\010hostname\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010h" +
+      "ostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\022h\n\010username\030\002 " +
+      "\001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364" +
+      "\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\022h\n\010password\030\003 \001(\tBV\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\022v\n" +
+      "\rport_override\030\004 \001(\005B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
+      "\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\022\\\n" +
+      "\004port\030\005 \001(\005BN\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263" +
+      "\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010teradat" +
+      "a\372\370\263\007\r\342\363\263\007\010teradata\372\370\263\007\r\352\363\263\007\010teradataBc\n" +
+      "\034com.strongdm.api.v1.plumbingB\017DriversPl" +
+      "umbingZ2github.com/strongdm/strongdm-sdk" +
+      "-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -102933,289 +111908,289 @@ public final class DriversPlumbing {
     internal_static_v1_Athena_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Athena_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "AccessKey", "SecretAccessKey", "Output", "PortOverride", "Region", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "AccessKey", "SecretAccessKey", "Output", "PortOverride", "Region", });
     internal_static_v1_BigQuery_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_BigQuery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_BigQuery_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "PrivateKey", "Project", "PortOverride", "Endpoint", "Username", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "PrivateKey", "Project", "PortOverride", "Endpoint", "Username", });
     internal_static_v1_Cassandra_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_Cassandra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Cassandra_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
     internal_static_v1_DB2I_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_DB2I_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DB2I_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
     internal_static_v1_DB2LUW_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_v1_DB2LUW_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DB2LUW_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Druid_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_v1_Druid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Druid_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "PortOverride", "Username", "Password", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Username", "Password", "Port", });
     internal_static_v1_DynamoDB_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_v1_DynamoDB_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DynamoDB_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "AccessKey", "SecretAccessKey", "Region", "Endpoint", "PortOverride", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "AccessKey", "SecretAccessKey", "Region", "Endpoint", "PortOverride", });
     internal_static_v1_AmazonES_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_v1_AmazonES_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AmazonES_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Region", "SecretAccessKey", "Endpoint", "AccessKey", "PortOverride", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Region", "SecretAccessKey", "Endpoint", "AccessKey", "PortOverride", });
     internal_static_v1_Elastic_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_v1_Elastic_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Elastic_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
     internal_static_v1_HTTPBasicAuth_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_v1_HTTPBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_HTTPBasicAuth_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Url", "HealthcheckPath", "Username", "Password", "HeadersBlacklist", "DefaultPath", "Subdomain", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Url", "HealthcheckPath", "Username", "Password", "HeadersBlacklist", "DefaultPath", "Subdomain", });
     internal_static_v1_HTTPNoAuth_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_v1_HTTPNoAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_HTTPNoAuth_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Url", "HealthcheckPath", "HeadersBlacklist", "DefaultPath", "Subdomain", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Url", "HealthcheckPath", "HeadersBlacklist", "DefaultPath", "Subdomain", });
     internal_static_v1_HTTPAuth_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_HTTPAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_HTTPAuth_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Url", "HealthcheckPath", "AuthHeader", "HeadersBlacklist", "DefaultPath", "Subdomain", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Url", "HealthcheckPath", "AuthHeader", "HeadersBlacklist", "DefaultPath", "Subdomain", });
     internal_static_v1_Kubernetes_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_v1_Kubernetes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Kubernetes_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "CertificateAuthority", "ClientCertificate", "ClientKey", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "CertificateAuthority", "ClientCertificate", "ClientKey", "HealthcheckNamespace", });
     internal_static_v1_KubernetesBasicAuth_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_v1_KubernetesBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KubernetesBasicAuth_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
     internal_static_v1_KubernetesServiceAccount_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_v1_KubernetesServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KubernetesServiceAccount_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Token", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Token", "HealthcheckNamespace", });
     internal_static_v1_AmazonEKS_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_v1_AmazonEKS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AmazonEKS_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Endpoint", "AccessKey", "SecretAccessKey", "CertificateAuthority", "Region", "ClusterName", "RoleArn", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Endpoint", "AccessKey", "SecretAccessKey", "CertificateAuthority", "Region", "ClusterName", "RoleArn", "HealthcheckNamespace", });
     internal_static_v1_GoogleGKE_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_v1_GoogleGKE_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GoogleGKE_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Endpoint", "CertificateAuthority", "ServiceAccountKey", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Endpoint", "CertificateAuthority", "ServiceAccountKey", "HealthcheckNamespace", });
     internal_static_v1_AKS_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_v1_AKS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKS_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "CertificateAuthority", "ClientCertificate", "ClientKey", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "CertificateAuthority", "ClientCertificate", "ClientKey", "HealthcheckNamespace", });
     internal_static_v1_AKSBasicAuth_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_v1_AKSBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKSBasicAuth_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
     internal_static_v1_AKSServiceAccount_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_v1_AKSServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKSServiceAccount_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Port", "Token", "HealthcheckNamespace", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Token", "HealthcheckNamespace", });
     internal_static_v1_Memcached_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_v1_Memcached_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Memcached_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Port", });
     internal_static_v1_MongoLegacyHost_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_v1_MongoLegacyHost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoLegacyHost_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "TlsRequired", });
     internal_static_v1_MongoLegacyReplicaset_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_v1_MongoLegacyReplicaset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoLegacyReplicaset_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "ConnectToReplica", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "ConnectToReplica", "TlsRequired", });
     internal_static_v1_MongoHost_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_v1_MongoHost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoHost_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "TlsRequired", });
     internal_static_v1_MongoReplicaSet_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_v1_MongoReplicaSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoReplicaSet_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "ConnectToReplica", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "ConnectToReplica", "TlsRequired", });
     internal_static_v1_Mysql_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_v1_Mysql_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Mysql_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_AuroraMysql_descriptor =
       getDescriptor().getMessageTypes().get(27);
     internal_static_v1_AuroraMysql_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuroraMysql_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Clustrix_descriptor =
       getDescriptor().getMessageTypes().get(28);
     internal_static_v1_Clustrix_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Clustrix_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Maria_descriptor =
       getDescriptor().getMessageTypes().get(29);
     internal_static_v1_Maria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Maria_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Memsql_descriptor =
       getDescriptor().getMessageTypes().get(30);
     internal_static_v1_Memsql_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Memsql_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Oracle_descriptor =
       getDescriptor().getMessageTypes().get(31);
     internal_static_v1_Oracle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Oracle_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "Port", "PortOverride", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "Port", "PortOverride", "TlsRequired", });
     internal_static_v1_Postgres_descriptor =
       getDescriptor().getMessageTypes().get(32);
     internal_static_v1_Postgres_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Postgres_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_AuroraPostgres_descriptor =
       getDescriptor().getMessageTypes().get(33);
     internal_static_v1_AuroraPostgres_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuroraPostgres_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Greenplum_descriptor =
       getDescriptor().getMessageTypes().get(34);
     internal_static_v1_Greenplum_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Greenplum_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Cockroach_descriptor =
       getDescriptor().getMessageTypes().get(35);
     internal_static_v1_Cockroach_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Cockroach_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Redshift_descriptor =
       getDescriptor().getMessageTypes().get(36);
     internal_static_v1_Redshift_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Redshift_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Citus_descriptor =
       getDescriptor().getMessageTypes().get(37);
     internal_static_v1_Citus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Citus_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Presto_descriptor =
       getDescriptor().getMessageTypes().get(38);
     internal_static_v1_Presto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Presto_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Password", "Database", "PortOverride", "Port", "Username", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Password", "Database", "PortOverride", "Port", "Username", "TlsRequired", });
     internal_static_v1_RDP_descriptor =
       getDescriptor().getMessageTypes().get(39);
     internal_static_v1_RDP_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RDP_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", });
     internal_static_v1_Redis_descriptor =
       getDescriptor().getMessageTypes().get(40);
     internal_static_v1_Redis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Redis_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "PortOverride", "Password", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Password", "Port", });
     internal_static_v1_ElasticacheRedis_descriptor =
       getDescriptor().getMessageTypes().get(41);
     internal_static_v1_ElasticacheRedis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ElasticacheRedis_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "PortOverride", "Password", "Port", "TlsRequired", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Password", "Port", "TlsRequired", });
     internal_static_v1_Snowflake_descriptor =
       getDescriptor().getMessageTypes().get(42);
     internal_static_v1_Snowflake_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Snowflake_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "Schema", "PortOverride", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "Schema", "PortOverride", });
     internal_static_v1_SQLServer_descriptor =
       getDescriptor().getMessageTypes().get(43);
     internal_static_v1_SQLServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SQLServer_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "Database", "PortOverride", "Schema", "Port", "OverrideDatabase", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Schema", "Port", "OverrideDatabase", });
     internal_static_v1_SSH_descriptor =
       getDescriptor().getMessageTypes().get(44);
     internal_static_v1_SSH_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SSH_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Port", "PublicKey", "PortForwarding", "AllowDeprecatedKeyExchanges", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Port", "PublicKey", "PortForwarding", "AllowDeprecatedKeyExchanges", });
     internal_static_v1_SSHCert_descriptor =
       getDescriptor().getMessageTypes().get(45);
     internal_static_v1_SSHCert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SSHCert_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Port", "PortForwarding", "AllowDeprecatedKeyExchanges", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Port", "PortForwarding", "AllowDeprecatedKeyExchanges", });
     internal_static_v1_Sybase_descriptor =
       getDescriptor().getMessageTypes().get(46);
     internal_static_v1_Sybase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Sybase_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "PortOverride", "Port", "Password", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "PortOverride", "Port", "Password", });
     internal_static_v1_SybaseIQ_descriptor =
       getDescriptor().getMessageTypes().get(47);
     internal_static_v1_SybaseIQ_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SybaseIQ_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "PortOverride", "Port", "Password", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "PortOverride", "Port", "Password", });
     internal_static_v1_Teradata_descriptor =
       getDescriptor().getMessageTypes().get(48);
     internal_static_v1_Teradata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Teradata_descriptor,
-        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "Hostname", "Username", "Password", "PortOverride", "Port", });
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

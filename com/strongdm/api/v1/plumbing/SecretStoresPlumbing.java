@@ -14743,37 +14743,38 @@ public final class SecretStoresPlumbing {
       "\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022+" +
       "\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363" +
       "\263\007\001:G\372\370\263\007B\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\nvaul" +
-      "tToken\342\363\263\007\nvaultToken\352\363\263\007\nvaultToken\"\341\003\n" +
+      "tToken\342\363\263\007\nvaultToken\352\363\263\007\nvaultToken\"\337\003\n" +
       "\rVaultTLSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID" +
       "\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263" +
       "\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_address\030" +
       "\003 \001(\tB&\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001" +
-      "\320\363\263\007\001\022E\n\014CA_cert_path\030\004 \001(\tB/\362\370\263\007*\242\363\263\007\nC" +
-      "ACertPath\260\363\263\007\001\320\363\263\007\001\212\364\263\007\014ca_cert_path\022A\n\020" +
-      "client_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016Client" +
-      "CertPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_pa" +
-      "th\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363" +
-      "\263\007\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242" +
-      "\363\263\007\004Tags\260\363\263\007\001:A\372\370\263\007<\242\363\263\007\013SecretStore\250\363\263\007" +
-      "\001\332\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS\352\363\263\007\010vaultTLS" +
-      "2\331\004\n\014SecretStores\022o\n\006Create\022\034.v1.SecretS" +
-      "toreCreateRequest\032\035.v1.SecretStoreCreate" +
-      "Response\"(\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\025\252\363\263\007\020/v1/se" +
-      "cretstores\022j\n\003Get\022\031.v1.SecretStoreGetReq" +
-      "uest\032\032.v1.SecretStoreGetResponse\",\202\371\263\007\010\242" +
-      "\363\263\007\003get\202\371\263\007\032\252\363\263\007\025/v1/secretstores/{id}\022s" +
+      "\320\363\263\007\001\022C\n\014CA_cert_path\030\004 \001(\tB-\362\370\263\007(\242\363\263\007\nC" +
+      "ACertPath\260\363\263\007\001\320\363\263\007\001\212\364\263\007\ncaCertPath\022A\n\020cl" +
+      "ient_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016ClientCe" +
+      "rtPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_path" +
+      "\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363\263\007" +
+      "\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263" +
+      "\007\004Tags\260\363\263\007\001:A\372\370\263\007<\242\363\263\007\013SecretStore\250\363\263\007\001\332" +
+      "\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS\352\363\263\007\010vaultTLS2\336" +
+      "\004\n\014SecretStores\022p\n\006Create\022\034.v1.SecretSto" +
+      "reCreateRequest\032\035.v1.SecretStoreCreateRe" +
+      "sponse\")\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\026\252\363\263\007\021/v1/secr" +
+      "et-stores\022k\n\003Get\022\031.v1.SecretStoreGetRequ" +
+      "est\032\032.v1.SecretStoreGetResponse\"-\202\371\263\007\010\242\363" +
+      "\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/secret-stores/{id}\022t" +
       "\n\006Update\022\034.v1.SecretStoreUpdateRequest\032\035" +
-      ".v1.SecretStoreUpdateResponse\",\202\371\263\007\010\242\363\263\007" +
-      "\003put\202\371\263\007\032\252\363\263\007\025/v1/secretstores/{id}\022v\n\006D" +
-      "elete\022\034.v1.SecretStoreDeleteRequest\032\035.v1" +
-      ".SecretStoreDeleteResponse\"/\202\371\263\007\013\242\363\263\007\006de" +
-      "lete\202\371\263\007\032\252\363\263\007\025/v1/secretstores/{id}\022h\n\004L" +
-      "ist\022\032.v1.SecretStoreListRequest\032\033.v1.Sec" +
-      "retStoreListResponse\"\'\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\025" +
-      "\252\363\263\007\020/v1/secretstores\032\025\312\371\263\007\020\302\371\263\007\013SecretS" +
-      "toreBh\n\034com.strongdm.api.v1.plumbingB\024Se" +
-      "cretStoresPlumbingZ2github.com/strongdm/" +
-      "strongdm-sdk-go/internal/v1;v1b\006proto3"
+      ".v1.SecretStoreUpdateResponse\"-\202\371\263\007\010\242\363\263\007" +
+      "\003put\202\371\263\007\033\252\363\263\007\026/v1/secret-stores/{id}\022w\n\006" +
+      "Delete\022\034.v1.SecretStoreDeleteRequest\032\035.v" +
+      "1.SecretStoreDeleteResponse\"0\202\371\263\007\013\242\363\263\007\006d" +
+      "elete\202\371\263\007\033\252\363\263\007\026/v1/secret-stores/{id}\022i\n" +
+      "\004List\022\032.v1.SecretStoreListRequest\032\033.v1.S" +
+      "ecretStoreListResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\026\252\363\263\007\021/v1/secret-stores\032\025\312\371\263\007\020\302\371\263\007\013Secr" +
+      "etStoreBh\n\034com.strongdm.api.v1.plumbingB" +
+      "\024SecretStoresPlumbingZ2github.com/strong" +
+      "dm/strongdm-sdk-go/internal/v1;v1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

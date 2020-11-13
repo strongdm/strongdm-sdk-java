@@ -67,6 +67,16 @@ public class RDP implements Resource {
     this.tags.putAll(in);
   }
 
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
+  }
+
   private String hostname;
 
   public String getHostname() {

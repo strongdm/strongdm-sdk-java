@@ -9507,15 +9507,15 @@ public final class RoleGrantsPlumbing {
       "\363\263\007&tf_examples/role_grant_data_source.t" +
       "xt2\314\003\n\nRoleGrants\022j\n\006Create\022\032.v1.RoleGra" +
       "ntCreateRequest\032\033.v1.RoleGrantCreateResp" +
-      "onse\"\'\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\024\252\363\263\007\017/v1/role_g" +
+      "onse\"\'\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\024\252\363\263\007\017/v1/role-g" +
       "rants\022e\n\003Get\022\027.v1.RoleGrantGetRequest\032\030." +
       "v1.RoleGrantGetResponse\"+\202\371\263\007\010\242\363\263\007\003get\202\371" +
-      "\263\007\031\252\363\263\007\024/v1/role_grants/{id}\022q\n\006Delete\022\032" +
+      "\263\007\031\252\363\263\007\024/v1/role-grants/{id}\022q\n\006Delete\022\032" +
       ".v1.RoleGrantDeleteRequest\032\033.v1.RoleGran" +
       "tDeleteResponse\".\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\031\252\363" +
-      "\263\007\024/v1/role_grants/{id}\022c\n\004List\022\030.v1.Rol" +
+      "\263\007\024/v1/role-grants/{id}\022c\n\004List\022\030.v1.Rol" +
       "eGrantListRequest\032\031.v1.RoleGrantListResp" +
-      "onse\"&\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007\017/v1/role_gr" +
+      "onse\"&\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007\017/v1/role-gr" +
       "ants\032\023\312\371\263\007\016\302\371\263\007\tRoleGrantBf\n\034com.strongd" +
       "m.api.v1.plumbingB\022RoleGrantsPlumbingZ2g" +
       "ithub.com/strongdm/strongdm-sdk-go/inter" +

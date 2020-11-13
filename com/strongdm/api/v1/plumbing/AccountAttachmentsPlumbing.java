@@ -9512,17 +9512,17 @@ public final class AccountAttachmentsPlumbing {
       "\n\022AccountAttachments\022\202\001\n\006Create\022\".v1.Acc" +
       "ountAttachmentCreateRequest\032#.v1.Account" +
       "AttachmentCreateResponse\"/\202\371\263\007\t\242\363\263\007\004post" +
-      "\202\371\263\007\034\252\363\263\007\027/v1/account_attachments\022}\n\003Get" +
+      "\202\371\263\007\034\252\363\263\007\027/v1/account-attachments\022}\n\003Get" +
       "\022\037.v1.AccountAttachmentGetRequest\032 .v1.A" +
       "ccountAttachmentGetResponse\"3\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007!\252\363\263\007\034/v1/account_attachments/{id}" +
+      "et\202\371\263\007!\252\363\263\007\034/v1/account-attachments/{id}" +
       "\022\211\001\n\006Delete\022\".v1.AccountAttachmentDelete" +
       "Request\032#.v1.AccountAttachmentDeleteResp" +
       "onse\"6\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007!\252\363\263\007\034/v1/acco" +
-      "unt_attachments/{id}\022{\n\004List\022 .v1.Accoun" +
+      "unt-attachments/{id}\022{\n\004List\022 .v1.Accoun" +
       "tAttachmentListRequest\032!.v1.AccountAttac" +
       "hmentListResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263" +
-      "\007\027/v1/account_attachments\032\033\312\371\263\007\026\302\371\263\007\021Acc" +
+      "\007\027/v1/account-attachments\032\033\312\371\263\007\026\302\371\263\007\021Acc" +
       "ountAttachmentBn\n\034com.strongdm.api.v1.pl" +
       "umbingB\032AccountAttachmentsPlumbingZ2gith" +
       "ub.com/strongdm/strongdm-sdk-go/internal" +

@@ -1899,7 +1899,7 @@ public final class ControlPanelPlumbing {
       "CAPublicKey\022(.v1.ControlPanelGetSSHCAPub" +
       "licKeyRequest\032).v1.ControlPanelGetSSHCAP" +
       "ublicKeyResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007" +
-      "\030/v1/control_panel/ssh/caBh\n\034com.strongd" +
+      "\030/v1/control-panel/ssh/caBh\n\034com.strongd" +
       "m.api.v1.plumbingB\024ControlPanelPlumbingZ" +
       "2github.com/strongdm/strongdm-sdk-go/int" +
       "ernal/v1;v1b\006proto3"

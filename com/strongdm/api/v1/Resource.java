@@ -29,4 +29,8 @@ public interface Resource {
   java.util.Map<String, String> getTags();
   // Sets the tags of the Resource.
   void setTags(java.util.Map<String, String> tags);
+  // Returns the secret store id of the Resource.
+  String getSecretStoreId();
+  // Sets the secret store id of the Resource.
+  void setSecretStoreId(String secretStoreId);
 }

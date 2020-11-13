@@ -9510,17 +9510,17 @@ public final class RoleAttachmentsPlumbing {
       "e_attachment_data_source.txt2\223\004\n\017RoleAtt" +
       "achments\022y\n\006Create\022\037.v1.RoleAttachmentCr" +
       "eateRequest\032 .v1.RoleAttachmentCreateRes" +
-      "ponse\",\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role_" +
+      "ponse\",\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role-" +
       "attachments\022t\n\003Get\022\034.v1.RoleAttachmentGe" +
       "tRequest\032\035.v1.RoleAttachmentGetResponse\"" +
-      "0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/role_attachm" +
+      "0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/role-attachm" +
       "ents/{id}\022\200\001\n\006Delete\022\037.v1.RoleAttachment" +
       "DeleteRequest\032 .v1.RoleAttachmentDeleteR" +
       "esponse\"3\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\036\252\363\263\007\031/v1/r" +
-      "ole_attachments/{id}\022r\n\004List\022\035.v1.RoleAt" +
+      "ole-attachments/{id}\022r\n\004List\022\035.v1.RoleAt" +
       "tachmentListRequest\032\036.v1.RoleAttachmentL" +
       "istResponse\"+\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\031\252\363\263\007\024/v1/" +
-      "role_attachments\032\030\312\371\263\007\023\302\371\263\007\016RoleAttachme" +
+      "role-attachments\032\030\312\371\263\007\023\302\371\263\007\016RoleAttachme" +
       "ntBk\n\034com.strongdm.api.v1.plumbingB\027Role" +
       "AttachmentsPlumbingZ2github.com/strongdm" +
       "/strongdm-sdk-go/internal/v1;v1b\006proto3"

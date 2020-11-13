@@ -10070,15 +10070,15 @@ public final class AccountGrantsPlumbing {
       ".txt2\366\003\n\rAccountGrants\022s\n\006Create\022\035.v1.Ac" +
       "countGrantCreateRequest\032\036.v1.AccountGran" +
       "tCreateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007" +
-      "\022/v1/account_grants\022n\n\003Get\022\032.v1.AccountG" +
+      "\022/v1/account-grants\022n\n\003Get\022\032.v1.AccountG" +
       "rantGetRequest\032\033.v1.AccountGrantGetRespo" +
-      "nse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/account_" +
+      "nse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/account-" +
       "grants/{id}\022z\n\006Delete\022\035.v1.AccountGrantD" +
       "eleteRequest\032\036.v1.AccountGrantDeleteResp" +
       "onse\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027/v1/acco" +
-      "unt_grants/{id}\022l\n\004List\022\033.v1.AccountGran" +
+      "unt-grants/{id}\022l\n\004List\022\033.v1.AccountGran" +
       "tListRequest\032\034.v1.AccountGrantListRespon" +
-      "se\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/account_g" +
+      "se\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/account-g" +
       "rants\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantBi\n\034com.str" +
       "ongdm.api.v1.plumbingB\025AccountGrantsPlum" +
       "bingZ2github.com/strongdm/strongdm-sdk-g" +
