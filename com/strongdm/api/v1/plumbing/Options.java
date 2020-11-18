@@ -903,6 +903,24 @@ public final class Options {
      * @return The readOnly.
      */
     boolean getReadOnly();
+
+    /**
+     * <code>bool is_credential = 1941316;</code>
+     * @return The isCredential.
+     */
+    boolean getIsCredential();
+
+    /**
+     * <code>string sql_type = 1941317;</code>
+     * @return The sqlType.
+     */
+    java.lang.String getSqlType();
+    /**
+     * <code>string sql_type = 1941317;</code>
+     * @return The bytes for sqlType.
+     */
+    com.google.protobuf.ByteString
+        getSqlTypeBytes();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -922,6 +940,7 @@ public final class Options {
       cliName_ = "";
       cliJsonName_ = "";
       jsonGatewayName_ = "";
+      sqlType_ = "";
     }
 
     @java.lang.Override
@@ -1037,6 +1056,17 @@ public final class Options {
             case 15530520: {
 
               readOnly_ = input.readBool();
+              break;
+            }
+            case 15530528: {
+
+              isCredential_ = input.readBool();
+              break;
+            }
+            case 15530538: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sqlType_ = s;
               break;
             }
             default: {
@@ -1405,6 +1435,55 @@ public final class Options {
       return readOnly_;
     }
 
+    public static final int IS_CREDENTIAL_FIELD_NUMBER = 1941316;
+    private boolean isCredential_;
+    /**
+     * <code>bool is_credential = 1941316;</code>
+     * @return The isCredential.
+     */
+    @java.lang.Override
+    public boolean getIsCredential() {
+      return isCredential_;
+    }
+
+    public static final int SQL_TYPE_FIELD_NUMBER = 1941317;
+    private volatile java.lang.Object sqlType_;
+    /**
+     * <code>string sql_type = 1941317;</code>
+     * @return The sqlType.
+     */
+    @java.lang.Override
+    public java.lang.String getSqlType() {
+      java.lang.Object ref = sqlType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sqlType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string sql_type = 1941317;</code>
+     * @return The bytes for sqlType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSqlTypeBytes() {
+      java.lang.Object ref = sqlType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sqlType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1466,6 +1545,12 @@ public final class Options {
       }
       if (readOnly_ != false) {
         output.writeBool(1941315, readOnly_);
+      }
+      if (isCredential_ != false) {
+        output.writeBool(1941316, isCredential_);
+      }
+      if (!getSqlTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941317, sqlType_);
       }
       unknownFields.writeTo(output);
     }
@@ -1535,6 +1620,13 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941315, readOnly_);
       }
+      if (isCredential_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941316, isCredential_);
+      }
+      if (!getSqlTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941317, sqlType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1582,6 +1674,10 @@ public final class Options {
           != other.getHideFromJsonGateway()) return false;
       if (getReadOnly()
           != other.getReadOnly()) return false;
+      if (getIsCredential()
+          != other.getIsCredential()) return false;
+      if (!getSqlType()
+          .equals(other.getSqlType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1636,6 +1732,11 @@ public final class Options {
       hash = (37 * hash) + READ_ONLY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getReadOnly());
+      hash = (37 * hash) + IS_CREDENTIAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsCredential());
+      hash = (37 * hash) + SQL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getSqlType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1801,6 +1902,10 @@ public final class Options {
 
         readOnly_ = false;
 
+        isCredential_ = false;
+
+        sqlType_ = "";
+
         return this;
       }
 
@@ -1843,6 +1948,8 @@ public final class Options {
         result.jsonGatewayName_ = jsonGatewayName_;
         result.hideFromJsonGateway_ = hideFromJsonGateway_;
         result.readOnly_ = readOnly_;
+        result.isCredential_ = isCredential_;
+        result.sqlType_ = sqlType_;
         onBuilt();
         return result;
       }
@@ -1943,6 +2050,13 @@ public final class Options {
         }
         if (other.getReadOnly() != false) {
           setReadOnly(other.getReadOnly());
+        }
+        if (other.getIsCredential() != false) {
+          setIsCredential(other.getIsCredential());
+        }
+        if (!other.getSqlType().isEmpty()) {
+          sqlType_ = other.sqlType_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2759,6 +2873,113 @@ public final class Options {
       public Builder clearReadOnly() {
         
         readOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isCredential_ ;
+      /**
+       * <code>bool is_credential = 1941316;</code>
+       * @return The isCredential.
+       */
+      @java.lang.Override
+      public boolean getIsCredential() {
+        return isCredential_;
+      }
+      /**
+       * <code>bool is_credential = 1941316;</code>
+       * @param value The isCredential to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCredential(boolean value) {
+        
+        isCredential_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_credential = 1941316;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCredential() {
+        
+        isCredential_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sqlType_ = "";
+      /**
+       * <code>string sql_type = 1941317;</code>
+       * @return The sqlType.
+       */
+      public java.lang.String getSqlType() {
+        java.lang.Object ref = sqlType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sqlType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sql_type = 1941317;</code>
+       * @return The bytes for sqlType.
+       */
+      public com.google.protobuf.ByteString
+          getSqlTypeBytes() {
+        java.lang.Object ref = sqlType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sqlType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sql_type = 1941317;</code>
+       * @param value The sqlType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSqlType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sqlType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sql_type = 1941317;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSqlType() {
+        
+        sqlType_ = getDefaultInstance().getSqlType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sql_type = 1941317;</code>
+       * @param value The bytes for sqlType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSqlTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sqlType_ = value;
         onChanged();
         return this;
       }
@@ -8352,7 +8573,7 @@ public final class Options {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"0\n\rMethodOptions\022\020\n\006method" +
-      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"\371\002\n\014FieldOptions" +
+      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"\246\003\n\014FieldOptions" +
       "\022\016\n\004name\030\264\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010" +
       "\022\035\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010itera" +
       "ble\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_ty" +
@@ -8362,37 +8583,38 @@ public final class Options {
       "i_name\030\277\276v \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022" +
       "\033\n\021json_gateway_name\030\301\276v \001(\t\022 \n\026hide_fro" +
       "m_json_gateway\030\302\276v \001(\010\022\023\n\tread_only\030\303\276v " +
-      "\001(\010\"\312\002\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v" +
-      " \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001" +
-      "(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform" +
-      "_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n\006cust" +
-      "om\030\271\276v \001(\0132!.v1.CustomPorcelainMessageOp" +
-      "tions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n\010cli_name" +
-      "\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001(\t\022\033\n\021jso" +
-      "n_gateway_name\030\275\276v \001(\t\022 \n\026hide_from_json" +
-      "_gateway\030\276\276v \001(\010\"\266\001\n\035CustomPorcelainMess" +
-      "ageOptions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_po" +
-      "rcelain_type\030\276\276v \001(\t\022\035\n\023java_porcelain_t" +
-      "ype\030\277\276v \001(\t\022\"\n\030terraform_porcelain_type\030" +
-      "\300\276v \001(\t\022 \n\026openapi_porcelain_type\030\301\276v \001(" +
-      "\t\"T\n\rTerraformDocs\022\037\n\025resource_example_p" +
-      "ath\030\264\276v \001(\t\022\"\n\030data_source_example_path\030" +
-      "\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nmodel_name\030\204\277" +
-      "v \001(\t\022\027\n\rcommon_fields\030\205\277v \003(\t\"<\n\016Servic" +
-      "eOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013private" +
-      "_sdk\030\231\277v \001(\010:K\n\016method_options\022\036.google." +
-      "protobuf.MethodOptions\030\220\277v \001(\0132\021.v1.Meth" +
-      "odOptions:H\n\rfield_options\022\035.google.prot" +
-      "obuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOpti" +
-      "ons:N\n\017message_options\022\037.google.protobuf" +
-      ".MessageOptions\030\217\277v \001(\0132\022.v1.MessageOpti" +
-      "ons:H\n\roneof_options\022\035.google.protobuf.O" +
-      "neofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:N\n" +
-      "\017service_options\022\037.google.protobuf.Servi" +
-      "ceOptions\030\231\277v \001(\0132\022.v1.ServiceOptionsBR\n" +
-      "\034com.strongdm.api.v1.plumbingZ2github.co" +
-      "m/strongdm/strongdm-sdk-go/internal/v1;v" +
-      "1b\006proto3"
+      "\001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022\n\010sql_type" +
+      "\030\305\276v \001(\t\"\312\002\n\016MessageOptions\022\024\n\nmodel_nam" +
+      "e\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030" +
+      "\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terr" +
+      "aform_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n" +
+      "\006custom\030\271\276v \001(\0132!.v1.CustomPorcelainMess" +
+      "ageOptions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n\010cli" +
+      "_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001(\t\022\033" +
+      "\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026hide_from" +
+      "_json_gateway\030\276\276v \001(\010\"\266\001\n\035CustomPorcelai" +
+      "nMessageOptions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021" +
+      "go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_porcel" +
+      "ain_type\030\277\276v \001(\t\022\"\n\030terraform_porcelain_" +
+      "type\030\300\276v \001(\t\022 \n\026openapi_porcelain_type\030\301" +
+      "\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource_exam" +
+      "ple_path\030\264\276v \001(\t\022\"\n\030data_source_example_" +
+      "path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nmodel_na" +
+      "me\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v \003(\t\"<\n\016S" +
+      "erviceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013pr" +
+      "ivate_sdk\030\231\277v \001(\010:K\n\016method_options\022\036.go" +
+      "ogle.protobuf.MethodOptions\030\220\277v \001(\0132\021.v1" +
+      ".MethodOptions:H\n\rfield_options\022\035.google" +
+      ".protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fiel" +
+      "dOptions:N\n\017message_options\022\037.google.pro" +
+      "tobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Messag" +
+      "eOptions:H\n\roneof_options\022\035.google.proto" +
+      "buf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptio" +
+      "ns:N\n\017service_options\022\037.google.protobuf." +
+      "ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOptio" +
+      "nsBR\n\034com.strongdm.api.v1.plumbingZ2gith" +
+      "ub.com/strongdm/strongdm-sdk-go/internal" +
+      "/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8410,7 +8632,7 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", });
+        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", "IsCredential", "SqlType", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_MessageOptions_fieldAccessorTable = new

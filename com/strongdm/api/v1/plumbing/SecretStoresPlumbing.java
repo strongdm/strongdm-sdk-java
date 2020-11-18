@@ -10839,6 +10839,21 @@ public final class SecretStoresPlumbing {
      */
     com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder();
 
+    /**
+     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the aws field is set.
+     */
+    boolean hasAws();
+    /**
+     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+     * @return The aws.
+     */
+    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getAws();
+    /**
+     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder getAwsOrBuilder();
+
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.SecretStoreCase getSecretStoreCase();
   }
   /**
@@ -10919,6 +10934,20 @@ public final class SecretStoresPlumbing {
               secretStoreCase_ = 2;
               break;
             }
+            case 26: {
+              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder subBuilder = null;
+              if (secretStoreCase_ == 3) {
+                subBuilder = ((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 3;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10958,6 +10987,7 @@ public final class SecretStoresPlumbing {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       VAULT_TLS(1),
       VAULT_TOKEN(2),
+      AWS(3),
       SECRETSTORE_NOT_SET(0);
       private final int value;
       private SecretStoreCase(int value) {
@@ -10977,6 +11007,7 @@ public final class SecretStoresPlumbing {
         switch (value) {
           case 1: return VAULT_TLS;
           case 2: return VAULT_TOKEN;
+          case 3: return AWS;
           case 0: return SECRETSTORE_NOT_SET;
           default: return null;
         }
@@ -11054,6 +11085,37 @@ public final class SecretStoresPlumbing {
       return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
     }
 
+    public static final int AWS_FIELD_NUMBER = 3;
+    /**
+     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the aws field is set.
+     */
+    @java.lang.Override
+    public boolean hasAws() {
+      return secretStoreCase_ == 3;
+    }
+    /**
+     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+     * @return The aws.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getAws() {
+      if (secretStoreCase_ == 3) {
+         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
+      }
+      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder getAwsOrBuilder() {
+      if (secretStoreCase_ == 3) {
+         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
+      }
+      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11074,6 +11136,9 @@ public final class SecretStoresPlumbing {
       if (secretStoreCase_ == 2) {
         output.writeMessage(2, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_);
       }
+      if (secretStoreCase_ == 3) {
+        output.writeMessage(3, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11090,6 +11155,10 @@ public final class SecretStoresPlumbing {
       if (secretStoreCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_);
+      }
+      if (secretStoreCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11116,6 +11185,10 @@ public final class SecretStoresPlumbing {
           if (!getVaultToken()
               .equals(other.getVaultToken())) return false;
           break;
+        case 3:
+          if (!getAws()
+              .equals(other.getAws())) return false;
+          break;
         case 0:
         default:
       }
@@ -11138,6 +11211,10 @@ public final class SecretStoresPlumbing {
         case 2:
           hash = (37 * hash) + VAULT_TOKEN_FIELD_NUMBER;
           hash = (53 * hash) + getVaultToken().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + AWS_FIELD_NUMBER;
+          hash = (53 * hash) + getAws().hashCode();
           break;
         case 0:
         default:
@@ -11322,6 +11399,13 @@ public final class SecretStoresPlumbing {
             result.secretStore_ = vaultTokenBuilder_.build();
           }
         }
+        if (secretStoreCase_ == 3) {
+          if (awsBuilder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = awsBuilder_.build();
+          }
+        }
         result.secretStoreCase_ = secretStoreCase_;
         onBuilt();
         return result;
@@ -11378,6 +11462,10 @@ public final class SecretStoresPlumbing {
           }
           case VAULT_TOKEN: {
             mergeVaultToken(other.getVaultToken());
+            break;
+          }
+          case AWS: {
+            mergeAws(other.getAws());
             break;
           }
           case SECRETSTORE_NOT_SET: {
@@ -11708,6 +11796,147 @@ public final class SecretStoresPlumbing {
         secretStoreCase_ = 2;
         onChanged();;
         return vaultTokenBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder> awsBuilder_;
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the aws field is set.
+       */
+      @java.lang.Override
+      public boolean hasAws() {
+        return secretStoreCase_ == 3;
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       * @return The aws.
+       */
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getAws() {
+        if (awsBuilder_ == null) {
+          if (secretStoreCase_ == 3) {
+            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
+          }
+          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 3) {
+            return awsBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAws(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore value) {
+        if (awsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          awsBuilder_.setMessage(value);
+        }
+        secretStoreCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAws(
+          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder builderForValue) {
+        if (awsBuilder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          awsBuilder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAws(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore value) {
+        if (awsBuilder_ == null) {
+          if (secretStoreCase_ == 3 &&
+              secretStore_ != com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.newBuilder((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 3) {
+            awsBuilder_.mergeFrom(value);
+          }
+          awsBuilder_.setMessage(value);
+        }
+        secretStoreCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAws() {
+        if (awsBuilder_ == null) {
+          if (secretStoreCase_ == 3) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 3) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          awsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder getAwsBuilder() {
+        return getAwsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder getAwsOrBuilder() {
+        if ((secretStoreCase_ == 3) && (awsBuilder_ != null)) {
+          return awsBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 3) {
+            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
+          }
+          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder> 
+          getAwsFieldBuilder() {
+        if (awsBuilder_ == null) {
+          if (!(secretStoreCase_ == 3)) {
+            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
+          }
+          awsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 3;
+        onChanged();;
+        return awsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14618,6 +14847,1209 @@ public final class SecretStoresPlumbing {
 
   }
 
+  public interface AWSStoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AWSStore)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    java.lang.String getRegion();
+    /**
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    com.google.protobuf.ByteString
+        getRegionBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.AWSStore}
+   */
+  public static final class AWSStore extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AWSStore)
+      AWSStoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AWSStore.newBuilder() to construct.
+    private AWSStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AWSStore() {
+      id_ = "";
+      name_ = "";
+      region_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AWSStore();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AWSStore(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              region_ = s;
+              break;
+            }
+            case 34: {
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object region_;
+    /**
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * @return The region.
+     */
+    @java.lang.Override
+    public java.lang.String getRegion() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        region_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for region.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegionBytes() {
+      java.lang.Object ref = region_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        region_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!getRegionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, region_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(4, getTags());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!getRegionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, region_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTags());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore other = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getRegion().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.AWSStore}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AWSStore)
+        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        region_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore build() {
+        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore buildPartial() {
+        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore result = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.region_ = region_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore other) {
+        if (other == com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getRegion().isEmpty()) {
+          region_ = other.region_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object region_ = "";
+      /**
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * @return The region.
+       */
+      public java.lang.String getRegion() {
+        java.lang.Object ref = region_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          region_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for region.
+       */
+      public com.google.protobuf.ByteString
+          getRegionBytes() {
+        java.lang.Object ref = region_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          region_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        region_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegion() {
+        
+        region_ = getDefaultInstance().getRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for region to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        region_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AWSStore)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AWSStore)
+    private static final com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore();
+    }
+
+    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AWSStore>
+        PARSER = new com.google.protobuf.AbstractParser<AWSStore>() {
+      @java.lang.Override
+      public AWSStore parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AWSStore(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AWSStore> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AWSStore> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_SecretStoreCreateRequest_descriptor;
   private static final 
@@ -14683,6 +16115,11 @@ public final class SecretStoresPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_VaultTLSStore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AWSStore_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AWSStore_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14731,50 +16168,57 @@ public final class SecretStoresPlumbing {
       "eMetadata\0222\n\rsecret_stores\030\002 \003(\0132\017.v1.Se" +
       "cretStoreB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(" +
       "\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\220\364\263\007\001\"\332\001\n\013SecretStore\022:\n\tvault_tls\030\001 \001(" +
+      "\005\220\364\263\007\001\"\206\002\n\013SecretStore\022:\n\tvault_tls\030\001 \001(" +
       "\0132\021.v1.VaultTLSStoreB\022\362\370\263\007\r\212\364\263\007\010vaultTLS" +
       "H\000\022@\n\013vault_token\030\002 \001(\0132\023.v1.VaultTokenS" +
-      "toreB\024\362\370\263\007\017\212\364\263\007\nvaultTokenH\000:\n\372\370\263\007\005\250\363\263\007\001" +
-      "BA\n\014secret_store\0221\252\370\263\007\020\242\370\263\007\013SecretStore\252" +
-      "\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\236\002\n\017VaultTok" +
-      "enStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263\007\001\312\363" +
-      "\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004" +
-      "Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_address\030\003 \001(\tB&" +
-      "\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022+" +
-      "\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363" +
-      "\263\007\001:G\372\370\263\007B\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\nvaul" +
-      "tToken\342\363\263\007\nvaultToken\352\363\263\007\nvaultToken\"\337\003\n" +
-      "\rVaultTLSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID" +
-      "\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263" +
-      "\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_address\030" +
-      "\003 \001(\tB&\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001" +
-      "\320\363\263\007\001\022C\n\014CA_cert_path\030\004 \001(\tB-\362\370\263\007(\242\363\263\007\nC" +
-      "ACertPath\260\363\263\007\001\320\363\263\007\001\212\364\263\007\ncaCertPath\022A\n\020cl" +
-      "ient_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016ClientCe" +
-      "rtPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_path" +
-      "\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001\300\363\263\007" +
-      "\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263" +
-      "\007\004Tags\260\363\263\007\001:A\372\370\263\007<\242\363\263\007\013SecretStore\250\363\263\007\001\332" +
-      "\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS\352\363\263\007\010vaultTLS2\336" +
-      "\004\n\014SecretStores\022p\n\006Create\022\034.v1.SecretSto" +
-      "reCreateRequest\032\035.v1.SecretStoreCreateRe" +
-      "sponse\")\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\026\252\363\263\007\021/v1/secr" +
-      "et-stores\022k\n\003Get\022\031.v1.SecretStoreGetRequ" +
-      "est\032\032.v1.SecretStoreGetResponse\"-\202\371\263\007\010\242\363" +
-      "\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/secret-stores/{id}\022t" +
-      "\n\006Update\022\034.v1.SecretStoreUpdateRequest\032\035" +
-      ".v1.SecretStoreUpdateResponse\"-\202\371\263\007\010\242\363\263\007" +
-      "\003put\202\371\263\007\033\252\363\263\007\026/v1/secret-stores/{id}\022w\n\006" +
-      "Delete\022\034.v1.SecretStoreDeleteRequest\032\035.v" +
-      "1.SecretStoreDeleteResponse\"0\202\371\263\007\013\242\363\263\007\006d" +
-      "elete\202\371\263\007\033\252\363\263\007\026/v1/secret-stores/{id}\022i\n" +
-      "\004List\022\032.v1.SecretStoreListRequest\032\033.v1.S" +
-      "ecretStoreListResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
-      "\007\026\252\363\263\007\021/v1/secret-stores\032\025\312\371\263\007\020\302\371\263\007\013Secr" +
-      "etStoreBh\n\034com.strongdm.api.v1.plumbingB" +
-      "\024SecretStoresPlumbingZ2github.com/strong" +
-      "dm/strongdm-sdk-go/internal/v1;v1b\006proto" +
-      "3"
+      "toreB\024\362\370\263\007\017\212\364\263\007\nvaultTokenH\000\022*\n\003aws\030\003 \001(" +
+      "\0132\014.v1.AWSStoreB\r\362\370\263\007\010\212\364\263\007\003awsH\000:\n\372\370\263\007\005\250" +
+      "\363\263\007\001BA\n\014secret_store\0221\252\370\263\007\020\242\370\263\007\013SecretSt" +
+      "ore\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\236\002\n\017Vaul" +
+      "tTokenStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263" +
+      "\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242" +
+      "\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_address\030\003 \001" +
+      "(\tB&\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363\263" +
+      "\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Ta" +
+      "gs\260\363\263\007\001:G\372\370\263\007B\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\n" +
+      "vaultToken\342\363\263\007\nvaultToken\352\363\263\007\nvaultToken" +
+      "\"\337\003\n\rVaultTLSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263" +
+      "\007\002ID\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB" +
+      "\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_addr" +
+      "ess\030\003 \001(\tB&\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300" +
+      "\363\263\007\001\320\363\263\007\001\022C\n\014CA_cert_path\030\004 \001(\tB-\362\370\263\007(\242\363" +
+      "\263\007\nCACertPath\260\363\263\007\001\320\363\263\007\001\212\364\263\007\ncaCertPath\022A" +
+      "\n\020client_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016Clie" +
+      "ntCertPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_" +
+      "path\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001" +
+      "\300\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007" +
+      "\016\242\363\263\007\004Tags\260\363\263\007\001:A\372\370\263\007<\242\363\263\007\013SecretStore\250\363" +
+      "\263\007\001\332\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS\352\363\263\007\010vaultT" +
+      "LS\"\363\001\n\010AWSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002I" +
+      "D\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370" +
+      "\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022/\n\006region\030\003 \001(\tB\037" +
+      "\362\370\263\007\032\242\363\263\007\006Region\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022+\n\004tags\030" +
+      "\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:2\372\370" +
+      "\263\007-\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\003aws\342\363\263\007\003aws" +
+      "\352\363\263\007\003aws2\336\004\n\014SecretStores\022p\n\006Create\022\034.v1" +
+      ".SecretStoreCreateRequest\032\035.v1.SecretSto" +
+      "reCreateResponse\")\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\026\252\363\263" +
+      "\007\021/v1/secret-stores\022k\n\003Get\022\031.v1.SecretSt" +
+      "oreGetRequest\032\032.v1.SecretStoreGetRespons" +
+      "e\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/secret-sto" +
+      "res/{id}\022t\n\006Update\022\034.v1.SecretStoreUpdat" +
+      "eRequest\032\035.v1.SecretStoreUpdateResponse\"" +
+      "-\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\033\252\363\263\007\026/v1/secret-store" +
+      "s/{id}\022w\n\006Delete\022\034.v1.SecretStoreDeleteR" +
+      "equest\032\035.v1.SecretStoreDeleteResponse\"0\202" +
+      "\371\263\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1/secret-stor" +
+      "es/{id}\022i\n\004List\022\032.v1.SecretStoreListRequ" +
+      "est\032\033.v1.SecretStoreListResponse\"(\202\371\263\007\010\242" +
+      "\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/secret-stores\032\025\312\371\263\007" +
+      "\020\302\371\263\007\013SecretStoreBh\n\034com.strongdm.api.v1" +
+      ".plumbingB\024SecretStoresPlumbingZ2github." +
+      "com/strongdm/strongdm-sdk-go/internal/v1" +
+      ";v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14848,7 +16292,7 @@ public final class SecretStoresPlumbing {
     internal_static_v1_SecretStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretStore_descriptor,
-        new java.lang.String[] { "VaultTls", "VaultToken", "SecretStore", });
+        new java.lang.String[] { "VaultTls", "VaultToken", "Aws", "SecretStore", });
     internal_static_v1_VaultTokenStore_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_v1_VaultTokenStore_fieldAccessorTable = new
@@ -14861,6 +16305,12 @@ public final class SecretStoresPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSStore_descriptor,
         new java.lang.String[] { "Id", "Name", "ServerAddress", "CACertPath", "ClientCertPath", "ClientKeyPath", "Tags", });
+    internal_static_v1_AWSStore_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_v1_AWSStore_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AWSStore_descriptor,
+        new java.lang.String[] { "Id", "Name", "Region", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

@@ -10055,34 +10055,34 @@ public final class AccountGrantsPlumbing {
       "ListResponseMetadata\0224\n\016account_grants\030\002" +
       " \003(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nra" +
       "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\316\003\n\014AccountGrant\022,\n\002" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\330\003\n\014AccountGrant\022,\n\002" +
       "id\030\001 \001(\tB \362\370\263\007\033\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\nPermissi" +
       "on\022D\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Datas" +
       "ourceID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0227\n\nacco" +
       "unt_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006UserID\260\363\263\007\001\300\363\263\007\001" +
-      "\312\363\263\007\004User\022H\n\nstart_from\030\004 \001(\0132\032.google.p" +
-      "rotobuf.TimestampB\030\362\370\263\007\023\242\363\263\007\tStartFrom\260\363" +
-      "\263\007\001\022J\n\013valid_until\030\005 \001(\0132\032.google.protob" +
-      "uf.TimestampB\031\362\370\263\007\024\242\363\263\007\nValidUntil\260\363\263\007\001:" +
-      "{\372\370\263\007v\242\363\263\007\016DatasourceUser\250\363\263\007\001\302\363\263\007Y\242\363\263\007&" +
-      "tf_examples/account_grant_resource.txt\252\363" +
-      "\263\007)tf_examples/account_grant_data_source" +
-      ".txt2\366\003\n\rAccountGrants\022s\n\006Create\022\035.v1.Ac" +
-      "countGrantCreateRequest\032\036.v1.AccountGran" +
-      "tCreateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007" +
-      "\022/v1/account-grants\022n\n\003Get\022\032.v1.AccountG" +
-      "rantGetRequest\032\033.v1.AccountGrantGetRespo" +
-      "nse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/account-" +
-      "grants/{id}\022z\n\006Delete\022\035.v1.AccountGrantD" +
-      "eleteRequest\032\036.v1.AccountGrantDeleteResp" +
-      "onse\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027/v1/acco" +
-      "unt-grants/{id}\022l\n\004List\022\033.v1.AccountGran" +
-      "tListRequest\032\034.v1.AccountGrantListRespon" +
-      "se\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/account-g" +
-      "rants\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantBi\n\034com.str" +
-      "ongdm.api.v1.plumbingB\025AccountGrantsPlum" +
-      "bingZ2github.com/strongdm/strongdm-sdk-g" +
-      "o/internal/v1;v1b\006proto3"
+      "\312\363\263\007\004User\022M\n\nstart_from\030\004 \001(\0132\032.google.p" +
+      "rotobuf.TimestampB\035\362\370\263\007\030\242\363\263\007\tStartFrom\250\363" +
+      "\263\007\001\260\363\263\007\001\022O\n\013valid_until\030\005 \001(\0132\032.google.p" +
+      "rotobuf.TimestampB\036\362\370\263\007\031\242\363\263\007\nValidUntil\250" +
+      "\363\263\007\001\260\363\263\007\001:{\372\370\263\007v\242\363\263\007\016DatasourceUser\250\363\263\007\001" +
+      "\302\363\263\007Y\242\363\263\007&tf_examples/account_grant_reso" +
+      "urce.txt\252\363\263\007)tf_examples/account_grant_d" +
+      "ata_source.txt2\366\003\n\rAccountGrants\022s\n\006Crea" +
+      "te\022\035.v1.AccountGrantCreateRequest\032\036.v1.A" +
+      "ccountGrantCreateResponse\"*\202\371\263\007\t\242\363\263\007\004pos" +
+      "t\202\371\263\007\027\252\363\263\007\022/v1/account-grants\022n\n\003Get\022\032.v" +
+      "1.AccountGrantGetRequest\032\033.v1.AccountGra" +
+      "ntGetResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v" +
+      "1/account-grants/{id}\022z\n\006Delete\022\035.v1.Acc" +
+      "ountGrantDeleteRequest\032\036.v1.AccountGrant" +
+      "DeleteResponse\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263" +
+      "\007\027/v1/account-grants/{id}\022l\n\004List\022\033.v1.A" +
+      "ccountGrantListRequest\032\034.v1.AccountGrant" +
+      "ListResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1" +
+      "/account-grants\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantB" +
+      "i\n\034com.strongdm.api.v1.plumbingB\025Account" +
+      "GrantsPlumbingZ2github.com/strongdm/stro" +
+      "ngdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

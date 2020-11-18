@@ -5695,6 +5695,9 @@ public class Plumbing {
     if (plumbing.hasVaultToken()) {
       return convertVaultTokenStoreToPorcelain(plumbing.getVaultToken());
     }
+    if (plumbing.hasAws()) {
+      return convertAWSStoreToPorcelain(plumbing.getAws());
+    }
     return null;
   }
 
@@ -5713,6 +5716,11 @@ public class Plumbing {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setVaultToken(
           convertVaultTokenStoreToPlumbing((com.strongdm.api.v1.VaultTokenStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AWSStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setAws(convertAWSStoreToPlumbing((com.strongdm.api.v1.AWSStore) porcelain));
       return builder.build();
     }
     return null;
@@ -5831,6 +5839,49 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.VaultTLSStore> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertVaultTLSStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AWSStore convertAWSStoreToPorcelain(AWSStore plumbing) {
+    com.strongdm.api.v1.AWSStore porcelain = new com.strongdm.api.v1.AWSStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AWSStore convertAWSStoreToPlumbing(com.strongdm.api.v1.AWSStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWSStore.Builder builder = AWSStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AWSStore> convertRepeatedAWSStoreToPorcelain(
+      Collection<AWSStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAWSStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWSStore> convertRepeatedAWSStoreToPlumbing(
+      Collection<com.strongdm.api.v1.AWSStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAWSStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
