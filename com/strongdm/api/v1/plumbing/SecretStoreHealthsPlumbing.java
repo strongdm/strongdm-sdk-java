@@ -3735,26 +3735,6 @@ public final class SecretStoreHealthsPlumbing {
 
     /**
      * <pre>
-     * JSON detailing the health status
-     * </pre>
-     *
-     * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-     * @return The detail.
-     */
-    java.lang.String getDetail();
-    /**
-     * <pre>
-     * JSON detailing the health status
-     * </pre>
-     *
-     * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for detail.
-     */
-    com.google.protobuf.ByteString
-        getDetailBytes();
-
-    /**
-     * <pre>
      * The status of the link between the node and secret store
      * </pre>
      *
@@ -3826,6 +3806,55 @@ public final class SecretStoreHealthsPlumbing {
      * <code>.google.protobuf.Timestamp checked_at = 7 [(.v1.field_options) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getCheckedAtOrBuilder();
+
+    /**
+     * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+
+    /**
+     * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+     * @return The reachability.
+     */
+    java.lang.String getReachability();
+    /**
+     * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for reachability.
+     */
+    com.google.protobuf.ByteString
+        getReachabilityBytes();
+
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the flags.
+     */
+    java.util.List<java.lang.String>
+        getFlagsList();
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @return The count of flags.
+     */
+    int getFlagsCount();
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The flags at the given index.
+     */
+    java.lang.String getFlags(int index);
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the flags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFlagsBytes(int index);
   }
   /**
    * Protobuf type {@code v1.SecretStoreHealth}
@@ -3842,8 +3871,10 @@ public final class SecretStoreHealthsPlumbing {
     private SecretStoreHealth() {
       secretStoreId_ = "";
       nodeId_ = "";
-      detail_ = "";
       status_ = "";
+      error_ = "";
+      reachability_ = "";
+      flags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -3866,6 +3897,7 @@ public final class SecretStoreHealthsPlumbing {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3886,12 +3918,6 @@ public final class SecretStoreHealthsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               nodeId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              detail_ = s;
               break;
             }
             case 34: {
@@ -3926,6 +3952,27 @@ public final class SecretStoreHealthsPlumbing {
 
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              error_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              reachability_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                flags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              flags_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3941,6 +3988,9 @@ public final class SecretStoreHealthsPlumbing {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          flags_ = flags_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -4044,52 +4094,6 @@ public final class SecretStoreHealthsPlumbing {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         nodeId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DETAIL_FIELD_NUMBER = 3;
-    private volatile java.lang.Object detail_;
-    /**
-     * <pre>
-     * JSON detailing the health status
-     * </pre>
-     *
-     * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-     * @return The detail.
-     */
-    @java.lang.Override
-    public java.lang.String getDetail() {
-      java.lang.Object ref = detail_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        detail_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * JSON detailing the health status
-     * </pre>
-     *
-     * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for detail.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDetailBytes() {
-      java.lang.Object ref = detail_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        detail_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -4218,6 +4222,117 @@ public final class SecretStoreHealthsPlumbing {
       return getCheckedAt();
     }
 
+    public static final int ERROR_FIELD_NUMBER = 8;
+    private volatile java.lang.Object error_;
+    /**
+     * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REACHABILITY_FIELD_NUMBER = 9;
+    private volatile java.lang.Object reachability_;
+    /**
+     * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+     * @return The reachability.
+     */
+    @java.lang.Override
+    public java.lang.String getReachability() {
+      java.lang.Object ref = reachability_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        reachability_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for reachability.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReachabilityBytes() {
+      java.lang.Object ref = reachability_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        reachability_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FLAGS_FIELD_NUMBER = 10;
+    private com.google.protobuf.LazyStringList flags_;
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @return A list containing the flags.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFlagsList() {
+      return flags_;
+    }
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @return The count of flags.
+     */
+    public int getFlagsCount() {
+      return flags_.size();
+    }
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the element to return.
+     * @return The flags at the given index.
+     */
+    public java.lang.String getFlags(int index) {
+      return flags_.get(index);
+    }
+    /**
+     * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the flags at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFlagsBytes(int index) {
+      return flags_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4238,9 +4353,6 @@ public final class SecretStoreHealthsPlumbing {
       if (!getNodeIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nodeId_);
       }
-      if (!getDetailBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, detail_);
-      }
       if (!getStatusBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
       }
@@ -4249,6 +4361,15 @@ public final class SecretStoreHealthsPlumbing {
       }
       if (checkedAt_ != null) {
         output.writeMessage(7, getCheckedAt());
+      }
+      if (!getErrorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, error_);
+      }
+      if (!getReachabilityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, reachability_);
+      }
+      for (int i = 0; i < flags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, flags_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -4265,9 +4386,6 @@ public final class SecretStoreHealthsPlumbing {
       if (!getNodeIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nodeId_);
       }
-      if (!getDetailBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, detail_);
-      }
       if (!getStatusBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
       }
@@ -4278,6 +4396,20 @@ public final class SecretStoreHealthsPlumbing {
       if (checkedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCheckedAt());
+      }
+      if (!getErrorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, error_);
+      }
+      if (!getReachabilityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, reachability_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < flags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(flags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFlagsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4298,8 +4430,6 @@ public final class SecretStoreHealthsPlumbing {
           .equals(other.getSecretStoreId())) return false;
       if (!getNodeId()
           .equals(other.getNodeId())) return false;
-      if (!getDetail()
-          .equals(other.getDetail())) return false;
       if (!getStatus()
           .equals(other.getStatus())) return false;
       if (hasChangedAt() != other.hasChangedAt()) return false;
@@ -4312,6 +4442,12 @@ public final class SecretStoreHealthsPlumbing {
         if (!getCheckedAt()
             .equals(other.getCheckedAt())) return false;
       }
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (!getReachability()
+          .equals(other.getReachability())) return false;
+      if (!getFlagsList()
+          .equals(other.getFlagsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4327,8 +4463,6 @@ public final class SecretStoreHealthsPlumbing {
       hash = (53 * hash) + getSecretStoreId().hashCode();
       hash = (37 * hash) + NODE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getNodeId().hashCode();
-      hash = (37 * hash) + DETAIL_FIELD_NUMBER;
-      hash = (53 * hash) + getDetail().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + getStatus().hashCode();
       if (hasChangedAt()) {
@@ -4338,6 +4472,14 @@ public final class SecretStoreHealthsPlumbing {
       if (hasCheckedAt()) {
         hash = (37 * hash) + CHECKED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCheckedAt().hashCode();
+      }
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+      hash = (37 * hash) + REACHABILITY_FIELD_NUMBER;
+      hash = (53 * hash) + getReachability().hashCode();
+      if (getFlagsCount() > 0) {
+        hash = (37 * hash) + FLAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getFlagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4476,8 +4618,6 @@ public final class SecretStoreHealthsPlumbing {
 
         nodeId_ = "";
 
-        detail_ = "";
-
         status_ = "";
 
         if (changedAtBuilder_ == null) {
@@ -4492,6 +4632,12 @@ public final class SecretStoreHealthsPlumbing {
           checkedAt_ = null;
           checkedAtBuilder_ = null;
         }
+        error_ = "";
+
+        reachability_ = "";
+
+        flags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -4518,9 +4664,9 @@ public final class SecretStoreHealthsPlumbing {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.SecretStoreHealthsPlumbing.SecretStoreHealth buildPartial() {
         com.strongdm.api.v1.plumbing.SecretStoreHealthsPlumbing.SecretStoreHealth result = new com.strongdm.api.v1.plumbing.SecretStoreHealthsPlumbing.SecretStoreHealth(this);
+        int from_bitField0_ = bitField0_;
         result.secretStoreId_ = secretStoreId_;
         result.nodeId_ = nodeId_;
-        result.detail_ = detail_;
         result.status_ = status_;
         if (changedAtBuilder_ == null) {
           result.changedAt_ = changedAt_;
@@ -4532,6 +4678,13 @@ public final class SecretStoreHealthsPlumbing {
         } else {
           result.checkedAt_ = checkedAtBuilder_.build();
         }
+        result.error_ = error_;
+        result.reachability_ = reachability_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          flags_ = flags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.flags_ = flags_;
         onBuilt();
         return result;
       }
@@ -4588,10 +4741,6 @@ public final class SecretStoreHealthsPlumbing {
           nodeId_ = other.nodeId_;
           onChanged();
         }
-        if (!other.getDetail().isEmpty()) {
-          detail_ = other.detail_;
-          onChanged();
-        }
         if (!other.getStatus().isEmpty()) {
           status_ = other.status_;
           onChanged();
@@ -4601,6 +4750,24 @@ public final class SecretStoreHealthsPlumbing {
         }
         if (other.hasCheckedAt()) {
           mergeCheckedAt(other.getCheckedAt());
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          onChanged();
+        }
+        if (!other.getReachability().isEmpty()) {
+          reachability_ = other.reachability_;
+          onChanged();
+        }
+        if (!other.flags_.isEmpty()) {
+          if (flags_.isEmpty()) {
+            flags_ = other.flags_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFlagsIsMutable();
+            flags_.addAll(other.flags_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4630,6 +4797,7 @@ public final class SecretStoreHealthsPlumbing {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object secretStoreId_ = "";
       /**
@@ -4819,102 +4987,6 @@ public final class SecretStoreHealthsPlumbing {
   checkByteStringIsUtf8(value);
         
         nodeId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object detail_ = "";
-      /**
-       * <pre>
-       * JSON detailing the health status
-       * </pre>
-       *
-       * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-       * @return The detail.
-       */
-      public java.lang.String getDetail() {
-        java.lang.Object ref = detail_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          detail_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * JSON detailing the health status
-       * </pre>
-       *
-       * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for detail.
-       */
-      public com.google.protobuf.ByteString
-          getDetailBytes() {
-        java.lang.Object ref = detail_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          detail_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * JSON detailing the health status
-       * </pre>
-       *
-       * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The detail to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDetail(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        detail_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * JSON detailing the health status
-       * </pre>
-       *
-       * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDetail() {
-        
-        detail_ = getDefaultInstance().getDetail();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * JSON detailing the health status
-       * </pre>
-       *
-       * <code>string detail = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for detail to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDetailBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        detail_ = value;
         onChanged();
         return this;
       }
@@ -5324,6 +5396,268 @@ public final class SecretStoreHealthsPlumbing {
         }
         return checkedAtBuilder_;
       }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        error_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        
+        error_ = getDefaultInstance().getError();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        error_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object reachability_ = "";
+      /**
+       * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+       * @return The reachability.
+       */
+      public java.lang.String getReachability() {
+        java.lang.Object ref = reachability_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          reachability_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for reachability.
+       */
+      public com.google.protobuf.ByteString
+          getReachabilityBytes() {
+        java.lang.Object ref = reachability_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          reachability_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The reachability to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReachability(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        reachability_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReachability() {
+        
+        reachability_ = getDefaultInstance().getReachability();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string reachability = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for reachability to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReachabilityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        reachability_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList flags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFlagsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          flags_ = new com.google.protobuf.LazyStringArrayList(flags_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @return A list containing the flags.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFlagsList() {
+        return flags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @return The count of flags.
+       */
+      public int getFlagsCount() {
+        return flags_.size();
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the element to return.
+       * @return The flags at the given index.
+       */
+      public java.lang.String getFlags(int index) {
+        return flags_.get(index);
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the flags at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFlagsBytes(int index) {
+        return flags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @param index The index to set the value at.
+       * @param value The flags to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFlagsIsMutable();
+        flags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The flags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFlags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFlagsIsMutable();
+        flags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @param values The flags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFlags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFlagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, flags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlags() {
+        flags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string flags = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes of the flags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFlagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFlagsIsMutable();
+        flags_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5428,30 +5762,31 @@ public final class SecretStoreHealthsPlumbing {
       "retStoreHealthCheckResponse\022(\n\004meta\030\001 \001(" +
       "\0132\032.v1.CreateResponseMetadata\022?\n\nrate_li" +
       "mit\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\320\363\263\007\001\372\370\263\007\005\250\363\263\007\001\"\273\003\n" +
+      "\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\024\372\370\263\007\005\320\363\263\007\001\372\370\263\007\005\250\363\263\007\001\"\375\003\n" +
       "\021SecretStoreHealth\022E\n\017secret_store_id\030\001 " +
       "\001(\tB,\362\370\263\007\'\242\363\263\007\rSecretStoreID\260\363\263\007\001\312\363\263\007\013Se" +
       "cretStore\022/\n\007node_id\030\002 \001(\tB\036\362\370\263\007\031\242\363\263\007\006No" +
-      "deID\260\363\263\007\001\312\363\263\007\004Node\022)\n\006detail\030\003 \001(\tB\031\362\370\263\007" +
-      "\024\242\363\263\007\nDetailJSON\260\363\263\007\001\022H\n\006status\030\004 \001(\tB8\362" +
-      "\370\263\0073\242\363\263\007\006Status\260\363\263\007\001\252\364\263\007\036models.SecretSt" +
-      "oreHealthStatus\022H\n\nchanged_at\030\006 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampB\030\362\370\263\007\023\242\363\263\007\tChang" +
-      "edAt\260\363\263\007\001\022H\n\nchecked_at\030\007 \001(\0132\032.google.p" +
-      "rotobuf.TimestampB\030\362\370\263\007\023\242\363\263\007\tCreatedAt\260\363" +
-      "\263\007\001:%\372\370\263\007 \242\363\263\007\021SecretStoreHealth\250\363\263\007\001\320\363\263" +
-      "\007\0012\274\002\n\022SecretStoreHealths\022|\n\004List\022 .v1.S" +
-      "ecretStoreHealthListRequest\032!.v1.SecretS" +
-      "toreHealthListResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
-      "\007\035\252\363\263\007\030/v1/secret-store-healths\022\200\001\n\005Chec" +
-      "k\022!.v1.SecretStoreHealthCheckRequest\032\".v" +
-      "1.SecretStoreHealthCheckResponse\"0\202\371\263\007\t\242" +
-      "\363\263\007\004post\202\371\263\007\035\252\363\263\007\030/v1/secret-store-healt" +
-      "hs\032%\312\371\263\007\026\302\371\263\007\021SecretStoreHealth\312\371\263\007\005\310\371\263\007" +
-      "\001Bn\n\034com.strongdm.api.v1.plumbingB\032Secre" +
-      "tStoreHealthsPlumbingZ2github.com/strong" +
-      "dm/strongdm-sdk-go/internal/v1;v1b\006proto" +
-      "3"
+      "deID\260\363\263\007\001\312\363\263\007\004Node\022H\n\006status\030\004 \001(\tB8\362\370\263\007" +
+      "3\242\363\263\007\006Status\260\363\263\007\001\252\364\263\007\036models.SecretStore" +
+      "HealthStatus\022H\n\nchanged_at\030\006 \001(\0132\032.googl" +
+      "e.protobuf.TimestampB\030\362\370\263\007\023\242\363\263\007\tChangedA" +
+      "t\260\363\263\007\001\022H\n\nchecked_at\030\007 \001(\0132\032.google.prot" +
+      "obuf.TimestampB\030\362\370\263\007\023\242\363\263\007\tCreatedAt\260\363\263\007\001" +
+      "\022\036\n\005error\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022%\n\014reac" +
+      "hability\030\t \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022\036\n\005flags" +
+      "\030\n \003(\tB\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001:%\372\370\263\007 \242\363\263\007\021Secre" +
+      "tStoreHealth\250\363\263\007\001\320\363\263\007\001J\004\010\003\020\0042\274\002\n\022SecretS" +
+      "toreHealths\022|\n\004List\022 .v1.SecretStoreHeal" +
+      "thListRequest\032!.v1.SecretStoreHealthList" +
+      "Response\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\035\252\363\263\007\030/v1/sec" +
+      "ret-store-healths\022\200\001\n\005Check\022!.v1.SecretS" +
+      "toreHealthCheckRequest\032\".v1.SecretStoreH" +
+      "ealthCheckResponse\"0\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\035\252" +
+      "\363\263\007\030/v1/secret-store-healths\032%\312\371\263\007\026\302\371\263\007\021" +
+      "SecretStoreHealth\312\371\263\007\005\310\371\263\007\001Bn\n\034com.stron" +
+      "gdm.api.v1.plumbingB\032SecretStoreHealthsP" +
+      "lumbingZ2github.com/strongdm/strongdm-sd" +
+      "k-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5489,7 +5824,7 @@ public final class SecretStoreHealthsPlumbing {
     internal_static_v1_SecretStoreHealth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretStoreHealth_descriptor,
-        new java.lang.String[] { "SecretStoreId", "NodeId", "Detail", "Status", "ChangedAt", "CheckedAt", });
+        new java.lang.String[] { "SecretStoreId", "NodeId", "Status", "ChangedAt", "CheckedAt", "Error", "Reachability", "Flags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

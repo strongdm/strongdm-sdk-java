@@ -48,6 +48,21 @@ public final class DriversPlumbing {
     com.strongdm.api.v1.plumbing.DriversPlumbing.AthenaOrBuilder getAthenaOrBuilder();
 
     /**
+     * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+     * @return Whether the aws field is set.
+     */
+    boolean hasAws();
+    /**
+     * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+     * @return The aws.
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.AWS getAws();
+    /**
+     * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.DriversPlumbing.AWSOrBuilder getAwsOrBuilder();
+
+    /**
      * <code>.v1.BigQuery big_query = 200 [(.v1.field_options) = { ... }</code>
      * @return Whether the bigQuery field is set.
      */
@@ -1461,6 +1476,20 @@ public final class DriversPlumbing {
               resourceCase_ = 2200;
               break;
             }
+            case 18402: {
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder subBuilder = null;
+              if (resourceCase_ == 2300) {
+                subBuilder = ((com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_).toBuilder();
+              }
+              resource_ =
+                  input.readMessage(com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_);
+                resource_ = subBuilder.buildPartial();
+              }
+              resourceCase_ = 2300;
+              break;
+            }
             case 19202: {
               com.strongdm.api.v1.plumbing.DriversPlumbing.DB2I.Builder subBuilder = null;
               if (resourceCase_ == 2400) {
@@ -1513,6 +1542,7 @@ public final class DriversPlumbing {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       ATHENA(100),
+      AWS(2300),
       BIG_QUERY(200),
       CASSANDRA(300),
       DB_2_I(2400),
@@ -1578,6 +1608,7 @@ public final class DriversPlumbing {
       public static ResourceCase forNumber(int value) {
         switch (value) {
           case 100: return ATHENA;
+          case 2300: return AWS;
           case 200: return BIG_QUERY;
           case 300: return CASSANDRA;
           case 2400: return DB_2_I;
@@ -1669,6 +1700,37 @@ public final class DriversPlumbing {
          return (com.strongdm.api.v1.plumbing.DriversPlumbing.Athena) resource_;
       }
       return com.strongdm.api.v1.plumbing.DriversPlumbing.Athena.getDefaultInstance();
+    }
+
+    public static final int AWS_FIELD_NUMBER = 2300;
+    /**
+     * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+     * @return Whether the aws field is set.
+     */
+    @java.lang.Override
+    public boolean hasAws() {
+      return resourceCase_ == 2300;
+    }
+    /**
+     * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+     * @return The aws.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.AWS getAws() {
+      if (resourceCase_ == 2300) {
+         return (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.AWSOrBuilder getAwsOrBuilder() {
+      if (resourceCase_ == 2300) {
+         return (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_;
+      }
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance();
     }
 
     public static final int BIG_QUERY_FIELD_NUMBER = 200;
@@ -3283,6 +3345,9 @@ public final class DriversPlumbing {
       if (resourceCase_ == 2200) {
         output.writeMessage(2200, (com.strongdm.api.v1.plumbing.DriversPlumbing.DB2LUW) resource_);
       }
+      if (resourceCase_ == 2300) {
+        output.writeMessage(2300, (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_);
+      }
       if (resourceCase_ == 2400) {
         output.writeMessage(2400, (com.strongdm.api.v1.plumbing.DriversPlumbing.DB2I) resource_);
       }
@@ -3483,6 +3548,10 @@ public final class DriversPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2200, (com.strongdm.api.v1.plumbing.DriversPlumbing.DB2LUW) resource_);
       }
+      if (resourceCase_ == 2300) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2300, (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_);
+      }
       if (resourceCase_ == 2400) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2400, (com.strongdm.api.v1.plumbing.DriversPlumbing.DB2I) resource_);
@@ -3507,6 +3576,10 @@ public final class DriversPlumbing {
         case 100:
           if (!getAthena()
               .equals(other.getAthena())) return false;
+          break;
+        case 2300:
+          if (!getAws()
+              .equals(other.getAws())) return false;
           break;
         case 200:
           if (!getBigQuery()
@@ -3714,6 +3787,10 @@ public final class DriversPlumbing {
         case 100:
           hash = (37 * hash) + ATHENA_FIELD_NUMBER;
           hash = (53 * hash) + getAthena().hashCode();
+          break;
+        case 2300:
+          hash = (37 * hash) + AWS_FIELD_NUMBER;
+          hash = (53 * hash) + getAws().hashCode();
           break;
         case 200:
           hash = (37 * hash) + BIG_QUERY_FIELD_NUMBER;
@@ -4076,6 +4153,13 @@ public final class DriversPlumbing {
             result.resource_ = resource_;
           } else {
             result.resource_ = athenaBuilder_.build();
+          }
+        }
+        if (resourceCase_ == 2300) {
+          if (awsBuilder_ == null) {
+            result.resource_ = resource_;
+          } else {
+            result.resource_ = awsBuilder_.build();
           }
         }
         if (resourceCase_ == 200) {
@@ -4461,6 +4545,10 @@ public final class DriversPlumbing {
             mergeAthena(other.getAthena());
             break;
           }
+          case AWS: {
+            mergeAws(other.getAws());
+            break;
+          }
           case BIG_QUERY: {
             mergeBigQuery(other.getBigQuery());
             break;
@@ -4836,6 +4924,147 @@ public final class DriversPlumbing {
         resourceCase_ = 100;
         onChanged();;
         return athenaBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.DriversPlumbing.AWS, com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder, com.strongdm.api.v1.plumbing.DriversPlumbing.AWSOrBuilder> awsBuilder_;
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       * @return Whether the aws field is set.
+       */
+      @java.lang.Override
+      public boolean hasAws() {
+        return resourceCase_ == 2300;
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       * @return The aws.
+       */
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AWS getAws() {
+        if (awsBuilder_ == null) {
+          if (resourceCase_ == 2300) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance();
+        } else {
+          if (resourceCase_ == 2300) {
+            return awsBuilder_.getMessage();
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAws(com.strongdm.api.v1.plumbing.DriversPlumbing.AWS value) {
+        if (awsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resource_ = value;
+          onChanged();
+        } else {
+          awsBuilder_.setMessage(value);
+        }
+        resourceCase_ = 2300;
+        return this;
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setAws(
+          com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder builderForValue) {
+        if (awsBuilder_ == null) {
+          resource_ = builderForValue.build();
+          onChanged();
+        } else {
+          awsBuilder_.setMessage(builderForValue.build());
+        }
+        resourceCase_ = 2300;
+        return this;
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeAws(com.strongdm.api.v1.plumbing.DriversPlumbing.AWS value) {
+        if (awsBuilder_ == null) {
+          if (resourceCase_ == 2300 &&
+              resource_ != com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance()) {
+            resource_ = com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.newBuilder((com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            resource_ = value;
+          }
+          onChanged();
+        } else {
+          if (resourceCase_ == 2300) {
+            awsBuilder_.mergeFrom(value);
+          }
+          awsBuilder_.setMessage(value);
+        }
+        resourceCase_ = 2300;
+        return this;
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearAws() {
+        if (awsBuilder_ == null) {
+          if (resourceCase_ == 2300) {
+            resourceCase_ = 0;
+            resource_ = null;
+            onChanged();
+          }
+        } else {
+          if (resourceCase_ == 2300) {
+            resourceCase_ = 0;
+            resource_ = null;
+          }
+          awsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder getAwsBuilder() {
+        return getAwsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AWSOrBuilder getAwsOrBuilder() {
+        if ((resourceCase_ == 2300) && (awsBuilder_ != null)) {
+          return awsBuilder_.getMessageOrBuilder();
+        } else {
+          if (resourceCase_ == 2300) {
+            return (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_;
+          }
+          return com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.AWS aws = 2300 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.DriversPlumbing.AWS, com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder, com.strongdm.api.v1.plumbing.DriversPlumbing.AWSOrBuilder> 
+          getAwsFieldBuilder() {
+        if (awsBuilder_ == null) {
+          if (!(resourceCase_ == 2300)) {
+            resource_ = com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance();
+          }
+          awsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AWS, com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder, com.strongdm.api.v1.plumbing.DriversPlumbing.AWSOrBuilder>(
+                  (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) resource_,
+                  getParentForChildren(),
+                  isClean());
+          resource_ = null;
+        }
+        resourceCase_ = 2300;
+        onChanged();;
+        return awsBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -13512,6 +13741,1936 @@ public final class DriversPlumbing {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.DriversPlumbing.Athena getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AWSOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.AWS)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * True if the datasource is reachable and the credentials are valid.
+     * </pre>
+     *
+     * <code>bool healthy = 32770 [(.v1.field_options) = { ... }</code>
+     * @return The healthy.
+     */
+    boolean getHealthy();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    java.lang.String getSecretStoreId();
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    com.google.protobuf.ByteString
+        getSecretStoreIdBytes();
+
+    /**
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * @return The accessKey.
+     */
+    java.lang.String getAccessKey();
+    /**
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessKey.
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyBytes();
+
+    /**
+     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * @return The secretAccessKey.
+     */
+    java.lang.String getSecretAccessKey();
+    /**
+     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretAccessKey.
+     */
+    com.google.protobuf.ByteString
+        getSecretAccessKeyBytes();
+
+    /**
+     * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+     * @return The healthcheckRegion.
+     */
+    java.lang.String getHealthcheckRegion();
+    /**
+     * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for healthcheckRegion.
+     */
+    com.google.protobuf.ByteString
+        getHealthcheckRegionBytes();
+
+    /**
+     * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+     * @return The roleArn.
+     */
+    java.lang.String getRoleArn();
+    /**
+     * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for roleArn.
+     */
+    com.google.protobuf.ByteString
+        getRoleArnBytes();
+  }
+  /**
+   * Protobuf type {@code v1.AWS}
+   */
+  public static final class AWS extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.AWS)
+      AWSOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AWS.newBuilder() to construct.
+    private AWS(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AWS() {
+      id_ = "";
+      name_ = "";
+      secretStoreId_ = "";
+      accessKey_ = "";
+      secretAccessKey_ = "";
+      healthcheckRegion_ = "";
+      roleArn_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AWS();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AWS(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessKey_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretAccessKey_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              healthcheckRegion_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              roleArn_ = s;
+              break;
+            }
+            case 262146: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 262154: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 262160: {
+
+              healthy_ = input.readBool();
+              break;
+            }
+            case 262170: {
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 262178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretStoreId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_AWS_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_AWS_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.class, com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 32768;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the Resource.
+     * </pre>
+     *
+     * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 32769;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the Resource.
+     * </pre>
+     *
+     * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HEALTHY_FIELD_NUMBER = 32770;
+    private boolean healthy_;
+    /**
+     * <pre>
+     * True if the datasource is reachable and the credentials are valid.
+     * </pre>
+     *
+     * <code>bool healthy = 32770 [(.v1.field_options) = { ... }</code>
+     * @return The healthy.
+     */
+    @java.lang.Override
+    public boolean getHealthy() {
+      return healthy_;
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 32771;
+    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    public static final int SECRET_STORE_ID_FIELD_NUMBER = 32772;
+    private volatile java.lang.Object secretStoreId_;
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The secretStoreId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretStoreId() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretStoreId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the secret store containing credentials for this resource, if any.
+     * </pre>
+     *
+     * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretStoreId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretStoreIdBytes() {
+      java.lang.Object ref = secretStoreId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretStoreId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCESS_KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accessKey_;
+    /**
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * @return The accessKey.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessKey() {
+      java.lang.Object ref = accessKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessKeyBytes() {
+      java.lang.Object ref = accessKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_ACCESS_KEY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object secretAccessKey_;
+    /**
+     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * @return The secretAccessKey.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretAccessKey() {
+      java.lang.Object ref = secretAccessKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretAccessKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for secretAccessKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretAccessKeyBytes() {
+      java.lang.Object ref = secretAccessKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretAccessKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HEALTHCHECK_REGION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object healthcheckRegion_;
+    /**
+     * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+     * @return The healthcheckRegion.
+     */
+    @java.lang.Override
+    public java.lang.String getHealthcheckRegion() {
+      java.lang.Object ref = healthcheckRegion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        healthcheckRegion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for healthcheckRegion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHealthcheckRegionBytes() {
+      java.lang.Object ref = healthcheckRegion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        healthcheckRegion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROLE_ARN_FIELD_NUMBER = 5;
+    private volatile java.lang.Object roleArn_;
+    /**
+     * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+     * @return The roleArn.
+     */
+    @java.lang.Override
+    public java.lang.String getRoleArn() {
+      java.lang.Object ref = roleArn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roleArn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for roleArn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRoleArnBytes() {
+      java.lang.Object ref = roleArn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roleArn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAccessKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKey_);
+      }
+      if (!getSecretAccessKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretAccessKey_);
+      }
+      if (!getHealthcheckRegionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, healthcheckRegion_);
+      }
+      if (!getRoleArnBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, roleArn_);
+      }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32768, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32769, name_);
+      }
+      if (healthy_ != false) {
+        output.writeBool(32770, healthy_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(32771, getTags());
+      }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 32772, secretStoreId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAccessKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKey_);
+      }
+      if (!getSecretAccessKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretAccessKey_);
+      }
+      if (!getHealthcheckRegionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, healthcheckRegion_);
+      }
+      if (!getRoleArnBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, roleArn_);
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32768, id_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32769, name_);
+      }
+      if (healthy_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(32770, healthy_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32771, getTags());
+      }
+      if (!getSecretStoreIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32772, secretStoreId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.AWS)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.DriversPlumbing.AWS other = (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getHealthy()
+          != other.getHealthy()) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!getSecretStoreId()
+          .equals(other.getSecretStoreId())) return false;
+      if (!getAccessKey()
+          .equals(other.getAccessKey())) return false;
+      if (!getSecretAccessKey()
+          .equals(other.getSecretAccessKey())) return false;
+      if (!getHealthcheckRegion()
+          .equals(other.getHealthcheckRegion())) return false;
+      if (!getRoleArn()
+          .equals(other.getRoleArn())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + HEALTHY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHealthy());
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (37 * hash) + SECRET_STORE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretStoreId().hashCode();
+      hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessKey().hashCode();
+      hash = (37 * hash) + SECRET_ACCESS_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretAccessKey().hashCode();
+      hash = (37 * hash) + HEALTHCHECK_REGION_FIELD_NUMBER;
+      hash = (53 * hash) + getHealthcheckRegion().hashCode();
+      hash = (37 * hash) + ROLE_ARN_FIELD_NUMBER;
+      hash = (53 * hash) + getRoleArn().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.DriversPlumbing.AWS prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.AWS}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.AWS)
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AWSOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_AWS_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_AWS_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.class, com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        healthy_ = false;
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        secretStoreId_ = "";
+
+        accessKey_ = "";
+
+        secretAccessKey_ = "";
+
+        healthcheckRegion_ = "";
+
+        roleArn_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.internal_static_v1_AWS_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AWS getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AWS build() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AWS result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.DriversPlumbing.AWS buildPartial() {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AWS result = new com.strongdm.api.v1.plumbing.DriversPlumbing.AWS(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.healthy_ = healthy_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        result.secretStoreId_ = secretStoreId_;
+        result.accessKey_ = accessKey_;
+        result.secretAccessKey_ = secretAccessKey_;
+        result.healthcheckRegion_ = healthcheckRegion_;
+        result.roleArn_ = roleArn_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.DriversPlumbing.AWS)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.DriversPlumbing.AWS other) {
+        if (other == com.strongdm.api.v1.plumbing.DriversPlumbing.AWS.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getHealthy() != false) {
+          setHealthy(other.getHealthy());
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        if (!other.getSecretStoreId().isEmpty()) {
+          secretStoreId_ = other.secretStoreId_;
+          onChanged();
+        }
+        if (!other.getAccessKey().isEmpty()) {
+          accessKey_ = other.accessKey_;
+          onChanged();
+        }
+        if (!other.getSecretAccessKey().isEmpty()) {
+          secretAccessKey_ = other.secretAccessKey_;
+          onChanged();
+        }
+        if (!other.getHealthcheckRegion().isEmpty()) {
+          healthcheckRegion_ = other.healthcheckRegion_;
+          onChanged();
+        }
+        if (!other.getRoleArn().isEmpty()) {
+          roleArn_ = other.roleArn_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.DriversPlumbing.AWS parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.DriversPlumbing.AWS) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the Resource.
+       * </pre>
+       *
+       * <code>string id = 32768 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the Resource.
+       * </pre>
+       *
+       * <code>string name = 32769 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean healthy_ ;
+      /**
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>bool healthy = 32770 [(.v1.field_options) = { ... }</code>
+       * @return The healthy.
+       */
+      @java.lang.Override
+      public boolean getHealthy() {
+        return healthy_;
+      }
+      /**
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>bool healthy = 32770 [(.v1.field_options) = { ... }</code>
+       * @param value The healthy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthy(boolean value) {
+        
+        healthy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if the datasource is reachable and the credentials are valid.
+       * </pre>
+       *
+       * <code>bool healthy = 32770 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthy() {
+        
+        healthy_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+
+      private java.lang.Object secretStoreId_ = "";
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The secretStoreId.
+       */
+      public java.lang.String getSecretStoreId() {
+        java.lang.Object ref = secretStoreId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretStoreId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretStoreId.
+       */
+      public com.google.protobuf.ByteString
+          getSecretStoreIdBytes() {
+        java.lang.Object ref = secretStoreId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretStoreId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretStoreId() {
+        
+        secretStoreId_ = getDefaultInstance().getSecretStoreId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the secret store containing credentials for this resource, if any.
+       * </pre>
+       *
+       * <code>string secret_store_id = 32772 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretStoreId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretStoreIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretStoreId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accessKey_ = "";
+      /**
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * @return The accessKey.
+       */
+      public java.lang.String getAccessKey() {
+        java.lang.Object ref = accessKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accessKey.
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyBytes() {
+        java.lang.Object ref = accessKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The accessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessKey() {
+        
+        accessKey_ = getDefaultInstance().getAccessKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string access_key = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secretAccessKey_ = "";
+      /**
+       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * @return The secretAccessKey.
+       */
+      public java.lang.String getSecretAccessKey() {
+        java.lang.Object ref = secretAccessKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretAccessKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for secretAccessKey.
+       */
+      public com.google.protobuf.ByteString
+          getSecretAccessKeyBytes() {
+        java.lang.Object ref = secretAccessKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretAccessKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The secretAccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretAccessKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretAccessKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretAccessKey() {
+        
+        secretAccessKey_ = getDefaultInstance().getSecretAccessKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_access_key = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for secretAccessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretAccessKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretAccessKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object healthcheckRegion_ = "";
+      /**
+       * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+       * @return The healthcheckRegion.
+       */
+      public java.lang.String getHealthcheckRegion() {
+        java.lang.Object ref = healthcheckRegion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          healthcheckRegion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for healthcheckRegion.
+       */
+      public com.google.protobuf.ByteString
+          getHealthcheckRegionBytes() {
+        java.lang.Object ref = healthcheckRegion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          healthcheckRegion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The healthcheckRegion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckRegion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        healthcheckRegion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHealthcheckRegion() {
+        
+        healthcheckRegion_ = getDefaultInstance().getHealthcheckRegion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string healthcheck_region = 4 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for healthcheckRegion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHealthcheckRegionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        healthcheckRegion_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object roleArn_ = "";
+      /**
+       * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+       * @return The roleArn.
+       */
+      public java.lang.String getRoleArn() {
+        java.lang.Object ref = roleArn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roleArn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for roleArn.
+       */
+      public com.google.protobuf.ByteString
+          getRoleArnBytes() {
+        java.lang.Object ref = roleArn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roleArn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The roleArn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleArn(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        roleArn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRoleArn() {
+        
+        roleArn_ = getDefaultInstance().getRoleArn();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string role_arn = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for roleArn to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRoleArnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        roleArn_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.AWS)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.AWS)
+    private static final com.strongdm.api.v1.plumbing.DriversPlumbing.AWS DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.DriversPlumbing.AWS();
+    }
+
+    public static com.strongdm.api.v1.plumbing.DriversPlumbing.AWS getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AWS>
+        PARSER = new com.google.protobuf.AbstractParser<AWS>() {
+      @java.lang.Override
+      public AWS parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AWS(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AWS> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AWS> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.DriversPlumbing.AWS getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -110461,6 +112620,11 @@ public final class DriversPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Athena_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_AWS_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_AWS_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_BigQuery_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -110705,8 +112869,9 @@ public final class DriversPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\rdrivers.proto\022\002v1\032\roptions.proto\032\ntags" +
-      ".proto\"\246\027\n\010Resource\022.\n\006athena\030d \001(\0132\n.v1" +
-      ".AthenaB\020\362\370\263\007\013\212\364\263\007\006athenaH\000\0226\n\tbig_query" +
+      ".proto\"\316\027\n\010Resource\022.\n\006athena\030d \001(\0132\n.v1" +
+      ".AthenaB\020\362\370\263\007\013\212\364\263\007\006athenaH\000\022&\n\003aws\030\374\021 \001(" +
+      "\0132\007.v1.AWSB\r\362\370\263\007\010\212\364\263\007\003awsH\000\0226\n\tbig_query" +
       "\030\310\001 \001(\0132\014.v1.BigQueryB\022\362\370\263\007\r\212\364\263\007\010bigquer" +
       "yH\000\0228\n\tcassandra\030\254\002 \001(\0132\r.v1.CassandraB\023" +
       "\362\370\263\007\016\212\364\263\007\tcassandraH\000\022+\n\006db_2_i\030\340\022 \001(\0132\010" +
@@ -110802,315 +112967,284 @@ public final class DriversPlumbing {
       "\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
       "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363" +
       "\263\007\006athena\372\370\263\007\013\342\363\263\007\006athena\372\370\263\007\013\352\363\263\007\006athen" +
-      "a\"\332\006\n\010BigQuery\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'" +
-      "\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022" +
-      "$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n" +
-      "\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022z\n\013" +
-      "private_key\030\001 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013p" +
-      "rivate-key\362\370\263\007\017\202\364\263\007\nprivateKey\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001" +
-      "\022o\n\007project\030\002 \001(\tB^\362\370\263\007\005\260\363\263\007\001\362\370\263\007\014\372\363\263\007\007p" +
-      "roject\362\370\263\007\014\202\364\263\007\007project\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rpo" +
-      "rt_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rp" +
-      "ort-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240" +
-      "\364\263\007\000\022r\n\010endpoint\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
-      "\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363\263\007\001" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      "\022r\n\010username\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:@\372\370" +
-      "\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010bigquery\372\370\263\007\r\342\363\263\007\010bigq" +
-      "uery\372\370\263\007\r\352\363\263\007\010bigquery\"\304\007\n\tCassandra\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
-      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010host" +
-      "name\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username" +
+      "a\"\377\005\n\003AWS\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
+      "ame\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007hea" +
+      "lthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004ta" +
+      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secr" +
+      "et_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022|\n\nacces" +
+      "s_key\030\001 \001(\tBh\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raccess-" +
+      "key-id\362\370\263\007\020\202\364\263\007\013accessKeyId\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\213\001" +
+      "\n\021secret_access_key\030\002 \001(\tBp\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\026\372\363\263\007\021secret-access-key\362\370\263\007\024\202\364\263\007\017secret" +
+      "AccessKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\217\001\n\022healthcheck_regi" +
+      "on\030\004 \001(\tBs\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022healthchec" +
+      "k-region\362\370\263\007\026\202\364\263\007\021healthcheckRegion\362\370\263\007\005" +
+      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022q\n\010role_arn\030\005 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
+      "\372\363\263\007\010role-arn\362\370\263\007\014\202\364\263\007\007roleArn\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001" +
+      ":1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003aws\372\370\263\007\010\342\363\263\007\003aws\372\370" +
+      "\263\007\010\352\363\263\007\003aws\"\332\006\n\010BigQuery\022\030\n\002id\030\200\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022z\n\013private_key\030\001 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\020\372\363\263\007\013private-key\362\370\263\007\017\202\364\263\007\nprivateKey" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\001\022o\n\007project\030\002 \001(\tB^\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\014\372\363\263\007\007project\362\370\263\007\014\202\364\263\007\007project\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022\200\001\n\rport_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOver" +
+      "ride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010endpoint\030\004 \001(\tB`\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpoint" +
+      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007" +
+      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010bigquery\372\370\263\007" +
+      "\r\342\363\263\007\010bigquery\372\370\263\007\r\352\363\263\007\010bigquery\"\304\007\n\tCas" +
+      "sandra\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name" +
+      "\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007health" +
+      "y\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030" +
+      "\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_" +
+      "store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname" +
+      "\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007" +
+      "\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001" +
+      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263" +
+      "\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010pa" +
+      "ssword\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_override\030\004 \001(\005" +
+      "Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021" +
+      "\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 \001(" +
+      "\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004por" +
+      "t\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\006 \001(\010B_\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls" +
       "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\001\022\200\001\n\rport_override\030\004 \001(\005Bi\362\370\263\007\005\260\363\263" +
+      "\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tcassandr" +
+      "a\372\370\263\007\016\342\363\263\007\tcassandra\372\370\263\007\016\352\363\263\007\tcassandra\"" +
+      "\260\007\n\004DB2I\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
+      "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007heal" +
+      "thy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tag" +
+      "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secre" +
+      "t_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostna" +
+      "me\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370" +
+      "\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002" +
+      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202" +
+      "\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\t" +
+      "B`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010" +
+      "password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_override\030\004 \001" +
+      "(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263" +
+      "\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 " +
+      "\001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004p" +
+      "ort\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\007 \001(\010B_\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003t" +
+      "ls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\000:4\372\370\263\007\005\250\363\263\007\001\372\370\263\007\t\332\363\263\007\004db2i\372\370" +
+      "\263\007\t\342\363\263\007\004db2i\372\370\263\007\t\352\363\263\007\004db2i\"\265\007\n\006DB2LUW\022\030\n" +
+      "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030" +
+      "\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hos" +
+      "tname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usernam" +
+      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOver" +
+      "ride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000::" +
+      "\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006db2luw\372\370\263\007\013\342\363\263\007\006db2l" +
+      "uw\372\370\263\007\013\352\363\263\007\006db2luw\"\275\006\n\005Druid\022\030\n\002id\030\200\200\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022\200\001\n\rport_override\030\002 \001(\005Bi\362\370\263\007\005\260\363\263" +
       "\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portO" +
       "verride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022u\n\014tls_required\030\006 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021" +
-      "\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      ":C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tcassandra\372\370\263\007\016\342\363\263\007" +
-      "\tcassandra\372\370\263\007\016\352\363\263\007\tcassandra\"\260\007\n\004DB2I\022\030" +
-      "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\t" +
-      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(" +
-      "\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132" +
-      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id" +
-      "\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010ho" +
-      "stname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010userna" +
-      "me\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\001\022\200\001\n\rport_override\030\004 \001(\005Bi\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014por" +
-      "tOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 \001(\005BX\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022u\n\014tls_required\030\007 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000:4\372\370\263\007\005\250\363\263\007\001\372\370\263\007\t\332\363\263\007\004db2i\372\370\263\007\t\342\363\263\007\004db" +
-      "2i\372\370\263\007\t\352\363\263\007\004db2i\"\265\007\n\006DB2LUW\022\030\n\002id\030\200\200\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
-      "\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
-      "\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n" +
-      "\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010dat" +
-      "abase\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rpo" +
-      "rt_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rp" +
-      "ort-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240" +
-      "\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004" +
-      "port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263\007\001" +
-      "\372\370\263\007\013\332\363\263\007\006db2luw\372\370\263\007\013\342\363\263\007\006db2luw\372\370\263\007\013\352\363\263" +
-      "\007\006db2luw\"\275\006\n\005Druid\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n" +
-      "\rport_override\030\002 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
-      "\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263" +
-      "\007\005\240\364\263\007\000\022r\n\010username\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\001\022r\n\010password\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
-      "f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362" +
-      "\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n" +
-      "\332\363\263\007\005druid\372\370\263\007\n\342\363\263\007\005druid\372\370\263\007\n\352\363\263\007\005druid" +
-      "\"\355\006\n\010DynamoDB\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n" +
-      "\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$" +
-      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
-      "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022|\n\na" +
-      "ccess_key\030\001 \001(\tBh\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\racc" +
-      "ess-key-id\362\370\263\007\020\202\364\263\007\013accessKeyId\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\001\022\213\001\n\021secret_access_key\030\002 \001(\tBp\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\026\372\363\263\007\021secret-access-key\362\370\263\007\024\202\364\263\007\017se" +
-      "cretAccessKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022l\n\006region\030\003 \001(\tB" +
-      "\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006region\362\370\263\007\013\202\364\263\007\006reg" +
-      "ion\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010endpoint\030\004 \001(\tB`\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpoint\362" +
-      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014po" +
-      "rtOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263" +
-      "\007\006dynamo\372\370\263\007\013\342\363\263\007\006dynamo\372\370\263\007\013\352\363\263\007\006dynamo" +
-      "\"\363\006\n\010AmazonES\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n" +
-      "\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$" +
-      "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
-      "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022l\n\006r" +
-      "egion\030\001 \001(\tB\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006region\362" +
-      "\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\213\001\n\021secret_acc" +
-      "ess_key\030\002 \001(\tBp\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021secre" +
-      "t-access-key\362\370\263\007\024\202\364\263\007\017secretAccessKey\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\001\022r\n\010endpoint\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022|\n\naccess_key\030\004 \001(\tBh\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022" +
-      "\372\363\263\007\raccess-key-id\362\370\263\007\020\202\364\263\007\013accessKeyId\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014po" +
-      "rtOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263" +
-      "\007\010amazones\372\370\263\007\r\342\363\263\007\010amazones\372\370\263\007\r\352\363\263\007\010am" +
-      "azones\"\274\007\n\007Elastic\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
-      "\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010" +
-      "username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010user" +
-      "name\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010pass" +
-      "word\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password" +
-      "\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
-      "\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_ov" +
-      "erride\030\004 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-o" +
-      "verride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022" +
-      "f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362" +
-      "\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030" +
-      "\006 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362" +
-      "\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014\332" +
-      "\363\263\007\007elastic\372\370\263\007\014\342\363\263\007\007elastic\372\370\263\007\014\352\363\263\007\007el" +
-      "astic\"\335\010\n\rHTTPBasicAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
+      "\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\003 \001(\tB`\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usern" +
+      "ame\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\004 \001(\tB`\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\001\022f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t" +
+      "\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007\005" +
+      "\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005druid\372\370\263\007\n\342\363\263\007\005druid\372\370\263\007\n" +
+      "\352\363\263\007\005druid\"\355\006\n\010DynamoDB\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
       "\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
       "\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370" +
       "\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
       "\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022c\n\003url\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\010\372\363\263\007\003" +
-      "url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\177\n\020healthchec" +
-      "k_path\030\002 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013health" +
-      "-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010u" +
-      "sername\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010usern" +
-      "ame\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010passw" +
-      "ord\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362" +
-      "\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\214\001\n\021headers_" +
-      "blacklist\030\005 \001(\tBq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021hea" +
-      "ders-blacklist\362\370\263\007\025\202\364\263\007\020headersBlacklist" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022}\n\014default_path\030\006 \001(\tBg\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\021\372\363\263\007\014default-path\362\370\263\007\020\202\364\263\007\013defa" +
-      "ultPath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\tsubdomain\030\007 \001(\tBb\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdomain\362\370\263\007\016\202\364\263\007\tsub" +
-      "domain\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tht" +
-      "tpBasic\372\370\263\007\016\342\363\263\007\thttpBasic\372\370\263\007\016\352\363\263\007\thttp" +
-      "Basic\"\365\006\n\nHTTPNoAuth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
-      "\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022c\n\003url\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\010\372\363\263\007\003url" +
-      "\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\177\n\020healthcheck_p" +
-      "ath\030\002 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013health-pa" +
-      "th\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021hea" +
-      "ders_blacklist\030\003 \001(\tBq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263" +
-      "\007\021headers-blacklist\362\370\263\007\025\202\364\263\007\020headersBlac" +
-      "klist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022}\n\014default_path\030\004 \001(\tBg\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014default-path\362\370\263\007\020\202\364\263\007" +
-      "\013defaultPath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\tsubdomain\030\005 \001(" +
-      "\tBb\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdomain\362\370\263\007\016\202\364\263" +
-      "\007\tsubdomain\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:F\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\332\363" +
-      "\263\007\nhttpNoAuth\372\370\263\007\017\342\363\263\007\nhttpNoAuth\372\370\263\007\017\352\363" +
-      "\263\007\nhttpNoAuth\"\351\007\n\010HTTPAuth\022\030\n\002id\030\200\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022c\n\003url\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263\007\010\372\363" +
-      "\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\177\n\020healthc" +
-      "heck_path\030\002 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013hea" +
-      "lth-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022z" +
-      "\n\013auth_header\030\003 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007" +
-      "\013auth-header\362\370\263\007\017\202\364\263\007\nauthHeader\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\001\022\214\001\n\021headers_blacklist\030\004 \001(\tBq\362\370\263\007\005\260\363\263" +
+      "\260\363\263\007\001\022|\n\naccess_key\030\001 \001(\tBh\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\022\372\363\263\007\raccess-key-id\362\370\263\007\020\202\364\263\007\013accessKeyI" +
+      "d\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\001\022\213\001\n\021secret_access_key\030\002 \001(\tB" +
+      "p\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021secret-access-key\362\370" +
+      "\263\007\024\202\364\263\007\017secretAccessKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022l\n\006reg" +
+      "ion\030\003 \001(\tB\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006region\362\370\263" +
+      "\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010endpoint\030\004 \001(" +
+      "\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007" +
+      "\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 " +
+      "\001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370" +
+      "\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007\013\332\363\263\007\006dynamo\372\370\263\007\013\342\363\263\007\006dynamo\372\370\263\007\013\352" +
+      "\363\263\007\006dynamo\"\363\006\n\010AmazonES\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022l\n\006region\030\001 \001(\tB\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363" +
+      "\263\007\006region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\213\001\n\021" +
+      "secret_access_key\030\002 \001(\tBp\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026" +
+      "\372\363\263\007\021secret-access-key\362\370\263\007\024\202\364\263\007\017secretAc" +
+      "cessKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010endpoint\030\003 \001(\tB`\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpo" +
+      "int\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022|\n\naccess_key\030\004 \001(\tBh\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raccess-key-id\362\370\263\007\020\202\364\263\007\013ac" +
+      "cessKeyId\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_override\030\005 " +
+      "\001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370" +
+      "\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000:@\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007\r\332\363\263\007\010amazones\372\370\263\007\r\342\363\263\007\010amazones\372\370" +
+      "\263\007\r\352\363\263\007\010amazones\"\274\007\n\007Elastic\022\030\n\002id\030\200\200\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
+      "\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200" +
+      "\001\n\rport_override\030\004 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372" +
+      "\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362" +
+      "\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t" +
+      "\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls" +
+      "_required\030\006 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls" +
+      "-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:=\372\370\263\007\005\250" +
+      "\363\263\007\001\372\370\263\007\014\332\363\263\007\007elastic\372\370\263\007\014\342\363\263\007\007elastic\372\370" +
+      "\263\007\014\352\363\263\007\007elastic\"\335\010\n\rHTTPBasicAuth\022\030\n\002id\030" +
+      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022c\n\003url\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\177\n\020" +
+      "healthcheck_path\030\002 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372" +
+      "\363\263\007\013health-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005" +
+      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022r\n\010username\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
+      "\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\001\022r\n\010password\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\214\001" +
+      "\n\021headers_blacklist\030\005 \001(\tBq\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\026\372\363\263\007\021headers-blacklist\362\370\263\007\025\202\364\263\007\020header" +
+      "sBlacklist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022}\n\014default_path\030\006 \001" +
+      "(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014default-path\362\370\263\007" +
+      "\020\202\364\263\007\013defaultPath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\tsubdomain" +
+      "\030\007 \001(\tBb\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdomain\362\370\263" +
+      "\007\016\202\364\263\007\tsubdomain\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370" +
+      "\263\007\016\332\363\263\007\thttpBasic\372\370\263\007\016\342\363\263\007\thttpBasic\372\370\263\007" +
+      "\016\352\363\263\007\thttpBasic\"\365\006\n\nHTTPNoAuth\022\030\n\002id\030\200\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022c\n\003url\030\001 \001(\tBV\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\177\n\020hea" +
+      "lthcheck_path\030\002 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007" +
+      "\013health-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022\214\001\n\021headers_blacklist\030\003 \001(\tBq\362\370\263\007\005\260\363\263" +
       "\007\001\362\370\263\007\026\372\363\263\007\021headers-blacklist\362\370\263\007\025\202\364\263\007\020h" +
       "eadersBlacklist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
       "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022}\n\014default_pat" +
-      "h\030\005 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014default-pat" +
+      "h\030\004 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014default-pat" +
       "h\362\370\263\007\020\202\364\263\007\013defaultPath\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
       "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\tsubd" +
-      "omain\030\006 \001(\tBb\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdoma" +
+      "omain\030\005 \001(\tBb\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tsubdoma" +
       "in\362\370\263\007\016\202\364\263\007\tsubdomain\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:@\372\370\263\007\005\250\363" +
-      "\263\007\001\372\370\263\007\r\332\363\263\007\010httpAuth\372\370\263\007\r\342\363\263\007\010httpAuth\372" +
-      "\370\263\007\r\352\363\263\007\010httpAuth\"\247\010\n\nKubernetes\022\030\n\002id\030\200" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\230\001\n\025c" +
-      "ertificate_authority\030\003 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\032\372\363\263\007\025certificate-authority\362\370\263\007\031\202\364\263\007\024c" +
-      "ertificateAuthority\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\217\001\n\022client" +
-      "_certificate\030\005 \001(\tBs\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022" +
-      "client-certificate\362\370\263\007\026\202\364\263\007\021clientCertif" +
-      "icate\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022w\n\nclient_key\030\007 \001(\tBc\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\nclient-key\362\370\263\007\016\202\364\263\007\tcli" +
-      "entKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthcheck_namespa" +
-      "ce\030\t \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthchec" +
-      "k-namespace\362\370\263\007\031\202\364\263\007\024healthcheckNamespac" +
-      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\000:F\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\332\363\263\007\nkuberne" +
-      "tes\372\370\263\007\017\342\363\263\007\nkubernetes\372\370\263\007\017\352\363\263\007\nkuberne" +
-      "tes\"\237\007\n\023KubernetesBasicAuth\022\030\n\002id\030\200\200\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007" +
-      "\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022{\n\010usernam" +
-      "e\030\003 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp-userna" +
-      "me\362\370\263\007\021\202\364\263\007\014httpUsername\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022{\n\010pa" +
-      "ssword\030\004 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp-p" +
-      "assword\362\370\263\007\021\202\364\263\007\014httpPassword\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
-      "\230\001\n\025healthcheck_namespace\030\005 \001(\tBy\362\370\263\007\005\260\363",
-      "\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespace\362\370\263\007\031\202" +
-      "\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:a\372\370\263\007" +
-      "\005\250\363\263\007\001\372\370\263\007\030\332\363\263\007\023kuberneteshttpbasic\372\370\263\007\030" +
-      "\342\363\263\007\023kuberneteshttpbasic\372\370\263\007\030\352\363\263\007\023kubern" +
-      "eteshttpbasic\"\253\006\n\030KubernetesServiceAccou" +
-      "nt\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:F\372\370\263\007\005\250\363" +
+      "\263\007\001\372\370\263\007\017\332\363\263\007\nhttpNoAuth\372\370\263\007\017\342\363\263\007\nhttpNoA" +
+      "uth\372\370\263\007\017\352\363\263\007\nhttpNoAuth\"\351\007\n\010HTTPAuth\022\030\n\002" +
+      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
+      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
+      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022c\n\003url\030\001 \001(\tBV\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\010\372\363\263\007\003url\362\370\263\007\010\202\364\263\007\003url\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
+      "\177\n\020healthcheck_path\030\002 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\020\372\363\263\007\013health-path\362\370\263\007\017\202\364\263\007\nhealthPath\362\370" +
+      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022z\n\013auth_header\030\003 \001(\tBe\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\020\372\363\263\007\013auth-header\362\370\263\007\017\202\364\263\007\nauthHead" +
+      "er\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\001\022\214\001\n\021headers_blacklist\030\004 \001(\t" +
+      "Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021headers-blacklist\362" +
+      "\370\263\007\025\202\364\263\007\020headersBlacklist\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022}\n\014d" +
+      "efault_path\030\005 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014d" +
+      "efault-path\362\370\263\007\020\202\364\263\007\013defaultPath\362\370\263\007\005\300\363\263" +
+      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022u\n\tsubdomain\030\006 \001(\tBb\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363" +
+      "\263\007\tsubdomain\362\370\263\007\016\202\364\263\007\tsubdomain\362\370\263\007\005\300\363\263\007" +
+      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010httpAuth\372\370\263\007\r\342\363\263\007" +
+      "\010httpAuth\372\370\263\007\r\352\363\263\007\010httpAuth\"\247\010\n\nKubernet" +
+      "es\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
       " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
       "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
       "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
@@ -111120,219 +113254,204 @@ public final class DriversPlumbing {
       "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007" +
       "\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300" +
       "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022p\n\005token\030\003 \001(\tBa\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007" +
-      "\tapi-token\362\370\263\007\r\202\364\263\007\010apiToken\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230" +
-      "\001\n\025healthcheck_namespace\030\004 \001(\tBy\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespace\362\370\263\007\031\202\364" +
-      "\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:p\372\370\263\007\005" +
-      "\250\363\263\007\001\372\370\263\007\035\332\363\263\007\030kubernetesserviceaccount\372" +
-      "\370\263\007\035\342\363\263\007\030kubernetesserviceaccount\372\370\263\007\035\352\363" +
-      "\263\007\030kubernetesserviceaccount\"\234\n\n\tAmazonEK" +
-      "S\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 " +
-      "\001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002" +
-      " \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001" +
-      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store" +
-      "_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010endpoint\030\001 \001(" +
-      "\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007" +
-      "\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022|\n\naccess_key\030\002 \001(\tB" +
-      "h\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raccess-key-id\362\370\263\007\020\202" +
-      "\364\263\007\013accessKeyId\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\213\001\n\021secret_acc" +
-      "ess_key\030\003 \001(\tBp\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021secre" +
-      "t-access-key\362\370\263\007\024\202\364\263\007\017secretAccessKey\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\001\022\230\001\n\025certificate_authority\030\004 \001(\tB" +
-      "y\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-authori" +
-      "ty\362\370\263\007\031\202\364\263\007\024certificateAuthority\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\001\022l\n\006region\030\006 \001(\tB\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006" +
-      "region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022}\n\014clus" +
-      "ter_name\030\007 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014clus" +
-      "ter-name\362\370\263\007\020\202\364\263\007\013clusterName\362\370\263\007\005\300\363\263\007\001\362" +
+      "\364\263\007\000\022\230\001\n\025certificate_authority\030\003 \001(\tBy\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-authority\362" +
+      "\370\263\007\031\202\364\263\007\024certificateAuthority\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
+      "\217\001\n\022client_certificate\030\005 \001(\tBs\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\027\372\363\263\007\022client-certificate\362\370\263\007\026\202\364\263\007\021cl" +
+      "ientCertificate\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022w\n\nclient_key\030" +
+      "\007 \001(\tBc\362\370\263\007\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\nclient-key\362\370\263" +
+      "\007\016\202\364\263\007\tclientKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthche" +
+      "ck_namespace\030\t \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025" +
+      "healthcheck-namespace\362\370\263\007\031\202\364\263\007\024healthche" +
+      "ckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007",
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:F\372\370\263\007\005\250\363\263\007\001\372\370\263\007\017\332\363" +
+      "\263\007\nkubernetes\372\370\263\007\017\342\363\263\007\nkubernetes\372\370\263\007\017\352\363" +
+      "\263\007\nkubernetes\"\237\007\n\023KubernetesBasicAuth\022\030\n" +
+      "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030" +
+      "\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hos" +
+      "tname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362" +
       "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "q\n\010role_arn\030\010 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010r" +
-      "ole-arn\362\370\263\007\014\202\364\263\007\007roleArn\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025h" +
-      "ealthcheck_namespace\030\t \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\032\372\363\263\007\025healthcheck-namespace\362\370\263\007\031\202\364\263\007\024h" +
-      "ealthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007" +
-      "\001\372\370\263\007\016\332\363\263\007\tamazoneks\372\370\263\007\016\342\363\263\007\tamazoneks\372" +
-      "\370\263\007\016\352\363\263\007\tamazoneks\"\306\006\n\tGoogleGKE\022\030\n\002id\030\200" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010endpoint\030\001 \001(\tB`\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263\007\010endpoint" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022\230\001\n\025certificate_authority\030\002 \001" +
-      "(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-auth" +
-      "ority\362\370\263\007\031\202\364\263\007\024certificateAuthority\362\370\263\007\005" +
+      "{\n\010username\030\003 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rh" +
+      "ttp-username\362\370\263\007\021\202\364\263\007\014httpUsername\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\001\022{\n\010password\030\004 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372" +
+      "\363\263\007\rhttp-password\362\370\263\007\021\202\364\263\007\014httpPassword\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthcheck_namespace\030\005 \001(" +
+      "\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-names" +
+      "pace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007\030\332\363\263\007\023kuberneteshttp" +
+      "basic\372\370\263\007\030\342\363\263\007\023kuberneteshttpbasic\372\370\263\007\030\352" +
+      "\363\263\007\023kuberneteshttpbasic\"\253\006\n\030KubernetesSe" +
+      "rviceAccount\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
+      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
+      "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
+      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017s" +
+      "ecret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010ho" +
+      "stname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostna" +
+      "me\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002" +
+      " \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004" +
+      "port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022p\n\005token\030\003 \001(\tBa\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\016\372\363\263\007\tapi-token\362\370\263\007\r\202\364\263\007\010apiToken\362\370" +
+      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\001\022\230\001\n\025healthcheck_namespace\030\004 \001(\t" +
+      "By\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namesp" +
+      "ace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000:p\372\370\263\007\005\250\363\263\007\001\372\370\263\007\035\332\363\263\007\030kubernetesservi" +
+      "ceaccount\372\370\263\007\035\342\363\263\007\030kubernetesserviceacco" +
+      "unt\372\370\263\007\035\352\363\263\007\030kubernetesserviceaccount\"\234\n" +
+      "\n\tAmazonEKS\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n" +
+      "\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007h" +
+      "ealthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004" +
+      "tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017se" +
+      "cret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010end" +
+      "point\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoin" +
+      "t\362\370\263\007\r\202\364\263\007\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022|\n\naccess_" +
+      "key\030\002 \001(\tBh\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raccess-ke" +
+      "y-id\362\370\263\007\020\202\364\263\007\013accessKeyId\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\213\001\n\021" +
+      "secret_access_key\030\003 \001(\tBp\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026" +
+      "\372\363\263\007\021secret-access-key\362\370\263\007\024\202\364\263\007\017secretAc" +
+      "cessKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025certificate_author" +
+      "ity\030\004 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certifica" +
+      "te-authority\362\370\263\007\031\202\364\263\007\024certificateAuthori" +
+      "ty\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\001\022l\n\006region\030\006 \001(\tB\\\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\013\372\363\263\007\006region\362\370\263\007\013\202\364\263\007\006region\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022}\n\014cluster_name\030\007 \001(\tBg\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\021\372\363\263\007\014cluster-name\362\370\263\007\020\202\364\263\007\013clusterName\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022q\n\010role_arn\030\010 \001(\tB_\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\r\372\363\263\007\010role-arn\362\370\263\007\014\202\364\263\007\007roleArn\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\001\022\230\001\n\025healthcheck_namespace\030\t \001(\tBy\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespace\362" +
+      "\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:" +
+      "C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tamazoneks\372\370\263\007\016\342\363\263\007\t" +
+      "amazoneks\372\370\263\007\016\352\363\263\007\tamazoneks\"\306\006\n\tGoogleG" +
+      "KE\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
+      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
+      "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
+      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
+      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010endpoint\030\001 \001" +
+      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010endpoint\362\370\263\007\r\202\364\263" +
+      "\007\010endpoint\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\230\001\n\025certificate_aut" +
+      "hority\030\002 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025certif" +
+      "icate-authority\362\370\263\007\031\202\364\263\007\024certificateAuth" +
+      "ority\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\223\001\n\023service_account_key\030" +
+      "\004 \001(\tBv\362\370\263\007\005\260\363\263\007\001\362\370\263\007\030\372\363\263\007\023service-accou" +
+      "nt-key\362\370\263\007\030\202\364\263\007\023service-account-key\362\370\263\007\005" +
       "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\001\022\223\001\n\023service_account_key\030\004 \001(\tBv\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\030\372\363\263\007\023service-account-key\362\370\263\007" +
-      "\030\202\364\263\007\023service-account-key\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025" +
-      "healthcheck_namespace\030\006 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\032\372\363\263\007\025healthcheck-namespace\362\370\263\007\031\202\364\263\007\024" +
-      "healthcheckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263" +
-      "\007\001\372\370\263\007\016\332\363\263\007\tgooglegke\372\370\263\007\016\342\363\263\007\tgooglegke" +
-      "\372\370\263\007\016\352\363\263\007\tgooglegke\"\213\010\n\003AKS\022\030\n\002id\030\200\200\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007" +
-      "\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\230\001\n\025certif" +
-      "icate_authority\030\003 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363" +
-      "\263\007\025certificate-authority\362\370\263\007\031\202\364\263\007\024certif" +
-      "icateAuthority\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\217\001\n\022client_cert" +
-      "ificate\030\005 \001(\tBs\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022clien" +
-      "t-certificate\362\370\263\007\026\202\364\263\007\021clientCertificate" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\001\022w\n\nclient_key\030\007 \001(\tBc\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\017\372\363\263\007\nclient-key\362\370\263\007\016\202\364\263\007\tclientKe" +
-      "y\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthcheck_namespace\030\t " +
-      "\001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-nam" +
-      "espace\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003aks\372\370\263\007\010\342\363\263\007" +
-      "\003aks\372\370\263\007\010\352\363\263\007\003aks\"\203\007\n\014AKSBasicAuth\022\030\n\002id" +
-      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1" +
-      ".TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostna" +
-      "me\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022{\n\010" +
-      "username\030\003 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rhttp" +
-      "-username\362\370\263\007\021\202\364\263\007\014httpUsername\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\001\022{\n\010password\030\004 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007" +
-      "\rhttp-password\362\370\263\007\021\202\364\263\007\014httpPassword\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\001\022\230\001\n\025healthcheck_namespace\030\005 \001(\tBy" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespac" +
-      "e\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000:L\372\370\263\007\005\250\363\263\007\001\372\370\263\007\021\332\363\263\007\014akshttpbasic\372\370\263\007\021" +
-      "\342\363\263\007\014akshttpbasic\372\370\263\007\021\352\363\263\007\014akshttpbasic\"" +
-      "\217\006\n\021AKSServiceAccount\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362" +
-      "\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022p\n\005token\030\003 \001(\tBa" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tapi-token\362\370\263\007\r\202\364\263\007\010a" +
-      "piToken\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthcheck_namesp" +
-      "ace\030\004 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthche" +
-      "ck-namespace\362\370\263\007\031\202\364\263\007\024healthcheckNamespa" +
-      "ce\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000:[\372\370\263\007\005\250\363\263\007\001\372\370\263\007\026\332\363\263\007\021aksser" +
-      "viceaccount\372\370\263\007\026\342\363\263\007\021aksserviceaccount\372\370" +
-      "\263\007\026\352\363\263\007\021aksserviceaccount\"\345\004\n\tMemcached\022" +
-      "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(" +
-      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001" +
-      "(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\013" +
-      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_i" +
-      "d\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB" +
-      "`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010h" +
-      "ostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\002 \001(" +
-      "\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007" +
-      "\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370" +
-      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001" +
-      "(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004po" +
-      "rt\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tmemcac" +
-      "hed\372\370\263\007\016\342\363\263\007\tmemcached\372\370\263\007\016\352\363\263\007\tmemcache" +
-      "d\"\275\t\n\017MongoLegacyHost\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "\200\001\n\rauth_database\030\002 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022" +
-      "\372\363\263\007\rauth-database\362\370\263\007\021\202\364\263\007\014authDatabase" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\003 \001(\005Bi\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014p" +
-      "ortOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\004 \001(\tB" +
-      "`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010u" +
-      "sername\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\005 \001(\tB`\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passw" +
-      "ord\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022z\n" +
-      "\013replica_set\030\007 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013" +
-      "replica-set\362\370\263\007\017\202\364\263\007\nreplicaSet\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022u\n\014tls_required\030\010 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021" +
-      "\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000" +
+      "\240\364\263\007\001\022\230\001\n\025healthcheck_namespace\030\006 \001(\tBy\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthcheck-namespace" +
+      "\362\370\263\007\031\202\364\263\007\024healthcheckNamespace\362\370\263\007\005\300\363\263\007\000" +
       "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      ":7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005mongo\372\370\263\007\n\342\363\263\007\005mon" +
-      "go\372\370\263\007\n\352\363\263\007\005mongo\"\365\n\n\025MongoLegacyReplica" +
-      "set\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200" +
-      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202" +
-      "\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002" +
-      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_sto" +
-      "re_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 " +
-      "\001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364" +
-      "\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rauth_database\030" +
-      "\002 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rauth-database" +
-      "\362\370\263\007\021\202\364\263\007\014authDatabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
-      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rpor" +
-      "t_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rpo" +
-      "rt-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364" +
-      "\263\007\000\022r\n\010username\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
-      "\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
-      "r\n\010password\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010p" +
-      "assword\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004p" +
-      "ort\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t" +
-      "\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022z\n\013replica_set\030\007 \001(\t" +
-      "Be\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013replica-set\362\370\263\007\017\202\364" +
-      "\263\007\nreplicaSet\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\216\001\n\022connect_to_r" +
-      "eplica\030\010 \001(\010Br\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022connec" +
-      "t-to-replica\362\370\263\007\025\202\364\263\007\020connectToReplica\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\t \001(\010B_\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000:X\372\370\263\007\005\250\363\263\007\001\372\370\263\007\025\332\363\263\007\020mongo-repli" +
-      "caset\372\370\263\007\025\342\363\263\007\020mongo-replicaset\372\370\263\007\025\352\363\263\007" +
-      "\020mongo-replicaset\"\307\010\n\tMongoHost\022\030\n\002id\030\200\200" +
+      ":C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tgooglegke\372\370\263\007\016\342\363\263\007" +
+      "\tgooglegke\372\370\263\007\016\352\363\263\007\tgooglegke\"\213\010\n\003AKS\022\030\n" +
+      "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030" +
+      "\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hos" +
+      "tname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
+      "\230\001\n\025certificate_authority\030\003 \001(\tBy\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\032\372\363\263\007\025certificate-authority\362\370\263\007\031\202" +
+      "\364\263\007\024certificateAuthority\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\217\001\n\022c" +
+      "lient_certificate\030\005 \001(\tBs\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027" +
+      "\372\363\263\007\022client-certificate\362\370\263\007\026\202\364\263\007\021clientC" +
+      "ertificate\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022w\n\nclient_key\030\007 \001(\t" +
+      "Bc\362\370\263\007\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\nclient-key\362\370\263\007\016\202\364\263" +
+      "\007\tclientKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthcheck_na" +
+      "mespace\030\t \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healt" +
+      "hcheck-namespace\362\370\263\007\031\202\364\263\007\024healthcheckNam" +
+      "espace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003ak" +
+      "s\372\370\263\007\010\342\363\263\007\003aks\372\370\263\007\010\352\363\263\007\003aks\"\203\007\n\014AKSBasic" +
+      "Auth\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201" +
+      "\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030" +
+      "\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200" +
+      "\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_st" +
+      "ore_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001" +
+      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202" +
+      "\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007" +
+      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
+      "\005\240\364\263\007\000\022{\n\010username\030\003 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\022\372\363\263\007\rhttp-username\362\370\263\007\021\202\364\263\007\014httpUsernam" +
+      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\001\022{\n\010password\030\004 \001(\tBi\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\022\372\363\263\007\rhttp-password\362\370\263\007\021\202\364\263\007\014httpPa" +
+      "ssword\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthcheck_namespa" +
+      "ce\030\005 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007\025healthchec" +
+      "k-namespace\362\370\263\007\031\202\364\263\007\024healthcheckNamespac" +
+      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000:L\372\370\263\007\005\250\363\263\007\001\372\370\263\007\021\332\363\263\007\014akshttp" +
+      "basic\372\370\263\007\021\342\363\263\007\014akshttpbasic\372\370\263\007\021\352\363\263\007\014aks" +
+      "httpbasic\"\217\006\n\021AKSServiceAccount\022\030\n\002id\030\200\200" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362" +
+      "\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022f\n\004port\030\002 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t" +
+      "\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022p\n\005tok" +
+      "en\030\003 \001(\tBa\362\370\263\007\005\260\363\263\007\001\362\370\263\007\016\372\363\263\007\tapi-token\362" +
+      "\370\263\007\r\202\364\263\007\010apiToken\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\230\001\n\025healthch" +
+      "eck_namespace\030\004 \001(\tBy\362\370\263\007\005\260\363\263\007\001\362\370\263\007\032\372\363\263\007" +
+      "\025healthcheck-namespace\362\370\263\007\031\202\364\263\007\024healthch" +
+      "eckNamespace\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:[\372\370\263\007\005\250\363\263\007\001\372\370\263\007\026\332" +
+      "\363\263\007\021aksserviceaccount\372\370\263\007\026\342\363\263\007\021aksservic" +
+      "eaccount\372\370\263\007\026\352\363\263\007\021aksserviceaccount\"\345\004\n\t" +
+      "Memcached\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
+      "ame\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007hea" +
+      "lthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004ta" +
+      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secr" +
+      "et_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostn" +
+      "ame\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362" +
+      "\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_ove" +
+      "rride\030\002 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-ov" +
+      "erride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370" +
+      "\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f" +
+      "\n\004port\030\003 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370" +
+      "\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332" +
+      "\363\263\007\tmemcached\372\370\263\007\016\342\363\263\007\tmemcached\372\370\263\007\016\352\363\263" +
+      "\007\tmemcached\"\275\t\n\017MongoLegacyHost\022\030\n\002id\030\200\200" +
       "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005" +
       "\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007" +
       "\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
@@ -111355,331 +113474,135 @@ public final class DriversPlumbing {
       "\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\362" +
       "\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263" +
       "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\000\022u\n\014tls_required\030\010 \001(\010B_\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tmongoHost\372\370\263" +
-      "\007\016\342\363\263\007\tmongoHost\372\370\263\007\016\352\363\263\007\tmongoHost\"\354\n\n\017" +
-      "MongoReplicaSet\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022" +
-      "\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001" +
-      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%" +
-      "\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n" +
-      "\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hos" +
-      "tname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rau" +
-      "th_database\030\002 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\ra" +
-      "uth-database\362\370\263\007\021\202\364\263\007\014authDatabase\362\370\263\007\005\300" +
-      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022\200\001\n\rport_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOve" +
-      "rride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\004 \001(\tB`\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usernam" +
-      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263" +
-      "\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363" +
-      "\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022z\n\013repli" +
-      "ca_set\030\007 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013replic" +
-      "a-set\362\370\263\007\017\202\364\263\007\nreplicaSet\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\216\001\n\022" +
-      "connect_to_replica\030\010 \001(\010Br\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\027\372\363\263\007\022connect-to-replica\362\370\263\007\025\202\364\263\007\020connec" +
-      "tToReplica\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\t \001" +
-      "(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007" +
-      "\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:U\372\370\263\007\005\250\363\263\007\001\372\370\263\007\024\332\363\263\007" +
-      "\017mongoReplicaSet\372\370\263\007\024\342\363\263\007\017mongoReplicaSe" +
-      "t\372\370\263\007\024\352\363\263\007\017mongoReplicaSet\"\261\007\n\005Mysql\022\030\n\002" +
-      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
-      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
-      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
-      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010host" +
-      "name\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username" +
+      "\007\005\240\364\263\007\000\022z\n\013replica_set\030\007 \001(\tBe\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\020\372\363\263\007\013replica-set\362\370\263\007\017\202\364\263\007\nreplicaSe" +
+      "t\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\010 \001(\010B_\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls" +
       "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263" +
-      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverr" +
-      "ide\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372" +
-      "\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005mysql\372\370\263\007\n\342\363\263\007\005mysql\372" +
-      "\370\263\007\n\352\363\263\007\005mysql\"\314\007\n\013AuroraMysql\022\030\n\002id\030\200\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
-      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
-      "\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001" +
-      "\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
-      "database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
-      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n" +
-      "\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
-      "\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263" +
-      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263" +
-      "\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363" +
-      "\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:L\372\370\263\007\005\250\363" +
-      "\263\007\001\372\370\263\007\021\332\363\263\007\014aurora-mysql\372\370\263\007\021\342\363\263\007\014auror" +
-      "a-mysql\372\370\263\007\021\352\363\263\007\014aurora-mysql\"\275\007\n\010Clustr" +
-      "ix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
-      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
-      "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
-      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001" +
-      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263" +
-      "\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010us" +
-      "ername\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passwo" +
-      "rd\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014por" +
-      "tOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010clustrix\372\370\263\007\r\342\363" +
-      "\263\007\010clustrix\372\370\263\007\r\352\363\263\007\010clustrix\"\261\007\n\005Maria\022" +
-      "\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(" +
-      "\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001" +
-      "(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\013" +
-      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_i" +
-      "d\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB" +
-      "`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010h" +
-      "ostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usern" +
-      "ame\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362" +
-      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362" +
-      "\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOv" +
-      "erride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      ":7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005maria\372\370\263\007\n\342\363\263\007\005mar" +
-      "ia\372\370\263\007\n\352\363\263\007\005maria\"\265\007\n\006Memsql\022\030\n\002id\030\200\200\002 \001" +
-      "(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007" +
-      "\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007" +
-      "\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
-      "\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r",
-      "\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010da" +
-      "tabase\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rp" +
-      "ort_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\r" +
-      "port-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005" +
-      "\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007" +
-      "\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263\007" +
-      "\001\372\370\263\007\013\332\363\263\007\006memsql\372\370\263\007\013\342\363\263\007\006memsql\372\370\263\007\013\352\363" +
-      "\263\007\006memsql\"\254\010\n\006Oracle\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
-      "\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
-      "\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r" +
-      "\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010us" +
-      "ername\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010pa" +
-      "ssword\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010passwo" +
-      "rd\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010databa" +
-      "se\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370" +
-      "\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 \001(\005" +
-      "BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port" +
-      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\006 \001(\005Bi\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014p" +
-      "ortOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\007 " +
-      "\001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263" +
-      "\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263" +
-      "\007\006oracle\372\370\263\007\013\342\363\263\007\006oracle\372\370\263\007\013\352\363\263\007\006oracle" +
-      "\"\314\010\n\010Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005mongo\372\370\263" +
+      "\007\n\342\363\263\007\005mongo\372\370\263\007\n\352\363\263\007\005mongo\"\365\n\n\025MongoLeg" +
+      "acyReplicaset\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n" +
       "\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$" +
       "\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017" +
       "secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010h" +
       "ostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostn" +
       "ame\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010usern" +
-      "ame\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362" +
-      "\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263" +
-      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030" +
-      "\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r" +
-      "\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(" +
-      "\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007" +
-      "\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 " +
-      "\001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370" +
-      "\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006" +
-      " \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004" +
-      "port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021override_database\030\007 \001" +
-      "(\010Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-databas" +
-      "e\362\370\263\007\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:@\372" +
-      "\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010postgres\372\370\263\007\r\342\363\263\007\010pos" +
-      "tgres\372\370\263\007\r\352\363\263\007\010postgres\"\347\010\n\016AuroraPostgr" +
-      "es\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002" +
-      " \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200" +
-      "\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 " +
-      "\001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_stor" +
-      "e_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001" +
-      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263" +
-      "\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010us" +
-      "ername\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
-      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passwo" +
-      "rd\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370" +
-      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014por" +
-      "tOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362" +
-      "\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363" +
-      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
-      "\263\007\000\022\214\001\n\021override_database\030\007 \001(\010Bq\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020" +
-      "overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:U\372\370\263\007\005\250\363\263\007\001\372\370" +
-      "\263\007\024\332\363\263\007\017aurora-postgres\372\370\263\007\024\342\363\263\007\017aurora-" +
-      "postgres\372\370\263\007\024\352\363\263\007\017aurora-postgres\"\320\010\n\tGr" +
-      "eenplum\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
-      "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healt" +
-      "hy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags" +
-      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret" +
-      "_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostnam" +
-      "e\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263" +
-      "\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 " +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rauth" +
+      "_database\030\002 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\raut" +
+      "h-database\362\370\263\007\021\202\364\263\007\014authDatabase\362\370\263\007\005\300\363\263" +
+      "\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
+      "\007\000\022\200\001\n\rport_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverr" +
+      "ide\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\004 \001(\tB`\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\001\022r\n\010password\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007" +
+      "\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022z\n\013replica" +
+      "_set\030\007 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372\363\263\007\013replica-" +
+      "set\362\370\263\007\017\202\364\263\007\nreplicaSet\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\216\001\n\022co" +
+      "nnect_to_replica\030\010 \001(\010Br\362\370\263\007\005\260\363\263\007\001\362\370\263\007\027\372" +
+      "\363\263\007\022connect-to-replica\362\370\263\007\025\202\364\263\007\020connectT" +
+      "oReplica\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\t \001(\010" +
+      "B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202" +
+      "\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:X\372\370\263\007\005\250\363\263\007\001\372\370\263\007\025\332\363\263\007\020m" +
+      "ongo-replicaset\372\370\263\007\025\342\363\263\007\020mongo-replicase" +
+      "t\372\370\263\007\025\352\363\263\007\020mongo-replicaset\"\307\010\n\tMongoHos" +
+      "t\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 " +
+      "\001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002" +
+      " \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001" +
+      "(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store" +
+      "_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(" +
+      "\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007" +
+      "\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rauth_database\030\002 " +
+      "\001(\tBi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rauth-database\362\370" +
+      "\263\007\021\202\364\263\007\014authDatabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_" +
+      "override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport" +
+      "-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007" +
+      "\000\022r\n\010username\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n" +
+      "\010password\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010pas" +
+      "sword\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004por" +
+      "t\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364" +
+      "\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\010 \001(\010B" +
+      "_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364" +
+      "\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tmo" +
+      "ngoHost\372\370\263\007\016\342\363\263\007\tmongoHost\372\370\263\007\016\352\363\263\007\tmong" +
+      "oHost\"\354\n\n\017MongoReplicaSet\022\030\n\002id\030\200\200\002 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022\200\001\n\rauth_database\030\002 \001(\tBi\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\022\372\363\263\007\rauth-database\362\370\263\007\021\202\364\263\007\014authData" +
+      "base\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\003 \001(\005Bi" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364" +
+      "\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\004 " +
       "\001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364" +
       "\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB" +
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\005 \001(\tB" +
       "`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010p" +
       "assword\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010datab" +
-      "ase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263" +
-      "\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\000\022\214\001\n\021override_database\030\007 \001(\010Bq\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025" +
-      "\202\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363" +
-      "\263\007\001\372\370\263\007\016\332\363\263\007\tgreenplum\372\370\263\007\016\342\363\263\007\tgreenplu" +
-      "m\372\370\263\007\016\352\363\263\007\tgreenplum\"\320\010\n\tCockroach\022\030\n\002id" +
-      "\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1" +
-      ".TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002" +
-      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostna" +
-      "me\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370" +
-      "\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
-      "\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
-      "\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001" +
-      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
-      "\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverrid" +
-      "e\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021" +
-      "override_database\030\007 \001(\010Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026" +
-      "\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020override" +
-      "Database\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\t" +
-      "cockroach\372\370\263\007\016\342\363\263\007\tcockroach\372\370\263\007\016\352\363\263\007\tco" +
-      "ckroach\"\314\010\n\010Redshift\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300" +
-      "\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005" +
-      "\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263" +
-      "\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370" +
-      "\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r" +
-      "\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010us" +
-      "ername\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010pa" +
-      "ssword\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010passwo" +
-      "rd\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010databa" +
-      "se\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370" +
-      "\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_over" +
-      "ride\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-ove" +
-      "rride\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263" +
-      "\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n" +
-      "\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263" +
-      "\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021override_datab" +
-      "ase\030\007 \001(\010Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-" +
-      "database\362\370\263\007\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010redshift\372\370\263\007\r\342" +
-      "\363\263\007\010redshift\372\370\263\007\r\352\363\263\007\010redshift\"\300\010\n\005Citus" +
+      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000\022z\n\013replica_set\030\007 \001(\tBe\362\370\263\007\005\260\363\263\007\001\362\370\263\007\020\372" +
+      "\363\263\007\013replica-set\362\370\263\007\017\202\364\263\007\nreplicaSet\362\370\263\007\005" +
+      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022\216\001\n\022connect_to_replica\030\010 \001(\010Br\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\027\372\363\263\007\022connect-to-replica\362\370\263\007\025\202" +
+      "\364\263\007\020connectToReplica\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_re" +
+      "quired\030\t \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-re" +
+      "quired\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:U\372\370\263\007\005\250\363\263\007" +
+      "\001\372\370\263\007\024\332\363\263\007\017mongoReplicaSet\372\370\263\007\024\342\363\263\007\017mong" +
+      "oReplicaSet\372\370\263\007\024\352\363\263\007\017mongoReplicaSet\"\261\007\n" +
+      "\005Mysql\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name" +
+      "\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007health" +
+      "y\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030" +
+      "\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_" +
+      "store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname" +
+      "\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007" +
+      "\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001" +
+      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263" +
+      "\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010pa" +
+      "ssword\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010databa" +
+      "se\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007" +
+      "\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005mysql\372\370\263\007\n\342" +
+      "\363\263\007\005mysql\372\370\263\007\n\352\363\263\007\005mysql\"\314\007\n\013AuroraMysql" +
       "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
       "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 " +
       "\001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(" +
@@ -111702,98 +113625,56 @@ public final class DriversPlumbing {
       "\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363" +
       "\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007" +
       "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022\214\001\n\021override_database\030\007 \001(\010Bq\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020ov" +
-      "errideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
-      "\n\332\363\263\007\005citus\372\370\263\007\n\342\363\263\007\005citus\372\370\263\007\n\352\363\263\007\005citu" +
-      "s\"\254\010\n\006Presto\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
+      "\000:L\372\370\263\007\005\250\363\263\007\001\372\370\263\007\021\332\363\263\007\014aurora-mysql\372\370\263\007\021" +
+      "\342\363\263\007\014aurora-mysql\372\370\263\007\021\352\363\263\007\014aurora-mysql\"" +
+      "\275\007\n\010Clustrix\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
       "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
       "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
       "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017s" +
       "ecret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010ho" +
       "stname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostna" +
       "me\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
-      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010passwo" +
-      "rd\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370" +
-      "\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\003" +
-      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202" +
-      "\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override" +
-      "\030\004 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-overrid" +
-      "e\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004por" +
-      "t\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364" +
-      "\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263" +
-      "\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\006 \001(\tB`\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usern" +
-      "ame\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
-      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\007 \001(\010B_\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003t" +
-      "ls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
-      "\007\000\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006presto" +
-      "\372\370\263\007\013\342\363\263\007\006presto\372\370\263\007\013\352\363\263\007\006presto\"\265\006\n\003RDP" +
-      "\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001" +
-      "(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 " +
-      "\001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(" +
-      "\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_" +
-      "id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\t" +
-      "B`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010" +
-      "hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010user" +
-      "name\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password" +
-      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000" +
-      "\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_override\030\004 \001(\005Bi\362\370\263\007" +
-      "\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014p" +
-      "ortOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 \001(\005BX\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003rdp\372\370\263\007\010\342\363\263\007\003" +
-      "rdp\372\370\263\007\010\352\363\263\007\003rdp\"\311\005\n\005Redis\022\030\n\002id\030\200\200\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300" +
-      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022\200\001\n\rport_override\030\002 \001(\005Bi\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOve" +
-      "rride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010passwor" +
-      "d\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\004 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372\370\263" +
-      "\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005redis\372\370\263\007\n\342\363\263\007\005redis\372\370\263" +
-      "\007\n\352\363\263\007\005redis\"\321\006\n\020ElasticacheRedis\022\030\n\002id\030" +
-      "\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
-      "TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostnam" +
-      "e\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
-      "\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\002 \001(\005Bi\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014" +
-      "portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010password\030\003 \001(\t" +
-      "B`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010" +
-      "password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370" +
-      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\004 \001(\005BX\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022u\n\014tls_required\030\005 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007" +
-      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014\332\363\263\007\007ecredis\372\370\263\007\014\342\363\263\007\007" +
-      "ecredis\372\370\263\007\014\352\363\263\007\007ecredis\"\307\007\n\tSnowflake\022\030" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010userna" +
+      "me\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370" +
+      "\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003" +
+      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202" +
+      "\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\t" +
+      "B`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010" +
+      "database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001" +
+      "(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263" +
+      "\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 " +
+      "\001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004p" +
+      "ort\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010clust" +
+      "rix\372\370\263\007\r\342\363\263\007\010clustrix\372\370\263\007\r\352\363\263\007\010clustrix\"" +
+      "\261\007\n\005Maria\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004n" +
+      "ame\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007hea" +
+      "lthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004ta" +
+      "gs\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secr" +
+      "et_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostn" +
+      "ame\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362" +
+      "\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030" +
+      "\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r" +
+      "\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(" +
+      "\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007" +
+      "\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362" +
+      "\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010dat" +
+      "abase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005B",
+      "i\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202" +
+      "\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005" +
+      "BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005maria\372\370\263" +
+      "\007\n\342\363\263\007\005maria\372\370\263\007\n\352\363\263\007\005maria\"\265\007\n\006Memsql\022\030" +
       "\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\t" +
       "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(" +
       "\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132" +
@@ -111810,15 +113691,294 @@ public final class DriversPlumbing {
       "\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370" +
       "\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300" +
       "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000\022l\n\006schema\030\005 \001(\tB\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263" +
-      "\007\006schema\362\370\263\007\013\202\364\263\007\006schema\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330" +
-      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rp" +
-      "ort_override\030\006 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\r" +
-      "port-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005" +
-      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005" +
-      "\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tsnowflake\372\370\263\007" +
-      "\016\342\363\263\007\tsnowflake\372\370\263\007\016\352\363\263\007\tsnowflake\"\262\t\n\tS" +
-      "QLServer\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
+      "\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOve" +
+      "rride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:" +
+      ":\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332\363\263\007\006memsql\372\370\263\007\013\342\363\263\007\006mem" +
+      "sql\372\370\263\007\013\352\363\263\007\006memsql\"\254\010\n\006Oracle\022\030\n\002id\030\200\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370" +
+      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
+      "\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001" +
+      "\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
+      "database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004" +
+      "port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007" +
+      "\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\006" +
+      " \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362" +
+      "\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_r" +
+      "equired\030\007 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-r" +
+      "equired\362\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007\013\332\363\263\007\006oracle\372\370\263\007\013\342\363\263\007\006oracle\372\370\263\007\013\352" +
+      "\363\263\007\006oracle\"\314\010\n\010Postgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
+      "\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007" +
+      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
+      "\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263" +
+      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n" +
+      "\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010pas" +
+      "sword\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010dat" +
+      "abase\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010databas" +
+      "e\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_o" +
+      "verride\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-" +
+      "override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000" +
+      "\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port" +
+      "\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021override_da" +
+      "tabase\030\007 \001(\010Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021overri" +
+      "de-database\362\370\263\007\025\202\364\263\007\020overrideDatabase\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010postgres\372\370\263" +
+      "\007\r\342\363\263\007\010postgres\372\370\263\007\r\352\363\263\007\010postgres\"\347\010\n\016Au" +
+      "roraPostgres\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$" +
+      "\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007" +
+      "healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n" +
+      "\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017s" +
+      "ecret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010ho" +
+      "stname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostna" +
+      "me\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010userna" +
+      "me\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370" +
+      "\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
+      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003" +
+      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202" +
+      "\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\t" +
+      "B`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010" +
+      "database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001" +
+      "(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263" +
+      "\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362" +
+      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 " +
+      "\001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004p" +
+      "ort\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364" +
+      "\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021override_database\030\007 \001(" +
+      "\010Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-database" +
+      "\362\370\263\007\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:U\372\370" +
+      "\263\007\005\250\363\263\007\001\372\370\263\007\024\332\363\263\007\017aurora-postgres\372\370\263\007\024\342\363" +
+      "\263\007\017aurora-postgres\372\370\263\007\024\352\363\263\007\017aurora-postg" +
+      "res\"\320\010\n\tGreenplum\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010h" +
+      "ostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010u" +
+      "sername\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010usern" +
+      "ame\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010passw" +
+      "ord\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362" +
+      "\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030" +
+      "\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r" +
+      "\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_overrid" +
+      "e\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-overri" +
+      "de\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
+      "\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004po" +
+      "rt\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202" +
+      "\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021override_database" +
+      "\030\007 \001(\010Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-dat" +
+      "abase\362\370\263\007\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007" +
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tgreenplum\372\370\263\007\016\342\363\263" +
+      "\007\tgreenplum\372\370\263\007\016\352\363\263\007\tgreenplum\"\320\010\n\tCockr" +
+      "oach\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201" +
+      "\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030" +
+      "\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200" +
+      "\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_st" +
+      "ore_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001" +
+      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202" +
+      "\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\t" +
+      "B`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010" +
+      "username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370" +
+      "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263\007\010pass" +
+      "word\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010database" +
+      "\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000" +
+      "\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014p" +
+      "ortOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000\022\214\001\n\021override_database\030\007 \001(\010Bq\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263" +
+      "\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007\016\332\363\263\007\tcockroach\372\370\263\007\016\342\363\263\007\tcockroach\372\370" +
+      "\263\007\016\352\363\263\007\tcockroach\"\314\010\n\010Redshift\022\030\n\002id\030\200\200\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tag" +
+      "sB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\t" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370" +
+      "\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370" +
+      "\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300" +
+      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
+      "\363\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001" +
+      "\022r\n\010database\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
+      "database\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n" +
+      "\rport_override\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263" +
+      "\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263" +
+      "\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263" +
+      "\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363" +
+      "\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021over" +
+      "ride_database\030\007 \001(\010Bq\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007" +
+      "\021override-database\362\370\263\007\025\202\364\263\007\020overrideData" +
+      "base\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010reds" +
+      "hift\372\370\263\007\r\342\363\263\007\010redshift\372\370\263\007\r\352\363\263\007\010redshift" +
+      "\"\300\010\n\005Citus\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004" +
+      "name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007he" +
+      "althy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004t" +
+      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017sec" +
+      "ret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010host" +
+      "name\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname" +
+      "\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username" +
+      "\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007" +
+      "\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001" +
+      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263" +
+      "\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010da" +
+      "tabase\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005" +
+      "Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021" +
+      "\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\006 \001(" +
+      "\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004por" +
+      "t\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000\022\214\001\n\021override_database\030\007 \001(\010B" +
+      "q\362\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370" +
+      "\263\007\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007" +
+      "\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005citus\372\370\263\007\n\342\363\263\007\005citus\372\370\263\007" +
+      "\n\352\363\263\007\005citus\"\254\010\n\006Presto\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372" +
+      "\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001" +
+      "\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000" +
+      "\022r\n\010password\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
+      "password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010" +
+      "database\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010data" +
+      "base\362\370\263\007\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rpor" +
+      "t_override\030\004 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rpo" +
+      "rt-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364" +
+      "\263\007\000\022f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004p" +
+      "ort\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263" +
+      "\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030" +
+      "\006 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r" +
+      "\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
+      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030" +
+      "\007 \001(\010B_\362\370\263\007\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362" +
+      "\370\263\007\010\202\364\263\007\003tls\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
+      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332" +
+      "\363\263\007\006presto\372\370\263\007\013\342\363\263\007\006presto\372\370\263\007\013\352\363\263\007\006pres" +
+      "to\"\265\006\n\003RDP\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004" +
+      "name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007he" +
+      "althy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004t" +
+      "ags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017sec" +
+      "ret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010host" +
+      "name\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname" +
+      "\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username" +
+      "\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007" +
+      "\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010password\030\003 \001" +
+      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263" +
+      "\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001" +
+      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_override\030\004" +
+      " \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362" +
+      "\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
+      "\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030" +
+      "\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007" +
+      "\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003rdp" +
+      "\372\370\263\007\010\342\363\263\007\003rdp\372\370\263\007\010\352\363\263\007\003rdp\"\311\005\n\005Redis\022\030\n\002" +
+      "id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010." +
+      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204" +
+      "\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370" +
+      "\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010host" +
+      "name\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\002 \001(\005Bi" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364" +
+      "\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010password\030\003 " +
+      "\001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364" +
+      "\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\004 \001(\005BX\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005" +
+      "\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
+      "\240\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332\363\263\007\005redis\372\370\263\007\n\342\363\263" +
+      "\007\005redis\372\370\263\007\n\352\363\263\007\005redis\"\321\006\n\020ElasticacheRe" +
+      "dis\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200" +
+      "\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202" +
+      "\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002" +
+      " \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_sto" +
+      "re_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 " +
+      "\001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364" +
+      "\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
+      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030" +
+      "\002 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override" +
+      "\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022r\n\010pass" +
+      "word\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password" +
+      "\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022f\n\004port\030\004 \001" +
+      "(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004po" +
+      "rt\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\000\022u\n\014tls_required\030\005 \001(\010B_\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\021\372\363\263\007\014tls-required\362\370\263\007\010\202\364\263\007\003tl" +
+      "s\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007" +
+      "\000\362\370\263\007\005\240\364\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014\332\363\263\007\007ecredis" +
+      "\372\370\263\007\014\342\363\263\007\007ecredis\372\370\263\007\014\352\363\263\007\007ecredis\"\307\007\n\tS" +
+      "nowflake\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004na" +
       "me\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007heal" +
       "thy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tag" +
       "s\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secre" +
@@ -111834,46 +113994,93 @@ public final class DriversPlumbing {
       "\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database\030\004 \001(\tB`\362\370" +
       "\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007\r\202\364\263\007\010data" +
       "base\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
-      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_override\030\005 \001(\005Bi" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364" +
-      "\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022l\n\006schema\030\006 \001(" +
-      "\tB\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006schema\362\370\263\007\013\202\364\263\007\006s" +
-      "chema\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
-      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\007 \001(\005BX\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362" +
-      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022" +
-      "\214\001\n\021override_database\030\010 \001(\010Bq\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\026\372\363\263\007\021override-database\362\370\263\007\025\202\364\263\007\020over" +
-      "rideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007\005\250\363\263\007\001\372\370\263\007\n\332" +
-      "\363\263\007\005mssql\372\370\263\007\n\342\363\263\007\005mssql\372\370\263\007\n\352\363\263\007\005mssql\"" +
-      "\365\007\n\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004nam" +
-      "e\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healt" +
-      "hy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags" +
-      "\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret" +
-      "_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostnam" +
-      "e\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263" +
-      "\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 " +
-      "\001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364" +
-      "\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007" +
-      "\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005" +
-      "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
-      "\240\364\263\007\000\022w\n\npublic_key\030\004 \001(\tBc\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\017\372\363\263\007\npublic-key\362\370\263\007\016\202\364\263\007\tpublicKey\362\370\263\007" +
-      "\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007" +
-      "\005\240\364\263\007\000\022\206\001\n\017port_forwarding\030\005 \001(\010Bm\362\370\263\007\005\260" +
-      "\363\263\007\001\362\370\263\007\024\372\363\263\007\017port-forwarding\362\370\263\007\023\202\364\263\007\016p" +
-      "ortForwarding\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\262\001\n\036allow_deprec" +
-      "ated_key_exchanges\030\006 \001(\010B\211\001\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007#\372\363\263\007\036allow-deprecated-key-exchanges\362\370\263" +
-      "\007 \202\364\263\007\033allowDeprecatedKeyExchanges\362\370\263\007\005\300" +
-      "\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
-      "\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003ssh\372\370\263\007\010\342\363\263\007\003s" +
-      "sh\372\370\263\007\010\352\363\263\007\003ssh\"\214\007\n\007SSHCert\022\030\n\002id\030\200\200\002 \001(" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022l\n\006schema\030\005 \001(\tB\\\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\013\372\363\263\007\006schema\362\370\263\007\013\202\364\263\007\006schema\362\370\263\007\005\300" +
+      "\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240" +
+      "\364\263\007\000\022\200\001\n\rport_override\030\006 \001(\005Bi\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOve" +
+      "rride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000:C\372\370\263\007\005\250\363\263\007\001\372\370\263\007\016\332\363\263\007\tsno" +
+      "wflake\372\370\263\007\016\342\363\263\007\tsnowflake\372\370\263\007\016\352\363\263\007\tsnowf" +
+      "lake\"\262\t\n\tSQLServer\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263" +
+      "\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364" +
+      "\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010" +
+      "hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010" +
+      "username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010user" +
+      "name\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010pass" +
+      "word\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password" +
+      "\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370" +
+      "\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010database" +
+      "\030\004 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010database\362\370\263\007" +
+      "\r\202\364\263\007\010database\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
+      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\200\001\n\rport_overri" +
+      "de\030\005 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-overr" +
+      "ide\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005" +
+      "\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022l\n\006s" +
+      "chema\030\006 \001(\tB\\\362\370\263\007\005\260\363\263\007\001\362\370\263\007\013\372\363\263\007\006schema\362" +
+      "\370\263\007\013\202\364\263\007\006schema\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
+      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\007 \001(\005B" +
+      "X\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362" +
+      "\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362" +
+      "\370\263\007\005\240\364\263\007\000\022\214\001\n\021override_database\030\010 \001(\010Bq\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\026\372\363\263\007\021override-database\362\370\263\007" +
+      "\025\202\364\263\007\020overrideDatabase\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:7\372\370\263\007\005\250" +
+      "\363\263\007\001\372\370\263\007\n\332\363\263\007\005mssql\372\370\263\007\n\342\363\263\007\005mssql\372\370\263\007\n\352" +
+      "\363\263\007\005mssql\"\365\007\n\003SSH\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
+      "\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
+      "\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010h" +
+      "ostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010u" +
+      "sername\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010usern" +
+      "ame\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007" +
+      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030" +
+      "\003 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007" +
+      "\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022w\n\npublic_key\030\004 \001(\tBc\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007\017\372\363\263\007\npublic-key\362\370\263\007\016\202\364\263\007\tpub" +
+      "licKey\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007" +
+      "\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000\022\206\001\n\017port_forwarding\030\005 \001" +
+      "(\010Bm\362\370\263\007\005\260\363\263\007\001\362\370\263\007\024\372\363\263\007\017port-forwarding\362" +
+      "\370\263\007\023\202\364\263\007\016portForwarding\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\262\001\n\036al" +
+      "low_deprecated_key_exchanges\030\006 \001(\010B\211\001\362\370\263" +
+      "\007\005\260\363\263\007\001\362\370\263\007#\372\363\263\007\036allow-deprecated-key-ex" +
+      "changes\362\370\263\007 \202\364\263\007\033allowDeprecatedKeyExcha" +
+      "nges\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230" +
+      "\364\263\007\000\362\370\263\007\005\240\364\263\007\000:1\372\370\263\007\005\250\363\263\007\001\372\370\263\007\010\332\363\263\007\003ssh\372" +
+      "\370\263\007\010\342\363\263\007\003ssh\372\370\263\007\010\352\363\263\007\003ssh\"\214\007\n\007SSHCert\022\030\n" +
+      "\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB" +
+      "\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010" +
+      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030" +
+      "\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hos" +
+      "tname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005" +
+      "\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010usernam" +
+      "e\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007",
+      "\000\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\003 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
+      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\206\001\n\017" +
+      "port_forwarding\030\004 \001(\010Bm\362\370\263\007\005\260\363\263\007\001\362\370\263\007\024\372\363" +
+      "\263\007\017port-forwarding\362\370\263\007\023\202\364\263\007\016portForwardi" +
+      "ng\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\000\362\370\263\007\005\240\364\263\007\000\022\262\001\n\036allow_deprecated_key_ex" +
+      "changes\030\005 \001(\010B\211\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007#\372\363\263\007\036allo" +
+      "w-deprecated-key-exchanges\362\370\263\007 \202\364\263\007\033allo" +
+      "wDeprecatedKeyExchanges\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
+      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:=\372\370\263\007\005" +
+      "\250\363\263\007\001\372\370\263\007\014\332\363\263\007\007sshCert\372\370\263\007\014\342\363\263\007\007sshCert\372" +
+      "\370\263\007\014\352\363\263\007\007sshCert\"\301\006\n\006Sybase\022\030\n\002id\030\200\200\002 \001(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007" +
       "\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263" +
       "\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n" +
@@ -111883,85 +114090,63 @@ public final class DriversPlumbing {
       "\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005" +
       "\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r" +
       "\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007" +
-      "\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
-      "\000\022f\n\004port\030\003 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004por" +
-      "t\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005" +
-      "\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022\206\001\n\017port_forwa" +
-      "rding\030\004 \001(\010Bm\362\370\263\007\005\260\363\263\007\001\362\370\263\007\024\372\363\263\007\017port-fo" +
-      "rwarding\362\370\263\007\023\202\364\263\007\016portForwarding\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263" +
-      "\007\000\022\262\001\n\036allow_deprecated_key_exchanges\030\005 " +
-      "\001(\010B\211\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007#\372\363\263\007\036allow-deprecat" +
-      "ed-key-exchanges\362\370\263\007 \202\364\263\007\033allowDeprecate" +
-      "dKeyExchanges\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363" +
-      "\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:=\372\370\263\007\005\250\363\263\007\001\372\370\263\007\014" +
-      "\332\363\263\007\007sshCert\372\370\263\007\014\342\363\263\007\007sshCert\372\370\263\007\014\352\363\263\007\007s" +
-      "shCert\"\301\006\n\006Sybase\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007" +
-      "\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263" +
-      "\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010h" +
-      "ostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005" +
-      "\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010u",
-      "sername\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010usern" +
-      "ame\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007" +
-      "\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport" +
-      "_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rpor" +
-      "t-override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263" +
-      "\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263" +
-      "\007\000\022f\n\004port\030\004 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004po" +
-      "rt\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007" +
-      "\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010password\030\005" +
-      " \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202" +
-      "\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263" +
-      "\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001::\372\370\263\007\005\250\363\263\007\001\372\370\263\007\013\332" +
-      "\363\263\007\006sybase\372\370\263\007\013\342\363\263\007\006sybase\372\370\263\007\013\352\363\263\007\006syba" +
-      "se\"\311\006\n\010SybaseIQ\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363\263\007\001\022" +
-      "\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230\364\263\007\001" +
-      "\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022%" +
-      "\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022r\n" +
-      "\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010hos" +
-      "tname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010use" +
-      "rname\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010usernam" +
-      "e\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_o" +
-      "verride\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-" +
-      "override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000" +
-      "\022f\n\004port\030\004 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port" +
-      "\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010password\030\005 \001" +
-      "(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010password\362\370\263\007\r\202\364\263" +
-      "\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001" +
-      "\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007\r\332\363\263" +
-      "\007\010sybaseIQ\372\370\263\007\r\342\363\263\007\010sybaseIQ\372\370\263\007\r\352\363\263\007\010sy" +
-      "baseIQ\"\311\006\n\010Teradata\022\030\n\002id\030\200\200\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\300\363" +
-      "\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\230" +
-      "\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007" +
-      "\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363\263\007\001\362\370\263" +
-      "\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n" +
-      "\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010use" +
-      "rname\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363" +
-      "\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022r\n\010pas" +
-      "sword\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010passwor" +
-      "d\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362" +
-      "\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022\200\001\n\rport_o" +
-      "verride\030\004 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022\372\363\263\007\rport-" +
-      "override\362\370\263\007\021\202\364\263\007\014portOverride\362\370\263\007\005\300\363\263\007\000" +
-      "\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001\362\370\263\007\005\240\364\263\007\000" +
-      "\022f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007\t\372\363\263\007\004port" +
-      "\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350" +
-      "\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:@\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
-      "\r\332\363\263\007\010teradata\372\370\263\007\r\342\363\263\007\010teradata\372\370\263\007\r\352\363\263" +
-      "\007\010teradataBc\n\034com.strongdm.api.v1.plumbi" +
-      "ngB\017DriversPlumbingZ2github.com/strongdm" +
-      "/strongdm-sdk-go/internal/v1;v1b\006proto3"
+      "\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007" +
+      "\001\022\200\001\n\rport_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\022\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverri" +
+      "de\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263" +
+      "\007\001\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\004 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370" +
+      "\263\007\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007" +
+      "\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010" +
+      "password\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010pass" +
+      "word\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263" +
+      "\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001::\372\370\263\007\005\250" +
+      "\363\263\007\001\372\370\263\007\013\332\363\263\007\006sybase\372\370\263\007\013\342\363\263\007\006sybase\372\370\263\007" +
+      "\013\352\363\263\007\006sybase\"\311\006\n\010SybaseIQ\022\030\n\002id\030\200\200\002 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363\263\007\001\362" +
+      "\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263\007\005\300\363" +
+      "\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
+      "\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
+      "\200\001\n\rport_override\030\003 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022" +
+      "\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001" +
+      "\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\004 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000\022r\n\010pa" +
+      "ssword\030\005 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363\263\007\010passwo" +
+      "rd\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\000" +
+      "\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001:@\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007\r\332\363\263\007\010sybaseIQ\372\370\263\007\r\342\363\263\007\010sybaseIQ\372\370" +
+      "\263\007\r\352\363\263\007\010sybaseIQ\"\311\006\n\010Teradata\022\030\n\002id\030\200\200\002 " +
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\004name\030\201\200\002 \001(\tB\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\300\363\263\007\001\022\'\n\007healthy\030\202\200\002 \001(\010B\024\362\370\263\007\005\260" +
+      "\363\263\007\001\362\370\263\007\005\230\364\263\007\001\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
+      "B\n\362\370\263\007\005\260\363\263\007\001\022%\n\017secret_store_id\030\204\200\002 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022r\n\010hostname\030\001 \001(\tB`\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\r\372\363\263\007\010hostname\362\370\263\007\r\202\364\263\007\010hostname\362\370\263" +
+      "\007\005\300\363\263\007\001\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263" +
+      "\007\005\240\364\263\007\000\022r\n\010username\030\002 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263" +
+      "\007\r\372\363\263\007\010username\362\370\263\007\r\202\364\263\007\010username\362\370\263\007\005\300\363" +
+      "\263\007\000\362\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364" +
+      "\263\007\001\022r\n\010password\030\003 \001(\tB`\362\370\263\007\005\260\363\263\007\001\362\370\263\007\r\372\363" +
+      "\263\007\010password\362\370\263\007\r\202\364\263\007\010password\362\370\263\007\005\300\363\263\007\000\362" +
+      "\370\263\007\005\330\363\263\007\000\362\370\263\007\005\350\363\263\007\001\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\001\022" +
+      "\200\001\n\rport_override\030\004 \001(\005Bi\362\370\263\007\005\260\363\263\007\001\362\370\263\007\022" +
+      "\372\363\263\007\rport-override\362\370\263\007\021\202\364\263\007\014portOverride" +
+      "\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330\363\263\007\001\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\001" +
+      "\362\370\263\007\005\240\364\263\007\000\022f\n\004port\030\005 \001(\005BX\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
+      "\t\372\363\263\007\004port\362\370\263\007\t\202\364\263\007\004port\362\370\263\007\005\300\363\263\007\000\362\370\263\007\005\330" +
+      "\363\263\007\000\362\370\263\007\005\350\363\263\007\000\362\370\263\007\005\230\364\263\007\000\362\370\263\007\005\240\364\263\007\000:@\372\370\263\007" +
+      "\005\250\363\263\007\001\372\370\263\007\r\332\363\263\007\010teradata\372\370\263\007\r\342\363\263\007\010terada" +
+      "ta\372\370\263\007\r\352\363\263\007\010teradataBc\n\034com.strongdm.api" +
+      ".v1.plumbingB\017DriversPlumbingZ2github.co" +
+      "m/strongdm/strongdm-sdk-go/internal/v1;v" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -111974,291 +114159,297 @@ public final class DriversPlumbing {
     internal_static_v1_Resource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Resource_descriptor,
-        new java.lang.String[] { "Athena", "BigQuery", "Cassandra", "Db2I", "Db2Luw", "Druid", "DynamoDb", "AmazonEs", "Elastic", "HttpBasicAuth", "HttpNoAuth", "HttpAuth", "Kubernetes", "KubernetesBasicAuth", "KubernetesServiceAccount", "AmazonEks", "GoogleGke", "Aks", "AksBasicAuth", "AksServiceAccount", "Memcached", "MongoLegacyHost", "MongoLegacyReplicaset", "MongoHost", "MongoReplicaSet", "Mysql", "AuroraMysql", "Clustrix", "Maria", "Memsql", "Oracle", "Postgres", "AuroraPostgres", "Greenplum", "Cockroach", "Redshift", "Citus", "Presto", "Rdp", "Redis", "ElasticacheRedis", "Snowflake", "SqlServer", "Ssh", "SshCert", "Sybase", "SybaseIq", "Teradata", "Resource", });
+        new java.lang.String[] { "Athena", "Aws", "BigQuery", "Cassandra", "Db2I", "Db2Luw", "Druid", "DynamoDb", "AmazonEs", "Elastic", "HttpBasicAuth", "HttpNoAuth", "HttpAuth", "Kubernetes", "KubernetesBasicAuth", "KubernetesServiceAccount", "AmazonEks", "GoogleGke", "Aks", "AksBasicAuth", "AksServiceAccount", "Memcached", "MongoLegacyHost", "MongoLegacyReplicaset", "MongoHost", "MongoReplicaSet", "Mysql", "AuroraMysql", "Clustrix", "Maria", "Memsql", "Oracle", "Postgres", "AuroraPostgres", "Greenplum", "Cockroach", "Redshift", "Citus", "Presto", "Rdp", "Redis", "ElasticacheRedis", "Snowflake", "SqlServer", "Ssh", "SshCert", "Sybase", "SybaseIq", "Teradata", "Resource", });
     internal_static_v1_Athena_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_Athena_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Athena_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "AccessKey", "SecretAccessKey", "Output", "PortOverride", "Region", });
-    internal_static_v1_BigQuery_descriptor =
+    internal_static_v1_AWS_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_v1_AWS_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_AWS_descriptor,
+        new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "AccessKey", "SecretAccessKey", "HealthcheckRegion", "RoleArn", });
+    internal_static_v1_BigQuery_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_v1_BigQuery_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_BigQuery_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "PrivateKey", "Project", "PortOverride", "Endpoint", "Username", });
     internal_static_v1_Cassandra_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_v1_Cassandra_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Cassandra_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
     internal_static_v1_DB2I_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_v1_DB2I_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DB2I_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
     internal_static_v1_DB2LUW_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_v1_DB2LUW_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DB2LUW_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Druid_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_v1_Druid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Druid_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Username", "Password", "Port", });
     internal_static_v1_DynamoDB_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_v1_DynamoDB_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DynamoDB_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "AccessKey", "SecretAccessKey", "Region", "Endpoint", "PortOverride", });
     internal_static_v1_AmazonES_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_v1_AmazonES_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AmazonES_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Region", "SecretAccessKey", "Endpoint", "AccessKey", "PortOverride", });
     internal_static_v1_Elastic_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_v1_Elastic_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Elastic_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", "TlsRequired", });
     internal_static_v1_HTTPBasicAuth_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_v1_HTTPBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_HTTPBasicAuth_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Url", "HealthcheckPath", "Username", "Password", "HeadersBlacklist", "DefaultPath", "Subdomain", });
     internal_static_v1_HTTPNoAuth_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_v1_HTTPNoAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_HTTPNoAuth_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Url", "HealthcheckPath", "HeadersBlacklist", "DefaultPath", "Subdomain", });
     internal_static_v1_HTTPAuth_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_v1_HTTPAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_HTTPAuth_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Url", "HealthcheckPath", "AuthHeader", "HeadersBlacklist", "DefaultPath", "Subdomain", });
     internal_static_v1_Kubernetes_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_v1_Kubernetes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Kubernetes_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "CertificateAuthority", "ClientCertificate", "ClientKey", "HealthcheckNamespace", });
     internal_static_v1_KubernetesBasicAuth_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_v1_KubernetesBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KubernetesBasicAuth_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
     internal_static_v1_KubernetesServiceAccount_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_v1_KubernetesServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_KubernetesServiceAccount_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Token", "HealthcheckNamespace", });
     internal_static_v1_AmazonEKS_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_v1_AmazonEKS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AmazonEKS_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Endpoint", "AccessKey", "SecretAccessKey", "CertificateAuthority", "Region", "ClusterName", "RoleArn", "HealthcheckNamespace", });
     internal_static_v1_GoogleGKE_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_v1_GoogleGKE_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GoogleGKE_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Endpoint", "CertificateAuthority", "ServiceAccountKey", "HealthcheckNamespace", });
     internal_static_v1_AKS_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_v1_AKS_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKS_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "CertificateAuthority", "ClientCertificate", "ClientKey", "HealthcheckNamespace", });
     internal_static_v1_AKSBasicAuth_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_v1_AKSBasicAuth_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKSBasicAuth_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Username", "Password", "HealthcheckNamespace", });
     internal_static_v1_AKSServiceAccount_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_v1_AKSServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AKSServiceAccount_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Port", "Token", "HealthcheckNamespace", });
     internal_static_v1_Memcached_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_v1_Memcached_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Memcached_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Port", });
     internal_static_v1_MongoLegacyHost_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_v1_MongoLegacyHost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoLegacyHost_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "TlsRequired", });
     internal_static_v1_MongoLegacyReplicaset_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_v1_MongoLegacyReplicaset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoLegacyReplicaset_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "ConnectToReplica", "TlsRequired", });
     internal_static_v1_MongoHost_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_v1_MongoHost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoHost_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "TlsRequired", });
     internal_static_v1_MongoReplicaSet_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_v1_MongoReplicaSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MongoReplicaSet_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "AuthDatabase", "PortOverride", "Username", "Password", "Port", "ReplicaSet", "ConnectToReplica", "TlsRequired", });
     internal_static_v1_Mysql_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_v1_Mysql_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Mysql_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_AuroraMysql_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_v1_AuroraMysql_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuroraMysql_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Clustrix_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_v1_Clustrix_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Clustrix_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Maria_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_v1_Maria_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Maria_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Memsql_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_v1_Memsql_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Memsql_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", });
     internal_static_v1_Oracle_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_v1_Oracle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Oracle_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "Port", "PortOverride", "TlsRequired", });
     internal_static_v1_Postgres_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_v1_Postgres_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Postgres_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_AuroraPostgres_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_v1_AuroraPostgres_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AuroraPostgres_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Greenplum_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_v1_Greenplum_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Greenplum_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Cockroach_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_v1_Cockroach_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Cockroach_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Redshift_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_v1_Redshift_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Redshift_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Citus_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_v1_Citus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Citus_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Port", "OverrideDatabase", });
     internal_static_v1_Presto_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_v1_Presto_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Presto_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Password", "Database", "PortOverride", "Port", "Username", "TlsRequired", });
     internal_static_v1_RDP_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_v1_RDP_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_RDP_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "PortOverride", "Port", });
     internal_static_v1_Redis_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_v1_Redis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Redis_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Password", "Port", });
     internal_static_v1_ElasticacheRedis_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_v1_ElasticacheRedis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ElasticacheRedis_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "PortOverride", "Password", "Port", "TlsRequired", });
     internal_static_v1_Snowflake_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_v1_Snowflake_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Snowflake_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "Schema", "PortOverride", });
     internal_static_v1_SQLServer_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_v1_SQLServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SQLServer_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Password", "Database", "PortOverride", "Schema", "Port", "OverrideDatabase", });
     internal_static_v1_SSH_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_v1_SSH_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SSH_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Port", "PublicKey", "PortForwarding", "AllowDeprecatedKeyExchanges", });
     internal_static_v1_SSHCert_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_v1_SSHCert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SSHCert_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "Port", "PortForwarding", "AllowDeprecatedKeyExchanges", });
     internal_static_v1_Sybase_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_v1_Sybase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Sybase_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "PortOverride", "Port", "Password", });
     internal_static_v1_SybaseIQ_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_v1_SybaseIQ_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SybaseIQ_descriptor,
         new java.lang.String[] { "Id", "Name", "Healthy", "Tags", "SecretStoreId", "Hostname", "Username", "PortOverride", "Port", "Password", });
     internal_static_v1_Teradata_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_v1_Teradata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Teradata_descriptor,

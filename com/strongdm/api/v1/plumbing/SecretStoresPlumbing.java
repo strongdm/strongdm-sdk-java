@@ -76,7 +76,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      * @return The secretStore.
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore();
     /**
      * <pre>
      * Parameters to define the new SecretStore.
@@ -84,7 +84,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
   }
   /**
    * <pre>
@@ -150,11 +150,11 @@ public final class SecretStoresPlumbing {
               break;
             }
             case 18: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder subBuilder = null;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder subBuilder = null;
               if (secretStore_ != null) {
                 subBuilder = secretStore_.toBuilder();
               }
-              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.parser(), extensionRegistry);
+              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(secretStore_);
                 secretStore_ = subBuilder.buildPartial();
@@ -233,7 +233,7 @@ public final class SecretStoresPlumbing {
     }
 
     public static final int SECRET_STORE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+    private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
     /**
      * <pre>
      * Parameters to define the new SecretStore.
@@ -255,8 +255,8 @@ public final class SecretStoresPlumbing {
      * @return The secretStore.
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
-      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
+      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
     }
     /**
      * <pre>
@@ -266,7 +266,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
       return getSecretStore();
     }
 
@@ -775,9 +775,9 @@ public final class SecretStoresPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+      private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
       /**
        * <pre>
        * Parameters to define the new SecretStore.
@@ -797,9 +797,9 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        * @return The secretStore.
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
         if (secretStoreBuilder_ == null) {
-          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         } else {
           return secretStoreBuilder_.getMessage();
         }
@@ -811,7 +811,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -832,7 +832,7 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setSecretStore(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoreBuilder_ == null) {
           secretStore_ = builderForValue.build();
           onChanged();
@@ -849,11 +849,11 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (secretStore_ != null) {
             secretStore_ =
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
           } else {
             secretStore_ = value;
           }
@@ -889,7 +889,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder getSecretStoreBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder getSecretStoreBuilder() {
         
         onChanged();
         return getSecretStoreFieldBuilder().getBuilder();
@@ -901,12 +901,12 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
         if (secretStoreBuilder_ != null) {
           return secretStoreBuilder_.getMessageOrBuilder();
         } else {
           return secretStore_ == null ?
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         }
       }
       /**
@@ -917,11 +917,11 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
           getSecretStoreFieldBuilder() {
         if (secretStoreBuilder_ == null) {
           secretStoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder>(
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder>(
                   getSecretStore(),
                   getParentForChildren(),
                   isClean());
@@ -1030,7 +1030,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      * @return The secretStore.
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore();
     /**
      * <pre>
      * The created SecretStore.
@@ -1038,7 +1038,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
 
     /**
      * <pre>
@@ -1130,11 +1130,11 @@ public final class SecretStoresPlumbing {
               break;
             }
             case 18: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder subBuilder = null;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder subBuilder = null;
               if (secretStore_ != null) {
                 subBuilder = secretStore_.toBuilder();
               }
-              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.parser(), extensionRegistry);
+              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(secretStore_);
                 secretStore_ = subBuilder.buildPartial();
@@ -1226,7 +1226,7 @@ public final class SecretStoresPlumbing {
     }
 
     public static final int SECRET_STORE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+    private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
     /**
      * <pre>
      * The created SecretStore.
@@ -1248,8 +1248,8 @@ public final class SecretStoresPlumbing {
      * @return The secretStore.
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
-      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
+      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
     }
     /**
      * <pre>
@@ -1259,7 +1259,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
       return getSecretStore();
     }
 
@@ -1835,9 +1835,9 @@ public final class SecretStoresPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+      private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
       /**
        * <pre>
        * The created SecretStore.
@@ -1857,9 +1857,9 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        * @return The secretStore.
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
         if (secretStoreBuilder_ == null) {
-          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         } else {
           return secretStoreBuilder_.getMessage();
         }
@@ -1871,7 +1871,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1892,7 +1892,7 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setSecretStore(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoreBuilder_ == null) {
           secretStore_ = builderForValue.build();
           onChanged();
@@ -1909,11 +1909,11 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (secretStore_ != null) {
             secretStore_ =
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
           } else {
             secretStore_ = value;
           }
@@ -1949,7 +1949,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder getSecretStoreBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder getSecretStoreBuilder() {
         
         onChanged();
         return getSecretStoreFieldBuilder().getBuilder();
@@ -1961,12 +1961,12 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
         if (secretStoreBuilder_ != null) {
           return secretStoreBuilder_.getMessageOrBuilder();
         } else {
           return secretStore_ == null ?
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         }
       }
       /**
@@ -1977,11 +1977,11 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
           getSecretStoreFieldBuilder() {
         if (secretStoreBuilder_ == null) {
           secretStoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder>(
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder>(
                   getSecretStore(),
                   getParentForChildren(),
                   isClean());
@@ -3120,7 +3120,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      * @return The secretStore.
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore();
     /**
      * <pre>
      * The requested SecretStore.
@@ -3128,7 +3128,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
 
     /**
      * <pre>
@@ -3220,11 +3220,11 @@ public final class SecretStoresPlumbing {
               break;
             }
             case 18: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder subBuilder = null;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder subBuilder = null;
               if (secretStore_ != null) {
                 subBuilder = secretStore_.toBuilder();
               }
-              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.parser(), extensionRegistry);
+              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(secretStore_);
                 secretStore_ = subBuilder.buildPartial();
@@ -3316,7 +3316,7 @@ public final class SecretStoresPlumbing {
     }
 
     public static final int SECRET_STORE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+    private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
     /**
      * <pre>
      * The requested SecretStore.
@@ -3338,8 +3338,8 @@ public final class SecretStoresPlumbing {
      * @return The secretStore.
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
-      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
+      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
     }
     /**
      * <pre>
@@ -3349,7 +3349,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
       return getSecretStore();
     }
 
@@ -3925,9 +3925,9 @@ public final class SecretStoresPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+      private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
       /**
        * <pre>
        * The requested SecretStore.
@@ -3947,9 +3947,9 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        * @return The secretStore.
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
         if (secretStoreBuilder_ == null) {
-          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         } else {
           return secretStoreBuilder_.getMessage();
         }
@@ -3961,7 +3961,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3982,7 +3982,7 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setSecretStore(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoreBuilder_ == null) {
           secretStore_ = builderForValue.build();
           onChanged();
@@ -3999,11 +3999,11 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (secretStore_ != null) {
             secretStore_ =
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
           } else {
             secretStore_ = value;
           }
@@ -4039,7 +4039,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder getSecretStoreBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder getSecretStoreBuilder() {
         
         onChanged();
         return getSecretStoreFieldBuilder().getBuilder();
@@ -4051,12 +4051,12 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
         if (secretStoreBuilder_ != null) {
           return secretStoreBuilder_.getMessageOrBuilder();
         } else {
           return secretStore_ == null ?
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         }
       }
       /**
@@ -4067,11 +4067,11 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
           getSecretStoreFieldBuilder() {
         if (secretStoreBuilder_ == null) {
           secretStoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder>(
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder>(
                   getSecretStore(),
                   getParentForChildren(),
                   isClean());
@@ -4359,7 +4359,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
      * @return The secretStore.
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore();
     /**
      * <pre>
      * Parameters to overwrite the specified SecretStore.
@@ -4367,7 +4367,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
   }
   /**
    * <pre>
@@ -4440,11 +4440,11 @@ public final class SecretStoresPlumbing {
               break;
             }
             case 26: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder subBuilder = null;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder subBuilder = null;
               if (secretStore_ != null) {
                 subBuilder = secretStore_.toBuilder();
               }
-              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.parser(), extensionRegistry);
+              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(secretStore_);
                 secretStore_ = subBuilder.buildPartial();
@@ -4573,7 +4573,7 @@ public final class SecretStoresPlumbing {
     }
 
     public static final int SECRET_STORE_FIELD_NUMBER = 3;
-    private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+    private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
     /**
      * <pre>
      * Parameters to overwrite the specified SecretStore.
@@ -4595,8 +4595,8 @@ public final class SecretStoresPlumbing {
      * @return The secretStore.
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
-      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
+      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
     }
     /**
      * <pre>
@@ -4606,7 +4606,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
       return getSecretStore();
     }
 
@@ -5238,9 +5238,9 @@ public final class SecretStoresPlumbing {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+      private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
       /**
        * <pre>
        * Parameters to overwrite the specified SecretStore.
@@ -5260,9 +5260,9 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
        * @return The secretStore.
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
         if (secretStoreBuilder_ == null) {
-          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         } else {
           return secretStoreBuilder_.getMessage();
         }
@@ -5274,7 +5274,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5295,7 +5295,7 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
        */
       public Builder setSecretStore(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoreBuilder_ == null) {
           secretStore_ = builderForValue.build();
           onChanged();
@@ -5312,11 +5312,11 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (secretStore_ != null) {
             secretStore_ =
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
           } else {
             secretStore_ = value;
           }
@@ -5352,7 +5352,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder getSecretStoreBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder getSecretStoreBuilder() {
         
         onChanged();
         return getSecretStoreFieldBuilder().getBuilder();
@@ -5364,12 +5364,12 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
         if (secretStoreBuilder_ != null) {
           return secretStoreBuilder_.getMessageOrBuilder();
         } else {
           return secretStore_ == null ?
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         }
       }
       /**
@@ -5380,11 +5380,11 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 3 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
           getSecretStoreFieldBuilder() {
         if (secretStoreBuilder_ == null) {
           secretStoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder>(
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder>(
                   getSecretStore(),
                   getParentForChildren(),
                   isClean());
@@ -5493,7 +5493,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      * @return The secretStore.
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore();
     /**
      * <pre>
      * The updated SecretStore.
@@ -5501,7 +5501,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder();
 
     /**
      * <pre>
@@ -5594,11 +5594,11 @@ public final class SecretStoresPlumbing {
               break;
             }
             case 18: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder subBuilder = null;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder subBuilder = null;
               if (secretStore_ != null) {
                 subBuilder = secretStore_.toBuilder();
               }
-              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.parser(), extensionRegistry);
+              secretStore_ = input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(secretStore_);
                 secretStore_ = subBuilder.buildPartial();
@@ -5690,7 +5690,7 @@ public final class SecretStoresPlumbing {
     }
 
     public static final int SECRET_STORE_FIELD_NUMBER = 2;
-    private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+    private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
     /**
      * <pre>
      * The updated SecretStore.
@@ -5712,8 +5712,8 @@ public final class SecretStoresPlumbing {
      * @return The secretStore.
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
-      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
+      return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
     }
     /**
      * <pre>
@@ -5723,7 +5723,7 @@ public final class SecretStoresPlumbing {
      * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
       return getSecretStore();
     }
 
@@ -6300,9 +6300,9 @@ public final class SecretStoresPlumbing {
         return metaBuilder_;
       }
 
-      private com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore secretStore_;
+      private com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore secretStore_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> secretStoreBuilder_;
       /**
        * <pre>
        * The updated SecretStore.
@@ -6322,9 +6322,9 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        * @return The secretStore.
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStore() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStore() {
         if (secretStoreBuilder_ == null) {
-          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+          return secretStore_ == null ? com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         } else {
           return secretStoreBuilder_.getMessage();
         }
@@ -6336,7 +6336,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder setSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6357,7 +6357,7 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setSecretStore(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoreBuilder_ == null) {
           secretStore_ = builderForValue.build();
           onChanged();
@@ -6374,11 +6374,11 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder mergeSecretStore(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoreBuilder_ == null) {
           if (secretStore_ != null) {
             secretStore_ =
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.newBuilder(secretStore_).mergeFrom(value).buildPartial();
           } else {
             secretStore_ = value;
           }
@@ -6414,7 +6414,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder getSecretStoreBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder getSecretStoreBuilder() {
         
         onChanged();
         return getSecretStoreFieldBuilder().getBuilder();
@@ -6426,12 +6426,12 @@ public final class SecretStoresPlumbing {
        *
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoreOrBuilder() {
         if (secretStoreBuilder_ != null) {
           return secretStoreBuilder_.getMessageOrBuilder();
         } else {
           return secretStore_ == null ?
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance() : secretStore_;
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance() : secretStore_;
         }
       }
       /**
@@ -6442,11 +6442,11 @@ public final class SecretStoresPlumbing {
        * <code>.v1.SecretStore secret_store = 2 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
           getSecretStoreFieldBuilder() {
         if (secretStoreBuilder_ == null) {
           secretStoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder>(
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder>(
                   getSecretStore(),
                   getParentForChildren(),
                   isClean());
@@ -9402,7 +9402,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore> 
+    java.util.List<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore> 
         getSecretStoresList();
     /**
      * <pre>
@@ -9411,7 +9411,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStores(int index);
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStores(int index);
     /**
      * <pre>
      * A single page of results matching the list request criteria.
@@ -9427,7 +9427,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
-    java.util.List<? extends com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+    java.util.List<? extends com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
         getSecretStoresOrBuilderList();
     /**
      * <pre>
@@ -9436,7 +9436,7 @@ public final class SecretStoresPlumbing {
      *
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoresOrBuilder(
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoresOrBuilder(
         int index);
 
     /**
@@ -9533,11 +9533,11 @@ public final class SecretStoresPlumbing {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                secretStores_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore>();
+                secretStores_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore>();
                 mutable_bitField0_ |= 0x00000001;
               }
               secretStores_.add(
-                  input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.parser(), extensionRegistry));
+                  input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.parser(), extensionRegistry));
               break;
             }
             case 26: {
@@ -9627,7 +9627,7 @@ public final class SecretStoresPlumbing {
     }
 
     public static final int SECRET_STORES_FIELD_NUMBER = 2;
-    private java.util.List<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore> secretStores_;
+    private java.util.List<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore> secretStores_;
     /**
      * <pre>
      * A single page of results matching the list request criteria.
@@ -9636,7 +9636,7 @@ public final class SecretStoresPlumbing {
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public java.util.List<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore> getSecretStoresList() {
+    public java.util.List<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore> getSecretStoresList() {
       return secretStores_;
     }
     /**
@@ -9647,7 +9647,7 @@ public final class SecretStoresPlumbing {
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+    public java.util.List<? extends com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
         getSecretStoresOrBuilderList() {
       return secretStores_;
     }
@@ -9670,7 +9670,7 @@ public final class SecretStoresPlumbing {
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStores(int index) {
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStores(int index) {
       return secretStores_.get(index);
     }
     /**
@@ -9681,7 +9681,7 @@ public final class SecretStoresPlumbing {
      * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoresOrBuilder(
+    public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoresOrBuilder(
         int index) {
       return secretStores_.get(index);
     }
@@ -10286,17 +10286,17 @@ public final class SecretStoresPlumbing {
         return metaBuilder_;
       }
 
-      private java.util.List<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore> secretStores_ =
+      private java.util.List<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore> secretStores_ =
         java.util.Collections.emptyList();
       private void ensureSecretStoresIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          secretStores_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore>(secretStores_);
+          secretStores_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore>(secretStores_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> secretStoresBuilder_;
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> secretStoresBuilder_;
 
       /**
        * <pre>
@@ -10305,7 +10305,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore> getSecretStoresList() {
+      public java.util.List<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore> getSecretStoresList() {
         if (secretStoresBuilder_ == null) {
           return java.util.Collections.unmodifiableList(secretStores_);
         } else {
@@ -10333,7 +10333,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getSecretStores(int index) {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore getSecretStores(int index) {
         if (secretStoresBuilder_ == null) {
           return secretStores_.get(index);
         } else {
@@ -10348,7 +10348,7 @@ public final class SecretStoresPlumbing {
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setSecretStores(
-          int index, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+          int index, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10369,7 +10369,7 @@ public final class SecretStoresPlumbing {
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder setSecretStores(
-          int index, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          int index, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoresBuilder_ == null) {
           ensureSecretStoresIsMutable();
           secretStores_.set(index, builderForValue.build());
@@ -10386,7 +10386,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public Builder addSecretStores(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+      public Builder addSecretStores(com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10407,7 +10407,7 @@ public final class SecretStoresPlumbing {
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addSecretStores(
-          int index, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore value) {
+          int index, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore value) {
         if (secretStoresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10428,7 +10428,7 @@ public final class SecretStoresPlumbing {
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addSecretStores(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoresBuilder_ == null) {
           ensureSecretStoresIsMutable();
           secretStores_.add(builderForValue.build());
@@ -10446,7 +10446,7 @@ public final class SecretStoresPlumbing {
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addSecretStores(
-          int index, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder builderForValue) {
+          int index, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder builderForValue) {
         if (secretStoresBuilder_ == null) {
           ensureSecretStoresIsMutable();
           secretStores_.add(index, builderForValue.build());
@@ -10464,7 +10464,7 @@ public final class SecretStoresPlumbing {
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
       public Builder addAllSecretStores(
-          java.lang.Iterable<? extends com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore> values) {
+          java.lang.Iterable<? extends com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore> values) {
         if (secretStoresBuilder_ == null) {
           ensureSecretStoresIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -10516,7 +10516,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder getSecretStoresBuilder(
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder getSecretStoresBuilder(
           int index) {
         return getSecretStoresFieldBuilder().getBuilder(index);
       }
@@ -10527,7 +10527,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder getSecretStoresOrBuilder(
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder getSecretStoresOrBuilder(
           int index) {
         if (secretStoresBuilder_ == null) {
           return secretStores_.get(index);  } else {
@@ -10541,7 +10541,7 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<? extends com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+      public java.util.List<? extends com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
            getSecretStoresOrBuilderList() {
         if (secretStoresBuilder_ != null) {
           return secretStoresBuilder_.getMessageOrBuilderList();
@@ -10556,9 +10556,9 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder addSecretStoresBuilder() {
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder addSecretStoresBuilder() {
         return getSecretStoresFieldBuilder().addBuilder(
-            com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance());
+            com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance());
       }
       /**
        * <pre>
@@ -10567,10 +10567,10 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder addSecretStoresBuilder(
+      public com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder addSecretStoresBuilder(
           int index) {
         return getSecretStoresFieldBuilder().addBuilder(
-            index, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance());
+            index, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.getDefaultInstance());
       }
       /**
        * <pre>
@@ -10579,16 +10579,16 @@ public final class SecretStoresPlumbing {
        *
        * <code>repeated .v1.SecretStore secret_stores = 2 [(.v1.field_options) = { ... }</code>
        */
-      public java.util.List<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder> 
+      public java.util.List<com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder> 
            getSecretStoresBuilderList() {
         return getSecretStoresFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder> 
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder> 
           getSecretStoresFieldBuilder() {
         if (secretStoresBuilder_ == null) {
           secretStoresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder>(
+              com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.SecretStoreOrBuilder>(
                   secretStores_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -10805,5251 +10805,6 @@ public final class SecretStoresPlumbing {
 
   }
 
-  public interface SecretStoreOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.SecretStore)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-     * @return Whether the vaultTls field is set.
-     */
-    boolean hasVaultTls();
-    /**
-     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-     * @return The vaultTls.
-     */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getVaultTls();
-    /**
-     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder();
-
-    /**
-     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-     * @return Whether the vaultToken field is set.
-     */
-    boolean hasVaultToken();
-    /**
-     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-     * @return The vaultToken.
-     */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getVaultToken();
-    /**
-     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder();
-
-    /**
-     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-     * @return Whether the aws field is set.
-     */
-    boolean hasAws();
-    /**
-     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-     * @return The aws.
-     */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getAws();
-    /**
-     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder getAwsOrBuilder();
-
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.SecretStoreCase getSecretStoreCase();
-  }
-  /**
-   * <pre>
-   * A SecretStore is a server where resource secrets (passwords, keys) are stored. 
-   * Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support&#64;strongdm.com to request access to the beta.
-   * </pre>
-   *
-   * Protobuf type {@code v1.SecretStore}
-   */
-  public static final class SecretStore extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.SecretStore)
-      SecretStoreOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SecretStore.newBuilder() to construct.
-    private SecretStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SecretStore() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SecretStore();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SecretStore(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder subBuilder = null;
-              if (secretStoreCase_ == 1) {
-                subBuilder = ((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_).toBuilder();
-              }
-              secretStore_ =
-                  input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_);
-                secretStore_ = subBuilder.buildPartial();
-              }
-              secretStoreCase_ = 1;
-              break;
-            }
-            case 18: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder subBuilder = null;
-              if (secretStoreCase_ == 2) {
-                subBuilder = ((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_).toBuilder();
-              }
-              secretStore_ =
-                  input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_);
-                secretStore_ = subBuilder.buildPartial();
-              }
-              secretStoreCase_ = 2;
-              break;
-            }
-            case 26: {
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder subBuilder = null;
-              if (secretStoreCase_ == 3) {
-                subBuilder = ((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_).toBuilder();
-              }
-              secretStore_ =
-                  input.readMessage(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_);
-                secretStore_ = subBuilder.buildPartial();
-              }
-              secretStoreCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_SecretStore_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_SecretStore_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder.class);
-    }
-
-    private int secretStoreCase_ = 0;
-    private java.lang.Object secretStore_;
-    public enum SecretStoreCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      VAULT_TLS(1),
-      VAULT_TOKEN(2),
-      AWS(3),
-      SECRETSTORE_NOT_SET(0);
-      private final int value;
-      private SecretStoreCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static SecretStoreCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static SecretStoreCase forNumber(int value) {
-        switch (value) {
-          case 1: return VAULT_TLS;
-          case 2: return VAULT_TOKEN;
-          case 3: return AWS;
-          case 0: return SECRETSTORE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public SecretStoreCase
-    getSecretStoreCase() {
-      return SecretStoreCase.forNumber(
-          secretStoreCase_);
-    }
-
-    public static final int VAULT_TLS_FIELD_NUMBER = 1;
-    /**
-     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-     * @return Whether the vaultTls field is set.
-     */
-    @java.lang.Override
-    public boolean hasVaultTls() {
-      return secretStoreCase_ == 1;
-    }
-    /**
-     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-     * @return The vaultTls.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getVaultTls() {
-      if (secretStoreCase_ == 1) {
-         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_;
-      }
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
-    }
-    /**
-     * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder() {
-      if (secretStoreCase_ == 1) {
-         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_;
-      }
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
-    }
-
-    public static final int VAULT_TOKEN_FIELD_NUMBER = 2;
-    /**
-     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-     * @return Whether the vaultToken field is set.
-     */
-    @java.lang.Override
-    public boolean hasVaultToken() {
-      return secretStoreCase_ == 2;
-    }
-    /**
-     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-     * @return The vaultToken.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getVaultToken() {
-      if (secretStoreCase_ == 2) {
-         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_;
-      }
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
-    }
-    /**
-     * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder() {
-      if (secretStoreCase_ == 2) {
-         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_;
-      }
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
-    }
-
-    public static final int AWS_FIELD_NUMBER = 3;
-    /**
-     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-     * @return Whether the aws field is set.
-     */
-    @java.lang.Override
-    public boolean hasAws() {
-      return secretStoreCase_ == 3;
-    }
-    /**
-     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-     * @return The aws.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getAws() {
-      if (secretStoreCase_ == 3) {
-         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
-      }
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
-    }
-    /**
-     * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder getAwsOrBuilder() {
-      if (secretStoreCase_ == 3) {
-         return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
-      }
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (secretStoreCase_ == 1) {
-        output.writeMessage(1, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_);
-      }
-      if (secretStoreCase_ == 2) {
-        output.writeMessage(2, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_);
-      }
-      if (secretStoreCase_ == 3) {
-        output.writeMessage(3, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (secretStoreCase_ == 1) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_);
-      }
-      if (secretStoreCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_);
-      }
-      if (secretStoreCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore other = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore) obj;
-
-      if (!getSecretStoreCase().equals(other.getSecretStoreCase())) return false;
-      switch (secretStoreCase_) {
-        case 1:
-          if (!getVaultTls()
-              .equals(other.getVaultTls())) return false;
-          break;
-        case 2:
-          if (!getVaultToken()
-              .equals(other.getVaultToken())) return false;
-          break;
-        case 3:
-          if (!getAws()
-              .equals(other.getAws())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (secretStoreCase_) {
-        case 1:
-          hash = (37 * hash) + VAULT_TLS_FIELD_NUMBER;
-          hash = (53 * hash) + getVaultTls().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + VAULT_TOKEN_FIELD_NUMBER;
-          hash = (53 * hash) + getVaultToken().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + AWS_FIELD_NUMBER;
-          hash = (53 * hash) + getAws().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * A SecretStore is a server where resource secrets (passwords, keys) are stored. 
-     * Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support&#64;strongdm.com to request access to the beta.
-     * </pre>
-     *
-     * Protobuf type {@code v1.SecretStore}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.SecretStore)
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_SecretStore_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_SecretStore_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        secretStoreCase_ = 0;
-        secretStore_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_SecretStore_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore build() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore buildPartial() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore result = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore(this);
-        if (secretStoreCase_ == 1) {
-          if (vaultTlsBuilder_ == null) {
-            result.secretStore_ = secretStore_;
-          } else {
-            result.secretStore_ = vaultTlsBuilder_.build();
-          }
-        }
-        if (secretStoreCase_ == 2) {
-          if (vaultTokenBuilder_ == null) {
-            result.secretStore_ = secretStore_;
-          } else {
-            result.secretStore_ = vaultTokenBuilder_.build();
-          }
-        }
-        if (secretStoreCase_ == 3) {
-          if (awsBuilder_ == null) {
-            result.secretStore_ = secretStore_;
-          } else {
-            result.secretStore_ = awsBuilder_.build();
-          }
-        }
-        result.secretStoreCase_ = secretStoreCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore other) {
-        if (other == com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore.getDefaultInstance()) return this;
-        switch (other.getSecretStoreCase()) {
-          case VAULT_TLS: {
-            mergeVaultTls(other.getVaultTls());
-            break;
-          }
-          case VAULT_TOKEN: {
-            mergeVaultToken(other.getVaultToken());
-            break;
-          }
-          case AWS: {
-            mergeAws(other.getAws());
-            break;
-          }
-          case SECRETSTORE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int secretStoreCase_ = 0;
-      private java.lang.Object secretStore_;
-      public SecretStoreCase
-          getSecretStoreCase() {
-        return SecretStoreCase.forNumber(
-            secretStoreCase_);
-      }
-
-      public Builder clearSecretStore() {
-        secretStoreCase_ = 0;
-        secretStore_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder> vaultTlsBuilder_;
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       * @return Whether the vaultTls field is set.
-       */
-      @java.lang.Override
-      public boolean hasVaultTls() {
-        return secretStoreCase_ == 1;
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       * @return The vaultTls.
-       */
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getVaultTls() {
-        if (vaultTlsBuilder_ == null) {
-          if (secretStoreCase_ == 1) {
-            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_;
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
-        } else {
-          if (secretStoreCase_ == 1) {
-            return vaultTlsBuilder_.getMessage();
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setVaultTls(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore value) {
-        if (vaultTlsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          secretStore_ = value;
-          onChanged();
-        } else {
-          vaultTlsBuilder_.setMessage(value);
-        }
-        secretStoreCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setVaultTls(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder builderForValue) {
-        if (vaultTlsBuilder_ == null) {
-          secretStore_ = builderForValue.build();
-          onChanged();
-        } else {
-          vaultTlsBuilder_.setMessage(builderForValue.build());
-        }
-        secretStoreCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeVaultTls(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore value) {
-        if (vaultTlsBuilder_ == null) {
-          if (secretStoreCase_ == 1 &&
-              secretStore_ != com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance()) {
-            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.newBuilder((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            secretStore_ = value;
-          }
-          onChanged();
-        } else {
-          if (secretStoreCase_ == 1) {
-            vaultTlsBuilder_.mergeFrom(value);
-          }
-          vaultTlsBuilder_.setMessage(value);
-        }
-        secretStoreCase_ = 1;
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearVaultTls() {
-        if (vaultTlsBuilder_ == null) {
-          if (secretStoreCase_ == 1) {
-            secretStoreCase_ = 0;
-            secretStore_ = null;
-            onChanged();
-          }
-        } else {
-          if (secretStoreCase_ == 1) {
-            secretStoreCase_ = 0;
-            secretStore_ = null;
-          }
-          vaultTlsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder getVaultTlsBuilder() {
-        return getVaultTlsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       */
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder getVaultTlsOrBuilder() {
-        if ((secretStoreCase_ == 1) && (vaultTlsBuilder_ != null)) {
-          return vaultTlsBuilder_.getMessageOrBuilder();
-        } else {
-          if (secretStoreCase_ == 1) {
-            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_;
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.v1.VaultTLSStore vault_tls = 1 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder> 
-          getVaultTlsFieldBuilder() {
-        if (vaultTlsBuilder_ == null) {
-          if (!(secretStoreCase_ == 1)) {
-            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
-          }
-          vaultTlsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder>(
-                  (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) secretStore_,
-                  getParentForChildren(),
-                  isClean());
-          secretStore_ = null;
-        }
-        secretStoreCase_ = 1;
-        onChanged();;
-        return vaultTlsBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder> vaultTokenBuilder_;
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       * @return Whether the vaultToken field is set.
-       */
-      @java.lang.Override
-      public boolean hasVaultToken() {
-        return secretStoreCase_ == 2;
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       * @return The vaultToken.
-       */
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getVaultToken() {
-        if (vaultTokenBuilder_ == null) {
-          if (secretStoreCase_ == 2) {
-            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_;
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
-        } else {
-          if (secretStoreCase_ == 2) {
-            return vaultTokenBuilder_.getMessage();
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setVaultToken(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore value) {
-        if (vaultTokenBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          secretStore_ = value;
-          onChanged();
-        } else {
-          vaultTokenBuilder_.setMessage(value);
-        }
-        secretStoreCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setVaultToken(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder builderForValue) {
-        if (vaultTokenBuilder_ == null) {
-          secretStore_ = builderForValue.build();
-          onChanged();
-        } else {
-          vaultTokenBuilder_.setMessage(builderForValue.build());
-        }
-        secretStoreCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeVaultToken(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore value) {
-        if (vaultTokenBuilder_ == null) {
-          if (secretStoreCase_ == 2 &&
-              secretStore_ != com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance()) {
-            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.newBuilder((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            secretStore_ = value;
-          }
-          onChanged();
-        } else {
-          if (secretStoreCase_ == 2) {
-            vaultTokenBuilder_.mergeFrom(value);
-          }
-          vaultTokenBuilder_.setMessage(value);
-        }
-        secretStoreCase_ = 2;
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearVaultToken() {
-        if (vaultTokenBuilder_ == null) {
-          if (secretStoreCase_ == 2) {
-            secretStoreCase_ = 0;
-            secretStore_ = null;
-            onChanged();
-          }
-        } else {
-          if (secretStoreCase_ == 2) {
-            secretStoreCase_ = 0;
-            secretStore_ = null;
-          }
-          vaultTokenBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder getVaultTokenBuilder() {
-        return getVaultTokenFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder getVaultTokenOrBuilder() {
-        if ((secretStoreCase_ == 2) && (vaultTokenBuilder_ != null)) {
-          return vaultTokenBuilder_.getMessageOrBuilder();
-        } else {
-          if (secretStoreCase_ == 2) {
-            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_;
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.v1.VaultTokenStore vault_token = 2 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder> 
-          getVaultTokenFieldBuilder() {
-        if (vaultTokenBuilder_ == null) {
-          if (!(secretStoreCase_ == 2)) {
-            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
-          }
-          vaultTokenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder>(
-                  (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) secretStore_,
-                  getParentForChildren(),
-                  isClean());
-          secretStore_ = null;
-        }
-        secretStoreCase_ = 2;
-        onChanged();;
-        return vaultTokenBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder> awsBuilder_;
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       * @return Whether the aws field is set.
-       */
-      @java.lang.Override
-      public boolean hasAws() {
-        return secretStoreCase_ == 3;
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       * @return The aws.
-       */
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getAws() {
-        if (awsBuilder_ == null) {
-          if (secretStoreCase_ == 3) {
-            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
-        } else {
-          if (secretStoreCase_ == 3) {
-            return awsBuilder_.getMessage();
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setAws(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore value) {
-        if (awsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          secretStore_ = value;
-          onChanged();
-        } else {
-          awsBuilder_.setMessage(value);
-        }
-        secretStoreCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setAws(
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder builderForValue) {
-        if (awsBuilder_ == null) {
-          secretStore_ = builderForValue.build();
-          onChanged();
-        } else {
-          awsBuilder_.setMessage(builderForValue.build());
-        }
-        secretStoreCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeAws(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore value) {
-        if (awsBuilder_ == null) {
-          if (secretStoreCase_ == 3 &&
-              secretStore_ != com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance()) {
-            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.newBuilder((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            secretStore_ = value;
-          }
-          onChanged();
-        } else {
-          if (secretStoreCase_ == 3) {
-            awsBuilder_.mergeFrom(value);
-          }
-          awsBuilder_.setMessage(value);
-        }
-        secretStoreCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearAws() {
-        if (awsBuilder_ == null) {
-          if (secretStoreCase_ == 3) {
-            secretStoreCase_ = 0;
-            secretStore_ = null;
-            onChanged();
-          }
-        } else {
-          if (secretStoreCase_ == 3) {
-            secretStoreCase_ = 0;
-            secretStore_ = null;
-          }
-          awsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder getAwsBuilder() {
-        return getAwsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       */
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder getAwsOrBuilder() {
-        if ((secretStoreCase_ == 3) && (awsBuilder_ != null)) {
-          return awsBuilder_.getMessageOrBuilder();
-        } else {
-          if (secretStoreCase_ == 3) {
-            return (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_;
-          }
-          return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.v1.AWSStore aws = 3 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder> 
-          getAwsFieldBuilder() {
-        if (awsBuilder_ == null) {
-          if (!(secretStoreCase_ == 3)) {
-            secretStore_ = com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
-          }
-          awsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder>(
-                  (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) secretStore_,
-                  getParentForChildren(),
-                  isClean());
-          secretStore_ = null;
-        }
-        secretStoreCase_ = 3;
-        onChanged();;
-        return awsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.SecretStore)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.SecretStore)
-    private static final com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore();
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SecretStore>
-        PARSER = new com.google.protobuf.AbstractParser<SecretStore>() {
-      @java.lang.Override
-      public SecretStore parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SecretStore(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SecretStore> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SecretStore> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStore getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface VaultTokenStoreOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.VaultTokenStore)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The serverAddress.
-     */
-    java.lang.String getServerAddress();
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for serverAddress.
-     */
-    com.google.protobuf.ByteString
-        getServerAddressBytes();
-
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return Whether the tags field is set.
-     */
-    boolean hasTags();
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return The tags.
-     */
-    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
-  }
-  /**
-   * Protobuf type {@code v1.VaultTokenStore}
-   */
-  public static final class VaultTokenStore extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.VaultTokenStore)
-      VaultTokenStoreOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use VaultTokenStore.newBuilder() to construct.
-    private VaultTokenStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private VaultTokenStore() {
-      id_ = "";
-      name_ = "";
-      serverAddress_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new VaultTokenStore();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private VaultTokenStore(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serverAddress_ = s;
-              break;
-            }
-            case 34: {
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
-              if (tags_ != null) {
-                subBuilder = tags_.toBuilder();
-              }
-              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(tags_);
-                tags_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTokenStore_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTokenStore_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object serverAddress_;
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The serverAddress.
-     */
-    @java.lang.Override
-    public java.lang.String getServerAddress() {
-      java.lang.Object ref = serverAddress_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serverAddress_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for serverAddress.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServerAddressBytes() {
-      java.lang.Object ref = serverAddress_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serverAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TAGS_FIELD_NUMBER = 4;
-    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return Whether the tags field is set.
-     */
-    @java.lang.Override
-    public boolean hasTags() {
-      return tags_ != null;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return The tags.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
-      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
-      return getTags();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!getServerAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
-      }
-      if (tags_ != null) {
-        output.writeMessage(4, getTags());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!getServerAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
-      }
-      if (tags_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTags());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore other = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getServerAddress()
-          .equals(other.getServerAddress())) return false;
-      if (hasTags() != other.hasTags()) return false;
-      if (hasTags()) {
-        if (!getTags()
-            .equals(other.getTags())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getServerAddress().hashCode();
-      if (hasTags()) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTags().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code v1.VaultTokenStore}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.VaultTokenStore)
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStoreOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTokenStore_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTokenStore_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        name_ = "";
-
-        serverAddress_ = "";
-
-        if (tagsBuilder_ == null) {
-          tags_ = null;
-        } else {
-          tags_ = null;
-          tagsBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTokenStore_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore build() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore buildPartial() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore result = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.serverAddress_ = serverAddress_;
-        if (tagsBuilder_ == null) {
-          result.tags_ = tags_;
-        } else {
-          result.tags_ = tagsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore other) {
-        if (other == com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getServerAddress().isEmpty()) {
-          serverAddress_ = other.serverAddress_;
-          onChanged();
-        }
-        if (other.hasTags()) {
-          mergeTags(other.getTags());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object serverAddress_ = "";
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return The serverAddress.
-       */
-      public java.lang.String getServerAddress() {
-        java.lang.Object ref = serverAddress_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serverAddress_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for serverAddress.
-       */
-      public com.google.protobuf.ByteString
-          getServerAddressBytes() {
-        java.lang.Object ref = serverAddress_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serverAddress_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The serverAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerAddress(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serverAddress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServerAddress() {
-        
-        serverAddress_ = getDefaultInstance().getServerAddress();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for serverAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerAddressBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serverAddress_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       * @return Whether the tags field is set.
-       */
-      public boolean hasTags() {
-        return tagsBuilder_ != null || tags_ != null;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       * @return The tags.
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
-        if (tagsBuilder_ == null) {
-          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-        } else {
-          return tagsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
-        if (tagsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tags_ = value;
-          onChanged();
-        } else {
-          tagsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setTags(
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
-        if (tagsBuilder_ == null) {
-          tags_ = builderForValue.build();
-          onChanged();
-        } else {
-          tagsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
-        if (tagsBuilder_ == null) {
-          if (tags_ != null) {
-            tags_ =
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
-          } else {
-            tags_ = value;
-          }
-          onChanged();
-        } else {
-          tagsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearTags() {
-        if (tagsBuilder_ == null) {
-          tags_ = null;
-          onChanged();
-        } else {
-          tags_ = null;
-          tagsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
-        
-        onChanged();
-        return getTagsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
-        if (tagsBuilder_ != null) {
-          return tagsBuilder_.getMessageOrBuilder();
-        } else {
-          return tags_ == null ?
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-        }
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
-          getTagsFieldBuilder() {
-        if (tagsBuilder_ == null) {
-          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
-                  getTags(),
-                  getParentForChildren(),
-                  isClean());
-          tags_ = null;
-        }
-        return tagsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.VaultTokenStore)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.VaultTokenStore)
-    private static final com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore();
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<VaultTokenStore>
-        PARSER = new com.google.protobuf.AbstractParser<VaultTokenStore>() {
-      @java.lang.Override
-      public VaultTokenStore parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VaultTokenStore(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<VaultTokenStore> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<VaultTokenStore> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTokenStore getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface VaultTLSStoreOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.VaultTLSStore)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The serverAddress.
-     */
-    java.lang.String getServerAddress();
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for serverAddress.
-     */
-    com.google.protobuf.ByteString
-        getServerAddressBytes();
-
-    /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The cACertPath.
-     */
-    java.lang.String getCACertPath();
-    /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for cACertPath.
-     */
-    com.google.protobuf.ByteString
-        getCACertPathBytes();
-
-    /**
-     * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-     * @return The clientCertPath.
-     */
-    java.lang.String getClientCertPath();
-    /**
-     * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for clientCertPath.
-     */
-    com.google.protobuf.ByteString
-        getClientCertPathBytes();
-
-    /**
-     * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-     * @return The clientKeyPath.
-     */
-    java.lang.String getClientKeyPath();
-    /**
-     * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for clientKeyPath.
-     */
-    com.google.protobuf.ByteString
-        getClientKeyPathBytes();
-
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-     * @return Whether the tags field is set.
-     */
-    boolean hasTags();
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-     * @return The tags.
-     */
-    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
-  }
-  /**
-   * Protobuf type {@code v1.VaultTLSStore}
-   */
-  public static final class VaultTLSStore extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.VaultTLSStore)
-      VaultTLSStoreOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use VaultTLSStore.newBuilder() to construct.
-    private VaultTLSStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private VaultTLSStore() {
-      id_ = "";
-      name_ = "";
-      serverAddress_ = "";
-      cACertPath_ = "";
-      clientCertPath_ = "";
-      clientKeyPath_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new VaultTLSStore();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private VaultTLSStore(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serverAddress_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cACertPath_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientCertPath_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clientKeyPath_ = s;
-              break;
-            }
-            case 58: {
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
-              if (tags_ != null) {
-                subBuilder = tags_.toBuilder();
-              }
-              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(tags_);
-                tags_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTLSStore_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTLSStore_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object serverAddress_;
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The serverAddress.
-     */
-    @java.lang.Override
-    public java.lang.String getServerAddress() {
-      java.lang.Object ref = serverAddress_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serverAddress_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for serverAddress.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServerAddressBytes() {
-      java.lang.Object ref = serverAddress_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serverAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CA_CERT_PATH_FIELD_NUMBER = 4;
-    private volatile java.lang.Object cACertPath_;
-    /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The cACertPath.
-     */
-    @java.lang.Override
-    public java.lang.String getCACertPath() {
-      java.lang.Object ref = cACertPath_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cACertPath_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for cACertPath.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCACertPathBytes() {
-      java.lang.Object ref = cACertPath_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cACertPath_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CLIENT_CERT_PATH_FIELD_NUMBER = 5;
-    private volatile java.lang.Object clientCertPath_;
-    /**
-     * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-     * @return The clientCertPath.
-     */
-    @java.lang.Override
-    public java.lang.String getClientCertPath() {
-      java.lang.Object ref = clientCertPath_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        clientCertPath_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for clientCertPath.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getClientCertPathBytes() {
-      java.lang.Object ref = clientCertPath_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        clientCertPath_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CLIENT_KEY_PATH_FIELD_NUMBER = 6;
-    private volatile java.lang.Object clientKeyPath_;
-    /**
-     * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-     * @return The clientKeyPath.
-     */
-    @java.lang.Override
-    public java.lang.String getClientKeyPath() {
-      java.lang.Object ref = clientKeyPath_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        clientKeyPath_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for clientKeyPath.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getClientKeyPathBytes() {
-      java.lang.Object ref = clientKeyPath_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        clientKeyPath_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TAGS_FIELD_NUMBER = 7;
-    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-     * @return Whether the tags field is set.
-     */
-    @java.lang.Override
-    public boolean hasTags() {
-      return tags_ != null;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-     * @return The tags.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
-      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
-      return getTags();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!getServerAddressBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverAddress_);
-      }
-      if (!getCACertPathBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, cACertPath_);
-      }
-      if (!getClientCertPathBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientCertPath_);
-      }
-      if (!getClientKeyPathBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, clientKeyPath_);
-      }
-      if (tags_ != null) {
-        output.writeMessage(7, getTags());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!getServerAddressBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverAddress_);
-      }
-      if (!getCACertPathBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, cACertPath_);
-      }
-      if (!getClientCertPathBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientCertPath_);
-      }
-      if (!getClientKeyPathBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, clientKeyPath_);
-      }
-      if (tags_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getTags());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore other = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getServerAddress()
-          .equals(other.getServerAddress())) return false;
-      if (!getCACertPath()
-          .equals(other.getCACertPath())) return false;
-      if (!getClientCertPath()
-          .equals(other.getClientCertPath())) return false;
-      if (!getClientKeyPath()
-          .equals(other.getClientKeyPath())) return false;
-      if (hasTags() != other.hasTags()) return false;
-      if (hasTags()) {
-        if (!getTags()
-            .equals(other.getTags())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getServerAddress().hashCode();
-      hash = (37 * hash) + CA_CERT_PATH_FIELD_NUMBER;
-      hash = (53 * hash) + getCACertPath().hashCode();
-      hash = (37 * hash) + CLIENT_CERT_PATH_FIELD_NUMBER;
-      hash = (53 * hash) + getClientCertPath().hashCode();
-      hash = (37 * hash) + CLIENT_KEY_PATH_FIELD_NUMBER;
-      hash = (53 * hash) + getClientKeyPath().hashCode();
-      if (hasTags()) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTags().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code v1.VaultTLSStore}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.VaultTLSStore)
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStoreOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTLSStore_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTLSStore_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        name_ = "";
-
-        serverAddress_ = "";
-
-        cACertPath_ = "";
-
-        clientCertPath_ = "";
-
-        clientKeyPath_ = "";
-
-        if (tagsBuilder_ == null) {
-          tags_ = null;
-        } else {
-          tags_ = null;
-          tagsBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_VaultTLSStore_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore build() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore buildPartial() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore result = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.serverAddress_ = serverAddress_;
-        result.cACertPath_ = cACertPath_;
-        result.clientCertPath_ = clientCertPath_;
-        result.clientKeyPath_ = clientKeyPath_;
-        if (tagsBuilder_ == null) {
-          result.tags_ = tags_;
-        } else {
-          result.tags_ = tagsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore other) {
-        if (other == com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getServerAddress().isEmpty()) {
-          serverAddress_ = other.serverAddress_;
-          onChanged();
-        }
-        if (!other.getCACertPath().isEmpty()) {
-          cACertPath_ = other.cACertPath_;
-          onChanged();
-        }
-        if (!other.getClientCertPath().isEmpty()) {
-          clientCertPath_ = other.clientCertPath_;
-          onChanged();
-        }
-        if (!other.getClientKeyPath().isEmpty()) {
-          clientKeyPath_ = other.clientKeyPath_;
-          onChanged();
-        }
-        if (other.hasTags()) {
-          mergeTags(other.getTags());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object serverAddress_ = "";
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return The serverAddress.
-       */
-      public java.lang.String getServerAddress() {
-        java.lang.Object ref = serverAddress_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serverAddress_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for serverAddress.
-       */
-      public com.google.protobuf.ByteString
-          getServerAddressBytes() {
-        java.lang.Object ref = serverAddress_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serverAddress_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The serverAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerAddress(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serverAddress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServerAddress() {
-        
-        serverAddress_ = getDefaultInstance().getServerAddress();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for serverAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerAddressBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serverAddress_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cACertPath_ = "";
-      /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @return The cACertPath.
-       */
-      public java.lang.String getCACertPath() {
-        java.lang.Object ref = cACertPath_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cACertPath_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for cACertPath.
-       */
-      public com.google.protobuf.ByteString
-          getCACertPathBytes() {
-        java.lang.Object ref = cACertPath_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cACertPath_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @param value The cACertPath to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCACertPath(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cACertPath_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCACertPath() {
-        
-        cACertPath_ = getDefaultInstance().getCACertPath();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for cACertPath to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCACertPathBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cACertPath_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object clientCertPath_ = "";
-      /**
-       * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-       * @return The clientCertPath.
-       */
-      public java.lang.String getClientCertPath() {
-        java.lang.Object ref = clientCertPath_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          clientCertPath_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for clientCertPath.
-       */
-      public com.google.protobuf.ByteString
-          getClientCertPathBytes() {
-        java.lang.Object ref = clientCertPath_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          clientCertPath_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-       * @param value The clientCertPath to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClientCertPath(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        clientCertPath_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearClientCertPath() {
-        
-        clientCertPath_ = getDefaultInstance().getClientCertPath();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for clientCertPath to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClientCertPathBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        clientCertPath_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object clientKeyPath_ = "";
-      /**
-       * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-       * @return The clientKeyPath.
-       */
-      public java.lang.String getClientKeyPath() {
-        java.lang.Object ref = clientKeyPath_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          clientKeyPath_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for clientKeyPath.
-       */
-      public com.google.protobuf.ByteString
-          getClientKeyPathBytes() {
-        java.lang.Object ref = clientKeyPath_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          clientKeyPath_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-       * @param value The clientKeyPath to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClientKeyPath(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        clientKeyPath_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearClientKeyPath() {
-        
-        clientKeyPath_ = getDefaultInstance().getClientKeyPath();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for clientKeyPath to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClientKeyPathBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        clientKeyPath_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       * @return Whether the tags field is set.
-       */
-      public boolean hasTags() {
-        return tagsBuilder_ != null || tags_ != null;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       * @return The tags.
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
-        if (tagsBuilder_ == null) {
-          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-        } else {
-          return tagsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
-        if (tagsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tags_ = value;
-          onChanged();
-        } else {
-          tagsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setTags(
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
-        if (tagsBuilder_ == null) {
-          tags_ = builderForValue.build();
-          onChanged();
-        } else {
-          tagsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
-        if (tagsBuilder_ == null) {
-          if (tags_ != null) {
-            tags_ =
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
-          } else {
-            tags_ = value;
-          }
-          onChanged();
-        } else {
-          tagsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearTags() {
-        if (tagsBuilder_ == null) {
-          tags_ = null;
-          onChanged();
-        } else {
-          tags_ = null;
-          tagsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
-        
-        onChanged();
-        return getTagsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
-        if (tagsBuilder_ != null) {
-          return tagsBuilder_.getMessageOrBuilder();
-        } else {
-          return tags_ == null ?
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-        }
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 7 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
-          getTagsFieldBuilder() {
-        if (tagsBuilder_ == null) {
-          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
-                  getTags(),
-                  getParentForChildren(),
-                  isClean());
-          tags_ = null;
-        }
-        return tagsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.VaultTLSStore)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.VaultTLSStore)
-    private static final com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore();
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<VaultTLSStore>
-        PARSER = new com.google.protobuf.AbstractParser<VaultTLSStore>() {
-      @java.lang.Override
-      public VaultTLSStore parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new VaultTLSStore(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<VaultTLSStore> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<VaultTLSStore> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.VaultTLSStore getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface AWSStoreOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.AWSStore)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-     * @return The region.
-     */
-    java.lang.String getRegion();
-    /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for region.
-     */
-    com.google.protobuf.ByteString
-        getRegionBytes();
-
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return Whether the tags field is set.
-     */
-    boolean hasTags();
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return The tags.
-     */
-    com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags();
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     */
-    com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
-  }
-  /**
-   * Protobuf type {@code v1.AWSStore}
-   */
-  public static final class AWSStore extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.AWSStore)
-      AWSStoreOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AWSStore.newBuilder() to construct.
-    private AWSStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private AWSStore() {
-      id_ = "";
-      name_ = "";
-      region_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AWSStore();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AWSStore(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              region_ = s;
-              break;
-            }
-            case 34: {
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
-              if (tags_ != null) {
-                subBuilder = tags_.toBuilder();
-              }
-              tags_ = input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(tags_);
-                tags_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The id.
-     */
-    @java.lang.Override
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Unique identifier of the SecretStore.
-     * </pre>
-     *
-     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for id.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Unique human-readable name of the SecretStore.
-     * </pre>
-     *
-     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int REGION_FIELD_NUMBER = 3;
-    private volatile java.lang.Object region_;
-    /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-     * @return The region.
-     */
-    @java.lang.Override
-    public java.lang.String getRegion() {
-      java.lang.Object ref = region_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        region_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for region.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRegionBytes() {
-      java.lang.Object ref = region_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        region_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TAGS_FIELD_NUMBER = 4;
-    private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return Whether the tags field is set.
-     */
-    @java.lang.Override
-    public boolean hasTags() {
-      return tags_ != null;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return The tags.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
-      return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
-      return getTags();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
-      }
-      if (!getRegionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, region_);
-      }
-      if (tags_ != null) {
-        output.writeMessage(4, getTags());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (!getRegionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, region_);
-      }
-      if (tags_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTags());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore other = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getRegion()
-          .equals(other.getRegion())) return false;
-      if (hasTags() != other.hasTags()) return false;
-      if (hasTags()) {
-        if (!getTags()
-            .equals(other.getTags())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + REGION_FIELD_NUMBER;
-      hash = (53 * hash) + getRegion().hashCode();
-      if (hasTags()) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTags().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code v1.AWSStore}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.AWSStore)
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStoreOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.class, com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        name_ = "";
-
-        region_ = "";
-
-        if (tagsBuilder_ == null) {
-          tags_ = null;
-        } else {
-          tags_ = null;
-          tagsBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.internal_static_v1_AWSStore_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore build() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore buildPartial() {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore result = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.region_ = region_;
-        if (tagsBuilder_ == null) {
-          result.tags_ = tags_;
-        } else {
-          result.tags_ = tagsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore other) {
-        if (other == com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getRegion().isEmpty()) {
-          region_ = other.region_;
-          onChanged();
-        }
-        if (other.hasTags()) {
-          mergeTags(other.getTags());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object id_ = "";
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for id.
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique identifier of the SecretStore.
-       * </pre>
-       *
-       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for id to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Unique human-readable name of the SecretStore.
-       * </pre>
-       *
-       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object region_ = "";
-      /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-       * @return The region.
-       */
-      public java.lang.String getRegion() {
-        java.lang.Object ref = region_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          region_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for region.
-       */
-      public com.google.protobuf.ByteString
-          getRegionBytes() {
-        java.lang.Object ref = region_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          region_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The region to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRegion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        region_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRegion() {
-        
-        region_ = getDefaultInstance().getRegion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string region = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for region to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRegionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        region_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       * @return Whether the tags field is set.
-       */
-      public boolean hasTags() {
-        return tagsBuilder_ != null || tags_ != null;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       * @return The tags.
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags getTags() {
-        if (tagsBuilder_ == null) {
-          return tags_ == null ? com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-        } else {
-          return tagsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
-        if (tagsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          tags_ = value;
-          onChanged();
-        } else {
-          tagsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder setTags(
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
-        if (tagsBuilder_ == null) {
-          tags_ = builderForValue.build();
-          onChanged();
-        } else {
-          tagsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder mergeTags(com.strongdm.api.v1.plumbing.TagsPlumbing.Tags value) {
-        if (tagsBuilder_ == null) {
-          if (tags_ != null) {
-            tags_ =
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
-          } else {
-            tags_ = value;
-          }
-          onChanged();
-        } else {
-          tagsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public Builder clearTags() {
-        if (tagsBuilder_ == null) {
-          tags_ = null;
-          onChanged();
-        } else {
-          tags_ = null;
-          tagsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
-        
-        onChanged();
-        return getTagsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
-        if (tagsBuilder_ != null) {
-          return tagsBuilder_.getMessageOrBuilder();
-        } else {
-          return tags_ == null ?
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-        }
-      }
-      /**
-       * <pre>
-       * Tags is a map of key, value pairs.
-       * </pre>
-       *
-       * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder> 
-          getTagsFieldBuilder() {
-        if (tagsBuilder_ == null) {
-          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.TagsPlumbing.Tags, com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder>(
-                  getTags(),
-                  getParentForChildren(),
-                  isClean());
-          tags_ = null;
-        }
-        return tagsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.AWSStore)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.AWSStore)
-    private static final com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore();
-    }
-
-    public static com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<AWSStore>
-        PARSER = new com.google.protobuf.AbstractParser<AWSStore>() {
-      @java.lang.Override
-      public AWSStore parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AWSStore(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<AWSStore> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AWSStore> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.AWSStore getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_SecretStoreCreateRequest_descriptor;
   private static final 
@@ -16100,26 +10855,6 @@ public final class SecretStoresPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_SecretStoreListResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_SecretStore_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_SecretStore_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_VaultTokenStore_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_VaultTokenStore_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_VaultTLSStore_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_VaultTLSStore_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_AWSStore_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_AWSStore_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16130,102 +10865,70 @@ public final class SecretStoresPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\023secret_stores.proto\022\002v1\032\roptions.proto" +
-      "\032\nspec.proto\032\ntags.proto\"v\n\030SecretStoreC" +
-      "reateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRe" +
-      "questMetadata\0221\n\014secret_store\030\002 \001(\0132\017.v1" +
-      ".SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\031SecretStore" +
-      "CreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Create" +
-      "ResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014secret_s" +
-      "tore\030\002 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetada" +
-      "taB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"U\n\025" +
-      "SecretStoreGetRequest\022$\n\004meta\030\001 \001(\0132\026.v1" +
-      ".GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\"\313\001\n\026SecretStoreGetResponse\0221\n\004meta\030\001" +
-      " \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\0221\n\014secret_store\030\002 \001(\0132\017.v1.SecretStore" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
-      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372" +
-      "\370\263\007\005\250\363\263\007\001\"\202\001\n\030SecretStoreUpdateRequest\022\'" +
-      "\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetadata\022" +
-      "\n\n\002id\030\002 \001(\t\0221\n\014secret_store\030\003 \001(\0132\017.v1.S" +
-      "ecretStoreB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\031SecretStoreUp" +
-      "dateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateRe" +
-      "sponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014secret_sto" +
-      "re\030\002 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\022?\n" +
-      "\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadata" +
-      "B\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"[\n\030Se" +
-      "cretStoreDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v" +
-      "1.DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\"\236\001\n\031SecretStoreDeleteResponse\0224\n" +
-      "\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(\0132\025.v1.Rat" +
+      "\032\nspec.proto\032\030secret_store_types.proto\"v" +
+      "\n\030SecretStoreCreateRequest\022\'\n\004meta\030\001 \001(\013" +
+      "2\031.v1.CreateRequestMetadata\0221\n\014secret_st" +
+      "ore\030\002 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\"\321" +
+      "\001\n\031SecretStoreCreateResponse\0224\n\004meta\030\001 \001" +
+      "(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\0221\n\014secret_store\030\002 \001(\0132\017.v1.SecretStor" +
+      "eB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.R" +
+      "ateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"U\n\025SecretStoreGetRequest\022$\n\004m" +
+      "eta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\313\001\n\026SecretStoreGetResp" +
+      "onse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetad" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014secret_store\030\002 \001(\0132\017." +
+      "v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit" +
+      "\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\202\001\n\030SecretStoreU" +
+      "pdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRe" +
+      "questMetadata\022\n\n\002id\030\002 \001(\t\0221\n\014secret_stor" +
+      "e\030\003 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n" +
+      "\031SecretStoreUpdateResponse\0224\n\004meta\030\001 \001(\013" +
+      "2\032.v1.UpdateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\0221\n\014secret_store\030\002 \001(\0132\017.v1.SecretStoreB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
       "eLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370" +
-      "\263\007\005\250\363\263\007\001\"[\n\026SecretStoreListRequest\022%\n\004me" +
-      "ta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fil" +
-      "ter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\266\001\n\027SecretStoreLis" +
-      "tResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRespons" +
-      "eMetadata\0222\n\rsecret_stores\030\002 \003(\0132\017.v1.Se" +
-      "cretStoreB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(" +
-      "\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\220\364\263\007\001\"\206\002\n\013SecretStore\022:\n\tvault_tls\030\001 \001(" +
-      "\0132\021.v1.VaultTLSStoreB\022\362\370\263\007\r\212\364\263\007\010vaultTLS" +
-      "H\000\022@\n\013vault_token\030\002 \001(\0132\023.v1.VaultTokenS" +
-      "toreB\024\362\370\263\007\017\212\364\263\007\nvaultTokenH\000\022*\n\003aws\030\003 \001(" +
-      "\0132\014.v1.AWSStoreB\r\362\370\263\007\010\212\364\263\007\003awsH\000:\n\372\370\263\007\005\250" +
-      "\363\263\007\001BA\n\014secret_store\0221\252\370\263\007\020\242\370\263\007\013SecretSt" +
-      "ore\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\236\002\n\017Vaul" +
-      "tTokenStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002ID\260\363\263" +
-      "\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242" +
-      "\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_address\030\003 \001" +
-      "(\tB&\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300\363\263\007\001\320\363\263" +
-      "\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Ta" +
-      "gs\260\363\263\007\001:G\372\370\263\007B\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\n" +
-      "vaultToken\342\363\263\007\nvaultToken\352\363\263\007\nvaultToken" +
-      "\"\337\003\n\rVaultTLSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263" +
-      "\007\002ID\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB" +
-      "\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022>\n\016server_addr" +
-      "ess\030\003 \001(\tB&\362\370\263\007!\242\363\263\007\rServerAddress\260\363\263\007\001\300" +
-      "\363\263\007\001\320\363\263\007\001\022C\n\014CA_cert_path\030\004 \001(\tB-\362\370\263\007(\242\363" +
-      "\263\007\nCACertPath\260\363\263\007\001\320\363\263\007\001\212\364\263\007\ncaCertPath\022A" +
-      "\n\020client_cert_path\030\005 \001(\tB\'\362\370\263\007\"\242\363\263\007\016Clie" +
-      "ntCertPath\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022?\n\017client_key_" +
-      "path\030\006 \001(\tB&\362\370\263\007!\242\363\263\007\rClientKeyPath\260\363\263\007\001" +
-      "\300\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\007 \001(\0132\010.v1.TagsB\023\362\370\263\007" +
-      "\016\242\363\263\007\004Tags\260\363\263\007\001:A\372\370\263\007<\242\363\263\007\013SecretStore\250\363" +
-      "\263\007\001\332\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS\352\363\263\007\010vaultT" +
-      "LS\"\363\001\n\010AWSStore\022-\n\002id\030\001 \001(\tB!\362\370\263\007\034\242\363\263\007\002I" +
-      "D\260\363\263\007\001\312\363\263\007\013SecretStore\022&\n\004name\030\002 \001(\tB\030\362\370" +
-      "\263\007\023\242\363\263\007\004Name\260\363\263\007\001\300\363\263\007\001\022/\n\006region\030\003 \001(\tB\037" +
-      "\362\370\263\007\032\242\363\263\007\006Region\260\363\263\007\001\300\363\263\007\001\320\363\263\007\001\022+\n\004tags\030" +
-      "\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:2\372\370" +
-      "\263\007-\242\363\263\007\013SecretStore\250\363\263\007\001\332\363\263\007\003aws\342\363\263\007\003aws" +
-      "\352\363\263\007\003aws2\336\004\n\014SecretStores\022p\n\006Create\022\034.v1" +
-      ".SecretStoreCreateRequest\032\035.v1.SecretSto" +
-      "reCreateResponse\")\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\026\252\363\263" +
-      "\007\021/v1/secret-stores\022k\n\003Get\022\031.v1.SecretSt" +
-      "oreGetRequest\032\032.v1.SecretStoreGetRespons" +
-      "e\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v1/secret-sto" +
-      "res/{id}\022t\n\006Update\022\034.v1.SecretStoreUpdat" +
-      "eRequest\032\035.v1.SecretStoreUpdateResponse\"" +
-      "-\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\033\252\363\263\007\026/v1/secret-store" +
-      "s/{id}\022w\n\006Delete\022\034.v1.SecretStoreDeleteR" +
-      "equest\032\035.v1.SecretStoreDeleteResponse\"0\202" +
-      "\371\263\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1/secret-stor" +
-      "es/{id}\022i\n\004List\022\032.v1.SecretStoreListRequ" +
-      "est\032\033.v1.SecretStoreListResponse\"(\202\371\263\007\010\242" +
-      "\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/secret-stores\032\025\312\371\263\007" +
-      "\020\302\371\263\007\013SecretStoreBh\n\034com.strongdm.api.v1" +
-      ".plumbingB\024SecretStoresPlumbingZ2github." +
-      "com/strongdm/strongdm-sdk-go/internal/v1" +
-      ";v1b\006proto3"
+      "\263\007\005\250\363\263\007\001\"[\n\030SecretStoreDeleteRequest\022\'\n\004" +
+      "meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n" +
+      "\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\236\001\n\031SecretStoreDel" +
+      "eteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRes" +
+      "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030" +
+      "\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001" +
+      "\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"[\n\026SecretStoreLis" +
+      "tRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestM" +
+      "etadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\266\001\n\027" +
+      "SecretStoreListResponse\022&\n\004meta\030\001 \001(\0132\030." +
+      "v1.ListResponseMetadata\0222\n\rsecret_stores" +
+      "\030\002 \003(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nr" +
+      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\0012\336\004\n\014SecretStores\022p\n" +
+      "\006Create\022\034.v1.SecretStoreCreateRequest\032\035." +
+      "v1.SecretStoreCreateResponse\")\202\371\263\007\t\242\363\263\007\004" +
+      "post\202\371\263\007\026\252\363\263\007\021/v1/secret-stores\022k\n\003Get\022\031" +
+      ".v1.SecretStoreGetRequest\032\032.v1.SecretSto" +
+      "reGetResponse\"-\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\033\252\363\263\007\026/v" +
+      "1/secret-stores/{id}\022t\n\006Update\022\034.v1.Secr" +
+      "etStoreUpdateRequest\032\035.v1.SecretStoreUpd" +
+      "ateResponse\"-\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\033\252\363\263\007\026/v1/" +
+      "secret-stores/{id}\022w\n\006Delete\022\034.v1.Secret" +
+      "StoreDeleteRequest\032\035.v1.SecretStoreDelet" +
+      "eResponse\"0\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\033\252\363\263\007\026/v1" +
+      "/secret-stores/{id}\022i\n\004List\022\032.v1.SecretS" +
+      "toreListRequest\032\033.v1.SecretStoreListResp" +
+      "onse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/secret-" +
+      "stores\032\025\312\371\263\007\020\302\371\263\007\013SecretStoreBh\n\034com.str" +
+      "ongdm.api.v1.plumbingB\024SecretStoresPlumb" +
+      "ingZ2github.com/strongdm/strongdm-sdk-go" +
+      "/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
-          com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
+          com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.getDescriptor(),
         });
     internal_static_v1_SecretStoreCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -16287,42 +10990,17 @@ public final class SecretStoresPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretStoreListResponse_descriptor,
         new java.lang.String[] { "Meta", "SecretStores", "RateLimit", });
-    internal_static_v1_SecretStore_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_v1_SecretStore_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_SecretStore_descriptor,
-        new java.lang.String[] { "VaultTls", "VaultToken", "Aws", "SecretStore", });
-    internal_static_v1_VaultTokenStore_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_v1_VaultTokenStore_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_VaultTokenStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "ServerAddress", "Tags", });
-    internal_static_v1_VaultTLSStore_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_v1_VaultTLSStore_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_VaultTLSStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "ServerAddress", "CACertPath", "ClientCertPath", "ClientKeyPath", "Tags", });
-    internal_static_v1_AWSStore_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_v1_AWSStore_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_AWSStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "Region", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.methodOptions);
-    registry.add(com.strongdm.api.v1.plumbing.Options.oneofOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
-    com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();
+    com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

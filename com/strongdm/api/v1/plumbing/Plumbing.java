@@ -31,6 +31,7 @@ import com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.*;
 import com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.*;
 import com.strongdm.api.v1.plumbing.RolesPlumbing.*;
 import com.strongdm.api.v1.plumbing.SecretStoresPlumbing.*;
+import com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.*;
 import com.strongdm.api.v1.plumbing.Spec.*;
 import com.strongdm.api.v1.plumbing.TagsPlumbing.*;
 import java.util.Collection;
@@ -956,6 +957,9 @@ public class Plumbing {
     if (plumbing.hasAthena()) {
       return convertAthenaToPorcelain(plumbing.getAthena());
     }
+    if (plumbing.hasAws()) {
+      return convertAWSToPorcelain(plumbing.getAws());
+    }
     if (plumbing.hasBigQuery()) {
       return convertBigQueryToPorcelain(plumbing.getBigQuery());
     }
@@ -1107,6 +1111,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.Athena) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAthena(convertAthenaToPlumbing((com.strongdm.api.v1.Athena) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AWS) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAws(convertAWSToPlumbing((com.strongdm.api.v1.AWS) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.BigQuery) {
@@ -1437,6 +1446,67 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Athena> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertAthenaToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AWS convertAWSToPorcelain(AWS plumbing) {
+    com.strongdm.api.v1.AWS porcelain = new com.strongdm.api.v1.AWS();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setHealthcheckRegion((plumbing.getHealthcheckRegion()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    return porcelain;
+  }
+
+  public static AWS convertAWSToPlumbing(com.strongdm.api.v1.AWS porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWS.Builder builder = AWS.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getAccessKey() != null) {
+      builder.setAccessKey((porcelain.getAccessKey()));
+    }
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey((porcelain.getSecretAccessKey()));
+    }
+    if (porcelain.getHealthcheckRegion() != null) {
+      builder.setHealthcheckRegion((porcelain.getHealthcheckRegion()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AWS> convertRepeatedAWSToPorcelain(
+      Collection<AWS> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAWSToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWS> convertRepeatedAWSToPlumbing(
+      Collection<com.strongdm.api.v1.AWS> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAWSToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -5516,6 +5586,207 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.SecretStore convertSecretStoreToPorcelain(
+      SecretStore plumbing) {
+    if (plumbing == null) {
+      return null;
+    }
+    if (plumbing.hasAws()) {
+      return convertAWSStoreToPorcelain(plumbing.getAws());
+    }
+    if (plumbing.hasVaultTls()) {
+      return convertVaultTLSStoreToPorcelain(plumbing.getVaultTls());
+    }
+    if (plumbing.hasVaultToken()) {
+      return convertVaultTokenStoreToPorcelain(plumbing.getVaultToken());
+    }
+    return null;
+  }
+
+  public static SecretStore convertSecretStoreToPlumbing(
+      com.strongdm.api.v1.SecretStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AWSStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setAws(convertAWSStoreToPlumbing((com.strongdm.api.v1.AWSStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.VaultTLSStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultTls(
+          convertVaultTLSStoreToPlumbing((com.strongdm.api.v1.VaultTLSStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.VaultTokenStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultToken(
+          convertVaultTokenStoreToPlumbing((com.strongdm.api.v1.VaultTokenStore) porcelain));
+      return builder.build();
+    }
+    return null;
+  }
+
+  public static List<com.strongdm.api.v1.SecretStore> convertRepeatedSecretStoreToPorcelain(
+      Collection<SecretStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertSecretStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SecretStore> convertRepeatedSecretStoreToPlumbing(
+      Collection<com.strongdm.api.v1.SecretStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertSecretStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AWSStore convertAWSStoreToPorcelain(AWSStore plumbing) {
+    com.strongdm.api.v1.AWSStore porcelain = new com.strongdm.api.v1.AWSStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AWSStore convertAWSStoreToPlumbing(com.strongdm.api.v1.AWSStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWSStore.Builder builder = AWSStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AWSStore> convertRepeatedAWSStoreToPorcelain(
+      Collection<AWSStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAWSStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWSStore> convertRepeatedAWSStoreToPlumbing(
+      Collection<com.strongdm.api.v1.AWSStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAWSStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.VaultTLSStore convertVaultTLSStoreToPorcelain(
+      VaultTLSStore plumbing) {
+    com.strongdm.api.v1.VaultTLSStore porcelain = new com.strongdm.api.v1.VaultTLSStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setCACertPath((plumbing.getCACertPath()));
+    porcelain.setClientCertPath((plumbing.getClientCertPath()));
+    porcelain.setClientKeyPath((plumbing.getClientKeyPath()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultTLSStore convertVaultTLSStoreToPlumbing(
+      com.strongdm.api.v1.VaultTLSStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultTLSStore.Builder builder = VaultTLSStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getCACertPath() != null) {
+      builder.setCACertPath((porcelain.getCACertPath()));
+    }
+    if (porcelain.getClientCertPath() != null) {
+      builder.setClientCertPath((porcelain.getClientCertPath()));
+    }
+    if (porcelain.getClientKeyPath() != null) {
+      builder.setClientKeyPath((porcelain.getClientKeyPath()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.VaultTLSStore> convertRepeatedVaultTLSStoreToPorcelain(
+      Collection<VaultTLSStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertVaultTLSStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultTLSStore> convertRepeatedVaultTLSStoreToPlumbing(
+      Collection<com.strongdm.api.v1.VaultTLSStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertVaultTLSStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.VaultTokenStore convertVaultTokenStoreToPorcelain(
+      VaultTokenStore plumbing) {
+    com.strongdm.api.v1.VaultTokenStore porcelain = new com.strongdm.api.v1.VaultTokenStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultTokenStore convertVaultTokenStoreToPlumbing(
+      com.strongdm.api.v1.VaultTokenStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultTokenStore.Builder builder = VaultTokenStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.VaultTokenStore> convertRepeatedVaultTokenStoreToPorcelain(
+      Collection<VaultTokenStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertVaultTokenStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultTokenStore> convertRepeatedVaultTokenStoreToPlumbing(
+      Collection<com.strongdm.api.v1.VaultTokenStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertVaultTokenStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.SecretStoreCreateResponse
       convertSecretStoreCreateResponseToPorcelain(SecretStoreCreateResponse plumbing) {
     com.strongdm.api.v1.SecretStoreCreateResponse porcelain =
@@ -5681,207 +5952,6 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.SecretStoreDeleteResponse> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertSecretStoreDeleteResponseToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.SecretStore convertSecretStoreToPorcelain(
-      SecretStore plumbing) {
-    if (plumbing == null) {
-      return null;
-    }
-    if (plumbing.hasVaultTls()) {
-      return convertVaultTLSStoreToPorcelain(plumbing.getVaultTls());
-    }
-    if (plumbing.hasVaultToken()) {
-      return convertVaultTokenStoreToPorcelain(plumbing.getVaultToken());
-    }
-    if (plumbing.hasAws()) {
-      return convertAWSStoreToPorcelain(plumbing.getAws());
-    }
-    return null;
-  }
-
-  public static SecretStore convertSecretStoreToPlumbing(
-      com.strongdm.api.v1.SecretStore porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    if (porcelain instanceof com.strongdm.api.v1.VaultTLSStore) {
-      SecretStore.Builder builder = SecretStore.newBuilder();
-      builder.setVaultTls(
-          convertVaultTLSStoreToPlumbing((com.strongdm.api.v1.VaultTLSStore) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.VaultTokenStore) {
-      SecretStore.Builder builder = SecretStore.newBuilder();
-      builder.setVaultToken(
-          convertVaultTokenStoreToPlumbing((com.strongdm.api.v1.VaultTokenStore) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.v1.AWSStore) {
-      SecretStore.Builder builder = SecretStore.newBuilder();
-      builder.setAws(convertAWSStoreToPlumbing((com.strongdm.api.v1.AWSStore) porcelain));
-      return builder.build();
-    }
-    return null;
-  }
-
-  public static List<com.strongdm.api.v1.SecretStore> convertRepeatedSecretStoreToPorcelain(
-      Collection<SecretStore> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertSecretStoreToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<SecretStore> convertRepeatedSecretStoreToPlumbing(
-      Collection<com.strongdm.api.v1.SecretStore> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertSecretStoreToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.VaultTokenStore convertVaultTokenStoreToPorcelain(
-      VaultTokenStore plumbing) {
-    com.strongdm.api.v1.VaultTokenStore porcelain = new com.strongdm.api.v1.VaultTokenStore();
-    porcelain.setId((plumbing.getId()));
-    porcelain.setName((plumbing.getName()));
-    porcelain.setServerAddress((plumbing.getServerAddress()));
-    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    return porcelain;
-  }
-
-  public static VaultTokenStore convertVaultTokenStoreToPlumbing(
-      com.strongdm.api.v1.VaultTokenStore porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    VaultTokenStore.Builder builder = VaultTokenStore.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getName() != null) {
-      builder.setName((porcelain.getName()));
-    }
-    if (porcelain.getServerAddress() != null) {
-      builder.setServerAddress((porcelain.getServerAddress()));
-    }
-    if (porcelain.getTags() != null) {
-      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.VaultTokenStore> convertRepeatedVaultTokenStoreToPorcelain(
-      Collection<VaultTokenStore> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertVaultTokenStoreToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<VaultTokenStore> convertRepeatedVaultTokenStoreToPlumbing(
-      Collection<com.strongdm.api.v1.VaultTokenStore> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertVaultTokenStoreToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.VaultTLSStore convertVaultTLSStoreToPorcelain(
-      VaultTLSStore plumbing) {
-    com.strongdm.api.v1.VaultTLSStore porcelain = new com.strongdm.api.v1.VaultTLSStore();
-    porcelain.setId((plumbing.getId()));
-    porcelain.setName((plumbing.getName()));
-    porcelain.setServerAddress((plumbing.getServerAddress()));
-    porcelain.setCACertPath((plumbing.getCACertPath()));
-    porcelain.setClientCertPath((plumbing.getClientCertPath()));
-    porcelain.setClientKeyPath((plumbing.getClientKeyPath()));
-    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    return porcelain;
-  }
-
-  public static VaultTLSStore convertVaultTLSStoreToPlumbing(
-      com.strongdm.api.v1.VaultTLSStore porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    VaultTLSStore.Builder builder = VaultTLSStore.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getName() != null) {
-      builder.setName((porcelain.getName()));
-    }
-    if (porcelain.getServerAddress() != null) {
-      builder.setServerAddress((porcelain.getServerAddress()));
-    }
-    if (porcelain.getCACertPath() != null) {
-      builder.setCACertPath((porcelain.getCACertPath()));
-    }
-    if (porcelain.getClientCertPath() != null) {
-      builder.setClientCertPath((porcelain.getClientCertPath()));
-    }
-    if (porcelain.getClientKeyPath() != null) {
-      builder.setClientKeyPath((porcelain.getClientKeyPath()));
-    }
-    if (porcelain.getTags() != null) {
-      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.VaultTLSStore> convertRepeatedVaultTLSStoreToPorcelain(
-      Collection<VaultTLSStore> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertVaultTLSStoreToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<VaultTLSStore> convertRepeatedVaultTLSStoreToPlumbing(
-      Collection<com.strongdm.api.v1.VaultTLSStore> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertVaultTLSStoreToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
-  public static com.strongdm.api.v1.AWSStore convertAWSStoreToPorcelain(AWSStore plumbing) {
-    com.strongdm.api.v1.AWSStore porcelain = new com.strongdm.api.v1.AWSStore();
-    porcelain.setId((plumbing.getId()));
-    porcelain.setName((plumbing.getName()));
-    porcelain.setRegion((plumbing.getRegion()));
-    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    return porcelain;
-  }
-
-  public static AWSStore convertAWSStoreToPlumbing(com.strongdm.api.v1.AWSStore porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    AWSStore.Builder builder = AWSStore.newBuilder();
-    if (porcelain.getId() != null) {
-      builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getName() != null) {
-      builder.setName((porcelain.getName()));
-    }
-    if (porcelain.getRegion() != null) {
-      builder.setRegion((porcelain.getRegion()));
-    }
-    if (porcelain.getTags() != null) {
-      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.v1.AWSStore> convertRepeatedAWSStoreToPorcelain(
-      Collection<AWSStore> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertAWSStoreToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<AWSStore> convertRepeatedAWSStoreToPlumbing(
-      Collection<com.strongdm.api.v1.AWSStore> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertAWSStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
