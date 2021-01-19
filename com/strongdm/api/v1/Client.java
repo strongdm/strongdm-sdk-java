@@ -138,8 +138,8 @@ public class Client {
   // Creates a new strongDM API client with extra options.
   public Client(String apiAccessKey, String apiSecretKey, ClientOptions options)
       throws RpcException {
-    this.apiAccessKey = apiAccessKey;
-    this.apiSecretKey = Base64.getDecoder().decode(apiSecretKey);
+    this.apiAccessKey = apiAccessKey.trim();
+    this.apiSecretKey = Base64.getDecoder().decode(apiSecretKey.trim());
     this.maxRetries = this.defaultMaxRetries;
     this.baseRetryDelay = this.defaultBaseRetryDelay;
     this.maxRetryDelay = this.defaultMaxRetryDelay;
