@@ -116,4 +116,14 @@ public class AWS implements Resource {
   public void setRoleArn(String in) {
     this.roleArn = in;
   }
+
+  private String roleExternalId;
+
+  public String getRoleExternalId() {
+    return this.roleExternalId;
+  }
+
+  public void setRoleExternalId(String in) {
+    this.roleExternalId = in;
+  }
 }

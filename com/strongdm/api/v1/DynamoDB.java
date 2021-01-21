@@ -126,4 +126,24 @@ public class DynamoDB implements Resource {
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
+
+  private String roleArn;
+
+  public String getRoleArn() {
+    return this.roleArn;
+  }
+
+  public void setRoleArn(String in) {
+    this.roleArn = in;
+  }
+
+  private String roleExternalId;
+
+  public String getRoleExternalId() {
+    return this.roleExternalId;
+  }
+
+  public void setRoleExternalId(String in) {
+    this.roleExternalId = in;
+  }
 }

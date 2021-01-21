@@ -147,6 +147,16 @@ public class AmazonEKS implements Resource {
     this.roleArn = in;
   }
 
+  private String roleExternalId;
+
+  public String getRoleExternalId() {
+    return this.roleExternalId;
+  }
+
+  public void setRoleExternalId(String in) {
+    this.roleExternalId = in;
+  }
+
   private String healthcheckNamespace;
 
   public String getHealthcheckNamespace() {

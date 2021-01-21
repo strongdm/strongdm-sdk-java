@@ -126,4 +126,24 @@ public class Athena implements Resource {
   public void setRegion(String in) {
     this.region = in;
   }
+
+  private String roleArn;
+
+  public String getRoleArn() {
+    return this.roleArn;
+  }
+
+  public void setRoleArn(String in) {
+    this.roleArn = in;
+  }
+
+  private String roleExternalId;
+
+  public String getRoleExternalId() {
+    return this.roleExternalId;
+  }
+
+  public void setRoleExternalId(String in) {
+    this.roleExternalId = in;
+  }
 }
