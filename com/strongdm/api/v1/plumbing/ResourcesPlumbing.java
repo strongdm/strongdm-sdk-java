@@ -10803,6 +10803,2322 @@ public final class ResourcesPlumbing {
 
   }
 
+  public interface EnumerateTagsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.EnumerateTagsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta();
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * <pre>
+   * EnumerateTagsRequest specifies criteria for retrieving a list of Resources.
+   * </pre>
+   *
+   * Protobuf type {@code v1.EnumerateTagsRequest}
+   */
+  public static final class EnumerateTagsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.EnumerateTagsRequest)
+      EnumerateTagsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnumerateTagsRequest.newBuilder() to construct.
+    private EnumerateTagsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnumerateTagsRequest() {
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnumerateTagsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnumerateTagsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.class, com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Paging parameters for the query.
+     * </pre>
+     *
+     * <code>.v1.ListRequestMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A human-readable filter query string.
+     * </pre>
+     *
+     * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      if (!getFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      if (!getFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest other = (com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EnumerateTagsRequest specifies criteria for retrieving a list of Resources.
+     * </pre>
+     *
+     * Protobuf type {@code v1.EnumerateTagsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.EnumerateTagsRequest)
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.class, com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest build() {
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest buildPartial() {
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest result = new com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest(this);
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest other) {
+        if (other == com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Paging parameters for the query.
+       * </pre>
+       *
+       * <code>.v1.ListRequestMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListRequestMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A human-readable filter query string.
+       * </pre>
+       *
+       * <code>string filter = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.EnumerateTagsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.EnumerateTagsRequest)
+    private static final com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest();
+    }
+
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnumerateTagsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EnumerateTagsRequest>() {
+      @java.lang.Override
+      public EnumerateTagsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnumerateTagsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnumerateTagsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnumerateTagsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnumerateTagsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.EnumerateTagsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    boolean hasMeta();
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta();
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder();
+
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag> 
+        getMatchesList();
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.Tag getMatches(int index);
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    int getMatchesCount();
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.List<? extends com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder> 
+        getMatchesOrBuilderList();
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder getMatchesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    boolean hasRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit();
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder();
+  }
+  /**
+   * <pre>
+   * EnumerateTagsResponse returns a list of Resources that meet the criteria of a
+   * ResourceListRequest.
+   * </pre>
+   *
+   * Protobuf type {@code v1.EnumerateTagsResponse}
+   */
+  public static final class EnumerateTagsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.EnumerateTagsResponse)
+      EnumerateTagsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnumerateTagsResponse.newBuilder() to construct.
+    private EnumerateTagsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnumerateTagsResponse() {
+      matches_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnumerateTagsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnumerateTagsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder subBuilder = null;
+              if (meta_ != null) {
+                subBuilder = meta_.toBuilder();
+              }
+              meta_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(meta_);
+                meta_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                matches_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              matches_.add(
+                  input.readMessage(com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder subBuilder = null;
+              if (rateLimit_ != null) {
+                subBuilder = rateLimit_.toBuilder();
+              }
+              rateLimit_ = input.readMessage(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rateLimit_);
+                rateLimit_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          matches_ = java.util.Collections.unmodifiableList(matches_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.class, com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.Builder.class);
+    }
+
+    public static final int META_FIELD_NUMBER = 1;
+    private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return Whether the meta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMeta() {
+      return meta_ != null;
+    }
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     * @return The meta.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
+      return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+    }
+    /**
+     * <pre>
+     * Paging information for the query.
+     * </pre>
+     *
+     * <code>.v1.ListResponseMetadata meta = 1;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
+      return getMeta();
+    }
+
+    public static final int MATCHES_FIELD_NUMBER = 2;
+    private java.util.List<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag> matches_;
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag> getMatchesList() {
+      return matches_;
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder> 
+        getMatchesOrBuilderList() {
+      return matches_;
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public int getMatchesCount() {
+      return matches_.size();
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.Tag getMatches(int index) {
+      return matches_.get(index);
+    }
+    /**
+     * <pre>
+     * A single page of results matching the list request criteria.
+     * </pre>
+     *
+     * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder getMatchesOrBuilder(
+        int index) {
+      return matches_.get(index);
+    }
+
+    public static final int RATE_LIMIT_FIELD_NUMBER = 3;
+    private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return Whether the rateLimit field is set.
+     */
+    @java.lang.Override
+    public boolean hasRateLimit() {
+      return rateLimit_ != null;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     * @return The rateLimit.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+      return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+    }
+    /**
+     * <pre>
+     * Rate limit information.
+     * </pre>
+     *
+     * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+      return getRateLimit();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (meta_ != null) {
+        output.writeMessage(1, getMeta());
+      }
+      for (int i = 0; i < matches_.size(); i++) {
+        output.writeMessage(2, matches_.get(i));
+      }
+      if (rateLimit_ != null) {
+        output.writeMessage(3, getRateLimit());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (meta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMeta());
+      }
+      for (int i = 0; i < matches_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, matches_.get(i));
+      }
+      if (rateLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRateLimit());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse other = (com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse) obj;
+
+      if (hasMeta() != other.hasMeta()) return false;
+      if (hasMeta()) {
+        if (!getMeta()
+            .equals(other.getMeta())) return false;
+      }
+      if (!getMatchesList()
+          .equals(other.getMatchesList())) return false;
+      if (hasRateLimit() != other.hasRateLimit()) return false;
+      if (hasRateLimit()) {
+        if (!getRateLimit()
+            .equals(other.getRateLimit())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMeta()) {
+        hash = (37 * hash) + META_FIELD_NUMBER;
+        hash = (53 * hash) + getMeta().hashCode();
+      }
+      if (getMatchesCount() > 0) {
+        hash = (37 * hash) + MATCHES_FIELD_NUMBER;
+        hash = (53 * hash) + getMatchesList().hashCode();
+      }
+      if (hasRateLimit()) {
+        hash = (37 * hash) + RATE_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRateLimit().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * EnumerateTagsResponse returns a list of Resources that meet the criteria of a
+     * ResourceListRequest.
+     * </pre>
+     *
+     * Protobuf type {@code v1.EnumerateTagsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.EnumerateTagsResponse)
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.class, com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMatchesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (metaBuilder_ == null) {
+          meta_ = null;
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+        if (matchesBuilder_ == null) {
+          matches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          matchesBuilder_.clear();
+        }
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.internal_static_v1_EnumerateTagsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse build() {
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse buildPartial() {
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse result = new com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (metaBuilder_ == null) {
+          result.meta_ = meta_;
+        } else {
+          result.meta_ = metaBuilder_.build();
+        }
+        if (matchesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            matches_ = java.util.Collections.unmodifiableList(matches_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.matches_ = matches_;
+        } else {
+          result.matches_ = matchesBuilder_.build();
+        }
+        if (rateLimitBuilder_ == null) {
+          result.rateLimit_ = rateLimit_;
+        } else {
+          result.rateLimit_ = rateLimitBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse other) {
+        if (other == com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.getDefaultInstance()) return this;
+        if (other.hasMeta()) {
+          mergeMeta(other.getMeta());
+        }
+        if (matchesBuilder_ == null) {
+          if (!other.matches_.isEmpty()) {
+            if (matches_.isEmpty()) {
+              matches_ = other.matches_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMatchesIsMutable();
+              matches_.addAll(other.matches_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.matches_.isEmpty()) {
+            if (matchesBuilder_.isEmpty()) {
+              matchesBuilder_.dispose();
+              matchesBuilder_ = null;
+              matches_ = other.matches_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              matchesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMatchesFieldBuilder() : null;
+            } else {
+              matchesBuilder_.addAllMessages(other.matches_);
+            }
+          }
+        }
+        if (other.hasRateLimit()) {
+          mergeRateLimit(other.getRateLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata meta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> metaBuilder_;
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return Whether the meta field is set.
+       */
+      public boolean hasMeta() {
+        return metaBuilder_ != null || meta_ != null;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       * @return The meta.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata getMeta() {
+        if (metaBuilder_ == null) {
+          return meta_ == null ? com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+        } else {
+          return metaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          meta_ = value;
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder setMeta(
+          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder builderForValue) {
+        if (metaBuilder_ == null) {
+          meta_ = builderForValue.build();
+          onChanged();
+        } else {
+          metaBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder mergeMeta(com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata value) {
+        if (metaBuilder_ == null) {
+          if (meta_ != null) {
+            meta_ =
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.newBuilder(meta_).mergeFrom(value).buildPartial();
+          } else {
+            meta_ = value;
+          }
+          onChanged();
+        } else {
+          metaBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public Builder clearMeta() {
+        if (metaBuilder_ == null) {
+          meta_ = null;
+          onChanged();
+        } else {
+          meta_ = null;
+          metaBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder getMetaBuilder() {
+        
+        onChanged();
+        return getMetaFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder getMetaOrBuilder() {
+        if (metaBuilder_ != null) {
+          return metaBuilder_.getMessageOrBuilder();
+        } else {
+          return meta_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.getDefaultInstance() : meta_;
+        }
+      }
+      /**
+       * <pre>
+       * Paging information for the query.
+       * </pre>
+       *
+       * <code>.v1.ListResponseMetadata meta = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder> 
+          getMetaFieldBuilder() {
+        if (metaBuilder_ == null) {
+          metaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.ListResponseMetadataOrBuilder>(
+                  getMeta(),
+                  getParentForChildren(),
+                  isClean());
+          meta_ = null;
+        }
+        return metaBuilder_;
+      }
+
+      private java.util.List<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag> matches_ =
+        java.util.Collections.emptyList();
+      private void ensureMatchesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          matches_ = new java.util.ArrayList<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag>(matches_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tag, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder> matchesBuilder_;
+
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag> getMatchesList() {
+        if (matchesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(matches_);
+        } else {
+          return matchesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public int getMatchesCount() {
+        if (matchesBuilder_ == null) {
+          return matches_.size();
+        } else {
+          return matchesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tag getMatches(int index) {
+        if (matchesBuilder_ == null) {
+          return matches_.get(index);
+        } else {
+          return matchesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMatches(
+          int index, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag value) {
+        if (matchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMatchesIsMutable();
+          matches_.set(index, value);
+          onChanged();
+        } else {
+          matchesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setMatches(
+          int index, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder builderForValue) {
+        if (matchesBuilder_ == null) {
+          ensureMatchesIsMutable();
+          matches_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          matchesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMatches(com.strongdm.api.v1.plumbing.TagsPlumbing.Tag value) {
+        if (matchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMatchesIsMutable();
+          matches_.add(value);
+          onChanged();
+        } else {
+          matchesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMatches(
+          int index, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag value) {
+        if (matchesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMatchesIsMutable();
+          matches_.add(index, value);
+          onChanged();
+        } else {
+          matchesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMatches(
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder builderForValue) {
+        if (matchesBuilder_ == null) {
+          ensureMatchesIsMutable();
+          matches_.add(builderForValue.build());
+          onChanged();
+        } else {
+          matchesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addMatches(
+          int index, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder builderForValue) {
+        if (matchesBuilder_ == null) {
+          ensureMatchesIsMutable();
+          matches_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          matchesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder addAllMatches(
+          java.lang.Iterable<? extends com.strongdm.api.v1.plumbing.TagsPlumbing.Tag> values) {
+        if (matchesBuilder_ == null) {
+          ensureMatchesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, matches_);
+          onChanged();
+        } else {
+          matchesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearMatches() {
+        if (matchesBuilder_ == null) {
+          matches_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          matchesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder removeMatches(int index) {
+        if (matchesBuilder_ == null) {
+          ensureMatchesIsMutable();
+          matches_.remove(index);
+          onChanged();
+        } else {
+          matchesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder getMatchesBuilder(
+          int index) {
+        return getMatchesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder getMatchesOrBuilder(
+          int index) {
+        if (matchesBuilder_ == null) {
+          return matches_.get(index);  } else {
+          return matchesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<? extends com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder> 
+           getMatchesOrBuilderList() {
+        if (matchesBuilder_ != null) {
+          return matchesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(matches_);
+        }
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder addMatchesBuilder() {
+        return getMatchesFieldBuilder().addBuilder(
+            com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder addMatchesBuilder(
+          int index) {
+        return getMatchesFieldBuilder().addBuilder(
+            index, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * A single page of results matching the list request criteria.
+       * </pre>
+       *
+       * <code>repeated .v1.Tag matches = 2 [(.v1.field_options) = { ... }</code>
+       */
+      public java.util.List<com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder> 
+           getMatchesBuilderList() {
+        return getMatchesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.TagsPlumbing.Tag, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder> 
+          getMatchesFieldBuilder() {
+        if (matchesBuilder_ == null) {
+          matchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.TagsPlumbing.Tag, com.strongdm.api.v1.plumbing.TagsPlumbing.Tag.Builder, com.strongdm.api.v1.plumbing.TagsPlumbing.TagOrBuilder>(
+                  matches_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          matches_ = null;
+        }
+        return matchesBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata rateLimit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> rateLimitBuilder_;
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return Whether the rateLimit field is set.
+       */
+      public boolean hasRateLimit() {
+        return rateLimitBuilder_ != null || rateLimit_ != null;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       * @return The rateLimit.
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata getRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          return rateLimit_ == null ? com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        } else {
+          return rateLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rateLimit_ = value;
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setRateLimit(
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder builderForValue) {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          rateLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeRateLimit(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata value) {
+        if (rateLimitBuilder_ == null) {
+          if (rateLimit_ != null) {
+            rateLimit_ =
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.newBuilder(rateLimit_).mergeFrom(value).buildPartial();
+          } else {
+            rateLimit_ = value;
+          }
+          onChanged();
+        } else {
+          rateLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearRateLimit() {
+        if (rateLimitBuilder_ == null) {
+          rateLimit_ = null;
+          onChanged();
+        } else {
+          rateLimit_ = null;
+          rateLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder getRateLimitBuilder() {
+        
+        onChanged();
+        return getRateLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder getRateLimitOrBuilder() {
+        if (rateLimitBuilder_ != null) {
+          return rateLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return rateLimit_ == null ?
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.getDefaultInstance() : rateLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * Rate limit information.
+       * </pre>
+       *
+       * <code>.v1.RateLimitMetadata rate_limit = 3 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder> 
+          getRateLimitFieldBuilder() {
+        if (rateLimitBuilder_ == null) {
+          rateLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.Builder, com.strongdm.api.v1.plumbing.Spec.RateLimitMetadataOrBuilder>(
+                  getRateLimit(),
+                  getParentForChildren(),
+                  isClean());
+          rateLimit_ = null;
+        }
+        return rateLimitBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.EnumerateTagsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.EnumerateTagsResponse)
+    private static final com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse();
+    }
+
+    public static com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnumerateTagsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<EnumerateTagsResponse>() {
+      @java.lang.Override
+      public EnumerateTagsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnumerateTagsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnumerateTagsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnumerateTagsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_ResourceCreateRequest_descriptor;
   private static final 
@@ -10853,6 +13169,16 @@ public final class ResourcesPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_ResourceListResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_EnumerateTagsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_EnumerateTagsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_EnumerateTagsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_EnumerateTagsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10863,59 +13189,69 @@ public final class ResourcesPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\017resources.proto\022\002v1\032\roptions.proto\032\nsp" +
-      "ec.proto\032\rdrivers.proto\"l\n\025ResourceCreat" +
-      "eRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateReques" +
-      "tMetadata\022*\n\010resource\030\002 \001(\0132\014.v1.Resourc" +
-      "eB\n\362\370\263\007\005\260\363\263\007\001\"\307\001\n\026ResourceCreateResponse" +
-      "\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetada" +
-      "taB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v1.Re" +
-      "sourceB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\004 \001(\0132\025" +
-      ".v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364" +
-      "\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"R\n\022ResourceGetRequest\022$\n" +
-      "\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002i" +
-      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\301\001\n\023ResourceGetRespo" +
-      "nse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetada" +
-      "taB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v1.Re" +
-      "sourceB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025" +
-      ".v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364" +
-      "\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"x\n\025ResourceUpdateRequest" +
-      "\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRequestMetadat" +
-      "a\022\n\n\002id\030\002 \001(\t\022*\n\010resource\030\003 \001(\0132\014.v1.Res" +
-      "ourceB\n\362\370\263\007\005\260\363\263\007\001\"\307\001\n\026ResourceUpdateResp" +
-      "onse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateResponseMe" +
-      "tadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resource\030\002 \001(\0132\014.v" +
-      "1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001" +
-      "(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263" +
-      "\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\025ResourceDeleteReq" +
-      "uest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMet" +
-      "adata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\233\001\n\026Resour" +
-      "ceDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Dele" +
-      "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_l" +
-      "imit\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\023ResourceL" +
-      "istRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListReques" +
-      "tMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\254\001" +
-      "\n\024ResourceListResponse\022&\n\004meta\030\001 \001(\0132\030.v" +
-      "1.ListResponseMetadata\022+\n\tresources\030\002 \003(" +
-      "\0132\014.v1.ResourceB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limi" +
-      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\005\220\364\263\007\0012\246\004\n\tResources\022f\n\006Create\022\031.v" +
-      "1.ResourceCreateRequest\032\032.v1.ResourceCre" +
-      "ateResponse\"%\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1" +
-      "/resources\022a\n\003Get\022\026.v1.ResourceGetReques" +
-      "t\032\027.v1.ResourceGetResponse\")\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007\027\252\363\263\007\022/v1/resources/{id}\022j\n\006Update\022" +
-      "\031.v1.ResourceUpdateRequest\032\032.v1.Resource" +
-      "UpdateResponse\")\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\027\252\363\263\007\022/" +
-      "v1/resources/{id}\022m\n\006Delete\022\031.v1.Resourc" +
-      "eDeleteRequest\032\032.v1.ResourceDeleteRespon" +
-      "se\",\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\027\252\363\263\007\022/v1/resour" +
-      "ces/{id}\022_\n\004List\022\027.v1.ResourceListReques" +
-      "t\032\030.v1.ResourceListResponse\"$\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007\022\252\363\263\007\r/v1/resources\032\022\312\371\263\007\r\302\371\263\007\010Res" +
-      "ourceBe\n\034com.strongdm.api.v1.plumbingB\021R" +
-      "esourcesPlumbingZ2github.com/strongdm/st" +
-      "rongdm-sdk-go/internal/v1;v1b\006proto3"
+      "ec.proto\032\rdrivers.proto\032\ntags.proto\"l\n\025R" +
+      "esourceCreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1." +
+      "CreateRequestMetadata\022*\n\010resource\030\002 \001(\0132" +
+      "\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\"\307\001\n\026ResourceCr" +
+      "eateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateRe" +
+      "sponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resource\030\002" +
+      " \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_l" +
+      "imit\030\004 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"R\n\022ResourceG" +
+      "etRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestM" +
+      "etadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\301\001\n\023Reso" +
+      "urceGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRe" +
+      "sponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resource\030\002" +
+      " \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_l" +
+      "imit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"x\n\025ResourceU" +
+      "pdateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.UpdateRe" +
+      "questMetadata\022\n\n\002id\030\002 \001(\t\022*\n\010resource\030\003 " +
+      "\001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\"\307\001\n\026Resour" +
+      "ceUpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Upda" +
+      "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022*\n\010resour" +
+      "ce\030\002 \001(\0132\014.v1.ResourceB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nra" +
+      "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362" +
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"X\n\025Resou" +
+      "rceDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.Dele" +
+      "teRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\"\233\001\n\026ResourceDeleteResponse\0224\n\004meta\030\001 \001" +
+      "(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022?\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimitMet" +
+      "adataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"" +
+      "X\n\023ResourceListRequest\022%\n\004meta\030\001 \001(\0132\027.v" +
+      "1.ListRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\"\254\001\n\024ResourceListResponse\022&\n\004me" +
+      "ta\030\001 \001(\0132\030.v1.ListResponseMetadata\022+\n\tre" +
+      "sources\030\002 \003(\0132\014.v1.ResourceB\n\362\370\263\007\005\270\363\263\007\001\022" +
+      "?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetada" +
+      "taB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"Y\n\024EnumerateTag" +
+      "sRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestM" +
+      "etadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\246\001\n\025" +
+      "EnumerateTagsResponse\022&\n\004meta\030\001 \001(\0132\030.v1" +
+      ".ListResponseMetadata\022$\n\007matches\030\002 \003(\0132\007" +
+      ".v1.TagB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132" +
+      "\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220" +
+      "\364\263\007\0012\230\005\n\tResources\022p\n\rEnumerateTags\022\030.v1" +
+      ".EnumerateTagsRequest\032\031.v1.EnumerateTags" +
+      "Response\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/res" +
+      "ources/tags/\022f\n\006Create\022\031.v1.ResourceCrea" +
+      "teRequest\032\032.v1.ResourceCreateResponse\"%\202" +
+      "\371\263\007\t\242\363\263\007\004post\202\371\263\007\022\252\363\263\007\r/v1/resources\022a\n\003" +
+      "Get\022\026.v1.ResourceGetRequest\032\027.v1.Resourc" +
+      "eGetResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1" +
+      "/resources/{id}\022j\n\006Update\022\031.v1.ResourceU" +
+      "pdateRequest\032\032.v1.ResourceUpdateResponse" +
+      "\")\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\027\252\363\263\007\022/v1/resources/{" +
+      "id}\022m\n\006Delete\022\031.v1.ResourceDeleteRequest" +
+      "\032\032.v1.ResourceDeleteResponse\",\202\371\263\007\013\242\363\263\007\006" +
+      "delete\202\371\263\007\027\252\363\263\007\022/v1/resources/{id}\022_\n\004Li" +
+      "st\022\027.v1.ResourceListRequest\032\030.v1.Resourc" +
+      "eListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v" +
+      "1/resources\032\022\312\371\263\007\r\302\371\263\007\010ResourceBe\n\034com.s" +
+      "trongdm.api.v1.plumbingB\021ResourcesPlumbi" +
+      "ngZ2github.com/strongdm/strongdm-sdk-go/" +
+      "internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10923,6 +13259,7 @@ public final class ResourcesPlumbing {
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
           com.strongdm.api.v1.plumbing.DriversPlumbing.getDescriptor(),
+          com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor(),
         });
     internal_static_v1_ResourceCreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10984,6 +13321,18 @@ public final class ResourcesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ResourceListResponse_descriptor,
         new java.lang.String[] { "Meta", "Resources", "RateLimit", });
+    internal_static_v1_EnumerateTagsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_v1_EnumerateTagsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_EnumerateTagsRequest_descriptor,
+        new java.lang.String[] { "Meta", "Filter", });
+    internal_static_v1_EnumerateTagsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_v1_EnumerateTagsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_EnumerateTagsResponse_descriptor,
+        new java.lang.String[] { "Meta", "Matches", "RateLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
@@ -10995,6 +13344,7 @@ public final class ResourcesPlumbing {
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
     com.strongdm.api.v1.plumbing.DriversPlumbing.getDescriptor();
+    com.strongdm.api.v1.plumbing.TagsPlumbing.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

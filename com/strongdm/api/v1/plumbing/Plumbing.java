@@ -253,6 +253,41 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.Tag convertTagToPorcelain(Tag plumbing) {
+    com.strongdm.api.v1.Tag porcelain = new com.strongdm.api.v1.Tag();
+    porcelain.setName((plumbing.getName()));
+    porcelain.setValue((plumbing.getValue()));
+    return porcelain;
+  }
+
+  public static Tag convertTagToPlumbing(com.strongdm.api.v1.Tag porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Tag.Builder builder = Tag.newBuilder();
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getValue() != null) {
+      builder.setValue((porcelain.getValue()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Tag> convertRepeatedTagToPorcelain(
+      Collection<Tag> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertTagToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Tag> convertRepeatedTagToPlumbing(
+      Collection<com.strongdm.api.v1.Tag> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertTagToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.AccountAttachmentCreateResponse
       convertAccountAttachmentCreateResponseToPorcelain(AccountAttachmentCreateResponse plumbing) {
     com.strongdm.api.v1.AccountAttachmentCreateResponse porcelain =

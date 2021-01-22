@@ -41,6 +41,37 @@ public final class ResourcesGrpc {
   public static final String SERVICE_NAME = "v1.Resources";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest,
+      com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> getEnumerateTagsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EnumerateTags",
+      requestType = com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.class,
+      responseType = com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest,
+      com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> getEnumerateTagsMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest, com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> getEnumerateTagsMethod;
+    if ((getEnumerateTagsMethod = ResourcesGrpc.getEnumerateTagsMethod) == null) {
+      synchronized (ResourcesGrpc.class) {
+        if ((getEnumerateTagsMethod = ResourcesGrpc.getEnumerateTagsMethod) == null) {
+          ResourcesGrpc.getEnumerateTagsMethod = getEnumerateTagsMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest, com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EnumerateTags"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ResourcesMethodDescriptorSupplier("EnumerateTags"))
+              .build();
+        }
+      }
+    }
+    return getEnumerateTagsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateRequest,
       com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateResponse> getCreateMethod;
 
@@ -225,6 +256,16 @@ public final class ResourcesGrpc {
 
     /**
      * <pre>
+     * EnumerateTags gets a list of the filter matching tags.
+     * </pre>
+     */
+    public void enumerateTags(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getEnumerateTagsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Create registers a new Resource.
      * </pre>
      */
@@ -275,6 +316,13 @@ public final class ResourcesGrpc {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getEnumerateTagsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest,
+                com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse>(
+                  this, METHODID_ENUMERATE_TAGS)))
           .addMethod(
             getCreateMethod(),
             asyncUnaryCall(
@@ -330,6 +378,17 @@ public final class ResourcesGrpc {
     protected ResourcesStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new ResourcesStub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * EnumerateTags gets a list of the filter matching tags.
+     * </pre>
+     */
+    public void enumerateTags(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getEnumerateTagsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -408,6 +467,16 @@ public final class ResourcesGrpc {
 
     /**
      * <pre>
+     * EnumerateTags gets a list of the filter matching tags.
+     * </pre>
+     */
+    public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse enumerateTags(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getEnumerateTagsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Create registers a new Resource.
      * </pre>
      */
@@ -477,6 +546,17 @@ public final class ResourcesGrpc {
 
     /**
      * <pre>
+     * EnumerateTags gets a list of the filter matching tags.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> enumerateTags(
+        com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getEnumerateTagsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Create registers a new Resource.
      * </pre>
      */
@@ -531,11 +611,12 @@ public final class ResourcesGrpc {
     }
   }
 
-  private static final int METHODID_CREATE = 0;
-  private static final int METHODID_GET = 1;
-  private static final int METHODID_UPDATE = 2;
-  private static final int METHODID_DELETE = 3;
-  private static final int METHODID_LIST = 4;
+  private static final int METHODID_ENUMERATE_TAGS = 0;
+  private static final int METHODID_CREATE = 1;
+  private static final int METHODID_GET = 2;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_LIST = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -554,6 +635,10 @@ public final class ResourcesGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_ENUMERATE_TAGS:
+          serviceImpl.enumerateTags((com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse>) responseObserver);
+          break;
         case METHODID_CREATE:
           serviceImpl.create((com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateResponse>) responseObserver);
@@ -635,6 +720,7 @@ public final class ResourcesGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ResourcesFileDescriptorSupplier())
+              .addMethod(getEnumerateTagsMethod())
               .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
               .addMethod(getUpdateMethod())

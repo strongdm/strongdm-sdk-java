@@ -49,6 +49,45 @@ public class Resources {
   public Resources withDeadlineAfter(long duration, TimeUnit units) {
     return new Resources(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
+  // EnumerateTags gets a list of the filter matching tags.
+  public Iterable<Tag> enumerateTags(String filter, Object... args) throws RpcException {
+    ResourcesPlumbing.EnumerateTagsRequest.Builder builder =
+        ResourcesPlumbing.EnumerateTagsRequest.newBuilder();
+    builder.setFilter(Plumbing.quoteFilterArgs(filter, args));
+    ListRequestMetadata.Builder metaBuilder = ListRequestMetadata.newBuilder();
+    Object pageSizeOption = this.parent.testOptions.get("PageSize");
+    if (pageSizeOption instanceof Integer) {
+      metaBuilder.setLimit((int) pageSizeOption);
+    }
+    builder.setMeta(metaBuilder);
+
+    Supplier<PageResult<Tag>> pageFetcher =
+        () -> {
+          // Note: this closure captures and reuses the builder to set the next page
+
+          ResourcesPlumbing.EnumerateTagsRequest req = builder.build();
+          ResourcesPlumbing.EnumerateTagsResponse plumbingResponse;
+          plumbingResponse =
+              this.stub
+                  .withCallCredentials(
+                      this.parent.getCallCredentials("Resources.EnumerateTags", req))
+                  .enumerateTags(req);
+
+          List<Tag> page =
+              Plumbing.convertRepeatedTagToPorcelain(plumbingResponse.getMatchesList());
+
+          boolean hasNextCursor = plumbingResponse.getMeta().getNextCursor() != "";
+          builder.setMeta(
+              ListRequestMetadata.newBuilder()
+                  .setCursor(plumbingResponse.getMeta().getNextCursor()));
+
+          return new PageResult<Tag>(page, hasNextCursor);
+        };
+
+    Iterator<Tag> iterator = new PageIterator<>(pageFetcher);
+
+    return () -> iterator;
+  }
   // Create registers a new Resource.
   public ResourceCreateResponse create(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceCreateRequest.Builder builder =
