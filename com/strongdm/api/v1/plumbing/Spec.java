@@ -6970,6 +6970,26 @@ public final class Spec {
      * @return The limit.
      */
     int getLimit();
+
+    /**
+     * <pre>
+     * The name of the field to sort the results by.
+     * </pre>
+     *
+     * <code>string order_by = 4;</code>
+     * @return The orderBy.
+     */
+    java.lang.String getOrderBy();
+    /**
+     * <pre>
+     * The name of the field to sort the results by.
+     * </pre>
+     *
+     * <code>string order_by = 4;</code>
+     * @return The bytes for orderBy.
+     */
+    com.google.protobuf.ByteString
+        getOrderByBytes();
   }
   /**
    * <pre>
@@ -6991,6 +7011,7 @@ public final class Spec {
     }
     private ListRequestMetadata() {
       cursor_ = "";
+      orderBy_ = "";
     }
 
     @java.lang.Override
@@ -7037,6 +7058,12 @@ public final class Spec {
             case 24: {
 
               limit_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderBy_ = s;
               break;
             }
             default: {
@@ -7153,6 +7180,52 @@ public final class Spec {
       return limit_;
     }
 
+    public static final int ORDER_BY_FIELD_NUMBER = 4;
+    private volatile java.lang.Object orderBy_;
+    /**
+     * <pre>
+     * The name of the field to sort the results by.
+     * </pre>
+     *
+     * <code>string order_by = 4;</code>
+     * @return The orderBy.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the field to sort the results by.
+     * </pre>
+     *
+     * <code>string order_by = 4;</code>
+     * @return The bytes for orderBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7176,6 +7249,9 @@ public final class Spec {
       if (limit_ != 0) {
         output.writeInt32(3, limit_);
       }
+      if (!getOrderByBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orderBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7195,6 +7271,9 @@ public final class Spec {
       if (limit_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, limit_);
+      }
+      if (!getOrderByBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orderBy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7217,6 +7296,8 @@ public final class Spec {
           != other.getPage()) return false;
       if (getLimit()
           != other.getLimit()) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7234,6 +7315,8 @@ public final class Spec {
       hash = (53 * hash) + getPage();
       hash = (37 * hash) + LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + getLimit();
+      hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7379,6 +7462,8 @@ public final class Spec {
 
         limit_ = 0;
 
+        orderBy_ = "";
+
         return this;
       }
 
@@ -7408,6 +7493,7 @@ public final class Spec {
         result.cursor_ = cursor_;
         result.page_ = page_;
         result.limit_ = limit_;
+        result.orderBy_ = orderBy_;
         onBuilt();
         return result;
       }
@@ -7465,6 +7551,10 @@ public final class Spec {
         }
         if (other.getLimit() != 0) {
           setLimit(other.getLimit());
+        }
+        if (!other.getOrderBy().isEmpty()) {
+          orderBy_ = other.orderBy_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7689,6 +7779,102 @@ public final class Spec {
       public Builder clearLimit() {
         
         limit_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderBy_ = "";
+      /**
+       * <pre>
+       * The name of the field to sort the results by.
+       * </pre>
+       *
+       * <code>string order_by = 4;</code>
+       * @return The orderBy.
+       */
+      public java.lang.String getOrderBy() {
+        java.lang.Object ref = orderBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the field to sort the results by.
+       * </pre>
+       *
+       * <code>string order_by = 4;</code>
+       * @return The bytes for orderBy.
+       */
+      public com.google.protobuf.ByteString
+          getOrderByBytes() {
+        java.lang.Object ref = orderBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the field to sort the results by.
+       * </pre>
+       *
+       * <code>string order_by = 4;</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the field to sort the results by.
+       * </pre>
+       *
+       * <code>string order_by = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderBy() {
+        
+        orderBy_ = getDefaultInstance().getOrderBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the field to sort the results by.
+       * </pre>
+       *
+       * <code>string order_by = 4;</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderBy_ = value;
         onChanged();
         return this;
       }
@@ -10528,18 +10714,19 @@ public final class Spec {
       "\263\007\005\250\363\263\007\001\"\027\n\025UpdateRequestMetadata\"$\n\026Upd" +
       "ateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025Delet" +
       "eRequestMetadata\"$\n\026DeleteResponseMetada" +
-      "ta:\n\372\370\263\007\005\250\363\263\007\001\"B\n\023ListRequestMetadata\022\016\n" +
+      "ta:\n\372\370\263\007\005\250\363\263\007\001\"T\n\023ListRequestMetadata\022\016\n" +
       "\006cursor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001" +
-      "(\005\":\n\024ListResponseMetadata\022\023\n\013next_curso" +
-      "r\030\001 \001(\t\022\r\n\005total\030\002 \001(\005\"\257\001\n\021RateLimitMeta" +
-      "data\022\031\n\005limit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremai" +
-      "ning\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\013" +
-      "2\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022\032\n\006bucket\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001" +
-      "\"\030\n\026GenericRequestMetadata\"\031\n\027GenericRes" +
-      "ponseMetadataBR\n\034com.strongdm.api.v1.plu" +
-      "mbingZ2github.com/strongdm/strongdm-sdk-" +
-      "go/internal/v1;v1b\006proto3"
+      "(\005\022\020\n\010order_by\030\004 \001(\t\":\n\024ListResponseMeta" +
+      "data\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 \001(\005" +
+      "\"\257\001\n\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003B\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001" +
+      "\0228\n\010reset_at\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestMeta" +
+      "data\"\031\n\027GenericResponseMetadataBR\n\034com.s" +
+      "trongdm.api.v1.plumbingZ2github.com/stro" +
+      "ngdm/strongdm-sdk-go/internal/v1;v1b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10642,7 +10829,7 @@ public final class Spec {
     internal_static_v1_ListRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ListRequestMetadata_descriptor,
-        new java.lang.String[] { "Cursor", "Page", "Limit", });
+        new java.lang.String[] { "Cursor", "Page", "Limit", "OrderBy", });
     internal_static_v1_ListResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_v1_ListResponseMetadata_fieldAccessorTable = new

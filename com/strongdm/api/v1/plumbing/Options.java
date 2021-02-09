@@ -822,13 +822,29 @@ public final class Options {
 
     /**
      * <pre>
-     * computed exposes fields to Terraform even if they are read_only.
+     * terraform_computed can have three different values:
+     * - '': field is not computed at all
+     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
      * </pre>
      *
-     * <code>bool computed = 1941307;</code>
-     * @return The computed.
+     * <code>string terraform_computed = 1941307;</code>
+     * @return The terraformComputed.
      */
-    boolean getComputed();
+    java.lang.String getTerraformComputed();
+    /**
+     * <pre>
+     * terraform_computed can have three different values:
+     * - '': field is not computed at all
+     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
+     * </pre>
+     *
+     * <code>string terraform_computed = 1941307;</code>
+     * @return The bytes for terraformComputed.
+     */
+    com.google.protobuf.ByteString
+        getTerraformComputedBytes();
 
     /**
      * <pre>
@@ -937,6 +953,7 @@ public final class Options {
     private FieldOptions() {
       name_ = "";
       idType_ = "";
+      terraformComputed_ = "";
       cliName_ = "";
       cliJsonName_ = "";
       jsonGatewayName_ = "";
@@ -1010,9 +1027,10 @@ public final class Options {
               sdkOnly_ = input.readBool();
               break;
             }
-            case 15530456: {
+            case 15530458: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              computed_ = input.readBool();
+              terraformComputed_ = s;
               break;
             }
             case 15530464: {
@@ -1243,19 +1261,56 @@ public final class Options {
       return sdkOnly_;
     }
 
-    public static final int COMPUTED_FIELD_NUMBER = 1941307;
-    private boolean computed_;
+    public static final int TERRAFORM_COMPUTED_FIELD_NUMBER = 1941307;
+    private volatile java.lang.Object terraformComputed_;
     /**
      * <pre>
-     * computed exposes fields to Terraform even if they are read_only.
+     * terraform_computed can have three different values:
+     * - '': field is not computed at all
+     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
      * </pre>
      *
-     * <code>bool computed = 1941307;</code>
-     * @return The computed.
+     * <code>string terraform_computed = 1941307;</code>
+     * @return The terraformComputed.
      */
     @java.lang.Override
-    public boolean getComputed() {
-      return computed_;
+    public java.lang.String getTerraformComputed() {
+      java.lang.Object ref = terraformComputed_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        terraformComputed_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * terraform_computed can have three different values:
+     * - '': field is not computed at all
+     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
+     * </pre>
+     *
+     * <code>string terraform_computed = 1941307;</code>
+     * @return The bytes for terraformComputed.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTerraformComputedBytes() {
+      java.lang.Object ref = terraformComputed_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        terraformComputed_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int FORCE_NEW_FIELD_NUMBER = 1941308;
@@ -1519,8 +1574,8 @@ public final class Options {
       if (sdkOnly_ != false) {
         output.writeBool(1941306, sdkOnly_);
       }
-      if (computed_ != false) {
-        output.writeBool(1941307, computed_);
+      if (!getTerraformComputedBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, terraformComputed_);
       }
       if (forceNew_ != false) {
         output.writeBool(1941308, forceNew_);
@@ -1587,9 +1642,8 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941306, sdkOnly_);
       }
-      if (computed_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941307, computed_);
+      if (!getTerraformComputedBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, terraformComputed_);
       }
       if (forceNew_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -1656,8 +1710,8 @@ public final class Options {
           .equals(other.getIdType())) return false;
       if (getSdkOnly()
           != other.getSdkOnly()) return false;
-      if (getComputed()
-          != other.getComputed()) return false;
+      if (!getTerraformComputed()
+          .equals(other.getTerraformComputed())) return false;
       if (getForceNew()
           != other.getForceNew()) return false;
       if (getWriteOnly()
@@ -1708,9 +1762,8 @@ public final class Options {
       hash = (37 * hash) + SDK_ONLY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getSdkOnly());
-      hash = (37 * hash) + COMPUTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getComputed());
+      hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
+      hash = (53 * hash) + getTerraformComputed().hashCode();
       hash = (37 * hash) + FORCE_NEW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getForceNew());
@@ -1884,7 +1937,7 @@ public final class Options {
 
         sdkOnly_ = false;
 
-        computed_ = false;
+        terraformComputed_ = "";
 
         forceNew_ = false;
 
@@ -1939,7 +1992,7 @@ public final class Options {
         result.required_ = required_;
         result.idType_ = idType_;
         result.sdkOnly_ = sdkOnly_;
-        result.computed_ = computed_;
+        result.terraformComputed_ = terraformComputed_;
         result.forceNew_ = forceNew_;
         result.writeOnly_ = writeOnly_;
         result.sensitive_ = sensitive_;
@@ -2021,8 +2074,9 @@ public final class Options {
         if (other.getSdkOnly() != false) {
           setSdkOnly(other.getSdkOnly());
         }
-        if (other.getComputed() != false) {
-          setComputed(other.getComputed());
+        if (!other.getTerraformComputed().isEmpty()) {
+          terraformComputed_ = other.terraformComputed_;
+          onChanged();
         }
         if (other.getForceNew() != false) {
           setForceNew(other.getForceNew());
@@ -2427,45 +2481,113 @@ public final class Options {
         return this;
       }
 
-      private boolean computed_ ;
+      private java.lang.Object terraformComputed_ = "";
       /**
        * <pre>
-       * computed exposes fields to Terraform even if they are read_only.
+       * terraform_computed can have three different values:
+       * - '': field is not computed at all
+       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
        * </pre>
        *
-       * <code>bool computed = 1941307;</code>
-       * @return The computed.
+       * <code>string terraform_computed = 1941307;</code>
+       * @return The terraformComputed.
        */
-      @java.lang.Override
-      public boolean getComputed() {
-        return computed_;
+      public java.lang.String getTerraformComputed() {
+        java.lang.Object ref = terraformComputed_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          terraformComputed_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
-       * computed exposes fields to Terraform even if they are read_only.
+       * terraform_computed can have three different values:
+       * - '': field is not computed at all
+       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
        * </pre>
        *
-       * <code>bool computed = 1941307;</code>
-       * @param value The computed to set.
+       * <code>string terraform_computed = 1941307;</code>
+       * @return The bytes for terraformComputed.
+       */
+      public com.google.protobuf.ByteString
+          getTerraformComputedBytes() {
+        java.lang.Object ref = terraformComputed_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terraformComputed_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * terraform_computed can have three different values:
+       * - '': field is not computed at all
+       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
+       * </pre>
+       *
+       * <code>string terraform_computed = 1941307;</code>
+       * @param value The terraformComputed to set.
        * @return This builder for chaining.
        */
-      public Builder setComputed(boolean value) {
-        
-        computed_ = value;
+      public Builder setTerraformComputed(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        terraformComputed_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * computed exposes fields to Terraform even if they are read_only.
+       * terraform_computed can have three different values:
+       * - '': field is not computed at all
+       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
        * </pre>
        *
-       * <code>bool computed = 1941307;</code>
+       * <code>string terraform_computed = 1941307;</code>
        * @return This builder for chaining.
        */
-      public Builder clearComputed() {
+      public Builder clearTerraformComputed() {
         
-        computed_ = false;
+        terraformComputed_ = getDefaultInstance().getTerraformComputed();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * terraform_computed can have three different values:
+       * - '': field is not computed at all
+       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
+       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
+       * </pre>
+       *
+       * <code>string terraform_computed = 1941307;</code>
+       * @param value The bytes for terraformComputed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformComputedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        terraformComputed_ = value;
         onChanged();
         return this;
       }
@@ -8573,48 +8695,48 @@ public final class Options {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"0\n\rMethodOptions\022\020\n\006method" +
-      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"\246\003\n\014FieldOptions" +
+      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"\260\003\n\014FieldOptions" +
       "\022\016\n\004name\030\264\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010" +
       "\022\035\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010itera" +
       "ble\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_ty" +
-      "pe\030\271\276v \001(\t\022\022\n\010sdk_only\030\272\276v \001(\010\022\022\n\010comput" +
-      "ed\030\273\276v \001(\010\022\023\n\tforce_new\030\274\276v \001(\010\022\024\n\nwrite" +
-      "_only\030\275\276v \001(\010\022\023\n\tsensitive\030\276\276v \001(\010\022\022\n\010cl" +
-      "i_name\030\277\276v \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022" +
-      "\033\n\021json_gateway_name\030\301\276v \001(\t\022 \n\026hide_fro" +
-      "m_json_gateway\030\302\276v \001(\010\022\023\n\tread_only\030\303\276v " +
-      "\001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022\n\010sql_type" +
-      "\030\305\276v \001(\t\"\312\002\n\016MessageOptions\022\024\n\nmodel_nam" +
-      "e\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030" +
-      "\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022+\n\016terr" +
-      "aform_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n" +
-      "\006custom\030\271\276v \001(\0132!.v1.CustomPorcelainMess" +
-      "ageOptions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n\010cli" +
-      "_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001(\t\022\033" +
-      "\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026hide_from" +
-      "_json_gateway\030\276\276v \001(\010\"\266\001\n\035CustomPorcelai" +
-      "nMessageOptions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021" +
-      "go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_porcel" +
-      "ain_type\030\277\276v \001(\t\022\"\n\030terraform_porcelain_" +
-      "type\030\300\276v \001(\t\022 \n\026openapi_porcelain_type\030\301" +
-      "\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource_exam" +
-      "ple_path\030\264\276v \001(\t\022\"\n\030data_source_example_" +
-      "path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\nmodel_na" +
-      "me\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v \003(\t\"<\n\016S" +
-      "erviceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013pr" +
-      "ivate_sdk\030\231\277v \001(\010:K\n\016method_options\022\036.go" +
-      "ogle.protobuf.MethodOptions\030\220\277v \001(\0132\021.v1" +
-      ".MethodOptions:H\n\rfield_options\022\035.google" +
-      ".protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fiel" +
-      "dOptions:N\n\017message_options\022\037.google.pro" +
-      "tobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Messag" +
-      "eOptions:H\n\roneof_options\022\035.google.proto" +
-      "buf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptio" +
-      "ns:N\n\017service_options\022\037.google.protobuf." +
-      "ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOptio" +
-      "nsBR\n\034com.strongdm.api.v1.plumbingZ2gith" +
-      "ub.com/strongdm/strongdm-sdk-go/internal" +
-      "/v1;v1b\006proto3"
+      "pe\030\271\276v \001(\t\022\022\n\010sdk_only\030\272\276v \001(\010\022\034\n\022terraf" +
+      "orm_computed\030\273\276v \001(\t\022\023\n\tforce_new\030\274\276v \001(" +
+      "\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tsensitive\030\276\276v" +
+      " \001(\010\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_json_nam" +
+      "e\030\300\276v \001(\t\022\033\n\021json_gateway_name\030\301\276v \001(\t\022 " +
+      "\n\026hide_from_json_gateway\030\302\276v \001(\010\022\023\n\tread" +
+      "_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022" +
+      "\n\010sql_type\030\305\276v \001(\t\"\312\002\n\016MessageOptions\022\024\n" +
+      "\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001(\010" +
+      "\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001" +
+      "(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Terraf" +
+      "ormDocs\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPor" +
+      "celainMessageOptions\022\025\n\013private_sdk\030\272\276v " +
+      "\001(\010\022\022\n\010cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name" +
+      "\030\274\276v \001(\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n" +
+      "\026hide_from_json_gateway\030\276\276v \001(\010\"\266\001\n\035Cust" +
+      "omPorcelainMessageOptions\022\023\n\tconverter\030\275" +
+      "\276v \001(\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023j" +
+      "ava_porcelain_type\030\277\276v \001(\t\022\"\n\030terraform_" +
+      "porcelain_type\030\300\276v \001(\t\022 \n\026openapi_porcel" +
+      "ain_type\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025res" +
+      "ource_example_path\030\264\276v \001(\t\022\"\n\030data_sourc" +
+      "e_example_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024" +
+      "\n\nmodel_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277" +
+      "v \003(\t\"<\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v" +
+      " \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010:K\n\016method_op" +
+      "tions\022\036.google.protobuf.MethodOptions\030\220\277" +
+      "v \001(\0132\021.v1.MethodOptions:H\n\rfield_option" +
+      "s\022\035.google.protobuf.FieldOptions\030\216\277v \001(\013" +
+      "2\020.v1.FieldOptions:N\n\017message_options\022\037." +
+      "google.protobuf.MessageOptions\030\217\277v \001(\0132\022" +
+      ".v1.MessageOptions:H\n\roneof_options\022\035.go" +
+      "ogle.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1." +
+      "OneofOptions:N\n\017service_options\022\037.google" +
+      ".protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Se" +
+      "rviceOptionsBR\n\034com.strongdm.api.v1.plum" +
+      "bingZ2github.com/strongdm/strongdm-sdk-g" +
+      "o/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8632,7 +8754,7 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "Computed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", "IsCredential", "SqlType", });
+        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "TerraformComputed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", "IsCredential", "SqlType", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
