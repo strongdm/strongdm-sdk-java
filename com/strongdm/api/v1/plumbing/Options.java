@@ -22,6 +22,7 @@ public final class Options {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
     registry.add(com.strongdm.api.v1.plumbing.Options.methodOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.oneofOptions);
@@ -746,6 +747,495 @@ public final class Options {
 
     @java.lang.Override
     public com.strongdm.api.v1.plumbing.Options.MethodOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FileOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.FileOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool private_sdk = 1941700;</code>
+     * @return The privateSdk.
+     */
+    boolean getPrivateSdk();
+  }
+  /**
+   * Protobuf type {@code v1.FileOptions}
+   */
+  public static final class FileOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.FileOptions)
+      FileOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FileOptions.newBuilder() to construct.
+    private FileOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FileOptions() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FileOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FileOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 15533600: {
+
+              privateSdk_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.Options.FileOptions.class, com.strongdm.api.v1.plumbing.Options.FileOptions.Builder.class);
+    }
+
+    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941700;
+    private boolean privateSdk_;
+    /**
+     * <code>bool private_sdk = 1941700;</code>
+     * @return The privateSdk.
+     */
+    @java.lang.Override
+    public boolean getPrivateSdk() {
+      return privateSdk_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (privateSdk_ != false) {
+        output.writeBool(1941700, privateSdk_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (privateSdk_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941700, privateSdk_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.FileOptions)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.Options.FileOptions other = (com.strongdm.api.v1.plumbing.Options.FileOptions) obj;
+
+      if (getPrivateSdk()
+          != other.getPrivateSdk()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPrivateSdk());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.FileOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.FileOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.FileOptions)
+        com.strongdm.api.v1.plumbing.Options.FileOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.Options.FileOptions.class, com.strongdm.api.v1.plumbing.Options.FileOptions.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.Options.FileOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        privateSdk_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.FileOptions build() {
+        com.strongdm.api.v1.plumbing.Options.FileOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.FileOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.FileOptions result = new com.strongdm.api.v1.plumbing.Options.FileOptions(this);
+        result.privateSdk_ = privateSdk_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.FileOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.FileOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.FileOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance()) return this;
+        if (other.getPrivateSdk() != false) {
+          setPrivateSdk(other.getPrivateSdk());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.Options.FileOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.FileOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean privateSdk_ ;
+      /**
+       * <code>bool private_sdk = 1941700;</code>
+       * @return The privateSdk.
+       */
+      @java.lang.Override
+      public boolean getPrivateSdk() {
+        return privateSdk_;
+      }
+      /**
+       * <code>bool private_sdk = 1941700;</code>
+       * @param value The privateSdk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivateSdk(boolean value) {
+        
+        privateSdk_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool private_sdk = 1941700;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivateSdk() {
+        
+        privateSdk_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.FileOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.FileOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.FileOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.FileOptions();
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FileOptions>
+        PARSER = new com.google.protobuf.AbstractParser<FileOptions>() {
+      @java.lang.Override
+      public FileOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FileOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FileOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FileOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8605,6 +9095,17 @@ public final class Options {
           .newFileScopedGeneratedExtension(
         com.strongdm.api.v1.plumbing.Options.MethodOptions.class,
         com.strongdm.api.v1.plumbing.Options.MethodOptions.getDefaultInstance());
+  public static final int FILE_OPTIONS_FIELD_NUMBER = 1941800;
+  /**
+   * <code>extend .google.protobuf.FileOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.FileOptions,
+      com.strongdm.api.v1.plumbing.Options.FileOptions> fileOptions = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        com.strongdm.api.v1.plumbing.Options.FileOptions.class,
+        com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance());
   public static final int FIELD_OPTIONS_FIELD_NUMBER = 1941390;
   /**
    * <code>extend .google.protobuf.FieldOptions { ... }</code>
@@ -8655,6 +9156,11 @@ public final class Options {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_MethodOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_FileOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_FileOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_FieldOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8695,48 +9201,51 @@ public final class Options {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"0\n\rMethodOptions\022\020\n\006method" +
-      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"\260\003\n\014FieldOptions" +
-      "\022\016\n\004name\030\264\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010" +
-      "\022\035\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010itera" +
-      "ble\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_ty" +
-      "pe\030\271\276v \001(\t\022\022\n\010sdk_only\030\272\276v \001(\010\022\034\n\022terraf" +
-      "orm_computed\030\273\276v \001(\t\022\023\n\tforce_new\030\274\276v \001(" +
-      "\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tsensitive\030\276\276v" +
-      " \001(\010\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_json_nam" +
-      "e\030\300\276v \001(\t\022\033\n\021json_gateway_name\030\301\276v \001(\t\022 " +
-      "\n\026hide_from_json_gateway\030\302\276v \001(\010\022\023\n\tread" +
-      "_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022" +
-      "\n\010sql_type\030\305\276v \001(\t\"\312\002\n\016MessageOptions\022\024\n" +
-      "\nmodel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001(\010" +
-      "\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001" +
-      "(\t\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Terraf" +
-      "ormDocs\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPor" +
-      "celainMessageOptions\022\025\n\013private_sdk\030\272\276v " +
-      "\001(\010\022\022\n\010cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name" +
-      "\030\274\276v \001(\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n" +
-      "\026hide_from_json_gateway\030\276\276v \001(\010\"\266\001\n\035Cust" +
-      "omPorcelainMessageOptions\022\023\n\tconverter\030\275" +
-      "\276v \001(\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023j" +
-      "ava_porcelain_type\030\277\276v \001(\t\022\"\n\030terraform_" +
-      "porcelain_type\030\300\276v \001(\t\022 \n\026openapi_porcel" +
-      "ain_type\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025res" +
-      "ource_example_path\030\264\276v \001(\t\022\"\n\030data_sourc" +
-      "e_example_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024" +
-      "\n\nmodel_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277" +
-      "v \003(\t\"<\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v" +
-      " \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010:K\n\016method_op" +
-      "tions\022\036.google.protobuf.MethodOptions\030\220\277" +
-      "v \001(\0132\021.v1.MethodOptions:H\n\rfield_option" +
-      "s\022\035.google.protobuf.FieldOptions\030\216\277v \001(\013" +
-      "2\020.v1.FieldOptions:N\n\017message_options\022\037." +
-      "google.protobuf.MessageOptions\030\217\277v \001(\0132\022" +
-      ".v1.MessageOptions:H\n\roneof_options\022\035.go" +
-      "ogle.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1." +
-      "OneofOptions:N\n\017service_options\022\037.google" +
-      ".protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Se" +
-      "rviceOptionsBR\n\034com.strongdm.api.v1.plum" +
-      "bingZ2github.com/strongdm/strongdm-sdk-g" +
-      "o/internal/v1;v1b\006proto3"
+      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"$\n\013FileOptions\022\025" +
+      "\n\013private_sdk\030\304\301v \001(\010\"\260\003\n\014FieldOptions\022\016" +
+      "\n\004name\030\264\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035" +
+      "\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010iterabl" +
+      "e\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type" +
+      "\030\271\276v \001(\t\022\022\n\010sdk_only\030\272\276v \001(\010\022\034\n\022terrafor" +
+      "m_computed\030\273\276v \001(\t\022\023\n\tforce_new\030\274\276v \001(\010\022" +
+      "\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tsensitive\030\276\276v \001" +
+      "(\010\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_json_name\030" +
+      "\300\276v \001(\t\022\033\n\021json_gateway_name\030\301\276v \001(\t\022 \n\026" +
+      "hide_from_json_gateway\030\302\276v \001(\010\022\023\n\tread_o" +
+      "nly\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022\n\010" +
+      "sql_type\030\305\276v \001(\t\"\312\002\n\016MessageOptions\022\024\n\nm" +
+      "odel_name\030\264\276v \001(\t\022\023\n\tporcelain\030\265\276v \001(\010\022\017" +
+      "\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t" +
+      "\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.Terrafor" +
+      "mDocs\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPorce" +
+      "lainMessageOptions\022\025\n\013private_sdk\030\272\276v \001(" +
+      "\010\022\022\n\010cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274" +
+      "\276v \001(\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026h" +
+      "ide_from_json_gateway\030\276\276v \001(\010\"\266\001\n\035Custom" +
+      "PorcelainMessageOptions\022\023\n\tconverter\030\275\276v" +
+      " \001(\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023jav" +
+      "a_porcelain_type\030\277\276v \001(\t\022\"\n\030terraform_po" +
+      "rcelain_type\030\300\276v \001(\t\022 \n\026openapi_porcelai" +
+      "n_type\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resou" +
+      "rce_example_path\030\264\276v \001(\t\022\"\n\030data_source_" +
+      "example_path\030\265\276v \001(\t\"=\n\014OneofOptions\022\024\n\n" +
+      "model_name\030\204\277v \001(\t\022\027\n\rcommon_fields\030\205\277v " +
+      "\003(\t\"<\n\016ServiceOptions\022\023\n\tmain_noun\030\230\277v \001" +
+      "(\t\022\025\n\013private_sdk\030\231\277v \001(\010:K\n\016method_opti" +
+      "ons\022\036.google.protobuf.MethodOptions\030\220\277v " +
+      "\001(\0132\021.v1.MethodOptions:E\n\014file_options\022\034" +
+      ".google.protobuf.FileOptions\030\250\302v \001(\0132\017.v" +
+      "1.FileOptions:H\n\rfield_options\022\035.google." +
+      "protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Field" +
+      "Options:N\n\017message_options\022\037.google.prot" +
+      "obuf.MessageOptions\030\217\277v \001(\0132\022.v1.Message" +
+      "Options:H\n\roneof_options\022\035.google.protob" +
+      "uf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOption" +
+      "s:N\n\017service_options\022\037.google.protobuf.S" +
+      "erviceOptions\030\231\277v \001(\0132\022.v1.ServiceOption" +
+      "sBR\n\034com.strongdm.api.v1.plumbingZ2githu" +
+      "b.com/strongdm/strongdm-sdk-go/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8749,47 +9258,54 @@ public final class Options {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MethodOptions_descriptor,
         new java.lang.String[] { "Method", "Url", });
-    internal_static_v1_FieldOptions_descriptor =
+    internal_static_v1_FileOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_v1_FileOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_FileOptions_descriptor,
+        new java.lang.String[] { "PrivateSdk", });
+    internal_static_v1_FieldOptions_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
         new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "TerraformComputed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", "IsCredential", "SqlType", });
     internal_static_v1_MessageOptions_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
         new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
     internal_static_v1_CustomPorcelainMessageOptions_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_CustomPorcelainMessageOptions_descriptor,
         new java.lang.String[] { "Converter", "GoPorcelainType", "JavaPorcelainType", "TerraformPorcelainType", "OpenapiPorcelainType", });
     internal_static_v1_TerraformDocs_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_v1_TerraformDocs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_TerraformDocs_descriptor,
         new java.lang.String[] { "ResourceExamplePath", "DataSourceExamplePath", });
     internal_static_v1_OneofOptions_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_v1_OneofOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_OneofOptions_descriptor,
         new java.lang.String[] { "ModelName", "CommonFields", });
     internal_static_v1_ServiceOptions_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_v1_ServiceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ServiceOptions_descriptor,
         new java.lang.String[] { "MainNoun", "PrivateSdk", });
     methodOptions.internalInit(descriptor.getExtensions().get(0));
-    fieldOptions.internalInit(descriptor.getExtensions().get(1));
-    messageOptions.internalInit(descriptor.getExtensions().get(2));
-    oneofOptions.internalInit(descriptor.getExtensions().get(3));
-    serviceOptions.internalInit(descriptor.getExtensions().get(4));
+    fileOptions.internalInit(descriptor.getExtensions().get(1));
+    fieldOptions.internalInit(descriptor.getExtensions().get(2));
+    messageOptions.internalInit(descriptor.getExtensions().get(3));
+    oneofOptions.internalInit(descriptor.getExtensions().get(4));
+    serviceOptions.internalInit(descriptor.getExtensions().get(5));
     com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 
