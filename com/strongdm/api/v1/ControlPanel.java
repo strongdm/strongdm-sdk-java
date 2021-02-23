@@ -70,4 +70,30 @@ public class ControlPanel {
     }
     return Plumbing.convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(plumbingResponse);
   }
+  // VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
+  public ControlPanelVerifyJWTResponse verifyJWT(String token) throws RpcException {
+    ControlPanelPlumbing.ControlPanelVerifyJWTRequest.Builder builder =
+        ControlPanelPlumbing.ControlPanelVerifyJWTRequest.newBuilder();
+    builder.setToken((token));
+    ControlPanelPlumbing.ControlPanelVerifyJWTRequest req = builder.build();
+    ControlPanelPlumbing.ControlPanelVerifyJWTResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("ControlPanel.VerifyJWT", req))
+                .verifyJWT(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertControlPanelVerifyJWTResponseToPorcelain(plumbingResponse);
+  }
 }

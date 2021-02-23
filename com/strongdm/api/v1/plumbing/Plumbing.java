@@ -985,6 +985,48 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.ControlPanelVerifyJWTResponse
+      convertControlPanelVerifyJWTResponseToPorcelain(ControlPanelVerifyJWTResponse plumbing) {
+    com.strongdm.api.v1.ControlPanelVerifyJWTResponse porcelain =
+        new com.strongdm.api.v1.ControlPanelVerifyJWTResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setValid((plumbing.getValid()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static ControlPanelVerifyJWTResponse convertControlPanelVerifyJWTResponseToPlumbing(
+      com.strongdm.api.v1.ControlPanelVerifyJWTResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ControlPanelVerifyJWTResponse.Builder builder = ControlPanelVerifyJWTResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    builder.setValid(porcelain.getValid());
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.ControlPanelVerifyJWTResponse>
+      convertRepeatedControlPanelVerifyJWTResponseToPorcelain(
+          Collection<ControlPanelVerifyJWTResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertControlPanelVerifyJWTResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ControlPanelVerifyJWTResponse>
+      convertRepeatedControlPanelVerifyJWTResponseToPlumbing(
+          Collection<com.strongdm.api.v1.ControlPanelVerifyJWTResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertControlPanelVerifyJWTResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Resource convertResourceToPorcelain(Resource plumbing) {
     if (plumbing == null) {
       return null;

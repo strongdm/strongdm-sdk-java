@@ -75,6 +75,37 @@ public final class ControlPanelGrpc {
     return getGetSSHCAPublicKeyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest,
+      com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> getVerifyJWTMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "VerifyJWT",
+      requestType = com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest.class,
+      responseType = com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest,
+      com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> getVerifyJWTMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest, com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> getVerifyJWTMethod;
+    if ((getVerifyJWTMethod = ControlPanelGrpc.getVerifyJWTMethod) == null) {
+      synchronized (ControlPanelGrpc.class) {
+        if ((getVerifyJWTMethod = ControlPanelGrpc.getVerifyJWTMethod) == null) {
+          ControlPanelGrpc.getVerifyJWTMethod = getVerifyJWTMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest, com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "VerifyJWT"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ControlPanelMethodDescriptorSupplier("VerifyJWT"))
+              .build();
+        }
+      }
+    }
+    return getVerifyJWTMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -115,6 +146,16 @@ public final class ControlPanelGrpc {
       asyncUnimplementedUnaryCall(getGetSSHCAPublicKeyMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
+     * </pre>
+     */
+    public void verifyJWT(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getVerifyJWTMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -124,6 +165,13 @@ public final class ControlPanelGrpc {
                 com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest,
                 com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse>(
                   this, METHODID_GET_SSHCAPUBLIC_KEY)))
+          .addMethod(
+            getVerifyJWTMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest,
+                com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse>(
+                  this, METHODID_VERIFY_JWT)))
           .build();
     }
   }
@@ -159,6 +207,17 @@ public final class ControlPanelGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetSSHCAPublicKeyMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
+     * </pre>
+     */
+    public void verifyJWT(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getVerifyJWTMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -190,6 +249,16 @@ public final class ControlPanelGrpc {
     public com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse getSSHCAPublicKey(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetSSHCAPublicKeyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
+     * </pre>
+     */
+    public com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse verifyJWT(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getVerifyJWTMethod(), getCallOptions(), request);
     }
   }
 
@@ -224,9 +293,21 @@ public final class ControlPanelGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetSSHCAPublicKeyMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> verifyJWT(
+        com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getVerifyJWTMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_SSHCAPUBLIC_KEY = 0;
+  private static final int METHODID_VERIFY_JWT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -248,6 +329,10 @@ public final class ControlPanelGrpc {
         case METHODID_GET_SSHCAPUBLIC_KEY:
           serviceImpl.getSSHCAPublicKey((com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse>) responseObserver);
+          break;
+        case METHODID_VERIFY_JWT:
+          serviceImpl.verifyJWT((com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -311,6 +396,7 @@ public final class ControlPanelGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ControlPanelFileDescriptorSupplier())
               .addMethod(getGetSSHCAPublicKeyMethod())
+              .addMethod(getVerifyJWTMethod())
               .build();
         }
       }
