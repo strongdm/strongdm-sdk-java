@@ -9499,31 +9499,32 @@ public final class RoleAttachmentsPlumbing {
       "tResponseMetadata\0228\n\020role_attachments\030\002 " +
       "\003(\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nr" +
       "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\305\002\n\016RoleAttachment\022" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\315\002\n\016RoleAttachment\022" +
       "0\n\002id\030\001 \001(\tB$\362\370\263\007\037\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\016RoleA" +
       "ttachment\022G\n\021composite_role_id\030\002 \001(\tB,\362\370" +
       "\263\007\'\242\363\263\007\017CompositeRoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Ro" +
-      "le\022=\n\020attached_role_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006" +
-      "RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:y\372\370\263\007t\242\363\263\007\010Rol" +
-      "eRole\250\363\263\007\001\302\363\263\007]\242\363\263\007(tf_examples/role_att" +
-      "achment_resource.txt\252\363\263\007+tf_examples/rol" +
-      "e_attachment_data_source.txt2\223\004\n\017RoleAtt" +
-      "achments\022y\n\006Create\022\037.v1.RoleAttachmentCr" +
-      "eateRequest\032 .v1.RoleAttachmentCreateRes" +
-      "ponse\",\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role-" +
-      "attachments\022t\n\003Get\022\034.v1.RoleAttachmentGe" +
-      "tRequest\032\035.v1.RoleAttachmentGetResponse\"" +
-      "0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/role-attachm" +
-      "ents/{id}\022\200\001\n\006Delete\022\037.v1.RoleAttachment" +
-      "DeleteRequest\032 .v1.RoleAttachmentDeleteR" +
-      "esponse\"3\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\036\252\363\263\007\031/v1/r" +
-      "ole-attachments/{id}\022r\n\004List\022\035.v1.RoleAt" +
-      "tachmentListRequest\032\036.v1.RoleAttachmentL" +
-      "istResponse\"+\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\031\252\363\263\007\024/v1/" +
-      "role-attachments\032\030\312\371\263\007\023\302\371\263\007\016RoleAttachme" +
-      "ntBk\n\034com.strongdm.api.v1.plumbingB\027Role" +
-      "AttachmentsPlumbingZ2github.com/strongdm" +
-      "/strongdm-sdk-go/internal/v1;v1b\006proto3"
+      "le\022E\n\020attached_role_id\030\003 \001(\tB+\362\370\263\007&\242\363\263\007\016" +
+      "AttachedRoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:y\372\370\263\007t" +
+      "\242\363\263\007\010RoleRole\250\363\263\007\001\302\363\263\007]\242\363\263\007(tf_examples/" +
+      "role_attachment_resource.txt\252\363\263\007+tf_exam" +
+      "ples/role_attachment_data_source.txt2\223\004\n" +
+      "\017RoleAttachments\022y\n\006Create\022\037.v1.RoleAtta" +
+      "chmentCreateRequest\032 .v1.RoleAttachmentC" +
+      "reateResponse\",\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\031\252\363\263\007\024/" +
+      "v1/role-attachments\022t\n\003Get\022\034.v1.RoleAtta" +
+      "chmentGetRequest\032\035.v1.RoleAttachmentGetR" +
+      "esponse\"0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/role" +
+      "-attachments/{id}\022\200\001\n\006Delete\022\037.v1.RoleAt" +
+      "tachmentDeleteRequest\032 .v1.RoleAttachmen" +
+      "tDeleteResponse\"3\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\036\252\363" +
+      "\263\007\031/v1/role-attachments/{id}\022r\n\004List\022\035.v" +
+      "1.RoleAttachmentListRequest\032\036.v1.RoleAtt" +
+      "achmentListResponse\"+\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\031\252" +
+      "\363\263\007\024/v1/role-attachments\032\030\312\371\263\007\023\302\371\263\007\016Role" +
+      "AttachmentBk\n\034com.strongdm.api.v1.plumbi" +
+      "ngB\027RoleAttachmentsPlumbingZ2github.com/" +
+      "strongdm/strongdm-sdk-go/internal/v1;v1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
