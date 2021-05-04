@@ -1073,26 +1073,47 @@ public class Plumbing {
     if (plumbing.hasKubernetes()) {
       return convertKubernetesToPorcelain(plumbing.getKubernetes());
     }
+    if (plumbing.hasKubernetesUserImpersonation()) {
+      return convertKubernetesUserImpersonationToPorcelain(
+          plumbing.getKubernetesUserImpersonation());
+    }
     if (plumbing.hasKubernetesBasicAuth()) {
       return convertKubernetesBasicAuthToPorcelain(plumbing.getKubernetesBasicAuth());
     }
     if (plumbing.hasKubernetesServiceAccount()) {
       return convertKubernetesServiceAccountToPorcelain(plumbing.getKubernetesServiceAccount());
     }
+    if (plumbing.hasKubernetesServiceAccountUserImpersonation()) {
+      return convertKubernetesServiceAccountUserImpersonationToPorcelain(
+          plumbing.getKubernetesServiceAccountUserImpersonation());
+    }
     if (plumbing.hasAmazonEks()) {
       return convertAmazonEKSToPorcelain(plumbing.getAmazonEks());
+    }
+    if (plumbing.hasAmazonEksUserImpersonation()) {
+      return convertAmazonEKSUserImpersonationToPorcelain(plumbing.getAmazonEksUserImpersonation());
     }
     if (plumbing.hasGoogleGke()) {
       return convertGoogleGKEToPorcelain(plumbing.getGoogleGke());
     }
+    if (plumbing.hasGoogleGkeUserImpersonation()) {
+      return convertGoogleGKEUserImpersonationToPorcelain(plumbing.getGoogleGkeUserImpersonation());
+    }
     if (plumbing.hasAks()) {
       return convertAKSToPorcelain(plumbing.getAks());
+    }
+    if (plumbing.hasAksUserImpersonation()) {
+      return convertAKSUserImpersonationToPorcelain(plumbing.getAksUserImpersonation());
     }
     if (plumbing.hasAksBasicAuth()) {
       return convertAKSBasicAuthToPorcelain(plumbing.getAksBasicAuth());
     }
     if (plumbing.hasAksServiceAccount()) {
       return convertAKSServiceAccountToPorcelain(plumbing.getAksServiceAccount());
+    }
+    if (plumbing.hasAksServiceAccountUserImpersonation()) {
+      return convertAKSServiceAccountUserImpersonationToPorcelain(
+          plumbing.getAksServiceAccountUserImpersonation());
     }
     if (plumbing.hasMemcached()) {
       return convertMemcachedToPorcelain(plumbing.getMemcached());
@@ -1261,6 +1282,13 @@ public class Plumbing {
           convertKubernetesToPlumbing((com.strongdm.api.v1.Kubernetes) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.v1.KubernetesUserImpersonation) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setKubernetesUserImpersonation(
+          convertKubernetesUserImpersonationToPlumbing(
+              (com.strongdm.api.v1.KubernetesUserImpersonation) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.v1.KubernetesBasicAuth) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setKubernetesBasicAuth(
@@ -1275,9 +1303,23 @@ public class Plumbing {
               (com.strongdm.api.v1.KubernetesServiceAccount) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setKubernetesServiceAccountUserImpersonation(
+          convertKubernetesServiceAccountUserImpersonationToPlumbing(
+              (com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.v1.AmazonEKS) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAmazonEks(convertAmazonEKSToPlumbing((com.strongdm.api.v1.AmazonEKS) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AmazonEKSUserImpersonation) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAmazonEksUserImpersonation(
+          convertAmazonEKSUserImpersonationToPlumbing(
+              (com.strongdm.api.v1.AmazonEKSUserImpersonation) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.GoogleGKE) {
@@ -1285,9 +1327,23 @@ public class Plumbing {
       builder.setGoogleGke(convertGoogleGKEToPlumbing((com.strongdm.api.v1.GoogleGKE) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.v1.GoogleGKEUserImpersonation) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setGoogleGkeUserImpersonation(
+          convertGoogleGKEUserImpersonationToPlumbing(
+              (com.strongdm.api.v1.GoogleGKEUserImpersonation) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.v1.AKS) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAks(convertAKSToPlumbing((com.strongdm.api.v1.AKS) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AKSUserImpersonation) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAksUserImpersonation(
+          convertAKSUserImpersonationToPlumbing(
+              (com.strongdm.api.v1.AKSUserImpersonation) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.AKSBasicAuth) {
@@ -1300,6 +1356,13 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAksServiceAccount(
           convertAKSServiceAccountToPlumbing((com.strongdm.api.v1.AKSServiceAccount) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AKSServiceAccountUserImpersonation) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAksServiceAccountUserImpersonation(
+          convertAKSServiceAccountUserImpersonationToPlumbing(
+              (com.strongdm.api.v1.AKSServiceAccountUserImpersonation) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Memcached) {
@@ -2404,6 +2467,78 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.KubernetesUserImpersonation
+      convertKubernetesUserImpersonationToPorcelain(KubernetesUserImpersonation plumbing) {
+    com.strongdm.api.v1.KubernetesUserImpersonation porcelain =
+        new com.strongdm.api.v1.KubernetesUserImpersonation();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setClientCertificate((plumbing.getClientCertificate()));
+    porcelain.setClientKey((plumbing.getClientKey()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
+    return porcelain;
+  }
+
+  public static KubernetesUserImpersonation convertKubernetesUserImpersonationToPlumbing(
+      com.strongdm.api.v1.KubernetesUserImpersonation porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    KubernetesUserImpersonation.Builder builder = KubernetesUserImpersonation.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    if (porcelain.getClientCertificate() != null) {
+      builder.setClientCertificate((porcelain.getClientCertificate()));
+    }
+    if (porcelain.getClientKey() != null) {
+      builder.setClientKey((porcelain.getClientKey()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.KubernetesUserImpersonation>
+      convertRepeatedKubernetesUserImpersonationToPorcelain(
+          Collection<KubernetesUserImpersonation> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertKubernetesUserImpersonationToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<KubernetesUserImpersonation>
+      convertRepeatedKubernetesUserImpersonationToPlumbing(
+          Collection<com.strongdm.api.v1.KubernetesUserImpersonation> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertKubernetesUserImpersonationToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.KubernetesBasicAuth convertKubernetesBasicAuthToPorcelain(
       KubernetesBasicAuth plumbing) {
     com.strongdm.api.v1.KubernetesBasicAuth porcelain =
@@ -2533,6 +2668,73 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation
+      convertKubernetesServiceAccountUserImpersonationToPorcelain(
+          KubernetesServiceAccountUserImpersonation plumbing) {
+    com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation porcelain =
+        new com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setToken((plumbing.getToken()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
+    return porcelain;
+  }
+
+  public static KubernetesServiceAccountUserImpersonation
+      convertKubernetesServiceAccountUserImpersonationToPlumbing(
+          com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    KubernetesServiceAccountUserImpersonation.Builder builder =
+        KubernetesServiceAccountUserImpersonation.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getToken() != null) {
+      builder.setToken((porcelain.getToken()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation>
+      convertRepeatedKubernetesServiceAccountUserImpersonationToPorcelain(
+          Collection<KubernetesServiceAccountUserImpersonation> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertKubernetesServiceAccountUserImpersonationToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<KubernetesServiceAccountUserImpersonation>
+      convertRepeatedKubernetesServiceAccountUserImpersonationToPlumbing(
+          Collection<com.strongdm.api.v1.KubernetesServiceAccountUserImpersonation> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertKubernetesServiceAccountUserImpersonationToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.AmazonEKS convertAmazonEKSToPorcelain(AmazonEKS plumbing) {
     com.strongdm.api.v1.AmazonEKS porcelain = new com.strongdm.api.v1.AmazonEKS();
     porcelain.setId((plumbing.getId()));
@@ -2614,6 +2816,92 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.AmazonEKSUserImpersonation
+      convertAmazonEKSUserImpersonationToPorcelain(AmazonEKSUserImpersonation plumbing) {
+    com.strongdm.api.v1.AmazonEKSUserImpersonation porcelain =
+        new com.strongdm.api.v1.AmazonEKSUserImpersonation();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setClusterName((plumbing.getClusterName()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
+    return porcelain;
+  }
+
+  public static AmazonEKSUserImpersonation convertAmazonEKSUserImpersonationToPlumbing(
+      com.strongdm.api.v1.AmazonEKSUserImpersonation porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AmazonEKSUserImpersonation.Builder builder = AmazonEKSUserImpersonation.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint((porcelain.getEndpoint()));
+    }
+    if (porcelain.getAccessKey() != null) {
+      builder.setAccessKey((porcelain.getAccessKey()));
+    }
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey((porcelain.getSecretAccessKey()));
+    }
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getClusterName() != null) {
+      builder.setClusterName((porcelain.getClusterName()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AmazonEKSUserImpersonation>
+      convertRepeatedAmazonEKSUserImpersonationToPorcelain(
+          Collection<AmazonEKSUserImpersonation> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAmazonEKSUserImpersonationToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AmazonEKSUserImpersonation>
+      convertRepeatedAmazonEKSUserImpersonationToPlumbing(
+          Collection<com.strongdm.api.v1.AmazonEKSUserImpersonation> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAmazonEKSUserImpersonationToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.GoogleGKE convertGoogleGKEToPorcelain(GoogleGKE plumbing) {
     com.strongdm.api.v1.GoogleGKE porcelain = new com.strongdm.api.v1.GoogleGKE();
     porcelain.setId((plumbing.getId()));
@@ -2672,6 +2960,72 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.GoogleGKE> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertGoogleGKEToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.GoogleGKEUserImpersonation
+      convertGoogleGKEUserImpersonationToPorcelain(GoogleGKEUserImpersonation plumbing) {
+    com.strongdm.api.v1.GoogleGKEUserImpersonation porcelain =
+        new com.strongdm.api.v1.GoogleGKEUserImpersonation();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setServiceAccountKey((plumbing.getServiceAccountKey()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
+    return porcelain;
+  }
+
+  public static GoogleGKEUserImpersonation convertGoogleGKEUserImpersonationToPlumbing(
+      com.strongdm.api.v1.GoogleGKEUserImpersonation porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GoogleGKEUserImpersonation.Builder builder = GoogleGKEUserImpersonation.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint((porcelain.getEndpoint()));
+    }
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    if (porcelain.getServiceAccountKey() != null) {
+      builder.setServiceAccountKey((porcelain.getServiceAccountKey()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.GoogleGKEUserImpersonation>
+      convertRepeatedGoogleGKEUserImpersonationToPorcelain(
+          Collection<GoogleGKEUserImpersonation> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertGoogleGKEUserImpersonationToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GoogleGKEUserImpersonation>
+      convertRepeatedGoogleGKEUserImpersonationToPlumbing(
+          Collection<com.strongdm.api.v1.GoogleGKEUserImpersonation> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertGoogleGKEUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -2739,6 +3093,76 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.AKS> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertAKSToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AKSUserImpersonation convertAKSUserImpersonationToPorcelain(
+      AKSUserImpersonation plumbing) {
+    com.strongdm.api.v1.AKSUserImpersonation porcelain =
+        new com.strongdm.api.v1.AKSUserImpersonation();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setClientCertificate((plumbing.getClientCertificate()));
+    porcelain.setClientKey((plumbing.getClientKey()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
+    return porcelain;
+  }
+
+  public static AKSUserImpersonation convertAKSUserImpersonationToPlumbing(
+      com.strongdm.api.v1.AKSUserImpersonation porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AKSUserImpersonation.Builder builder = AKSUserImpersonation.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    if (porcelain.getClientCertificate() != null) {
+      builder.setClientCertificate((porcelain.getClientCertificate()));
+    }
+    if (porcelain.getClientKey() != null) {
+      builder.setClientKey((porcelain.getClientKey()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AKSUserImpersonation>
+      convertRepeatedAKSUserImpersonationToPorcelain(Collection<AKSUserImpersonation> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAKSUserImpersonationToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AKSUserImpersonation> convertRepeatedAKSUserImpersonationToPlumbing(
+      Collection<com.strongdm.api.v1.AKSUserImpersonation> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAKSUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -2865,6 +3289,73 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.AKSServiceAccount> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertAKSServiceAccountToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AKSServiceAccountUserImpersonation
+      convertAKSServiceAccountUserImpersonationToPorcelain(
+          AKSServiceAccountUserImpersonation plumbing) {
+    com.strongdm.api.v1.AKSServiceAccountUserImpersonation porcelain =
+        new com.strongdm.api.v1.AKSServiceAccountUserImpersonation();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setToken((plumbing.getToken()));
+    porcelain.setHealthcheckNamespace((plumbing.getHealthcheckNamespace()));
+    return porcelain;
+  }
+
+  public static AKSServiceAccountUserImpersonation
+      convertAKSServiceAccountUserImpersonationToPlumbing(
+          com.strongdm.api.v1.AKSServiceAccountUserImpersonation porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AKSServiceAccountUserImpersonation.Builder builder =
+        AKSServiceAccountUserImpersonation.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getToken() != null) {
+      builder.setToken((porcelain.getToken()));
+    }
+    if (porcelain.getHealthcheckNamespace() != null) {
+      builder.setHealthcheckNamespace((porcelain.getHealthcheckNamespace()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AKSServiceAccountUserImpersonation>
+      convertRepeatedAKSServiceAccountUserImpersonationToPorcelain(
+          Collection<AKSServiceAccountUserImpersonation> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAKSServiceAccountUserImpersonationToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AKSServiceAccountUserImpersonation>
+      convertRepeatedAKSServiceAccountUserImpersonationToPlumbing(
+          Collection<com.strongdm.api.v1.AKSServiceAccountUserImpersonation> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAKSServiceAccountUserImpersonationToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

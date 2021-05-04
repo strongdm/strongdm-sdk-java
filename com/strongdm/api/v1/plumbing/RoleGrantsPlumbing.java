@@ -9497,29 +9497,29 @@ public final class RoleGrantsPlumbing {
       "1.ListResponseMetadata\022.\n\013role_grants\030\002 " +
       "\003(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_l" +
       "imit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\260\002\n\tRoleGrant\0220\n\002id\030\001 \001(" +
-      "\tB$\362\370\263\007\037\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\016DatasourceRole\022" +
-      "D\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Datasour" +
-      "ceID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0224\n\007role_id" +
-      "\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004R" +
-      "ole:u\372\370\263\007p\242\363\263\007\016DatasourceRole\250\363\263\007\001\302\363\263\007S\242" +
-      "\363\263\007#tf_examples/role_grant_resource.txt\252" +
-      "\363\263\007&tf_examples/role_grant_data_source.t" +
-      "xt2\314\003\n\nRoleGrants\022j\n\006Create\022\032.v1.RoleGra" +
-      "ntCreateRequest\032\033.v1.RoleGrantCreateResp" +
-      "onse\"\'\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\024\252\363\263\007\017/v1/role-g" +
-      "rants\022e\n\003Get\022\027.v1.RoleGrantGetRequest\032\030." +
-      "v1.RoleGrantGetResponse\"+\202\371\263\007\010\242\363\263\007\003get\202\371" +
-      "\263\007\031\252\363\263\007\024/v1/role-grants/{id}\022q\n\006Delete\022\032" +
-      ".v1.RoleGrantDeleteRequest\032\033.v1.RoleGran" +
-      "tDeleteResponse\".\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\031\252\363" +
-      "\263\007\024/v1/role-grants/{id}\022c\n\004List\022\030.v1.Rol" +
-      "eGrantListRequest\032\031.v1.RoleGrantListResp" +
-      "onse\"&\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007\017/v1/role-gr" +
-      "ants\032\023\312\371\263\007\016\302\371\263\007\tRoleGrantBf\n\034com.strongd" +
-      "m.api.v1.plumbingB\022RoleGrantsPlumbingZ2g" +
-      "ithub.com/strongdm/strongdm-sdk-go/inter" +
-      "nal/v1;v1b\006proto3"
+      "\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\274\002\n\tRoleGrant\0226\n\002id\030\001 \001(" +
+      "\tB*\362\370\263\007%\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\024LegacyDatasourc" +
+      "eRole\022D\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Da" +
+      "tasourceID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0224\n\007r" +
+      "ole_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001" +
+      "\312\363\263\007\004Role:{\372\370\263\007v\242\363\263\007\024LegacyDatasourceRol" +
+      "e\250\363\263\007\001\302\363\263\007S\242\363\263\007#tf_examples/role_grant_r" +
+      "esource.txt\252\363\263\007&tf_examples/role_grant_d" +
+      "ata_source.txt2\314\003\n\nRoleGrants\022j\n\006Create\022" +
+      "\032.v1.RoleGrantCreateRequest\032\033.v1.RoleGra" +
+      "ntCreateResponse\"\'\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\024\252\363\263" +
+      "\007\017/v1/role-grants\022e\n\003Get\022\027.v1.RoleGrantG" +
+      "etRequest\032\030.v1.RoleGrantGetResponse\"+\202\371\263" +
+      "\007\010\242\363\263\007\003get\202\371\263\007\031\252\363\263\007\024/v1/role-grants/{id}" +
+      "\022q\n\006Delete\022\032.v1.RoleGrantDeleteRequest\032\033" +
+      ".v1.RoleGrantDeleteResponse\".\202\371\263\007\013\242\363\263\007\006d" +
+      "elete\202\371\263\007\031\252\363\263\007\024/v1/role-grants/{id}\022c\n\004L" +
+      "ist\022\030.v1.RoleGrantListRequest\032\031.v1.RoleG" +
+      "rantListResponse\"&\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007" +
+      "\017/v1/role-grants\032\023\312\371\263\007\016\302\371\263\007\tRoleGrantBf\n" +
+      "\034com.strongdm.api.v1.plumbingB\022RoleGrant" +
+      "sPlumbingZ2github.com/strongdm/strongdm-" +
+      "sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
