@@ -77,6 +77,16 @@ public class AmazonES implements Resource {
     this.secretStoreId = in;
   }
 
+  private String egressFilter;
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public String getEgressFilter() {
+    return this.egressFilter;
+  }
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public void setEgressFilter(String in) {
+    this.egressFilter = in;
+  }
+
   private String region;
 
   public String getRegion() {

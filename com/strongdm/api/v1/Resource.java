@@ -33,4 +33,8 @@ public interface Resource {
   String getSecretStoreId();
   // Sets the secret store id of the Resource.
   void setSecretStoreId(String secretStoreId);
+  // Returns the egress filter of the Resource.
+  String getEgressFilter();
+  // Sets the egress filter of the Resource.
+  void setEgressFilter(String egressFilter);
 }
