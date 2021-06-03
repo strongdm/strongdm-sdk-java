@@ -75,4 +75,16 @@ public class Relay implements Node {
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
   }
+
+  private String gatewayFilter;
+  // GatewayFilter can be used to restrict the peering between relays and
+  // gateways.
+  public String getGatewayFilter() {
+    return this.gatewayFilter;
+  }
+  // GatewayFilter can be used to restrict the peering between relays and
+  // gateways.
+  public void setGatewayFilter(String in) {
+    this.gatewayFilter = in;
+  }
 }

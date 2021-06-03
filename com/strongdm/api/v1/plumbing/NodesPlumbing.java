@@ -12055,6 +12055,28 @@ public final class NodesPlumbing {
      * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+     * @return The gatewayFilter.
+     */
+    java.lang.String getGatewayFilter();
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for gatewayFilter.
+     */
+    com.google.protobuf.ByteString
+        getGatewayFilterBytes();
   }
   /**
    * <pre>
@@ -12076,6 +12098,7 @@ public final class NodesPlumbing {
       id_ = "";
       name_ = "";
       state_ = "";
+      gatewayFilter_ = "";
     }
 
     @java.lang.Override
@@ -12137,6 +12160,12 @@ public final class NodesPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gatewayFilter_ = s;
               break;
             }
             default: {
@@ -12351,6 +12380,54 @@ public final class NodesPlumbing {
       return getTags();
     }
 
+    public static final int GATEWAY_FILTER_FIELD_NUMBER = 5;
+    private volatile java.lang.Object gatewayFilter_;
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+     * @return The gatewayFilter.
+     */
+    @java.lang.Override
+    public java.lang.String getGatewayFilter() {
+      java.lang.Object ref = gatewayFilter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gatewayFilter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for gatewayFilter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGatewayFilterBytes() {
+      java.lang.Object ref = gatewayFilter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gatewayFilter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12377,6 +12454,9 @@ public final class NodesPlumbing {
       if (tags_ != null) {
         output.writeMessage(4, getTags());
       }
+      if (!getGatewayFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, gatewayFilter_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12398,6 +12478,9 @@ public final class NodesPlumbing {
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTags());
+      }
+      if (!getGatewayFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, gatewayFilter_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12425,6 +12508,8 @@ public final class NodesPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getGatewayFilter()
+          .equals(other.getGatewayFilter())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12446,6 +12531,8 @@ public final class NodesPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + GATEWAY_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getGatewayFilter().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12595,6 +12682,8 @@ public final class NodesPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        gatewayFilter_ = "";
+
         return this;
       }
 
@@ -12629,6 +12718,7 @@ public final class NodesPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.gatewayFilter_ = gatewayFilter_;
         onBuilt();
         return result;
       }
@@ -12691,6 +12781,10 @@ public final class NodesPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getGatewayFilter().isEmpty()) {
+          gatewayFilter_ = other.gatewayFilter_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13173,6 +13267,107 @@ public final class NodesPlumbing {
         }
         return tagsBuilder_;
       }
+
+      private java.lang.Object gatewayFilter_ = "";
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+       * @return The gatewayFilter.
+       */
+      public java.lang.String getGatewayFilter() {
+        java.lang.Object ref = gatewayFilter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gatewayFilter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for gatewayFilter.
+       */
+      public com.google.protobuf.ByteString
+          getGatewayFilterBytes() {
+        java.lang.Object ref = gatewayFilter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gatewayFilter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The gatewayFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gatewayFilter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGatewayFilter() {
+        
+        gatewayFilter_ = getDefaultInstance().getGatewayFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for gatewayFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gatewayFilter_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13360,6 +13555,28 @@ public final class NodesPlumbing {
      * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+     * @return The gatewayFilter.
+     */
+    java.lang.String getGatewayFilter();
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for gatewayFilter.
+     */
+    com.google.protobuf.ByteString
+        getGatewayFilterBytes();
   }
   /**
    * <pre>
@@ -13383,6 +13600,7 @@ public final class NodesPlumbing {
       state_ = "";
       listenAddress_ = "";
       bindAddress_ = "";
+      gatewayFilter_ = "";
     }
 
     @java.lang.Override
@@ -13456,6 +13674,12 @@ public final class NodesPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gatewayFilter_ = s;
               break;
             }
             default: {
@@ -13762,6 +13986,54 @@ public final class NodesPlumbing {
       return getTags();
     }
 
+    public static final int GATEWAY_FILTER_FIELD_NUMBER = 7;
+    private volatile java.lang.Object gatewayFilter_;
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+     * @return The gatewayFilter.
+     */
+    @java.lang.Override
+    public java.lang.String getGatewayFilter() {
+      java.lang.Object ref = gatewayFilter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gatewayFilter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * GatewayFilter can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for gatewayFilter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGatewayFilterBytes() {
+      java.lang.Object ref = gatewayFilter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gatewayFilter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13794,6 +14066,9 @@ public final class NodesPlumbing {
       if (tags_ != null) {
         output.writeMessage(6, getTags());
       }
+      if (!getGatewayFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, gatewayFilter_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13821,6 +14096,9 @@ public final class NodesPlumbing {
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTags());
+      }
+      if (!getGatewayFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, gatewayFilter_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13852,6 +14130,8 @@ public final class NodesPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getGatewayFilter()
+          .equals(other.getGatewayFilter())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13877,6 +14157,8 @@ public final class NodesPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + GATEWAY_FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getGatewayFilter().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14030,6 +14312,8 @@ public final class NodesPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        gatewayFilter_ = "";
+
         return this;
       }
 
@@ -14066,6 +14350,7 @@ public final class NodesPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.gatewayFilter_ = gatewayFilter_;
         onBuilt();
         return result;
       }
@@ -14136,6 +14421,10 @@ public final class NodesPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getGatewayFilter().isEmpty()) {
+          gatewayFilter_ = other.gatewayFilter_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14810,6 +15099,107 @@ public final class NodesPlumbing {
         }
         return tagsBuilder_;
       }
+
+      private java.lang.Object gatewayFilter_ = "";
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+       * @return The gatewayFilter.
+       */
+      public java.lang.String getGatewayFilter() {
+        java.lang.Object ref = gatewayFilter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gatewayFilter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for gatewayFilter.
+       */
+      public com.google.protobuf.ByteString
+          getGatewayFilterBytes() {
+        java.lang.Object ref = gatewayFilter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gatewayFilter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The gatewayFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gatewayFilter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGatewayFilter() {
+        
+        gatewayFilter_ = getDefaultInstance().getGatewayFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GatewayFilter can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for gatewayFilter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gatewayFilter_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14977,36 +15367,38 @@ public final class NodesPlumbing {
       "\001(\0132\013.v1.GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_ex" +
       "amples/node_resource.txt\252\363\263\007 tf_examples" +
       "/node_data_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022" +
-      "\034\252\370\263\007\t\242\370\263\007\004Node\252\370\263\007\t\252\370\263\007\004tags\"\313\001\n\005Relay\022" +
+      "\034\252\370\263\007\t\242\370\263\007\004Node\252\370\263\007\t\252\370\263\007\004tags\"\201\002\n\005Relay\022" +
       "&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Node\022" +
       ".\n\004name\030\002 \001(\tB \362\370\263\007\033\242\363\263\007\004Name\260\363\263\007\001\332\363\263\007\010o" +
       "ptional\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\024\242\363\263\007\005State\260" +
       "\363\263\007\001\230\364\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016" +
-      "\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\001\"\325\002\n\007" +
-      "Gateway\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363" +
-      "\263\007\004Node\022.\n\004name\030\002 \001(\tB \362\370\263\007\033\242\363\263\007\004Name\260\363\263" +
-      "\007\001\332\363\263\007\010optional\022(\n\005state\030\003 \001(\tB\031\362\370\263\007\024\242\363\263" +
-      "\007\005State\260\363\263\007\001\230\364\263\007\001\022@\n\016listen_address\030\004 \001(" +
-      "\tB(\362\370\263\007#\242\363\263\007\nListenAddr\250\363\263\007\001\260\363\263\007\001\300\363\263\007\001\340\363" +
-      "\263\007\001\022D\n\014bind_address\030\005 \001(\tB.\362\370\263\007)\242\363\263\007\010Bin" +
-      "dAddr\250\363\263\007\001\260\363\263\007\001\332\363\263\007\010optional\340\363\263\007\001\022+\n\004tag" +
-      "s\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023" +
-      "\372\370\263\007\016\242\363\263\007\004Node\250\363\263\007\0012\342\003\n\005Nodes\022Z\n\006Create\022" +
-      "\025.v1.NodeCreateRequest\032\026.v1.NodeCreateRe" +
-      "sponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/node" +
-      "s\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.NodeGe" +
-      "tResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/no" +
-      "des/{id}\022^\n\006Update\022\025.v1.NodeUpdateReques" +
-      "t\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363\263\007\003put" +
-      "\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete\022\025.v1." +
-      "NodeDeleteRequest\032\026.v1.NodeDeleteRespons" +
-      "e\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{" +
-      "id}\022S\n\004List\022\023.v1.NodeListRequest\032\024.v1.No" +
-      "deListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/" +
-      "v1/nodes\032\016\312\371\263\007\t\302\371\263\007\004NodeBa\n\034com.strongdm" +
-      ".api.v1.plumbingB\rNodesPlumbingZ2github." +
-      "com/strongdm/strongdm-sdk-go/internal/v1" +
-      ";v1b\006proto3"
+      "\242\363\263\007\004Tags\260\363\263\007\001\0224\n\016gateway_filter\030\005 \001(\tB\034" +
+      "\362\370\263\007\027\242\363\263\007\rGatewayFilter\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004" +
+      "Node\250\363\263\007\001\"\213\003\n\007Gateway\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025" +
+      "\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004Node\022.\n\004name\030\002 \001(\tB \362\370\263" +
+      "\007\033\242\363\263\007\004Name\260\363\263\007\001\332\363\263\007\010optional\022(\n\005state\030\003" +
+      " \001(\tB\031\362\370\263\007\024\242\363\263\007\005State\260\363\263\007\001\230\364\263\007\001\022@\n\016liste" +
+      "n_address\030\004 \001(\tB(\362\370\263\007#\242\363\263\007\nListenAddr\250\363\263" +
+      "\007\001\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022D\n\014bind_address\030\005 \001(\tB" +
+      ".\362\370\263\007)\242\363\263\007\010BindAddr\250\363\263\007\001\260\363\263\007\001\332\363\263\007\010option" +
+      "al\340\363\263\007\001\022+\n\004tags\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363" +
+      "\263\007\004Tags\260\363\263\007\001\0224\n\016gateway_filter\030\007 \001(\tB\034\362\370" +
+      "\263\007\027\242\363\263\007\rGatewayFilter\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004No" +
+      "de\250\363\263\007\0012\342\003\n\005Nodes\022Z\n\006Create\022\025.v1.NodeCre" +
+      "ateRequest\032\026.v1.NodeCreateResponse\"!\202\371\263\007" +
+      "\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003Get\022\022.v" +
+      "1.NodeGetRequest\032\023.v1.NodeGetResponse\"%\202" +
+      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022^\n\006" +
+      "Update\022\025.v1.NodeUpdateRequest\032\026.v1.NodeU" +
+      "pdateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v" +
+      "1/nodes/{id}\022a\n\006Delete\022\025.v1.NodeDeleteRe" +
+      "quest\032\026.v1.NodeDeleteResponse\"(\202\371\263\007\013\242\363\263\007" +
+      "\006delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022S\n\004List\022" +
+      "\023.v1.NodeListRequest\032\024.v1.NodeListRespon" +
+      "se\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\016\312\371" +
+      "\263\007\t\302\371\263\007\004NodeBa\n\034com.strongdm.api.v1.plum" +
+      "bingB\rNodesPlumbingZ2github.com/strongdm" +
+      "/strongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15086,13 +15478,13 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "Tags", });
+        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

@@ -5693,6 +5693,7 @@ public class Plumbing {
     porcelain.setName((plumbing.getName()));
     porcelain.setState((plumbing.getState()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     return porcelain;
   }
 
@@ -5712,6 +5713,9 @@ public class Plumbing {
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getGatewayFilter() != null) {
+      builder.setGatewayFilter((porcelain.getGatewayFilter()));
     }
     return builder.build();
   }
@@ -5738,6 +5742,7 @@ public class Plumbing {
     porcelain.setListenAddress((plumbing.getListenAddress()));
     porcelain.setBindAddress((plumbing.getBindAddress()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     return porcelain;
   }
 
@@ -5763,6 +5768,9 @@ public class Plumbing {
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getGatewayFilter() != null) {
+      builder.setGatewayFilter((porcelain.getGatewayFilter()));
     }
     return builder.build();
   }

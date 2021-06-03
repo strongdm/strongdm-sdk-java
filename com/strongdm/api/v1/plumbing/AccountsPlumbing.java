@@ -12079,6 +12079,26 @@ public final class AccountsPlumbing {
      * <code>.v1.Tags tags = 6 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.v1.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+
+    /**
+     * <pre>
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+     * </pre>
+     *
+     * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+     * @return The permissionLevel.
+     */
+    java.lang.String getPermissionLevel();
+    /**
+     * <pre>
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+     * </pre>
+     *
+     * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for permissionLevel.
+     */
+    com.google.protobuf.ByteString
+        getPermissionLevelBytes();
   }
   /**
    * <pre>
@@ -12102,6 +12122,7 @@ public final class AccountsPlumbing {
       email_ = "";
       firstName_ = "";
       lastName_ = "";
+      permissionLevel_ = "";
     }
 
     @java.lang.Override
@@ -12174,6 +12195,12 @@ public final class AccountsPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              permissionLevel_ = s;
               break;
             }
             default: {
@@ -12445,6 +12472,52 @@ public final class AccountsPlumbing {
       return getTags();
     }
 
+    public static final int PERMISSION_LEVEL_FIELD_NUMBER = 7;
+    private volatile java.lang.Object permissionLevel_;
+    /**
+     * <pre>
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+     * </pre>
+     *
+     * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+     * @return The permissionLevel.
+     */
+    @java.lang.Override
+    public java.lang.String getPermissionLevel() {
+      java.lang.Object ref = permissionLevel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        permissionLevel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+     * </pre>
+     *
+     * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for permissionLevel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPermissionLevelBytes() {
+      java.lang.Object ref = permissionLevel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        permissionLevel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12477,6 +12550,9 @@ public final class AccountsPlumbing {
       if (tags_ != null) {
         output.writeMessage(6, getTags());
       }
+      if (!getPermissionLevelBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, permissionLevel_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12505,6 +12581,9 @@ public final class AccountsPlumbing {
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTags());
+      }
+      if (!getPermissionLevelBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, permissionLevel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12536,6 +12615,8 @@ public final class AccountsPlumbing {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
+      if (!getPermissionLevel()
+          .equals(other.getPermissionLevel())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12562,6 +12643,8 @@ public final class AccountsPlumbing {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
+      hash = (37 * hash) + PERMISSION_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + getPermissionLevel().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12716,6 +12799,8 @@ public final class AccountsPlumbing {
           tags_ = null;
           tagsBuilder_ = null;
         }
+        permissionLevel_ = "";
+
         return this;
       }
 
@@ -12752,6 +12837,7 @@ public final class AccountsPlumbing {
         } else {
           result.tags_ = tagsBuilder_.build();
         }
+        result.permissionLevel_ = permissionLevel_;
         onBuilt();
         return result;
       }
@@ -12821,6 +12907,10 @@ public final class AccountsPlumbing {
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
+        }
+        if (!other.getPermissionLevel().isEmpty()) {
+          permissionLevel_ = other.permissionLevel_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13431,6 +13521,102 @@ public final class AccountsPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
+      }
+
+      private java.lang.Object permissionLevel_ = "";
+      /**
+       * <pre>
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+       * </pre>
+       *
+       * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+       * @return The permissionLevel.
+       */
+      public java.lang.String getPermissionLevel() {
+        java.lang.Object ref = permissionLevel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          permissionLevel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+       * </pre>
+       *
+       * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for permissionLevel.
+       */
+      public com.google.protobuf.ByteString
+          getPermissionLevelBytes() {
+        java.lang.Object ref = permissionLevel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          permissionLevel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+       * </pre>
+       *
+       * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The permissionLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionLevel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        permissionLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+       * </pre>
+       *
+       * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissionLevel() {
+        
+        permissionLevel_ = getDefaultInstance().getPermissionLevel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
+       * </pre>
+       *
+       * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for permissionLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionLevelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        permissionLevel_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14756,35 +14942,37 @@ public final class AccountsPlumbing {
       "amples/account_resource.txt\252\363\263\007#tf_examp" +
       "les/account_data_source.txtB:\n\007account\022/" +
       "\252\370\263\007\t\242\370\263\007\004User\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370" +
-      "\263\007\004tags\"\242\002\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002" +
+      "\263\007\004tags\"\344\002\n\004User\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002" +
       "ID\260\363\263\007\001\312\363\263\007\004User\022(\n\005email\030\002 \001(\tB\031\362\370\263\007\024\242\363" +
       "\263\007\005Email\260\363\263\007\001\300\363\263\007\001\0221\n\nfirst_name\030\003 \001(\tB\035" +
       "\362\370\263\007\030\242\363\263\007\tFirstName\260\363\263\007\001\300\363\263\007\001\022/\n\tlast_na" +
       "me\030\004 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"" +
       "\n\tsuspended\030\005 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022+\n\004ta" +
-      "gs\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:" +
-      "\023\372\370\263\007\016\242\363\263\007\004User\250\363\263\007\001\"\303\001\n\007Service\022&\n\002id\030\001" +
-      " \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n\004name" +
-      "\030\002 \001(\tB\034\362\370\263\007\027\242\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"\n\t" +
-      "suspended\030\003 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022+\n\004tags" +
-      "\030\004 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372" +
-      "\370\263\007\016\242\363\263\007\004User\250\363\263\007\0012\225\004\n\010Accounts\022c\n\006Creat" +
-      "e\022\030.v1.AccountCreateRequest\032\031.v1.Account" +
-      "CreateResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014" +
-      "/v1/accounts\022^\n\003Get\022\025.v1.AccountGetReque" +
-      "st\032\026.v1.AccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003ge" +
-      "t\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006Update\022\030" +
-      ".v1.AccountUpdateRequest\032\031.v1.AccountUpd" +
-      "ateResponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/" +
-      "accounts/{id}\022j\n\006Delete\022\030.v1.AccountDele" +
-      "teRequest\032\031.v1.AccountDeleteResponse\"+\202\371" +
-      "\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id" +
-      "}\022\\\n\004List\022\026.v1.AccountListRequest\032\027.v1.A" +
-      "ccountListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363" +
-      "\263\007\014/v1/accounts\032\021\312\371\263\007\014\302\371\263\007\007AccountBd\n\034co" +
-      "m.strongdm.api.v1.plumbingB\020AccountsPlum" +
-      "bingZ2github.com/strongdm/strongdm-sdk-g" +
-      "o/internal/v1;v1b\006proto3"
+      "gs\030\006 \001(\0132\010.v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001\022" +
+      "@\n\020permission_level\030\007 \001(\tB&\362\370\263\007!\260\363\263\007\001\320\363\263" +
+      "\007\001\332\363\263\007\010readonly\230\364\263\007\001\260\364\263\007\001:\023\372\370\263\007\016\242\363\263\007\004Use" +
+      "r\250\363\263\007\001\"\303\001\n\007Service\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263" +
+      "\007\002ID\260\363\263\007\001\312\363\263\007\004User\022*\n\004name\030\002 \001(\tB\034\362\370\263\007\027\242" +
+      "\363\263\007\010LastName\260\363\263\007\001\300\363\263\007\001\022\"\n\tsuspended\030\003 \001(" +
+      "\010B\017\362\370\263\007\n\260\363\263\007\001\320\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.Ta" +
+      "gsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:\023\372\370\263\007\016\242\363\263\007\004User\250" +
+      "\363\263\007\0012\225\004\n\010Accounts\022c\n\006Create\022\030.v1.Account" +
+      "CreateRequest\032\031.v1.AccountCreateResponse" +
+      "\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/accounts\022^" +
+      "\n\003Get\022\025.v1.AccountGetRequest\032\026.v1.Accoun" +
+      "tGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1" +
+      "/accounts/{id}\022g\n\006Update\022\030.v1.AccountUpd" +
+      "ateRequest\032\031.v1.AccountUpdateResponse\"(\202" +
+      "\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022" +
+      "j\n\006Delete\022\030.v1.AccountDeleteRequest\032\031.v1" +
+      ".AccountDeleteResponse\"+\202\371\263\007\013\242\363\263\007\006delete" +
+      "\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004List\022\026.v1" +
+      ".AccountListRequest\032\027.v1.AccountListResp" +
+      "onse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/account" +
+      "s\032\021\312\371\263\007\014\302\371\263\007\007AccountBd\n\034com.strongdm.api" +
+      ".v1.plumbingB\020AccountsPlumbingZ2github.c" +
+      "om/strongdm/strongdm-sdk-go/internal/v1;" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14864,7 +15052,7 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new
