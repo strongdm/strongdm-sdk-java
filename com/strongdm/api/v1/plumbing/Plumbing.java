@@ -1034,6 +1034,9 @@ public class Plumbing {
     if (plumbing.hasRabbitMqamqp091()) {
       return convertRabbitMQAMQP091ToPorcelain(plumbing.getRabbitMqamqp091());
     }
+    if (plumbing.hasAmazonMqamqp091()) {
+      return convertAmazonMQAMQP091ToPorcelain(plumbing.getAmazonMqamqp091());
+    }
     if (plumbing.hasAthena()) {
       return convertAthenaToPorcelain(plumbing.getAthena());
     }
@@ -1216,6 +1219,12 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setRabbitMqamqp091(
           convertRabbitMQAMQP091ToPlumbing((com.strongdm.api.v1.RabbitMQAMQP091) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AmazonMQAMQP091) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAmazonMqamqp091(
+          convertAmazonMQAMQP091ToPlumbing((com.strongdm.api.v1.AmazonMQAMQP091) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Athena) {
@@ -1610,6 +1619,75 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.RabbitMQAMQP091> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertRabbitMQAMQP091ToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AmazonMQAMQP091 convertAmazonMQAMQP091ToPorcelain(
+      AmazonMQAMQP091 plumbing) {
+    com.strongdm.api.v1.AmazonMQAMQP091 porcelain = new com.strongdm.api.v1.AmazonMQAMQP091();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setUsername((plumbing.getUsername()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
+    return porcelain;
+  }
+
+  public static AmazonMQAMQP091 convertAmazonMQAMQP091ToPlumbing(
+      com.strongdm.api.v1.AmazonMQAMQP091 porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AmazonMQAMQP091.Builder builder = AmazonMQAMQP091.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    builder.setPort(porcelain.getPort());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AmazonMQAMQP091> convertRepeatedAmazonMQAMQP091ToPorcelain(
+      Collection<AmazonMQAMQP091> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAmazonMQAMQP091ToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AmazonMQAMQP091> convertRepeatedAmazonMQAMQP091ToPlumbing(
+      Collection<com.strongdm.api.v1.AmazonMQAMQP091> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAmazonMQAMQP091ToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
