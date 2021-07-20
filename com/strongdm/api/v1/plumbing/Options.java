@@ -3870,6 +3870,18 @@ public final class Options {
      * @return The hideFromJsonGateway.
      */
     boolean getHideFromJsonGateway();
+
+    /**
+     * <code>string terraform_provider_name = 1941311;</code>
+     * @return The terraformProviderName.
+     */
+    java.lang.String getTerraformProviderName();
+    /**
+     * <code>string terraform_provider_name = 1941311;</code>
+     * @return The bytes for terraformProviderName.
+     */
+    com.google.protobuf.ByteString
+        getTerraformProviderNameBytes();
   }
   /**
    * Protobuf type {@code v1.MessageOptions}
@@ -3889,6 +3901,7 @@ public final class Options {
       cliName_ = "";
       cliJsonName_ = "";
       jsonGatewayName_ = "";
+      terraformProviderName_ = "";
     }
 
     @java.lang.Override
@@ -3995,6 +4008,12 @@ public final class Options {
             case 15530480: {
 
               hideFromJsonGateway_ = input.readBool();
+              break;
+            }
+            case 15530490: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              terraformProviderName_ = s;
               break;
             }
             default: {
@@ -4329,6 +4348,44 @@ public final class Options {
       return hideFromJsonGateway_;
     }
 
+    public static final int TERRAFORM_PROVIDER_NAME_FIELD_NUMBER = 1941311;
+    private volatile java.lang.Object terraformProviderName_;
+    /**
+     * <code>string terraform_provider_name = 1941311;</code>
+     * @return The terraformProviderName.
+     */
+    @java.lang.Override
+    public java.lang.String getTerraformProviderName() {
+      java.lang.Object ref = terraformProviderName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        terraformProviderName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string terraform_provider_name = 1941311;</code>
+     * @return The bytes for terraformProviderName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTerraformProviderNameBytes() {
+      java.lang.Object ref = terraformProviderName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        terraformProviderName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4375,6 +4432,9 @@ public final class Options {
       }
       if (hideFromJsonGateway_ != false) {
         output.writeBool(1941310, hideFromJsonGateway_);
+      }
+      if (!getTerraformProviderNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, terraformProviderName_);
       }
       unknownFields.writeTo(output);
     }
@@ -4424,6 +4484,9 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941310, hideFromJsonGateway_);
       }
+      if (!getTerraformProviderNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, terraformProviderName_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4467,6 +4530,8 @@ public final class Options {
           .equals(other.getJsonGatewayName())) return false;
       if (getHideFromJsonGateway()
           != other.getHideFromJsonGateway()) return false;
+      if (!getTerraformProviderName()
+          .equals(other.getTerraformProviderName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4507,6 +4572,8 @@ public final class Options {
       hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHideFromJsonGateway());
+      hash = (37 * hash) + TERRAFORM_PROVIDER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTerraformProviderName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4670,6 +4737,8 @@ public final class Options {
 
         hideFromJsonGateway_ = false;
 
+        terraformProviderName_ = "";
+
         return this;
       }
 
@@ -4715,6 +4784,7 @@ public final class Options {
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
         result.hideFromJsonGateway_ = hideFromJsonGateway_;
+        result.terraformProviderName_ = terraformProviderName_;
         onBuilt();
         return result;
       }
@@ -4800,6 +4870,10 @@ public final class Options {
         }
         if (other.getHideFromJsonGateway() != false) {
           setHideFromJsonGateway(other.getHideFromJsonGateway());
+        }
+        if (!other.getTerraformProviderName().isEmpty()) {
+          terraformProviderName_ = other.terraformProviderName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5605,6 +5679,82 @@ public final class Options {
       public Builder clearHideFromJsonGateway() {
         
         hideFromJsonGateway_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object terraformProviderName_ = "";
+      /**
+       * <code>string terraform_provider_name = 1941311;</code>
+       * @return The terraformProviderName.
+       */
+      public java.lang.String getTerraformProviderName() {
+        java.lang.Object ref = terraformProviderName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          terraformProviderName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string terraform_provider_name = 1941311;</code>
+       * @return The bytes for terraformProviderName.
+       */
+      public com.google.protobuf.ByteString
+          getTerraformProviderNameBytes() {
+        java.lang.Object ref = terraformProviderName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terraformProviderName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string terraform_provider_name = 1941311;</code>
+       * @param value The terraformProviderName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformProviderName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        terraformProviderName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string terraform_provider_name = 1941311;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTerraformProviderName() {
+        
+        terraformProviderName_ = getDefaultInstance().getTerraformProviderName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string terraform_provider_name = 1941311;</code>
+       * @param value The bytes for terraformProviderName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformProviderNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        terraformProviderName_ = value;
         onChanged();
         return this;
       }
@@ -9305,7 +9455,7 @@ public final class Options {
       "hide_from_json_gateway\030\302\276v \001(\010\022\023\n\tread_o" +
       "nly\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022\n\010" +
       "sql_type\030\305\276v \001(\t\022\025\n\013private_sdk\030\306\276v \001(\010\"" +
-      "\312\002\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t" +
+      "\355\002\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t" +
       "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027" +
       "\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform_doc" +
       "s\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n\006custom\030\271" +
@@ -9313,30 +9463,31 @@ public final class Options {
       "s\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n\010cli_name\030\273\276v" +
       " \001(\t\022\027\n\rcli_json_name\030\274\276v \001(\t\022\033\n\021json_ga" +
       "teway_name\030\275\276v \001(\t\022 \n\026hide_from_json_gat" +
-      "eway\030\276\276v \001(\010\"\266\001\n\035CustomPorcelainMessageO" +
-      "ptions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcel" +
-      "ain_type\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030" +
-      "\277\276v \001(\t\022\"\n\030terraform_porcelain_type\030\300\276v " +
-      "\001(\t\022 \n\026openapi_porcelain_type\030\301\276v \001(\t\"T\n" +
-      "\rTerraformDocs\022\037\n\025resource_example_path\030" +
-      "\264\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v " +
-      "\001(\t\"=\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(" +
-      "\t\022\027\n\rcommon_fields\030\205\277v \003(\t\"<\n\016ServiceOpt" +
-      "ions\022\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013private_sdk" +
-      "\030\231\277v \001(\010:K\n\016method_options\022\036.google.prot" +
-      "obuf.MethodOptions\030\220\277v \001(\0132\021.v1.MethodOp" +
-      "tions:E\n\014file_options\022\034.google.protobuf." +
-      "FileOptions\030\250\302v \001(\0132\017.v1.FileOptions:H\n\r" +
-      "field_options\022\035.google.protobuf.FieldOpt" +
-      "ions\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017messag" +
-      "e_options\022\037.google.protobuf.MessageOptio" +
-      "ns\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_" +
-      "options\022\035.google.protobuf.OneofOptions\030\205" +
-      "\277v \001(\0132\020.v1.OneofOptions:N\n\017service_opti" +
-      "ons\022\037.google.protobuf.ServiceOptions\030\231\277v" +
-      " \001(\0132\022.v1.ServiceOptionsBR\n\034com.strongdm" +
-      ".api.v1.plumbingZ2github.com/strongdm/st" +
-      "rongdm-sdk-go/internal/v1;v1b\006proto3"
+      "eway\030\276\276v \001(\010\022!\n\027terraform_provider_name\030" +
+      "\277\276v \001(\t\"\266\001\n\035CustomPorcelainMessageOption" +
+      "s\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_t" +
+      "ype\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001" +
+      "(\t\022\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022 " +
+      "\n\026openapi_porcelain_type\030\301\276v \001(\t\"T\n\rTerr" +
+      "aformDocs\022\037\n\025resource_example_path\030\264\276v \001" +
+      "(\t\022\"\n\030data_source_example_path\030\265\276v \001(\t\"=" +
+      "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\r" +
+      "common_fields\030\205\277v \003(\t\"<\n\016ServiceOptions\022" +
+      "\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v " +
+      "\001(\010:K\n\016method_options\022\036.google.protobuf." +
+      "MethodOptions\030\220\277v \001(\0132\021.v1.MethodOptions" +
+      ":E\n\014file_options\022\034.google.protobuf.FileO" +
+      "ptions\030\250\302v \001(\0132\017.v1.FileOptions:H\n\rfield" +
+      "_options\022\035.google.protobuf.FieldOptions\030" +
+      "\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message_opt" +
+      "ions\022\037.google.protobuf.MessageOptions\030\217\277" +
+      "v \001(\0132\022.v1.MessageOptions:H\n\roneof_optio" +
+      "ns\022\035.google.protobuf.OneofOptions\030\205\277v \001(" +
+      "\0132\020.v1.OneofOptions:N\n\017service_options\022\037" +
+      ".google.protobuf.ServiceOptions\030\231\277v \001(\0132" +
+      "\022.v1.ServiceOptionsBR\n\034com.strongdm.api." +
+      "v1.plumbingZ2github.com/strongdm/strongd" +
+      "m-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9366,7 +9517,7 @@ public final class Options {
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
+        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformProviderName", });
     internal_static_v1_CustomPorcelainMessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable = new
