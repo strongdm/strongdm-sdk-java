@@ -4,10 +4,11 @@ plugins {
     id 'java'
     id 'java-library'
     id 'maven-publish'
-    id "com.jfrog.bintray" version "1.8.4"
+    id "io.github.gradle-nexus.publish-plugin" version "1.1.0"
+    id 'signing'
 }
 
-jar.baseName = 'com.strongdm.api'
+archivesBaseName = 'strongdm'
 group = 'io.github.strongdm'
 
 // for more info on sourceset annotations:
@@ -15,7 +16,7 @@ group = 'io.github.strongdm'
 sourceSets {
     main {
         java {
-            srcDirs = ['.']
+            srcDirs = ['com']
         }
     }
 }
@@ -49,6 +50,7 @@ version = releaseVersion
 
 java {
     withJavadocJar()
+    withSourcesJar()
 }
 
 publishing {
@@ -96,30 +98,24 @@ publishing {
     }
 }
 
-bintray {
-    user = System.getenv('BINTRAY_USER')
-    key = System.getenv('BINTRAY_KEY')
-    publications = ['mavenJava']
-    pkg {
-        repo = 'strongdm-sdk-java'
-        name = 'strongdm-sdk-java'
-        userOrg = 'strongdm'
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/strongdm/strongdm-sdk-java.git'
-        version {
-            name = releaseVersion
-            desc = 'strongDM Java SDK'
-            released  = new Date()
-            vcsTag = releaseVersion
-            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
-        }
-    }
+signing {
+    sign publishing.publications.mavenJava
 }
 
 javadoc {
     if(JavaVersion.current().isJava9Compatible()) {
         options.addBooleanOption('html5', true)
     }
-    exclude 'com/strongdm/api/v1/plumbing/**'
+    exclude '/strongdm/api/v1/plumbing/**'
 }
 
+nexusPublishing {
+    repositories {
+        sonatype {  //only for users registered in Sonatype after 24 Feb 2021
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            username = System.getenv("OSSRH_USERNAME")
+            password = System.getenv("OSSRH_PASSWORD")
+        }
+    }
+}
