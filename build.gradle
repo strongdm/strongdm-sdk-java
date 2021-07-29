@@ -40,7 +40,6 @@ dependencies {
     implementation "io.grpc:grpc-netty:${grpcVersion}"
     implementation "org.json:json:${jsonVersion}"
     compileOnly "javax.annotation:javax.annotation-api:1.2"
-    optional 'io.netty:netty-tcnative-boringssl-static:2.0.25.Final'
 }
 
 sourceCompatibility = '1.8'
