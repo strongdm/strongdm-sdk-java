@@ -11,9 +11,7 @@ Gradle:
 
 ```gradle
 repositories {
-    maven {
-        url  "https://dl.bintray.com/strongdm/strongdm-sdk-java" 
-    }   
+    mavenCentral()
 }
 
 dependencies {
