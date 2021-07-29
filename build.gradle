@@ -6,7 +6,17 @@ plugins {
     id 'signing'
 }
 
-archivesBaseName = 'strongdm'
+def grpcVersion = '1.25.0'
+def protobufVersion = '3.10.0'
+def protocVersion = protobufVersion
+def jsonVersion = '20190722'
+def releaseVersion = System.getenv('JAVA_SDK_VERSION')
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+version = releaseVersion
+
+archivesBaseName = "strongdm-sdk"
 group = 'io.github.strongdm'
 
 // for more info on sourceset annotations:
@@ -26,12 +36,6 @@ repositories {
     mavenLocal()
 }
 
-def grpcVersion = '1.25.0'
-def protobufVersion = '3.10.0'
-def protocVersion = protobufVersion
-def jsonVersion = '20190722'
-def releaseVersion = System.getenv('JAVA_SDK_VERSION')
-
 // for more info on dependency annotations:
 // https://docs.gradle.org/current/userguide/building_java_projects.html#sec:java_dependency_management_overview
 dependencies {
@@ -41,10 +45,6 @@ dependencies {
     implementation "org.json:json:${jsonVersion}"
     compileOnly "javax.annotation:javax.annotation-api:1.2"
 }
-
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-version = releaseVersion
 
 java {
     withJavadocJar()
