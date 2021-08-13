@@ -10853,6 +10853,26 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
+     * AccessRules JSON encoded access rules data.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The accessRules.
+     */
+    java.lang.String getAccessRules();
+    /**
+     * <pre>
+     * AccessRules JSON encoded access rules data.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessRules.
+     */
+    com.google.protobuf.ByteString
+        getAccessRulesBytes();
+
+    /**
+     * <pre>
      * True if the Role is a composite role.
      * </pre>
      *
@@ -10907,6 +10927,7 @@ public final class RolesPlumbing {
     private Role() {
       id_ = "";
       name_ = "";
+      accessRules_ = "";
     }
 
     @java.lang.Override
@@ -10967,6 +10988,12 @@ public final class RolesPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessRules_ = s;
               break;
             }
             default: {
@@ -11093,6 +11120,52 @@ public final class RolesPlumbing {
       }
     }
 
+    public static final int ACCESS_RULES_FIELD_NUMBER = 5;
+    private volatile java.lang.Object accessRules_;
+    /**
+     * <pre>
+     * AccessRules JSON encoded access rules data.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The accessRules.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessRules() {
+      java.lang.Object ref = accessRules_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessRules_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * AccessRules JSON encoded access rules data.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessRules.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessRulesBytes() {
+      java.lang.Object ref = accessRules_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessRules_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int COMPOSITE_FIELD_NUMBER = 3;
     private boolean composite_;
     /**
@@ -11172,6 +11245,9 @@ public final class RolesPlumbing {
       if (tags_ != null) {
         output.writeMessage(4, getTags());
       }
+      if (!getAccessRulesBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, accessRules_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11195,6 +11271,9 @@ public final class RolesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTags());
       }
+      if (!getAccessRulesBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, accessRules_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11214,6 +11293,8 @@ public final class RolesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getAccessRules()
+          .equals(other.getAccessRules())) return false;
       if (getComposite()
           != other.getComposite()) return false;
       if (hasTags() != other.hasTags()) return false;
@@ -11236,6 +11317,8 @@ public final class RolesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessRules().hashCode();
       hash = (37 * hash) + COMPOSITE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getComposite());
@@ -11384,6 +11467,8 @@ public final class RolesPlumbing {
 
         name_ = "";
 
+        accessRules_ = "";
+
         composite_ = false;
 
         if (tagsBuilder_ == null) {
@@ -11420,6 +11505,7 @@ public final class RolesPlumbing {
         com.strongdm.api.v1.plumbing.RolesPlumbing.Role result = new com.strongdm.api.v1.plumbing.RolesPlumbing.Role(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.accessRules_ = accessRules_;
         result.composite_ = composite_;
         if (tagsBuilder_ == null) {
           result.tags_ = tags_;
@@ -11480,6 +11566,10 @@ public final class RolesPlumbing {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getAccessRules().isEmpty()) {
+          accessRules_ = other.accessRules_;
           onChanged();
         }
         if (other.getComposite() != false) {
@@ -11705,6 +11795,102 @@ public final class RolesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accessRules_ = "";
+      /**
+       * <pre>
+       * AccessRules JSON encoded access rules data.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return The accessRules.
+       */
+      public java.lang.String getAccessRules() {
+        java.lang.Object ref = accessRules_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessRules_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AccessRules JSON encoded access rules data.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accessRules.
+       */
+      public com.google.protobuf.ByteString
+          getAccessRulesBytes() {
+        java.lang.Object ref = accessRules_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessRules_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AccessRules JSON encoded access rules data.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The accessRules to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRules(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessRules_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccessRules JSON encoded access rules data.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessRules() {
+        
+        accessRules_ = getDefaultInstance().getAccessRules();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccessRules JSON encoded access rules data.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accessRules to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRulesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessRules_ = value;
         onChanged();
         return this;
       }
@@ -12057,29 +12243,31 @@ public final class RolesPlumbing {
       "oleListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
       "esponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.Role" +
       "B\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
-      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\226\002" +
+      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\355\002" +
       "\n\004Role\022&\n\002id\030\001 \001(\tB\032\362\370\263\007\025\242\363\263\007\002ID\260\363\263\007\001\312\363\263" +
       "\007\004Role\022&\n\004name\030\002 \001(\tB\030\362\370\263\007\023\242\363\263\007\004Name\260\363\263\007" +
-      "\001\300\363\263\007\001\0220\n\tcomposite\030\003 \001(\010B\035\362\370\263\007\030\242\363\263\007\tCom" +
-      "posite\260\363\263\007\001\340\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010.v1.Tags" +
-      "B\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:_\372\370\263\007Z\242\363\263\007\004Role\250\363\263" +
-      "\007\001\302\363\263\007G\242\363\263\007\035tf_examples/role_resource.tx" +
-      "t\252\363\263\007 tf_examples/role_data_source.txt2\342" +
-      "\003\n\005Roles\022Z\n\006Create\022\025.v1.RoleCreateReques" +
-      "t\032\026.v1.RoleCreateResponse\"!\202\371\263\007\t\242\363\263\007\004pos" +
-      "t\202\371\263\007\016\252\363\263\007\t/v1/roles\022U\n\003Get\022\022.v1.RoleGet" +
-      "Request\032\023.v1.RoleGetResponse\"%\202\371\263\007\010\242\363\263\007\003" +
-      "get\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022^\n\006Update\022\025." +
-      "v1.RoleUpdateRequest\032\026.v1.RoleUpdateResp" +
-      "onse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/roles/{" +
-      "id}\022a\n\006Delete\022\025.v1.RoleDeleteRequest\032\026.v" +
-      "1.RoleDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371" +
-      "\263\007\023\252\363\263\007\016/v1/roles/{id}\022S\n\004List\022\023.v1.Role" +
-      "ListRequest\032\024.v1.RoleListResponse\" \202\371\263\007\010" +
-      "\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/roles\032\016\312\371\263\007\t\302\371\263\007\004R" +
-      "oleBa\n\034com.strongdm.api.v1.plumbingB\rRol" +
-      "esPlumbingZ2github.com/strongdm/strongdm" +
-      "-sdk-go/internal/v1;v1b\006proto3"
+      "\001\300\363\263\007\001\022U\n\014access_rules\030\005 \001(\tB?\362\370\263\007:\242\363\263\007\013" +
+      "AccessRules\260\363\263\007\001\320\363\263\007\001\272\364\263\007\033accessRulesJSO" +
+      "NDiffSuppress\0220\n\tcomposite\030\003 \001(\010B\035\362\370\263\007\030\242" +
+      "\363\263\007\tComposite\260\363\263\007\001\340\363\263\007\001\022+\n\004tags\030\004 \001(\0132\010." +
+      "v1.TagsB\023\362\370\263\007\016\242\363\263\007\004Tags\260\363\263\007\001:_\372\370\263\007Z\242\363\263\007\004" +
+      "Role\250\363\263\007\001\302\363\263\007G\242\363\263\007\035tf_examples/role_reso" +
+      "urce.txt\252\363\263\007 tf_examples/role_data_sourc" +
+      "e.txt2\342\003\n\005Roles\022Z\n\006Create\022\025.v1.RoleCreat" +
+      "eRequest\032\026.v1.RoleCreateResponse\"!\202\371\263\007\t\242" +
+      "\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/roles\022U\n\003Get\022\022.v1." +
+      "RoleGetRequest\032\023.v1.RoleGetResponse\"%\202\371\263" +
+      "\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022^\n\006Up" +
+      "date\022\025.v1.RoleUpdateRequest\032\026.v1.RoleUpd" +
+      "ateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/" +
+      "roles/{id}\022a\n\006Delete\022\025.v1.RoleDeleteRequ" +
+      "est\032\026.v1.RoleDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006d" +
+      "elete\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022S\n\004List\022\023." +
+      "v1.RoleListRequest\032\024.v1.RoleListResponse" +
+      "\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/roles\032\016\312\371\263\007" +
+      "\t\302\371\263\007\004RoleBa\n\034com.strongdm.api.v1.plumbi" +
+      "ngB\rRolesPlumbingZ2github.com/strongdm/s" +
+      "trongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12153,7 +12341,7 @@ public final class RolesPlumbing {
     internal_static_v1_Role_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Role_descriptor,
-        new java.lang.String[] { "Id", "Name", "Composite", "Tags", });
+        new java.lang.String[] { "Id", "Name", "AccessRules", "Composite", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

@@ -6756,6 +6756,7 @@ public class Plumbing {
     com.strongdm.api.v1.Role porcelain = new com.strongdm.api.v1.Role();
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setAccessRules((plumbing.getAccessRules()));
     porcelain.setComposite((plumbing.getComposite()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -6771,6 +6772,9 @@ public class Plumbing {
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getAccessRules() != null) {
+      builder.setAccessRules((porcelain.getAccessRules()));
     }
     builder.setComposite(porcelain.getComposite());
     if (porcelain.getTags() != null) {

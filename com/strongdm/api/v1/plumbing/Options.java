@@ -1437,6 +1437,28 @@ public final class Options {
      * @return The privateSdk.
      */
     boolean getPrivateSdk();
+
+    /**
+     * <pre>
+     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+     * Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string diff_suppress_func = 1941319;</code>
+     * @return The diffSuppressFunc.
+     */
+    java.lang.String getDiffSuppressFunc();
+    /**
+     * <pre>
+     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+     * Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string diff_suppress_func = 1941319;</code>
+     * @return The bytes for diffSuppressFunc.
+     */
+    com.google.protobuf.ByteString
+        getDiffSuppressFuncBytes();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -1458,6 +1480,7 @@ public final class Options {
       cliJsonName_ = "";
       jsonGatewayName_ = "";
       sqlType_ = "";
+      diffSuppressFunc_ = "";
     }
 
     @java.lang.Override
@@ -1590,6 +1613,12 @@ public final class Options {
             case 15530544: {
 
               privateSdk_ = input.readBool();
+              break;
+            }
+            case 15530554: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              diffSuppressFunc_ = s;
               break;
             }
             default: {
@@ -2059,6 +2088,54 @@ public final class Options {
       return privateSdk_;
     }
 
+    public static final int DIFF_SUPPRESS_FUNC_FIELD_NUMBER = 1941319;
+    private volatile java.lang.Object diffSuppressFunc_;
+    /**
+     * <pre>
+     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+     * Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string diff_suppress_func = 1941319;</code>
+     * @return The diffSuppressFunc.
+     */
+    @java.lang.Override
+    public java.lang.String getDiffSuppressFunc() {
+      java.lang.Object ref = diffSuppressFunc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        diffSuppressFunc_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+     * Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string diff_suppress_func = 1941319;</code>
+     * @return The bytes for diffSuppressFunc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDiffSuppressFuncBytes() {
+      java.lang.Object ref = diffSuppressFunc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        diffSuppressFunc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2129,6 +2206,9 @@ public final class Options {
       }
       if (privateSdk_ != false) {
         output.writeBool(1941318, privateSdk_);
+      }
+      if (!getDiffSuppressFuncBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, diffSuppressFunc_);
       }
       unknownFields.writeTo(output);
     }
@@ -2208,6 +2288,9 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941318, privateSdk_);
       }
+      if (!getDiffSuppressFuncBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, diffSuppressFunc_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2261,6 +2344,8 @@ public final class Options {
           .equals(other.getSqlType())) return false;
       if (getPrivateSdk()
           != other.getPrivateSdk()) return false;
+      if (!getDiffSuppressFunc()
+          .equals(other.getDiffSuppressFunc())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2322,6 +2407,8 @@ public final class Options {
       hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPrivateSdk());
+      hash = (37 * hash) + DIFF_SUPPRESS_FUNC_FIELD_NUMBER;
+      hash = (53 * hash) + getDiffSuppressFunc().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2493,6 +2580,8 @@ public final class Options {
 
         privateSdk_ = false;
 
+        diffSuppressFunc_ = "";
+
         return this;
       }
 
@@ -2538,6 +2627,7 @@ public final class Options {
         result.isCredential_ = isCredential_;
         result.sqlType_ = sqlType_;
         result.privateSdk_ = privateSdk_;
+        result.diffSuppressFunc_ = diffSuppressFunc_;
         onBuilt();
         return result;
       }
@@ -2649,6 +2739,10 @@ public final class Options {
         }
         if (other.getPrivateSdk() != false) {
           setPrivateSdk(other.getPrivateSdk());
+        }
+        if (!other.getDiffSuppressFunc().isEmpty()) {
+          diffSuppressFunc_ = other.diffSuppressFunc_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3683,6 +3777,107 @@ public final class Options {
       public Builder clearPrivateSdk() {
         
         privateSdk_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object diffSuppressFunc_ = "";
+      /**
+       * <pre>
+       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+       * Terraform provider, if any.
+       * </pre>
+       *
+       * <code>string diff_suppress_func = 1941319;</code>
+       * @return The diffSuppressFunc.
+       */
+      public java.lang.String getDiffSuppressFunc() {
+        java.lang.Object ref = diffSuppressFunc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          diffSuppressFunc_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+       * Terraform provider, if any.
+       * </pre>
+       *
+       * <code>string diff_suppress_func = 1941319;</code>
+       * @return The bytes for diffSuppressFunc.
+       */
+      public com.google.protobuf.ByteString
+          getDiffSuppressFuncBytes() {
+        java.lang.Object ref = diffSuppressFunc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          diffSuppressFunc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+       * Terraform provider, if any.
+       * </pre>
+       *
+       * <code>string diff_suppress_func = 1941319;</code>
+       * @param value The diffSuppressFunc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiffSuppressFunc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        diffSuppressFunc_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+       * Terraform provider, if any.
+       * </pre>
+       *
+       * <code>string diff_suppress_func = 1941319;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiffSuppressFunc() {
+        
+        diffSuppressFunc_ = getDefaultInstance().getDiffSuppressFunc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
+       * Terraform provider, if any.
+       * </pre>
+       *
+       * <code>string diff_suppress_func = 1941319;</code>
+       * @param value The bytes for diffSuppressFunc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiffSuppressFuncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        diffSuppressFunc_ = value;
         onChanged();
         return this;
       }
@@ -9443,7 +9638,7 @@ public final class Options {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"0\n\rMethodOptions\022\020\n\006method" +
       "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"$\n\013FileOptions\022\025" +
-      "\n\013private_sdk\030\304\301v \001(\010\"\307\003\n\014FieldOptions\022\016" +
+      "\n\013private_sdk\030\304\301v \001(\010\"\345\003\n\014FieldOptions\022\016" +
       "\n\004name\030\264\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035" +
       "\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010iterabl" +
       "e\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type" +
@@ -9454,40 +9649,41 @@ public final class Options {
       "\300\276v \001(\t\022\033\n\021json_gateway_name\030\301\276v \001(\t\022 \n\026" +
       "hide_from_json_gateway\030\302\276v \001(\010\022\023\n\tread_o" +
       "nly\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022\n\010" +
-      "sql_type\030\305\276v \001(\t\022\025\n\013private_sdk\030\306\276v \001(\010\"" +
-      "\355\002\n\016MessageOptions\022\024\n\nmodel_name\030\264\276v \001(\t" +
-      "\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027" +
-      "\n\roptions_field\030\267\276v \001(\t\022+\n\016terraform_doc" +
-      "s\030\270\276v \001(\0132\021.v1.TerraformDocs\0223\n\006custom\030\271" +
-      "\276v \001(\0132!.v1.CustomPorcelainMessageOption" +
-      "s\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n\010cli_name\030\273\276v" +
-      " \001(\t\022\027\n\rcli_json_name\030\274\276v \001(\t\022\033\n\021json_ga" +
-      "teway_name\030\275\276v \001(\t\022 \n\026hide_from_json_gat" +
-      "eway\030\276\276v \001(\010\022!\n\027terraform_provider_name\030" +
-      "\277\276v \001(\t\"\266\001\n\035CustomPorcelainMessageOption" +
-      "s\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_t" +
-      "ype\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001" +
-      "(\t\022\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022 " +
-      "\n\026openapi_porcelain_type\030\301\276v \001(\t\"T\n\rTerr" +
-      "aformDocs\022\037\n\025resource_example_path\030\264\276v \001" +
-      "(\t\022\"\n\030data_source_example_path\030\265\276v \001(\t\"=" +
-      "\n\014OneofOptions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\r" +
-      "common_fields\030\205\277v \003(\t\"<\n\016ServiceOptions\022" +
-      "\023\n\tmain_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v " +
-      "\001(\010:K\n\016method_options\022\036.google.protobuf." +
-      "MethodOptions\030\220\277v \001(\0132\021.v1.MethodOptions" +
-      ":E\n\014file_options\022\034.google.protobuf.FileO" +
-      "ptions\030\250\302v \001(\0132\017.v1.FileOptions:H\n\rfield" +
-      "_options\022\035.google.protobuf.FieldOptions\030" +
-      "\216\277v \001(\0132\020.v1.FieldOptions:N\n\017message_opt" +
-      "ions\022\037.google.protobuf.MessageOptions\030\217\277" +
-      "v \001(\0132\022.v1.MessageOptions:H\n\roneof_optio" +
-      "ns\022\035.google.protobuf.OneofOptions\030\205\277v \001(" +
-      "\0132\020.v1.OneofOptions:N\n\017service_options\022\037" +
-      ".google.protobuf.ServiceOptions\030\231\277v \001(\0132" +
-      "\022.v1.ServiceOptionsBR\n\034com.strongdm.api." +
-      "v1.plumbingZ2github.com/strongdm/strongd" +
-      "m-sdk-go/internal/v1;v1b\006proto3"
+      "sql_type\030\305\276v \001(\t\022\025\n\013private_sdk\030\306\276v \001(\010\022" +
+      "\034\n\022diff_suppress_func\030\307\276v \001(\t\"\355\002\n\016Messag" +
+      "eOptions\022\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcel" +
+      "ain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_" +
+      "field\030\267\276v \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132" +
+      "\021.v1.TerraformDocs\0223\n\006custom\030\271\276v \001(\0132!.v" +
+      "1.CustomPorcelainMessageOptions\022\025\n\013priva" +
+      "te_sdk\030\272\276v \001(\010\022\022\n\010cli_name\030\273\276v \001(\t\022\027\n\rcl" +
+      "i_json_name\030\274\276v \001(\t\022\033\n\021json_gateway_name" +
+      "\030\275\276v \001(\t\022 \n\026hide_from_json_gateway\030\276\276v \001" +
+      "(\010\022!\n\027terraform_provider_name\030\277\276v \001(\t\"\266\001" +
+      "\n\035CustomPorcelainMessageOptions\022\023\n\tconve" +
+      "rter\030\275\276v \001(\t\022\033\n\021go_porcelain_type\030\276\276v \001(" +
+      "\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t\022\"\n\030terr" +
+      "aform_porcelain_type\030\300\276v \001(\t\022 \n\026openapi_" +
+      "porcelain_type\030\301\276v \001(\t\"T\n\rTerraformDocs\022" +
+      "\037\n\025resource_example_path\030\264\276v \001(\t\022\"\n\030data" +
+      "_source_example_path\030\265\276v \001(\t\"=\n\014OneofOpt" +
+      "ions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\rcommon_fie" +
+      "lds\030\205\277v \003(\t\"<\n\016ServiceOptions\022\023\n\tmain_no" +
+      "un\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010:K\n\016met" +
+      "hod_options\022\036.google.protobuf.MethodOpti" +
+      "ons\030\220\277v \001(\0132\021.v1.MethodOptions:E\n\014file_o" +
+      "ptions\022\034.google.protobuf.FileOptions\030\250\302v" +
+      " \001(\0132\017.v1.FileOptions:H\n\rfield_options\022\035" +
+      ".google.protobuf.FieldOptions\030\216\277v \001(\0132\020." +
+      "v1.FieldOptions:N\n\017message_options\022\037.goo" +
+      "gle.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1" +
+      ".MessageOptions:H\n\roneof_options\022\035.googl" +
+      "e.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.One" +
+      "ofOptions:N\n\017service_options\022\037.google.pr" +
+      "otobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Servi" +
+      "ceOptionsBR\n\034com.strongdm.api.v1.plumbin" +
+      "gZ2github.com/strongdm/strongdm-sdk-go/i" +
+      "nternal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9511,7 +9707,7 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "TerraformComputed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", "IsCredential", "SqlType", "PrivateSdk", });
+        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "TerraformComputed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", "IsCredential", "SqlType", "PrivateSdk", "DiffSuppressFunc", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new

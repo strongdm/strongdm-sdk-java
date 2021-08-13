@@ -41,6 +41,16 @@ public class Role {
     this.name = in;
   }
 
+  private String accessRules;
+  // AccessRules JSON encoded access rules data.
+  public String getAccessRules() {
+    return this.accessRules;
+  }
+  // AccessRules JSON encoded access rules data.
+  public void setAccessRules(String in) {
+    this.accessRules = in;
+  }
+
   private boolean composite;
   // True if the Role is a composite role.
   public boolean getComposite() {
