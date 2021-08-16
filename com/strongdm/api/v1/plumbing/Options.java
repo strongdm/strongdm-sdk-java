@@ -39,11 +39,19 @@ public final class Options {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * HTTP method of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string method = 1941300;</code>
      * @return The method.
      */
     java.lang.String getMethod();
     /**
+     * <pre>
+     * HTTP method of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string method = 1941300;</code>
      * @return The bytes for method.
      */
@@ -51,11 +59,19 @@ public final class Options {
         getMethodBytes();
 
     /**
+     * <pre>
+     * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string url = 1941301;</code>
      * @return The url.
      */
     java.lang.String getUrl();
     /**
+     * <pre>
+     * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string url = 1941301;</code>
      * @return The bytes for url.
      */
@@ -156,6 +172,10 @@ public final class Options {
     public static final int METHOD_FIELD_NUMBER = 1941300;
     private volatile java.lang.Object method_;
     /**
+     * <pre>
+     * HTTP method of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string method = 1941300;</code>
      * @return The method.
      */
@@ -173,6 +193,10 @@ public final class Options {
       }
     }
     /**
+     * <pre>
+     * HTTP method of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string method = 1941300;</code>
      * @return The bytes for method.
      */
@@ -194,6 +218,10 @@ public final class Options {
     public static final int URL_FIELD_NUMBER = 1941301;
     private volatile java.lang.Object url_;
     /**
+     * <pre>
+     * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string url = 1941301;</code>
      * @return The url.
      */
@@ -211,6 +239,10 @@ public final class Options {
       }
     }
     /**
+     * <pre>
+     * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+     * </pre>
+     *
      * <code>string url = 1941301;</code>
      * @return The bytes for url.
      */
@@ -550,6 +582,10 @@ public final class Options {
 
       private java.lang.Object method_ = "";
       /**
+       * <pre>
+       * HTTP method of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string method = 1941300;</code>
        * @return The method.
        */
@@ -566,6 +602,10 @@ public final class Options {
         }
       }
       /**
+       * <pre>
+       * HTTP method of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string method = 1941300;</code>
        * @return The bytes for method.
        */
@@ -583,6 +623,10 @@ public final class Options {
         }
       }
       /**
+       * <pre>
+       * HTTP method of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string method = 1941300;</code>
        * @param value The method to set.
        * @return This builder for chaining.
@@ -598,6 +642,10 @@ public final class Options {
         return this;
       }
       /**
+       * <pre>
+       * HTTP method of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string method = 1941300;</code>
        * @return This builder for chaining.
        */
@@ -608,6 +656,10 @@ public final class Options {
         return this;
       }
       /**
+       * <pre>
+       * HTTP method of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string method = 1941300;</code>
        * @param value The bytes for method to set.
        * @return This builder for chaining.
@@ -626,6 +678,10 @@ public final class Options {
 
       private java.lang.Object url_ = "";
       /**
+       * <pre>
+       * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string url = 1941301;</code>
        * @return The url.
        */
@@ -642,6 +698,10 @@ public final class Options {
         }
       }
       /**
+       * <pre>
+       * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string url = 1941301;</code>
        * @return The bytes for url.
        */
@@ -659,6 +719,10 @@ public final class Options {
         }
       }
       /**
+       * <pre>
+       * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string url = 1941301;</code>
        * @param value The url to set.
        * @return This builder for chaining.
@@ -674,6 +738,10 @@ public final class Options {
         return this;
       }
       /**
+       * <pre>
+       * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string url = 1941301;</code>
        * @return This builder for chaining.
        */
@@ -684,6 +752,10 @@ public final class Options {
         return this;
       }
       /**
+       * <pre>
+       * HTTP URL of the JSON gateway REST endpoint for this gRPC method
+       * </pre>
+       *
        * <code>string url = 1941301;</code>
        * @param value The bytes for url to set.
        * @return This builder for chaining.
@@ -1246,24 +1318,10 @@ public final class Options {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1941300;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1941300;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>bool sql_nullable = 1941301;</code>
-     * @return The sqlNullable.
-     */
-    boolean getSqlNullable();
-
-    /**
+     * <pre>
+     * expose_as_porcelain determines whether the field is exposed to the SDKs.
+     * </pre>
+     *
      * <code>bool expose_as_porcelain = 1941302;</code>
      * @return The exposeAsPorcelain.
      */
@@ -1289,26 +1347,32 @@ public final class Options {
     boolean getRequired();
 
     /**
-     * <code>string id_type = 1941305;</code>
-     * @return The idType.
+     * <code>bool write_only = 1941309;</code>
+     * @return The writeOnly.
      */
-    java.lang.String getIdType();
+    boolean getWriteOnly();
+
     /**
-     * <code>string id_type = 1941305;</code>
-     * @return The bytes for idType.
+     * <code>bool read_only = 1941315;</code>
+     * @return The readOnly.
      */
-    com.google.protobuf.ByteString
-        getIdTypeBytes();
+    boolean getReadOnly();
+
+    /**
+     * <code>bool is_credential = 1941316;</code>
+     * @return The isCredential.
+     */
+    boolean getIsCredential();
 
     /**
      * <pre>
-     * sdk_only fields are not mapped directly to fields in our internal models.
+     * private_sdk indicates that the field should not be exposed via the public sdk.
      * </pre>
      *
-     * <code>bool sdk_only = 1941306;</code>
-     * @return The sdkOnly.
+     * <code>bool private_sdk = 1941318;</code>
+     * @return The privateSdk.
      */
-    boolean getSdkOnly();
+    boolean getPrivateSdk();
 
     /**
      * <pre>
@@ -1338,29 +1402,46 @@ public final class Options {
 
     /**
      * <pre>
-     * force_new forces Terraform to delete and recreate the object if the field changes.
+     * terraform_force_new forces Terraform to delete and recreate the object if the field changes.
      * </pre>
      *
-     * <code>bool force_new = 1941308;</code>
-     * @return The forceNew.
+     * <code>bool terraform_force_new = 1941308;</code>
+     * @return The terraformForceNew.
      */
-    boolean getForceNew();
-
-    /**
-     * <code>bool write_only = 1941309;</code>
-     * @return The writeOnly.
-     */
-    boolean getWriteOnly();
+    boolean getTerraformForceNew();
 
     /**
      * <pre>
-     * sensitive determines whether the field should be marked as sensitive in Terraform.
+     * terraform_sensitive determines whether the field should be marked as
+     * sensitive in Terraform.
      * </pre>
      *
-     * <code>bool sensitive = 1941310;</code>
-     * @return The sensitive.
+     * <code>bool terraform_sensitive = 1941310;</code>
+     * @return The terraformSensitive.
      */
-    boolean getSensitive();
+    boolean getTerraformSensitive();
+
+    /**
+     * <pre>
+     * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+     * in the Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string terraform_diff_suppress_func = 1941319;</code>
+     * @return The terraformDiffSuppressFunc.
+     */
+    java.lang.String getTerraformDiffSuppressFunc();
+    /**
+     * <pre>
+     * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+     * in the Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string terraform_diff_suppress_func = 1941319;</code>
+     * @return The bytes for terraformDiffSuppressFunc.
+     */
+    com.google.protobuf.ByteString
+        getTerraformDiffSuppressFuncBytes();
 
     /**
      * <code>string cli_name = 1941311;</code>
@@ -1403,62 +1484,6 @@ public final class Options {
      * @return The hideFromJsonGateway.
      */
     boolean getHideFromJsonGateway();
-
-    /**
-     * <code>bool read_only = 1941315;</code>
-     * @return The readOnly.
-     */
-    boolean getReadOnly();
-
-    /**
-     * <code>bool is_credential = 1941316;</code>
-     * @return The isCredential.
-     */
-    boolean getIsCredential();
-
-    /**
-     * <code>string sql_type = 1941317;</code>
-     * @return The sqlType.
-     */
-    java.lang.String getSqlType();
-    /**
-     * <code>string sql_type = 1941317;</code>
-     * @return The bytes for sqlType.
-     */
-    com.google.protobuf.ByteString
-        getSqlTypeBytes();
-
-    /**
-     * <pre>
-     * private_sdk indicates that the field should not be exposed via the public sdk.
-     * </pre>
-     *
-     * <code>bool private_sdk = 1941318;</code>
-     * @return The privateSdk.
-     */
-    boolean getPrivateSdk();
-
-    /**
-     * <pre>
-     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-     * Terraform provider, if any.
-     * </pre>
-     *
-     * <code>string diff_suppress_func = 1941319;</code>
-     * @return The diffSuppressFunc.
-     */
-    java.lang.String getDiffSuppressFunc();
-    /**
-     * <pre>
-     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-     * Terraform provider, if any.
-     * </pre>
-     *
-     * <code>string diff_suppress_func = 1941319;</code>
-     * @return The bytes for diffSuppressFunc.
-     */
-    com.google.protobuf.ByteString
-        getDiffSuppressFuncBytes();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -1473,14 +1498,11 @@ public final class Options {
       super(builder);
     }
     private FieldOptions() {
-      name_ = "";
-      idType_ = "";
       terraformComputed_ = "";
+      terraformDiffSuppressFunc_ = "";
       cliName_ = "";
       cliJsonName_ = "";
       jsonGatewayName_ = "";
-      sqlType_ = "";
-      diffSuppressFunc_ = "";
     }
 
     @java.lang.Override
@@ -1513,17 +1535,6 @@ public final class Options {
             case 0:
               done = true;
               break;
-            case 15530402: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 15530408: {
-
-              sqlNullable_ = input.readBool();
-              break;
-            }
             case 15530416: {
 
               exposeAsPorcelain_ = input.readBool();
@@ -1539,17 +1550,6 @@ public final class Options {
               required_ = input.readBool();
               break;
             }
-            case 15530442: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              idType_ = s;
-              break;
-            }
-            case 15530448: {
-
-              sdkOnly_ = input.readBool();
-              break;
-            }
             case 15530458: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -1558,7 +1558,7 @@ public final class Options {
             }
             case 15530464: {
 
-              forceNew_ = input.readBool();
+              terraformForceNew_ = input.readBool();
               break;
             }
             case 15530472: {
@@ -1568,7 +1568,7 @@ public final class Options {
             }
             case 15530480: {
 
-              sensitive_ = input.readBool();
+              terraformSensitive_ = input.readBool();
               break;
             }
             case 15530490: {
@@ -1604,12 +1604,6 @@ public final class Options {
               isCredential_ = input.readBool();
               break;
             }
-            case 15530538: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sqlType_ = s;
-              break;
-            }
             case 15530544: {
 
               privateSdk_ = input.readBool();
@@ -1618,7 +1612,7 @@ public final class Options {
             case 15530554: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              diffSuppressFunc_ = s;
+              terraformDiffSuppressFunc_ = s;
               break;
             }
             default: {
@@ -1653,58 +1647,13 @@ public final class Options {
               com.strongdm.api.v1.plumbing.Options.FieldOptions.class, com.strongdm.api.v1.plumbing.Options.FieldOptions.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1941300;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1941300;</code>
-     * @return The name.
-     */
-    @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1941300;</code>
-     * @return The bytes for name.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SQL_NULLABLE_FIELD_NUMBER = 1941301;
-    private boolean sqlNullable_;
-    /**
-     * <code>bool sql_nullable = 1941301;</code>
-     * @return The sqlNullable.
-     */
-    @java.lang.Override
-    public boolean getSqlNullable() {
-      return sqlNullable_;
-    }
-
     public static final int EXPOSE_AS_PORCELAIN_FIELD_NUMBER = 1941302;
     private boolean exposeAsPorcelain_;
     /**
+     * <pre>
+     * expose_as_porcelain determines whether the field is exposed to the SDKs.
+     * </pre>
+     *
      * <code>bool expose_as_porcelain = 1941302;</code>
      * @return The exposeAsPorcelain.
      */
@@ -1742,57 +1691,52 @@ public final class Options {
       return required_;
     }
 
-    public static final int ID_TYPE_FIELD_NUMBER = 1941305;
-    private volatile java.lang.Object idType_;
+    public static final int WRITE_ONLY_FIELD_NUMBER = 1941309;
+    private boolean writeOnly_;
     /**
-     * <code>string id_type = 1941305;</code>
-     * @return The idType.
+     * <code>bool write_only = 1941309;</code>
+     * @return The writeOnly.
      */
     @java.lang.Override
-    public java.lang.String getIdType() {
-      java.lang.Object ref = idType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        idType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id_type = 1941305;</code>
-     * @return The bytes for idType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdTypeBytes() {
-      java.lang.Object ref = idType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        idType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public boolean getWriteOnly() {
+      return writeOnly_;
     }
 
-    public static final int SDK_ONLY_FIELD_NUMBER = 1941306;
-    private boolean sdkOnly_;
+    public static final int READ_ONLY_FIELD_NUMBER = 1941315;
+    private boolean readOnly_;
     /**
-     * <pre>
-     * sdk_only fields are not mapped directly to fields in our internal models.
-     * </pre>
-     *
-     * <code>bool sdk_only = 1941306;</code>
-     * @return The sdkOnly.
+     * <code>bool read_only = 1941315;</code>
+     * @return The readOnly.
      */
     @java.lang.Override
-    public boolean getSdkOnly() {
-      return sdkOnly_;
+    public boolean getReadOnly() {
+      return readOnly_;
+    }
+
+    public static final int IS_CREDENTIAL_FIELD_NUMBER = 1941316;
+    private boolean isCredential_;
+    /**
+     * <code>bool is_credential = 1941316;</code>
+     * @return The isCredential.
+     */
+    @java.lang.Override
+    public boolean getIsCredential() {
+      return isCredential_;
+    }
+
+    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941318;
+    private boolean privateSdk_;
+    /**
+     * <pre>
+     * private_sdk indicates that the field should not be exposed via the public sdk.
+     * </pre>
+     *
+     * <code>bool private_sdk = 1941318;</code>
+     * @return The privateSdk.
+     */
+    @java.lang.Override
+    public boolean getPrivateSdk() {
+      return privateSdk_;
     }
 
     public static final int TERRAFORM_COMPUTED_FIELD_NUMBER = 1941307;
@@ -1847,45 +1791,83 @@ public final class Options {
       }
     }
 
-    public static final int FORCE_NEW_FIELD_NUMBER = 1941308;
-    private boolean forceNew_;
+    public static final int TERRAFORM_FORCE_NEW_FIELD_NUMBER = 1941308;
+    private boolean terraformForceNew_;
     /**
      * <pre>
-     * force_new forces Terraform to delete and recreate the object if the field changes.
+     * terraform_force_new forces Terraform to delete and recreate the object if the field changes.
      * </pre>
      *
-     * <code>bool force_new = 1941308;</code>
-     * @return The forceNew.
+     * <code>bool terraform_force_new = 1941308;</code>
+     * @return The terraformForceNew.
      */
     @java.lang.Override
-    public boolean getForceNew() {
-      return forceNew_;
+    public boolean getTerraformForceNew() {
+      return terraformForceNew_;
     }
 
-    public static final int WRITE_ONLY_FIELD_NUMBER = 1941309;
-    private boolean writeOnly_;
-    /**
-     * <code>bool write_only = 1941309;</code>
-     * @return The writeOnly.
-     */
-    @java.lang.Override
-    public boolean getWriteOnly() {
-      return writeOnly_;
-    }
-
-    public static final int SENSITIVE_FIELD_NUMBER = 1941310;
-    private boolean sensitive_;
+    public static final int TERRAFORM_SENSITIVE_FIELD_NUMBER = 1941310;
+    private boolean terraformSensitive_;
     /**
      * <pre>
-     * sensitive determines whether the field should be marked as sensitive in Terraform.
+     * terraform_sensitive determines whether the field should be marked as
+     * sensitive in Terraform.
      * </pre>
      *
-     * <code>bool sensitive = 1941310;</code>
-     * @return The sensitive.
+     * <code>bool terraform_sensitive = 1941310;</code>
+     * @return The terraformSensitive.
      */
     @java.lang.Override
-    public boolean getSensitive() {
-      return sensitive_;
+    public boolean getTerraformSensitive() {
+      return terraformSensitive_;
+    }
+
+    public static final int TERRAFORM_DIFF_SUPPRESS_FUNC_FIELD_NUMBER = 1941319;
+    private volatile java.lang.Object terraformDiffSuppressFunc_;
+    /**
+     * <pre>
+     * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+     * in the Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string terraform_diff_suppress_func = 1941319;</code>
+     * @return The terraformDiffSuppressFunc.
+     */
+    @java.lang.Override
+    public java.lang.String getTerraformDiffSuppressFunc() {
+      java.lang.Object ref = terraformDiffSuppressFunc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        terraformDiffSuppressFunc_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+     * in the Terraform provider, if any.
+     * </pre>
+     *
+     * <code>string terraform_diff_suppress_func = 1941319;</code>
+     * @return The bytes for terraformDiffSuppressFunc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTerraformDiffSuppressFuncBytes() {
+      java.lang.Object ref = terraformDiffSuppressFunc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        terraformDiffSuppressFunc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int CLI_NAME_FIELD_NUMBER = 1941311;
@@ -2013,129 +1995,6 @@ public final class Options {
       return hideFromJsonGateway_;
     }
 
-    public static final int READ_ONLY_FIELD_NUMBER = 1941315;
-    private boolean readOnly_;
-    /**
-     * <code>bool read_only = 1941315;</code>
-     * @return The readOnly.
-     */
-    @java.lang.Override
-    public boolean getReadOnly() {
-      return readOnly_;
-    }
-
-    public static final int IS_CREDENTIAL_FIELD_NUMBER = 1941316;
-    private boolean isCredential_;
-    /**
-     * <code>bool is_credential = 1941316;</code>
-     * @return The isCredential.
-     */
-    @java.lang.Override
-    public boolean getIsCredential() {
-      return isCredential_;
-    }
-
-    public static final int SQL_TYPE_FIELD_NUMBER = 1941317;
-    private volatile java.lang.Object sqlType_;
-    /**
-     * <code>string sql_type = 1941317;</code>
-     * @return The sqlType.
-     */
-    @java.lang.Override
-    public java.lang.String getSqlType() {
-      java.lang.Object ref = sqlType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sqlType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string sql_type = 1941317;</code>
-     * @return The bytes for sqlType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSqlTypeBytes() {
-      java.lang.Object ref = sqlType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sqlType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941318;
-    private boolean privateSdk_;
-    /**
-     * <pre>
-     * private_sdk indicates that the field should not be exposed via the public sdk.
-     * </pre>
-     *
-     * <code>bool private_sdk = 1941318;</code>
-     * @return The privateSdk.
-     */
-    @java.lang.Override
-    public boolean getPrivateSdk() {
-      return privateSdk_;
-    }
-
-    public static final int DIFF_SUPPRESS_FUNC_FIELD_NUMBER = 1941319;
-    private volatile java.lang.Object diffSuppressFunc_;
-    /**
-     * <pre>
-     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-     * Terraform provider, if any.
-     * </pre>
-     *
-     * <code>string diff_suppress_func = 1941319;</code>
-     * @return The diffSuppressFunc.
-     */
-    @java.lang.Override
-    public java.lang.String getDiffSuppressFunc() {
-      java.lang.Object ref = diffSuppressFunc_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        diffSuppressFunc_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-     * Terraform provider, if any.
-     * </pre>
-     *
-     * <code>string diff_suppress_func = 1941319;</code>
-     * @return The bytes for diffSuppressFunc.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getDiffSuppressFuncBytes() {
-      java.lang.Object ref = diffSuppressFunc_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        diffSuppressFunc_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2150,12 +2009,6 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941300, name_);
-      }
-      if (sqlNullable_ != false) {
-        output.writeBool(1941301, sqlNullable_);
-      }
       if (exposeAsPorcelain_ != false) {
         output.writeBool(1941302, exposeAsPorcelain_);
       }
@@ -2165,23 +2018,17 @@ public final class Options {
       if (required_ != false) {
         output.writeBool(1941304, required_);
       }
-      if (!getIdTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941305, idType_);
-      }
-      if (sdkOnly_ != false) {
-        output.writeBool(1941306, sdkOnly_);
-      }
       if (!getTerraformComputedBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, terraformComputed_);
       }
-      if (forceNew_ != false) {
-        output.writeBool(1941308, forceNew_);
+      if (terraformForceNew_ != false) {
+        output.writeBool(1941308, terraformForceNew_);
       }
       if (writeOnly_ != false) {
         output.writeBool(1941309, writeOnly_);
       }
-      if (sensitive_ != false) {
-        output.writeBool(1941310, sensitive_);
+      if (terraformSensitive_ != false) {
+        output.writeBool(1941310, terraformSensitive_);
       }
       if (!getCliNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, cliName_);
@@ -2201,14 +2048,11 @@ public final class Options {
       if (isCredential_ != false) {
         output.writeBool(1941316, isCredential_);
       }
-      if (!getSqlTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941317, sqlType_);
-      }
       if (privateSdk_ != false) {
         output.writeBool(1941318, privateSdk_);
       }
-      if (!getDiffSuppressFuncBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, diffSuppressFunc_);
+      if (!getTerraformDiffSuppressFuncBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, terraformDiffSuppressFunc_);
       }
       unknownFields.writeTo(output);
     }
@@ -2219,13 +2063,6 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941300, name_);
-      }
-      if (sqlNullable_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941301, sqlNullable_);
-      }
       if (exposeAsPorcelain_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941302, exposeAsPorcelain_);
@@ -2238,27 +2075,20 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941304, required_);
       }
-      if (!getIdTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941305, idType_);
-      }
-      if (sdkOnly_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941306, sdkOnly_);
-      }
       if (!getTerraformComputedBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, terraformComputed_);
       }
-      if (forceNew_ != false) {
+      if (terraformForceNew_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941308, forceNew_);
+          .computeBoolSize(1941308, terraformForceNew_);
       }
       if (writeOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941309, writeOnly_);
       }
-      if (sensitive_ != false) {
+      if (terraformSensitive_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941310, sensitive_);
+          .computeBoolSize(1941310, terraformSensitive_);
       }
       if (!getCliNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, cliName_);
@@ -2281,15 +2111,12 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941316, isCredential_);
       }
-      if (!getSqlTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941317, sqlType_);
-      }
       if (privateSdk_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941318, privateSdk_);
       }
-      if (!getDiffSuppressFuncBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, diffSuppressFunc_);
+      if (!getTerraformDiffSuppressFuncBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, terraformDiffSuppressFunc_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2306,28 +2133,28 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.FieldOptions other = (com.strongdm.api.v1.plumbing.Options.FieldOptions) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (getSqlNullable()
-          != other.getSqlNullable()) return false;
       if (getExposeAsPorcelain()
           != other.getExposeAsPorcelain()) return false;
       if (getIterable()
           != other.getIterable()) return false;
       if (getRequired()
           != other.getRequired()) return false;
-      if (!getIdType()
-          .equals(other.getIdType())) return false;
-      if (getSdkOnly()
-          != other.getSdkOnly()) return false;
-      if (!getTerraformComputed()
-          .equals(other.getTerraformComputed())) return false;
-      if (getForceNew()
-          != other.getForceNew()) return false;
       if (getWriteOnly()
           != other.getWriteOnly()) return false;
-      if (getSensitive()
-          != other.getSensitive()) return false;
+      if (getReadOnly()
+          != other.getReadOnly()) return false;
+      if (getIsCredential()
+          != other.getIsCredential()) return false;
+      if (getPrivateSdk()
+          != other.getPrivateSdk()) return false;
+      if (!getTerraformComputed()
+          .equals(other.getTerraformComputed())) return false;
+      if (getTerraformForceNew()
+          != other.getTerraformForceNew()) return false;
+      if (getTerraformSensitive()
+          != other.getTerraformSensitive()) return false;
+      if (!getTerraformDiffSuppressFunc()
+          .equals(other.getTerraformDiffSuppressFunc())) return false;
       if (!getCliName()
           .equals(other.getCliName())) return false;
       if (!getCliJsonName()
@@ -2336,16 +2163,6 @@ public final class Options {
           .equals(other.getJsonGatewayName())) return false;
       if (getHideFromJsonGateway()
           != other.getHideFromJsonGateway()) return false;
-      if (getReadOnly()
-          != other.getReadOnly()) return false;
-      if (getIsCredential()
-          != other.getIsCredential()) return false;
-      if (!getSqlType()
-          .equals(other.getSqlType())) return false;
-      if (getPrivateSdk()
-          != other.getPrivateSdk()) return false;
-      if (!getDiffSuppressFunc()
-          .equals(other.getDiffSuppressFunc())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2357,11 +2174,6 @@ public final class Options {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SQL_NULLABLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSqlNullable());
       hash = (37 * hash) + EXPOSE_AS_PORCELAIN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getExposeAsPorcelain());
@@ -2371,22 +2183,28 @@ public final class Options {
       hash = (37 * hash) + REQUIRED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getRequired());
-      hash = (37 * hash) + ID_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getIdType().hashCode();
-      hash = (37 * hash) + SDK_ONLY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSdkOnly());
-      hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
-      hash = (53 * hash) + getTerraformComputed().hashCode();
-      hash = (37 * hash) + FORCE_NEW_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getForceNew());
       hash = (37 * hash) + WRITE_ONLY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getWriteOnly());
-      hash = (37 * hash) + SENSITIVE_FIELD_NUMBER;
+      hash = (37 * hash) + READ_ONLY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSensitive());
+          getReadOnly());
+      hash = (37 * hash) + IS_CREDENTIAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsCredential());
+      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPrivateSdk());
+      hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
+      hash = (53 * hash) + getTerraformComputed().hashCode();
+      hash = (37 * hash) + TERRAFORM_FORCE_NEW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTerraformForceNew());
+      hash = (37 * hash) + TERRAFORM_SENSITIVE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTerraformSensitive());
+      hash = (37 * hash) + TERRAFORM_DIFF_SUPPRESS_FUNC_FIELD_NUMBER;
+      hash = (53 * hash) + getTerraformDiffSuppressFunc().hashCode();
       hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCliName().hashCode();
       hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
@@ -2396,19 +2214,6 @@ public final class Options {
       hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHideFromJsonGateway());
-      hash = (37 * hash) + READ_ONLY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getReadOnly());
-      hash = (37 * hash) + IS_CREDENTIAL_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsCredential());
-      hash = (37 * hash) + SQL_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getSqlType().hashCode();
-      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPrivateSdk());
-      hash = (37 * hash) + DIFF_SUPPRESS_FUNC_FIELD_NUMBER;
-      hash = (53 * hash) + getDiffSuppressFunc().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2542,27 +2347,27 @@ public final class Options {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        name_ = "";
-
-        sqlNullable_ = false;
-
         exposeAsPorcelain_ = false;
 
         iterable_ = false;
 
         required_ = false;
 
-        idType_ = "";
+        writeOnly_ = false;
 
-        sdkOnly_ = false;
+        readOnly_ = false;
+
+        isCredential_ = false;
+
+        privateSdk_ = false;
 
         terraformComputed_ = "";
 
-        forceNew_ = false;
+        terraformForceNew_ = false;
 
-        writeOnly_ = false;
+        terraformSensitive_ = false;
 
-        sensitive_ = false;
+        terraformDiffSuppressFunc_ = "";
 
         cliName_ = "";
 
@@ -2571,16 +2376,6 @@ public final class Options {
         jsonGatewayName_ = "";
 
         hideFromJsonGateway_ = false;
-
-        readOnly_ = false;
-
-        isCredential_ = false;
-
-        sqlType_ = "";
-
-        privateSdk_ = false;
-
-        diffSuppressFunc_ = "";
 
         return this;
       }
@@ -2608,26 +2403,21 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Options.FieldOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.FieldOptions result = new com.strongdm.api.v1.plumbing.Options.FieldOptions(this);
-        result.name_ = name_;
-        result.sqlNullable_ = sqlNullable_;
         result.exposeAsPorcelain_ = exposeAsPorcelain_;
         result.iterable_ = iterable_;
         result.required_ = required_;
-        result.idType_ = idType_;
-        result.sdkOnly_ = sdkOnly_;
-        result.terraformComputed_ = terraformComputed_;
-        result.forceNew_ = forceNew_;
         result.writeOnly_ = writeOnly_;
-        result.sensitive_ = sensitive_;
+        result.readOnly_ = readOnly_;
+        result.isCredential_ = isCredential_;
+        result.privateSdk_ = privateSdk_;
+        result.terraformComputed_ = terraformComputed_;
+        result.terraformForceNew_ = terraformForceNew_;
+        result.terraformSensitive_ = terraformSensitive_;
+        result.terraformDiffSuppressFunc_ = terraformDiffSuppressFunc_;
         result.cliName_ = cliName_;
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
         result.hideFromJsonGateway_ = hideFromJsonGateway_;
-        result.readOnly_ = readOnly_;
-        result.isCredential_ = isCredential_;
-        result.sqlType_ = sqlType_;
-        result.privateSdk_ = privateSdk_;
-        result.diffSuppressFunc_ = diffSuppressFunc_;
         onBuilt();
         return result;
       }
@@ -2676,13 +2466,6 @@ public final class Options {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.FieldOptions other) {
         if (other == com.strongdm.api.v1.plumbing.Options.FieldOptions.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (other.getSqlNullable() != false) {
-          setSqlNullable(other.getSqlNullable());
-        }
         if (other.getExposeAsPorcelain() != false) {
           setExposeAsPorcelain(other.getExposeAsPorcelain());
         }
@@ -2692,25 +2475,31 @@ public final class Options {
         if (other.getRequired() != false) {
           setRequired(other.getRequired());
         }
-        if (!other.getIdType().isEmpty()) {
-          idType_ = other.idType_;
-          onChanged();
+        if (other.getWriteOnly() != false) {
+          setWriteOnly(other.getWriteOnly());
         }
-        if (other.getSdkOnly() != false) {
-          setSdkOnly(other.getSdkOnly());
+        if (other.getReadOnly() != false) {
+          setReadOnly(other.getReadOnly());
+        }
+        if (other.getIsCredential() != false) {
+          setIsCredential(other.getIsCredential());
+        }
+        if (other.getPrivateSdk() != false) {
+          setPrivateSdk(other.getPrivateSdk());
         }
         if (!other.getTerraformComputed().isEmpty()) {
           terraformComputed_ = other.terraformComputed_;
           onChanged();
         }
-        if (other.getForceNew() != false) {
-          setForceNew(other.getForceNew());
+        if (other.getTerraformForceNew() != false) {
+          setTerraformForceNew(other.getTerraformForceNew());
         }
-        if (other.getWriteOnly() != false) {
-          setWriteOnly(other.getWriteOnly());
+        if (other.getTerraformSensitive() != false) {
+          setTerraformSensitive(other.getTerraformSensitive());
         }
-        if (other.getSensitive() != false) {
-          setSensitive(other.getSensitive());
+        if (!other.getTerraformDiffSuppressFunc().isEmpty()) {
+          terraformDiffSuppressFunc_ = other.terraformDiffSuppressFunc_;
+          onChanged();
         }
         if (!other.getCliName().isEmpty()) {
           cliName_ = other.cliName_;
@@ -2726,23 +2515,6 @@ public final class Options {
         }
         if (other.getHideFromJsonGateway() != false) {
           setHideFromJsonGateway(other.getHideFromJsonGateway());
-        }
-        if (other.getReadOnly() != false) {
-          setReadOnly(other.getReadOnly());
-        }
-        if (other.getIsCredential() != false) {
-          setIsCredential(other.getIsCredential());
-        }
-        if (!other.getSqlType().isEmpty()) {
-          sqlType_ = other.sqlType_;
-          onChanged();
-        }
-        if (other.getPrivateSdk() != false) {
-          setPrivateSdk(other.getPrivateSdk());
-        }
-        if (!other.getDiffSuppressFunc().isEmpty()) {
-          diffSuppressFunc_ = other.diffSuppressFunc_;
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2773,115 +2545,12 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1941300;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1941300;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1941300;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1941300;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1941300;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean sqlNullable_ ;
-      /**
-       * <code>bool sql_nullable = 1941301;</code>
-       * @return The sqlNullable.
-       */
-      @java.lang.Override
-      public boolean getSqlNullable() {
-        return sqlNullable_;
-      }
-      /**
-       * <code>bool sql_nullable = 1941301;</code>
-       * @param value The sqlNullable to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSqlNullable(boolean value) {
-        
-        sqlNullable_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool sql_nullable = 1941301;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSqlNullable() {
-        
-        sqlNullable_ = false;
-        onChanged();
-        return this;
-      }
-
       private boolean exposeAsPorcelain_ ;
       /**
+       * <pre>
+       * expose_as_porcelain determines whether the field is exposed to the SDKs.
+       * </pre>
+       *
        * <code>bool expose_as_porcelain = 1941302;</code>
        * @return The exposeAsPorcelain.
        */
@@ -2890,6 +2559,10 @@ public final class Options {
         return exposeAsPorcelain_;
       }
       /**
+       * <pre>
+       * expose_as_porcelain determines whether the field is exposed to the SDKs.
+       * </pre>
+       *
        * <code>bool expose_as_porcelain = 1941302;</code>
        * @param value The exposeAsPorcelain to set.
        * @return This builder for chaining.
@@ -2901,6 +2574,10 @@ public final class Options {
         return this;
       }
       /**
+       * <pre>
+       * expose_as_porcelain determines whether the field is exposed to the SDKs.
+       * </pre>
+       *
        * <code>bool expose_as_porcelain = 1941302;</code>
        * @return This builder for chaining.
        */
@@ -2994,121 +2671,138 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object idType_ = "";
+      private boolean writeOnly_ ;
       /**
-       * <code>string id_type = 1941305;</code>
-       * @return The idType.
+       * <code>bool write_only = 1941309;</code>
+       * @return The writeOnly.
        */
-      public java.lang.String getIdType() {
-        java.lang.Object ref = idType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          idType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public boolean getWriteOnly() {
+        return writeOnly_;
       }
       /**
-       * <code>string id_type = 1941305;</code>
-       * @return The bytes for idType.
-       */
-      public com.google.protobuf.ByteString
-          getIdTypeBytes() {
-        java.lang.Object ref = idType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          idType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id_type = 1941305;</code>
-       * @param value The idType to set.
+       * <code>bool write_only = 1941309;</code>
+       * @param value The writeOnly to set.
        * @return This builder for chaining.
        */
-      public Builder setIdType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        idType_ = value;
+      public Builder setWriteOnly(boolean value) {
+        
+        writeOnly_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string id_type = 1941305;</code>
+       * <code>bool write_only = 1941309;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIdType() {
+      public Builder clearWriteOnly() {
         
-        idType_ = getDefaultInstance().getIdType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id_type = 1941305;</code>
-       * @param value The bytes for idType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        idType_ = value;
+        writeOnly_ = false;
         onChanged();
         return this;
       }
 
-      private boolean sdkOnly_ ;
+      private boolean readOnly_ ;
       /**
-       * <pre>
-       * sdk_only fields are not mapped directly to fields in our internal models.
-       * </pre>
-       *
-       * <code>bool sdk_only = 1941306;</code>
-       * @return The sdkOnly.
+       * <code>bool read_only = 1941315;</code>
+       * @return The readOnly.
        */
       @java.lang.Override
-      public boolean getSdkOnly() {
-        return sdkOnly_;
+      public boolean getReadOnly() {
+        return readOnly_;
+      }
+      /**
+       * <code>bool read_only = 1941315;</code>
+       * @param value The readOnly to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReadOnly(boolean value) {
+        
+        readOnly_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool read_only = 1941315;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReadOnly() {
+        
+        readOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isCredential_ ;
+      /**
+       * <code>bool is_credential = 1941316;</code>
+       * @return The isCredential.
+       */
+      @java.lang.Override
+      public boolean getIsCredential() {
+        return isCredential_;
+      }
+      /**
+       * <code>bool is_credential = 1941316;</code>
+       * @param value The isCredential to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsCredential(boolean value) {
+        
+        isCredential_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_credential = 1941316;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsCredential() {
+        
+        isCredential_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean privateSdk_ ;
+      /**
+       * <pre>
+       * private_sdk indicates that the field should not be exposed via the public sdk.
+       * </pre>
+       *
+       * <code>bool private_sdk = 1941318;</code>
+       * @return The privateSdk.
+       */
+      @java.lang.Override
+      public boolean getPrivateSdk() {
+        return privateSdk_;
       }
       /**
        * <pre>
-       * sdk_only fields are not mapped directly to fields in our internal models.
+       * private_sdk indicates that the field should not be exposed via the public sdk.
        * </pre>
        *
-       * <code>bool sdk_only = 1941306;</code>
-       * @param value The sdkOnly to set.
+       * <code>bool private_sdk = 1941318;</code>
+       * @param value The privateSdk to set.
        * @return This builder for chaining.
        */
-      public Builder setSdkOnly(boolean value) {
+      public Builder setPrivateSdk(boolean value) {
         
-        sdkOnly_ = value;
+        privateSdk_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * sdk_only fields are not mapped directly to fields in our internal models.
+       * private_sdk indicates that the field should not be exposed via the public sdk.
        * </pre>
        *
-       * <code>bool sdk_only = 1941306;</code>
+       * <code>bool private_sdk = 1941318;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSdkOnly() {
+      public Builder clearPrivateSdk() {
         
-        sdkOnly_ = false;
+        privateSdk_ = false;
         onChanged();
         return this;
       }
@@ -3224,119 +2918,192 @@ public final class Options {
         return this;
       }
 
-      private boolean forceNew_ ;
+      private boolean terraformForceNew_ ;
       /**
        * <pre>
-       * force_new forces Terraform to delete and recreate the object if the field changes.
+       * terraform_force_new forces Terraform to delete and recreate the object if the field changes.
        * </pre>
        *
-       * <code>bool force_new = 1941308;</code>
-       * @return The forceNew.
+       * <code>bool terraform_force_new = 1941308;</code>
+       * @return The terraformForceNew.
        */
       @java.lang.Override
-      public boolean getForceNew() {
-        return forceNew_;
+      public boolean getTerraformForceNew() {
+        return terraformForceNew_;
       }
       /**
        * <pre>
-       * force_new forces Terraform to delete and recreate the object if the field changes.
+       * terraform_force_new forces Terraform to delete and recreate the object if the field changes.
        * </pre>
        *
-       * <code>bool force_new = 1941308;</code>
-       * @param value The forceNew to set.
+       * <code>bool terraform_force_new = 1941308;</code>
+       * @param value The terraformForceNew to set.
        * @return This builder for chaining.
        */
-      public Builder setForceNew(boolean value) {
+      public Builder setTerraformForceNew(boolean value) {
         
-        forceNew_ = value;
+        terraformForceNew_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * force_new forces Terraform to delete and recreate the object if the field changes.
+       * terraform_force_new forces Terraform to delete and recreate the object if the field changes.
        * </pre>
        *
-       * <code>bool force_new = 1941308;</code>
+       * <code>bool terraform_force_new = 1941308;</code>
        * @return This builder for chaining.
        */
-      public Builder clearForceNew() {
+      public Builder clearTerraformForceNew() {
         
-        forceNew_ = false;
+        terraformForceNew_ = false;
         onChanged();
         return this;
       }
 
-      private boolean writeOnly_ ;
+      private boolean terraformSensitive_ ;
       /**
-       * <code>bool write_only = 1941309;</code>
-       * @return The writeOnly.
+       * <pre>
+       * terraform_sensitive determines whether the field should be marked as
+       * sensitive in Terraform.
+       * </pre>
+       *
+       * <code>bool terraform_sensitive = 1941310;</code>
+       * @return The terraformSensitive.
        */
       @java.lang.Override
-      public boolean getWriteOnly() {
-        return writeOnly_;
+      public boolean getTerraformSensitive() {
+        return terraformSensitive_;
       }
       /**
-       * <code>bool write_only = 1941309;</code>
-       * @param value The writeOnly to set.
+       * <pre>
+       * terraform_sensitive determines whether the field should be marked as
+       * sensitive in Terraform.
+       * </pre>
+       *
+       * <code>bool terraform_sensitive = 1941310;</code>
+       * @param value The terraformSensitive to set.
        * @return This builder for chaining.
        */
-      public Builder setWriteOnly(boolean value) {
+      public Builder setTerraformSensitive(boolean value) {
         
-        writeOnly_ = value;
+        terraformSensitive_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool write_only = 1941309;</code>
+       * <pre>
+       * terraform_sensitive determines whether the field should be marked as
+       * sensitive in Terraform.
+       * </pre>
+       *
+       * <code>bool terraform_sensitive = 1941310;</code>
        * @return This builder for chaining.
        */
-      public Builder clearWriteOnly() {
+      public Builder clearTerraformSensitive() {
         
-        writeOnly_ = false;
+        terraformSensitive_ = false;
         onChanged();
         return this;
       }
 
-      private boolean sensitive_ ;
+      private java.lang.Object terraformDiffSuppressFunc_ = "";
       /**
        * <pre>
-       * sensitive determines whether the field should be marked as sensitive in Terraform.
+       * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+       * in the Terraform provider, if any.
        * </pre>
        *
-       * <code>bool sensitive = 1941310;</code>
-       * @return The sensitive.
+       * <code>string terraform_diff_suppress_func = 1941319;</code>
+       * @return The terraformDiffSuppressFunc.
        */
-      @java.lang.Override
-      public boolean getSensitive() {
-        return sensitive_;
+      public java.lang.String getTerraformDiffSuppressFunc() {
+        java.lang.Object ref = terraformDiffSuppressFunc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          terraformDiffSuppressFunc_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
-       * sensitive determines whether the field should be marked as sensitive in Terraform.
+       * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+       * in the Terraform provider, if any.
        * </pre>
        *
-       * <code>bool sensitive = 1941310;</code>
-       * @param value The sensitive to set.
+       * <code>string terraform_diff_suppress_func = 1941319;</code>
+       * @return The bytes for terraformDiffSuppressFunc.
+       */
+      public com.google.protobuf.ByteString
+          getTerraformDiffSuppressFuncBytes() {
+        java.lang.Object ref = terraformDiffSuppressFunc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terraformDiffSuppressFunc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+       * in the Terraform provider, if any.
+       * </pre>
+       *
+       * <code>string terraform_diff_suppress_func = 1941319;</code>
+       * @param value The terraformDiffSuppressFunc to set.
        * @return This builder for chaining.
        */
-      public Builder setSensitive(boolean value) {
-        
-        sensitive_ = value;
+      public Builder setTerraformDiffSuppressFunc(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        terraformDiffSuppressFunc_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * sensitive determines whether the field should be marked as sensitive in Terraform.
+       * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+       * in the Terraform provider, if any.
        * </pre>
        *
-       * <code>bool sensitive = 1941310;</code>
+       * <code>string terraform_diff_suppress_func = 1941319;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSensitive() {
+      public Builder clearTerraformDiffSuppressFunc() {
         
-        sensitive_ = false;
+        terraformDiffSuppressFunc_ = getDefaultInstance().getTerraformDiffSuppressFunc();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * terraform_diff_suppress_func is the name of the DiffSuppressFunc to use
+       * in the Terraform provider, if any.
+       * </pre>
+       *
+       * <code>string terraform_diff_suppress_func = 1941319;</code>
+       * @param value The bytes for terraformDiffSuppressFunc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformDiffSuppressFuncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        terraformDiffSuppressFunc_ = value;
         onChanged();
         return this;
       }
@@ -3599,288 +3366,6 @@ public final class Options {
         onChanged();
         return this;
       }
-
-      private boolean readOnly_ ;
-      /**
-       * <code>bool read_only = 1941315;</code>
-       * @return The readOnly.
-       */
-      @java.lang.Override
-      public boolean getReadOnly() {
-        return readOnly_;
-      }
-      /**
-       * <code>bool read_only = 1941315;</code>
-       * @param value The readOnly to set.
-       * @return This builder for chaining.
-       */
-      public Builder setReadOnly(boolean value) {
-        
-        readOnly_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool read_only = 1941315;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearReadOnly() {
-        
-        readOnly_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean isCredential_ ;
-      /**
-       * <code>bool is_credential = 1941316;</code>
-       * @return The isCredential.
-       */
-      @java.lang.Override
-      public boolean getIsCredential() {
-        return isCredential_;
-      }
-      /**
-       * <code>bool is_credential = 1941316;</code>
-       * @param value The isCredential to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsCredential(boolean value) {
-        
-        isCredential_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_credential = 1941316;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsCredential() {
-        
-        isCredential_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object sqlType_ = "";
-      /**
-       * <code>string sql_type = 1941317;</code>
-       * @return The sqlType.
-       */
-      public java.lang.String getSqlType() {
-        java.lang.Object ref = sqlType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sqlType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string sql_type = 1941317;</code>
-       * @return The bytes for sqlType.
-       */
-      public com.google.protobuf.ByteString
-          getSqlTypeBytes() {
-        java.lang.Object ref = sqlType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sqlType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string sql_type = 1941317;</code>
-       * @param value The sqlType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSqlType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        sqlType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string sql_type = 1941317;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSqlType() {
-        
-        sqlType_ = getDefaultInstance().getSqlType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string sql_type = 1941317;</code>
-       * @param value The bytes for sqlType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSqlTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        sqlType_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean privateSdk_ ;
-      /**
-       * <pre>
-       * private_sdk indicates that the field should not be exposed via the public sdk.
-       * </pre>
-       *
-       * <code>bool private_sdk = 1941318;</code>
-       * @return The privateSdk.
-       */
-      @java.lang.Override
-      public boolean getPrivateSdk() {
-        return privateSdk_;
-      }
-      /**
-       * <pre>
-       * private_sdk indicates that the field should not be exposed via the public sdk.
-       * </pre>
-       *
-       * <code>bool private_sdk = 1941318;</code>
-       * @param value The privateSdk to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPrivateSdk(boolean value) {
-        
-        privateSdk_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * private_sdk indicates that the field should not be exposed via the public sdk.
-       * </pre>
-       *
-       * <code>bool private_sdk = 1941318;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPrivateSdk() {
-        
-        privateSdk_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object diffSuppressFunc_ = "";
-      /**
-       * <pre>
-       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-       * Terraform provider, if any.
-       * </pre>
-       *
-       * <code>string diff_suppress_func = 1941319;</code>
-       * @return The diffSuppressFunc.
-       */
-      public java.lang.String getDiffSuppressFunc() {
-        java.lang.Object ref = diffSuppressFunc_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          diffSuppressFunc_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-       * Terraform provider, if any.
-       * </pre>
-       *
-       * <code>string diff_suppress_func = 1941319;</code>
-       * @return The bytes for diffSuppressFunc.
-       */
-      public com.google.protobuf.ByteString
-          getDiffSuppressFuncBytes() {
-        java.lang.Object ref = diffSuppressFunc_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          diffSuppressFunc_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-       * Terraform provider, if any.
-       * </pre>
-       *
-       * <code>string diff_suppress_func = 1941319;</code>
-       * @param value The diffSuppressFunc to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDiffSuppressFunc(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        diffSuppressFunc_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-       * Terraform provider, if any.
-       * </pre>
-       *
-       * <code>string diff_suppress_func = 1941319;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDiffSuppressFunc() {
-        
-        diffSuppressFunc_ = getDefaultInstance().getDiffSuppressFunc();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * diff_suppress_func is the name of the DiffSuppressFunc to use in the
-       * Terraform provider, if any.
-       * </pre>
-       *
-       * <code>string diff_suppress_func = 1941319;</code>
-       * @param value The bytes for diffSuppressFunc to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDiffSuppressFuncBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        diffSuppressFunc_ = value;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3939,18 +3424,10 @@ public final class Options {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string model_name = 1941300;</code>
-     * @return The modelName.
-     */
-    java.lang.String getModelName();
-    /**
-     * <code>string model_name = 1941300;</code>
-     * @return The bytes for modelName.
-     */
-    com.google.protobuf.ByteString
-        getModelNameBytes();
-
-    /**
+     * <pre>
+     * porcelain determines whether the message is exposed to the SDKs.
+     * </pre>
+     *
      * <code>bool porcelain = 1941301;</code>
      * @return The porcelain.
      */
@@ -3987,21 +3464,6 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getOptionsFieldBytes();
-
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return Whether the terraformDocs field is set.
-     */
-    boolean hasTerraformDocs();
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return The terraformDocs.
-     */
-    com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs();
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     */
-    com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder();
 
     /**
      * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
@@ -4067,6 +3529,21 @@ public final class Options {
     boolean getHideFromJsonGateway();
 
     /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return Whether the terraformDocs field is set.
+     */
+    boolean hasTerraformDocs();
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return The terraformDocs.
+     */
+    com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs();
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     */
+    com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder();
+
+    /**
      * <code>string terraform_provider_name = 1941311;</code>
      * @return The terraformProviderName.
      */
@@ -4091,7 +3568,6 @@ public final class Options {
       super(builder);
     }
     private MessageOptions() {
-      modelName_ = "";
       optionsField_ = "";
       cliName_ = "";
       cliJsonName_ = "";
@@ -4129,12 +3605,6 @@ public final class Options {
             case 0:
               done = true;
               break;
-            case 15530402: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              modelName_ = s;
-              break;
-            }
             case 15530408: {
 
               porcelain_ = input.readBool();
@@ -4243,47 +3713,13 @@ public final class Options {
               com.strongdm.api.v1.plumbing.Options.MessageOptions.class, com.strongdm.api.v1.plumbing.Options.MessageOptions.Builder.class);
     }
 
-    public static final int MODEL_NAME_FIELD_NUMBER = 1941300;
-    private volatile java.lang.Object modelName_;
-    /**
-     * <code>string model_name = 1941300;</code>
-     * @return The modelName.
-     */
-    @java.lang.Override
-    public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string model_name = 1941300;</code>
-     * @return The bytes for modelName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getModelNameBytes() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int PORCELAIN_FIELD_NUMBER = 1941301;
     private boolean porcelain_;
     /**
+     * <pre>
+     * porcelain determines whether the message is exposed to the SDKs.
+     * </pre>
+     *
      * <code>bool porcelain = 1941301;</code>
      * @return The porcelain.
      */
@@ -4353,32 +3789,6 @@ public final class Options {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int TERRAFORM_DOCS_FIELD_NUMBER = 1941304;
-    private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return Whether the terraformDocs field is set.
-     */
-    @java.lang.Override
-    public boolean hasTerraformDocs() {
-      return terraformDocs_ != null;
-    }
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return The terraformDocs.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
-      return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
-    }
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
-      return getTerraformDocs();
     }
 
     public static final int CUSTOM_FIELD_NUMBER = 1941305;
@@ -4543,6 +3953,32 @@ public final class Options {
       return hideFromJsonGateway_;
     }
 
+    public static final int TERRAFORM_DOCS_FIELD_NUMBER = 1941304;
+    private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return Whether the terraformDocs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTerraformDocs() {
+      return terraformDocs_ != null;
+    }
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return The terraformDocs.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
+      return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
+    }
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
+      return getTerraformDocs();
+    }
+
     public static final int TERRAFORM_PROVIDER_NAME_FIELD_NUMBER = 1941311;
     private volatile java.lang.Object terraformProviderName_;
     /**
@@ -4595,9 +4031,6 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941300, modelName_);
-      }
       if (porcelain_ != false) {
         output.writeBool(1941301, porcelain_);
       }
@@ -4640,9 +4073,6 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941300, modelName_);
-      }
       if (porcelain_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941301, porcelain_);
@@ -4697,19 +4127,12 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.MessageOptions other = (com.strongdm.api.v1.plumbing.Options.MessageOptions) obj;
 
-      if (!getModelName()
-          .equals(other.getModelName())) return false;
       if (getPorcelain()
           != other.getPorcelain()) return false;
       if (getError()
           != other.getError()) return false;
       if (!getOptionsField()
           .equals(other.getOptionsField())) return false;
-      if (hasTerraformDocs() != other.hasTerraformDocs()) return false;
-      if (hasTerraformDocs()) {
-        if (!getTerraformDocs()
-            .equals(other.getTerraformDocs())) return false;
-      }
       if (hasCustom() != other.hasCustom()) return false;
       if (hasCustom()) {
         if (!getCustom()
@@ -4725,6 +4148,11 @@ public final class Options {
           .equals(other.getJsonGatewayName())) return false;
       if (getHideFromJsonGateway()
           != other.getHideFromJsonGateway()) return false;
+      if (hasTerraformDocs() != other.hasTerraformDocs()) return false;
+      if (hasTerraformDocs()) {
+        if (!getTerraformDocs()
+            .equals(other.getTerraformDocs())) return false;
+      }
       if (!getTerraformProviderName()
           .equals(other.getTerraformProviderName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -4738,8 +4166,6 @@ public final class Options {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
       hash = (37 * hash) + PORCELAIN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPorcelain());
@@ -4747,10 +4173,6 @@ public final class Options {
       hash = (53 * hash) + getError();
       hash = (37 * hash) + OPTIONS_FIELD_FIELD_NUMBER;
       hash = (53 * hash) + getOptionsField().hashCode();
-      if (hasTerraformDocs()) {
-        hash = (37 * hash) + TERRAFORM_DOCS_FIELD_NUMBER;
-        hash = (53 * hash) + getTerraformDocs().hashCode();
-      }
       if (hasCustom()) {
         hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
         hash = (53 * hash) + getCustom().hashCode();
@@ -4767,6 +4189,10 @@ public final class Options {
       hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHideFromJsonGateway());
+      if (hasTerraformDocs()) {
+        hash = (37 * hash) + TERRAFORM_DOCS_FIELD_NUMBER;
+        hash = (53 * hash) + getTerraformDocs().hashCode();
+      }
       hash = (37 * hash) + TERRAFORM_PROVIDER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformProviderName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -4902,20 +4328,12 @@ public final class Options {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        modelName_ = "";
-
         porcelain_ = false;
 
         error_ = 0;
 
         optionsField_ = "";
 
-        if (terraformDocsBuilder_ == null) {
-          terraformDocs_ = null;
-        } else {
-          terraformDocs_ = null;
-          terraformDocsBuilder_ = null;
-        }
         if (customBuilder_ == null) {
           custom_ = null;
         } else {
@@ -4932,6 +4350,12 @@ public final class Options {
 
         hideFromJsonGateway_ = false;
 
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = null;
+        } else {
+          terraformDocs_ = null;
+          terraformDocsBuilder_ = null;
+        }
         terraformProviderName_ = "";
 
         return this;
@@ -4960,15 +4384,9 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Options.MessageOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.MessageOptions result = new com.strongdm.api.v1.plumbing.Options.MessageOptions(this);
-        result.modelName_ = modelName_;
         result.porcelain_ = porcelain_;
         result.error_ = error_;
         result.optionsField_ = optionsField_;
-        if (terraformDocsBuilder_ == null) {
-          result.terraformDocs_ = terraformDocs_;
-        } else {
-          result.terraformDocs_ = terraformDocsBuilder_.build();
-        }
         if (customBuilder_ == null) {
           result.custom_ = custom_;
         } else {
@@ -4979,6 +4397,11 @@ public final class Options {
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
         result.hideFromJsonGateway_ = hideFromJsonGateway_;
+        if (terraformDocsBuilder_ == null) {
+          result.terraformDocs_ = terraformDocs_;
+        } else {
+          result.terraformDocs_ = terraformDocsBuilder_.build();
+        }
         result.terraformProviderName_ = terraformProviderName_;
         onBuilt();
         return result;
@@ -5028,10 +4451,6 @@ public final class Options {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.MessageOptions other) {
         if (other == com.strongdm.api.v1.plumbing.Options.MessageOptions.getDefaultInstance()) return this;
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
-          onChanged();
-        }
         if (other.getPorcelain() != false) {
           setPorcelain(other.getPorcelain());
         }
@@ -5041,9 +4460,6 @@ public final class Options {
         if (!other.getOptionsField().isEmpty()) {
           optionsField_ = other.optionsField_;
           onChanged();
-        }
-        if (other.hasTerraformDocs()) {
-          mergeTerraformDocs(other.getTerraformDocs());
         }
         if (other.hasCustom()) {
           mergeCustom(other.getCustom());
@@ -5065,6 +4481,9 @@ public final class Options {
         }
         if (other.getHideFromJsonGateway() != false) {
           setHideFromJsonGateway(other.getHideFromJsonGateway());
+        }
+        if (other.hasTerraformDocs()) {
+          mergeTerraformDocs(other.getTerraformDocs());
         }
         if (!other.getTerraformProviderName().isEmpty()) {
           terraformProviderName_ = other.terraformProviderName_;
@@ -5099,84 +4518,12 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object modelName_ = "";
-      /**
-       * <code>string model_name = 1941300;</code>
-       * @return The modelName.
-       */
-      public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string model_name = 1941300;</code>
-       * @return The bytes for modelName.
-       */
-      public com.google.protobuf.ByteString
-          getModelNameBytes() {
-        java.lang.Object ref = modelName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string model_name = 1941300;</code>
-       * @param value The modelName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setModelName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        modelName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_name = 1941300;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearModelName() {
-        
-        modelName_ = getDefaultInstance().getModelName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_name = 1941300;</code>
-       * @param value The bytes for modelName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setModelNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        modelName_ = value;
-        onChanged();
-        return this;
-      }
-
       private boolean porcelain_ ;
       /**
+       * <pre>
+       * porcelain determines whether the message is exposed to the SDKs.
+       * </pre>
+       *
        * <code>bool porcelain = 1941301;</code>
        * @return The porcelain.
        */
@@ -5185,6 +4532,10 @@ public final class Options {
         return porcelain_;
       }
       /**
+       * <pre>
+       * porcelain determines whether the message is exposed to the SDKs.
+       * </pre>
+       *
        * <code>bool porcelain = 1941301;</code>
        * @param value The porcelain to set.
        * @return This builder for chaining.
@@ -5196,6 +4547,10 @@ public final class Options {
         return this;
       }
       /**
+       * <pre>
+       * porcelain determines whether the message is exposed to the SDKs.
+       * </pre>
+       *
        * <code>bool porcelain = 1941301;</code>
        * @return This builder for chaining.
        */
@@ -5348,125 +4703,6 @@ public final class Options {
         optionsField_ = value;
         onChanged();
         return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> terraformDocsBuilder_;
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       * @return Whether the terraformDocs field is set.
-       */
-      public boolean hasTerraformDocs() {
-        return terraformDocsBuilder_ != null || terraformDocs_ != null;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       * @return The terraformDocs.
-       */
-      public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
-        if (terraformDocsBuilder_ == null) {
-          return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
-        } else {
-          return terraformDocsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder setTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
-        if (terraformDocsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          terraformDocs_ = value;
-          onChanged();
-        } else {
-          terraformDocsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder setTerraformDocs(
-          com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder builderForValue) {
-        if (terraformDocsBuilder_ == null) {
-          terraformDocs_ = builderForValue.build();
-          onChanged();
-        } else {
-          terraformDocsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder mergeTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
-        if (terraformDocsBuilder_ == null) {
-          if (terraformDocs_ != null) {
-            terraformDocs_ =
-              com.strongdm.api.v1.plumbing.Options.TerraformDocs.newBuilder(terraformDocs_).mergeFrom(value).buildPartial();
-          } else {
-            terraformDocs_ = value;
-          }
-          onChanged();
-        } else {
-          terraformDocsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder clearTerraformDocs() {
-        if (terraformDocsBuilder_ == null) {
-          terraformDocs_ = null;
-          onChanged();
-        } else {
-          terraformDocs_ = null;
-          terraformDocsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder getTerraformDocsBuilder() {
-        
-        onChanged();
-        return getTerraformDocsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
-        if (terraformDocsBuilder_ != null) {
-          return terraformDocsBuilder_.getMessageOrBuilder();
-        } else {
-          return terraformDocs_ == null ?
-              com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
-        }
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> 
-          getTerraformDocsFieldBuilder() {
-        if (terraformDocsBuilder_ == null) {
-          terraformDocsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder>(
-                  getTerraformDocs(),
-                  getParentForChildren(),
-                  isClean());
-          terraformDocs_ = null;
-        }
-        return terraformDocsBuilder_;
       }
 
       private com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions custom_;
@@ -5876,6 +5112,125 @@ public final class Options {
         hideFromJsonGateway_ = false;
         onChanged();
         return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> terraformDocsBuilder_;
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       * @return Whether the terraformDocs field is set.
+       */
+      public boolean hasTerraformDocs() {
+        return terraformDocsBuilder_ != null || terraformDocs_ != null;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       * @return The terraformDocs.
+       */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
+        if (terraformDocsBuilder_ == null) {
+          return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
+        } else {
+          return terraformDocsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder setTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
+        if (terraformDocsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          terraformDocs_ = value;
+          onChanged();
+        } else {
+          terraformDocsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder setTerraformDocs(
+          com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder builderForValue) {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = builderForValue.build();
+          onChanged();
+        } else {
+          terraformDocsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder mergeTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
+        if (terraformDocsBuilder_ == null) {
+          if (terraformDocs_ != null) {
+            terraformDocs_ =
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.newBuilder(terraformDocs_).mergeFrom(value).buildPartial();
+          } else {
+            terraformDocs_ = value;
+          }
+          onChanged();
+        } else {
+          terraformDocsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder clearTerraformDocs() {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = null;
+          onChanged();
+        } else {
+          terraformDocs_ = null;
+          terraformDocsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder getTerraformDocsBuilder() {
+        
+        onChanged();
+        return getTerraformDocsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
+        if (terraformDocsBuilder_ != null) {
+          return terraformDocsBuilder_.getMessageOrBuilder();
+        } else {
+          return terraformDocs_ == null ?
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
+        }
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> 
+          getTerraformDocsFieldBuilder() {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder>(
+                  getTerraformDocs(),
+                  getParentForChildren(),
+                  isClean());
+          terraformDocs_ = null;
+        }
+        return terraformDocsBuilder_;
       }
 
       private java.lang.Object terraformProviderName_ = "";
@@ -8098,18 +7453,6 @@ public final class Options {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string model_name = 1941380;</code>
-     * @return The modelName.
-     */
-    java.lang.String getModelName();
-    /**
-     * <code>string model_name = 1941380;</code>
-     * @return The bytes for modelName.
-     */
-    com.google.protobuf.ByteString
-        getModelNameBytes();
-
-    /**
      * <code>repeated string common_fields = 1941381;</code>
      * @return A list containing the commonFields.
      */
@@ -8147,7 +7490,6 @@ public final class Options {
       super(builder);
     }
     private OneofOptions() {
-      modelName_ = "";
       commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -8182,12 +7524,6 @@ public final class Options {
             case 0:
               done = true;
               break;
-            case 15531042: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              modelName_ = s;
-              break;
-            }
             case 15531050: {
               java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
@@ -8230,44 +7566,6 @@ public final class Options {
       return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.strongdm.api.v1.plumbing.Options.OneofOptions.class, com.strongdm.api.v1.plumbing.Options.OneofOptions.Builder.class);
-    }
-
-    public static final int MODEL_NAME_FIELD_NUMBER = 1941380;
-    private volatile java.lang.Object modelName_;
-    /**
-     * <code>string model_name = 1941380;</code>
-     * @return The modelName.
-     */
-    @java.lang.Override
-    public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string model_name = 1941380;</code>
-     * @return The bytes for modelName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getModelNameBytes() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     public static final int COMMON_FIELDS_FIELD_NUMBER = 1941381;
@@ -8319,9 +7617,6 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941380, modelName_);
-      }
       for (int i = 0; i < commonFields_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941381, commonFields_.getRaw(i));
       }
@@ -8334,9 +7629,6 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941380, modelName_);
-      }
       {
         int dataSize = 0;
         for (int i = 0; i < commonFields_.size(); i++) {
@@ -8360,8 +7652,6 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.OneofOptions other = (com.strongdm.api.v1.plumbing.Options.OneofOptions) obj;
 
-      if (!getModelName()
-          .equals(other.getModelName())) return false;
       if (!getCommonFieldsList()
           .equals(other.getCommonFieldsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -8375,8 +7665,6 @@ public final class Options {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
       if (getCommonFieldsCount() > 0) {
         hash = (37 * hash) + COMMON_FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getCommonFieldsList().hashCode();
@@ -8514,8 +7802,6 @@ public final class Options {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        modelName_ = "";
-
         commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -8545,7 +7831,6 @@ public final class Options {
       public com.strongdm.api.v1.plumbing.Options.OneofOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.OneofOptions result = new com.strongdm.api.v1.plumbing.Options.OneofOptions(this);
         int from_bitField0_ = bitField0_;
-        result.modelName_ = modelName_;
         if (((bitField0_ & 0x00000001) != 0)) {
           commonFields_ = commonFields_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -8599,10 +7884,6 @@ public final class Options {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.OneofOptions other) {
         if (other == com.strongdm.api.v1.plumbing.Options.OneofOptions.getDefaultInstance()) return this;
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
-          onChanged();
-        }
         if (!other.commonFields_.isEmpty()) {
           if (commonFields_.isEmpty()) {
             commonFields_ = other.commonFields_;
@@ -8642,82 +7923,6 @@ public final class Options {
         return this;
       }
       private int bitField0_;
-
-      private java.lang.Object modelName_ = "";
-      /**
-       * <code>string model_name = 1941380;</code>
-       * @return The modelName.
-       */
-      public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string model_name = 1941380;</code>
-       * @return The bytes for modelName.
-       */
-      public com.google.protobuf.ByteString
-          getModelNameBytes() {
-        java.lang.Object ref = modelName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string model_name = 1941380;</code>
-       * @param value The modelName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setModelName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        modelName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_name = 1941380;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearModelName() {
-        
-        modelName_ = getDefaultInstance().getModelName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_name = 1941380;</code>
-       * @param value The bytes for modelName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setModelNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        modelName_ = value;
-        onChanged();
-        return this;
-      }
 
       private com.google.protobuf.LazyStringList commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureCommonFieldsIsMutable() {
@@ -9638,52 +8843,49 @@ public final class Options {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"0\n\rMethodOptions\022\020\n\006method" +
       "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"$\n\013FileOptions\022\025" +
-      "\n\013private_sdk\030\304\301v \001(\010\"\345\003\n\014FieldOptions\022\016" +
-      "\n\004name\030\264\276v \001(\t\022\026\n\014sql_nullable\030\265\276v \001(\010\022\035" +
+      "\n\013private_sdk\030\304\301v \001(\010\"\240\003\n\014FieldOptions\022\035" +
       "\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010iterabl" +
-      "e\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\021\n\007id_type" +
-      "\030\271\276v \001(\t\022\022\n\010sdk_only\030\272\276v \001(\010\022\034\n\022terrafor" +
-      "m_computed\030\273\276v \001(\t\022\023\n\tforce_new\030\274\276v \001(\010\022" +
-      "\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tsensitive\030\276\276v \001" +
-      "(\010\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_json_name\030" +
-      "\300\276v \001(\t\022\033\n\021json_gateway_name\030\301\276v \001(\t\022 \n\026" +
-      "hide_from_json_gateway\030\302\276v \001(\010\022\023\n\tread_o" +
-      "nly\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(\010\022\022\n\010" +
-      "sql_type\030\305\276v \001(\t\022\025\n\013private_sdk\030\306\276v \001(\010\022" +
-      "\034\n\022diff_suppress_func\030\307\276v \001(\t\"\355\002\n\016Messag" +
-      "eOptions\022\024\n\nmodel_name\030\264\276v \001(\t\022\023\n\tporcel" +
-      "ain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_" +
-      "field\030\267\276v \001(\t\022+\n\016terraform_docs\030\270\276v \001(\0132" +
-      "\021.v1.TerraformDocs\0223\n\006custom\030\271\276v \001(\0132!.v" +
-      "1.CustomPorcelainMessageOptions\022\025\n\013priva" +
-      "te_sdk\030\272\276v \001(\010\022\022\n\010cli_name\030\273\276v \001(\t\022\027\n\rcl" +
-      "i_json_name\030\274\276v \001(\t\022\033\n\021json_gateway_name" +
-      "\030\275\276v \001(\t\022 \n\026hide_from_json_gateway\030\276\276v \001" +
-      "(\010\022!\n\027terraform_provider_name\030\277\276v \001(\t\"\266\001" +
-      "\n\035CustomPorcelainMessageOptions\022\023\n\tconve" +
-      "rter\030\275\276v \001(\t\022\033\n\021go_porcelain_type\030\276\276v \001(" +
-      "\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t\022\"\n\030terr" +
-      "aform_porcelain_type\030\300\276v \001(\t\022 \n\026openapi_" +
-      "porcelain_type\030\301\276v \001(\t\"T\n\rTerraformDocs\022" +
-      "\037\n\025resource_example_path\030\264\276v \001(\t\022\"\n\030data" +
-      "_source_example_path\030\265\276v \001(\t\"=\n\014OneofOpt" +
-      "ions\022\024\n\nmodel_name\030\204\277v \001(\t\022\027\n\rcommon_fie" +
-      "lds\030\205\277v \003(\t\"<\n\016ServiceOptions\022\023\n\tmain_no" +
-      "un\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010:K\n\016met" +
-      "hod_options\022\036.google.protobuf.MethodOpti" +
-      "ons\030\220\277v \001(\0132\021.v1.MethodOptions:E\n\014file_o" +
-      "ptions\022\034.google.protobuf.FileOptions\030\250\302v" +
-      " \001(\0132\017.v1.FileOptions:H\n\rfield_options\022\035" +
-      ".google.protobuf.FieldOptions\030\216\277v \001(\0132\020." +
-      "v1.FieldOptions:N\n\017message_options\022\037.goo" +
-      "gle.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1" +
-      ".MessageOptions:H\n\roneof_options\022\035.googl" +
-      "e.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.One" +
-      "ofOptions:N\n\017service_options\022\037.google.pr" +
-      "otobuf.ServiceOptions\030\231\277v \001(\0132\022.v1.Servi" +
-      "ceOptionsBR\n\034com.strongdm.api.v1.plumbin" +
-      "gZ2github.com/strongdm/strongdm-sdk-go/i" +
-      "nternal/v1;v1b\006proto3"
+      "e\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite_o" +
+      "nly\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris_c" +
+      "redential\030\304\276v \001(\010\022\025\n\013private_sdk\030\306\276v \001(\010" +
+      "\022\034\n\022terraform_computed\030\273\276v \001(\t\022\035\n\023terraf" +
+      "orm_force_new\030\274\276v \001(\010\022\035\n\023terraform_sensi" +
+      "tive\030\276\276v \001(\010\022&\n\034terraform_diff_suppress_" +
+      "func\030\307\276v \001(\t\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_" +
+      "json_name\030\300\276v \001(\t\022\033\n\021json_gateway_name\030\301" +
+      "\276v \001(\t\022 \n\026hide_from_json_gateway\030\302\276v \001(\010" +
+      "\"\327\002\n\016MessageOptions\022\023\n\tporcelain\030\265\276v \001(\010" +
+      "\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001" +
+      "(\t\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPorcelai" +
+      "nMessageOptions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022" +
+      "\n\010cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v " +
+      "\001(\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026hide" +
+      "_from_json_gateway\030\276\276v \001(\010\022+\n\016terraform_" +
+      "docs\030\270\276v \001(\0132\021.v1.TerraformDocs\022!\n\027terra" +
+      "form_provider_name\030\277\276v \001(\t\"\266\001\n\035CustomPor" +
+      "celainMessageOptions\022\023\n\tconverter\030\275\276v \001(" +
+      "\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_p" +
+      "orcelain_type\030\277\276v \001(\t\022\"\n\030terraform_porce" +
+      "lain_type\030\300\276v \001(\t\022 \n\026openapi_porcelain_t" +
+      "ype\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource" +
+      "_example_path\030\264\276v \001(\t\022\"\n\030data_source_exa" +
+      "mple_path\030\265\276v \001(\t\"\'\n\014OneofOptions\022\027\n\rcom" +
+      "mon_fields\030\205\277v \003(\t\"<\n\016ServiceOptions\022\023\n\t" +
+      "main_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010" +
+      ":K\n\016method_options\022\036.google.protobuf.Met" +
+      "hodOptions\030\220\277v \001(\0132\021.v1.MethodOptions:E\n" +
+      "\014file_options\022\034.google.protobuf.FileOpti" +
+      "ons\030\250\302v \001(\0132\017.v1.FileOptions:H\n\rfield_op" +
+      "tions\022\035.google.protobuf.FieldOptions\030\216\277v" +
+      " \001(\0132\020.v1.FieldOptions:N\n\017message_option" +
+      "s\022\037.google.protobuf.MessageOptions\030\217\277v \001" +
+      "(\0132\022.v1.MessageOptions:H\n\roneof_options\022" +
+      "\035.google.protobuf.OneofOptions\030\205\277v \001(\0132\020" +
+      ".v1.OneofOptions:N\n\017service_options\022\037.go" +
+      "ogle.protobuf.ServiceOptions\030\231\277v \001(\0132\022.v" +
+      "1.ServiceOptionsBR\n\034com.strongdm.api.v1." +
+      "plumbingZ2github.com/strongdm/strongdm-s" +
+      "dk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9707,13 +8909,13 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Name", "SqlNullable", "ExposeAsPorcelain", "Iterable", "Required", "IdType", "SdkOnly", "TerraformComputed", "ForceNew", "WriteOnly", "Sensitive", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "ReadOnly", "IsCredential", "SqlType", "PrivateSdk", "DiffSuppressFunc", });
+        new java.lang.String[] { "ExposeAsPorcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "PrivateSdk", "TerraformComputed", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "ModelName", "Porcelain", "Error", "OptionsField", "TerraformDocs", "Custom", "PrivateSdk", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformProviderName", });
+        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "PrivateSdk", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformDocs", "TerraformProviderName", });
     internal_static_v1_CustomPorcelainMessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable = new
@@ -9731,7 +8933,7 @@ public final class Options {
     internal_static_v1_OneofOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_OneofOptions_descriptor,
-        new java.lang.String[] { "ModelName", "CommonFields", });
+        new java.lang.String[] { "CommonFields", });
     internal_static_v1_ServiceOptions_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_v1_ServiceOptions_fieldAccessorTable = new

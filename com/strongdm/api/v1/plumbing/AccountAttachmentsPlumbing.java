@@ -9501,32 +9501,30 @@ public final class AccountAttachmentsPlumbing {
       "ta\022>\n\023account_attachments\030\002 \003(\0132\025.v1.Acc" +
       "ountAttachmentB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit" +
       "\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\220\364\263\007\001\"\257\002\n\021AccountAttachment\022*\n\002id\030" +
-      "\001 \001(\tB\036\362\370\263\007\031\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\010UserRole\0227\n" +
-      "\naccount_id\030\002 \001(\tB#\362\370\263\007\036\242\363\263\007\006UserID\260\363\263\007\001" +
-      "\300\363\263\007\001\312\363\263\007\004User\0224\n\007role_id\030\003 \001(\tB#\362\370\263\007\036\242\363" +
-      "\263\007\006RoleID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\004Role:\177\372\370\263\007z\242\363\263\007\010" +
-      "UserRole\250\363\263\007\001\302\363\263\007c\242\363\263\007+tf_examples/accou" +
-      "nt_attachment_resource.txt\252\363\263\007.tf_exampl" +
-      "es/account_attachment_data_source.txt2\276\004" +
-      "\n\022AccountAttachments\022\202\001\n\006Create\022\".v1.Acc" +
-      "ountAttachmentCreateRequest\032#.v1.Account" +
-      "AttachmentCreateResponse\"/\202\371\263\007\t\242\363\263\007\004post" +
-      "\202\371\263\007\034\252\363\263\007\027/v1/account-attachments\022}\n\003Get" +
-      "\022\037.v1.AccountAttachmentGetRequest\032 .v1.A" +
-      "ccountAttachmentGetResponse\"3\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007!\252\363\263\007\034/v1/account-attachments/{id}" +
-      "\022\211\001\n\006Delete\022\".v1.AccountAttachmentDelete" +
-      "Request\032#.v1.AccountAttachmentDeleteResp" +
-      "onse\"6\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007!\252\363\263\007\034/v1/acco" +
-      "unt-attachments/{id}\022{\n\004List\022 .v1.Accoun" +
-      "tAttachmentListRequest\032!.v1.AccountAttac" +
-      "hmentListResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263" +
-      "\007\027/v1/account-attachments\032\033\312\371\263\007\026\302\371\263\007\021Acc" +
-      "ountAttachmentBn\n\034com.strongdm.api.v1.pl" +
-      "umbingB\032AccountAttachmentsPlumbingZ2gith" +
-      "ub.com/strongdm/strongdm-sdk-go/internal" +
-      "/v1;v1b\006proto3"
+      "\001\362\370\263\007\005\220\364\263\007\001\"\346\001\n\021AccountAttachment\022\026\n\002id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\naccount_id\030\002 \001(\tB\017\362" +
+      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022 \n\007role_id\030\003 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\300\363\263\007\001:r\372\370\263\007m\250\363\263\007\001\302\363\263\007c\242\363\263\007+tf_example" +
+      "s/account_attachment_resource.txt\252\363\263\007.tf" +
+      "_examples/account_attachment_data_source" +
+      ".txt2\276\004\n\022AccountAttachments\022\202\001\n\006Create\022\"" +
+      ".v1.AccountAttachmentCreateRequest\032#.v1." +
+      "AccountAttachmentCreateResponse\"/\202\371\263\007\t\242\363" +
+      "\263\007\004post\202\371\263\007\034\252\363\263\007\027/v1/account-attachments" +
+      "\022}\n\003Get\022\037.v1.AccountAttachmentGetRequest" +
+      "\032 .v1.AccountAttachmentGetResponse\"3\202\371\263\007" +
+      "\010\242\363\263\007\003get\202\371\263\007!\252\363\263\007\034/v1/account-attachmen" +
+      "ts/{id}\022\211\001\n\006Delete\022\".v1.AccountAttachmen" +
+      "tDeleteRequest\032#.v1.AccountAttachmentDel" +
+      "eteResponse\"6\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007!\252\363\263\007\034/" +
+      "v1/account-attachments/{id}\022{\n\004List\022 .v1" +
+      ".AccountAttachmentListRequest\032!.v1.Accou" +
+      "ntAttachmentListResponse\".\202\371\263\007\010\242\363\263\007\003get\202" +
+      "\371\263\007\034\252\363\263\007\027/v1/account-attachments\032\033\312\371\263\007\026\302" +
+      "\371\263\007\021AccountAttachmentBn\n\034com.strongdm.ap" +
+      "i.v1.plumbingB\032AccountAttachmentsPlumbin" +
+      "gZ2github.com/strongdm/strongdm-sdk-go/i" +
+      "nternal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

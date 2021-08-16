@@ -10055,34 +10055,31 @@ public final class AccountGrantsPlumbing {
       "ListResponseMetadata\0224\n\016account_grants\030\002" +
       " \003(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nra" +
       "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\330\003\n\014AccountGrant\022.\n\002" +
-      "id\030\001 \001(\tB\"\362\370\263\007\035\242\363\263\007\002ID\260\363\263\007\001\312\363\263\007\014AccountG" +
-      "rant\022D\n\013resource_id\030\002 \001(\tB/\362\370\263\007*\242\363\263\007\014Dat" +
-      "asourceID\260\363\263\007\001\300\363\263\007\001\312\363\263\007\nDatasource\0227\n\nac" +
-      "count_id\030\003 \001(\tB#\362\370\263\007\036\242\363\263\007\006UserID\260\363\263\007\001\300\363\263" +
-      "\007\001\312\363\263\007\004User\022M\n\nstart_from\030\004 \001(\0132\032.google" +
-      ".protobuf.TimestampB\035\362\370\263\007\030\242\363\263\007\tStartFrom" +
-      "\250\363\263\007\001\260\363\263\007\001\022O\n\013valid_until\030\005 \001(\0132\032.google" +
-      ".protobuf.TimestampB\036\362\370\263\007\031\242\363\263\007\nValidUnti" +
-      "l\250\363\263\007\001\260\363\263\007\001:y\372\370\263\007t\242\363\263\007\014AccountGrant\250\363\263\007\001" +
-      "\302\363\263\007Y\242\363\263\007&tf_examples/account_grant_reso" +
-      "urce.txt\252\363\263\007)tf_examples/account_grant_d" +
-      "ata_source.txt2\366\003\n\rAccountGrants\022s\n\006Crea" +
-      "te\022\035.v1.AccountGrantCreateRequest\032\036.v1.A" +
-      "ccountGrantCreateResponse\"*\202\371\263\007\t\242\363\263\007\004pos" +
-      "t\202\371\263\007\027\252\363\263\007\022/v1/account-grants\022n\n\003Get\022\032.v" +
-      "1.AccountGrantGetRequest\032\033.v1.AccountGra" +
-      "ntGetResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v" +
-      "1/account-grants/{id}\022z\n\006Delete\022\035.v1.Acc" +
-      "ountGrantDeleteRequest\032\036.v1.AccountGrant" +
-      "DeleteResponse\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263" +
-      "\007\027/v1/account-grants/{id}\022l\n\004List\022\033.v1.A" +
-      "ccountGrantListRequest\032\034.v1.AccountGrant" +
-      "ListResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1" +
-      "/account-grants\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantB" +
-      "i\n\034com.strongdm.api.v1.plumbingB\025Account" +
-      "GrantsPlumbingZ2github.com/strongdm/stro" +
-      "ngdm-sdk-go/internal/v1;v1b\006proto3"
+      "\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\324\002\n\014AccountGrant\022\026\n\002" +
+      "id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\013resource_id\030\002 \001(" +
+      "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\naccount_id\030\003 \001(\tB\017" +
+      "\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022:\n\nstart_from\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022;\n\013v" +
+      "alid_until\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tampB\n\362\370\263\007\005\260\363\263\007\001:h\372\370\263\007c\250\363\263\007\001\302\363\263\007Y\242\363\263\007&tf" +
+      "_examples/account_grant_resource.txt\252\363\263\007" +
+      ")tf_examples/account_grant_data_source.t" +
+      "xt2\366\003\n\rAccountGrants\022s\n\006Create\022\035.v1.Acco" +
+      "untGrantCreateRequest\032\036.v1.AccountGrantC" +
+      "reateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/" +
+      "v1/account-grants\022n\n\003Get\022\032.v1.AccountGra" +
+      "ntGetRequest\032\033.v1.AccountGrantGetRespons" +
+      "e\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/account-gr" +
+      "ants/{id}\022z\n\006Delete\022\035.v1.AccountGrantDel" +
+      "eteRequest\032\036.v1.AccountGrantDeleteRespon" +
+      "se\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027/v1/accoun" +
+      "t-grants/{id}\022l\n\004List\022\033.v1.AccountGrantL" +
+      "istRequest\032\034.v1.AccountGrantListResponse" +
+      "\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/account-gra" +
+      "nts\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantBi\n\034com.stron" +
+      "gdm.api.v1.plumbingB\025AccountGrantsPlumbi" +
+      "ngZ2github.com/strongdm/strongdm-sdk-go/" +
+      "internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
