@@ -22,6 +22,8 @@ import java.util.concurrent.Executor;
 public class SigningCallCredential extends CallCredentials {
   private final String apiAccessKey;
   private final String signature;
+  private static final String API_VERSION = "2021-08-23";
+  private static final String USER_AGENT = "strongdm-sdk-java/0.9.31";
 
   public SigningCallCredential(String apiAccessKey, String signature) {
     this.apiAccessKey = apiAccessKey;
@@ -43,6 +45,12 @@ public class SigningCallCredential extends CallCredentials {
               Metadata.Key<String> signatureMD =
                   Metadata.Key.of("x-sdm-signature", Metadata.ASCII_STRING_MARSHALLER);
               headers.put(signatureMD, signature);
+              Metadata.Key<String> apiVersionMD =
+                  Metadata.Key.of("x-sdm-api-version", Metadata.ASCII_STRING_MARSHALLER);
+              headers.put(apiVersionMD, API_VERSION);
+              Metadata.Key<String> userAgentMD =
+                  Metadata.Key.of("user-agent", Metadata.ASCII_STRING_MARSHALLER);
+              headers.put(userAgentMD, USER_AGENT);
               metadataApplier.apply(headers);
             } catch (Throwable e) {
               e.printStackTrace();
