@@ -49,7 +49,7 @@ public class SigningCallCredential extends CallCredentials {
                   Metadata.Key.of("x-sdm-api-version", Metadata.ASCII_STRING_MARSHALLER);
               headers.put(apiVersionMD, API_VERSION);
               Metadata.Key<String> userAgentMD =
-                  Metadata.Key.of("user-agent", Metadata.ASCII_STRING_MARSHALLER);
+                  Metadata.Key.of("x-sdm-user-agent", Metadata.ASCII_STRING_MARSHALLER);
               headers.put(userAgentMD, USER_AGENT);
               metadataApplier.apply(headers);
             } catch (Throwable e) {
