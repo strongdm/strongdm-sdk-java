@@ -29,16 +29,6 @@ public class SecretStoreGetResponse {
     this.meta = in;
   }
 
-  private SecretStore secretStore;
-  // The requested SecretStore.
-  public SecretStore getSecretStore() {
-    return this.secretStore;
-  }
-  // The requested SecretStore.
-  public void setSecretStore(SecretStore in) {
-    this.secretStore = in;
-  }
-
   private RateLimitMetadata rateLimit;
   // Rate limit information.
   public RateLimitMetadata getRateLimit() {
@@ -47,5 +37,15 @@ public class SecretStoreGetResponse {
   // Rate limit information.
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+  }
+
+  private SecretStore secretStore;
+  // The requested SecretStore.
+  public SecretStore getSecretStore() {
+    return this.secretStore;
+  }
+  // The requested SecretStore.
+  public void setSecretStore(SecretStore in) {
+    this.secretStore = in;
   }
 }

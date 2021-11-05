@@ -2462,18 +2462,6 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The serverAddress.
-     */
-    java.lang.String getServerAddress();
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for serverAddress.
-     */
-    com.google.protobuf.ByteString
-        getServerAddressBytes();
-
-    /**
      * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The cACertPath.
      */
@@ -2508,6 +2496,30 @@ public final class SecretStoresTypesPlumbing {
      */
     com.google.protobuf.ByteString
         getClientKeyPathBytes();
+
+    /**
+     * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    java.lang.String getNamespace();
+    /**
+     * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    /**
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    java.lang.String getServerAddress();
+    /**
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    com.google.protobuf.ByteString
+        getServerAddressBytes();
 
     /**
      * <pre>
@@ -2551,10 +2563,11 @@ public final class SecretStoresTypesPlumbing {
     private VaultTLSStore() {
       id_ = "";
       name_ = "";
-      serverAddress_ = "";
       cACertPath_ = "";
       clientCertPath_ = "";
       clientKeyPath_ = "";
+      namespace_ = "";
+      serverAddress_ = "";
     }
 
     @java.lang.Override
@@ -2634,6 +2647,12 @@ public final class SecretStoresTypesPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespace_ = s;
               break;
             }
             default: {
@@ -2760,44 +2779,6 @@ public final class SecretStoresTypesPlumbing {
       }
     }
 
-    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object serverAddress_;
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The serverAddress.
-     */
-    @java.lang.Override
-    public java.lang.String getServerAddress() {
-      java.lang.Object ref = serverAddress_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        serverAddress_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for serverAddress.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getServerAddressBytes() {
-      java.lang.Object ref = serverAddress_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        serverAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int CA_CERT_PATH_FIELD_NUMBER = 4;
     private volatile java.lang.Object cACertPath_;
     /**
@@ -2912,6 +2893,82 @@ public final class SecretStoresTypesPlumbing {
       }
     }
 
+    public static final int NAMESPACE_FIELD_NUMBER = 8;
+    private volatile java.lang.Object namespace_;
+    /**
+     * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    @java.lang.Override
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object serverAddress_;
+    /**
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The serverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServerAddress() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for serverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServerAddressBytes() {
+      java.lang.Object ref = serverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int TAGS_FIELD_NUMBER = 7;
     private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
     /**
@@ -2985,6 +3042,9 @@ public final class SecretStoresTypesPlumbing {
       if (tags_ != null) {
         output.writeMessage(7, getTags());
       }
+      if (!getNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, namespace_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3016,6 +3076,9 @@ public final class SecretStoresTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getTags());
       }
+      if (!getNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, namespace_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3035,14 +3098,16 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!getServerAddress()
-          .equals(other.getServerAddress())) return false;
       if (!getCACertPath()
           .equals(other.getCACertPath())) return false;
       if (!getClientCertPath()
           .equals(other.getClientCertPath())) return false;
       if (!getClientKeyPath()
           .equals(other.getClientKeyPath())) return false;
+      if (!getNamespace()
+          .equals(other.getNamespace())) return false;
+      if (!getServerAddress()
+          .equals(other.getServerAddress())) return false;
       if (hasTags() != other.hasTags()) return false;
       if (hasTags()) {
         if (!getTags()
@@ -3063,14 +3128,16 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getServerAddress().hashCode();
       hash = (37 * hash) + CA_CERT_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getCACertPath().hashCode();
       hash = (37 * hash) + CLIENT_CERT_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getClientCertPath().hashCode();
       hash = (37 * hash) + CLIENT_KEY_PATH_FIELD_NUMBER;
       hash = (53 * hash) + getClientKeyPath().hashCode();
+      hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespace().hashCode();
+      hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getServerAddress().hashCode();
       if (hasTags()) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
@@ -3212,13 +3279,15 @@ public final class SecretStoresTypesPlumbing {
 
         name_ = "";
 
-        serverAddress_ = "";
-
         cACertPath_ = "";
 
         clientCertPath_ = "";
 
         clientKeyPath_ = "";
+
+        namespace_ = "";
+
+        serverAddress_ = "";
 
         if (tagsBuilder_ == null) {
           tags_ = null;
@@ -3254,10 +3323,11 @@ public final class SecretStoresTypesPlumbing {
         com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.VaultTLSStore result = new com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.VaultTLSStore(this);
         result.id_ = id_;
         result.name_ = name_;
-        result.serverAddress_ = serverAddress_;
         result.cACertPath_ = cACertPath_;
         result.clientCertPath_ = clientCertPath_;
         result.clientKeyPath_ = clientKeyPath_;
+        result.namespace_ = namespace_;
+        result.serverAddress_ = serverAddress_;
         if (tagsBuilder_ == null) {
           result.tags_ = tags_;
         } else {
@@ -3319,10 +3389,6 @@ public final class SecretStoresTypesPlumbing {
           name_ = other.name_;
           onChanged();
         }
-        if (!other.getServerAddress().isEmpty()) {
-          serverAddress_ = other.serverAddress_;
-          onChanged();
-        }
         if (!other.getCACertPath().isEmpty()) {
           cACertPath_ = other.cACertPath_;
           onChanged();
@@ -3333,6 +3399,14 @@ public final class SecretStoresTypesPlumbing {
         }
         if (!other.getClientKeyPath().isEmpty()) {
           clientKeyPath_ = other.clientKeyPath_;
+          onChanged();
+        }
+        if (!other.getNamespace().isEmpty()) {
+          namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (!other.getServerAddress().isEmpty()) {
+          serverAddress_ = other.serverAddress_;
           onChanged();
         }
         if (other.hasTags()) {
@@ -3555,82 +3629,6 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object serverAddress_ = "";
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return The serverAddress.
-       */
-      public java.lang.String getServerAddress() {
-        java.lang.Object ref = serverAddress_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          serverAddress_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for serverAddress.
-       */
-      public com.google.protobuf.ByteString
-          getServerAddressBytes() {
-        java.lang.Object ref = serverAddress_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          serverAddress_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The serverAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerAddress(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        serverAddress_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearServerAddress() {
-        
-        serverAddress_ = getDefaultInstance().getServerAddress();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for serverAddress to set.
-       * @return This builder for chaining.
-       */
-      public Builder setServerAddressBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        serverAddress_ = value;
         onChanged();
         return this;
       }
@@ -3859,6 +3857,158 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         clientKeyPath_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object namespace_ = "";
+      /**
+       * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+       * @return The namespace.
+       */
+      public java.lang.String getNamespace() {
+        java.lang.Object ref = namespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for namespace.
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNamespace() {
+        
+        namespace_ = getDefaultInstance().getNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serverAddress_ = "";
+      /**
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The serverAddress.
+       */
+      public java.lang.String getServerAddress() {
+        java.lang.Object ref = serverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for serverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServerAddressBytes() {
+        java.lang.Object ref = serverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serverAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServerAddress() {
+        
+        serverAddress_ = getDefaultInstance().getServerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for serverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serverAddress_ = value;
         onChanged();
         return this;
       }
@@ -4115,6 +4265,18 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    java.lang.String getNamespace();
+    /**
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    /**
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverAddress.
      */
@@ -4168,6 +4330,7 @@ public final class SecretStoresTypesPlumbing {
     private VaultTokenStore() {
       id_ = "";
       name_ = "";
+      namespace_ = "";
       serverAddress_ = "";
     }
 
@@ -4230,6 +4393,12 @@ public final class SecretStoresTypesPlumbing {
                 tags_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              namespace_ = s;
               break;
             }
             default: {
@@ -4356,6 +4525,44 @@ public final class SecretStoresTypesPlumbing {
       }
     }
 
+    public static final int NAMESPACE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object namespace_;
+    /**
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The namespace.
+     */
+    @java.lang.Override
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        namespace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for namespace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
     private volatile java.lang.Object serverAddress_;
     /**
@@ -4458,6 +4665,9 @@ public final class SecretStoresTypesPlumbing {
       if (tags_ != null) {
         output.writeMessage(4, getTags());
       }
+      if (!getNamespaceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, namespace_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4480,6 +4690,9 @@ public final class SecretStoresTypesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTags());
       }
+      if (!getNamespaceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, namespace_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4499,6 +4712,8 @@ public final class SecretStoresTypesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getNamespace()
+          .equals(other.getNamespace())) return false;
       if (!getServerAddress()
           .equals(other.getServerAddress())) return false;
       if (hasTags() != other.hasTags()) return false;
@@ -4521,6 +4736,8 @@ public final class SecretStoresTypesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + NAMESPACE_FIELD_NUMBER;
+      hash = (53 * hash) + getNamespace().hashCode();
       hash = (37 * hash) + SERVER_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getServerAddress().hashCode();
       if (hasTags()) {
@@ -4664,6 +4881,8 @@ public final class SecretStoresTypesPlumbing {
 
         name_ = "";
 
+        namespace_ = "";
+
         serverAddress_ = "";
 
         if (tagsBuilder_ == null) {
@@ -4700,6 +4919,7 @@ public final class SecretStoresTypesPlumbing {
         com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.VaultTokenStore result = new com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.VaultTokenStore(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.namespace_ = namespace_;
         result.serverAddress_ = serverAddress_;
         if (tagsBuilder_ == null) {
           result.tags_ = tags_;
@@ -4760,6 +4980,10 @@ public final class SecretStoresTypesPlumbing {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getNamespace().isEmpty()) {
+          namespace_ = other.namespace_;
           onChanged();
         }
         if (!other.getServerAddress().isEmpty()) {
@@ -4986,6 +5210,82 @@ public final class SecretStoresTypesPlumbing {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object namespace_ = "";
+      /**
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The namespace.
+       */
+      public java.lang.String getNamespace() {
+        java.lang.Object ref = namespace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          namespace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for namespace.
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        namespace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNamespace() {
+        
+        namespace_ = getDefaultInstance().getNamespace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for namespace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        namespace_ = value;
         onChanged();
         return this;
       }
@@ -5314,26 +5614,28 @@ public final class SecretStoresTypesPlumbing {
       "\363\263\007\001\300\363\263\007\001\022*\n\006region\030\003 \001(\tB\032\362\370\263\007\025\260\363\263\007\001\300\363\263" +
       "\007\001\212\364\263\007\006region\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362" +
       "\370\263\007\005\260\363\263\007\001:*\372\370\263\007%\250\363\263\007\001\332\363\263\007\003aws\342\363\263\007\003aws\352\363\263" +
-      "\007\003aws\372\363\263\007\003aws\"\221\003\n\rVaultTLSStore\022\026\n\002id\030\001 " +
+      "\007\003aws\372\363\263\007\003aws\"\303\003\n\rVaultTLSStore\022\026\n\002id\030\001 " +
       "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007" +
-      "\001\300\363\263\007\001\0229\n\016server_address\030\003 \001(\tB!\362\370\263\007\034\260\363\263" +
-      "\007\001\300\363\263\007\001\212\364\263\007\rserverAddress\022/\n\014CA_cert_pat" +
-      "h\030\004 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\212\364\263\007\ncaCertPath\022<\n\020cl" +
-      "ient_cert_path\030\005 \001(\tB\"\362\370\263\007\035\260\363\263\007\001\300\363\263\007\001\212\364\263" +
-      "\007\016clientCertPath\022:\n\017client_key_path\030\006 \001(" +
-      "\tB!\362\370\263\007\034\260\363\263\007\001\300\363\263\007\001\212\364\263\007\rclientKeyPath\022\"\n\004" +
-      "tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:?\372\370\263\007:\250" +
-      "\363\263\007\001\332\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS\352\363\263\007\010vault" +
-      "TLS\372\363\263\007\tvault_tls\"\360\001\n\017VaultTokenStore\022\026\n" +
-      "\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263" +
-      "\007\n\260\363\263\007\001\300\363\263\007\001\0229\n\016server_address\030\003 \001(\tB!\362\370" +
-      "\263\007\034\260\363\263\007\001\300\363\263\007\001\212\364\263\007\rserverAddress\022\"\n\004tags\030" +
-      "\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:G\372\370\263\007B\250\363\263\007\001\332" +
-      "\363\263\007\nvaultToken\342\363\263\007\nvaultToken\352\363\263\007\nvaultT" +
-      "oken\372\363\263\007\013vault_tokenBm\n\034com.strongdm.api" +
-      ".v1.plumbingB\031SecretStoresTypesPlumbingZ" +
-      "2github.com/strongdm/strongdm-sdk-go/int" +
-      "ernal/v1;v1b\006proto3"
+      "\001\300\363\263\007\001\022/\n\014CA_cert_path\030\004 \001(\tB\031\362\370\263\007\024\260\363\263\007\001" +
+      "\212\364\263\007\ncaCertPath\022<\n\020client_cert_path\030\005 \001(" +
+      "\tB\"\362\370\263\007\035\260\363\263\007\001\300\363\263\007\001\212\364\263\007\016clientCertPath\022:\n" +
+      "\017client_key_path\030\006 \001(\tB!\362\370\263\007\034\260\363\263\007\001\300\363\263\007\001\212" +
+      "\364\263\007\rclientKeyPath\0220\n\tnamespace\030\010 \001(\tB\035\362\370" +
+      "\263\007\030\260\363\263\007\001\300\363\263\007\001\212\364\263\007\tnamespace\0229\n\016server_ad" +
+      "dress\030\003 \001(\tB!\362\370\263\007\034\260\363\263\007\001\300\363\263\007\001\212\364\263\007\rserverA" +
+      "ddress\022\"\n\004tags\030\007 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:?\372\370\263\007:\250\363\263\007\001\332\363\263\007\010vaultTLS\342\363\263\007\010vaultTLS" +
+      "\352\363\263\007\010vaultTLS\372\363\263\007\tvault_tls\"\242\002\n\017VaultTok" +
+      "enStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030" +
+      "\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\0220\n\tnamespace\030\005 \001(" +
+      "\tB\035\362\370\263\007\030\260\363\263\007\001\300\363\263\007\001\212\364\263\007\tnamespace\0229\n\016serv" +
+      "er_address\030\003 \001(\tB!\362\370\263\007\034\260\363\263\007\001\300\363\263\007\001\212\364\263\007\rse" +
+      "rverAddress\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:G\372\370\263\007B\250\363\263\007\001\332\363\263\007\nvaultToken\342\363\263\007\nv" +
+      "aultToken\352\363\263\007\nvaultToken\372\363\263\007\013vault_token" +
+      "Bm\n\034com.strongdm.api.v1.plumbingB\031Secret" +
+      "StoresTypesPlumbingZ2github.com/strongdm" +
+      "/strongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5358,13 +5660,13 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_VaultTLSStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "ServerAddress", "CACertPath", "ClientCertPath", "ClientKeyPath", "Tags", });
+        new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTokenStore_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_VaultTokenStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenStore_descriptor,
-        new java.lang.String[] { "Id", "Name", "ServerAddress", "Tags", });
+        new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

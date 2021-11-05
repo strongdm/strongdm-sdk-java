@@ -19,16 +19,6 @@ package com.strongdm.api.v1;
 
 // AccountGetResponse returns a requested Account.
 public class AccountGetResponse {
-  private GetResponseMetadata meta;
-  // Reserved for future use.
-  public GetResponseMetadata getMeta() {
-    return this.meta;
-  }
-  // Reserved for future use.
-  public void setMeta(GetResponseMetadata in) {
-    this.meta = in;
-  }
-
   private Account account;
   // The requested Account.
   public Account getAccount() {
@@ -37,6 +27,16 @@ public class AccountGetResponse {
   // The requested Account.
   public void setAccount(Account in) {
     this.account = in;
+  }
+
+  private GetResponseMetadata meta;
+  // Reserved for future use.
+  public GetResponseMetadata getMeta() {
+    return this.meta;
+  }
+  // Reserved for future use.
+  public void setMeta(GetResponseMetadata in) {
+    this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;

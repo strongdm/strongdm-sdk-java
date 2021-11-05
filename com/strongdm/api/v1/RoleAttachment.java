@@ -19,14 +19,14 @@ package com.strongdm.api.v1;
 
 // A RoleAttachment assigns a role to a composite role.
 public class RoleAttachment {
-  private String id;
-  // Unique identifier of the RoleAttachment.
-  public String getId() {
-    return this.id;
+  private String attachedRoleId;
+  // The id of the attached role of this RoleAttachment.
+  public String getAttachedRoleId() {
+    return this.attachedRoleId;
   }
-  // Unique identifier of the RoleAttachment.
-  public void setId(String in) {
-    this.id = in;
+  // The id of the attached role of this RoleAttachment.
+  public void setAttachedRoleId(String in) {
+    this.attachedRoleId = in;
   }
 
   private String compositeRoleId;
@@ -39,13 +39,13 @@ public class RoleAttachment {
     this.compositeRoleId = in;
   }
 
-  private String attachedRoleId;
-  // The id of the attached role of this RoleAttachment.
-  public String getAttachedRoleId() {
-    return this.attachedRoleId;
+  private String id;
+  // Unique identifier of the RoleAttachment.
+  public String getId() {
+    return this.id;
   }
-  // The id of the attached role of this RoleAttachment.
-  public void setAttachedRoleId(String in) {
-    this.attachedRoleId = in;
+  // Unique identifier of the RoleAttachment.
+  public void setId(String in) {
+    this.id = in;
   }
 }

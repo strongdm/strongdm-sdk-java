@@ -19,16 +19,6 @@ package com.strongdm.api.v1;
 
 // AccountGrantGetResponse returns a requested AccountGrant.
 public class AccountGrantGetResponse {
-  private GetResponseMetadata meta;
-  // Reserved for future use.
-  public GetResponseMetadata getMeta() {
-    return this.meta;
-  }
-  // Reserved for future use.
-  public void setMeta(GetResponseMetadata in) {
-    this.meta = in;
-  }
-
   private AccountGrant accountGrant;
   // The requested AccountGrant.
   public AccountGrant getAccountGrant() {
@@ -37,6 +27,16 @@ public class AccountGrantGetResponse {
   // The requested AccountGrant.
   public void setAccountGrant(AccountGrant in) {
     this.accountGrant = in;
+  }
+
+  private GetResponseMetadata meta;
+  // Reserved for future use.
+  public GetResponseMetadata getMeta() {
+    return this.meta;
+  }
+  // Reserved for future use.
+  public void setMeta(GetResponseMetadata in) {
+    this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;

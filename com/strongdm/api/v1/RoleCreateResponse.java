@@ -30,16 +30,6 @@ public class RoleCreateResponse {
     this.meta = in;
   }
 
-  private Role role;
-  // The created Role.
-  public Role getRole() {
-    return this.role;
-  }
-  // The created Role.
-  public void setRole(Role in) {
-    this.role = in;
-  }
-
   private RateLimitMetadata rateLimit;
   // Rate limit information.
   public RateLimitMetadata getRateLimit() {
@@ -48,5 +38,15 @@ public class RoleCreateResponse {
   // Rate limit information.
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+  }
+
+  private Role role;
+  // The created Role.
+  public Role getRole() {
+    return this.role;
+  }
+  // The created Role.
+  public void setRole(Role in) {
+    this.role = in;
   }
 }

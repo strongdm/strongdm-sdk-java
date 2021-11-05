@@ -29,16 +29,6 @@ public class RoleAttachmentGetResponse {
     this.meta = in;
   }
 
-  private RoleAttachment roleAttachment;
-  // The requested RoleAttachment.
-  public RoleAttachment getRoleAttachment() {
-    return this.roleAttachment;
-  }
-  // The requested RoleAttachment.
-  public void setRoleAttachment(RoleAttachment in) {
-    this.roleAttachment = in;
-  }
-
   private RateLimitMetadata rateLimit;
   // Rate limit information.
   public RateLimitMetadata getRateLimit() {
@@ -47,5 +37,15 @@ public class RoleAttachmentGetResponse {
   // Rate limit information.
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+  }
+
+  private RoleAttachment roleAttachment;
+  // The requested RoleAttachment.
+  public RoleAttachment getRoleAttachment() {
+    return this.roleAttachment;
+  }
+  // The requested RoleAttachment.
+  public void setRoleAttachment(RoleAttachment in) {
+    this.roleAttachment = in;
   }
 }

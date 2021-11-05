@@ -22,6 +22,16 @@ import java.util.Date;
 // AccountGrants connect a resource directly to an account, giving the account the permission to
 // connect to that resource.
 public class AccountGrant {
+  private String accountId;
+  // The id of the attached role of this AccountGrant.
+  public String getAccountId() {
+    return this.accountId;
+  }
+  // The id of the attached role of this AccountGrant.
+  public void setAccountId(String in) {
+    this.accountId = in;
+  }
+
   private String id;
   // Unique identifier of the AccountGrant.
   public String getId() {
@@ -40,16 +50,6 @@ public class AccountGrant {
   // The id of the composite role of this AccountGrant.
   public void setResourceId(String in) {
     this.resourceId = in;
-  }
-
-  private String accountId;
-  // The id of the attached role of this AccountGrant.
-  public String getAccountId() {
-    return this.accountId;
-  }
-  // The id of the attached role of this AccountGrant.
-  public void setAccountId(String in) {
-    this.accountId = in;
   }
 
   private Date startFrom;

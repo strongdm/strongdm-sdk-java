@@ -21,26 +21,6 @@ package com.strongdm.api.v1;
 // OU, or other organizational unit. Users are granted access to resources by assigning them to
 // roles.
 public class Role {
-  private String id;
-  // Unique identifier of the Role.
-  public String getId() {
-    return this.id;
-  }
-  // Unique identifier of the Role.
-  public void setId(String in) {
-    this.id = in;
-  }
-
-  private String name;
-  // Unique human-readable name of the Role.
-  public String getName() {
-    return this.name;
-  }
-  // Unique human-readable name of the Role.
-  public void setName(String in) {
-    this.name = in;
-  }
-
   private String accessRules;
   // AccessRules JSON encoded access rules data.
   public String getAccessRules() {
@@ -59,6 +39,26 @@ public class Role {
   // True if the Role is a composite role.
   public void setComposite(boolean in) {
     this.composite = in;
+  }
+
+  private String id;
+  // Unique identifier of the Role.
+  public String getId() {
+    return this.id;
+  }
+  // Unique identifier of the Role.
+  public void setId(String in) {
+    this.id = in;
+  }
+
+  private String name;
+  // Unique human-readable name of the Role.
+  public String getName() {
+    return this.name;
+  }
+  // Unique human-readable name of the Role.
+  public void setName(String in) {
+    this.name = in;
   }
 
   private java.util.Map<String, String> tags;

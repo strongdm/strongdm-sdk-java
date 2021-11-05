@@ -29,16 +29,6 @@ public class RoleGrantCreateResponse {
     this.meta = in;
   }
 
-  private RoleGrant roleGrant;
-  // The created RoleGrant.
-  public RoleGrant getRoleGrant() {
-    return this.roleGrant;
-  }
-  // The created RoleGrant.
-  public void setRoleGrant(RoleGrant in) {
-    this.roleGrant = in;
-  }
-
   private RateLimitMetadata rateLimit;
   // Rate limit information.
   public RateLimitMetadata getRateLimit() {
@@ -47,5 +37,15 @@ public class RoleGrantCreateResponse {
   // Rate limit information.
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+  }
+
+  private RoleGrant roleGrant;
+  // The created RoleGrant.
+  public RoleGrant getRoleGrant() {
+    return this.roleGrant;
+  }
+  // The created RoleGrant.
+  public void setRoleGrant(RoleGrant in) {
+    this.roleGrant = in;
   }
 }

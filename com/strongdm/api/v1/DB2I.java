@@ -18,6 +18,36 @@
 package com.strongdm.api.v1;
 
 public class DB2I implements Resource {
+  private String egressFilter;
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public String getEgressFilter() {
+    return this.egressFilter;
+  }
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public void setEgressFilter(String in) {
+    this.egressFilter = in;
+  }
+
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
+
+  private String hostname;
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public void setHostname(String in) {
+    this.hostname = in;
+  }
+
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -38,14 +68,44 @@ public class DB2I implements Resource {
     this.name = in;
   }
 
-  private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
-  public boolean getHealthy() {
-    return this.healthy;
+  private String password;
+
+  public String getPassword() {
+    return this.password;
   }
-  // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
-    this.healthy = in;
+
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private int port;
+
+  public int getPort() {
+    return this.port;
+  }
+
+  public void setPort(int in) {
+    this.port = in;
+  }
+
+  private int portOverride;
+
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
   }
 
   private java.util.Map<String, String> tags;
@@ -67,34 +127,14 @@ public class DB2I implements Resource {
     this.tags.putAll(in);
   }
 
-  private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
-  public String getSecretStoreId() {
-    return this.secretStoreId;
-  }
-  // ID of the secret store containing credentials for this resource, if any.
-  public void setSecretStoreId(String in) {
-    this.secretStoreId = in;
+  private boolean tlsRequired;
+
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
   }
 
-  private String egressFilter;
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public String getEgressFilter() {
-    return this.egressFilter;
-  }
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public void setEgressFilter(String in) {
-    this.egressFilter = in;
-  }
-
-  private String hostname;
-
-  public String getHostname() {
-    return this.hostname;
-  }
-
-  public void setHostname(String in) {
-    this.hostname = in;
+  public void setTlsRequired(boolean in) {
+    this.tlsRequired = in;
   }
 
   private String username;
@@ -105,45 +145,5 @@ public class DB2I implements Resource {
 
   public void setUsername(String in) {
     this.username = in;
-  }
-
-  private String password;
-
-  public String getPassword() {
-    return this.password;
-  }
-
-  public void setPassword(String in) {
-    this.password = in;
-  }
-
-  private int portOverride;
-
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-
-  public void setPortOverride(int in) {
-    this.portOverride = in;
-  }
-
-  private int port;
-
-  public int getPort() {
-    return this.port;
-  }
-
-  public void setPort(int in) {
-    this.port = in;
-  }
-
-  private boolean tlsRequired;
-
-  public boolean getTlsRequired() {
-    return this.tlsRequired;
-  }
-
-  public void setTlsRequired(boolean in) {
-    this.tlsRequired = in;
   }
 }

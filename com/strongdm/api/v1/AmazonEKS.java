@@ -18,63 +18,34 @@
 package com.strongdm.api.v1;
 
 public class AmazonEKS implements Resource {
-  private String id;
-  // Unique identifier of the Resource.
-  public String getId() {
-    return this.id;
-  }
-  // Unique identifier of the Resource.
-  public void setId(String in) {
-    this.id = in;
+  private String accessKey;
+
+  public String getAccessKey() {
+    return this.accessKey;
   }
 
-  private String name;
-  // Unique human-readable name of the Resource.
-  public String getName() {
-    return this.name;
-  }
-  // Unique human-readable name of the Resource.
-  public void setName(String in) {
-    this.name = in;
+  public void setAccessKey(String in) {
+    this.accessKey = in;
   }
 
-  private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
-  public boolean getHealthy() {
-    return this.healthy;
-  }
-  // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
-    this.healthy = in;
+  private String certificateAuthority;
+
+  public String getCertificateAuthority() {
+    return this.certificateAuthority;
   }
 
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
+  public void setCertificateAuthority(String in) {
+    this.certificateAuthority = in;
   }
 
-  private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
-  public String getSecretStoreId() {
-    return this.secretStoreId;
+  private String clusterName;
+
+  public String getClusterName() {
+    return this.clusterName;
   }
-  // ID of the secret store containing credentials for this resource, if any.
-  public void setSecretStoreId(String in) {
-    this.secretStoreId = in;
+
+  public void setClusterName(String in) {
+    this.clusterName = in;
   }
 
   private String egressFilter;
@@ -97,34 +68,44 @@ public class AmazonEKS implements Resource {
     this.endpoint = in;
   }
 
-  private String accessKey;
-
-  public String getAccessKey() {
-    return this.accessKey;
+  private String healthcheckNamespace;
+  // The path used to check the health of your connection.  Defaults to `default`.
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
+  }
+  // The path used to check the health of your connection.  Defaults to `default`.
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
   }
 
-  public void setAccessKey(String in) {
-    this.accessKey = in;
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
   }
 
-  private String secretAccessKey;
-
-  public String getSecretAccessKey() {
-    return this.secretAccessKey;
+  private String id;
+  // Unique identifier of the Resource.
+  public String getId() {
+    return this.id;
+  }
+  // Unique identifier of the Resource.
+  public void setId(String in) {
+    this.id = in;
   }
 
-  public void setSecretAccessKey(String in) {
-    this.secretAccessKey = in;
+  private String name;
+  // Unique human-readable name of the Resource.
+  public String getName() {
+    return this.name;
   }
-
-  private String certificateAuthority;
-
-  public String getCertificateAuthority() {
-    return this.certificateAuthority;
-  }
-
-  public void setCertificateAuthority(String in) {
-    this.certificateAuthority = in;
+  // Unique human-readable name of the Resource.
+  public void setName(String in) {
+    this.name = in;
   }
 
   private String region;
@@ -135,16 +116,6 @@ public class AmazonEKS implements Resource {
 
   public void setRegion(String in) {
     this.region = in;
-  }
-
-  private String clusterName;
-
-  public String getClusterName() {
-    return this.clusterName;
-  }
-
-  public void setClusterName(String in) {
-    this.clusterName = in;
   }
 
   private String roleArn;
@@ -167,13 +138,42 @@ public class AmazonEKS implements Resource {
     this.roleExternalId = in;
   }
 
-  private String healthcheckNamespace;
+  private String secretAccessKey;
 
-  public String getHealthcheckNamespace() {
-    return this.healthcheckNamespace;
+  public String getSecretAccessKey() {
+    return this.secretAccessKey;
   }
 
-  public void setHealthcheckNamespace(String in) {
-    this.healthcheckNamespace = in;
+  public void setSecretAccessKey(String in) {
+    this.secretAccessKey = in;
+  }
+
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
+  }
+
+  private java.util.Map<String, String> tags;
+  // Tags is a map of key, value pairs.
+  public java.util.Map<String, String> getTags() {
+    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
+    if (this.tags != null) {
+      m.putAll(this.tags);
+    }
+    return m;
+  }
+  // Tags is a map of key, value pairs.
+  public void setTags(java.util.Map<String, String> in) {
+    if (in == null) {
+      this.tags = null;
+      return;
+    }
+    this.tags = new java.util.HashMap<String, String>();
+    this.tags.putAll(in);
   }
 }

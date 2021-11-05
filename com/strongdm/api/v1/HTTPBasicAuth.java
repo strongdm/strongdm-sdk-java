@@ -18,6 +18,56 @@
 package com.strongdm.api.v1;
 
 public class HTTPBasicAuth implements Resource {
+  private String defaultPath;
+
+  public String getDefaultPath() {
+    return this.defaultPath;
+  }
+
+  public void setDefaultPath(String in) {
+    this.defaultPath = in;
+  }
+
+  private String egressFilter;
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public String getEgressFilter() {
+    return this.egressFilter;
+  }
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public void setEgressFilter(String in) {
+    this.egressFilter = in;
+  }
+
+  private String headersBlacklist;
+
+  public String getHeadersBlacklist() {
+    return this.headersBlacklist;
+  }
+
+  public void setHeadersBlacklist(String in) {
+    this.headersBlacklist = in;
+  }
+
+  private String healthcheckPath;
+
+  public String getHealthcheckPath() {
+    return this.healthcheckPath;
+  }
+
+  public void setHealthcheckPath(String in) {
+    this.healthcheckPath = in;
+  }
+
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
+
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -38,14 +88,34 @@ public class HTTPBasicAuth implements Resource {
     this.name = in;
   }
 
-  private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
-  public boolean getHealthy() {
-    return this.healthy;
+  private String password;
+
+  public String getPassword() {
+    return this.password;
   }
-  // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
-    this.healthy = in;
+
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
+  }
+
+  private String subdomain;
+
+  public String getSubdomain() {
+    return this.subdomain;
+  }
+
+  public void setSubdomain(String in) {
+    this.subdomain = in;
   }
 
   private java.util.Map<String, String> tags;
@@ -67,26 +137,6 @@ public class HTTPBasicAuth implements Resource {
     this.tags.putAll(in);
   }
 
-  private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
-  public String getSecretStoreId() {
-    return this.secretStoreId;
-  }
-  // ID of the secret store containing credentials for this resource, if any.
-  public void setSecretStoreId(String in) {
-    this.secretStoreId = in;
-  }
-
-  private String egressFilter;
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public String getEgressFilter() {
-    return this.egressFilter;
-  }
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public void setEgressFilter(String in) {
-    this.egressFilter = in;
-  }
-
   private String url;
 
   public String getUrl() {
@@ -97,16 +147,6 @@ public class HTTPBasicAuth implements Resource {
     this.url = in;
   }
 
-  private String healthcheckPath;
-
-  public String getHealthcheckPath() {
-    return this.healthcheckPath;
-  }
-
-  public void setHealthcheckPath(String in) {
-    this.healthcheckPath = in;
-  }
-
   private String username;
 
   public String getUsername() {
@@ -115,45 +155,5 @@ public class HTTPBasicAuth implements Resource {
 
   public void setUsername(String in) {
     this.username = in;
-  }
-
-  private String password;
-
-  public String getPassword() {
-    return this.password;
-  }
-
-  public void setPassword(String in) {
-    this.password = in;
-  }
-
-  private String headersBlacklist;
-
-  public String getHeadersBlacklist() {
-    return this.headersBlacklist;
-  }
-
-  public void setHeadersBlacklist(String in) {
-    this.headersBlacklist = in;
-  }
-
-  private String defaultPath;
-
-  public String getDefaultPath() {
-    return this.defaultPath;
-  }
-
-  public void setDefaultPath(String in) {
-    this.defaultPath = in;
-  }
-
-  private String subdomain;
-
-  public String getSubdomain() {
-    return this.subdomain;
-  }
-
-  public void setSubdomain(String in) {
-    this.subdomain = in;
   }
 }

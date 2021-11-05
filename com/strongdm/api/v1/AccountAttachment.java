@@ -19,16 +19,6 @@ package com.strongdm.api.v1;
 
 // AccountAttachments assign an account to a role or composite role.
 public class AccountAttachment {
-  private String id;
-  // Unique identifier of the AccountAttachment.
-  public String getId() {
-    return this.id;
-  }
-  // Unique identifier of the AccountAttachment.
-  public void setId(String in) {
-    this.id = in;
-  }
-
   private String accountId;
   // The id of the account of this AccountAttachment.
   public String getAccountId() {
@@ -37,6 +27,16 @@ public class AccountAttachment {
   // The id of the account of this AccountAttachment.
   public void setAccountId(String in) {
     this.accountId = in;
+  }
+
+  private String id;
+  // Unique identifier of the AccountAttachment.
+  public String getId() {
+    return this.id;
+  }
+  // Unique identifier of the AccountAttachment.
+  public void setId(String in) {
+    this.id = in;
   }
 
   private String roleId;

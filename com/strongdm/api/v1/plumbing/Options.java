@@ -1444,6 +1444,26 @@ public final class Options {
         getTerraformDiffSuppressFuncBytes();
 
     /**
+     * <pre>
+     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+     * </pre>
+     *
+     * <code>string terraform_comment_override = 1941320;</code>
+     * @return The terraformCommentOverride.
+     */
+    java.lang.String getTerraformCommentOverride();
+    /**
+     * <pre>
+     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+     * </pre>
+     *
+     * <code>string terraform_comment_override = 1941320;</code>
+     * @return The bytes for terraformCommentOverride.
+     */
+    com.google.protobuf.ByteString
+        getTerraformCommentOverrideBytes();
+
+    /**
      * <code>string cli_name = 1941311;</code>
      * @return The cliName.
      */
@@ -1500,6 +1520,7 @@ public final class Options {
     private FieldOptions() {
       terraformComputed_ = "";
       terraformDiffSuppressFunc_ = "";
+      terraformCommentOverride_ = "";
       cliName_ = "";
       cliJsonName_ = "";
       jsonGatewayName_ = "";
@@ -1613,6 +1634,12 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               terraformDiffSuppressFunc_ = s;
+              break;
+            }
+            case 15530562: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              terraformCommentOverride_ = s;
               break;
             }
             default: {
@@ -1870,6 +1897,52 @@ public final class Options {
       }
     }
 
+    public static final int TERRAFORM_COMMENT_OVERRIDE_FIELD_NUMBER = 1941320;
+    private volatile java.lang.Object terraformCommentOverride_;
+    /**
+     * <pre>
+     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+     * </pre>
+     *
+     * <code>string terraform_comment_override = 1941320;</code>
+     * @return The terraformCommentOverride.
+     */
+    @java.lang.Override
+    public java.lang.String getTerraformCommentOverride() {
+      java.lang.Object ref = terraformCommentOverride_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        terraformCommentOverride_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+     * </pre>
+     *
+     * <code>string terraform_comment_override = 1941320;</code>
+     * @return The bytes for terraformCommentOverride.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTerraformCommentOverrideBytes() {
+      java.lang.Object ref = terraformCommentOverride_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        terraformCommentOverride_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int CLI_NAME_FIELD_NUMBER = 1941311;
     private volatile java.lang.Object cliName_;
     /**
@@ -2054,6 +2127,9 @@ public final class Options {
       if (!getTerraformDiffSuppressFuncBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, terraformDiffSuppressFunc_);
       }
+      if (!getTerraformCommentOverrideBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941320, terraformCommentOverride_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2118,6 +2194,9 @@ public final class Options {
       if (!getTerraformDiffSuppressFuncBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, terraformDiffSuppressFunc_);
       }
+      if (!getTerraformCommentOverrideBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941320, terraformCommentOverride_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2155,6 +2234,8 @@ public final class Options {
           != other.getTerraformSensitive()) return false;
       if (!getTerraformDiffSuppressFunc()
           .equals(other.getTerraformDiffSuppressFunc())) return false;
+      if (!getTerraformCommentOverride()
+          .equals(other.getTerraformCommentOverride())) return false;
       if (!getCliName()
           .equals(other.getCliName())) return false;
       if (!getCliJsonName()
@@ -2205,6 +2286,8 @@ public final class Options {
           getTerraformSensitive());
       hash = (37 * hash) + TERRAFORM_DIFF_SUPPRESS_FUNC_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformDiffSuppressFunc().hashCode();
+      hash = (37 * hash) + TERRAFORM_COMMENT_OVERRIDE_FIELD_NUMBER;
+      hash = (53 * hash) + getTerraformCommentOverride().hashCode();
       hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCliName().hashCode();
       hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
@@ -2369,6 +2452,8 @@ public final class Options {
 
         terraformDiffSuppressFunc_ = "";
 
+        terraformCommentOverride_ = "";
+
         cliName_ = "";
 
         cliJsonName_ = "";
@@ -2414,6 +2499,7 @@ public final class Options {
         result.terraformForceNew_ = terraformForceNew_;
         result.terraformSensitive_ = terraformSensitive_;
         result.terraformDiffSuppressFunc_ = terraformDiffSuppressFunc_;
+        result.terraformCommentOverride_ = terraformCommentOverride_;
         result.cliName_ = cliName_;
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
@@ -2499,6 +2585,10 @@ public final class Options {
         }
         if (!other.getTerraformDiffSuppressFunc().isEmpty()) {
           terraformDiffSuppressFunc_ = other.terraformDiffSuppressFunc_;
+          onChanged();
+        }
+        if (!other.getTerraformCommentOverride().isEmpty()) {
+          terraformCommentOverride_ = other.terraformCommentOverride_;
           onChanged();
         }
         if (!other.getCliName().isEmpty()) {
@@ -3104,6 +3194,102 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         terraformDiffSuppressFunc_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object terraformCommentOverride_ = "";
+      /**
+       * <pre>
+       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * </pre>
+       *
+       * <code>string terraform_comment_override = 1941320;</code>
+       * @return The terraformCommentOverride.
+       */
+      public java.lang.String getTerraformCommentOverride() {
+        java.lang.Object ref = terraformCommentOverride_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          terraformCommentOverride_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * </pre>
+       *
+       * <code>string terraform_comment_override = 1941320;</code>
+       * @return The bytes for terraformCommentOverride.
+       */
+      public com.google.protobuf.ByteString
+          getTerraformCommentOverrideBytes() {
+        java.lang.Object ref = terraformCommentOverride_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terraformCommentOverride_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * </pre>
+       *
+       * <code>string terraform_comment_override = 1941320;</code>
+       * @param value The terraformCommentOverride to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformCommentOverride(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        terraformCommentOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * </pre>
+       *
+       * <code>string terraform_comment_override = 1941320;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTerraformCommentOverride() {
+        
+        terraformCommentOverride_ = getDefaultInstance().getTerraformCommentOverride();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * </pre>
+       *
+       * <code>string terraform_comment_override = 1941320;</code>
+       * @param value The bytes for terraformCommentOverride to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformCommentOverrideBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        terraformCommentOverride_ = value;
         onChanged();
         return this;
       }
@@ -8843,7 +9029,7 @@ public final class Options {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"0\n\rMethodOptions\022\020\n\006method" +
       "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"$\n\013FileOptions\022\025" +
-      "\n\013private_sdk\030\304\301v \001(\010\"\240\003\n\014FieldOptions\022\035" +
+      "\n\013private_sdk\030\304\301v \001(\010\"\306\003\n\014FieldOptions\022\035" +
       "\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010iterabl" +
       "e\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite_o" +
       "nly\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris_c" +
@@ -8851,41 +9037,42 @@ public final class Options {
       "\022\034\n\022terraform_computed\030\273\276v \001(\t\022\035\n\023terraf" +
       "orm_force_new\030\274\276v \001(\010\022\035\n\023terraform_sensi" +
       "tive\030\276\276v \001(\010\022&\n\034terraform_diff_suppress_" +
-      "func\030\307\276v \001(\t\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_" +
-      "json_name\030\300\276v \001(\t\022\033\n\021json_gateway_name\030\301" +
-      "\276v \001(\t\022 \n\026hide_from_json_gateway\030\302\276v \001(\010" +
-      "\"\327\002\n\016MessageOptions\022\023\n\tporcelain\030\265\276v \001(\010" +
-      "\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001" +
-      "(\t\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPorcelai" +
-      "nMessageOptions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022" +
-      "\n\010cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v " +
-      "\001(\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026hide" +
-      "_from_json_gateway\030\276\276v \001(\010\022+\n\016terraform_" +
-      "docs\030\270\276v \001(\0132\021.v1.TerraformDocs\022!\n\027terra" +
-      "form_provider_name\030\277\276v \001(\t\"\266\001\n\035CustomPor" +
-      "celainMessageOptions\022\023\n\tconverter\030\275\276v \001(" +
-      "\t\022\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_p" +
-      "orcelain_type\030\277\276v \001(\t\022\"\n\030terraform_porce" +
-      "lain_type\030\300\276v \001(\t\022 \n\026openapi_porcelain_t" +
-      "ype\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource" +
-      "_example_path\030\264\276v \001(\t\022\"\n\030data_source_exa" +
-      "mple_path\030\265\276v \001(\t\"\'\n\014OneofOptions\022\027\n\rcom" +
-      "mon_fields\030\205\277v \003(\t\"<\n\016ServiceOptions\022\023\n\t" +
-      "main_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010" +
-      ":K\n\016method_options\022\036.google.protobuf.Met" +
-      "hodOptions\030\220\277v \001(\0132\021.v1.MethodOptions:E\n" +
-      "\014file_options\022\034.google.protobuf.FileOpti" +
-      "ons\030\250\302v \001(\0132\017.v1.FileOptions:H\n\rfield_op" +
-      "tions\022\035.google.protobuf.FieldOptions\030\216\277v" +
-      " \001(\0132\020.v1.FieldOptions:N\n\017message_option" +
-      "s\022\037.google.protobuf.MessageOptions\030\217\277v \001" +
-      "(\0132\022.v1.MessageOptions:H\n\roneof_options\022" +
-      "\035.google.protobuf.OneofOptions\030\205\277v \001(\0132\020" +
-      ".v1.OneofOptions:N\n\017service_options\022\037.go" +
-      "ogle.protobuf.ServiceOptions\030\231\277v \001(\0132\022.v" +
-      "1.ServiceOptionsBR\n\034com.strongdm.api.v1." +
-      "plumbingZ2github.com/strongdm/strongdm-s" +
-      "dk-go/internal/v1;v1b\006proto3"
+      "func\030\307\276v \001(\t\022$\n\032terraform_comment_overri" +
+      "de\030\310\276v \001(\t\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_js" +
+      "on_name\030\300\276v \001(\t\022\033\n\021json_gateway_name\030\301\276v" +
+      " \001(\t\022 \n\026hide_from_json_gateway\030\302\276v \001(\010\"\327" +
+      "\002\n\016MessageOptions\022\023\n\tporcelain\030\265\276v \001(\010\022\017" +
+      "\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t" +
+      "\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPorcelainM" +
+      "essageOptions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n\010" +
+      "cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001(" +
+      "\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026hide_f" +
+      "rom_json_gateway\030\276\276v \001(\010\022+\n\016terraform_do" +
+      "cs\030\270\276v \001(\0132\021.v1.TerraformDocs\022!\n\027terrafo" +
+      "rm_provider_name\030\277\276v \001(\t\"\266\001\n\035CustomPorce" +
+      "lainMessageOptions\022\023\n\tconverter\030\275\276v \001(\t\022" +
+      "\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_por" +
+      "celain_type\030\277\276v \001(\t\022\"\n\030terraform_porcela" +
+      "in_type\030\300\276v \001(\t\022 \n\026openapi_porcelain_typ" +
+      "e\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource_e" +
+      "xample_path\030\264\276v \001(\t\022\"\n\030data_source_examp" +
+      "le_path\030\265\276v \001(\t\"\'\n\014OneofOptions\022\027\n\rcommo" +
+      "n_fields\030\205\277v \003(\t\"<\n\016ServiceOptions\022\023\n\tma" +
+      "in_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010:K" +
+      "\n\016method_options\022\036.google.protobuf.Metho" +
+      "dOptions\030\220\277v \001(\0132\021.v1.MethodOptions:E\n\014f" +
+      "ile_options\022\034.google.protobuf.FileOption" +
+      "s\030\250\302v \001(\0132\017.v1.FileOptions:H\n\rfield_opti" +
+      "ons\022\035.google.protobuf.FieldOptions\030\216\277v \001" +
+      "(\0132\020.v1.FieldOptions:N\n\017message_options\022" +
+      "\037.google.protobuf.MessageOptions\030\217\277v \001(\013" +
+      "2\022.v1.MessageOptions:H\n\roneof_options\022\035." +
+      "google.protobuf.OneofOptions\030\205\277v \001(\0132\020.v" +
+      "1.OneofOptions:N\n\017service_options\022\037.goog" +
+      "le.protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1." +
+      "ServiceOptionsBR\n\034com.strongdm.api.v1.pl" +
+      "umbingZ2github.com/strongdm/strongdm-sdk" +
+      "-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8909,7 +9096,7 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "ExposeAsPorcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "PrivateSdk", "TerraformComputed", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
+        new java.lang.String[] { "ExposeAsPorcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "PrivateSdk", "TerraformComputed", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformCommentOverride", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new

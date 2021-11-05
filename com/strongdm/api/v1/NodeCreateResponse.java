@@ -39,6 +39,16 @@ public class NodeCreateResponse {
     this.node = in;
   }
 
+  private RateLimitMetadata rateLimit;
+  // Rate limit information.
+  public RateLimitMetadata getRateLimit() {
+    return this.rateLimit;
+  }
+  // Rate limit information.
+  public void setRateLimit(RateLimitMetadata in) {
+    this.rateLimit = in;
+  }
+
   private String token;
   // The auth token generated for the Node. The Node will use this token to
   // authenticate with the strongDM API.
@@ -49,15 +59,5 @@ public class NodeCreateResponse {
   // authenticate with the strongDM API.
   public void setToken(String in) {
     this.token = in;
-  }
-
-  private RateLimitMetadata rateLimit;
-  // Rate limit information.
-  public RateLimitMetadata getRateLimit() {
-    return this.rateLimit;
-  }
-  // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
-    this.rateLimit = in;
   }
 }

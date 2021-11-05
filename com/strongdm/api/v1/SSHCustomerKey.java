@@ -18,6 +18,46 @@
 package com.strongdm.api.v1;
 
 public class SSHCustomerKey implements Resource {
+  private boolean allowDeprecatedKeyExchanges;
+
+  public boolean getAllowDeprecatedKeyExchanges() {
+    return this.allowDeprecatedKeyExchanges;
+  }
+
+  public void setAllowDeprecatedKeyExchanges(boolean in) {
+    this.allowDeprecatedKeyExchanges = in;
+  }
+
+  private String egressFilter;
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public String getEgressFilter() {
+    return this.egressFilter;
+  }
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public void setEgressFilter(String in) {
+    this.egressFilter = in;
+  }
+
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
+
+  private String hostname;
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public void setHostname(String in) {
+    this.hostname = in;
+  }
+
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -38,14 +78,44 @@ public class SSHCustomerKey implements Resource {
     this.name = in;
   }
 
-  private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
-  public boolean getHealthy() {
-    return this.healthy;
+  private int port;
+
+  public int getPort() {
+    return this.port;
   }
-  // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
-    this.healthy = in;
+
+  public void setPort(int in) {
+    this.port = in;
+  }
+
+  private boolean portForwarding;
+
+  public boolean getPortForwarding() {
+    return this.portForwarding;
+  }
+
+  public void setPortForwarding(boolean in) {
+    this.portForwarding = in;
+  }
+
+  private String privateKey;
+
+  public String getPrivateKey() {
+    return this.privateKey;
+  }
+
+  public void setPrivateKey(String in) {
+    this.privateKey = in;
+  }
+
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
   }
 
   private java.util.Map<String, String> tags;
@@ -67,36 +137,6 @@ public class SSHCustomerKey implements Resource {
     this.tags.putAll(in);
   }
 
-  private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
-  public String getSecretStoreId() {
-    return this.secretStoreId;
-  }
-  // ID of the secret store containing credentials for this resource, if any.
-  public void setSecretStoreId(String in) {
-    this.secretStoreId = in;
-  }
-
-  private String egressFilter;
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public String getEgressFilter() {
-    return this.egressFilter;
-  }
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public void setEgressFilter(String in) {
-    this.egressFilter = in;
-  }
-
-  private String hostname;
-
-  public String getHostname() {
-    return this.hostname;
-  }
-
-  public void setHostname(String in) {
-    this.hostname = in;
-  }
-
   private String username;
 
   public String getUsername() {
@@ -105,45 +145,5 @@ public class SSHCustomerKey implements Resource {
 
   public void setUsername(String in) {
     this.username = in;
-  }
-
-  private int port;
-
-  public int getPort() {
-    return this.port;
-  }
-
-  public void setPort(int in) {
-    this.port = in;
-  }
-
-  private String privateKey;
-
-  public String getPrivateKey() {
-    return this.privateKey;
-  }
-
-  public void setPrivateKey(String in) {
-    this.privateKey = in;
-  }
-
-  private boolean portForwarding;
-
-  public boolean getPortForwarding() {
-    return this.portForwarding;
-  }
-
-  public void setPortForwarding(boolean in) {
-    this.portForwarding = in;
-  }
-
-  private boolean allowDeprecatedKeyExchanges;
-
-  public boolean getAllowDeprecatedKeyExchanges() {
-    return this.allowDeprecatedKeyExchanges;
-  }
-
-  public void setAllowDeprecatedKeyExchanges(boolean in) {
-    this.allowDeprecatedKeyExchanges = in;
   }
 }

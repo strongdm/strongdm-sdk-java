@@ -30,16 +30,6 @@ public class ResourceUpdateResponse {
     this.meta = in;
   }
 
-  private Resource resource;
-  // The updated Resource.
-  public Resource getResource() {
-    return this.resource;
-  }
-  // The updated Resource.
-  public void setResource(Resource in) {
-    this.resource = in;
-  }
-
   private RateLimitMetadata rateLimit;
   // Rate limit information.
   public RateLimitMetadata getRateLimit() {
@@ -48,5 +38,15 @@ public class ResourceUpdateResponse {
   // Rate limit information.
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+  }
+
+  private Resource resource;
+  // The updated Resource.
+  public Resource getResource() {
+    return this.resource;
+  }
+  // The updated Resource.
+  public void setResource(Resource in) {
+    this.resource = in;
   }
 }

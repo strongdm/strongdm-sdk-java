@@ -29,16 +29,6 @@ public class ControlPanelVerifyJWTResponse {
     this.meta = in;
   }
 
-  private boolean valid;
-  // Reports if the given token is valid.
-  public boolean getValid() {
-    return this.valid;
-  }
-  // Reports if the given token is valid.
-  public void setValid(boolean in) {
-    this.valid = in;
-  }
-
   private RateLimitMetadata rateLimit;
   // Rate limit information.
   public RateLimitMetadata getRateLimit() {
@@ -47,5 +37,15 @@ public class ControlPanelVerifyJWTResponse {
   // Rate limit information.
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
+  }
+
+  private boolean valid;
+  // Reports if the given token is valid.
+  public boolean getValid() {
+    return this.valid;
+  }
+  // Reports if the given token is valid.
+  public void setValid(boolean in) {
+    this.valid = in;
   }
 }

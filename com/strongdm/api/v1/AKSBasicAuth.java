@@ -18,6 +18,46 @@
 package com.strongdm.api.v1;
 
 public class AKSBasicAuth implements Resource {
+  private String egressFilter;
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public String getEgressFilter() {
+    return this.egressFilter;
+  }
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public void setEgressFilter(String in) {
+    this.egressFilter = in;
+  }
+
+  private String healthcheckNamespace;
+  // The path used to check the health of your connection.  Defaults to `default`.
+  public String getHealthcheckNamespace() {
+    return this.healthcheckNamespace;
+  }
+  // The path used to check the health of your connection.  Defaults to `default`.
+  public void setHealthcheckNamespace(String in) {
+    this.healthcheckNamespace = in;
+  }
+
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
+
+  private String hostname;
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public void setHostname(String in) {
+    this.hostname = in;
+  }
+
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -38,14 +78,34 @@ public class AKSBasicAuth implements Resource {
     this.name = in;
   }
 
-  private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
-  public boolean getHealthy() {
-    return this.healthy;
+  private String password;
+
+  public String getPassword() {
+    return this.password;
   }
-  // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
-    this.healthy = in;
+
+  public void setPassword(String in) {
+    this.password = in;
+  }
+
+  private int port;
+
+  public int getPort() {
+    return this.port;
+  }
+
+  public void setPort(int in) {
+    this.port = in;
+  }
+
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
   }
 
   private java.util.Map<String, String> tags;
@@ -67,46 +127,6 @@ public class AKSBasicAuth implements Resource {
     this.tags.putAll(in);
   }
 
-  private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
-  public String getSecretStoreId() {
-    return this.secretStoreId;
-  }
-  // ID of the secret store containing credentials for this resource, if any.
-  public void setSecretStoreId(String in) {
-    this.secretStoreId = in;
-  }
-
-  private String egressFilter;
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public String getEgressFilter() {
-    return this.egressFilter;
-  }
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public void setEgressFilter(String in) {
-    this.egressFilter = in;
-  }
-
-  private String hostname;
-
-  public String getHostname() {
-    return this.hostname;
-  }
-
-  public void setHostname(String in) {
-    this.hostname = in;
-  }
-
-  private int port;
-
-  public int getPort() {
-    return this.port;
-  }
-
-  public void setPort(int in) {
-    this.port = in;
-  }
-
   private String username;
 
   public String getUsername() {
@@ -115,25 +135,5 @@ public class AKSBasicAuth implements Resource {
 
   public void setUsername(String in) {
     this.username = in;
-  }
-
-  private String password;
-
-  public String getPassword() {
-    return this.password;
-  }
-
-  public void setPassword(String in) {
-    this.password = in;
-  }
-
-  private String healthcheckNamespace;
-
-  public String getHealthcheckNamespace() {
-    return this.healthcheckNamespace;
-  }
-
-  public void setHealthcheckNamespace(String in) {
-    this.healthcheckNamespace = in;
   }
 }

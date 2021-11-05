@@ -20,16 +20,6 @@ package com.strongdm.api.v1;
 // A User can connect to resources they are granted directly, or granted
 // via roles.
 public class User implements Account {
-  private String id;
-  // Unique identifier of the User.
-  public String getId() {
-    return this.id;
-  }
-  // Unique identifier of the User.
-  public void setId(String in) {
-    this.id = in;
-  }
-
   private String email;
   // The User's email address. Must be unique.
   public String getEmail() {
@@ -48,6 +38,16 @@ public class User implements Account {
   // The User's first name.
   public void setFirstName(String in) {
     this.firstName = in;
+  }
+
+  private String id;
+  // Unique identifier of the User.
+  public String getId() {
+    return this.id;
+  }
+  // Unique identifier of the User.
+  public void setId(String in) {
+    this.id = in;
   }
 
   private String lastName;

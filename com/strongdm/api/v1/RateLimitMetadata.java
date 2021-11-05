@@ -22,6 +22,18 @@ import java.util.Date;
 // RateLimitMetadata contains information about remaining requests avaialable
 // to the user over some timeframe.
 public class RateLimitMetadata {
+  private String bucket;
+  // The bucket this user/token is associated with, which may be shared between
+  // multiple users/tokens.
+  public String getBucket() {
+    return this.bucket;
+  }
+  // The bucket this user/token is associated with, which may be shared between
+  // multiple users/tokens.
+  public void setBucket(String in) {
+    this.bucket = in;
+  }
+
   private long limit;
   // How many total requests the user/token is authorized to make before being
   // rate limited.
@@ -52,17 +64,5 @@ public class RateLimitMetadata {
   // The time when remaining will be reset to limit.
   public void setResetAt(Date in) {
     this.resetAt = in;
-  }
-
-  private String bucket;
-  // The bucket this user/token is associated with, which may be shared between
-  // multiple users/tokens.
-  public String getBucket() {
-    return this.bucket;
-  }
-  // The bucket this user/token is associated with, which may be shared between
-  // multiple users/tokens.
-  public void setBucket(String in) {
-    this.bucket = in;
   }
 }

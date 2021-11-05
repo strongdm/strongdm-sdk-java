@@ -38,6 +38,16 @@ public class VaultTokenStore implements SecretStore {
     this.name = in;
   }
 
+  private String namespace;
+
+  public String getNamespace() {
+    return this.namespace;
+  }
+
+  public void setNamespace(String in) {
+    this.namespace = in;
+  }
+
   private String serverAddress;
 
   public String getServerAddress() {

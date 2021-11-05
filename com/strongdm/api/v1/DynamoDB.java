@@ -18,6 +18,46 @@
 package com.strongdm.api.v1;
 
 public class DynamoDB implements Resource {
+  private String accessKey;
+
+  public String getAccessKey() {
+    return this.accessKey;
+  }
+
+  public void setAccessKey(String in) {
+    this.accessKey = in;
+  }
+
+  private String egressFilter;
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public String getEgressFilter() {
+    return this.egressFilter;
+  }
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public void setEgressFilter(String in) {
+    this.egressFilter = in;
+  }
+
+  private String endpoint;
+
+  public String getEndpoint() {
+    return this.endpoint;
+  }
+
+  public void setEndpoint(String in) {
+    this.endpoint = in;
+  }
+
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
+
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -38,73 +78,14 @@ public class DynamoDB implements Resource {
     this.name = in;
   }
 
-  private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
-  public boolean getHealthy() {
-    return this.healthy;
-  }
-  // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
-    this.healthy = in;
+  private int portOverride;
+
+  public int getPortOverride() {
+    return this.portOverride;
   }
 
-  private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
-  public java.util.Map<String, String> getTags() {
-    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
-    if (this.tags != null) {
-      m.putAll(this.tags);
-    }
-    return m;
-  }
-  // Tags is a map of key, value pairs.
-  public void setTags(java.util.Map<String, String> in) {
-    if (in == null) {
-      this.tags = null;
-      return;
-    }
-    this.tags = new java.util.HashMap<String, String>();
-    this.tags.putAll(in);
-  }
-
-  private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
-  public String getSecretStoreId() {
-    return this.secretStoreId;
-  }
-  // ID of the secret store containing credentials for this resource, if any.
-  public void setSecretStoreId(String in) {
-    this.secretStoreId = in;
-  }
-
-  private String egressFilter;
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public String getEgressFilter() {
-    return this.egressFilter;
-  }
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public void setEgressFilter(String in) {
-    this.egressFilter = in;
-  }
-
-  private String accessKey;
-
-  public String getAccessKey() {
-    return this.accessKey;
-  }
-
-  public void setAccessKey(String in) {
-    this.accessKey = in;
-  }
-
-  private String secretAccessKey;
-
-  public String getSecretAccessKey() {
-    return this.secretAccessKey;
-  }
-
-  public void setSecretAccessKey(String in) {
-    this.secretAccessKey = in;
+  public void setPortOverride(int in) {
+    this.portOverride = in;
   }
 
   private String region;
@@ -115,26 +96,6 @@ public class DynamoDB implements Resource {
 
   public void setRegion(String in) {
     this.region = in;
-  }
-
-  private String endpoint;
-
-  public String getEndpoint() {
-    return this.endpoint;
-  }
-
-  public void setEndpoint(String in) {
-    this.endpoint = in;
-  }
-
-  private int portOverride;
-
-  public int getPortOverride() {
-    return this.portOverride;
-  }
-
-  public void setPortOverride(int in) {
-    this.portOverride = in;
   }
 
   private String roleArn;
@@ -155,5 +116,44 @@ public class DynamoDB implements Resource {
 
   public void setRoleExternalId(String in) {
     this.roleExternalId = in;
+  }
+
+  private String secretAccessKey;
+
+  public String getSecretAccessKey() {
+    return this.secretAccessKey;
+  }
+
+  public void setSecretAccessKey(String in) {
+    this.secretAccessKey = in;
+  }
+
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
+  }
+
+  private java.util.Map<String, String> tags;
+  // Tags is a map of key, value pairs.
+  public java.util.Map<String, String> getTags() {
+    java.util.Map<String, String> m = new java.util.HashMap<String, String>();
+    if (this.tags != null) {
+      m.putAll(this.tags);
+    }
+    return m;
+  }
+  // Tags is a map of key, value pairs.
+  public void setTags(java.util.Map<String, String> in) {
+    if (in == null) {
+      this.tags = null;
+      return;
+    }
+    this.tags = new java.util.HashMap<String, String>();
+    this.tags.putAll(in);
   }
 }

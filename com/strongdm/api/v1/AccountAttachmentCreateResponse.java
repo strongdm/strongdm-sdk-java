@@ -19,16 +19,6 @@ package com.strongdm.api.v1;
 
 // AccountAttachmentCreateResponse reports how the AccountAttachments were created in the system.
 public class AccountAttachmentCreateResponse {
-  private CreateResponseMetadata meta;
-  // Reserved for future use.
-  public CreateResponseMetadata getMeta() {
-    return this.meta;
-  }
-  // Reserved for future use.
-  public void setMeta(CreateResponseMetadata in) {
-    this.meta = in;
-  }
-
   private AccountAttachment accountAttachment;
   // The created AccountAttachment.
   public AccountAttachment getAccountAttachment() {
@@ -37,6 +27,16 @@ public class AccountAttachmentCreateResponse {
   // The created AccountAttachment.
   public void setAccountAttachment(AccountAttachment in) {
     this.accountAttachment = in;
+  }
+
+  private CreateResponseMetadata meta;
+  // Reserved for future use.
+  public CreateResponseMetadata getMeta() {
+    return this.meta;
+  }
+  // Reserved for future use.
+  public void setMeta(CreateResponseMetadata in) {
+    this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;

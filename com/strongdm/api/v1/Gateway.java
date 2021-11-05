@@ -19,6 +19,30 @@ package com.strongdm.api.v1;
 
 // Gateway represents a StrongDM CLI installation running in gateway mode.
 public class Gateway implements Node {
+  private String bindAddress;
+  // The hostname/port tuple which the gateway daemon will bind to.
+  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
+  public String getBindAddress() {
+    return this.bindAddress;
+  }
+  // The hostname/port tuple which the gateway daemon will bind to.
+  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
+  public void setBindAddress(String in) {
+    this.bindAddress = in;
+  }
+
+  private String gatewayFilter;
+  // GatewayFilter can be used to restrict the peering between relays and
+  // gateways.
+  public String getGatewayFilter() {
+    return this.gatewayFilter;
+  }
+  // GatewayFilter can be used to restrict the peering between relays and
+  // gateways.
+  public void setGatewayFilter(String in) {
+    this.gatewayFilter = in;
+  }
+
   private String id;
   // Unique identifier of the Gateway.
   public String getId() {
@@ -27,6 +51,16 @@ public class Gateway implements Node {
   // Unique identifier of the Gateway.
   public void setId(String in) {
     this.id = in;
+  }
+
+  private String listenAddress;
+  // The public hostname/port tuple at which the gateway will be accessible to clients.
+  public String getListenAddress() {
+    return this.listenAddress;
+  }
+  // The public hostname/port tuple at which the gateway will be accessible to clients.
+  public void setListenAddress(String in) {
+    this.listenAddress = in;
   }
 
   private String name;
@@ -55,28 +89,6 @@ public class Gateway implements Node {
     this.state = in;
   }
 
-  private String listenAddress;
-  // The public hostname/port tuple at which the gateway will be accessible to clients.
-  public String getListenAddress() {
-    return this.listenAddress;
-  }
-  // The public hostname/port tuple at which the gateway will be accessible to clients.
-  public void setListenAddress(String in) {
-    this.listenAddress = in;
-  }
-
-  private String bindAddress;
-  // The hostname/port tuple which the gateway daemon will bind to.
-  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
-  public String getBindAddress() {
-    return this.bindAddress;
-  }
-  // The hostname/port tuple which the gateway daemon will bind to.
-  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
-  public void setBindAddress(String in) {
-    this.bindAddress = in;
-  }
-
   private java.util.Map<String, String> tags;
   // Tags is a map of key, value pairs.
   public java.util.Map<String, String> getTags() {
@@ -94,17 +106,5 @@ public class Gateway implements Node {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private String gatewayFilter;
-  // GatewayFilter can be used to restrict the peering between relays and
-  // gateways.
-  public String getGatewayFilter() {
-    return this.gatewayFilter;
-  }
-  // GatewayFilter can be used to restrict the peering between relays and
-  // gateways.
-  public void setGatewayFilter(String in) {
-    this.gatewayFilter = in;
   }
 }

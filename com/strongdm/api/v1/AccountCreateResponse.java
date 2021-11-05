@@ -19,6 +19,16 @@ package com.strongdm.api.v1;
 
 // AccountCreateResponse reports how the Accounts were created in the system.
 public class AccountCreateResponse {
+  private Account account;
+  // The created Account.
+  public Account getAccount() {
+    return this.account;
+  }
+  // The created Account.
+  public void setAccount(Account in) {
+    this.account = in;
+  }
+
   private CreateResponseMetadata meta;
   // Reserved for future use.
   public CreateResponseMetadata getMeta() {
@@ -29,14 +39,14 @@ public class AccountCreateResponse {
     this.meta = in;
   }
 
-  private Account account;
-  // The created Account.
-  public Account getAccount() {
-    return this.account;
+  private RateLimitMetadata rateLimit;
+  // Rate limit information.
+  public RateLimitMetadata getRateLimit() {
+    return this.rateLimit;
   }
-  // The created Account.
-  public void setAccount(Account in) {
-    this.account = in;
+  // Rate limit information.
+  public void setRateLimit(RateLimitMetadata in) {
+    this.rateLimit = in;
   }
 
   private String token;
@@ -49,15 +59,5 @@ public class AccountCreateResponse {
   // authenticate with the strongDM API.
   public void setToken(String in) {
     this.token = in;
-  }
-
-  private RateLimitMetadata rateLimit;
-  // Rate limit information.
-  public RateLimitMetadata getRateLimit() {
-    return this.rateLimit;
-  }
-  // Rate limit information.
-  public void setRateLimit(RateLimitMetadata in) {
-    this.rateLimit = in;
   }
 }

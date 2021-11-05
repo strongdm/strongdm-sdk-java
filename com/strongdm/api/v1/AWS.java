@@ -18,6 +18,46 @@
 package com.strongdm.api.v1;
 
 public class AWS implements Resource {
+  private String accessKey;
+
+  public String getAccessKey() {
+    return this.accessKey;
+  }
+
+  public void setAccessKey(String in) {
+    this.accessKey = in;
+  }
+
+  private String egressFilter;
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public String getEgressFilter() {
+    return this.egressFilter;
+  }
+  // A filter applied to the routing logic to pin datasource to nodes.
+  public void setEgressFilter(String in) {
+    this.egressFilter = in;
+  }
+
+  private String healthcheckRegion;
+
+  public String getHealthcheckRegion() {
+    return this.healthcheckRegion;
+  }
+
+  public void setHealthcheckRegion(String in) {
+    this.healthcheckRegion = in;
+  }
+
+  private boolean healthy;
+  // True if the datasource is reachable and the credentials are valid.
+  public boolean getHealthy() {
+    return this.healthy;
+  }
+  // True if the datasource is reachable and the credentials are valid.
+  public void setHealthy(boolean in) {
+    this.healthy = in;
+  }
+
   private String id;
   // Unique identifier of the Resource.
   public String getId() {
@@ -38,14 +78,44 @@ public class AWS implements Resource {
     this.name = in;
   }
 
-  private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
-  public boolean getHealthy() {
-    return this.healthy;
+  private String roleArn;
+
+  public String getRoleArn() {
+    return this.roleArn;
   }
-  // True if the datasource is reachable and the credentials are valid.
-  public void setHealthy(boolean in) {
-    this.healthy = in;
+
+  public void setRoleArn(String in) {
+    this.roleArn = in;
+  }
+
+  private String roleExternalId;
+
+  public String getRoleExternalId() {
+    return this.roleExternalId;
+  }
+
+  public void setRoleExternalId(String in) {
+    this.roleExternalId = in;
+  }
+
+  private String secretAccessKey;
+
+  public String getSecretAccessKey() {
+    return this.secretAccessKey;
+  }
+
+  public void setSecretAccessKey(String in) {
+    this.secretAccessKey = in;
+  }
+
+  private String secretStoreId;
+  // ID of the secret store containing credentials for this resource, if any.
+  public String getSecretStoreId() {
+    return this.secretStoreId;
+  }
+  // ID of the secret store containing credentials for this resource, if any.
+  public void setSecretStoreId(String in) {
+    this.secretStoreId = in;
   }
 
   private java.util.Map<String, String> tags;
@@ -65,75 +135,5 @@ public class AWS implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
-  public String getSecretStoreId() {
-    return this.secretStoreId;
-  }
-  // ID of the secret store containing credentials for this resource, if any.
-  public void setSecretStoreId(String in) {
-    this.secretStoreId = in;
-  }
-
-  private String egressFilter;
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public String getEgressFilter() {
-    return this.egressFilter;
-  }
-  // A filter applied to the routing logic to pin datasource to nodes.
-  public void setEgressFilter(String in) {
-    this.egressFilter = in;
-  }
-
-  private String accessKey;
-
-  public String getAccessKey() {
-    return this.accessKey;
-  }
-
-  public void setAccessKey(String in) {
-    this.accessKey = in;
-  }
-
-  private String secretAccessKey;
-
-  public String getSecretAccessKey() {
-    return this.secretAccessKey;
-  }
-
-  public void setSecretAccessKey(String in) {
-    this.secretAccessKey = in;
-  }
-
-  private String healthcheckRegion;
-
-  public String getHealthcheckRegion() {
-    return this.healthcheckRegion;
-  }
-
-  public void setHealthcheckRegion(String in) {
-    this.healthcheckRegion = in;
-  }
-
-  private String roleArn;
-
-  public String getRoleArn() {
-    return this.roleArn;
-  }
-
-  public void setRoleArn(String in) {
-    this.roleArn = in;
-  }
-
-  private String roleExternalId;
-
-  public String getRoleExternalId() {
-    return this.roleExternalId;
-  }
-
-  public void setRoleExternalId(String in) {
-    this.roleExternalId = in;
   }
 }
