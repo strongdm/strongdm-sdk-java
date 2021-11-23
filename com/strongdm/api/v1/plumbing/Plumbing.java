@@ -2281,6 +2281,153 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.DocumentDBHost convertDocumentDBHostToPorcelain(
+      DocumentDBHost plumbing) {
+    com.strongdm.api.v1.DocumentDBHost porcelain = new com.strongdm.api.v1.DocumentDBHost();
+    porcelain.setAuthDatabase((plumbing.getAuthDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static DocumentDBHost convertDocumentDBHostToPlumbing(
+      com.strongdm.api.v1.DocumentDBHost porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    DocumentDBHost.Builder builder = DocumentDBHost.newBuilder();
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase((porcelain.getAuthDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.DocumentDBHost> convertRepeatedDocumentDBHostToPorcelain(
+      Collection<DocumentDBHost> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertDocumentDBHostToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<DocumentDBHost> convertRepeatedDocumentDBHostToPlumbing(
+      Collection<com.strongdm.api.v1.DocumentDBHost> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertDocumentDBHostToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.DocumentDBReplicaSet convertDocumentDBReplicaSetToPorcelain(
+      DocumentDBReplicaSet plumbing) {
+    com.strongdm.api.v1.DocumentDBReplicaSet porcelain =
+        new com.strongdm.api.v1.DocumentDBReplicaSet();
+    porcelain.setAuthDatabase((plumbing.getAuthDatabase()));
+    porcelain.setConnectToReplica((plumbing.getConnectToReplica()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setReplicaSet((plumbing.getReplicaSet()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static DocumentDBReplicaSet convertDocumentDBReplicaSetToPlumbing(
+      com.strongdm.api.v1.DocumentDBReplicaSet porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    DocumentDBReplicaSet.Builder builder = DocumentDBReplicaSet.newBuilder();
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase((porcelain.getAuthDatabase()));
+    }
+    builder.setConnectToReplica(porcelain.getConnectToReplica());
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getReplicaSet() != null) {
+      builder.setReplicaSet((porcelain.getReplicaSet()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.DocumentDBReplicaSet>
+      convertRepeatedDocumentDBReplicaSetToPorcelain(Collection<DocumentDBReplicaSet> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertDocumentDBReplicaSetToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<DocumentDBReplicaSet> convertRepeatedDocumentDBReplicaSetToPlumbing(
+      Collection<com.strongdm.api.v1.DocumentDBReplicaSet> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertDocumentDBReplicaSetToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Druid convertDruidToPorcelain(Druid plumbing) {
     com.strongdm.api.v1.Druid porcelain = new com.strongdm.api.v1.Druid();
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
@@ -3991,6 +4138,140 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.Neptune convertNeptuneToPorcelain(Neptune plumbing) {
+    com.strongdm.api.v1.Neptune porcelain = new com.strongdm.api.v1.Neptune();
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static Neptune convertNeptuneToPlumbing(com.strongdm.api.v1.Neptune porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Neptune.Builder builder = Neptune.newBuilder();
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint((porcelain.getEndpoint()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.Neptune> convertRepeatedNeptuneToPorcelain(
+      Collection<Neptune> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertNeptuneToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Neptune> convertRepeatedNeptuneToPlumbing(
+      Collection<com.strongdm.api.v1.Neptune> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertNeptuneToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.NeptuneIAM convertNeptuneIAMToPorcelain(NeptuneIAM plumbing) {
+    com.strongdm.api.v1.NeptuneIAM porcelain = new com.strongdm.api.v1.NeptuneIAM();
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setEndpoint((plumbing.getEndpoint()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static NeptuneIAM convertNeptuneIAMToPlumbing(com.strongdm.api.v1.NeptuneIAM porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    NeptuneIAM.Builder builder = NeptuneIAM.newBuilder();
+    if (porcelain.getAccessKey() != null) {
+      builder.setAccessKey((porcelain.getAccessKey()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getEndpoint() != null) {
+      builder.setEndpoint((porcelain.getEndpoint()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey((porcelain.getSecretAccessKey()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.NeptuneIAM> convertRepeatedNeptuneIAMToPorcelain(
+      Collection<NeptuneIAM> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertNeptuneIAMToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<NeptuneIAM> convertRepeatedNeptuneIAMToPlumbing(
+      Collection<com.strongdm.api.v1.NeptuneIAM> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertNeptuneIAMToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Node convertNodeToPorcelain(Node plumbing) {
     if (plumbing == null) {
       return null;
@@ -4888,6 +5169,12 @@ public class Plumbing {
     if (plumbing.hasDb2Luw()) {
       return convertDB2LUWToPorcelain(plumbing.getDb2Luw());
     }
+    if (plumbing.hasDocumentDbHost()) {
+      return convertDocumentDBHostToPorcelain(plumbing.getDocumentDbHost());
+    }
+    if (plumbing.hasDocumentDbReplicaSet()) {
+      return convertDocumentDBReplicaSetToPorcelain(plumbing.getDocumentDbReplicaSet());
+    }
     if (plumbing.hasDruid()) {
       return convertDruidToPorcelain(plumbing.getDruid());
     }
@@ -4958,6 +5245,12 @@ public class Plumbing {
     }
     if (plumbing.hasMysql()) {
       return convertMysqlToPorcelain(plumbing.getMysql());
+    }
+    if (plumbing.hasNeptune()) {
+      return convertNeptuneToPorcelain(plumbing.getNeptune());
+    }
+    if (plumbing.hasNeptuneIam()) {
+      return convertNeptuneIAMToPorcelain(plumbing.getNeptuneIam());
     }
     if (plumbing.hasOracle()) {
       return convertOracleToPorcelain(plumbing.getOracle());
@@ -5128,6 +5421,19 @@ public class Plumbing {
       builder.setDb2Luw(convertDB2LUWToPlumbing((com.strongdm.api.v1.DB2LUW) porcelain));
       return builder.build();
     }
+    if (porcelain instanceof com.strongdm.api.v1.DocumentDBHost) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setDocumentDbHost(
+          convertDocumentDBHostToPlumbing((com.strongdm.api.v1.DocumentDBHost) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.DocumentDBReplicaSet) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setDocumentDbReplicaSet(
+          convertDocumentDBReplicaSetToPlumbing(
+              (com.strongdm.api.v1.DocumentDBReplicaSet) porcelain));
+      return builder.build();
+    }
     if (porcelain instanceof com.strongdm.api.v1.Druid) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setDruid(convertDruidToPlumbing((com.strongdm.api.v1.Druid) porcelain));
@@ -5259,6 +5565,17 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.Mysql) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setMysql(convertMysqlToPlumbing((com.strongdm.api.v1.Mysql) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.Neptune) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setNeptune(convertNeptuneToPlumbing((com.strongdm.api.v1.Neptune) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.NeptuneIAM) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setNeptuneIam(
+          convertNeptuneIAMToPlumbing((com.strongdm.api.v1.NeptuneIAM) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Oracle) {
