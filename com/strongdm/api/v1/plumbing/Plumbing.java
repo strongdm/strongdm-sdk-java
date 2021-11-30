@@ -2700,6 +2700,63 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.GCP convertGCPToPorcelain(GCP plumbing) {
+    com.strongdm.api.v1.GCP porcelain = new com.strongdm.api.v1.GCP();
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setKeyfile((plumbing.getKeyfile()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setScopes((plumbing.getScopes()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static GCP convertGCPToPlumbing(com.strongdm.api.v1.GCP porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GCP.Builder builder = GCP.newBuilder();
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getKeyfile() != null) {
+      builder.setKeyfile((porcelain.getKeyfile()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getScopes() != null) {
+      builder.setScopes((porcelain.getScopes()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.GCP> convertRepeatedGCPToPorcelain(
+      Collection<GCP> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertGCPToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GCP> convertRepeatedGCPToPlumbing(
+      Collection<com.strongdm.api.v1.GCP> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertGCPToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Gateway convertGatewayToPorcelain(Gateway plumbing) {
     com.strongdm.api.v1.Gateway porcelain = new com.strongdm.api.v1.Gateway();
     porcelain.setBindAddress((plumbing.getBindAddress()));
@@ -5187,6 +5244,9 @@ public class Plumbing {
     if (plumbing.hasElasticacheRedis()) {
       return convertElasticacheRedisToPorcelain(plumbing.getElasticacheRedis());
     }
+    if (plumbing.hasGcp()) {
+      return convertGCPToPorcelain(plumbing.getGcp());
+    }
     if (plumbing.hasGoogleGke()) {
       return convertGoogleGKEToPorcelain(plumbing.getGoogleGke());
     }
@@ -5453,6 +5513,11 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setElasticacheRedis(
           convertElasticacheRedisToPlumbing((com.strongdm.api.v1.ElasticacheRedis) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.GCP) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setGcp(convertGCPToPlumbing((com.strongdm.api.v1.GCP) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.GoogleGKE) {
