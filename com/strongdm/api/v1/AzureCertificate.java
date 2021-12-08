@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-public class Azure implements Resource {
+public class AzureCertificate implements Resource {
   private String appId;
 
   public String getAppId() {
@@ -26,6 +26,16 @@ public class Azure implements Resource {
 
   public void setAppId(String in) {
     this.appId = in;
+  }
+
+  private String clientCertificate;
+
+  public String getClientCertificate() {
+    return this.clientCertificate;
+  }
+
+  public void setClientCertificate(String in) {
+    this.clientCertificate = in;
   }
 
   private String egressFilter;
@@ -66,16 +76,6 @@ public class Azure implements Resource {
   // Unique human-readable name of the Resource.
   public void setName(String in) {
     this.name = in;
-  }
-
-  private String password;
-
-  public String getPassword() {
-    return this.password;
-  }
-
-  public void setPassword(String in) {
-    this.password = in;
   }
 
   private String secretStoreId;

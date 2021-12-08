@@ -1651,7 +1651,7 @@ public class Plumbing {
 
   public static com.strongdm.api.v1.Azure convertAzureToPorcelain(Azure plumbing) {
     com.strongdm.api.v1.Azure porcelain = new com.strongdm.api.v1.Azure();
-    porcelain.setAppID((plumbing.getAppID()));
+    porcelain.setAppId((plumbing.getAppId()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
@@ -1659,7 +1659,7 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    porcelain.setTenantID((plumbing.getTenantID()));
+    porcelain.setTenantId((plumbing.getTenantId()));
     return porcelain;
   }
 
@@ -1668,8 +1668,8 @@ public class Plumbing {
       return null;
     }
     Azure.Builder builder = Azure.newBuilder();
-    if (porcelain.getAppID() != null) {
-      builder.setAppID((porcelain.getAppID()));
+    if (porcelain.getAppId() != null) {
+      builder.setAppId((porcelain.getAppId()));
     }
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
@@ -1690,8 +1690,8 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
-    if (porcelain.getTenantID() != null) {
-      builder.setTenantID((porcelain.getTenantID()));
+    if (porcelain.getTenantId() != null) {
+      builder.setTenantId((porcelain.getTenantId()));
     }
     return builder.build();
   }
@@ -1707,6 +1707,69 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Azure> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertAzureToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.AzureCertificate convertAzureCertificateToPorcelain(
+      AzureCertificate plumbing) {
+    com.strongdm.api.v1.AzureCertificate porcelain = new com.strongdm.api.v1.AzureCertificate();
+    porcelain.setAppId((plumbing.getAppId()));
+    porcelain.setClientCertificate((plumbing.getClientCertificate()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTenantId((plumbing.getTenantId()));
+    return porcelain;
+  }
+
+  public static AzureCertificate convertAzureCertificateToPlumbing(
+      com.strongdm.api.v1.AzureCertificate porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AzureCertificate.Builder builder = AzureCertificate.newBuilder();
+    if (porcelain.getAppId() != null) {
+      builder.setAppId((porcelain.getAppId()));
+    }
+    if (porcelain.getClientCertificate() != null) {
+      builder.setClientCertificate((porcelain.getClientCertificate()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getTenantId() != null) {
+      builder.setTenantId((porcelain.getTenantId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AzureCertificate>
+      convertRepeatedAzureCertificateToPorcelain(Collection<AzureCertificate> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAzureCertificateToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AzureCertificate> convertRepeatedAzureCertificateToPlumbing(
+      Collection<com.strongdm.api.v1.AzureCertificate> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAzureCertificateToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -5342,6 +5405,9 @@ public class Plumbing {
     if (plumbing.hasAzure()) {
       return convertAzureToPorcelain(plumbing.getAzure());
     }
+    if (plumbing.hasAzureCertificate()) {
+      return convertAzureCertificateToPorcelain(plumbing.getAzureCertificate());
+    }
     if (plumbing.hasAzurePostgres()) {
       return convertAzurePostgresToPorcelain(plumbing.getAzurePostgres());
     }
@@ -5589,6 +5655,12 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.Azure) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAzure(convertAzureToPlumbing((com.strongdm.api.v1.Azure) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AzureCertificate) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAzureCertificate(
+          convertAzureCertificateToPlumbing((com.strongdm.api.v1.AzureCertificate) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.AzurePostgres) {
