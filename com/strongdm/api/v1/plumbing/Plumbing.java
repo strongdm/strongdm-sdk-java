@@ -4323,6 +4323,78 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.MongoShardedCluster convertMongoShardedClusterToPorcelain(
+      MongoShardedCluster plumbing) {
+    com.strongdm.api.v1.MongoShardedCluster porcelain =
+        new com.strongdm.api.v1.MongoShardedCluster();
+    porcelain.setAuthDatabase((plumbing.getAuthDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTlsRequired((plumbing.getTlsRequired()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static MongoShardedCluster convertMongoShardedClusterToPlumbing(
+      com.strongdm.api.v1.MongoShardedCluster porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MongoShardedCluster.Builder builder = MongoShardedCluster.newBuilder();
+    if (porcelain.getAuthDatabase() != null) {
+      builder.setAuthDatabase((porcelain.getAuthDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    builder.setTlsRequired(porcelain.getTlsRequired());
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.MongoShardedCluster>
+      convertRepeatedMongoShardedClusterToPorcelain(Collection<MongoShardedCluster> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertMongoShardedClusterToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MongoShardedCluster> convertRepeatedMongoShardedClusterToPlumbing(
+      Collection<com.strongdm.api.v1.MongoShardedCluster> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertMongoShardedClusterToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Mysql convertMysqlToPorcelain(Mysql plumbing) {
     com.strongdm.api.v1.Mysql porcelain = new com.strongdm.api.v1.Mysql();
     porcelain.setDatabase((plumbing.getDatabase()));
@@ -5509,6 +5581,9 @@ public class Plumbing {
     if (plumbing.hasMongoReplicaSet()) {
       return convertMongoReplicaSetToPorcelain(plumbing.getMongoReplicaSet());
     }
+    if (plumbing.hasMongoShardedCluster()) {
+      return convertMongoShardedClusterToPorcelain(plumbing.getMongoShardedCluster());
+    }
     if (plumbing.hasMysql()) {
       return convertMysqlToPorcelain(plumbing.getMysql());
     }
@@ -5848,6 +5923,13 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setMongoReplicaSet(
           convertMongoReplicaSetToPlumbing((com.strongdm.api.v1.MongoReplicaSet) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.MongoShardedCluster) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMongoShardedCluster(
+          convertMongoShardedClusterToPlumbing(
+              (com.strongdm.api.v1.MongoShardedCluster) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Mysql) {
