@@ -275,10 +275,10 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getMethodBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941300, method_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941301, url_);
       }
       unknownFields.writeTo(output);
@@ -290,10 +290,10 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (!getMethodBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(method_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941300, method_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941301, url_);
       }
       size += unknownFields.getSerializedSize();
@@ -2091,7 +2091,7 @@ public final class Options {
       if (required_ != false) {
         output.writeBool(1941304, required_);
       }
-      if (!getTerraformComputedBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformComputed_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, terraformComputed_);
       }
       if (terraformForceNew_ != false) {
@@ -2103,13 +2103,13 @@ public final class Options {
       if (terraformSensitive_ != false) {
         output.writeBool(1941310, terraformSensitive_);
       }
-      if (!getCliNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, cliName_);
       }
-      if (!getCliJsonNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, cliJsonName_);
       }
-      if (!getJsonGatewayNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941313, jsonGatewayName_);
       }
       if (hideFromJsonGateway_ != false) {
@@ -2124,10 +2124,10 @@ public final class Options {
       if (privateSdk_ != false) {
         output.writeBool(1941318, privateSdk_);
       }
-      if (!getTerraformDiffSuppressFuncBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, terraformDiffSuppressFunc_);
       }
-      if (!getTerraformCommentOverrideBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformCommentOverride_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941320, terraformCommentOverride_);
       }
       unknownFields.writeTo(output);
@@ -2151,7 +2151,7 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941304, required_);
       }
-      if (!getTerraformComputedBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformComputed_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, terraformComputed_);
       }
       if (terraformForceNew_ != false) {
@@ -2166,13 +2166,13 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941310, terraformSensitive_);
       }
-      if (!getCliNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, cliName_);
       }
-      if (!getCliJsonNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, cliJsonName_);
       }
-      if (!getJsonGatewayNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941313, jsonGatewayName_);
       }
       if (hideFromJsonGateway_ != false) {
@@ -2191,10 +2191,10 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941318, privateSdk_);
       }
-      if (!getTerraformDiffSuppressFuncBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, terraformDiffSuppressFunc_);
       }
-      if (!getTerraformCommentOverrideBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformCommentOverride_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941320, terraformCommentOverride_);
       }
       size += unknownFields.getSerializedSize();
@@ -4223,7 +4223,7 @@ public final class Options {
       if (error_ != 0) {
         output.writeInt32(1941302, error_);
       }
-      if (!getOptionsFieldBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsField_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941303, optionsField_);
       }
       if (terraformDocs_ != null) {
@@ -4235,19 +4235,19 @@ public final class Options {
       if (privateSdk_ != false) {
         output.writeBool(1941306, privateSdk_);
       }
-      if (!getCliNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, cliName_);
       }
-      if (!getCliJsonNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941308, cliJsonName_);
       }
-      if (!getJsonGatewayNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941309, jsonGatewayName_);
       }
       if (hideFromJsonGateway_ != false) {
         output.writeBool(1941310, hideFromJsonGateway_);
       }
-      if (!getTerraformProviderNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, terraformProviderName_);
       }
       unknownFields.writeTo(output);
@@ -4267,7 +4267,7 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1941302, error_);
       }
-      if (!getOptionsFieldBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsField_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941303, optionsField_);
       }
       if (terraformDocs_ != null) {
@@ -4282,20 +4282,20 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941306, privateSdk_);
       }
-      if (!getCliNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, cliName_);
       }
-      if (!getCliJsonNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941308, cliJsonName_);
       }
-      if (!getJsonGatewayNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941309, jsonGatewayName_);
       }
       if (hideFromJsonGateway_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941310, hideFromJsonGateway_);
       }
-      if (!getTerraformProviderNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, terraformProviderName_);
       }
       size += unknownFields.getSerializedSize();
@@ -6017,19 +6017,19 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getConverterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(converter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941309, converter_);
       }
-      if (!getGoPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(goPorcelainType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941310, goPorcelainType_);
       }
-      if (!getJavaPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(javaPorcelainType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, javaPorcelainType_);
       }
-      if (!getTerraformPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformPorcelainType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, terraformPorcelainType_);
       }
-      if (!getOpenapiPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiPorcelainType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941313, openapiPorcelainType_);
       }
       unknownFields.writeTo(output);
@@ -6041,19 +6041,19 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (!getConverterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(converter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941309, converter_);
       }
-      if (!getGoPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(goPorcelainType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941310, goPorcelainType_);
       }
-      if (!getJavaPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(javaPorcelainType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, javaPorcelainType_);
       }
-      if (!getTerraformPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformPorcelainType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, terraformPorcelainType_);
       }
-      if (!getOpenapiPorcelainTypeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiPorcelainType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941313, openapiPorcelainType_);
       }
       size += unknownFields.getSerializedSize();
@@ -7125,10 +7125,10 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getResourceExamplePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceExamplePath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941300, resourceExamplePath_);
       }
-      if (!getDataSourceExamplePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceExamplePath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941301, dataSourceExamplePath_);
       }
       unknownFields.writeTo(output);
@@ -7140,10 +7140,10 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (!getResourceExamplePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceExamplePath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941300, resourceExamplePath_);
       }
-      if (!getDataSourceExamplePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dataSourceExamplePath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941301, dataSourceExamplePath_);
       }
       size += unknownFields.getSerializedSize();
@@ -8446,7 +8446,7 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getMainNounBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941400, mainNoun_);
       }
       if (privateSdk_ != false) {
@@ -8461,7 +8461,7 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (!getMainNounBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941400, mainNoun_);
       }
       if (privateSdk_ != false) {

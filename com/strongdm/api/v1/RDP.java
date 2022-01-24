@@ -18,6 +18,16 @@
 package com.strongdm.api.v1;
 
 public class RDP implements Resource {
+  private boolean downgradeNlaConnections;
+
+  public boolean getDowngradeNlaConnections() {
+    return this.downgradeNlaConnections;
+  }
+
+  public void setDowngradeNlaConnections(boolean in) {
+    this.downgradeNlaConnections = in;
+  }
+
   private String egressFilter;
   // A filter applied to the routing logic to pin datasource to nodes.
   public String getEgressFilter() {

@@ -2450,7 +2450,7 @@ public final class RoleAttachmentsPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -2466,7 +2466,7 @@ public final class RoleAttachmentsPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -4540,7 +4540,7 @@ public final class RoleAttachmentsPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -4556,7 +4556,7 @@ public final class RoleAttachmentsPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -6367,7 +6367,7 @@ public final class RoleAttachmentsPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
       }
       unknownFields.writeTo(output);
@@ -6383,7 +6383,7 @@ public final class RoleAttachmentsPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -8748,13 +8748,13 @@ public final class RoleAttachmentsPlumbing {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getCompositeRoleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(compositeRoleId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, compositeRoleId_);
       }
-      if (!getAttachedRoleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attachedRoleId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, attachedRoleId_);
       }
       unknownFields.writeTo(output);
@@ -8766,13 +8766,13 @@ public final class RoleAttachmentsPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getCompositeRoleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(compositeRoleId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, compositeRoleId_);
       }
-      if (!getAttachedRoleIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(attachedRoleId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, attachedRoleId_);
       }
       size += unknownFields.getSerializedSize();

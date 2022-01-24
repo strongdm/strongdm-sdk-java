@@ -1398,7 +1398,7 @@ public final class NodesPlumbing {
       if (node_ != null) {
         output.writeMessage(2, getNode());
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
       }
       if (rateLimit_ != null) {
@@ -1421,7 +1421,7 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getNode());
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
       }
       if (rateLimit_ != null) {
@@ -2645,7 +2645,7 @@ public final class NodesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -2661,7 +2661,7 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -4822,7 +4822,7 @@ public final class NodesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       if (node_ != null) {
@@ -4841,7 +4841,7 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       if (node_ != null) {
@@ -7110,7 +7110,7 @@ public final class NodesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -7126,7 +7126,7 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -8937,7 +8937,7 @@ public final class NodesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
       }
       unknownFields.writeTo(output);
@@ -8953,7 +8953,7 @@ public final class NodesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -12442,19 +12442,19 @@ public final class NodesPlumbing {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
       }
       if (tags_ != null) {
         output.writeMessage(4, getTags());
       }
-      if (!getGatewayFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, gatewayFilter_);
       }
       unknownFields.writeTo(output);
@@ -12466,20 +12466,20 @@ public final class NodesPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
       }
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTags());
       }
-      if (!getGatewayFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, gatewayFilter_);
       }
       size += unknownFields.getSerializedSize();
@@ -14048,25 +14048,25 @@ public final class NodesPlumbing {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
       }
-      if (!getListenAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, listenAddress_);
       }
-      if (!getBindAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bindAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bindAddress_);
       }
       if (tags_ != null) {
         output.writeMessage(6, getTags());
       }
-      if (!getGatewayFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, gatewayFilter_);
       }
       unknownFields.writeTo(output);
@@ -14078,26 +14078,26 @@ public final class NodesPlumbing {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
       }
-      if (!getListenAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(listenAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, listenAddress_);
       }
-      if (!getBindAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bindAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bindAddress_);
       }
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTags());
       }
-      if (!getGatewayFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, gatewayFilter_);
       }
       size += unknownFields.getSerializedSize();

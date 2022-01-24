@@ -2448,7 +2448,7 @@ public final class ResourcesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -2464,7 +2464,7 @@ public final class ResourcesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -4625,7 +4625,7 @@ public final class ResourcesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       if (resource_ != null) {
@@ -4644,7 +4644,7 @@ public final class ResourcesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       if (resource_ != null) {
@@ -6913,7 +6913,7 @@ public final class ResourcesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, id_);
       }
       unknownFields.writeTo(output);
@@ -6929,7 +6929,7 @@ public final class ResourcesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -8740,7 +8740,7 @@ public final class ResourcesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
       }
       unknownFields.writeTo(output);
@@ -8756,7 +8756,7 @@ public final class ResourcesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
       }
       size += unknownFields.getSerializedSize();
@@ -11056,7 +11056,7 @@ public final class ResourcesPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filter_);
       }
       unknownFields.writeTo(output);
@@ -11072,7 +11072,7 @@ public final class ResourcesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getFilterBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filter_);
       }
       size += unknownFields.getSerializedSize();

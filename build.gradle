@@ -6,8 +6,8 @@ plugins {
     id 'signing'
 }
 
-def grpcVersion = '1.25.0'
-def protobufVersion = '3.10.0'
+def grpcVersion = '1.42.2'
+def protobufVersion = '3.19.3'
 def protocVersion = protobufVersion
 def jsonVersion = '20190722'
 def releaseVersion = System.getenv('JAVA_SDK_VERSION')

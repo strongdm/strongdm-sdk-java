@@ -1055,7 +1055,7 @@ public final class ControlPanelPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getPublicKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, publicKey_);
       }
       if (rateLimit_ != null) {
@@ -1074,7 +1074,7 @@ public final class ControlPanelPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getPublicKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publicKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, publicKey_);
       }
       if (rateLimit_ != null) {
@@ -2121,7 +2121,7 @@ public final class ControlPanelPlumbing {
       if (meta_ != null) {
         output.writeMessage(1, getMeta());
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, token_);
       }
       unknownFields.writeTo(output);
@@ -2137,7 +2137,7 @@ public final class ControlPanelPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMeta());
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, token_);
       }
       size += unknownFields.getSerializedSize();

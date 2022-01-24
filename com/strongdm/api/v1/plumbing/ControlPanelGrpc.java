@@ -15,19 +15,6 @@
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -35,8 +22,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: control_panel.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ControlPanelGrpc {
 
   private ControlPanelGrpc() {}
@@ -110,7 +98,14 @@ public final class ControlPanelGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static ControlPanelStub newStub(io.grpc.Channel channel) {
-    return new ControlPanelStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ControlPanelStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ControlPanelStub>() {
+        @java.lang.Override
+        public ControlPanelStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ControlPanelStub(channel, callOptions);
+        }
+      };
+    return ControlPanelStub.newStub(factory, channel);
   }
 
   /**
@@ -118,7 +113,14 @@ public final class ControlPanelGrpc {
    */
   public static ControlPanelBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ControlPanelBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ControlPanelBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ControlPanelBlockingStub>() {
+        @java.lang.Override
+        public ControlPanelBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ControlPanelBlockingStub(channel, callOptions);
+        }
+      };
+    return ControlPanelBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -126,7 +128,14 @@ public final class ControlPanelGrpc {
    */
   public static ControlPanelFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ControlPanelFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ControlPanelFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ControlPanelFutureStub>() {
+        @java.lang.Override
+        public ControlPanelFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ControlPanelFutureStub(channel, callOptions);
+        }
+      };
+    return ControlPanelFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -143,7 +152,7 @@ public final class ControlPanelGrpc {
      */
     public void getSSHCAPublicKey(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSSHCAPublicKeyMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSSHCAPublicKeyMethod(), responseObserver);
     }
 
     /**
@@ -153,21 +162,21 @@ public final class ControlPanelGrpc {
      */
     public void verifyJWT(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getVerifyJWTMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVerifyJWTMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetSSHCAPublicKeyMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest,
                 com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse>(
                   this, METHODID_GET_SSHCAPUBLIC_KEY)))
           .addMethod(
             getVerifyJWTMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest,
                 com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse>(
@@ -181,19 +190,15 @@ public final class ControlPanelGrpc {
    * ControlPanel contains all administrative controls.
    * </pre>
    */
-  public static final class ControlPanelStub extends io.grpc.stub.AbstractStub<ControlPanelStub> {
-    private ControlPanelStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ControlPanelStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ControlPanelStub extends io.grpc.stub.AbstractAsyncStub<ControlPanelStub> {
+    private ControlPanelStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ControlPanelStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ControlPanelStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ControlPanelStub(channel, callOptions);
     }
 
@@ -204,7 +209,7 @@ public final class ControlPanelGrpc {
      */
     public void getSSHCAPublicKey(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSSHCAPublicKeyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -215,7 +220,7 @@ public final class ControlPanelGrpc {
      */
     public void verifyJWT(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getVerifyJWTMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -225,19 +230,15 @@ public final class ControlPanelGrpc {
    * ControlPanel contains all administrative controls.
    * </pre>
    */
-  public static final class ControlPanelBlockingStub extends io.grpc.stub.AbstractStub<ControlPanelBlockingStub> {
-    private ControlPanelBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ControlPanelBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ControlPanelBlockingStub extends io.grpc.stub.AbstractBlockingStub<ControlPanelBlockingStub> {
+    private ControlPanelBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ControlPanelBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ControlPanelBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ControlPanelBlockingStub(channel, callOptions);
     }
 
@@ -247,7 +248,7 @@ public final class ControlPanelGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse getSSHCAPublicKey(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSSHCAPublicKeyMethod(), getCallOptions(), request);
     }
 
@@ -257,7 +258,7 @@ public final class ControlPanelGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse verifyJWT(com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getVerifyJWTMethod(), getCallOptions(), request);
     }
   }
@@ -267,19 +268,15 @@ public final class ControlPanelGrpc {
    * ControlPanel contains all administrative controls.
    * </pre>
    */
-  public static final class ControlPanelFutureStub extends io.grpc.stub.AbstractStub<ControlPanelFutureStub> {
-    private ControlPanelFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ControlPanelFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ControlPanelFutureStub extends io.grpc.stub.AbstractFutureStub<ControlPanelFutureStub> {
+    private ControlPanelFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ControlPanelFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ControlPanelFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ControlPanelFutureStub(channel, callOptions);
     }
 
@@ -290,7 +287,7 @@ public final class ControlPanelGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyResponse> getSSHCAPublicKey(
         com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSSHCAPublicKeyMethod(), getCallOptions()), request);
     }
 
@@ -301,7 +298,7 @@ public final class ControlPanelGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTResponse> verifyJWT(
         com.strongdm.api.v1.plumbing.ControlPanelPlumbing.ControlPanelVerifyJWTRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getVerifyJWTMethod(), getCallOptions()), request);
     }
   }

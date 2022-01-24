@@ -15,19 +15,6 @@
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -38,8 +25,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: role_grants.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class RoleGrantsGrpc {
 
   private RoleGrantsGrpc() {}
@@ -175,7 +163,14 @@ public final class RoleGrantsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static RoleGrantsStub newStub(io.grpc.Channel channel) {
-    return new RoleGrantsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleGrantsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleGrantsStub>() {
+        @java.lang.Override
+        public RoleGrantsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleGrantsStub(channel, callOptions);
+        }
+      };
+    return RoleGrantsStub.newStub(factory, channel);
   }
 
   /**
@@ -183,7 +178,14 @@ public final class RoleGrantsGrpc {
    */
   public static RoleGrantsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RoleGrantsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleGrantsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleGrantsBlockingStub>() {
+        @java.lang.Override
+        public RoleGrantsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleGrantsBlockingStub(channel, callOptions);
+        }
+      };
+    return RoleGrantsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -191,7 +193,14 @@ public final class RoleGrantsGrpc {
    */
   public static RoleGrantsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RoleGrantsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleGrantsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleGrantsFutureStub>() {
+        @java.lang.Override
+        public RoleGrantsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleGrantsFutureStub(channel, callOptions);
+        }
+      };
+    return RoleGrantsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -211,7 +220,7 @@ public final class RoleGrantsGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -221,7 +230,7 @@ public final class RoleGrantsGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -231,7 +240,7 @@ public final class RoleGrantsGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -241,35 +250,35 @@ public final class RoleGrantsGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest,
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest,
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest,
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest,
                 com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse>(
@@ -286,19 +295,15 @@ public final class RoleGrantsGrpc {
    * include the permissions granted to members of the attached role.
    * </pre>
    */
-  public static final class RoleGrantsStub extends io.grpc.stub.AbstractStub<RoleGrantsStub> {
-    private RoleGrantsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleGrantsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleGrantsStub extends io.grpc.stub.AbstractAsyncStub<RoleGrantsStub> {
+    private RoleGrantsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleGrantsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleGrantsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleGrantsStub(channel, callOptions);
     }
 
@@ -309,7 +314,7 @@ public final class RoleGrantsGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -320,7 +325,7 @@ public final class RoleGrantsGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -331,7 +336,7 @@ public final class RoleGrantsGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -342,7 +347,7 @@ public final class RoleGrantsGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -355,19 +360,15 @@ public final class RoleGrantsGrpc {
    * include the permissions granted to members of the attached role.
    * </pre>
    */
-  public static final class RoleGrantsBlockingStub extends io.grpc.stub.AbstractStub<RoleGrantsBlockingStub> {
-    private RoleGrantsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleGrantsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleGrantsBlockingStub extends io.grpc.stub.AbstractBlockingStub<RoleGrantsBlockingStub> {
+    private RoleGrantsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleGrantsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleGrantsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleGrantsBlockingStub(channel, callOptions);
     }
 
@@ -377,7 +378,7 @@ public final class RoleGrantsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse create(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -387,7 +388,7 @@ public final class RoleGrantsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse get(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -397,7 +398,7 @@ public final class RoleGrantsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse delete(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -407,7 +408,7 @@ public final class RoleGrantsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse list(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -420,19 +421,15 @@ public final class RoleGrantsGrpc {
    * include the permissions granted to members of the attached role.
    * </pre>
    */
-  public static final class RoleGrantsFutureStub extends io.grpc.stub.AbstractStub<RoleGrantsFutureStub> {
-    private RoleGrantsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleGrantsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleGrantsFutureStub extends io.grpc.stub.AbstractFutureStub<RoleGrantsFutureStub> {
+    private RoleGrantsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleGrantsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleGrantsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleGrantsFutureStub(channel, callOptions);
     }
 
@@ -443,7 +440,7 @@ public final class RoleGrantsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse> create(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -454,7 +451,7 @@ public final class RoleGrantsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse> get(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -465,7 +462,7 @@ public final class RoleGrantsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -476,7 +473,7 @@ public final class RoleGrantsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse> list(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

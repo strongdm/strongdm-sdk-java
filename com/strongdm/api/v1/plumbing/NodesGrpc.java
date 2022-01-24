@@ -15,19 +15,6 @@
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -37,8 +24,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: nodes.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class NodesGrpc {
 
   private NodesGrpc() {}
@@ -205,7 +193,14 @@ public final class NodesGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static NodesStub newStub(io.grpc.Channel channel) {
-    return new NodesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodesStub>() {
+        @java.lang.Override
+        public NodesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodesStub(channel, callOptions);
+        }
+      };
+    return NodesStub.newStub(factory, channel);
   }
 
   /**
@@ -213,7 +208,14 @@ public final class NodesGrpc {
    */
   public static NodesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new NodesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodesBlockingStub>() {
+        @java.lang.Override
+        public NodesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodesBlockingStub(channel, callOptions);
+        }
+      };
+    return NodesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -221,7 +223,14 @@ public final class NodesGrpc {
    */
   public static NodesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new NodesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodesFutureStub>() {
+        @java.lang.Override
+        public NodesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodesFutureStub(channel, callOptions);
+        }
+      };
+    return NodesFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -240,7 +249,7 @@ public final class NodesGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -250,7 +259,7 @@ public final class NodesGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -260,7 +269,7 @@ public final class NodesGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -270,7 +279,7 @@ public final class NodesGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -280,42 +289,42 @@ public final class NodesGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest,
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest,
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getUpdateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest,
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest,
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest,
                 com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse>(
@@ -331,19 +340,15 @@ public final class NodesGrpc {
    * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
-  public static final class NodesStub extends io.grpc.stub.AbstractStub<NodesStub> {
-    private NodesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodesStub extends io.grpc.stub.AbstractAsyncStub<NodesStub> {
+    private NodesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodesStub(channel, callOptions);
     }
 
@@ -354,7 +359,7 @@ public final class NodesGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -365,7 +370,7 @@ public final class NodesGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -376,7 +381,7 @@ public final class NodesGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -387,7 +392,7 @@ public final class NodesGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -398,7 +403,7 @@ public final class NodesGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -410,19 +415,15 @@ public final class NodesGrpc {
    * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
-  public static final class NodesBlockingStub extends io.grpc.stub.AbstractStub<NodesBlockingStub> {
-    private NodesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodesBlockingStub extends io.grpc.stub.AbstractBlockingStub<NodesBlockingStub> {
+    private NodesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodesBlockingStub(channel, callOptions);
     }
 
@@ -432,7 +433,7 @@ public final class NodesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse create(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -442,7 +443,7 @@ public final class NodesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse get(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -452,7 +453,7 @@ public final class NodesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -462,7 +463,7 @@ public final class NodesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse delete(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -472,7 +473,7 @@ public final class NodesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse list(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -484,19 +485,15 @@ public final class NodesGrpc {
    * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
-  public static final class NodesFutureStub extends io.grpc.stub.AbstractStub<NodesFutureStub> {
-    private NodesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodesFutureStub extends io.grpc.stub.AbstractFutureStub<NodesFutureStub> {
+    private NodesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodesFutureStub(channel, callOptions);
     }
 
@@ -507,7 +504,7 @@ public final class NodesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateResponse> create(
         com.strongdm.api.v1.plumbing.NodesPlumbing.NodeCreateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -518,7 +515,7 @@ public final class NodesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetResponse> get(
         com.strongdm.api.v1.plumbing.NodesPlumbing.NodeGetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -529,7 +526,7 @@ public final class NodesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse> update(
         com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -540,7 +537,7 @@ public final class NodesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.NodesPlumbing.NodeDeleteRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -551,7 +548,7 @@ public final class NodesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListResponse> list(
         com.strongdm.api.v1.plumbing.NodesPlumbing.NodeListRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

@@ -15,19 +15,6 @@
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -35,8 +22,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.43.2)",
     comments = "Source: account_attachments.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AccountAttachmentsGrpc {
 
   private AccountAttachmentsGrpc() {}
@@ -172,7 +160,14 @@ public final class AccountAttachmentsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountAttachmentsStub newStub(io.grpc.Channel channel) {
-    return new AccountAttachmentsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsStub>() {
+        @java.lang.Override
+        public AccountAttachmentsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountAttachmentsStub(channel, callOptions);
+        }
+      };
+    return AccountAttachmentsStub.newStub(factory, channel);
   }
 
   /**
@@ -180,7 +175,14 @@ public final class AccountAttachmentsGrpc {
    */
   public static AccountAttachmentsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccountAttachmentsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsBlockingStub>() {
+        @java.lang.Override
+        public AccountAttachmentsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountAttachmentsBlockingStub(channel, callOptions);
+        }
+      };
+    return AccountAttachmentsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -188,7 +190,14 @@ public final class AccountAttachmentsGrpc {
    */
   public static AccountAttachmentsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccountAttachmentsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsFutureStub>() {
+        @java.lang.Override
+        public AccountAttachmentsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountAttachmentsFutureStub(channel, callOptions);
+        }
+      };
+    return AccountAttachmentsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -205,7 +214,7 @@ public final class AccountAttachmentsGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -215,7 +224,7 @@ public final class AccountAttachmentsGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -225,7 +234,7 @@ public final class AccountAttachmentsGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -235,35 +244,35 @@ public final class AccountAttachmentsGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateRequest,
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetRequest,
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getDeleteMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest,
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListRequest,
                 com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListResponse>(
@@ -277,19 +286,15 @@ public final class AccountAttachmentsGrpc {
    * AccountAttachments assign an account to a role or composite role.
    * </pre>
    */
-  public static final class AccountAttachmentsStub extends io.grpc.stub.AbstractStub<AccountAttachmentsStub> {
-    private AccountAttachmentsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountAttachmentsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountAttachmentsStub extends io.grpc.stub.AbstractAsyncStub<AccountAttachmentsStub> {
+    private AccountAttachmentsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountAttachmentsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountAttachmentsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAttachmentsStub(channel, callOptions);
     }
 
@@ -300,7 +305,7 @@ public final class AccountAttachmentsGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -311,7 +316,7 @@ public final class AccountAttachmentsGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -322,7 +327,7 @@ public final class AccountAttachmentsGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -333,7 +338,7 @@ public final class AccountAttachmentsGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -343,19 +348,15 @@ public final class AccountAttachmentsGrpc {
    * AccountAttachments assign an account to a role or composite role.
    * </pre>
    */
-  public static final class AccountAttachmentsBlockingStub extends io.grpc.stub.AbstractStub<AccountAttachmentsBlockingStub> {
-    private AccountAttachmentsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountAttachmentsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountAttachmentsBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountAttachmentsBlockingStub> {
+    private AccountAttachmentsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountAttachmentsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountAttachmentsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAttachmentsBlockingStub(channel, callOptions);
     }
 
@@ -365,7 +366,7 @@ public final class AccountAttachmentsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateResponse create(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -375,7 +376,7 @@ public final class AccountAttachmentsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetResponse get(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -385,7 +386,7 @@ public final class AccountAttachmentsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse delete(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -395,7 +396,7 @@ public final class AccountAttachmentsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListResponse list(com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -405,19 +406,15 @@ public final class AccountAttachmentsGrpc {
    * AccountAttachments assign an account to a role or composite role.
    * </pre>
    */
-  public static final class AccountAttachmentsFutureStub extends io.grpc.stub.AbstractStub<AccountAttachmentsFutureStub> {
-    private AccountAttachmentsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountAttachmentsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountAttachmentsFutureStub extends io.grpc.stub.AbstractFutureStub<AccountAttachmentsFutureStub> {
+    private AccountAttachmentsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountAttachmentsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountAttachmentsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAttachmentsFutureStub(channel, callOptions);
     }
 
@@ -428,7 +425,7 @@ public final class AccountAttachmentsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateResponse> create(
         com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentCreateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -439,7 +436,7 @@ public final class AccountAttachmentsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetResponse> get(
         com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentGetRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -450,7 +447,7 @@ public final class AccountAttachmentsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -461,7 +458,7 @@ public final class AccountAttachmentsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListResponse> list(
         com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.AccountAttachmentListRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

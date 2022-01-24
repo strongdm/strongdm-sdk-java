@@ -1846,6 +1846,49 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.AzureStore convertAzureStoreToPorcelain(AzureStore plumbing) {
+    com.strongdm.api.v1.AzureStore porcelain = new com.strongdm.api.v1.AzureStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setVaultUri((plumbing.getVaultUri()));
+    return porcelain;
+  }
+
+  public static AzureStore convertAzureStoreToPlumbing(com.strongdm.api.v1.AzureStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AzureStore.Builder builder = AzureStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getVaultUri() != null) {
+      builder.setVaultUri((porcelain.getVaultUri()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AzureStore> convertRepeatedAzureStoreToPorcelain(
+      Collection<AzureStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAzureStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AzureStore> convertRepeatedAzureStoreToPlumbing(
+      Collection<com.strongdm.api.v1.AzureStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAzureStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.BigQuery convertBigQueryToPorcelain(BigQuery plumbing) {
     com.strongdm.api.v1.BigQuery porcelain = new com.strongdm.api.v1.BigQuery();
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
@@ -5021,6 +5064,7 @@ public class Plumbing {
 
   public static com.strongdm.api.v1.RDP convertRDPToPorcelain(RDP plumbing) {
     com.strongdm.api.v1.RDP porcelain = new com.strongdm.api.v1.RDP();
+    porcelain.setDowngradeNlaConnections((plumbing.getDowngradeNlaConnections()));
     porcelain.setEgressFilter((plumbing.getEgressFilter()));
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setHostname((plumbing.getHostname()));
@@ -5040,6 +5084,7 @@ public class Plumbing {
       return null;
     }
     RDP.Builder builder = RDP.newBuilder();
+    builder.setDowngradeNlaConnections(porcelain.getDowngradeNlaConnections());
     if (porcelain.getEgressFilter() != null) {
       builder.setEgressFilter((porcelain.getEgressFilter()));
     }
@@ -7042,6 +7087,9 @@ public class Plumbing {
     if (plumbing.hasAws()) {
       return convertAWSStoreToPorcelain(plumbing.getAws());
     }
+    if (plumbing.hasAzure()) {
+      return convertAzureStoreToPorcelain(plumbing.getAzure());
+    }
     if (plumbing.hasVaultTls()) {
       return convertVaultTLSStoreToPorcelain(plumbing.getVaultTls());
     }
@@ -7059,6 +7107,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.AWSStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setAws(convertAWSStoreToPlumbing((com.strongdm.api.v1.AWSStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.AzureStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setAzure(convertAzureStoreToPlumbing((com.strongdm.api.v1.AzureStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.VaultTLSStore) {
