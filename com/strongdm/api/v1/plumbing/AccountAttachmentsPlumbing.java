@@ -9507,7 +9507,7 @@ public final class AccountAttachmentsPlumbing {
       "\263\007\001\300\363\263\007\001:r\372\370\263\007m\250\363\263\007\001\302\363\263\007c\242\363\263\007+tf_example" +
       "s/account_attachment_resource.txt\252\363\263\007.tf" +
       "_examples/account_attachment_data_source" +
-      ".txt2\276\004\n\022AccountAttachments\022\202\001\n\006Create\022\"" +
+      ".txt2\313\004\n\022AccountAttachments\022\202\001\n\006Create\022\"" +
       ".v1.AccountAttachmentCreateRequest\032#.v1." +
       "AccountAttachmentCreateResponse\"/\202\371\263\007\t\242\363" +
       "\263\007\004post\202\371\263\007\034\252\363\263\007\027/v1/account-attachments" +
@@ -9520,11 +9520,11 @@ public final class AccountAttachmentsPlumbing {
       "v1/account-attachments/{id}\022{\n\004List\022 .v1" +
       ".AccountAttachmentListRequest\032!.v1.Accou" +
       "ntAttachmentListResponse\".\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007\034\252\363\263\007\027/v1/account-attachments\032\033\312\371\263\007\026\302" +
-      "\371\263\007\021AccountAttachmentBn\n\034com.strongdm.ap" +
-      "i.v1.plumbingB\032AccountAttachmentsPlumbin" +
-      "gZ2github.com/strongdm/strongdm-sdk-go/i" +
-      "nternal/v1;v1b\006proto3"
+      "\371\263\007\034\252\363\263\007\027/v1/account-attachments\032(\312\371\263\007\026\302" +
+      "\371\263\007\021AccountAttachment\312\371\263\007\010\322\371\263\007\003aa-Bn\n\034co" +
+      "m.strongdm.api.v1.plumbingB\032AccountAttac" +
+      "hmentsPlumbingZ2github.com/strongdm/stro" +
+      "ngdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

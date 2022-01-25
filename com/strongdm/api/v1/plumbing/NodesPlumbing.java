@@ -15379,7 +15379,7 @@ public final class NodesPlumbing {
       "\014bind_address\030\005 \001(\tB\034\362\370\263\007\027\260\363\263\007\001\332\363\263\007\010opti" +
       "onal\340\363\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005" +
       "\260\363\263\007\001\022\"\n\016gateway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001:\n\372\370\263\007\005\250\363\263\007\0012\342\003\n\005Nodes\022Z\n\006Create\022\025.v1.N" +
+      "\001:\n\372\370\263\007\005\250\363\263\007\0012\356\003\n\005Nodes\022Z\n\006Create\022\025.v1.N" +
       "odeCreateRequest\032\026.v1.NodeCreateResponse" +
       "\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/nodes\022U\n\003G" +
       "et\022\022.v1.NodeGetRequest\032\023.v1.NodeGetRespo" +
@@ -15391,10 +15391,10 @@ public final class NodesPlumbing {
       "\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022S\n" +
       "\004List\022\023.v1.NodeListRequest\032\024.v1.NodeList" +
       "Response\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nod" +
-      "es\032\016\312\371\263\007\t\302\371\263\007\004NodeBa\n\034com.strongdm.api.v" +
-      "1.plumbingB\rNodesPlumbingZ2github.com/st" +
-      "rongdm/strongdm-sdk-go/internal/v1;v1b\006p" +
-      "roto3"
+      "es\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Ba\n\034com.st" +
+      "rongdm.api.v1.plumbingB\rNodesPlumbingZ2g" +
+      "ithub.com/strongdm/strongdm-sdk-go/inter" +
+      "nal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -9505,7 +9505,7 @@ public final class RoleAttachmentsPlumbing {
       "role_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:l\372\370\263\007g\250\363\263" +
       "\007\001\302\363\263\007]\242\363\263\007(tf_examples/role_attachment_" +
       "resource.txt\252\363\263\007+tf_examples/role_attach" +
-      "ment_data_source.txt2\223\004\n\017RoleAttachments" +
+      "ment_data_source.txt2\240\004\n\017RoleAttachments" +
       "\022y\n\006Create\022\037.v1.RoleAttachmentCreateRequ" +
       "est\032 .v1.RoleAttachmentCreateResponse\",\202" +
       "\371\263\007\t\242\363\263\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role-attachme" +
@@ -9518,10 +9518,11 @@ public final class RoleAttachmentsPlumbing {
       "chments/{id}\022r\n\004List\022\035.v1.RoleAttachment" +
       "ListRequest\032\036.v1.RoleAttachmentListRespo" +
       "nse\"+\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\031\252\363\263\007\024/v1/role-att" +
-      "achments\032\030\312\371\263\007\023\302\371\263\007\016RoleAttachmentBk\n\034co" +
-      "m.strongdm.api.v1.plumbingB\027RoleAttachme" +
-      "ntsPlumbingZ2github.com/strongdm/strongd" +
-      "m-sdk-go/internal/v1;v1b\006proto3"
+      "achments\032%\312\371\263\007\023\302\371\263\007\016RoleAttachment\312\371\263\007\010\322" +
+      "\371\263\007\003ra-Bk\n\034com.strongdm.api.v1.plumbingB" +
+      "\027RoleAttachmentsPlumbingZ2github.com/str" +
+      "ongdm/strongdm-sdk-go/internal/v1;v1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

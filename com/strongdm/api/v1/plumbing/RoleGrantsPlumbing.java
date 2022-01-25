@@ -9502,7 +9502,7 @@ public final class RoleGrantsPlumbing {
       "\n\260\363\263\007\001\300\363\263\007\001\022 \n\007role_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
       "\300\363\263\007\001:b\372\370\263\007]\250\363\263\007\001\302\363\263\007S\242\363\263\007#tf_examples/r" +
       "ole_grant_resource.txt\252\363\263\007&tf_examples/r" +
-      "ole_grant_data_source.txt2\314\003\n\nRoleGrants" +
+      "ole_grant_data_source.txt2\331\003\n\nRoleGrants" +
       "\022j\n\006Create\022\032.v1.RoleGrantCreateRequest\032\033" +
       ".v1.RoleGrantCreateResponse\"\'\202\371\263\007\t\242\363\263\007\004p" +
       "ost\202\371\263\007\024\252\363\263\007\017/v1/role-grants\022e\n\003Get\022\027.v1" +
@@ -9513,10 +9513,11 @@ public final class RoleGrantsPlumbing {
       "\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\031\252\363\263\007\024/v1/role-grant" +
       "s/{id}\022c\n\004List\022\030.v1.RoleGrantListRequest" +
       "\032\031.v1.RoleGrantListResponse\"&\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007\024\252\363\263\007\017/v1/role-grants\032\023\312\371\263\007\016\302\371\263\007\tR" +
-      "oleGrantBf\n\034com.strongdm.api.v1.plumbing" +
-      "B\022RoleGrantsPlumbingZ2github.com/strongd" +
-      "m/strongdm-sdk-go/internal/v1;v1b\006proto3"
+      "et\202\371\263\007\024\252\363\263\007\017/v1/role-grants\032 \312\371\263\007\016\302\371\263\007\tR" +
+      "oleGrant\312\371\263\007\010\322\371\263\007\003rg-Bf\n\034com.strongdm.ap" +
+      "i.v1.plumbingB\022RoleGrantsPlumbingZ2githu" +
+      "b.com/strongdm/strongdm-sdk-go/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

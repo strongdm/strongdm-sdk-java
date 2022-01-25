@@ -15,6 +15,19 @@
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -24,9 +37,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.43.2)",
+    value = "by gRPC proto compiler (version 1.25.0)",
     comments = "Source: accounts.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class AccountsGrpc {
 
   private AccountsGrpc() {}
@@ -193,14 +205,7 @@ public final class AccountsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountsStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AccountsStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AccountsStub>() {
-        @java.lang.Override
-        public AccountsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AccountsStub(channel, callOptions);
-        }
-      };
-    return AccountsStub.newStub(factory, channel);
+    return new AccountsStub(channel);
   }
 
   /**
@@ -208,14 +213,7 @@ public final class AccountsGrpc {
    */
   public static AccountsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AccountsBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AccountsBlockingStub>() {
-        @java.lang.Override
-        public AccountsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AccountsBlockingStub(channel, callOptions);
-        }
-      };
-    return AccountsBlockingStub.newStub(factory, channel);
+    return new AccountsBlockingStub(channel);
   }
 
   /**
@@ -223,14 +221,7 @@ public final class AccountsGrpc {
    */
   public static AccountsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AccountsFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AccountsFutureStub>() {
-        @java.lang.Override
-        public AccountsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AccountsFutureStub(channel, callOptions);
-        }
-      };
-    return AccountsFutureStub.newStub(factory, channel);
+    return new AccountsFutureStub(channel);
   }
 
   /**
@@ -249,7 +240,7 @@ public final class AccountsGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -259,7 +250,7 @@ public final class AccountsGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -269,7 +260,7 @@ public final class AccountsGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -279,7 +270,7 @@ public final class AccountsGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -289,42 +280,42 @@ public final class AccountsGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest,
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest,
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest,
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest,
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest,
                 com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse>(
@@ -340,15 +331,19 @@ public final class AccountsGrpc {
    * 2. **Service Accounts:** machines that are authenticated using a service token.
    * </pre>
    */
-  public static final class AccountsStub extends io.grpc.stub.AbstractAsyncStub<AccountsStub> {
-    private AccountsStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class AccountsStub extends io.grpc.stub.AbstractStub<AccountsStub> {
+    private AccountsStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private AccountsStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AccountsStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AccountsStub(channel, callOptions);
     }
 
@@ -359,7 +354,7 @@ public final class AccountsGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -370,7 +365,7 @@ public final class AccountsGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -381,7 +376,7 @@ public final class AccountsGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -392,7 +387,7 @@ public final class AccountsGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -403,7 +398,7 @@ public final class AccountsGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -415,15 +410,19 @@ public final class AccountsGrpc {
    * 2. **Service Accounts:** machines that are authenticated using a service token.
    * </pre>
    */
-  public static final class AccountsBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountsBlockingStub> {
-    private AccountsBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class AccountsBlockingStub extends io.grpc.stub.AbstractStub<AccountsBlockingStub> {
+    private AccountsBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private AccountsBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AccountsBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AccountsBlockingStub(channel, callOptions);
     }
 
@@ -433,7 +432,7 @@ public final class AccountsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse create(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -443,7 +442,7 @@ public final class AccountsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse get(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -453,7 +452,7 @@ public final class AccountsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -463,7 +462,7 @@ public final class AccountsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -473,7 +472,7 @@ public final class AccountsGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse list(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -485,15 +484,19 @@ public final class AccountsGrpc {
    * 2. **Service Accounts:** machines that are authenticated using a service token.
    * </pre>
    */
-  public static final class AccountsFutureStub extends io.grpc.stub.AbstractFutureStub<AccountsFutureStub> {
-    private AccountsFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class AccountsFutureStub extends io.grpc.stub.AbstractStub<AccountsFutureStub> {
+    private AccountsFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private AccountsFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AccountsFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AccountsFutureStub(channel, callOptions);
     }
 
@@ -504,7 +507,7 @@ public final class AccountsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateResponse> create(
         com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountCreateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -515,7 +518,7 @@ public final class AccountsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetResponse> get(
         com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountGetRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -526,7 +529,7 @@ public final class AccountsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> update(
         com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -537,7 +540,7 @@ public final class AccountsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -548,7 +551,7 @@ public final class AccountsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListResponse> list(
         com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountListRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

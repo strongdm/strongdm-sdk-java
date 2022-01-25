@@ -15,13 +15,25 @@
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.43.2)",
+    value = "by gRPC proto compiler (version 1.25.0)",
     comments = "Source: resources.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class ResourcesGrpc {
 
   private ResourcesGrpc() {}
@@ -219,14 +231,7 @@ public final class ResourcesGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static ResourcesStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ResourcesStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ResourcesStub>() {
-        @java.lang.Override
-        public ResourcesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ResourcesStub(channel, callOptions);
-        }
-      };
-    return ResourcesStub.newStub(factory, channel);
+    return new ResourcesStub(channel);
   }
 
   /**
@@ -234,14 +239,7 @@ public final class ResourcesGrpc {
    */
   public static ResourcesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ResourcesBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ResourcesBlockingStub>() {
-        @java.lang.Override
-        public ResourcesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ResourcesBlockingStub(channel, callOptions);
-        }
-      };
-    return ResourcesBlockingStub.newStub(factory, channel);
+    return new ResourcesBlockingStub(channel);
   }
 
   /**
@@ -249,14 +247,7 @@ public final class ResourcesGrpc {
    */
   public static ResourcesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<ResourcesFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<ResourcesFutureStub>() {
-        @java.lang.Override
-        public ResourcesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new ResourcesFutureStub(channel, callOptions);
-        }
-      };
-    return ResourcesFutureStub.newStub(factory, channel);
+    return new ResourcesFutureStub(channel);
   }
 
   /**
@@ -270,7 +261,7 @@ public final class ResourcesGrpc {
      */
     public void enumerateTags(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnumerateTagsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getEnumerateTagsMethod(), responseObserver);
     }
 
     /**
@@ -280,7 +271,7 @@ public final class ResourcesGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -290,7 +281,7 @@ public final class ResourcesGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -300,7 +291,7 @@ public final class ResourcesGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -310,7 +301,7 @@ public final class ResourcesGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -320,49 +311,49 @@ public final class ResourcesGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getEnumerateTagsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest,
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse>(
                   this, METHODID_ENUMERATE_TAGS)))
           .addMethod(
             getCreateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateRequest,
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetRequest,
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest,
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateResponse>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteRequest,
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteResponse>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListRequest,
                 com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListResponse>(
@@ -373,15 +364,19 @@ public final class ResourcesGrpc {
 
   /**
    */
-  public static final class ResourcesStub extends io.grpc.stub.AbstractAsyncStub<ResourcesStub> {
-    private ResourcesStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class ResourcesStub extends io.grpc.stub.AbstractStub<ResourcesStub> {
+    private ResourcesStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private ResourcesStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcesStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected ResourcesStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new ResourcesStub(channel, callOptions);
     }
 
@@ -392,7 +387,7 @@ public final class ResourcesGrpc {
      */
     public void enumerateTags(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getEnumerateTagsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -403,7 +398,7 @@ public final class ResourcesGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -414,7 +409,7 @@ public final class ResourcesGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -425,7 +420,7 @@ public final class ResourcesGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -436,7 +431,7 @@ public final class ResourcesGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -447,22 +442,26 @@ public final class ResourcesGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class ResourcesBlockingStub extends io.grpc.stub.AbstractBlockingStub<ResourcesBlockingStub> {
-    private ResourcesBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class ResourcesBlockingStub extends io.grpc.stub.AbstractStub<ResourcesBlockingStub> {
+    private ResourcesBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private ResourcesBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcesBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected ResourcesBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new ResourcesBlockingStub(channel, callOptions);
     }
 
@@ -472,7 +471,7 @@ public final class ResourcesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse enumerateTags(com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getEnumerateTagsMethod(), getCallOptions(), request);
     }
 
@@ -482,7 +481,7 @@ public final class ResourcesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateResponse create(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -492,7 +491,7 @@ public final class ResourcesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetResponse get(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -502,7 +501,7 @@ public final class ResourcesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateResponse update(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -512,7 +511,7 @@ public final class ResourcesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteResponse delete(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -522,22 +521,26 @@ public final class ResourcesGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListResponse list(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class ResourcesFutureStub extends io.grpc.stub.AbstractFutureStub<ResourcesFutureStub> {
-    private ResourcesFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class ResourcesFutureStub extends io.grpc.stub.AbstractStub<ResourcesFutureStub> {
+    private ResourcesFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private ResourcesFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcesFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected ResourcesFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new ResourcesFutureStub(channel, callOptions);
     }
 
@@ -548,7 +551,7 @@ public final class ResourcesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsResponse> enumerateTags(
         com.strongdm.api.v1.plumbing.ResourcesPlumbing.EnumerateTagsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getEnumerateTagsMethod(), getCallOptions()), request);
     }
 
@@ -559,7 +562,7 @@ public final class ResourcesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateResponse> create(
         com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceCreateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -570,7 +573,7 @@ public final class ResourcesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetResponse> get(
         com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceGetRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -581,7 +584,7 @@ public final class ResourcesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateResponse> update(
         com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -592,7 +595,7 @@ public final class ResourcesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceDeleteRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -603,7 +606,7 @@ public final class ResourcesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListResponse> list(
         com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceListRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

@@ -8289,6 +8289,18 @@ public final class Options {
         getMainNounBytes();
 
     /**
+     * <code>string id_prefix = 1941402;</code>
+     * @return The idPrefix.
+     */
+    java.lang.String getIdPrefix();
+    /**
+     * <code>string id_prefix = 1941402;</code>
+     * @return The bytes for idPrefix.
+     */
+    com.google.protobuf.ByteString
+        getIdPrefixBytes();
+
+    /**
      * <code>bool private_sdk = 1941401;</code>
      * @return The privateSdk.
      */
@@ -8308,6 +8320,7 @@ public final class Options {
     }
     private ServiceOptions() {
       mainNoun_ = "";
+      idPrefix_ = "";
     }
 
     @java.lang.Override
@@ -8349,6 +8362,12 @@ public final class Options {
             case 15531208: {
 
               privateSdk_ = input.readBool();
+              break;
+            }
+            case 15531218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              idPrefix_ = s;
               break;
             }
             default: {
@@ -8421,6 +8440,44 @@ public final class Options {
       }
     }
 
+    public static final int ID_PREFIX_FIELD_NUMBER = 1941402;
+    private volatile java.lang.Object idPrefix_;
+    /**
+     * <code>string id_prefix = 1941402;</code>
+     * @return The idPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getIdPrefix() {
+      java.lang.Object ref = idPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id_prefix = 1941402;</code>
+     * @return The bytes for idPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdPrefixBytes() {
+      java.lang.Object ref = idPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int PRIVATE_SDK_FIELD_NUMBER = 1941401;
     private boolean privateSdk_;
     /**
@@ -8452,6 +8509,9 @@ public final class Options {
       if (privateSdk_ != false) {
         output.writeBool(1941401, privateSdk_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941402, idPrefix_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8467,6 +8527,9 @@ public final class Options {
       if (privateSdk_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941401, privateSdk_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941402, idPrefix_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8485,6 +8548,8 @@ public final class Options {
 
       if (!getMainNoun()
           .equals(other.getMainNoun())) return false;
+      if (!getIdPrefix()
+          .equals(other.getIdPrefix())) return false;
       if (getPrivateSdk()
           != other.getPrivateSdk()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -8500,6 +8565,8 @@ public final class Options {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MAIN_NOUN_FIELD_NUMBER;
       hash = (53 * hash) + getMainNoun().hashCode();
+      hash = (37 * hash) + ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getIdPrefix().hashCode();
       hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getPrivateSdk());
@@ -8638,6 +8705,8 @@ public final class Options {
         super.clear();
         mainNoun_ = "";
 
+        idPrefix_ = "";
+
         privateSdk_ = false;
 
         return this;
@@ -8667,6 +8736,7 @@ public final class Options {
       public com.strongdm.api.v1.plumbing.Options.ServiceOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.ServiceOptions result = new com.strongdm.api.v1.plumbing.Options.ServiceOptions(this);
         result.mainNoun_ = mainNoun_;
+        result.idPrefix_ = idPrefix_;
         result.privateSdk_ = privateSdk_;
         onBuilt();
         return result;
@@ -8718,6 +8788,10 @@ public final class Options {
         if (other == com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance()) return this;
         if (!other.getMainNoun().isEmpty()) {
           mainNoun_ = other.mainNoun_;
+          onChanged();
+        }
+        if (!other.getIdPrefix().isEmpty()) {
+          idPrefix_ = other.idPrefix_;
           onChanged();
         }
         if (other.getPrivateSdk() != false) {
@@ -8824,6 +8898,82 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         mainNoun_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idPrefix_ = "";
+      /**
+       * <code>string id_prefix = 1941402;</code>
+       * @return The idPrefix.
+       */
+      public java.lang.String getIdPrefix() {
+        java.lang.Object ref = idPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          idPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id_prefix = 1941402;</code>
+       * @return The bytes for idPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getIdPrefixBytes() {
+        java.lang.Object ref = idPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id_prefix = 1941402;</code>
+       * @param value The idPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id_prefix = 1941402;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdPrefix() {
+        
+        idPrefix_ = getDefaultInstance().getIdPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id_prefix = 1941402;</code>
+       * @param value The bytes for idPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        idPrefix_ = value;
         onChanged();
         return this;
       }
@@ -9057,22 +9207,23 @@ public final class Options {
       "e\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource_e" +
       "xample_path\030\264\276v \001(\t\022\"\n\030data_source_examp" +
       "le_path\030\265\276v \001(\t\"\'\n\014OneofOptions\022\027\n\rcommo" +
-      "n_fields\030\205\277v \003(\t\"<\n\016ServiceOptions\022\023\n\tma" +
-      "in_noun\030\230\277v \001(\t\022\025\n\013private_sdk\030\231\277v \001(\010:K" +
-      "\n\016method_options\022\036.google.protobuf.Metho" +
-      "dOptions\030\220\277v \001(\0132\021.v1.MethodOptions:E\n\014f" +
-      "ile_options\022\034.google.protobuf.FileOption" +
-      "s\030\250\302v \001(\0132\017.v1.FileOptions:H\n\rfield_opti" +
-      "ons\022\035.google.protobuf.FieldOptions\030\216\277v \001" +
-      "(\0132\020.v1.FieldOptions:N\n\017message_options\022" +
-      "\037.google.protobuf.MessageOptions\030\217\277v \001(\013" +
-      "2\022.v1.MessageOptions:H\n\roneof_options\022\035." +
-      "google.protobuf.OneofOptions\030\205\277v \001(\0132\020.v" +
-      "1.OneofOptions:N\n\017service_options\022\037.goog" +
-      "le.protobuf.ServiceOptions\030\231\277v \001(\0132\022.v1." +
-      "ServiceOptionsBR\n\034com.strongdm.api.v1.pl" +
-      "umbingZ2github.com/strongdm/strongdm-sdk" +
-      "-go/internal/v1;v1b\006proto3"
+      "n_fields\030\205\277v \003(\t\"Q\n\016ServiceOptions\022\023\n\tma" +
+      "in_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030\232\277v \001(\t\022\025\n\013" +
+      "private_sdk\030\231\277v \001(\010:K\n\016method_options\022\036." +
+      "google.protobuf.MethodOptions\030\220\277v \001(\0132\021." +
+      "v1.MethodOptions:E\n\014file_options\022\034.googl" +
+      "e.protobuf.FileOptions\030\250\302v \001(\0132\017.v1.File" +
+      "Options:H\n\rfield_options\022\035.google.protob" +
+      "uf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOption" +
+      "s:N\n\017message_options\022\037.google.protobuf.M" +
+      "essageOptions\030\217\277v \001(\0132\022.v1.MessageOption" +
+      "s:H\n\roneof_options\022\035.google.protobuf.One" +
+      "ofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017s" +
+      "ervice_options\022\037.google.protobuf.Service" +
+      "Options\030\231\277v \001(\0132\022.v1.ServiceOptionsBR\n\034c" +
+      "om.strongdm.api.v1.plumbingZ2github.com/" +
+      "strongdm/strongdm-sdk-go/internal/v1;v1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9126,7 +9277,7 @@ public final class Options {
     internal_static_v1_ServiceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ServiceOptions_descriptor,
-        new java.lang.String[] { "MainNoun", "PrivateSdk", });
+        new java.lang.String[] { "MainNoun", "IdPrefix", "PrivateSdk", });
     methodOptions.internalInit(descriptor.getExtensions().get(0));
     fileOptions.internalInit(descriptor.getExtensions().get(1));
     fieldOptions.internalInit(descriptor.getExtensions().get(2));

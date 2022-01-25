@@ -10064,7 +10064,7 @@ public final class AccountGrantsPlumbing {
       "tampB\n\362\370\263\007\005\260\363\263\007\001:h\372\370\263\007c\250\363\263\007\001\302\363\263\007Y\242\363\263\007&tf" +
       "_examples/account_grant_resource.txt\252\363\263\007" +
       ")tf_examples/account_grant_data_source.t" +
-      "xt2\366\003\n\rAccountGrants\022s\n\006Create\022\035.v1.Acco" +
+      "xt2\203\004\n\rAccountGrants\022s\n\006Create\022\035.v1.Acco" +
       "untGrantCreateRequest\032\036.v1.AccountGrantC" +
       "reateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/" +
       "v1/account-grants\022n\n\003Get\022\032.v1.AccountGra" +
@@ -10076,10 +10076,10 @@ public final class AccountGrantsPlumbing {
       "t-grants/{id}\022l\n\004List\022\033.v1.AccountGrantL" +
       "istRequest\032\034.v1.AccountGrantListResponse" +
       "\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/account-gra" +
-      "nts\032\026\312\371\263\007\021\302\371\263\007\014AccountGrantBi\n\034com.stron" +
-      "gdm.api.v1.plumbingB\025AccountGrantsPlumbi" +
-      "ngZ2github.com/strongdm/strongdm-sdk-go/" +
-      "internal/v1;v1b\006proto3"
+      "nts\032#\312\371\263\007\021\302\371\263\007\014AccountGrant\312\371\263\007\010\322\371\263\007\003ag-" +
+      "Bi\n\034com.strongdm.api.v1.plumbingB\025Accoun" +
+      "tGrantsPlumbingZ2github.com/strongdm/str" +
+      "ongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -13232,7 +13232,7 @@ public final class ResourcesPlumbing {
       ".ListResponseMetadata\022$\n\007matches\030\002 \003(\0132\007" +
       ".v1.TagB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132" +
       "\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220" +
-      "\364\263\007\0012\230\005\n\tResources\022p\n\rEnumerateTags\022\030.v1" +
+      "\364\263\007\0012\245\005\n\tResources\022p\n\rEnumerateTags\022\030.v1" +
       ".EnumerateTagsRequest\032\031.v1.EnumerateTags" +
       "Response\"*\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\030\252\363\263\007\023/v1/res" +
       "ources/tags/\022f\n\006Create\022\031.v1.ResourceCrea" +
@@ -13248,10 +13248,10 @@ public final class ResourcesPlumbing {
       "delete\202\371\263\007\027\252\363\263\007\022/v1/resources/{id}\022_\n\004Li" +
       "st\022\027.v1.ResourceListRequest\032\030.v1.Resourc" +
       "eListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v" +
-      "1/resources\032\022\312\371\263\007\r\302\371\263\007\010ResourceBe\n\034com.s" +
-      "trongdm.api.v1.plumbingB\021ResourcesPlumbi" +
-      "ngZ2github.com/strongdm/strongdm-sdk-go/" +
-      "internal/v1;v1b\006proto3"
+      "1/resources\032\037\312\371\263\007\r\302\371\263\007\010Resource\312\371\263\007\010\322\371\263\007" +
+      "\003rs-Be\n\034com.strongdm.api.v1.plumbingB\021Re" +
+      "sourcesPlumbingZ2github.com/strongdm/str" +
+      "ongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

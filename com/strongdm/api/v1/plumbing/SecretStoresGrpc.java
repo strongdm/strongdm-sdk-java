@@ -15,6 +15,19 @@
 package com.strongdm.api.v1.plumbing;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -22,9 +35,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.43.2)",
+    value = "by gRPC proto compiler (version 1.25.0)",
     comments = "Source: secret_stores.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class SecretStoresGrpc {
 
   private SecretStoresGrpc() {}
@@ -191,14 +203,7 @@ public final class SecretStoresGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static SecretStoresStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SecretStoresStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SecretStoresStub>() {
-        @java.lang.Override
-        public SecretStoresStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SecretStoresStub(channel, callOptions);
-        }
-      };
-    return SecretStoresStub.newStub(factory, channel);
+    return new SecretStoresStub(channel);
   }
 
   /**
@@ -206,14 +211,7 @@ public final class SecretStoresGrpc {
    */
   public static SecretStoresBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SecretStoresBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SecretStoresBlockingStub>() {
-        @java.lang.Override
-        public SecretStoresBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SecretStoresBlockingStub(channel, callOptions);
-        }
-      };
-    return SecretStoresBlockingStub.newStub(factory, channel);
+    return new SecretStoresBlockingStub(channel);
   }
 
   /**
@@ -221,14 +219,7 @@ public final class SecretStoresGrpc {
    */
   public static SecretStoresFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SecretStoresFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SecretStoresFutureStub>() {
-        @java.lang.Override
-        public SecretStoresFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SecretStoresFutureStub(channel, callOptions);
-        }
-      };
-    return SecretStoresFutureStub.newStub(factory, channel);
+    return new SecretStoresFutureStub(channel);
   }
 
   /**
@@ -242,7 +233,7 @@ public final class SecretStoresGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
@@ -252,7 +243,7 @@ public final class SecretStoresGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
     }
 
     /**
@@ -262,7 +253,7 @@ public final class SecretStoresGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -272,7 +263,7 @@ public final class SecretStoresGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     /**
@@ -282,42 +273,42 @@ public final class SecretStoresGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateRequest,
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
             getGetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetRequest,
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetResponse>(
                   this, METHODID_GET)))
           .addMethod(
             getUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest,
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateResponse>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteRequest,
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteResponse>(
                   this, METHODID_DELETE)))
           .addMethod(
             getListMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListRequest,
                 com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListResponse>(
@@ -331,15 +322,19 @@ public final class SecretStoresGrpc {
    * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
-  public static final class SecretStoresStub extends io.grpc.stub.AbstractAsyncStub<SecretStoresStub> {
-    private SecretStoresStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SecretStoresStub extends io.grpc.stub.AbstractStub<SecretStoresStub> {
+    private SecretStoresStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SecretStoresStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecretStoresStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SecretStoresStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SecretStoresStub(channel, callOptions);
     }
 
@@ -347,7 +342,7 @@ public final class SecretStoresGrpc {
      */
     public void create(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -358,7 +353,7 @@ public final class SecretStoresGrpc {
      */
     public void get(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -369,7 +364,7 @@ public final class SecretStoresGrpc {
      */
     public void update(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -380,7 +375,7 @@ public final class SecretStoresGrpc {
      */
     public void delete(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -391,7 +386,7 @@ public final class SecretStoresGrpc {
      */
     public void list(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -401,22 +396,26 @@ public final class SecretStoresGrpc {
    * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
-  public static final class SecretStoresBlockingStub extends io.grpc.stub.AbstractBlockingStub<SecretStoresBlockingStub> {
-    private SecretStoresBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SecretStoresBlockingStub extends io.grpc.stub.AbstractStub<SecretStoresBlockingStub> {
+    private SecretStoresBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SecretStoresBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecretStoresBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SecretStoresBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SecretStoresBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateResponse create(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
@@ -426,7 +425,7 @@ public final class SecretStoresGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetResponse get(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
     }
 
@@ -436,7 +435,7 @@ public final class SecretStoresGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateResponse update(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -446,7 +445,7 @@ public final class SecretStoresGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteResponse delete(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
@@ -456,7 +455,7 @@ public final class SecretStoresGrpc {
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListResponse list(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
@@ -466,15 +465,19 @@ public final class SecretStoresGrpc {
    * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
-  public static final class SecretStoresFutureStub extends io.grpc.stub.AbstractFutureStub<SecretStoresFutureStub> {
-    private SecretStoresFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SecretStoresFutureStub extends io.grpc.stub.AbstractStub<SecretStoresFutureStub> {
+    private SecretStoresFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SecretStoresFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecretStoresFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SecretStoresFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SecretStoresFutureStub(channel, callOptions);
     }
 
@@ -482,7 +485,7 @@ public final class SecretStoresGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateResponse> create(
         com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreCreateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
@@ -493,7 +496,7 @@ public final class SecretStoresGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetResponse> get(
         com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreGetRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
 
@@ -504,7 +507,7 @@ public final class SecretStoresGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateResponse> update(
         com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -515,7 +518,7 @@ public final class SecretStoresGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreDeleteRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
 
@@ -526,7 +529,7 @@ public final class SecretStoresGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListResponse> list(
         com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreListRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
   }

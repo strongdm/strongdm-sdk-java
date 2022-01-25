@@ -10903,7 +10903,7 @@ public final class SecretStoresPlumbing {
       "v1.ListResponseMetadata\0222\n\rsecret_stores" +
       "\030\002 \003(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nr" +
       "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\0012\336\004\n\014SecretStores\022p\n" +
+      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\0012\353\004\n\014SecretStores\022p\n" +
       "\006Create\022\034.v1.SecretStoreCreateRequest\032\035." +
       "v1.SecretStoreCreateResponse\")\202\371\263\007\t\242\363\263\007\004" +
       "post\202\371\263\007\026\252\363\263\007\021/v1/secret-stores\022k\n\003Get\022\031" +
@@ -10918,10 +10918,10 @@ public final class SecretStoresPlumbing {
       "/secret-stores/{id}\022i\n\004List\022\032.v1.SecretS" +
       "toreListRequest\032\033.v1.SecretStoreListResp" +
       "onse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/secret-" +
-      "stores\032\025\312\371\263\007\020\302\371\263\007\013SecretStoreBh\n\034com.str" +
-      "ongdm.api.v1.plumbingB\024SecretStoresPlumb" +
-      "ingZ2github.com/strongdm/strongdm-sdk-go" +
-      "/internal/v1;v1b\006proto3"
+      "stores\032\"\312\371\263\007\020\302\371\263\007\013SecretStore\312\371\263\007\010\322\371\263\007\003s" +
+      "e-Bh\n\034com.strongdm.api.v1.plumbingB\024Secr" +
+      "etStoresPlumbingZ2github.com/strongdm/st" +
+      "rongdm-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
