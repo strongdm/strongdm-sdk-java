@@ -29,4 +29,8 @@ public interface Node {
   java.util.Map<String, String> getTags();
   // Sets the tags of the Node.
   void setTags(java.util.Map<String, String> tags);
+  // Returns the name of the Node.
+  String getName();
+  // Sets the name of the Node.
+  void setName(String name);
 }
