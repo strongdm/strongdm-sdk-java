@@ -7076,9 +7076,10 @@ public final class SecretStoresTypesPlumbing {
       "verAddress\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007" +
       "\005\260\363\263\007\001:G\372\370\263\007B\250\363\263\007\001\332\363\263\007\nvaultToken\342\363\263\007\nva" +
       "ultToken\352\363\263\007\nvaultToken\372\363\263\007\013vault_tokenB" +
-      "m\n\034com.strongdm.api.v1.plumbingB\031SecretS" +
-      "toresTypesPlumbingZ2github.com/strongdm/" +
-      "strongdm-sdk-go/internal/v1;v1b\006proto3"
+      "p\n\034com.strongdm.api.v1.plumbingB\031SecretS" +
+      "toresTypesPlumbingZ5github.com/strongdm/" +
+      "strongdm-sdk-go/v2/internal/v1;v1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

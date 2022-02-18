@@ -2302,10 +2302,10 @@ public final class TagsPlumbing {
       "es\":{\"type\":\"string\"}}\222\364\263\007\014tagsElemType\232" +
       "\364\263\007\021map[string]string\360\363\263\007\001\"F\n\003Tag\022\030\n\004nam" +
       "e\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005value\030\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B`\n\034com.strongdm.api.v" +
-      "1.plumbingB\014TagsPlumbingZ2github.com/str" +
-      "ongdm/strongdm-sdk-go/internal/v1;v1b\006pr" +
-      "oto3"
+      "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001Bc\n\034com.strongdm.api.v" +
+      "1.plumbingB\014TagsPlumbingZ5github.com/str" +
+      "ongdm/strongdm-sdk-go/v2/internal/v1;v1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

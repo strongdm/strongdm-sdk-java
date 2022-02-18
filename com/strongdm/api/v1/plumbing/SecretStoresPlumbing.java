@@ -10919,9 +10919,9 @@ public final class SecretStoresPlumbing {
       "toreListRequest\032\033.v1.SecretStoreListResp" +
       "onse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/secret-" +
       "stores\032\"\312\371\263\007\020\302\371\263\007\013SecretStore\312\371\263\007\010\322\371\263\007\003s" +
-      "e-Bh\n\034com.strongdm.api.v1.plumbingB\024Secr" +
-      "etStoresPlumbingZ2github.com/strongdm/st" +
-      "rongdm-sdk-go/internal/v1;v1b\006proto3"
+      "e-Bk\n\034com.strongdm.api.v1.plumbingB\024Secr" +
+      "etStoresPlumbingZ5github.com/strongdm/st" +
+      "rongdm-sdk-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

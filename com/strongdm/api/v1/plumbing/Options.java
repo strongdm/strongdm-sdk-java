@@ -10765,9 +10765,9 @@ public final class Options {
       "uf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOption" +
       "s:N\n\017service_options\022\037.google.protobuf.S" +
       "erviceOptions\030\231\277v \001(\0132\022.v1.ServiceOption" +
-      "sBR\n\034com.strongdm.api.v1.plumbingZ2githu" +
-      "b.com/strongdm/strongdm-sdk-go/internal/" +
-      "v1;v1b\006proto3"
+      "sBU\n\034com.strongdm.api.v1.plumbingZ5githu" +
+      "b.com/strongdm/strongdm-sdk-go/v2/intern" +
+      "al/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

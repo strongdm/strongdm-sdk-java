@@ -12278,9 +12278,9 @@ public final class RolesPlumbing {
       "/roles/{id}\022S\n\004List\022\023.v1.RoleListRequest" +
       "\032\024.v1.RoleListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263" +
       "\007\016\252\363\263\007\t/v1/roles\032\032\312\371\263\007\t\302\371\263\007\004Role\312\371\263\007\007\322\371\263" +
-      "\007\002r-Ba\n\034com.strongdm.api.v1.plumbingB\rRo" +
-      "lesPlumbingZ2github.com/strongdm/strongd" +
-      "m-sdk-go/internal/v1;v1b\006proto3"
+      "\007\002r-Bd\n\034com.strongdm.api.v1.plumbingB\rRo" +
+      "lesPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

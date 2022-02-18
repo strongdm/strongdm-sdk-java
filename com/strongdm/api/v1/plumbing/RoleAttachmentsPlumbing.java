@@ -9558,10 +9558,10 @@ public final class RoleAttachmentsPlumbing {
       "leAttachmentListResponse\"B\210\002\001\202\371\263\007\010\242\363\263\007\003g" +
       "et\202\371\263\007\031\252\363\263\007\024/v1/role-attachments\202\371\263\007\017\262\363\263" +
       "\007\n2022-03-31\032(\210\002\001\312\371\263\007\023\302\371\263\007\016RoleAttachmen" +
-      "t\312\371\263\007\010\322\371\263\007\003ra-Bk\n\034com.strongdm.api.v1.pl" +
-      "umbingB\027RoleAttachmentsPlumbingZ2github." +
-      "com/strongdm/strongdm-sdk-go/internal/v1" +
-      ";v1b\006proto3"
+      "t\312\371\263\007\010\322\371\263\007\003ra-Bn\n\034com.strongdm.api.v1.pl" +
+      "umbingB\027RoleAttachmentsPlumbingZ5github." +
+      "com/strongdm/strongdm-sdk-go/v2/internal" +
+      "/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

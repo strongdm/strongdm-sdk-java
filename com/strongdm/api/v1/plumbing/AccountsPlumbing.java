@@ -14967,10 +14967,10 @@ public final class AccountsPlumbing {
       "lete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n\004List\022" +
       "\026.v1.AccountListRequest\032\027.v1.AccountList" +
       "Response\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/v1/acc" +
-      "ounts\032\035\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-Bd\n\034" +
+      "ounts\032\035\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002a-Bg\n\034" +
       "com.strongdm.api.v1.plumbingB\020AccountsPl" +
-      "umbingZ2github.com/strongdm/strongdm-sdk" +
-      "-go/internal/v1;v1b\006proto3"
+      "umbingZ5github.com/strongdm/strongdm-sdk" +
+      "-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

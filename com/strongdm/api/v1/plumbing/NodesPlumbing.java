@@ -15392,9 +15392,9 @@ public final class NodesPlumbing {
       "/nodes/{id}\022S\n\004List\022\023.v1.NodeListRequest" +
       "\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263" +
       "\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263" +
-      "\007\002n-Ba\n\034com.strongdm.api.v1.plumbingB\rNo" +
-      "desPlumbingZ2github.com/strongdm/strongd" +
-      "m-sdk-go/internal/v1;v1b\006proto3"
+      "\007\002n-Bd\n\034com.strongdm.api.v1.plumbingB\rNo" +
+      "desPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -9535,10 +9535,10 @@ public final class RoleGrantsPlumbing {
       "oleGrantListRequest\032\031.v1.RoleGrantListRe" +
       "sponse\"=\210\002\001\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007\017/v1/ro" +
       "le-grants\202\371\263\007\017\262\363\263\007\n2022-03-31\032#\210\002\001\312\371\263\007\016\302" +
-      "\371\263\007\tRoleGrant\312\371\263\007\010\322\371\263\007\003rg-Bf\n\034com.strong" +
-      "dm.api.v1.plumbingB\022RoleGrantsPlumbingZ2" +
-      "github.com/strongdm/strongdm-sdk-go/inte" +
-      "rnal/v1;v1b\006proto3"
+      "\371\263\007\tRoleGrant\312\371\263\007\010\322\371\263\007\003rg-Bi\n\034com.strong" +
+      "dm.api.v1.plumbingB\022RoleGrantsPlumbingZ5" +
+      "github.com/strongdm/strongdm-sdk-go/v2/i" +
+      "nternal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

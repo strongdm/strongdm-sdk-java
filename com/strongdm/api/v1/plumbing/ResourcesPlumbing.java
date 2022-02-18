@@ -13249,9 +13249,9 @@ public final class ResourcesPlumbing {
       "st\022\027.v1.ResourceListRequest\032\030.v1.Resourc" +
       "eListResponse\"$\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v" +
       "1/resources\032\037\312\371\263\007\r\302\371\263\007\010Resource\312\371\263\007\010\322\371\263\007" +
-      "\003rs-Be\n\034com.strongdm.api.v1.plumbingB\021Re" +
-      "sourcesPlumbingZ2github.com/strongdm/str" +
-      "ongdm-sdk-go/internal/v1;v1b\006proto3"
+      "\003rs-Bh\n\034com.strongdm.api.v1.plumbingB\021Re" +
+      "sourcesPlumbingZ5github.com/strongdm/str" +
+      "ongdm-sdk-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

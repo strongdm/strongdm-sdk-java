@@ -9521,10 +9521,10 @@ public final class AccountAttachmentsPlumbing {
       ".AccountAttachmentListRequest\032!.v1.Accou" +
       "ntAttachmentListResponse\".\202\371\263\007\010\242\363\263\007\003get\202" +
       "\371\263\007\034\252\363\263\007\027/v1/account-attachments\032(\312\371\263\007\026\302" +
-      "\371\263\007\021AccountAttachment\312\371\263\007\010\322\371\263\007\003aa-Bn\n\034co" +
+      "\371\263\007\021AccountAttachment\312\371\263\007\010\322\371\263\007\003aa-Bq\n\034co" +
       "m.strongdm.api.v1.plumbingB\032AccountAttac" +
-      "hmentsPlumbingZ2github.com/strongdm/stro" +
-      "ngdm-sdk-go/internal/v1;v1b\006proto3"
+      "hmentsPlumbingZ5github.com/strongdm/stro" +
+      "ngdm-sdk-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

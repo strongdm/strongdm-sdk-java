@@ -3838,10 +3838,10 @@ public final class ControlPanelPlumbing {
       "fyJWT\022 .v1.ControlPanelVerifyJWTRequest\032" +
       "!.v1.ControlPanelVerifyJWTResponse\"5\202\371\263\007" +
       "\t\242\363\263\007\004post\202\371\263\007\"\252\363\263\007\035/v1/control-panel/ht" +
-      "tp/verifyBh\n\034com.strongdm.api.v1.plumbin" +
-      "gB\024ControlPanelPlumbingZ2github.com/stro" +
-      "ngdm/strongdm-sdk-go/internal/v1;v1b\006pro" +
-      "to3"
+      "tp/verifyBk\n\034com.strongdm.api.v1.plumbin" +
+      "gB\024ControlPanelPlumbingZ5github.com/stro" +
+      "ngdm/strongdm-sdk-go/v2/internal/v1;v1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
