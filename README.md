@@ -50,6 +50,7 @@ try {
 ## Useful Links
 
 * Documentation:  [javadoc](https://strongdm.github.io/strongdm-sdk-java-docs/)
+* [Migrating from Role Grants to Access Rules](https://github.com/strongdm/strongdm-sdk-java/wiki/Migrating-from-Role-Grants-to-Access-Rules)
 * Examples: [GitHub - strongdm/strongdm-sdk-java-examples](https://github.com/strongdm/strongdm-sdk-java-examples)
 	1. [Managing Resources](https://github.com/strongdm/strongdm-sdk-java-examples/tree/master/1_managing_resources)
 	2. [Managing Accounts](https://github.com/strongdm/strongdm-sdk-java-examples/tree/master/2_managing_accounts)
