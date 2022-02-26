@@ -3952,6 +3952,95 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.MTLSPostgres convertMTLSPostgresToPorcelain(
+      MTLSPostgres plumbing) {
+    com.strongdm.api.v1.MTLSPostgres porcelain = new com.strongdm.api.v1.MTLSPostgres();
+    porcelain.setCertificateAuthority((plumbing.getCertificateAuthority()));
+    porcelain.setClientCertificate((plumbing.getClientCertificate()));
+    porcelain.setClientKey((plumbing.getClientKey()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setServerName((plumbing.getServerName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static MTLSPostgres convertMTLSPostgresToPlumbing(
+      com.strongdm.api.v1.MTLSPostgres porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    MTLSPostgres.Builder builder = MTLSPostgres.newBuilder();
+    if (porcelain.getCertificateAuthority() != null) {
+      builder.setCertificateAuthority((porcelain.getCertificateAuthority()));
+    }
+    if (porcelain.getClientCertificate() != null) {
+      builder.setClientCertificate((porcelain.getClientCertificate()));
+    }
+    if (porcelain.getClientKey() != null) {
+      builder.setClientKey((porcelain.getClientKey()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getServerName() != null) {
+      builder.setServerName((porcelain.getServerName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.MTLSPostgres> convertRepeatedMTLSPostgresToPorcelain(
+      Collection<MTLSPostgres> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertMTLSPostgresToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<MTLSPostgres> convertRepeatedMTLSPostgresToPlumbing(
+      Collection<com.strongdm.api.v1.MTLSPostgres> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertMTLSPostgresToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Maria convertMariaToPorcelain(Maria plumbing) {
     com.strongdm.api.v1.Maria porcelain = new com.strongdm.api.v1.Maria();
     porcelain.setDatabase((plumbing.getDatabase()));
@@ -5717,6 +5806,9 @@ public class Plumbing {
     if (plumbing.hasMongoShardedCluster()) {
       return convertMongoShardedClusterToPorcelain(plumbing.getMongoShardedCluster());
     }
+    if (plumbing.hasMtlsPostgres()) {
+      return convertMTLSPostgresToPorcelain(plumbing.getMtlsPostgres());
+    }
     if (plumbing.hasMysql()) {
       return convertMysqlToPorcelain(plumbing.getMysql());
     }
@@ -6063,6 +6155,12 @@ public class Plumbing {
       builder.setMongoShardedCluster(
           convertMongoShardedClusterToPlumbing(
               (com.strongdm.api.v1.MongoShardedCluster) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.MTLSPostgres) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setMtlsPostgres(
+          convertMTLSPostgresToPlumbing((com.strongdm.api.v1.MTLSPostgres) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.Mysql) {
