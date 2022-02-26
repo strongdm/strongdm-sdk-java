@@ -18,6 +18,9 @@
 package com.strongdm.api.v1;
 
 // RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
+//
+// Deprecated: use multi-role instead.
+@Deprecated
 public class RoleAttachmentDeleteResponse {
   private DeleteResponseMetadata meta;
   // Reserved for future use.

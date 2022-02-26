@@ -64,14 +64,26 @@ public class Resources {
     Supplier<PageResult<Tag>> pageFetcher =
         () -> {
           // Note: this closure captures and reuses the builder to set the next page
-
           ResourcesPlumbing.EnumerateTagsRequest req = builder.build();
           ResourcesPlumbing.EnumerateTagsResponse plumbingResponse;
-          plumbingResponse =
-              this.stub
-                  .withCallCredentials(
-                      this.parent.getCallCredentials("Resources.EnumerateTags", req))
-                  .enumerateTags(req);
+          int tries = 0;
+          while (true) {
+            try {
+              plumbingResponse =
+                  this.stub
+                      .withCallCredentials(
+                          this.parent.getCallCredentials("Resources.EnumerateTags", req))
+                      .enumerateTags(req);
+            } catch (Exception e) {
+              if (this.parent.shouldRetry(tries, e)) {
+                tries++;
+                this.parent.jitterSleep(tries);
+                continue;
+              }
+              throw Plumbing.convertExceptionToPorcelain(e);
+            }
+            break;
+          }
 
           List<Tag> page =
               Plumbing.convertRepeatedTagToPorcelain(plumbingResponse.getMatchesList());
@@ -207,13 +219,25 @@ public class Resources {
     Supplier<PageResult<Resource>> pageFetcher =
         () -> {
           // Note: this closure captures and reuses the builder to set the next page
-
           ResourcesPlumbing.ResourceListRequest req = builder.build();
           ResourcesPlumbing.ResourceListResponse plumbingResponse;
-          plumbingResponse =
-              this.stub
-                  .withCallCredentials(this.parent.getCallCredentials("Resources.List", req))
-                  .list(req);
+          int tries = 0;
+          while (true) {
+            try {
+              plumbingResponse =
+                  this.stub
+                      .withCallCredentials(this.parent.getCallCredentials("Resources.List", req))
+                      .list(req);
+            } catch (Exception e) {
+              if (this.parent.shouldRetry(tries, e)) {
+                tries++;
+                this.parent.jitterSleep(tries);
+                continue;
+              }
+              throw Plumbing.convertExceptionToPorcelain(e);
+            }
+            break;
+          }
 
           List<Resource> page =
               Plumbing.convertRepeatedResourceToPorcelain(plumbingResponse.getResourcesList());

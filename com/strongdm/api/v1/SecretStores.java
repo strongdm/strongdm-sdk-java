@@ -169,13 +169,25 @@ public class SecretStores {
     Supplier<PageResult<SecretStore>> pageFetcher =
         () -> {
           // Note: this closure captures and reuses the builder to set the next page
-
           SecretStoresPlumbing.SecretStoreListRequest req = builder.build();
           SecretStoresPlumbing.SecretStoreListResponse plumbingResponse;
-          plumbingResponse =
-              this.stub
-                  .withCallCredentials(this.parent.getCallCredentials("SecretStores.List", req))
-                  .list(req);
+          int tries = 0;
+          while (true) {
+            try {
+              plumbingResponse =
+                  this.stub
+                      .withCallCredentials(this.parent.getCallCredentials("SecretStores.List", req))
+                      .list(req);
+            } catch (Exception e) {
+              if (this.parent.shouldRetry(tries, e)) {
+                tries++;
+                this.parent.jitterSleep(tries);
+                continue;
+              }
+              throw Plumbing.convertExceptionToPorcelain(e);
+            }
+            break;
+          }
 
           List<SecretStore> page =
               Plumbing.convertRepeatedSecretStoreToPorcelain(

@@ -169,13 +169,25 @@ public class Nodes {
     Supplier<PageResult<Node>> pageFetcher =
         () -> {
           // Note: this closure captures and reuses the builder to set the next page
-
           NodesPlumbing.NodeListRequest req = builder.build();
           NodesPlumbing.NodeListResponse plumbingResponse;
-          plumbingResponse =
-              this.stub
-                  .withCallCredentials(this.parent.getCallCredentials("Nodes.List", req))
-                  .list(req);
+          int tries = 0;
+          while (true) {
+            try {
+              plumbingResponse =
+                  this.stub
+                      .withCallCredentials(this.parent.getCallCredentials("Nodes.List", req))
+                      .list(req);
+            } catch (Exception e) {
+              if (this.parent.shouldRetry(tries, e)) {
+                tries++;
+                this.parent.jitterSleep(tries);
+                continue;
+              }
+              throw Plumbing.convertExceptionToPorcelain(e);
+            }
+            break;
+          }
 
           List<Node> page =
               Plumbing.convertRepeatedNodeToPorcelain(plumbingResponse.getNodesList());

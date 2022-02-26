@@ -144,13 +144,26 @@ public class AccountGrants {
     Supplier<PageResult<AccountGrant>> pageFetcher =
         () -> {
           // Note: this closure captures and reuses the builder to set the next page
-
           AccountGrantsPlumbing.AccountGrantListRequest req = builder.build();
           AccountGrantsPlumbing.AccountGrantListResponse plumbingResponse;
-          plumbingResponse =
-              this.stub
-                  .withCallCredentials(this.parent.getCallCredentials("AccountGrants.List", req))
-                  .list(req);
+          int tries = 0;
+          while (true) {
+            try {
+              plumbingResponse =
+                  this.stub
+                      .withCallCredentials(
+                          this.parent.getCallCredentials("AccountGrants.List", req))
+                      .list(req);
+            } catch (Exception e) {
+              if (this.parent.shouldRetry(tries, e)) {
+                tries++;
+                this.parent.jitterSleep(tries);
+                continue;
+              }
+              throw Plumbing.convertExceptionToPorcelain(e);
+            }
+            break;
+          }
 
           List<AccountGrant> page =
               Plumbing.convertRepeatedAccountGrantToPorcelain(

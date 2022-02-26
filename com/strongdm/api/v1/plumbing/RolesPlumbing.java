@@ -10853,7 +10853,7 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * AccessRules JSON encoded access rules data.
+     * AccessRules is a list of access rules defining the resources this Role has access to.
      * </pre>
      *
      * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -10862,7 +10862,7 @@ public final class RolesPlumbing {
     java.lang.String getAccessRules();
     /**
      * <pre>
-     * AccessRules JSON encoded access rules data.
+     * AccessRules is a list of access rules defining the resources this Role has access to.
      * </pre>
      *
      * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -10873,13 +10873,15 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * True if the Role is a composite role.
+     * Composite is true if the Role is a composite role.
+     * Deprecated: composite roles are deprecated, use multi-role instead.
      * </pre>
      *
-     * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+     * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated
      * @return The composite.
      */
-    boolean getComposite();
+    @java.lang.Deprecated boolean getComposite();
 
     /**
      * <pre>
@@ -11124,7 +11126,7 @@ public final class RolesPlumbing {
     private volatile java.lang.Object accessRules_;
     /**
      * <pre>
-     * AccessRules JSON encoded access rules data.
+     * AccessRules is a list of access rules defining the resources this Role has access to.
      * </pre>
      *
      * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -11145,7 +11147,7 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * AccessRules JSON encoded access rules data.
+     * AccessRules is a list of access rules defining the resources this Role has access to.
      * </pre>
      *
      * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -11170,14 +11172,16 @@ public final class RolesPlumbing {
     private boolean composite_;
     /**
      * <pre>
-     * True if the Role is a composite role.
+     * Composite is true if the Role is a composite role.
+     * Deprecated: composite roles are deprecated, use multi-role instead.
      * </pre>
      *
-     * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+     * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
+     * @deprecated
      * @return The composite.
      */
     @java.lang.Override
-    public boolean getComposite() {
+    @java.lang.Deprecated public boolean getComposite() {
       return composite_;
     }
 
@@ -11802,7 +11806,7 @@ public final class RolesPlumbing {
       private java.lang.Object accessRules_ = "";
       /**
        * <pre>
-       * AccessRules JSON encoded access rules data.
+       * AccessRules is a list of access rules defining the resources this Role has access to.
        * </pre>
        *
        * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -11822,7 +11826,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * AccessRules JSON encoded access rules data.
+       * AccessRules is a list of access rules defining the resources this Role has access to.
        * </pre>
        *
        * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -11843,7 +11847,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * AccessRules JSON encoded access rules data.
+       * AccessRules is a list of access rules defining the resources this Role has access to.
        * </pre>
        *
        * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -11862,7 +11866,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * AccessRules JSON encoded access rules data.
+       * AccessRules is a list of access rules defining the resources this Role has access to.
        * </pre>
        *
        * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -11876,7 +11880,7 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * AccessRules JSON encoded access rules data.
+       * AccessRules is a list of access rules defining the resources this Role has access to.
        * </pre>
        *
        * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
@@ -11898,26 +11902,30 @@ public final class RolesPlumbing {
       private boolean composite_ ;
       /**
        * <pre>
-       * True if the Role is a composite role.
+       * Composite is true if the Role is a composite role.
+       * Deprecated: composite roles are deprecated, use multi-role instead.
        * </pre>
        *
-       * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated
        * @return The composite.
        */
       @java.lang.Override
-      public boolean getComposite() {
+      @java.lang.Deprecated public boolean getComposite() {
         return composite_;
       }
       /**
        * <pre>
-       * True if the Role is a composite role.
+       * Composite is true if the Role is a composite role.
+       * Deprecated: composite roles are deprecated, use multi-role instead.
        * </pre>
        *
-       * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated
        * @param value The composite to set.
        * @return This builder for chaining.
        */
-      public Builder setComposite(boolean value) {
+      @java.lang.Deprecated public Builder setComposite(boolean value) {
         
         composite_ = value;
         onChanged();
@@ -11925,13 +11933,15 @@ public final class RolesPlumbing {
       }
       /**
        * <pre>
-       * True if the Role is a composite role.
+       * Composite is true if the Role is a composite role.
+       * Deprecated: composite roles are deprecated, use multi-role instead.
        * </pre>
        *
-       * <code>bool composite = 3 [(.v1.field_options) = { ... }</code>
+       * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearComposite() {
+      @java.lang.Deprecated public Builder clearComposite() {
         
         composite_ = false;
         onChanged();
@@ -12243,30 +12253,34 @@ public final class RolesPlumbing {
       "oleListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListR" +
       "esponseMetadata\022#\n\005roles\030\002 \003(\0132\010.v1.Role" +
       "B\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
-      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\237\002" +
+      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\323\003" +
       "\n\004Role\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\014access_rules\030\005 " +
-      "\001(\tB*\362\370\263\007%\260\363\263\007\001\272\364\263\007\033accessRulesJSONDiffS" +
-      "uppress\022\"\n\tcomposite\030\003 \001(\010B\017\362\370\263\007\n\260\363\263\007\001\340\363" +
-      "\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:" +
-      "V\372\370\263\007Q\250\363\263\007\001\302\363\263\007G\242\363\263\007\035tf_examples/role_re" +
-      "source.txt\252\363\263\007 tf_examples/role_data_sou" +
-      "rce.txt2\356\003\n\005Roles\022Z\n\006Create\022\025.v1.RoleCre" +
-      "ateRequest\032\026.v1.RoleCreateResponse\"!\202\371\263\007" +
-      "\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/roles\022U\n\003Get\022\022.v" +
-      "1.RoleGetRequest\032\023.v1.RoleGetResponse\"%\202" +
-      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022^\n\006" +
-      "Update\022\025.v1.RoleUpdateRequest\032\026.v1.RoleU" +
-      "pdateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v" +
-      "1/roles/{id}\022a\n\006Delete\022\025.v1.RoleDeleteRe" +
-      "quest\032\026.v1.RoleDeleteResponse\"(\202\371\263\007\013\242\363\263\007" +
-      "\006delete\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022S\n\004List\022" +
-      "\023.v1.RoleListRequest\032\024.v1.RoleListRespon" +
-      "se\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/roles\032\032\312\371" +
-      "\263\007\t\302\371\263\007\004Role\312\371\263\007\007\322\371\263\007\002r-Ba\n\034com.strongdm" +
-      ".api.v1.plumbingB\rRolesPlumbingZ2github." +
-      "com/strongdm/strongdm-sdk-go/internal/v1" +
-      ";v1b\006proto3"
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\361\001\n\014access_rules\030\005" +
+      " \001(\tB\332\001\362\370\263\007\324\001\260\363\263\007\001\312\363\263\007M\352\363\263\007\014access_rules" +
+      "\362\363\263\007\013AccessRules\372\363\263\007\020List<AccessRule>\232\364\263" +
+      "\007\022models.AccessRules\262\364\263\007\ngo_private\262\364\263\007\002" +
+      "go\262\364\263\007\006python\262\364\263\007\004java\262\364\263\007\004ruby\262\364\263\007\014json" +
+      "_gateway\262\364\263\007\024json_gateway_private\262\364\263\007\007op" +
+      "enapi\262\364\263\007\017openapi_private\022$\n\tcomposite\030\003" +
+      " \001(\010B\021\030\001\362\370\263\007\n\260\363\263\007\001\340\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010." +
+      "v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:V\372\370\263\007Q\250\363\263\007\001\302\363\263\007G\242\363\263\007" +
+      "\035tf_examples/role_resource.txt\252\363\263\007 tf_ex" +
+      "amples/role_data_source.txt2\356\003\n\005Roles\022Z\n" +
+      "\006Create\022\025.v1.RoleCreateRequest\032\026.v1.Role" +
+      "CreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t" +
+      "/v1/roles\022U\n\003Get\022\022.v1.RoleGetRequest\032\023.v" +
+      "1.RoleGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263" +
+      "\007\016/v1/roles/{id}\022^\n\006Update\022\025.v1.RoleUpda" +
+      "teRequest\032\026.v1.RoleUpdateResponse\"%\202\371\263\007\010" +
+      "\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022a\n\006Dele" +
+      "te\022\025.v1.RoleDeleteRequest\032\026.v1.RoleDelet" +
+      "eResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1" +
+      "/roles/{id}\022S\n\004List\022\023.v1.RoleListRequest" +
+      "\032\024.v1.RoleListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\016\252\363\263\007\t/v1/roles\032\032\312\371\263\007\t\302\371\263\007\004Role\312\371\263\007\007\322\371\263" +
+      "\007\002r-Ba\n\034com.strongdm.api.v1.plumbingB\rRo" +
+      "lesPlumbingZ2github.com/strongdm/strongd" +
+      "m-sdk-go/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

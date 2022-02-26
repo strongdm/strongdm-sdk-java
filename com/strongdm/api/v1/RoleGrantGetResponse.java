@@ -18,6 +18,9 @@
 package com.strongdm.api.v1;
 
 // RoleGrantGetResponse returns a requested RoleGrant.
+//
+// Deprecated: use access rules instead.
+@Deprecated
 public class RoleGrantGetResponse {
   private GetResponseMetadata meta;
   // Reserved for future use.

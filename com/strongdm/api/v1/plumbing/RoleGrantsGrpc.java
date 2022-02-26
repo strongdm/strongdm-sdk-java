@@ -35,11 +35,13 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * that make up those composite roles. When a composite role is attached to another
  * role, the permissions granted to members of the composite role are augmented to
  * include the permissions granted to members of the attached role.
+ * Deprecated: use access rules instead.
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.25.0)",
     comments = "Source: role_grants.proto")
+@java.lang.Deprecated
 public final class RoleGrantsGrpc {
 
   private RoleGrantsGrpc() {}
@@ -200,15 +202,19 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * Deprecated: use access rules instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class RoleGrantsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Create registers a new RoleGrant.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void create(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
@@ -217,8 +223,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void get(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
@@ -227,8 +235,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void delete(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
@@ -237,8 +247,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void list(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
@@ -284,8 +296,10 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * Deprecated: use access rules instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RoleGrantsStub extends io.grpc.stub.AbstractStub<RoleGrantsStub> {
     private RoleGrantsStub(io.grpc.Channel channel) {
       super(channel);
@@ -305,8 +319,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Create registers a new RoleGrant.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void create(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse> responseObserver) {
       asyncUnaryCall(
@@ -316,8 +332,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void get(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse> responseObserver) {
       asyncUnaryCall(
@@ -327,8 +345,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void delete(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse> responseObserver) {
       asyncUnaryCall(
@@ -338,8 +358,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void list(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse> responseObserver) {
       asyncUnaryCall(
@@ -353,8 +375,10 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * Deprecated: use access rules instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RoleGrantsBlockingStub extends io.grpc.stub.AbstractStub<RoleGrantsBlockingStub> {
     private RoleGrantsBlockingStub(io.grpc.Channel channel) {
       super(channel);
@@ -374,8 +398,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Create registers a new RoleGrant.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse create(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
@@ -384,8 +410,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse get(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
@@ -394,8 +422,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse delete(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
@@ -404,8 +434,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse list(com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
@@ -418,8 +450,10 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * Deprecated: use access rules instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RoleGrantsFutureStub extends io.grpc.stub.AbstractStub<RoleGrantsFutureStub> {
     private RoleGrantsFutureStub(io.grpc.Channel channel) {
       super(channel);
@@ -439,8 +473,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Create registers a new RoleGrant.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateResponse> create(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantCreateRequest request) {
       return futureUnaryCall(
@@ -450,8 +486,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetResponse> get(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantGetRequest request) {
       return futureUnaryCall(
@@ -461,8 +499,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantDeleteRequest request) {
       return futureUnaryCall(
@@ -472,8 +512,10 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
+     * Deprecated: use access rules instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListResponse> list(
         com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.RoleGrantListRequest request) {
       return futureUnaryCall(

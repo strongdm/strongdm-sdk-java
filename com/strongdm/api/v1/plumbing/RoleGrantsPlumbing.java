@@ -28,7 +28,7 @@ public final class RoleGrantsPlumbing {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RoleGrantCreateRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantCreateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantCreateRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -90,11 +90,12 @@ public final class RoleGrantsPlumbing {
    * <pre>
    * RoleGrantCreateRequest specifies what kind of RoleGrants should be registered in
    * the organizations fleet.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantCreateRequest}
    */
-  public static final class RoleGrantCreateRequest extends
+  @java.lang.Deprecated public static final class RoleGrantCreateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantCreateRequest)
       RoleGrantCreateRequestOrBuilder {
@@ -450,6 +451,7 @@ public final class RoleGrantsPlumbing {
      * <pre>
      * RoleGrantCreateRequest specifies what kind of RoleGrants should be registered in
      * the organizations fleet.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantCreateRequest}
@@ -982,7 +984,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantCreateResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantCreateResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantCreateResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1070,11 +1072,12 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantCreateResponse reports how the RoleGrants were created in the system.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantCreateResponse}
    */
-  public static final class RoleGrantCreateResponse extends
+  @java.lang.Deprecated public static final class RoleGrantCreateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantCreateResponse)
       RoleGrantCreateResponseOrBuilder {
@@ -1496,6 +1499,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantCreateResponse reports how the RoleGrants were created in the system.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantCreateResponse}
@@ -2197,7 +2201,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantGetRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantGetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantGetRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -2251,11 +2255,12 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantGetRequest specifies which RoleGrant to retrieve.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantGetRequest}
    */
-  public static final class RoleGrantGetRequest extends
+  @java.lang.Deprecated public static final class RoleGrantGetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantGetRequest)
       RoleGrantGetRequestOrBuilder {
@@ -2606,6 +2611,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantGetRequest specifies which RoleGrant to retrieve.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantGetRequest}
@@ -3072,7 +3078,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantGetResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantGetResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantGetResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -3160,11 +3166,12 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantGetResponse returns a requested RoleGrant.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantGetResponse}
    */
-  public static final class RoleGrantGetResponse extends
+  @java.lang.Deprecated public static final class RoleGrantGetResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantGetResponse)
       RoleGrantGetResponseOrBuilder {
@@ -3586,6 +3593,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantGetResponse returns a requested RoleGrant.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantGetResponse}
@@ -4287,7 +4295,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantDeleteRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantDeleteRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantDeleteRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -4341,11 +4349,12 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantDeleteRequest identifies a RoleGrant by ID to delete.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantDeleteRequest}
    */
-  public static final class RoleGrantDeleteRequest extends
+  @java.lang.Deprecated public static final class RoleGrantDeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantDeleteRequest)
       RoleGrantDeleteRequestOrBuilder {
@@ -4696,6 +4705,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantDeleteRequest identifies a RoleGrant by ID to delete.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantDeleteRequest}
@@ -5162,7 +5172,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantDeleteResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantDeleteResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantDeleteResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5223,11 +5233,12 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantDeleteResponse returns information about a RoleGrant that was deleted.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantDeleteResponse}
    */
-  public static final class RoleGrantDeleteResponse extends
+  @java.lang.Deprecated public static final class RoleGrantDeleteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantDeleteResponse)
       RoleGrantDeleteResponseOrBuilder {
@@ -5582,6 +5593,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantDeleteResponse returns information about a RoleGrant that was deleted.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantDeleteResponse}
@@ -6114,7 +6126,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantListRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantListRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantListRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -6168,11 +6180,12 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantListRequest specifies criteria for retrieving a list of RoleGrants.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantListRequest}
    */
-  public static final class RoleGrantListRequest extends
+  @java.lang.Deprecated public static final class RoleGrantListRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantListRequest)
       RoleGrantListRequestOrBuilder {
@@ -6523,6 +6536,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantListRequest specifies criteria for retrieving a list of RoleGrants.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantListRequest}
@@ -6989,7 +7003,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantListResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantListResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrantListResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -7095,11 +7109,12 @@ public final class RoleGrantsPlumbing {
    * <pre>
    * RoleGrantListResponse returns a list of RoleGrants that meet the criteria of a
    * RoleGrantListRequest.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantListResponse}
    */
-  public static final class RoleGrantListResponse extends
+  @java.lang.Deprecated public static final class RoleGrantListResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrantListResponse)
       RoleGrantListResponseOrBuilder {
@@ -7542,6 +7557,7 @@ public final class RoleGrantsPlumbing {
      * <pre>
      * RoleGrantListResponse returns a list of RoleGrants that meet the criteria of a
      * RoleGrantListRequest.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantListResponse}
@@ -8430,7 +8446,7 @@ public final class RoleGrantsPlumbing {
 
   }
 
-  public interface RoleGrantOrBuilder extends
+  @java.lang.Deprecated public interface RoleGrantOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleGrant)
       com.google.protobuf.MessageOrBuilder {
 
@@ -8497,11 +8513,12 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * A RoleGrant connects a resource to a role, granting members of the role access to that resource.
+   * Deprecated: use access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrant}
    */
-  public static final class RoleGrant extends
+  @java.lang.Deprecated public static final class RoleGrant extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleGrant)
       RoleGrantOrBuilder {
@@ -8911,6 +8928,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * A RoleGrant connects a resource to a role, granting members of the role access to that resource.
+     * Deprecated: use access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrant}
@@ -9469,55 +9487,58 @@ public final class RoleGrantsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\021role_grants.proto\022\002v1\032\roptions.proto\032\n" +
-      "spec.proto\"p\n\026RoleGrantCreateRequest\022\'\n\004" +
+      "spec.proto\"t\n\026RoleGrantCreateRequest\022\'\n\004" +
       "meta\030\001 \001(\0132\031.v1.CreateRequestMetadata\022-\n" +
       "\nrole_grant\030\002 \001(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\"\313\001\n\027RoleGrantCreateResponse\0224\n\004meta" +
-      "\030\001 \001(\0132\032.v1.CreateResponseMetadataB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022-\n\nrole_grant\030\002 \001(\0132\r.v1.RoleGran" +
-      "tB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.R" +
-      "ateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"S\n\023RoleGrantGetRequest\022$\n\004met" +
-      "a\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\305\001\n\024RoleGrantGetResponse" +
-      "\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetadataB" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022-\n\nrole_grant\030\002 \001(\0132\r.v1.Rol" +
-      "eGrantB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025" +
-      ".v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364" +
-      "\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Y\n\026RoleGrantDeleteReques" +
-      "t\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetada" +
-      "ta\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\234\001\n\027RoleGrant" +
-      "DeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delete" +
-      "ResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_lim" +
-      "it\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"Y\n\024RoleGrantLi" +
-      "stRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequest" +
-      "Metadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\260\001\n" +
-      "\025RoleGrantListResponse\022&\n\004meta\030\001 \001(\0132\030.v" +
-      "1.ListResponseMetadata\022.\n\013role_grants\030\002 " +
-      "\003(\0132\r.v1.RoleGrantB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_l" +
-      "imit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005" +
-      "\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\317\001\n\tRoleGrant\022\026\n\002id\030\001 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007" +
-      "\n\260\363\263\007\001\300\363\263\007\001\022 \n\007role_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
-      "\300\363\263\007\001:b\372\370\263\007]\250\363\263\007\001\302\363\263\007S\242\363\263\007#tf_examples/r" +
-      "ole_grant_resource.txt\252\363\263\007&tf_examples/r" +
-      "ole_grant_data_source.txt2\331\003\n\nRoleGrants" +
-      "\022j\n\006Create\022\032.v1.RoleGrantCreateRequest\032\033" +
-      ".v1.RoleGrantCreateResponse\"\'\202\371\263\007\t\242\363\263\007\004p" +
-      "ost\202\371\263\007\024\252\363\263\007\017/v1/role-grants\022e\n\003Get\022\027.v1" +
-      ".RoleGrantGetRequest\032\030.v1.RoleGrantGetRe" +
-      "sponse\"+\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\031\252\363\263\007\024/v1/role-" +
-      "grants/{id}\022q\n\006Delete\022\032.v1.RoleGrantDele" +
-      "teRequest\032\033.v1.RoleGrantDeleteResponse\"." +
-      "\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\031\252\363\263\007\024/v1/role-grant" +
-      "s/{id}\022c\n\004List\022\030.v1.RoleGrantListRequest" +
-      "\032\031.v1.RoleGrantListResponse\"&\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007\024\252\363\263\007\017/v1/role-grants\032 \312\371\263\007\016\302\371\263\007\tR" +
-      "oleGrant\312\371\263\007\010\322\371\263\007\003rg-Bf\n\034com.strongdm.ap" +
-      "i.v1.plumbingB\022RoleGrantsPlumbingZ2githu" +
-      "b.com/strongdm/strongdm-sdk-go/internal/" +
-      "v1;v1b\006proto3"
+      "\363\263\007\001:\002\030\001\"\315\001\n\027RoleGrantCreateResponse\0224\n\004" +
+      "meta\030\001 \001(\0132\032.v1.CreateResponseMetadataB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022-\n\nrole_grant\030\002 \001(\0132\r.v1.Role" +
+      "GrantB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025." +
+      "v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263" +
+      "\007\001:\014\030\001\372\370\263\007\005\250\363\263\007\001\"W\n\023RoleGrantGetRequest\022" +
+      "$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n" +
+      "\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\002\030\001\"\307\001\n\024RoleGrantG" +
+      "etResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRespons" +
+      "eMetadataB\n\362\370\263\007\005\260\363\263\007\001\022-\n\nrole_grant\030\002 \001(" +
+      "\0132\r.v1.RoleGrantB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_lim" +
+      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\005\220\364\263\007\001:\014\030\001\372\370\263\007\005\250\363\263\007\001\"]\n\026RoleGrant" +
+      "DeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteR" +
+      "equestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\002" +
+      "\030\001\"\236\001\n\027RoleGrantDeleteResponse\0224\n\004meta\030\001" +
+      " \001(\0132\032.v1.DeleteResponseMetadataB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022?\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimitM" +
+      "etadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\014\030\001\372\370\263\007\005\250\363" +
+      "\263\007\001\"]\n\024RoleGrantListRequest\022%\n\004meta\030\001 \001(" +
+      "\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030\002 \001" +
+      "(\tB\n\362\370\263\007\005\260\363\263\007\001:\002\030\001\"\264\001\n\025RoleGrantListResp" +
+      "onse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMeta" +
+      "data\022.\n\013role_grants\030\002 \003(\0132\r.v1.RoleGrant" +
+      "B\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.Ra" +
+      "teLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\002\030" +
+      "\001\"\321\001\n\tRoleGrant\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022 \n" +
+      "\007role_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:d\030\001\372\370\263\007]" +
+      "\250\363\263\007\001\302\363\263\007S\242\363\263\007#tf_examples/role_grant_re" +
+      "source.txt\252\363\263\007&tf_examples/role_grant_da" +
+      "ta_source.txt2\272\004\n\nRoleGrants\022\201\001\n\006Create\022" +
+      "\032.v1.RoleGrantCreateRequest\032\033.v1.RoleGra" +
+      "ntCreateResponse\">\210\002\001\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\024" +
+      "\252\363\263\007\017/v1/role-grants\202\371\263\007\017\262\363\263\007\n2022-06-01" +
+      "\022|\n\003Get\022\027.v1.RoleGrantGetRequest\032\030.v1.Ro" +
+      "leGrantGetResponse\"B\210\002\001\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
+      "\031\252\363\263\007\024/v1/role-grants/{id}\202\371\263\007\017\262\363\263\007\n2022" +
+      "-06-01\022\210\001\n\006Delete\022\032.v1.RoleGrantDeleteRe" +
+      "quest\032\033.v1.RoleGrantDeleteResponse\"E\210\002\001\202" +
+      "\371\263\007\013\242\363\263\007\006delete\202\371\263\007\031\252\363\263\007\024/v1/role-grants" +
+      "/{id}\202\371\263\007\017\262\363\263\007\n2022-06-01\022z\n\004List\022\030.v1.R" +
+      "oleGrantListRequest\032\031.v1.RoleGrantListRe" +
+      "sponse\"=\210\002\001\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\024\252\363\263\007\017/v1/ro" +
+      "le-grants\202\371\263\007\017\262\363\263\007\n2022-06-01\032#\210\002\001\312\371\263\007\016\302" +
+      "\371\263\007\tRoleGrant\312\371\263\007\010\322\371\263\007\003rg-Bf\n\034com.strong" +
+      "dm.api.v1.plumbingB\022RoleGrantsPlumbingZ2" +
+      "github.com/strongdm/strongdm-sdk-go/inte" +
+      "rnal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

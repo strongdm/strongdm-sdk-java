@@ -18,6 +18,9 @@
 package com.strongdm.api.v1;
 
 // A RoleAttachment assigns a role to a composite role.
+//
+// Deprecated: use multi-role instead.
+@Deprecated
 public class RoleAttachment {
   private String attachedRoleId;
   // The id of the attached role of this RoleAttachment.

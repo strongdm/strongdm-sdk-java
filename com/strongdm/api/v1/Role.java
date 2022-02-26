@@ -17,26 +17,34 @@
 
 package com.strongdm.api.v1;
 
+import java.util.List;
+
 // A Role is a collection of access grants, and typically corresponds to a team, Active Directory
 // OU, or other organizational unit. Users are granted access to resources by assigning them to
 // roles.
 public class Role {
-  private String accessRules;
-  // AccessRules JSON encoded access rules data.
-  public String getAccessRules() {
+  private List<AccessRule> accessRules;
+  // AccessRules is a list of access rules defining the resources this Role has access to.
+  public List<AccessRule> getAccessRules() {
     return this.accessRules;
   }
-  // AccessRules JSON encoded access rules data.
-  public void setAccessRules(String in) {
+  // AccessRules is a list of access rules defining the resources this Role has access to.
+  public void setAccessRules(List<AccessRule> in) {
     this.accessRules = in;
   }
 
   private boolean composite;
-  // True if the Role is a composite role.
+  // Composite is true if the Role is a composite role.
+  //
+  // Deprecated: composite roles are deprecated, use multi-role instead.
+  @Deprecated
   public boolean getComposite() {
     return this.composite;
   }
-  // True if the Role is a composite role.
+  // Composite is true if the Role is a composite role.
+  //
+  // Deprecated: composite roles are deprecated, use multi-role instead.
+  @Deprecated
   public void setComposite(boolean in) {
     this.composite = in;
   }

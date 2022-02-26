@@ -35,11 +35,14 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * that make up those composite roles. When a composite role is attached to another
  * role, the permissions granted to members of the composite role are augmented to
  * include the permissions granted to members of the attached role.
+ * 
+ * Deprecated: use multi-role instead.
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.25.0)",
     comments = "Source: role_attachments.proto")
+@java.lang.Deprecated
 public final class RoleAttachmentsGrpc {
 
   private RoleAttachmentsGrpc() {}
@@ -200,15 +203,21 @@ public final class RoleAttachmentsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static abstract class RoleAttachmentsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Create registers a new RoleAttachment.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void create(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
@@ -217,8 +226,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Get reads one RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void get(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
@@ -227,8 +239,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Delete removes a RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void delete(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
@@ -237,8 +252,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void list(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
@@ -284,8 +302,11 @@ public final class RoleAttachmentsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RoleAttachmentsStub extends io.grpc.stub.AbstractStub<RoleAttachmentsStub> {
     private RoleAttachmentsStub(io.grpc.Channel channel) {
       super(channel);
@@ -305,8 +326,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Create registers a new RoleAttachment.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void create(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateResponse> responseObserver) {
       asyncUnaryCall(
@@ -316,8 +340,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Get reads one RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void get(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetResponse> responseObserver) {
       asyncUnaryCall(
@@ -327,8 +354,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Delete removes a RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void delete(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse> responseObserver) {
       asyncUnaryCall(
@@ -338,8 +368,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public void list(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListRequest request,
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListResponse> responseObserver) {
       asyncUnaryCall(
@@ -353,8 +386,11 @@ public final class RoleAttachmentsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RoleAttachmentsBlockingStub extends io.grpc.stub.AbstractStub<RoleAttachmentsBlockingStub> {
     private RoleAttachmentsBlockingStub(io.grpc.Channel channel) {
       super(channel);
@@ -374,8 +410,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Create registers a new RoleAttachment.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateResponse create(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
@@ -384,8 +423,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Get reads one RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetResponse get(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
@@ -394,8 +436,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Delete removes a RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse delete(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteMethod(), getCallOptions(), request);
@@ -404,8 +449,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListResponse list(com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
@@ -418,8 +466,11 @@ public final class RoleAttachmentsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    */
+  @java.lang.Deprecated
   public static final class RoleAttachmentsFutureStub extends io.grpc.stub.AbstractStub<RoleAttachmentsFutureStub> {
     private RoleAttachmentsFutureStub(io.grpc.Channel channel) {
       super(channel);
@@ -439,8 +490,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Create registers a new RoleAttachment.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateResponse> create(
         com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentCreateRequest request) {
       return futureUnaryCall(
@@ -450,8 +504,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Get reads one RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetResponse> get(
         com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentGetRequest request) {
       return futureUnaryCall(
@@ -461,8 +518,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * Delete removes a RoleAttachment by ID.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteResponse> delete(
         com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest request) {
       return futureUnaryCall(
@@ -472,8 +532,11 @@ public final class RoleAttachmentsGrpc {
     /**
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListResponse> list(
         com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.RoleAttachmentListRequest request) {
       return futureUnaryCall(

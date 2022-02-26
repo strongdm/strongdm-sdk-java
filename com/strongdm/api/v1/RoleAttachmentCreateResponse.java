@@ -18,6 +18,9 @@
 package com.strongdm.api.v1;
 
 // RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
+//
+// Deprecated: use multi-role instead.
+@Deprecated
 public class RoleAttachmentCreateResponse {
   private CreateResponseMetadata meta;
   // Reserved for future use.

@@ -18,6 +18,9 @@
 package com.strongdm.api.v1;
 
 // RoleGrantDeleteResponse returns information about a RoleGrant that was deleted.
+//
+// Deprecated: use access rules instead.
+@Deprecated
 public class RoleGrantDeleteResponse {
   private DeleteResponseMetadata meta;
   // Reserved for future use.

@@ -33,6 +33,9 @@ import java.util.function.Supplier;
 // that make up those composite roles. When a composite role is attached to another
 // role, the permissions granted to members of the composite role are augmented to
 // include the permissions granted to members of the attached role.
+//
+// Deprecated: use access rules instead.
+@Deprecated
 public class RoleGrants {
   private final RoleGrantsGrpc.RoleGrantsBlockingStub stub;
   private final Client parent;
@@ -54,6 +57,9 @@ public class RoleGrants {
     return new RoleGrants(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
   // Create registers a new RoleGrant.
+  //
+  // Deprecated: use access rules instead.
+  @Deprecated
   public RoleGrantCreateResponse create(RoleGrant roleGrant) throws RpcException {
     RoleGrantsPlumbing.RoleGrantCreateRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantCreateRequest.newBuilder();
@@ -80,6 +86,9 @@ public class RoleGrants {
     return Plumbing.convertRoleGrantCreateResponseToPorcelain(plumbingResponse);
   }
   // Get reads one RoleGrant by ID.
+  //
+  // Deprecated: use access rules instead.
+  @Deprecated
   public RoleGrantGetResponse get(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantGetRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantGetRequest.newBuilder();
@@ -106,6 +115,9 @@ public class RoleGrants {
     return Plumbing.convertRoleGrantGetResponseToPorcelain(plumbingResponse);
   }
   // Delete removes a RoleGrant by ID.
+  //
+  // Deprecated: use access rules instead.
+  @Deprecated
   public RoleGrantDeleteResponse delete(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantDeleteRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantDeleteRequest.newBuilder();
@@ -132,6 +144,9 @@ public class RoleGrants {
     return Plumbing.convertRoleGrantDeleteResponseToPorcelain(plumbingResponse);
   }
   // List gets a list of RoleGrants matching a given set of criteria.
+  //
+  // Deprecated: use access rules instead.
+  @Deprecated
   public Iterable<RoleGrant> list(String filter, Object... args) throws RpcException {
     RoleGrantsPlumbing.RoleGrantListRequest.Builder builder =
         RoleGrantsPlumbing.RoleGrantListRequest.newBuilder();
@@ -146,13 +161,25 @@ public class RoleGrants {
     Supplier<PageResult<RoleGrant>> pageFetcher =
         () -> {
           // Note: this closure captures and reuses the builder to set the next page
-
           RoleGrantsPlumbing.RoleGrantListRequest req = builder.build();
           RoleGrantsPlumbing.RoleGrantListResponse plumbingResponse;
-          plumbingResponse =
-              this.stub
-                  .withCallCredentials(this.parent.getCallCredentials("RoleGrants.List", req))
-                  .list(req);
+          int tries = 0;
+          while (true) {
+            try {
+              plumbingResponse =
+                  this.stub
+                      .withCallCredentials(this.parent.getCallCredentials("RoleGrants.List", req))
+                      .list(req);
+            } catch (Exception e) {
+              if (this.parent.shouldRetry(tries, e)) {
+                tries++;
+                this.parent.jitterSleep(tries);
+                continue;
+              }
+              throw Plumbing.convertExceptionToPorcelain(e);
+            }
+            break;
+          }
 
           List<RoleGrant> page =
               Plumbing.convertRepeatedRoleGrantToPorcelain(plumbingResponse.getRoleGrantsList());

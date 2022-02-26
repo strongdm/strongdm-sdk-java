@@ -77,6 +77,26 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getUrlBytes();
+
+    /**
+     * <pre>
+     * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+     * </pre>
+     *
+     * <code>string deprecation_date = 1941302;</code>
+     * @return The deprecationDate.
+     */
+    java.lang.String getDeprecationDate();
+    /**
+     * <pre>
+     * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+     * </pre>
+     *
+     * <code>string deprecation_date = 1941302;</code>
+     * @return The bytes for deprecationDate.
+     */
+    com.google.protobuf.ByteString
+        getDeprecationDateBytes();
   }
   /**
    * Protobuf type {@code v1.MethodOptions}
@@ -93,6 +113,7 @@ public final class Options {
     private MethodOptions() {
       method_ = "";
       url_ = "";
+      deprecationDate_ = "";
     }
 
     @java.lang.Override
@@ -135,6 +156,12 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
+              break;
+            }
+            case 15530418: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              deprecationDate_ = s;
               break;
             }
             default: {
@@ -261,6 +288,52 @@ public final class Options {
       }
     }
 
+    public static final int DEPRECATION_DATE_FIELD_NUMBER = 1941302;
+    private volatile java.lang.Object deprecationDate_;
+    /**
+     * <pre>
+     * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+     * </pre>
+     *
+     * <code>string deprecation_date = 1941302;</code>
+     * @return The deprecationDate.
+     */
+    @java.lang.Override
+    public java.lang.String getDeprecationDate() {
+      java.lang.Object ref = deprecationDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deprecationDate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+     * </pre>
+     *
+     * <code>string deprecation_date = 1941302;</code>
+     * @return The bytes for deprecationDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeprecationDateBytes() {
+      java.lang.Object ref = deprecationDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deprecationDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -281,6 +354,9 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941301, url_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deprecationDate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941302, deprecationDate_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -295,6 +371,9 @@ public final class Options {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941301, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deprecationDate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941302, deprecationDate_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -315,6 +394,8 @@ public final class Options {
           .equals(other.getMethod())) return false;
       if (!getUrl()
           .equals(other.getUrl())) return false;
+      if (!getDeprecationDate()
+          .equals(other.getDeprecationDate())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -330,6 +411,8 @@ public final class Options {
       hash = (53 * hash) + getMethod().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + DEPRECATION_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDeprecationDate().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -467,6 +550,8 @@ public final class Options {
 
         url_ = "";
 
+        deprecationDate_ = "";
+
         return this;
       }
 
@@ -495,6 +580,7 @@ public final class Options {
         com.strongdm.api.v1.plumbing.Options.MethodOptions result = new com.strongdm.api.v1.plumbing.Options.MethodOptions(this);
         result.method_ = method_;
         result.url_ = url_;
+        result.deprecationDate_ = deprecationDate_;
         onBuilt();
         return result;
       }
@@ -549,6 +635,10 @@ public final class Options {
         }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
+          onChanged();
+        }
+        if (!other.getDeprecationDate().isEmpty()) {
+          deprecationDate_ = other.deprecationDate_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -771,6 +861,102 @@ public final class Options {
         onChanged();
         return this;
       }
+
+      private java.lang.Object deprecationDate_ = "";
+      /**
+       * <pre>
+       * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+       * </pre>
+       *
+       * <code>string deprecation_date = 1941302;</code>
+       * @return The deprecationDate.
+       */
+      public java.lang.String getDeprecationDate() {
+        java.lang.Object ref = deprecationDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deprecationDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+       * </pre>
+       *
+       * <code>string deprecation_date = 1941302;</code>
+       * @return The bytes for deprecationDate.
+       */
+      public com.google.protobuf.ByteString
+          getDeprecationDateBytes() {
+        java.lang.Object ref = deprecationDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deprecationDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+       * </pre>
+       *
+       * <code>string deprecation_date = 1941302;</code>
+       * @param value The deprecationDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeprecationDate(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        deprecationDate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+       * </pre>
+       *
+       * <code>string deprecation_date = 1941302;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeprecationDate() {
+        
+        deprecationDate_ = getDefaultInstance().getDeprecationDate();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Date the method will be deprecated (if any) in YYYY-MM-DD format.
+       * </pre>
+       *
+       * <code>string deprecation_date = 1941302;</code>
+       * @param value The bytes for deprecationDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeprecationDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        deprecationDate_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -829,10 +1015,45 @@ public final class Options {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool private_sdk = 1941700;</code>
-     * @return The privateSdk.
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return A list containing the targets.
      */
-    boolean getPrivateSdk();
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
   }
   /**
    * Protobuf type {@code v1.FileOptions}
@@ -847,6 +1068,7 @@ public final class Options {
       super(builder);
     }
     private FileOptions() {
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -869,6 +1091,7 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -879,9 +1102,13 @@ public final class Options {
             case 0:
               done = true;
               break;
-            case 15533600: {
-
-              privateSdk_ = input.readBool();
+            case 15533602: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
               break;
             }
             default: {
@@ -899,6 +1126,9 @@ public final class Options {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -916,15 +1146,55 @@ public final class Options {
               com.strongdm.api.v1.plumbing.Options.FileOptions.class, com.strongdm.api.v1.plumbing.Options.FileOptions.Builder.class);
     }
 
-    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941700;
-    private boolean privateSdk_;
+    public static final int TARGETS_FIELD_NUMBER = 1941700;
+    private com.google.protobuf.LazyStringList targets_;
     /**
-     * <code>bool private_sdk = 1941700;</code>
-     * @return The privateSdk.
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return A list containing the targets.
      */
-    @java.lang.Override
-    public boolean getPrivateSdk() {
-      return privateSdk_;
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -941,8 +1211,8 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (privateSdk_ != false) {
-        output.writeBool(1941700, privateSdk_);
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941700, targets_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -953,9 +1223,13 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (privateSdk_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941700, privateSdk_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -972,8 +1246,8 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.FileOptions other = (com.strongdm.api.v1.plumbing.Options.FileOptions) obj;
 
-      if (getPrivateSdk()
-          != other.getPrivateSdk()) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -985,9 +1259,10 @@ public final class Options {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPrivateSdk());
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1121,8 +1396,8 @@ public final class Options {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        privateSdk_ = false;
-
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1149,7 +1424,12 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Options.FileOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.FileOptions result = new com.strongdm.api.v1.plumbing.Options.FileOptions(this);
-        result.privateSdk_ = privateSdk_;
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
         onBuilt();
         return result;
       }
@@ -1198,8 +1478,15 @@ public final class Options {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.FileOptions other) {
         if (other == com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance()) return this;
-        if (other.getPrivateSdk() != false) {
-          setPrivateSdk(other.getPrivateSdk());
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1229,34 +1516,150 @@ public final class Options {
         }
         return this;
       }
+      private int bitField0_;
 
-      private boolean privateSdk_ ;
-      /**
-       * <code>bool private_sdk = 1941700;</code>
-       * @return The privateSdk.
-       */
-      @java.lang.Override
-      public boolean getPrivateSdk() {
-        return privateSdk_;
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
-       * <code>bool private_sdk = 1941700;</code>
-       * @param value The privateSdk to set.
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
        * @return This builder for chaining.
        */
-      public Builder setPrivateSdk(boolean value) {
-        
-        privateSdk_ = value;
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>bool private_sdk = 1941700;</code>
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param value The targets to add.
        * @return This builder for chaining.
        */
-      public Builder clearPrivateSdk() {
-        
-        privateSdk_ = false;
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
         onChanged();
         return this;
       }
@@ -1366,13 +1769,44 @@ public final class Options {
 
     /**
      * <pre>
-     * private_sdk indicates that the field should not be exposed via the public sdk.
+     * targets indicates that the field should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>bool private_sdk = 1941318;</code>
-     * @return The privateSdk.
+     * <code>repeated string targets = 1941318;</code>
+     * @return A list containing the targets.
      */
-    boolean getPrivateSdk();
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <pre>
+     * targets indicates that the field should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941318;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <pre>
+     * targets indicates that the field should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941318;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <pre>
+     * targets indicates that the field should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941318;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
 
     /**
      * <pre>
@@ -1504,6 +1938,21 @@ public final class Options {
      * @return The hideFromJsonGateway.
      */
     boolean getHideFromJsonGateway();
+
+    /**
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    boolean hasCustom();
+    /**
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom();
+    /**
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     */
+    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -1518,6 +1967,7 @@ public final class Options {
       super(builder);
     }
     private FieldOptions() {
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       terraformComputed_ = "";
       terraformDiffSuppressFunc_ = "";
       terraformCommentOverride_ = "";
@@ -1546,6 +1996,7 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1569,6 +2020,19 @@ public final class Options {
             case 15530432: {
 
               required_ = input.readBool();
+              break;
+            }
+            case 15530442: {
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder subBuilder = null;
+              if (custom_ != null) {
+                subBuilder = custom_.toBuilder();
+              }
+              custom_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(custom_);
+                custom_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 15530458: {
@@ -1625,9 +2089,13 @@ public final class Options {
               isCredential_ = input.readBool();
               break;
             }
-            case 15530544: {
-
-              privateSdk_ = input.readBool();
+            case 15530546: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
               break;
             }
             case 15530554: {
@@ -1657,6 +2125,9 @@ public final class Options {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1751,19 +2222,55 @@ public final class Options {
       return isCredential_;
     }
 
-    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941318;
-    private boolean privateSdk_;
+    public static final int TARGETS_FIELD_NUMBER = 1941318;
+    private com.google.protobuf.LazyStringList targets_;
     /**
      * <pre>
-     * private_sdk indicates that the field should not be exposed via the public sdk.
+     * targets indicates that the field should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>bool private_sdk = 1941318;</code>
-     * @return The privateSdk.
+     * <code>repeated string targets = 1941318;</code>
+     * @return A list containing the targets.
      */
-    @java.lang.Override
-    public boolean getPrivateSdk() {
-      return privateSdk_;
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <pre>
+     * targets indicates that the field should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941318;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <pre>
+     * targets indicates that the field should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941318;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <pre>
+     * targets indicates that the field should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941318;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
     }
 
     public static final int TERRAFORM_COMPUTED_FIELD_NUMBER = 1941307;
@@ -2068,6 +2575,32 @@ public final class Options {
       return hideFromJsonGateway_;
     }
 
+    public static final int CUSTOM_FIELD_NUMBER = 1941305;
+    private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
+    /**
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustom() {
+      return custom_ != null;
+    }
+    /**
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
+      return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
+    }
+    /**
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
+      return getCustom();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2090,6 +2623,9 @@ public final class Options {
       }
       if (required_ != false) {
         output.writeBool(1941304, required_);
+      }
+      if (custom_ != null) {
+        output.writeMessage(1941305, getCustom());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformComputed_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, terraformComputed_);
@@ -2121,8 +2657,8 @@ public final class Options {
       if (isCredential_ != false) {
         output.writeBool(1941316, isCredential_);
       }
-      if (privateSdk_ != false) {
-        output.writeBool(1941318, privateSdk_);
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941318, targets_.getRaw(i));
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, terraformDiffSuppressFunc_);
@@ -2150,6 +2686,10 @@ public final class Options {
       if (required_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941304, required_);
+      }
+      if (custom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1941305, getCustom());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformComputed_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, terraformComputed_);
@@ -2187,9 +2727,13 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941316, isCredential_);
       }
-      if (privateSdk_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941318, privateSdk_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, terraformDiffSuppressFunc_);
@@ -2224,8 +2768,8 @@ public final class Options {
           != other.getReadOnly()) return false;
       if (getIsCredential()
           != other.getIsCredential()) return false;
-      if (getPrivateSdk()
-          != other.getPrivateSdk()) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
       if (!getTerraformComputed()
           .equals(other.getTerraformComputed())) return false;
       if (getTerraformForceNew()
@@ -2244,6 +2788,11 @@ public final class Options {
           .equals(other.getJsonGatewayName())) return false;
       if (getHideFromJsonGateway()
           != other.getHideFromJsonGateway()) return false;
+      if (hasCustom() != other.hasCustom()) return false;
+      if (hasCustom()) {
+        if (!getCustom()
+            .equals(other.getCustom())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2273,9 +2822,10 @@ public final class Options {
       hash = (37 * hash) + IS_CREDENTIAL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsCredential());
-      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPrivateSdk());
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
       hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformComputed().hashCode();
       hash = (37 * hash) + TERRAFORM_FORCE_NEW_FIELD_NUMBER;
@@ -2297,6 +2847,10 @@ public final class Options {
       hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getHideFromJsonGateway());
+      if (hasCustom()) {
+        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+        hash = (53 * hash) + getCustom().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2442,8 +2996,8 @@ public final class Options {
 
         isCredential_ = false;
 
-        privateSdk_ = false;
-
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         terraformComputed_ = "";
 
         terraformForceNew_ = false;
@@ -2462,6 +3016,12 @@ public final class Options {
 
         hideFromJsonGateway_ = false;
 
+        if (customBuilder_ == null) {
+          custom_ = null;
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
         return this;
       }
 
@@ -2488,13 +3048,18 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Options.FieldOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.FieldOptions result = new com.strongdm.api.v1.plumbing.Options.FieldOptions(this);
+        int from_bitField0_ = bitField0_;
         result.exposeAsPorcelain_ = exposeAsPorcelain_;
         result.iterable_ = iterable_;
         result.required_ = required_;
         result.writeOnly_ = writeOnly_;
         result.readOnly_ = readOnly_;
         result.isCredential_ = isCredential_;
-        result.privateSdk_ = privateSdk_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
         result.terraformComputed_ = terraformComputed_;
         result.terraformForceNew_ = terraformForceNew_;
         result.terraformSensitive_ = terraformSensitive_;
@@ -2504,6 +3069,11 @@ public final class Options {
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
         result.hideFromJsonGateway_ = hideFromJsonGateway_;
+        if (customBuilder_ == null) {
+          result.custom_ = custom_;
+        } else {
+          result.custom_ = customBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2570,8 +3140,15 @@ public final class Options {
         if (other.getIsCredential() != false) {
           setIsCredential(other.getIsCredential());
         }
-        if (other.getPrivateSdk() != false) {
-          setPrivateSdk(other.getPrivateSdk());
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
         }
         if (!other.getTerraformComputed().isEmpty()) {
           terraformComputed_ = other.terraformComputed_;
@@ -2606,6 +3183,9 @@ public final class Options {
         if (other.getHideFromJsonGateway() != false) {
           setHideFromJsonGateway(other.getHideFromJsonGateway());
         }
+        if (other.hasCustom()) {
+          mergeCustom(other.getCustom());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2634,6 +3214,7 @@ public final class Options {
         }
         return this;
       }
+      private int bitField0_;
 
       private boolean exposeAsPorcelain_ ;
       /**
@@ -2854,45 +3435,148 @@ public final class Options {
         return this;
       }
 
-      private boolean privateSdk_ ;
-      /**
-       * <pre>
-       * private_sdk indicates that the field should not be exposed via the public sdk.
-       * </pre>
-       *
-       * <code>bool private_sdk = 1941318;</code>
-       * @return The privateSdk.
-       */
-      @java.lang.Override
-      public boolean getPrivateSdk() {
-        return privateSdk_;
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <pre>
-       * private_sdk indicates that the field should not be exposed via the public sdk.
+       * targets indicates that the field should only be exposed in the provided targets.
        * </pre>
        *
-       * <code>bool private_sdk = 1941318;</code>
-       * @param value The privateSdk to set.
+       * <code>repeated string targets = 1941318;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the field should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941318;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the field should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941318;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the field should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941318;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the field should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941318;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
        * @return This builder for chaining.
        */
-      public Builder setPrivateSdk(boolean value) {
-        
-        privateSdk_ = value;
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * private_sdk indicates that the field should not be exposed via the public sdk.
+       * targets indicates that the field should only be exposed in the provided targets.
        * </pre>
        *
-       * <code>bool private_sdk = 1941318;</code>
+       * <code>repeated string targets = 1941318;</code>
+       * @param value The targets to add.
        * @return This builder for chaining.
        */
-      public Builder clearPrivateSdk() {
-        
-        privateSdk_ = false;
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the field should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941318;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the field should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941318;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the field should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941318;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
         onChanged();
         return this;
       }
@@ -3552,6 +4236,125 @@ public final class Options {
         onChanged();
         return this;
       }
+
+      private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> customBuilder_;
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * @return Whether the custom field is set.
+       */
+      public boolean hasCustom() {
+        return customBuilder_ != null || custom_ != null;
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * @return The custom.
+       */
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
+        if (customBuilder_ == null) {
+          return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
+        } else {
+          return customBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
+        if (customBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          custom_ = value;
+          onChanged();
+        } else {
+          customBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(
+          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder builderForValue) {
+        if (customBuilder_ == null) {
+          custom_ = builderForValue.build();
+          onChanged();
+        } else {
+          customBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       */
+      public Builder mergeCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
+        if (customBuilder_ == null) {
+          if (custom_ != null) {
+            custom_ =
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
+          } else {
+            custom_ = value;
+          }
+          onChanged();
+        } else {
+          customBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       */
+      public Builder clearCustom() {
+        if (customBuilder_ == null) {
+          custom_ = null;
+          onChanged();
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder getCustomBuilder() {
+        
+        onChanged();
+        return getCustomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
+        if (customBuilder_ != null) {
+          return customBuilder_.getMessageOrBuilder();
+        } else {
+          return custom_ == null ?
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
+        }
+      }
+      /**
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> 
+          getCustomFieldBuilder() {
+        if (customBuilder_ == null) {
+          customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder>(
+                  getCustom(),
+                  getParentForChildren(),
+                  isClean());
+          custom_ = null;
+        }
+        return customBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3652,25 +4455,60 @@ public final class Options {
         getOptionsFieldBytes();
 
     /**
-     * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
      * @return Whether the custom field is set.
      */
     boolean hasCustom();
     /**
-     * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
      * @return The custom.
      */
-    com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions getCustom();
+    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom();
     /**
-     * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
      */
-    com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder getCustomOrBuilder();
+    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder();
 
     /**
-     * <code>bool private_sdk = 1941306;</code>
-     * @return The privateSdk.
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @return A list containing the targets.
      */
-    boolean getPrivateSdk();
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
 
     /**
      * <code>string cli_name = 1941307;</code>
@@ -3755,6 +4593,7 @@ public final class Options {
     }
     private MessageOptions() {
       optionsField_ = "";
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       cliName_ = "";
       cliJsonName_ = "";
       jsonGatewayName_ = "";
@@ -3781,6 +4620,7 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3821,11 +4661,11 @@ public final class Options {
               break;
             }
             case 15530442: {
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder subBuilder = null;
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder subBuilder = null;
               if (custom_ != null) {
                 subBuilder = custom_.toBuilder();
               }
-              custom_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.parser(), extensionRegistry);
+              custom_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(custom_);
                 custom_ = subBuilder.buildPartial();
@@ -3833,9 +4673,13 @@ public final class Options {
 
               break;
             }
-            case 15530448: {
-
-              privateSdk_ = input.readBool();
+            case 15530450: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
               break;
             }
             case 15530458: {
@@ -3882,6 +4726,9 @@ public final class Options {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3978,9 +4825,9 @@ public final class Options {
     }
 
     public static final int CUSTOM_FIELD_NUMBER = 1941305;
-    private com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions custom_;
+    private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
     /**
-     * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
      * @return Whether the custom field is set.
      */
     @java.lang.Override
@@ -3988,30 +4835,70 @@ public final class Options {
       return custom_ != null;
     }
     /**
-     * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
      * @return The custom.
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions getCustom() {
-      return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.getDefaultInstance() : custom_;
+    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
+      return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
     }
     /**
-     * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
      */
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder getCustomOrBuilder() {
+    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
       return getCustom();
     }
 
-    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941306;
-    private boolean privateSdk_;
+    public static final int TARGETS_FIELD_NUMBER = 1941306;
+    private com.google.protobuf.LazyStringList targets_;
     /**
-     * <code>bool private_sdk = 1941306;</code>
-     * @return The privateSdk.
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @return A list containing the targets.
      */
-    @java.lang.Override
-    public boolean getPrivateSdk() {
-      return privateSdk_;
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
     }
 
     public static final int CLI_NAME_FIELD_NUMBER = 1941307;
@@ -4232,8 +5119,8 @@ public final class Options {
       if (custom_ != null) {
         output.writeMessage(1941305, getCustom());
       }
-      if (privateSdk_ != false) {
-        output.writeBool(1941306, privateSdk_);
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941306, targets_.getRaw(i));
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, cliName_);
@@ -4278,9 +5165,13 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1941305, getCustom());
       }
-      if (privateSdk_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941306, privateSdk_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, cliName_);
@@ -4324,8 +5215,8 @@ public final class Options {
         if (!getCustom()
             .equals(other.getCustom())) return false;
       }
-      if (getPrivateSdk()
-          != other.getPrivateSdk()) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
       if (!getCliName()
           .equals(other.getCliName())) return false;
       if (!getCliJsonName()
@@ -4363,9 +5254,10 @@ public final class Options {
         hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
         hash = (53 * hash) + getCustom().hashCode();
       }
-      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPrivateSdk());
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
       hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCliName().hashCode();
       hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
@@ -4526,8 +5418,8 @@ public final class Options {
           custom_ = null;
           customBuilder_ = null;
         }
-        privateSdk_ = false;
-
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         cliName_ = "";
 
         cliJsonName_ = "";
@@ -4570,6 +5462,7 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Options.MessageOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.MessageOptions result = new com.strongdm.api.v1.plumbing.Options.MessageOptions(this);
+        int from_bitField0_ = bitField0_;
         result.porcelain_ = porcelain_;
         result.error_ = error_;
         result.optionsField_ = optionsField_;
@@ -4578,7 +5471,11 @@ public final class Options {
         } else {
           result.custom_ = customBuilder_.build();
         }
-        result.privateSdk_ = privateSdk_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
         result.cliName_ = cliName_;
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
@@ -4650,8 +5547,15 @@ public final class Options {
         if (other.hasCustom()) {
           mergeCustom(other.getCustom());
         }
-        if (other.getPrivateSdk() != false) {
-          setPrivateSdk(other.getPrivateSdk());
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
         }
         if (!other.getCliName().isEmpty()) {
           cliName_ = other.cliName_;
@@ -4703,6 +5607,7 @@ public final class Options {
         }
         return this;
       }
+      private int bitField0_;
 
       private boolean porcelain_ ;
       /**
@@ -4891,31 +5796,31 @@ public final class Options {
         return this;
       }
 
-      private com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions custom_;
+      private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder> customBuilder_;
+          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> customBuilder_;
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        * @return Whether the custom field is set.
        */
       public boolean hasCustom() {
         return customBuilder_ != null || custom_ != null;
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        * @return The custom.
        */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions getCustom() {
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
         if (customBuilder_ == null) {
-          return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.getDefaultInstance() : custom_;
+          return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
         } else {
           return customBuilder_.getMessage();
         }
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        */
-      public Builder setCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions value) {
+      public Builder setCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
         if (customBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4929,10 +5834,10 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        */
       public Builder setCustom(
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder builderForValue) {
         if (customBuilder_ == null) {
           custom_ = builderForValue.build();
           onChanged();
@@ -4943,13 +5848,13 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        */
-      public Builder mergeCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions value) {
+      public Builder mergeCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
         if (customBuilder_ == null) {
           if (custom_ != null) {
             custom_ =
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
           } else {
             custom_ = value;
           }
@@ -4961,7 +5866,7 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        */
       public Builder clearCustom() {
         if (customBuilder_ == null) {
@@ -4975,33 +5880,33 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder getCustomBuilder() {
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder getCustomBuilder() {
         
         onChanged();
         return getCustomFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder getCustomOrBuilder() {
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
         if (customBuilder_ != null) {
           return customBuilder_.getMessageOrBuilder();
         } else {
           return custom_ == null ?
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.getDefaultInstance() : custom_;
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
         }
       }
       /**
-       * <code>.v1.CustomPorcelainMessageOptions custom = 1941305;</code>
+       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder> 
+          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> 
           getCustomFieldBuilder() {
         if (customBuilder_ == null) {
           customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder>(
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder>(
                   getCustom(),
                   getParentForChildren(),
                   isClean());
@@ -5010,33 +5915,148 @@ public final class Options {
         return customBuilder_;
       }
 
-      private boolean privateSdk_ ;
-      /**
-       * <code>bool private_sdk = 1941306;</code>
-       * @return The privateSdk.
-       */
-      @java.lang.Override
-      public boolean getPrivateSdk() {
-        return privateSdk_;
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
-       * <code>bool private_sdk = 1941306;</code>
-       * @param value The privateSdk to set.
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
        * @return This builder for chaining.
        */
-      public Builder setPrivateSdk(boolean value) {
-        
-        privateSdk_ = value;
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>bool private_sdk = 1941306;</code>
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param value The targets to add.
        * @return This builder for chaining.
        */
-      public Builder clearPrivateSdk() {
-        
-        privateSdk_ = false;
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
         onChanged();
         return this;
       }
@@ -5547,8 +6567,8 @@ public final class Options {
 
   }
 
-  public interface CustomPorcelainMessageOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.CustomPorcelainMessageOptions)
+  public interface CustomPorcelainTypeOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.CustomPorcelainTypeOptions)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -5635,6 +6655,26 @@ public final class Options {
 
     /**
      * <pre>
+     * terraform_elem_type allows you to customize the element type of a list in terraform
+     * </pre>
+     *
+     * <code>string terraform_elem_type = 1941314;</code>
+     * @return The terraformElemType.
+     */
+    java.lang.String getTerraformElemType();
+    /**
+     * <pre>
+     * terraform_elem_type allows you to customize the element type of a list in terraform
+     * </pre>
+     *
+     * <code>string terraform_elem_type = 1941314;</code>
+     * @return The bytes for terraformElemType.
+     */
+    com.google.protobuf.ByteString
+        getTerraformElemTypeBytes();
+
+    /**
+     * <pre>
      * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
      * </pre>
      *
@@ -5652,38 +6692,60 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getOpenapiPorcelainTypeBytes();
+
+    /**
+     * <pre>
+     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+     * </pre>
+     *
+     * <code>string json_gateway_porcelain_type = 1941315;</code>
+     * @return The jsonGatewayPorcelainType.
+     */
+    java.lang.String getJsonGatewayPorcelainType();
+    /**
+     * <pre>
+     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+     * </pre>
+     *
+     * <code>string json_gateway_porcelain_type = 1941315;</code>
+     * @return The bytes for jsonGatewayPorcelainType.
+     */
+    com.google.protobuf.ByteString
+        getJsonGatewayPorcelainTypeBytes();
   }
   /**
    * <pre>
-   * CustomPorcelainMessageOptions allows you to create a message type that
+   * CustomPorcelainTypeOptions allows you to create a message type that
    * is converted from the underlying proto message into whatever representation
    * is most appropriate in the target languages.
    * </pre>
    *
-   * Protobuf type {@code v1.CustomPorcelainMessageOptions}
+   * Protobuf type {@code v1.CustomPorcelainTypeOptions}
    */
-  public static final class CustomPorcelainMessageOptions extends
+  public static final class CustomPorcelainTypeOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.CustomPorcelainMessageOptions)
-      CustomPorcelainMessageOptionsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.CustomPorcelainTypeOptions)
+      CustomPorcelainTypeOptionsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CustomPorcelainMessageOptions.newBuilder() to construct.
-    private CustomPorcelainMessageOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CustomPorcelainTypeOptions.newBuilder() to construct.
+    private CustomPorcelainTypeOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CustomPorcelainMessageOptions() {
+    private CustomPorcelainTypeOptions() {
       converter_ = "";
       goPorcelainType_ = "";
       javaPorcelainType_ = "";
       terraformPorcelainType_ = "";
+      terraformElemType_ = "";
       openapiPorcelainType_ = "";
+      jsonGatewayPorcelainType_ = "";
     }
 
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CustomPorcelainMessageOptions();
+      return new CustomPorcelainTypeOptions();
     }
 
     @java.lang.Override
@@ -5691,7 +6753,7 @@ public final class Options {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CustomPorcelainMessageOptions(
+    private CustomPorcelainTypeOptions(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5739,6 +6801,18 @@ public final class Options {
               openapiPorcelainType_ = s;
               break;
             }
+            case 15530514: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              terraformElemType_ = s;
+              break;
+            }
+            case 15530522: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              jsonGatewayPorcelainType_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5760,15 +6834,15 @@ public final class Options {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainMessageOptions_descriptor;
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.class, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder.class);
+              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.class, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder.class);
     }
 
     public static final int CONVERTER_FIELD_NUMBER = 1941309;
@@ -5957,6 +7031,52 @@ public final class Options {
       }
     }
 
+    public static final int TERRAFORM_ELEM_TYPE_FIELD_NUMBER = 1941314;
+    private volatile java.lang.Object terraformElemType_;
+    /**
+     * <pre>
+     * terraform_elem_type allows you to customize the element type of a list in terraform
+     * </pre>
+     *
+     * <code>string terraform_elem_type = 1941314;</code>
+     * @return The terraformElemType.
+     */
+    @java.lang.Override
+    public java.lang.String getTerraformElemType() {
+      java.lang.Object ref = terraformElemType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        terraformElemType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * terraform_elem_type allows you to customize the element type of a list in terraform
+     * </pre>
+     *
+     * <code>string terraform_elem_type = 1941314;</code>
+     * @return The bytes for terraformElemType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTerraformElemTypeBytes() {
+      java.lang.Object ref = terraformElemType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        terraformElemType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int OPENAPI_PORCELAIN_TYPE_FIELD_NUMBER = 1941313;
     private volatile java.lang.Object openapiPorcelainType_;
     /**
@@ -6003,6 +7123,52 @@ public final class Options {
       }
     }
 
+    public static final int JSON_GATEWAY_PORCELAIN_TYPE_FIELD_NUMBER = 1941315;
+    private volatile java.lang.Object jsonGatewayPorcelainType_;
+    /**
+     * <pre>
+     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+     * </pre>
+     *
+     * <code>string json_gateway_porcelain_type = 1941315;</code>
+     * @return The jsonGatewayPorcelainType.
+     */
+    @java.lang.Override
+    public java.lang.String getJsonGatewayPorcelainType() {
+      java.lang.Object ref = jsonGatewayPorcelainType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        jsonGatewayPorcelainType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+     * </pre>
+     *
+     * <code>string json_gateway_porcelain_type = 1941315;</code>
+     * @return The bytes for jsonGatewayPorcelainType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJsonGatewayPorcelainTypeBytes() {
+      java.lang.Object ref = jsonGatewayPorcelainType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jsonGatewayPorcelainType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6032,6 +7198,12 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiPorcelainType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941313, openapiPorcelainType_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformElemType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941314, terraformElemType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayPorcelainType_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941315, jsonGatewayPorcelainType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6056,6 +7228,12 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiPorcelainType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941313, openapiPorcelainType_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformElemType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941314, terraformElemType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayPorcelainType_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941315, jsonGatewayPorcelainType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6066,10 +7244,10 @@ public final class Options {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions)) {
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions other = (com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions) obj;
+      com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions other = (com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions) obj;
 
       if (!getConverter()
           .equals(other.getConverter())) return false;
@@ -6079,8 +7257,12 @@ public final class Options {
           .equals(other.getJavaPorcelainType())) return false;
       if (!getTerraformPorcelainType()
           .equals(other.getTerraformPorcelainType())) return false;
+      if (!getTerraformElemType()
+          .equals(other.getTerraformElemType())) return false;
       if (!getOpenapiPorcelainType()
           .equals(other.getOpenapiPorcelainType())) return false;
+      if (!getJsonGatewayPorcelainType()
+          .equals(other.getJsonGatewayPorcelainType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6100,76 +7282,80 @@ public final class Options {
       hash = (53 * hash) + getJavaPorcelainType().hashCode();
       hash = (37 * hash) + TERRAFORM_PORCELAIN_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformPorcelainType().hashCode();
+      hash = (37 * hash) + TERRAFORM_ELEM_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getTerraformElemType().hashCode();
       hash = (37 * hash) + OPENAPI_PORCELAIN_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getOpenapiPorcelainType().hashCode();
+      hash = (37 * hash) + JSON_GATEWAY_PORCELAIN_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getJsonGatewayPorcelainType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(byte[] data)
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseDelimitedFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6182,7 +7368,7 @@ public final class Options {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions prototype) {
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6199,31 +7385,31 @@ public final class Options {
     }
     /**
      * <pre>
-     * CustomPorcelainMessageOptions allows you to create a message type that
+     * CustomPorcelainTypeOptions allows you to create a message type that
      * is converted from the underlying proto message into whatever representation
      * is most appropriate in the target languages.
      * </pre>
      *
-     * Protobuf type {@code v1.CustomPorcelainMessageOptions}
+     * Protobuf type {@code v1.CustomPorcelainTypeOptions}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.CustomPorcelainMessageOptions)
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptionsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.CustomPorcelainTypeOptions)
+        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainMessageOptions_descriptor;
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.class, com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.Builder.class);
+                com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.class, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder.class);
       }
 
-      // Construct using com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.newBuilder()
+      // Construct using com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6249,7 +7435,11 @@ public final class Options {
 
         terraformPorcelainType_ = "";
 
+        terraformElemType_ = "";
+
         openapiPorcelainType_ = "";
+
+        jsonGatewayPorcelainType_ = "";
 
         return this;
       }
@@ -6257,17 +7447,17 @@ public final class Options {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainMessageOptions_descriptor;
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.getDefaultInstance();
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions build() {
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions result = buildPartial();
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions build() {
+        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6275,13 +7465,15 @@ public final class Options {
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions buildPartial() {
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions result = new com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions(this);
+      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions result = new com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions(this);
         result.converter_ = converter_;
         result.goPorcelainType_ = goPorcelainType_;
         result.javaPorcelainType_ = javaPorcelainType_;
         result.terraformPorcelainType_ = terraformPorcelainType_;
+        result.terraformElemType_ = terraformElemType_;
         result.openapiPorcelainType_ = openapiPorcelainType_;
+        result.jsonGatewayPorcelainType_ = jsonGatewayPorcelainType_;
         onBuilt();
         return result;
       }
@@ -6320,16 +7512,16 @@ public final class Options {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions)other);
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions other) {
-        if (other == com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance()) return this;
         if (!other.getConverter().isEmpty()) {
           converter_ = other.converter_;
           onChanged();
@@ -6346,8 +7538,16 @@ public final class Options {
           terraformPorcelainType_ = other.terraformPorcelainType_;
           onChanged();
         }
+        if (!other.getTerraformElemType().isEmpty()) {
+          terraformElemType_ = other.terraformElemType_;
+          onChanged();
+        }
         if (!other.getOpenapiPorcelainType().isEmpty()) {
           openapiPorcelainType_ = other.openapiPorcelainType_;
+          onChanged();
+        }
+        if (!other.getJsonGatewayPorcelainType().isEmpty()) {
+          jsonGatewayPorcelainType_ = other.jsonGatewayPorcelainType_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -6365,11 +7565,11 @@ public final class Options {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions parsedMessage = null;
+        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6768,6 +7968,102 @@ public final class Options {
         return this;
       }
 
+      private java.lang.Object terraformElemType_ = "";
+      /**
+       * <pre>
+       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * </pre>
+       *
+       * <code>string terraform_elem_type = 1941314;</code>
+       * @return The terraformElemType.
+       */
+      public java.lang.String getTerraformElemType() {
+        java.lang.Object ref = terraformElemType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          terraformElemType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * </pre>
+       *
+       * <code>string terraform_elem_type = 1941314;</code>
+       * @return The bytes for terraformElemType.
+       */
+      public com.google.protobuf.ByteString
+          getTerraformElemTypeBytes() {
+        java.lang.Object ref = terraformElemType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          terraformElemType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * </pre>
+       *
+       * <code>string terraform_elem_type = 1941314;</code>
+       * @param value The terraformElemType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformElemType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        terraformElemType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * </pre>
+       *
+       * <code>string terraform_elem_type = 1941314;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTerraformElemType() {
+        
+        terraformElemType_ = getDefaultInstance().getTerraformElemType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * </pre>
+       *
+       * <code>string terraform_elem_type = 1941314;</code>
+       * @param value The bytes for terraformElemType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformElemTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        terraformElemType_ = value;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object openapiPorcelainType_ = "";
       /**
        * <pre>
@@ -6863,6 +8159,102 @@ public final class Options {
         onChanged();
         return this;
       }
+
+      private java.lang.Object jsonGatewayPorcelainType_ = "";
+      /**
+       * <pre>
+       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+       * </pre>
+       *
+       * <code>string json_gateway_porcelain_type = 1941315;</code>
+       * @return The jsonGatewayPorcelainType.
+       */
+      public java.lang.String getJsonGatewayPorcelainType() {
+        java.lang.Object ref = jsonGatewayPorcelainType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          jsonGatewayPorcelainType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+       * </pre>
+       *
+       * <code>string json_gateway_porcelain_type = 1941315;</code>
+       * @return The bytes for jsonGatewayPorcelainType.
+       */
+      public com.google.protobuf.ByteString
+          getJsonGatewayPorcelainTypeBytes() {
+        java.lang.Object ref = jsonGatewayPorcelainType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jsonGatewayPorcelainType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+       * </pre>
+       *
+       * <code>string json_gateway_porcelain_type = 1941315;</code>
+       * @param value The jsonGatewayPorcelainType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonGatewayPorcelainType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        jsonGatewayPorcelainType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+       * </pre>
+       *
+       * <code>string json_gateway_porcelain_type = 1941315;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJsonGatewayPorcelainType() {
+        
+        jsonGatewayPorcelainType_ = getDefaultInstance().getJsonGatewayPorcelainType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
+       * </pre>
+       *
+       * <code>string json_gateway_porcelain_type = 1941315;</code>
+       * @param value The bytes for jsonGatewayPorcelainType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJsonGatewayPorcelainTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        jsonGatewayPorcelainType_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6876,41 +8268,41 @@ public final class Options {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.CustomPorcelainMessageOptions)
+      // @@protoc_insertion_point(builder_scope:v1.CustomPorcelainTypeOptions)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.CustomPorcelainMessageOptions)
-    private static final com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.CustomPorcelainTypeOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions();
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions();
     }
 
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CustomPorcelainMessageOptions>
-        PARSER = new com.google.protobuf.AbstractParser<CustomPorcelainMessageOptions>() {
+    private static final com.google.protobuf.Parser<CustomPorcelainTypeOptions>
+        PARSER = new com.google.protobuf.AbstractParser<CustomPorcelainTypeOptions>() {
       @java.lang.Override
-      public CustomPorcelainMessageOptions parsePartialFrom(
+      public CustomPorcelainTypeOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CustomPorcelainMessageOptions(input, extensionRegistry);
+        return new CustomPorcelainTypeOptions(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CustomPorcelainMessageOptions> parser() {
+    public static com.google.protobuf.Parser<CustomPorcelainTypeOptions> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CustomPorcelainMessageOptions> getParserForType() {
+    public com.google.protobuf.Parser<CustomPorcelainTypeOptions> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainMessageOptions getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8301,10 +9693,29 @@ public final class Options {
         getIdPrefixBytes();
 
     /**
-     * <code>bool private_sdk = 1941401;</code>
-     * @return The privateSdk.
+     * <code>repeated string targets = 1941401;</code>
+     * @return A list containing the targets.
      */
-    boolean getPrivateSdk();
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <code>repeated string targets = 1941401;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
   }
   /**
    * Protobuf type {@code v1.ServiceOptions}
@@ -8321,6 +9732,7 @@ public final class Options {
     private ServiceOptions() {
       mainNoun_ = "";
       idPrefix_ = "";
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -8343,6 +9755,7 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -8359,9 +9772,13 @@ public final class Options {
               mainNoun_ = s;
               break;
             }
-            case 15531208: {
-
-              privateSdk_ = input.readBool();
+            case 15531210: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
               break;
             }
             case 15531218: {
@@ -8385,6 +9802,9 @@ public final class Options {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -8478,15 +9898,39 @@ public final class Options {
       }
     }
 
-    public static final int PRIVATE_SDK_FIELD_NUMBER = 1941401;
-    private boolean privateSdk_;
+    public static final int TARGETS_FIELD_NUMBER = 1941401;
+    private com.google.protobuf.LazyStringList targets_;
     /**
-     * <code>bool private_sdk = 1941401;</code>
-     * @return The privateSdk.
+     * <code>repeated string targets = 1941401;</code>
+     * @return A list containing the targets.
      */
-    @java.lang.Override
-    public boolean getPrivateSdk() {
-      return privateSdk_;
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated string targets = 1941401;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8506,8 +9950,8 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941400, mainNoun_);
       }
-      if (privateSdk_ != false) {
-        output.writeBool(1941401, privateSdk_);
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941401, targets_.getRaw(i));
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941402, idPrefix_);
@@ -8524,9 +9968,13 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941400, mainNoun_);
       }
-      if (privateSdk_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941401, privateSdk_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941402, idPrefix_);
@@ -8550,8 +9998,8 @@ public final class Options {
           .equals(other.getMainNoun())) return false;
       if (!getIdPrefix()
           .equals(other.getIdPrefix())) return false;
-      if (getPrivateSdk()
-          != other.getPrivateSdk()) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8567,9 +10015,10 @@ public final class Options {
       hash = (53 * hash) + getMainNoun().hashCode();
       hash = (37 * hash) + ID_PREFIX_FIELD_NUMBER;
       hash = (53 * hash) + getIdPrefix().hashCode();
-      hash = (37 * hash) + PRIVATE_SDK_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPrivateSdk());
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8707,8 +10156,8 @@ public final class Options {
 
         idPrefix_ = "";
 
-        privateSdk_ = false;
-
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -8735,9 +10184,14 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Options.ServiceOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.ServiceOptions result = new com.strongdm.api.v1.plumbing.Options.ServiceOptions(this);
+        int from_bitField0_ = bitField0_;
         result.mainNoun_ = mainNoun_;
         result.idPrefix_ = idPrefix_;
-        result.privateSdk_ = privateSdk_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
         onBuilt();
         return result;
       }
@@ -8794,8 +10248,15 @@ public final class Options {
           idPrefix_ = other.idPrefix_;
           onChanged();
         }
-        if (other.getPrivateSdk() != false) {
-          setPrivateSdk(other.getPrivateSdk());
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8825,6 +10286,7 @@ public final class Options {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object mainNoun_ = "";
       /**
@@ -8978,33 +10440,112 @@ public final class Options {
         return this;
       }
 
-      private boolean privateSdk_ ;
-      /**
-       * <code>bool private_sdk = 1941401;</code>
-       * @return The privateSdk.
-       */
-      @java.lang.Override
-      public boolean getPrivateSdk() {
-        return privateSdk_;
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
-       * <code>bool private_sdk = 1941401;</code>
-       * @param value The privateSdk to set.
+       * <code>repeated string targets = 1941401;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string targets = 1941401;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
        * @return This builder for chaining.
        */
-      public Builder setPrivateSdk(boolean value) {
-        
-        privateSdk_ = value;
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>bool private_sdk = 1941401;</code>
+       * <code>repeated string targets = 1941401;</code>
+       * @param value The targets to add.
        * @return This builder for chaining.
        */
-      public Builder clearPrivateSdk() {
-        
-        privateSdk_ = false;
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 1941401;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 1941401;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 1941401;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
         onChanged();
         return this;
       }
@@ -9148,10 +10689,10 @@ public final class Options {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_MessageOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_CustomPorcelainMessageOptions_descriptor;
+    internal_static_v1_CustomPorcelainTypeOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable;
+      internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_TerraformDocs_descriptor;
   private static final 
@@ -9177,53 +10718,56 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"0\n\rMethodOptions\022\020\n\006method" +
-      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\"$\n\013FileOptions\022\025" +
-      "\n\013private_sdk\030\304\301v \001(\010\"\306\003\n\014FieldOptions\022\035" +
-      "\n\023expose_as_porcelain\030\266\276v \001(\010\022\022\n\010iterabl" +
-      "e\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite_o" +
-      "nly\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris_c" +
-      "redential\030\304\276v \001(\010\022\025\n\013private_sdk\030\306\276v \001(\010" +
-      "\022\034\n\022terraform_computed\030\273\276v \001(\t\022\035\n\023terraf" +
-      "orm_force_new\030\274\276v \001(\010\022\035\n\023terraform_sensi" +
-      "tive\030\276\276v \001(\010\022&\n\034terraform_diff_suppress_" +
-      "func\030\307\276v \001(\t\022$\n\032terraform_comment_overri" +
-      "de\030\310\276v \001(\t\022\022\n\010cli_name\030\277\276v \001(\t\022\027\n\rcli_js" +
-      "on_name\030\300\276v \001(\t\022\033\n\021json_gateway_name\030\301\276v" +
-      " \001(\t\022 \n\026hide_from_json_gateway\030\302\276v \001(\010\"\327" +
-      "\002\n\016MessageOptions\022\023\n\tporcelain\030\265\276v \001(\010\022\017" +
-      "\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t" +
-      "\0223\n\006custom\030\271\276v \001(\0132!.v1.CustomPorcelainM" +
-      "essageOptions\022\025\n\013private_sdk\030\272\276v \001(\010\022\022\n\010" +
-      "cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001(" +
-      "\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022 \n\026hide_f" +
-      "rom_json_gateway\030\276\276v \001(\010\022+\n\016terraform_do" +
-      "cs\030\270\276v \001(\0132\021.v1.TerraformDocs\022!\n\027terrafo" +
-      "rm_provider_name\030\277\276v \001(\t\"\266\001\n\035CustomPorce" +
-      "lainMessageOptions\022\023\n\tconverter\030\275\276v \001(\t\022" +
-      "\033\n\021go_porcelain_type\030\276\276v \001(\t\022\035\n\023java_por" +
-      "celain_type\030\277\276v \001(\t\022\"\n\030terraform_porcela" +
-      "in_type\030\300\276v \001(\t\022 \n\026openapi_porcelain_typ" +
-      "e\030\301\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025resource_e" +
-      "xample_path\030\264\276v \001(\t\022\"\n\030data_source_examp" +
-      "le_path\030\265\276v \001(\t\"\'\n\014OneofOptions\022\027\n\rcommo" +
-      "n_fields\030\205\277v \003(\t\"Q\n\016ServiceOptions\022\023\n\tma" +
-      "in_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030\232\277v \001(\t\022\025\n\013" +
-      "private_sdk\030\231\277v \001(\010:K\n\016method_options\022\036." +
-      "google.protobuf.MethodOptions\030\220\277v \001(\0132\021." +
-      "v1.MethodOptions:E\n\014file_options\022\034.googl" +
-      "e.protobuf.FileOptions\030\250\302v \001(\0132\017.v1.File" +
-      "Options:H\n\rfield_options\022\035.google.protob" +
-      "uf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOption" +
-      "s:N\n\017message_options\022\037.google.protobuf.M" +
-      "essageOptions\030\217\277v \001(\0132\022.v1.MessageOption" +
-      "s:H\n\roneof_options\022\035.google.protobuf.One" +
-      "ofOptions\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017s" +
-      "ervice_options\022\037.google.protobuf.Service" +
-      "Options\030\231\277v \001(\0132\022.v1.ServiceOptionsBR\n\034c" +
-      "om.strongdm.api.v1.plumbingZ2github.com/" +
-      "strongdm/strongdm-sdk-go/internal/v1;v1b" +
-      "\006proto3"
+      "criptor.proto\"L\n\rMethodOptions\022\020\n\006method" +
+      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecation_d" +
+      "ate\030\266\276v \001(\t\" \n\013FileOptions\022\021\n\007targets\030\304\301" +
+      "v \003(\t\"\364\003\n\014FieldOptions\022\035\n\023expose_as_porc" +
+      "elain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010\022\022\n\010req" +
+      "uired\030\270\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tr" +
+      "ead_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(" +
+      "\010\022\021\n\007targets\030\306\276v \003(\t\022\034\n\022terraform_comput" +
+      "ed\030\273\276v \001(\t\022\035\n\023terraform_force_new\030\274\276v \001(" +
+      "\010\022\035\n\023terraform_sensitive\030\276\276v \001(\010\022&\n\034terr" +
+      "aform_diff_suppress_func\030\307\276v \001(\t\022$\n\032terr" +
+      "aform_comment_override\030\310\276v \001(\t\022\022\n\010cli_na" +
+      "me\030\277\276v \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022\033\n\021j" +
+      "son_gateway_name\030\301\276v \001(\t\022 \n\026hide_from_js" +
+      "on_gateway\030\302\276v \001(\010\0220\n\006custom\030\271\276v \001(\0132\036.v" +
+      "1.CustomPorcelainTypeOptions\"\320\002\n\016Message" +
+      "Options\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276" +
+      "v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\0220\n\006custom" +
+      "\030\271\276v \001(\0132\036.v1.CustomPorcelainTypeOptions" +
+      "\022\021\n\007targets\030\272\276v \003(\t\022\022\n\010cli_name\030\273\276v \001(\t\022" +
+      "\027\n\rcli_json_name\030\274\276v \001(\t\022\033\n\021json_gateway" +
+      "_name\030\275\276v \001(\t\022 \n\026hide_from_json_gateway\030" +
+      "\276\276v \001(\010\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.T" +
+      "erraformDocs\022!\n\027terraform_provider_name\030" +
+      "\277\276v \001(\t\"\371\001\n\032CustomPorcelainTypeOptions\022\023" +
+      "\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_type" +
+      "\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t\022" +
+      "\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022\035\n\023t" +
+      "erraform_elem_type\030\302\276v \001(\t\022 \n\026openapi_po" +
+      "rcelain_type\030\301\276v \001(\t\022%\n\033json_gateway_por" +
+      "celain_type\030\303\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025" +
+      "resource_example_path\030\264\276v \001(\t\022\"\n\030data_so" +
+      "urce_example_path\030\265\276v \001(\t\"\'\n\014OneofOption" +
+      "s\022\027\n\rcommon_fields\030\205\277v \003(\t\"M\n\016ServiceOpt" +
+      "ions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030\232" +
+      "\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:K\n\016method_opti" +
+      "ons\022\036.google.protobuf.MethodOptions\030\220\277v " +
+      "\001(\0132\021.v1.MethodOptions:E\n\014file_options\022\034" +
+      ".google.protobuf.FileOptions\030\250\302v \001(\0132\017.v" +
+      "1.FileOptions:H\n\rfield_options\022\035.google." +
+      "protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Field" +
+      "Options:N\n\017message_options\022\037.google.prot" +
+      "obuf.MessageOptions\030\217\277v \001(\0132\022.v1.Message" +
+      "Options:H\n\roneof_options\022\035.google.protob" +
+      "uf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOption" +
+      "s:N\n\017service_options\022\037.google.protobuf.S" +
+      "erviceOptions\030\231\277v \001(\0132\022.v1.ServiceOption" +
+      "sBR\n\034com.strongdm.api.v1.plumbingZ2githu" +
+      "b.com/strongdm/strongdm-sdk-go/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9235,31 +10779,31 @@ public final class Options {
     internal_static_v1_MethodOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MethodOptions_descriptor,
-        new java.lang.String[] { "Method", "Url", });
+        new java.lang.String[] { "Method", "Url", "DeprecationDate", });
     internal_static_v1_FileOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_FileOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FileOptions_descriptor,
-        new java.lang.String[] { "PrivateSdk", });
+        new java.lang.String[] { "Targets", });
     internal_static_v1_FieldOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "ExposeAsPorcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "PrivateSdk", "TerraformComputed", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformCommentOverride", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", });
+        new java.lang.String[] { "ExposeAsPorcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformComputed", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformCommentOverride", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "Custom", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "PrivateSdk", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformDocs", "TerraformProviderName", });
-    internal_static_v1_CustomPorcelainMessageOptions_descriptor =
+        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "Targets", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformDocs", "TerraformProviderName", });
+    internal_static_v1_CustomPorcelainTypeOptions_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_v1_CustomPorcelainMessageOptions_fieldAccessorTable = new
+    internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_CustomPorcelainMessageOptions_descriptor,
-        new java.lang.String[] { "Converter", "GoPorcelainType", "JavaPorcelainType", "TerraformPorcelainType", "OpenapiPorcelainType", });
+        internal_static_v1_CustomPorcelainTypeOptions_descriptor,
+        new java.lang.String[] { "Converter", "GoPorcelainType", "JavaPorcelainType", "TerraformPorcelainType", "TerraformElemType", "OpenapiPorcelainType", "JsonGatewayPorcelainType", });
     internal_static_v1_TerraformDocs_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_v1_TerraformDocs_fieldAccessorTable = new
@@ -9277,7 +10821,7 @@ public final class Options {
     internal_static_v1_ServiceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ServiceOptions_descriptor,
-        new java.lang.String[] { "MainNoun", "IdPrefix", "PrivateSdk", });
+        new java.lang.String[] { "MainNoun", "IdPrefix", "Targets", });
     methodOptions.internalInit(descriptor.getExtensions().get(0));
     fileOptions.internalInit(descriptor.getExtensions().get(1));
     fieldOptions.internalInit(descriptor.getExtensions().get(2));

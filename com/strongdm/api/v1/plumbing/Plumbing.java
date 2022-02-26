@@ -19,7 +19,16 @@ package com.strongdm.api.v1.plumbing;
 
 import com.google.protobuf.Timestamp;
 import com.google.rpc.Code;
+import com.strongdm.api.v1.AlreadyExistsException;
+import com.strongdm.api.v1.AuthenticationException;
 import com.strongdm.api.v1.BadRequestException;
+import com.strongdm.api.v1.InternalException;
+import com.strongdm.api.v1.NotFoundException;
+import com.strongdm.api.v1.PermissionException;
+import com.strongdm.api.v1.RateLimitException;
+import com.strongdm.api.v1.RpcException;
+import com.strongdm.api.v1.TimeoutException;
+import com.strongdm.api.v1.UnknownException;
 import com.strongdm.api.v1.plumbing.AccountAttachmentsPlumbing.*;
 import com.strongdm.api.v1.plumbing.AccountGrantsPlumbing.*;
 import com.strongdm.api.v1.plumbing.AccountsPlumbing.*;
@@ -34,10 +43,15 @@ import com.strongdm.api.v1.plumbing.SecretStoresPlumbing.*;
 import com.strongdm.api.v1.plumbing.SecretStoresTypesPlumbing.*;
 import com.strongdm.api.v1.plumbing.Spec.*;
 import com.strongdm.api.v1.plumbing.TagsPlumbing.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Plumbing {
@@ -87,6 +101,80 @@ public class Plumbing {
           Tags.Pair.newBuilder().setName(entry.getKey()).setValue(entry.getValue()).build());
     }
     return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.AccessRule> convertAccessRulesToPorcelain(
+      String plumbing) {
+    if (plumbing == "") {
+      return null;
+    }
+    ArrayList<com.strongdm.api.v1.AccessRule> porcelain = new ArrayList<>();
+    JSONArray parsed = new JSONArray(plumbing);
+    for (int i = 0; i < parsed.length(); i++) {
+      JSONObject object = parsed.optJSONObject(i);
+      if (object == null) {
+        throw new UnknownException("failed to parse access rules JSON: null or non-object found");
+      }
+      com.strongdm.api.v1.AccessRule rule = new com.strongdm.api.v1.AccessRule();
+      for (Iterator<String> keyIterator = object.keys(); keyIterator.hasNext(); ) {
+        String key = keyIterator.next();
+        switch (key) {
+          case "ids":
+            JSONArray ids = object.getJSONArray("ids");
+            for (int j = 0; j < ids.length(); j++) {
+              rule.addId(ids.getString(j));
+            }
+            break;
+          case "type":
+            rule.setType(object.getString("type"));
+            break;
+          case "tags":
+            JSONObject jsonTags = object.getJSONObject("tags");
+            HashMap<String, String> tags = new HashMap<>();
+            for (Iterator<String> tagKeyIterator = jsonTags.keys(); tagKeyIterator.hasNext(); ) {
+              String tagKey = tagKeyIterator.next();
+              tags.put(tagKey, jsonTags.getString(tagKey));
+            }
+            rule.setTags(tags);
+            break;
+          default:
+            throw new UnknownException(
+                "unknown access rule field '" + key + "', please upgrade your SDK");
+        }
+      }
+      porcelain.add(rule);
+    }
+    return porcelain;
+  }
+
+  public static String convertAccessRulesToPlumbing(
+      List<com.strongdm.api.v1.AccessRule> porcelain) {
+    JSONArray plumbing = new JSONArray();
+    if (porcelain.size() == 0) {
+      return plumbing.toString();
+    }
+    for (com.strongdm.api.v1.AccessRule rule : porcelain) {
+      JSONObject obj = new JSONObject();
+      if (rule.getType() != "") {
+        obj.put("type", rule.getType());
+      }
+      if (rule.getTags() != null) {
+        JSONObject jsonTags = new JSONObject();
+        for (Map.Entry<String, String> entry : rule.getTags().entrySet()) {
+          jsonTags.put(entry.getKey(), entry.getValue());
+        }
+        obj.put("tags", jsonTags);
+      }
+      if (rule.getIds() != null) {
+        JSONArray jsonIds = new JSONArray();
+        for (String id : rule.getIds()) {
+          jsonIds.put(id);
+        }
+        obj.put("ids", jsonIds);
+      }
+      plumbing.put(obj);
+    }
+    return plumbing.toString();
   }
 
   public static com.strongdm.api.v1.AKS convertAKSToPorcelain(AKS plumbing) {
@@ -6267,7 +6355,7 @@ public class Plumbing {
 
   public static com.strongdm.api.v1.Role convertRoleToPorcelain(Role plumbing) {
     com.strongdm.api.v1.Role porcelain = new com.strongdm.api.v1.Role();
-    porcelain.setAccessRules((plumbing.getAccessRules()));
+    porcelain.setAccessRules(Plumbing.convertAccessRulesToPorcelain(plumbing.getAccessRules()));
     porcelain.setComposite((plumbing.getComposite()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
@@ -6281,7 +6369,7 @@ public class Plumbing {
     }
     Role.Builder builder = Role.newBuilder();
     if (porcelain.getAccessRules() != null) {
-      builder.setAccessRules((porcelain.getAccessRules()));
+      builder.setAccessRules(Plumbing.convertAccessRulesToPlumbing(porcelain.getAccessRules()));
     }
     builder.setComposite(porcelain.getComposite());
     if (porcelain.getId() != null) {
@@ -7914,34 +8002,34 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.v1.RpcException convertExceptionToPorcelain(Exception e) {
+  public static RpcException convertExceptionToPorcelain(Exception e) {
     if (!(e instanceof io.grpc.StatusRuntimeException)) {
-      return new com.strongdm.api.v1.RpcException(e.getMessage(), 2); // Unknown
+      return new UnknownException(e.getMessage());
     }
 
     com.google.rpc.Status status = io.grpc.protobuf.StatusProto.fromThrowable(e);
 
     switch (status.getCode()) {
       case Code.DEADLINE_EXCEEDED_VALUE:
-        return new com.strongdm.api.v1.TimeoutException(e.getMessage());
+        return new TimeoutException(e.getMessage());
       case Code.ALREADY_EXISTS_VALUE:
-        return new com.strongdm.api.v1.AlreadyExistsException(e.getMessage());
+        return new AlreadyExistsException(e.getMessage());
       case Code.INVALID_ARGUMENT_VALUE:
-        return new com.strongdm.api.v1.BadRequestException(e.getMessage());
+        return new BadRequestException(e.getMessage());
       case Code.INTERNAL_VALUE:
-        return new com.strongdm.api.v1.InternalException(e.getMessage());
+        return new InternalException(e.getMessage());
       case Code.PERMISSION_DENIED_VALUE:
-        return new com.strongdm.api.v1.PermissionException(e.getMessage());
+        return new PermissionException(e.getMessage());
       case Code.UNAUTHENTICATED_VALUE:
-        return new com.strongdm.api.v1.AuthenticationException(e.getMessage());
+        return new AuthenticationException(e.getMessage());
       case Code.RESOURCE_EXHAUSTED_VALUE:
         try {
           for (com.google.protobuf.Any any : status.getDetailsList()) {
-            if (any.is(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.class)) {
-              com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata plumbing =
-                  any.unpack(com.strongdm.api.v1.plumbing.Spec.RateLimitMetadata.class);
-              return new com.strongdm.api.v1.RateLimitException(
-                  e.getMessage(), Plumbing.convertRateLimitMetadataToPorcelain(plumbing));
+            if (any.is(RateLimitMetadata.class)) {
+              RateLimitMetadata plumbing = any.unpack(RateLimitMetadata.class);
+              com.strongdm.api.v1.RateLimitMetadata porcelain =
+                  Plumbing.convertRateLimitMetadataToPorcelain(plumbing);
+              return new RateLimitException(e.getMessage(), porcelain);
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException ex) {
@@ -7950,9 +8038,11 @@ public class Plumbing {
         // returning a RateLimitException with a null metadata.
         break;
       case Code.NOT_FOUND_VALUE:
-        return new com.strongdm.api.v1.NotFoundException(e.getMessage());
+        return new NotFoundException(e.getMessage());
+      case Code.UNKNOWN_VALUE:
+        return new UnknownException(e.getMessage());
     }
 
-    return new com.strongdm.api.v1.RpcException(e.getMessage(), status.getCode());
+    return new RpcException(e.getMessage(), status.getCode());
   }
 }

@@ -168,13 +168,25 @@ public class Roles {
     Supplier<PageResult<Role>> pageFetcher =
         () -> {
           // Note: this closure captures and reuses the builder to set the next page
-
           RolesPlumbing.RoleListRequest req = builder.build();
           RolesPlumbing.RoleListResponse plumbingResponse;
-          plumbingResponse =
-              this.stub
-                  .withCallCredentials(this.parent.getCallCredentials("Roles.List", req))
-                  .list(req);
+          int tries = 0;
+          while (true) {
+            try {
+              plumbingResponse =
+                  this.stub
+                      .withCallCredentials(this.parent.getCallCredentials("Roles.List", req))
+                      .list(req);
+            } catch (Exception e) {
+              if (this.parent.shouldRetry(tries, e)) {
+                tries++;
+                this.parent.jitterSleep(tries);
+                continue;
+              }
+              throw Plumbing.convertExceptionToPorcelain(e);
+            }
+            break;
+          }
 
           List<Role> page =
               Plumbing.convertRepeatedRoleToPorcelain(plumbingResponse.getRolesList());

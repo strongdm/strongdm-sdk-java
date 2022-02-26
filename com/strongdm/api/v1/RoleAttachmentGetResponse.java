@@ -18,6 +18,9 @@
 package com.strongdm.api.v1;
 
 // RoleAttachmentGetResponse returns a requested RoleAttachment.
+//
+// Deprecated: use multi-role instead.
+@Deprecated
 public class RoleAttachmentGetResponse {
   private GetResponseMetadata meta;
   // Reserved for future use.

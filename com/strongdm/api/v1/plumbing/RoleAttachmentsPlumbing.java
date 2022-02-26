@@ -28,7 +28,7 @@ public final class RoleAttachmentsPlumbing {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface RoleAttachmentCreateRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentCreateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentCreateRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -90,11 +90,13 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentCreateRequest specifies what kind of RoleAttachments should be registered in
    * the organizations fleet.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentCreateRequest}
    */
-  public static final class RoleAttachmentCreateRequest extends
+  @java.lang.Deprecated public static final class RoleAttachmentCreateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentCreateRequest)
       RoleAttachmentCreateRequestOrBuilder {
@@ -450,6 +452,8 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentCreateRequest specifies what kind of RoleAttachments should be registered in
      * the organizations fleet.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentCreateRequest}
@@ -982,7 +986,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentCreateResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentCreateResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentCreateResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -1070,11 +1074,13 @@ public final class RoleAttachmentsPlumbing {
   /**
    * <pre>
    * RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentCreateResponse}
    */
-  public static final class RoleAttachmentCreateResponse extends
+  @java.lang.Deprecated public static final class RoleAttachmentCreateResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentCreateResponse)
       RoleAttachmentCreateResponseOrBuilder {
@@ -1496,6 +1502,8 @@ public final class RoleAttachmentsPlumbing {
     /**
      * <pre>
      * RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentCreateResponse}
@@ -2197,7 +2205,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentGetRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentGetRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentGetRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -2251,11 +2259,13 @@ public final class RoleAttachmentsPlumbing {
   /**
    * <pre>
    * RoleAttachmentGetRequest specifies which RoleAttachment to retrieve.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentGetRequest}
    */
-  public static final class RoleAttachmentGetRequest extends
+  @java.lang.Deprecated public static final class RoleAttachmentGetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentGetRequest)
       RoleAttachmentGetRequestOrBuilder {
@@ -2606,6 +2616,8 @@ public final class RoleAttachmentsPlumbing {
     /**
      * <pre>
      * RoleAttachmentGetRequest specifies which RoleAttachment to retrieve.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentGetRequest}
@@ -3072,7 +3084,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentGetResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentGetResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentGetResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -3160,11 +3172,13 @@ public final class RoleAttachmentsPlumbing {
   /**
    * <pre>
    * RoleAttachmentGetResponse returns a requested RoleAttachment.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentGetResponse}
    */
-  public static final class RoleAttachmentGetResponse extends
+  @java.lang.Deprecated public static final class RoleAttachmentGetResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentGetResponse)
       RoleAttachmentGetResponseOrBuilder {
@@ -3586,6 +3600,8 @@ public final class RoleAttachmentsPlumbing {
     /**
      * <pre>
      * RoleAttachmentGetResponse returns a requested RoleAttachment.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentGetResponse}
@@ -4287,7 +4303,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentDeleteRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentDeleteRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentDeleteRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -4341,11 +4357,13 @@ public final class RoleAttachmentsPlumbing {
   /**
    * <pre>
    * RoleAttachmentDeleteRequest identifies a RoleAttachment by ID to delete.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentDeleteRequest}
    */
-  public static final class RoleAttachmentDeleteRequest extends
+  @java.lang.Deprecated public static final class RoleAttachmentDeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentDeleteRequest)
       RoleAttachmentDeleteRequestOrBuilder {
@@ -4696,6 +4714,8 @@ public final class RoleAttachmentsPlumbing {
     /**
      * <pre>
      * RoleAttachmentDeleteRequest identifies a RoleAttachment by ID to delete.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentDeleteRequest}
@@ -5162,7 +5182,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentDeleteResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentDeleteResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentDeleteResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -5223,11 +5243,13 @@ public final class RoleAttachmentsPlumbing {
   /**
    * <pre>
    * RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentDeleteResponse}
    */
-  public static final class RoleAttachmentDeleteResponse extends
+  @java.lang.Deprecated public static final class RoleAttachmentDeleteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentDeleteResponse)
       RoleAttachmentDeleteResponseOrBuilder {
@@ -5582,6 +5604,8 @@ public final class RoleAttachmentsPlumbing {
     /**
      * <pre>
      * RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentDeleteResponse}
@@ -6114,7 +6138,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentListRequestOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentListRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentListRequest)
       com.google.protobuf.MessageOrBuilder {
 
@@ -6168,11 +6192,13 @@ public final class RoleAttachmentsPlumbing {
   /**
    * <pre>
    * RoleAttachmentListRequest specifies criteria for retrieving a list of RoleAttachments.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentListRequest}
    */
-  public static final class RoleAttachmentListRequest extends
+  @java.lang.Deprecated public static final class RoleAttachmentListRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentListRequest)
       RoleAttachmentListRequestOrBuilder {
@@ -6523,6 +6549,8 @@ public final class RoleAttachmentsPlumbing {
     /**
      * <pre>
      * RoleAttachmentListRequest specifies criteria for retrieving a list of RoleAttachments.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentListRequest}
@@ -6989,7 +7017,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentListResponseOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentListResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachmentListResponse)
       com.google.protobuf.MessageOrBuilder {
 
@@ -7095,11 +7123,13 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentListResponse returns a list of RoleAttachments that meet the criteria of a
    * RoleAttachmentListRequest.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentListResponse}
    */
-  public static final class RoleAttachmentListResponse extends
+  @java.lang.Deprecated public static final class RoleAttachmentListResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachmentListResponse)
       RoleAttachmentListResponseOrBuilder {
@@ -7542,6 +7572,8 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentListResponse returns a list of RoleAttachments that meet the criteria of a
      * RoleAttachmentListRequest.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentListResponse}
@@ -8430,7 +8462,7 @@ public final class RoleAttachmentsPlumbing {
 
   }
 
-  public interface RoleAttachmentOrBuilder extends
+  @java.lang.Deprecated public interface RoleAttachmentOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.RoleAttachment)
       com.google.protobuf.MessageOrBuilder {
 
@@ -8497,11 +8529,13 @@ public final class RoleAttachmentsPlumbing {
   /**
    * <pre>
    * A RoleAttachment assigns a role to a composite role.
+   * 
+   * Deprecated: use multi-role instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachment}
    */
-  public static final class RoleAttachment extends
+  @java.lang.Deprecated public static final class RoleAttachment extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:v1.RoleAttachment)
       RoleAttachmentOrBuilder {
@@ -8911,6 +8945,8 @@ public final class RoleAttachmentsPlumbing {
     /**
      * <pre>
      * A RoleAttachment assigns a role to a composite role.
+     * 
+     * Deprecated: use multi-role instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachment}
@@ -9469,60 +9505,63 @@ public final class RoleAttachmentsPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\026role_attachments.proto\022\002v1\032\roptions.pr" +
-      "oto\032\nspec.proto\"\177\n\033RoleAttachmentCreateR" +
-      "equest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestM" +
-      "etadata\0227\n\017role_attachment\030\002 \001(\0132\022.v1.Ro" +
-      "leAttachmentB\n\362\370\263\007\005\260\363\263\007\001\"\332\001\n\034RoleAttachm" +
-      "entCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cre" +
-      "ateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017role_" +
-      "attachment\030\002 \001(\0132\022.v1.RoleAttachmentB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLi" +
-      "mitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005" +
-      "\250\363\263\007\001\"X\n\030RoleAttachmentGetRequest\022$\n\004met" +
-      "a\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\324\001\n\031RoleAttachmentGetRes" +
-      "ponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMeta" +
-      "dataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017role_attachment\030\002 \001(" +
-      "\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrat" +
-      "e_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"^\n\033RoleAt" +
-      "tachmentDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1" +
-      ".DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\"\241\001\n\034RoleAttachmentDeleteResponse\022" +
-      "4\n\004meta\030\001 \001(\0132\032.v1.DeleteResponseMetadat" +
-      "aB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\002 \001(\0132\025.v1.R" +
-      "ateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"^\n\031RoleAttachmentListRequest\022" +
-      "%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032" +
-      "\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\277\001\n\032RoleAttac" +
-      "hmentListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Lis" +
-      "tResponseMetadata\0228\n\020role_attachments\030\002 " +
-      "\003(\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nr" +
-      "ate_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\024" +
-      "\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001\"\355\001\n\016RoleAttachment\022" +
-      "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022*\n\021composite_rol" +
-      "e_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022)\n\020attached_" +
-      "role_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:l\372\370\263\007g\250\363\263" +
-      "\007\001\302\363\263\007]\242\363\263\007(tf_examples/role_attachment_" +
-      "resource.txt\252\363\263\007+tf_examples/role_attach" +
-      "ment_data_source.txt2\240\004\n\017RoleAttachments" +
-      "\022y\n\006Create\022\037.v1.RoleAttachmentCreateRequ" +
-      "est\032 .v1.RoleAttachmentCreateResponse\",\202" +
-      "\371\263\007\t\242\363\263\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role-attachme" +
-      "nts\022t\n\003Get\022\034.v1.RoleAttachmentGetRequest" +
-      "\032\035.v1.RoleAttachmentGetResponse\"0\202\371\263\007\010\242\363" +
-      "\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/role-attachments/{id" +
-      "}\022\200\001\n\006Delete\022\037.v1.RoleAttachmentDeleteRe" +
-      "quest\032 .v1.RoleAttachmentDeleteResponse\"" +
-      "3\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\036\252\363\263\007\031/v1/role-atta" +
-      "chments/{id}\022r\n\004List\022\035.v1.RoleAttachment" +
-      "ListRequest\032\036.v1.RoleAttachmentListRespo" +
-      "nse\"+\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\031\252\363\263\007\024/v1/role-att" +
-      "achments\032%\312\371\263\007\023\302\371\263\007\016RoleAttachment\312\371\263\007\010\322" +
-      "\371\263\007\003ra-Bk\n\034com.strongdm.api.v1.plumbingB" +
-      "\027RoleAttachmentsPlumbingZ2github.com/str" +
-      "ongdm/strongdm-sdk-go/internal/v1;v1b\006pr" +
-      "oto3"
+      "oto\032\nspec.proto\"\203\001\n\033RoleAttachmentCreate" +
+      "Request\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequest" +
+      "Metadata\0227\n\017role_attachment\030\002 \001(\0132\022.v1.R" +
+      "oleAttachmentB\n\362\370\263\007\005\260\363\263\007\001:\002\030\001\"\334\001\n\034RoleAt" +
+      "tachmentCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v" +
+      "1.CreateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017" +
+      "role_attachment\030\002 \001(\0132\022.v1.RoleAttachmen" +
+      "tB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.R" +
+      "ateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\014" +
+      "\030\001\372\370\263\007\005\250\363\263\007\001\"\\\n\030RoleAttachmentGetRequest" +
+      "\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026" +
+      "\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\002\030\001\"\326\001\n\031RoleAttac" +
+      "hmentGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetR" +
+      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017role_atta" +
+      "chment\030\002 \001(\0132\022.v1.RoleAttachmentB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
+      "etadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\014\030\001\372\370\263\007\005\250\363" +
+      "\263\007\001\"b\n\033RoleAttachmentDeleteRequest\022\'\n\004me" +
+      "ta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002i" +
+      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\002\030\001\"\243\001\n\034RoleAttachme" +
+      "ntDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Dele" +
+      "teResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_l" +
+      "imit\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\014\030\001\372\370\263\007\005\250\363\263\007\001\"b\n\031RoleAtt" +
+      "achmentListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.Li" +
+      "stRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001:\002\030\001\"\303\001\n\032RoleAttachmentListResponse" +
+      "\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata" +
+      "\0228\n\020role_attachments\030\002 \003(\0132\022.v1.RoleAtta" +
+      "chmentB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025" +
+      ".v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364" +
+      "\263\007\001:\002\030\001\"\357\001\n\016RoleAttachment\022\026\n\002id\030\001 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022*\n\021composite_role_id\030\002 \001(\tB\017\362" +
+      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022)\n\020attached_role_id\030\003 \001(\t" +
+      "B\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:n\030\001\372\370\263\007g\250\363\263\007\001\302\363\263\007]\242\363\263\007" +
+      "(tf_examples/role_attachment_resource.tx" +
+      "t\252\363\263\007+tf_examples/role_attachment_data_s" +
+      "ource.txt2\202\005\n\017RoleAttachments\022\220\001\n\006Create" +
+      "\022\037.v1.RoleAttachmentCreateRequest\032 .v1.R" +
+      "oleAttachmentCreateResponse\"C\210\002\001\202\371\263\007\t\242\363\263" +
+      "\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role-attachments\202\371\263\007" +
+      "\017\262\363\263\007\n2022-06-01\022\213\001\n\003Get\022\034.v1.RoleAttach" +
+      "mentGetRequest\032\035.v1.RoleAttachmentGetRes" +
+      "ponse\"G\210\002\001\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/rol" +
+      "e-attachments/{id}\202\371\263\007\017\262\363\263\007\n2022-06-01\022\227" +
+      "\001\n\006Delete\022\037.v1.RoleAttachmentDeleteReque" +
+      "st\032 .v1.RoleAttachmentDeleteResponse\"J\210\002" +
+      "\001\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\036\252\363\263\007\031/v1/role-atta" +
+      "chments/{id}\202\371\263\007\017\262\363\263\007\n2022-06-01\022\211\001\n\004Lis" +
+      "t\022\035.v1.RoleAttachmentListRequest\032\036.v1.Ro" +
+      "leAttachmentListResponse\"B\210\002\001\202\371\263\007\010\242\363\263\007\003g" +
+      "et\202\371\263\007\031\252\363\263\007\024/v1/role-attachments\202\371\263\007\017\262\363\263" +
+      "\007\n2022-06-01\032(\210\002\001\312\371\263\007\023\302\371\263\007\016RoleAttachmen" +
+      "t\312\371\263\007\010\322\371\263\007\003ra-Bk\n\034com.strongdm.api.v1.pl" +
+      "umbingB\027RoleAttachmentsPlumbingZ2github." +
+      "com/strongdm/strongdm-sdk-go/internal/v1" +
+      ";v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
