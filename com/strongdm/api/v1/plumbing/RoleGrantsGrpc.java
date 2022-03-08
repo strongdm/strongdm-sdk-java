@@ -35,7 +35,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * that make up those composite roles. When a composite role is attached to another
  * role, the permissions granted to members of the composite role are augmented to
  * include the permissions granted to members of the attached role.
- * Deprecated: use access rules instead.
+ * Deprecated: use Role access rules instead.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -202,7 +202,7 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -211,7 +211,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Create registers a new RoleGrant.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -223,7 +223,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -235,7 +235,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -247,7 +247,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -296,7 +296,7 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -319,7 +319,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Create registers a new RoleGrant.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -332,7 +332,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -345,7 +345,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -358,7 +358,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -375,7 +375,7 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -398,7 +398,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Create registers a new RoleGrant.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -410,7 +410,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -422,7 +422,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -434,7 +434,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -450,7 +450,7 @@ public final class RoleGrantsGrpc {
    * that make up those composite roles. When a composite role is attached to another
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -473,7 +473,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Create registers a new RoleGrant.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -486,7 +486,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Get reads one RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -499,7 +499,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * Delete removes a RoleGrant by ID.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -512,7 +512,7 @@ public final class RoleGrantsGrpc {
     /**
      * <pre>
      * List gets a list of RoleGrants matching a given set of criteria.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      */
     @java.lang.Deprecated

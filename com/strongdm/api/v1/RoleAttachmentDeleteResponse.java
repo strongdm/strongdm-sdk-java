@@ -17,27 +17,29 @@
 
 package com.strongdm.api.v1;
 
-// RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
-//
-// Deprecated: use multi-role instead.
+/**
+ * RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
+ *
+ * <p>Deprecated: use multi-role via AccountAttachments instead.
+ */
 @Deprecated
 public class RoleAttachmentDeleteResponse {
   private DeleteResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public DeleteResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(DeleteResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

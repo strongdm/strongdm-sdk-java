@@ -77,6 +77,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Client</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Client communicates with the strongDM API.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -105,11 +106,15 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.String)" class="member-name-link">Client</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiAccessKey,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiSecretKey)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a new strongDM API client.</div>
+</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.String,com.strongdm.api.v1.ClientOptions)" class="member-name-link">Client</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiAccessKey,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiSecretKey,
  <a href="ClientOptions.html" title="class in com.strongdm.api.v1">ClientOptions</a>&nbsp;options)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Creates a new strongDM API client with extra options.</div>
+</div>
 </div>
 </section>
 </li>
@@ -126,26 +131,43 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AccountAttachments.html" title="class in com.strongdm.api.v1">AccountAttachments</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#accountAttachments()" class="member-name-link">accountAttachments</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">AccountAttachments assign an account to a role.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AccountGrants.html" title="class in com.strongdm.api.v1">AccountGrants</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#accountGrants()" class="member-name-link">accountGrants</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Accounts.html" title="class in com.strongdm.api.v1">Accounts</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#accounts()" class="member-name-link">accounts</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Accounts are users that have access to strongDM.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attempts to close the underlying grpc connection
+ and waits for ongoing calls to terminate.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close(long)" class="member-name-link">close</a><wbr>(long&nbsp;secs)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attempts to close the underlying grpc connection
+ and waits for ongoing calls to terminate.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close(long,java.util.concurrent.TimeUnit)" class="member-name-link">close</a><wbr>(long&nbsp;timeout,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;unit)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attempts to close the underlying grpc connection
+ and waits for ongoing calls to terminate.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ControlPanel.html" title="class in com.strongdm.api.v1">ControlPanel</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#controlPanel()" class="member-name-link">controlPanel</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">ControlPanel contains all administrative controls.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected io.grpc.CallCredentials</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCallCredentials(java.lang.String,com.google.protobuf.Message)" class="member-name-link">getCallCredentials</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;methodName,
  com.google.protobuf.Message&nbsp;req)</code></div>
@@ -155,10 +177,15 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Nodes.html" title="class in com.strongdm.api.v1">Nodes</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nodes()" class="member-name-link">nodes</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Nodes make up the strongDM network, and allow your users to connect securely to your resources.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Resources.html" title="class in com.strongdm.api.v1">Resources</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resources()" class="member-name-link">resources</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Resources are databases, servers, clusters, websites, or clouds that strongDM
+ delegates access to.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="RoleAttachments.html" title="class in com.strongdm.api.v1">RoleAttachments</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#roleAttachments()" class="member-name-link">roleAttachments</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
@@ -171,10 +198,15 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Roles.html" title="class in com.strongdm.api.v1">Roles</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#roles()" class="member-name-link">roles</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">A Role has a list of access rules which determine which Resources the members
+ of the Role have access to.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SecretStores.html" title="class in com.strongdm.api.v1">SecretStores</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#secretStores()" class="member-name-link">secretStores</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">SecretStores are servers where resource secrets (passwords, keys) are stored.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shouldRetry(int,java.lang.Exception)" class="member-name-link">shouldRetry</a><wbr>(int&nbsp;iter,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Exception.html" title="class or interface in java.lang" class="external-link">Exception</a>&nbsp;e)</code></div>
@@ -220,6 +252,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Client</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiAccessKey,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiSecretKey)</span>
        throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">Creates a new strongDM API client.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -233,6 +266,7 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;apiSecretKey,
  <a href="ClientOptions.html" title="class in com.strongdm.api.v1">ClientOptions</a>&nbsp;options)</span>
        throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">Creates a new strongDM API client with extra options.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -251,36 +285,47 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="accountAttachments()">
 <h3>accountAttachments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AccountAttachments.html" title="class in com.strongdm.api.v1">AccountAttachments</a></span>&nbsp;<span class="element-name">accountAttachments</span>()</div>
+<div class="block">AccountAttachments assign an account to a role.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="accountGrants()">
 <h3>accountGrants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AccountGrants.html" title="class in com.strongdm.api.v1">AccountGrants</a></span>&nbsp;<span class="element-name">accountGrants</span>()</div>
+<div class="block">AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="accounts()">
 <h3>accounts</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Accounts.html" title="class in com.strongdm.api.v1">Accounts</a></span>&nbsp;<span class="element-name">accounts</span>()</div>
+<div class="block">Accounts are users that have access to strongDM. There are two types of accounts:
+ 1. **Users:** humans who are authenticated through username and password or SSO.
+ 2. **Service Accounts:** machines that are authenticated using a service token.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="controlPanel()">
 <h3>controlPanel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ControlPanel.html" title="class in com.strongdm.api.v1">ControlPanel</a></span>&nbsp;<span class="element-name">controlPanel</span>()</div>
+<div class="block">ControlPanel contains all administrative controls.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="nodes()">
 <h3>nodes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Nodes.html" title="class in com.strongdm.api.v1">Nodes</a></span>&nbsp;<span class="element-name">nodes</span>()</div>
+<div class="block">Nodes make up the strongDM network, and allow your users to connect securely to your resources. There are two types of nodes:
+ - **Gateways** are the entry points into network. They listen for connection from the strongDM client, and provide access to databases and servers.
+ - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="resources()">
 <h3>resources</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Resources.html" title="class in com.strongdm.api.v1">Resources</a></span>&nbsp;<span class="element-name">resources</span>()</div>
+<div class="block">Resources are databases, servers, clusters, websites, or clouds that strongDM
+ delegates access to.</div>
 </section>
 </li>
 <li>
@@ -289,6 +334,12 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RoleAttachments.html" title="class in com.strongdm.api.v1">RoleAttachments</a></span>&nbsp;<span class="element-name">roleAttachments</span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">RoleAttachments represent relationships between composite roles and the roles
+ that make up those composite roles. When a composite role is attached to another
+ role, the permissions granted to members of the composite role are augmented to
+ include the permissions granted to members of the attached role.
+ 
+ Deprecated: use multi-role via AccountAttachments instead.</div>
 </section>
 </li>
 <li>
@@ -297,18 +348,28 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RoleGrants.html" title="class in com.strongdm.api.v1">RoleGrants</a></span>&nbsp;<span class="element-name">roleGrants</span>()</div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">RoleGrants represent relationships between composite roles and the roles
+ that make up those composite roles. When a composite role is attached to another
+ role, the permissions granted to members of the composite role are augmented to
+ include the permissions granted to members of the attached role.
+ 
+ Deprecated: use Role access rules instead.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="roles()">
 <h3>roles</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Roles.html" title="class in com.strongdm.api.v1">Roles</a></span>&nbsp;<span class="element-name">roles</span>()</div>
+<div class="block">A Role has a list of access rules which determine which Resources the members
+ of the Role have access to. An Account can be a member of multiple Roles via
+ AccountAttachments.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="secretStores()">
 <h3>secretStores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SecretStores.html" title="class in com.strongdm.api.v1">SecretStores</a></span>&nbsp;<span class="element-name">secretStores</span>()</div>
+<div class="block">SecretStores are servers where resource secrets (passwords, keys) are stored.</div>
 </section>
 </li>
 <li>
@@ -330,6 +391,10 @@ loadScripts(document, 'script');</script>
 <h3>close</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">close</span>()
               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Attempts to close the underlying grpc connection
+ and waits for ongoing calls to terminate. It will return
+ whether it succeeded before timing out.
+ Can be called multiple times safely.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
@@ -341,6 +406,10 @@ loadScripts(document, 'script');</script>
 <h3>close</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">close</span><wbr><span class="parameters">(long&nbsp;secs)</span>
               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Attempts to close the underlying grpc connection
+ and waits for ongoing calls to terminate. It will return
+ whether it succeeded before timing out.
+ Can be called multiple times safely.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
@@ -353,6 +422,10 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">close</span><wbr><span class="parameters">(long&nbsp;timeout,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;unit)</span>
               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Attempts to close the underlying grpc connection
+ and waits for ongoing calls to terminate. It will return
+ whether it succeeded before timing out.
+ Can be called multiple times safely.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>

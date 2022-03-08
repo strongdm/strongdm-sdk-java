@@ -17,24 +17,24 @@
 
 package com.strongdm.api.v1;
 
-// SecretStoreDeleteResponse returns information about a SecretStore that was deleted.
+/** SecretStoreDeleteResponse returns information about a SecretStore that was deleted. */
 public class SecretStoreDeleteResponse {
   private DeleteResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public DeleteResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(DeleteResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

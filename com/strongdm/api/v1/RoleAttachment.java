@@ -17,37 +17,39 @@
 
 package com.strongdm.api.v1;
 
-// A RoleAttachment assigns a role to a composite role.
-//
-// Deprecated: use multi-role instead.
+/**
+ * A RoleAttachment assigns a role to a composite role.
+ *
+ * <p>Deprecated: use multi-role via AccountAttachments instead.
+ */
 @Deprecated
 public class RoleAttachment {
   private String attachedRoleId;
-  // The id of the attached role of this RoleAttachment.
+  /** The id of the attached role of this RoleAttachment. */
   public String getAttachedRoleId() {
     return this.attachedRoleId;
   }
-  // The id of the attached role of this RoleAttachment.
+  /** The id of the attached role of this RoleAttachment. */
   public void setAttachedRoleId(String in) {
     this.attachedRoleId = in;
   }
 
   private String compositeRoleId;
-  // The id of the composite role of this RoleAttachment.
+  /** The id of the composite role of this RoleAttachment. */
   public String getCompositeRoleId() {
     return this.compositeRoleId;
   }
-  // The id of the composite role of this RoleAttachment.
+  /** The id of the composite role of this RoleAttachment. */
   public void setCompositeRoleId(String in) {
     this.compositeRoleId = in;
   }
 
   private String id;
-  // Unique identifier of the RoleAttachment.
+  /** Unique identifier of the RoleAttachment. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the RoleAttachment.
+  /** Unique identifier of the RoleAttachment. */
   public void setId(String in) {
     this.id = in;
   }

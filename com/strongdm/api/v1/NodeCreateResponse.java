@@ -17,46 +17,50 @@
 
 package com.strongdm.api.v1;
 
-// NodeCreateResponse reports how the Nodes were created in the system.
+/** NodeCreateResponse reports how the Nodes were created in the system. */
 public class NodeCreateResponse {
   private CreateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public CreateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
   }
 
   private Node node;
-  // The created Node.
+  /** The created Node. */
   public Node getNode() {
     return this.node;
   }
-  // The created Node.
+  /** The created Node. */
   public void setNode(Node in) {
     this.node = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private String token;
-  // The auth token generated for the Node. The Node will use this token to
-  // authenticate with the strongDM API.
+  /**
+   * The auth token generated for the Node. The Node will use this token to authenticate with the
+   * strongDM API.
+   */
   public String getToken() {
     return this.token;
   }
-  // The auth token generated for the Node. The Node will use this token to
-  // authenticate with the strongDM API.
+  /**
+   * The auth token generated for the Node. The Node will use this token to authenticate with the
+   * strongDM API.
+   */
   public void setToken(String in) {
     this.token = in;
   }

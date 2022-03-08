@@ -30,6 +30,10 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * Resources are databases, servers, clusters, websites, or clouds that strongDM
+ * delegates access to.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.25.0)",
@@ -251,6 +255,10 @@ public final class ResourcesGrpc {
   }
 
   /**
+   * <pre>
+   * Resources are databases, servers, clusters, websites, or clouds that strongDM
+   * delegates access to.
+   * </pre>
    */
   public static abstract class ResourcesImplBase implements io.grpc.BindableService {
 
@@ -286,7 +294,7 @@ public final class ResourcesGrpc {
 
     /**
      * <pre>
-     * Update patches a Resource by ID.
+     * Update replaces all the fields of a Resource by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest request,
@@ -363,6 +371,10 @@ public final class ResourcesGrpc {
   }
 
   /**
+   * <pre>
+   * Resources are databases, servers, clusters, websites, or clouds that strongDM
+   * delegates access to.
+   * </pre>
    */
   public static final class ResourcesStub extends io.grpc.stub.AbstractStub<ResourcesStub> {
     private ResourcesStub(io.grpc.Channel channel) {
@@ -415,7 +427,7 @@ public final class ResourcesGrpc {
 
     /**
      * <pre>
-     * Update patches a Resource by ID.
+     * Update replaces all the fields of a Resource by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest request,
@@ -448,6 +460,10 @@ public final class ResourcesGrpc {
   }
 
   /**
+   * <pre>
+   * Resources are databases, servers, clusters, websites, or clouds that strongDM
+   * delegates access to.
+   * </pre>
    */
   public static final class ResourcesBlockingStub extends io.grpc.stub.AbstractStub<ResourcesBlockingStub> {
     private ResourcesBlockingStub(io.grpc.Channel channel) {
@@ -497,7 +513,7 @@ public final class ResourcesGrpc {
 
     /**
      * <pre>
-     * Update patches a Resource by ID.
+     * Update replaces all the fields of a Resource by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateResponse update(com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateRequest request) {
@@ -527,6 +543,10 @@ public final class ResourcesGrpc {
   }
 
   /**
+   * <pre>
+   * Resources are databases, servers, clusters, websites, or clouds that strongDM
+   * delegates access to.
+   * </pre>
    */
   public static final class ResourcesFutureStub extends io.grpc.stub.AbstractStub<ResourcesFutureStub> {
     private ResourcesFutureStub(io.grpc.Channel channel) {
@@ -579,7 +599,7 @@ public final class ResourcesGrpc {
 
     /**
      * <pre>
-     * Update patches a Resource by ID.
+     * Update replaces all the fields of a Resource by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.ResourcesPlumbing.ResourceUpdateResponse> update(

@@ -17,37 +17,39 @@
 
 package com.strongdm.api.v1;
 
-// RoleAttachmentGetResponse returns a requested RoleAttachment.
-//
-// Deprecated: use multi-role instead.
+/**
+ * RoleAttachmentGetResponse returns a requested RoleAttachment.
+ *
+ * <p>Deprecated: use multi-role via AccountAttachments instead.
+ */
 @Deprecated
 public class RoleAttachmentGetResponse {
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private RoleAttachment roleAttachment;
-  // The requested RoleAttachment.
+  /** The requested RoleAttachment. */
   public RoleAttachment getRoleAttachment() {
     return this.roleAttachment;
   }
-  // The requested RoleAttachment.
+  /** The requested RoleAttachment. */
   public void setRoleAttachment(RoleAttachment in) {
     this.roleAttachment = in;
   }

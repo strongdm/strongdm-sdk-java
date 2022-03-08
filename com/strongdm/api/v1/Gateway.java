@@ -17,80 +17,90 @@
 
 package com.strongdm.api.v1;
 
-// Gateway represents a StrongDM CLI installation running in gateway mode.
+/** Gateway represents a StrongDM CLI installation running in gateway mode. */
 public class Gateway implements Node {
   private String bindAddress;
-  // The hostname/port tuple which the gateway daemon will bind to.
-  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
+  /**
+   * The hostname/port tuple which the gateway daemon will bind to. If not provided on create, set
+   * to "0.0.0.0:listen_address_port".
+   */
   public String getBindAddress() {
     return this.bindAddress;
   }
-  // The hostname/port tuple which the gateway daemon will bind to.
-  // If not provided on create, set to "0.0.0.0:<listen_address_port>".
+  /**
+   * The hostname/port tuple which the gateway daemon will bind to. If not provided on create, set
+   * to "0.0.0.0:listen_address_port".
+   */
   public void setBindAddress(String in) {
     this.bindAddress = in;
   }
 
   private String gatewayFilter;
-  // GatewayFilter can be used to restrict the peering between relays and
-  // gateways.
+  /** GatewayFilter can be used to restrict the peering between relays and gateways. */
   public String getGatewayFilter() {
     return this.gatewayFilter;
   }
-  // GatewayFilter can be used to restrict the peering between relays and
-  // gateways.
+  /** GatewayFilter can be used to restrict the peering between relays and gateways. */
   public void setGatewayFilter(String in) {
     this.gatewayFilter = in;
   }
 
   private String id;
-  // Unique identifier of the Gateway.
+  /** Unique identifier of the Gateway. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the Gateway.
+  /** Unique identifier of the Gateway. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String listenAddress;
-  // The public hostname/port tuple at which the gateway will be accessible to clients.
+  /** The public hostname/port tuple at which the gateway will be accessible to clients. */
   public String getListenAddress() {
     return this.listenAddress;
   }
-  // The public hostname/port tuple at which the gateway will be accessible to clients.
+  /** The public hostname/port tuple at which the gateway will be accessible to clients. */
   public void setListenAddress(String in) {
     this.listenAddress = in;
   }
 
   private String name;
-  // Unique human-readable name of the Gateway. Node names must include only letters, numbers, and
-  // hyphens (no spaces, underscores, or other special characters). Generated if not provided on
-  // create.
+  /**
+   * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and
+   * hyphens (no spaces, underscores, or other special characters). Generated if not provided on
+   * create.
+   */
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Gateway. Node names must include only letters, numbers, and
-  // hyphens (no spaces, underscores, or other special characters). Generated if not provided on
-  // create.
+  /**
+   * Unique human-readable name of the Gateway. Node names must include only letters, numbers, and
+   * hyphens (no spaces, underscores, or other special characters). Generated if not provided on
+   * create.
+   */
   public void setName(String in) {
     this.name = in;
   }
 
   private String state;
-  // The current state of the gateway. One of: "new", "verifying_restart",
-  // "restarting", "started", "stopped", "dead", "unknown"
+  /**
+   * The current state of the gateway. One of: "new", "verifying_restart", "restarting", "started",
+   * "stopped", "dead", "unknown"
+   */
   public String getState() {
     return this.state;
   }
-  // The current state of the gateway. One of: "new", "verifying_restart",
-  // "restarting", "started", "stopped", "dead", "unknown"
+  /**
+   * The current state of the gateway. One of: "new", "verifying_restart", "restarting", "started",
+   * "stopped", "dead", "unknown"
+   */
   public void setState(String in) {
     this.state = in;
   }
 
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -98,7 +108,7 @@ public class Gateway implements Node {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;

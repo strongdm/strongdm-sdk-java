@@ -29,12 +29,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// RoleAttachments represent relationships between composite roles and the roles
-// that make up those composite roles. When a composite role is attached to another
-// role, the permissions granted to members of the composite role are augmented to
-// include the permissions granted to members of the attached role.
-//
-// Deprecated: use multi-role instead.
+/**
+ * RoleAttachments represent relationships between composite roles and the roles that make up those
+ * composite roles. When a composite role is attached to another role, the permissions granted to
+ * members of the composite role are augmented to include the permissions granted to members of the
+ * attached role.
+ *
+ * <p>Deprecated: use multi-role via AccountAttachments instead.
+ */
 @Deprecated
 public class RoleAttachments {
   private final RoleAttachmentsGrpc.RoleAttachmentsBlockingStub stub;
@@ -51,14 +53,18 @@ public class RoleAttachments {
     this.parent = client;
   }
 
-  // This function returns a copy of the RoleAttachments service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the RoleAttachments service which has the given deadline set
+   * for all method calls.
+   */
   public RoleAttachments withDeadlineAfter(long duration, TimeUnit units) {
     return new RoleAttachments(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // Create registers a new RoleAttachment.
-  //
-  // Deprecated: use multi-role instead.
+  /**
+   * Create registers a new RoleAttachment.
+   *
+   * <p>Deprecated: use multi-role via AccountAttachments instead.
+   */
   @Deprecated
   public RoleAttachmentCreateResponse create(RoleAttachment roleAttachment) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentCreateRequest.Builder builder =
@@ -85,9 +91,11 @@ public class RoleAttachments {
     }
     return Plumbing.convertRoleAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one RoleAttachment by ID.
-  //
-  // Deprecated: use multi-role instead.
+  /**
+   * Get reads one RoleAttachment by ID.
+   *
+   * <p>Deprecated: use multi-role via AccountAttachments instead.
+   */
   @Deprecated
   public RoleAttachmentGetResponse get(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentGetRequest.Builder builder =
@@ -114,9 +122,11 @@ public class RoleAttachments {
     }
     return Plumbing.convertRoleAttachmentGetResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a RoleAttachment by ID.
-  //
-  // Deprecated: use multi-role instead.
+  /**
+   * Delete removes a RoleAttachment by ID.
+   *
+   * <p>Deprecated: use multi-role via AccountAttachments instead.
+   */
   @Deprecated
   public RoleAttachmentDeleteResponse delete(String id) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentDeleteRequest.Builder builder =
@@ -143,9 +153,11 @@ public class RoleAttachments {
     }
     return Plumbing.convertRoleAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of RoleAttachments matching a given set of criteria.
-  //
-  // Deprecated: use multi-role instead.
+  /**
+   * List gets a list of RoleAttachments matching a given set of criteria.
+   *
+   * <p>Deprecated: use multi-role via AccountAttachments instead.
+   */
   @Deprecated
   public Iterable<RoleAttachment> list(String filter, Object... args) throws RpcException {
     RoleAttachmentsPlumbing.RoleAttachmentListRequest.Builder builder =

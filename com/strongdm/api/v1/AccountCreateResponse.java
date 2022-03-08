@@ -17,46 +17,50 @@
 
 package com.strongdm.api.v1;
 
-// AccountCreateResponse reports how the Accounts were created in the system.
+/** AccountCreateResponse reports how the Accounts were created in the system. */
 public class AccountCreateResponse {
   private Account account;
-  // The created Account.
+  /** The created Account. */
   public Account getAccount() {
     return this.account;
   }
-  // The created Account.
+  /** The created Account. */
   public void setAccount(Account in) {
     this.account = in;
   }
 
   private CreateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public CreateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private String token;
-  // The auth token generated for the Account. The Account will use this token to
-  // authenticate with the strongDM API.
+  /**
+   * The auth token generated for the Account. The Account will use this token to authenticate with
+   * the strongDM API.
+   */
   public String getToken() {
     return this.token;
   }
-  // The auth token generated for the Account. The Account will use this token to
-  // authenticate with the strongDM API.
+  /**
+   * The auth token generated for the Account. The Account will use this token to authenticate with
+   * the strongDM API.
+   */
   public void setToken(String in) {
     this.token = in;
   }

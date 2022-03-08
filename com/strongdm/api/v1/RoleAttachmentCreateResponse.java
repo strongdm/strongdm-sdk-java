@@ -17,37 +17,39 @@
 
 package com.strongdm.api.v1;
 
-// RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
-//
-// Deprecated: use multi-role instead.
+/**
+ * RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
+ *
+ * <p>Deprecated: use multi-role via AccountAttachments instead.
+ */
 @Deprecated
 public class RoleAttachmentCreateResponse {
   private CreateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public CreateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private RoleAttachment roleAttachment;
-  // The created RoleAttachment.
+  /** The created RoleAttachment. */
   public RoleAttachment getRoleAttachment() {
     return this.roleAttachment;
   }
-  // The created RoleAttachment.
+  /** The created RoleAttachment. */
   public void setRoleAttachment(RoleAttachment in) {
     this.roleAttachment = in;
   }

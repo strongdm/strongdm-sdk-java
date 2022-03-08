@@ -29,11 +29,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// Roles are tools for controlling user access to resources. Each Role holds a
-// list of resources which they grant access to. Composite roles are a special
-// type of Role which have no resource associations of their own, but instead
-// grant access to the combined resources associated with a set of child roles.
-// Each user can be a member of one Role or composite role.
+/**
+ * A Role has a list of access rules which determine which Resources the members of the Role have
+ * access to. An Account can be a member of multiple Roles via AccountAttachments.
+ */
 public class Roles {
   private final RolesGrpc.RolesBlockingStub stub;
   private final Client parent;
@@ -49,12 +48,14 @@ public class Roles {
     this.parent = client;
   }
 
-  // This function returns a copy of the Roles service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the Roles service which has the given deadline set for all
+   * method calls.
+   */
   public Roles withDeadlineAfter(long duration, TimeUnit units) {
     return new Roles(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // Create registers a new Role.
+  /** Create registers a new Role. */
   public RoleCreateResponse create(Role role) throws RpcException {
     RolesPlumbing.RoleCreateRequest.Builder builder = RolesPlumbing.RoleCreateRequest.newBuilder();
     builder.setRole(Plumbing.convertRoleToPlumbing(role));
@@ -79,7 +80,7 @@ public class Roles {
     }
     return Plumbing.convertRoleCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one Role by ID.
+  /** Get reads one Role by ID. */
   public RoleGetResponse get(String id) throws RpcException {
     RolesPlumbing.RoleGetRequest.Builder builder = RolesPlumbing.RoleGetRequest.newBuilder();
     builder.setId((id));
@@ -104,7 +105,7 @@ public class Roles {
     }
     return Plumbing.convertRoleGetResponseToPorcelain(plumbingResponse);
   }
-  // Update patches a Role by ID.
+  /** Update replaces all the fields of a Role by ID. */
   public RoleUpdateResponse update(Role role) throws RpcException {
     RolesPlumbing.RoleUpdateRequest.Builder builder = RolesPlumbing.RoleUpdateRequest.newBuilder();
     builder.setRole(Plumbing.convertRoleToPlumbing(role));
@@ -129,7 +130,7 @@ public class Roles {
     }
     return Plumbing.convertRoleUpdateResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a Role by ID.
+  /** Delete removes a Role by ID. */
   public RoleDeleteResponse delete(String id) throws RpcException {
     RolesPlumbing.RoleDeleteRequest.Builder builder = RolesPlumbing.RoleDeleteRequest.newBuilder();
     builder.setId((id));
@@ -154,7 +155,7 @@ public class Roles {
     }
     return Plumbing.convertRoleDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of Roles matching a given set of criteria.
+  /** List gets a list of Roles matching a given set of criteria. */
   public Iterable<Role> list(String filter, Object... args) throws RpcException {
     RolesPlumbing.RoleListRequest.Builder builder = RolesPlumbing.RoleListRequest.newBuilder();
     builder.setFilter(Plumbing.quoteFilterArgs(filter, args));

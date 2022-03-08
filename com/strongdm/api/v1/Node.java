@@ -17,20 +17,21 @@
 
 package com.strongdm.api.v1;
 
-// Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-// There are two types of nodes:
-// 1. **Relay:** creates connectivity to your datasources, while maintaining the egress-only nature
-// of your firewall
-// 1. **Gateways:** a relay that also listens for connections from strongDM clients
+/**
+ * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
+ * There are two types of nodes: 1. **Relay:** creates connectivity to your datasources, while
+ * maintaining the egress-only nature of your firewall 1. **Gateways:** a relay that also listens
+ * for connections from strongDM clients
+ */
 public interface Node {
-  // Returns the unique identifier of the Node.
+  /** Returns the unique identifier of the Node. */
   String getId();
-  // Returns the tags of the Node.
+  /** Returns the tags of the Node. */
   java.util.Map<String, String> getTags();
-  // Sets the tags of the Node.
+  /** Sets the tags of the Node. */
   void setTags(java.util.Map<String, String> tags);
-  // Returns the name of the Node.
+  /** Returns the name of the Node. */
   String getName();
-  // Sets the name of the Node.
+  /** Sets the name of the Node. */
   void setName(String name);
 }

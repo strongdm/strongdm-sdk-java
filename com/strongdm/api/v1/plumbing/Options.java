@@ -4578,6 +4578,16 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getTerraformProviderNameBytes();
+
+    /**
+     * <pre>
+     * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+     * </pre>
+     *
+     * <code>bool terraform_deprecated_override = 1941312;</code>
+     * @return The terraformDeprecatedOverride.
+     */
+    boolean getTerraformDeprecatedOverride();
   }
   /**
    * Protobuf type {@code v1.MessageOptions}
@@ -4709,6 +4719,11 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               terraformProviderName_ = s;
+              break;
+            }
+            case 15530496: {
+
+              terraformDeprecatedOverride_ = input.readBool();
               break;
             }
             default: {
@@ -5090,6 +5105,21 @@ public final class Options {
       }
     }
 
+    public static final int TERRAFORM_DEPRECATED_OVERRIDE_FIELD_NUMBER = 1941312;
+    private boolean terraformDeprecatedOverride_;
+    /**
+     * <pre>
+     * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+     * </pre>
+     *
+     * <code>bool terraform_deprecated_override = 1941312;</code>
+     * @return The terraformDeprecatedOverride.
+     */
+    @java.lang.Override
+    public boolean getTerraformDeprecatedOverride() {
+      return terraformDeprecatedOverride_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5136,6 +5166,9 @@ public final class Options {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, terraformProviderName_);
+      }
+      if (terraformDeprecatedOverride_ != false) {
+        output.writeBool(1941312, terraformDeprecatedOverride_);
       }
       unknownFields.writeTo(output);
     }
@@ -5189,6 +5222,10 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, terraformProviderName_);
       }
+      if (terraformDeprecatedOverride_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941312, terraformDeprecatedOverride_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5232,6 +5269,8 @@ public final class Options {
       }
       if (!getTerraformProviderName()
           .equals(other.getTerraformProviderName())) return false;
+      if (getTerraformDeprecatedOverride()
+          != other.getTerraformDeprecatedOverride()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5273,6 +5312,9 @@ public final class Options {
       }
       hash = (37 * hash) + TERRAFORM_PROVIDER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformProviderName().hashCode();
+      hash = (37 * hash) + TERRAFORM_DEPRECATED_OVERRIDE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTerraformDeprecatedOverride());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5436,6 +5478,8 @@ public final class Options {
         }
         terraformProviderName_ = "";
 
+        terraformDeprecatedOverride_ = false;
+
         return this;
       }
 
@@ -5486,6 +5530,7 @@ public final class Options {
           result.terraformDocs_ = terraformDocsBuilder_.build();
         }
         result.terraformProviderName_ = terraformProviderName_;
+        result.terraformDeprecatedOverride_ = terraformDeprecatedOverride_;
         onBuilt();
         return result;
       }
@@ -5578,6 +5623,9 @@ public final class Options {
         if (!other.getTerraformProviderName().isEmpty()) {
           terraformProviderName_ = other.terraformProviderName_;
           onChanged();
+        }
+        if (other.getTerraformDeprecatedOverride() != false) {
+          setTerraformDeprecatedOverride(other.getTerraformDeprecatedOverride());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6511,6 +6559,49 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         terraformProviderName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean terraformDeprecatedOverride_ ;
+      /**
+       * <pre>
+       * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+       * </pre>
+       *
+       * <code>bool terraform_deprecated_override = 1941312;</code>
+       * @return The terraformDeprecatedOverride.
+       */
+      @java.lang.Override
+      public boolean getTerraformDeprecatedOverride() {
+        return terraformDeprecatedOverride_;
+      }
+      /**
+       * <pre>
+       * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+       * </pre>
+       *
+       * <code>bool terraform_deprecated_override = 1941312;</code>
+       * @param value The terraformDeprecatedOverride to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformDeprecatedOverride(boolean value) {
+        
+        terraformDeprecatedOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+       * </pre>
+       *
+       * <code>bool terraform_deprecated_override = 1941312;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTerraformDeprecatedOverride() {
+        
+        terraformDeprecatedOverride_ = false;
         onChanged();
         return this;
       }
@@ -10733,7 +10824,7 @@ public final class Options {
       "me\030\277\276v \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022\033\n\021j" +
       "son_gateway_name\030\301\276v \001(\t\022 \n\026hide_from_js" +
       "on_gateway\030\302\276v \001(\010\0220\n\006custom\030\271\276v \001(\0132\036.v" +
-      "1.CustomPorcelainTypeOptions\"\320\002\n\016Message" +
+      "1.CustomPorcelainTypeOptions\"\371\002\n\016Message" +
       "Options\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276" +
       "v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\0220\n\006custom" +
       "\030\271\276v \001(\0132\036.v1.CustomPorcelainTypeOptions" +
@@ -10742,32 +10833,33 @@ public final class Options {
       "_name\030\275\276v \001(\t\022 \n\026hide_from_json_gateway\030" +
       "\276\276v \001(\010\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.T" +
       "erraformDocs\022!\n\027terraform_provider_name\030" +
-      "\277\276v \001(\t\"\371\001\n\032CustomPorcelainTypeOptions\022\023" +
-      "\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_type" +
-      "\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t\022" +
-      "\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022\035\n\023t" +
-      "erraform_elem_type\030\302\276v \001(\t\022 \n\026openapi_po" +
-      "rcelain_type\030\301\276v \001(\t\022%\n\033json_gateway_por" +
-      "celain_type\030\303\276v \001(\t\"T\n\rTerraformDocs\022\037\n\025" +
-      "resource_example_path\030\264\276v \001(\t\022\"\n\030data_so" +
-      "urce_example_path\030\265\276v \001(\t\"\'\n\014OneofOption" +
-      "s\022\027\n\rcommon_fields\030\205\277v \003(\t\"M\n\016ServiceOpt" +
-      "ions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030\232" +
-      "\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:K\n\016method_opti" +
-      "ons\022\036.google.protobuf.MethodOptions\030\220\277v " +
-      "\001(\0132\021.v1.MethodOptions:E\n\014file_options\022\034" +
-      ".google.protobuf.FileOptions\030\250\302v \001(\0132\017.v" +
-      "1.FileOptions:H\n\rfield_options\022\035.google." +
-      "protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Field" +
-      "Options:N\n\017message_options\022\037.google.prot" +
-      "obuf.MessageOptions\030\217\277v \001(\0132\022.v1.Message" +
-      "Options:H\n\roneof_options\022\035.google.protob" +
-      "uf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOption" +
-      "s:N\n\017service_options\022\037.google.protobuf.S" +
-      "erviceOptions\030\231\277v \001(\0132\022.v1.ServiceOption" +
-      "sBU\n\034com.strongdm.api.v1.plumbingZ5githu" +
-      "b.com/strongdm/strongdm-sdk-go/v2/intern" +
-      "al/v1;v1b\006proto3"
+      "\277\276v \001(\t\022\'\n\035terraform_deprecated_override" +
+      "\030\300\276v \001(\010\"\371\001\n\032CustomPorcelainTypeOptions\022" +
+      "\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_typ" +
+      "e\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t" +
+      "\022\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022\035\n\023" +
+      "terraform_elem_type\030\302\276v \001(\t\022 \n\026openapi_p" +
+      "orcelain_type\030\301\276v \001(\t\022%\n\033json_gateway_po" +
+      "rcelain_type\030\303\276v \001(\t\"T\n\rTerraformDocs\022\037\n" +
+      "\025resource_example_path\030\264\276v \001(\t\022\"\n\030data_s" +
+      "ource_example_path\030\265\276v \001(\t\"\'\n\014OneofOptio" +
+      "ns\022\027\n\rcommon_fields\030\205\277v \003(\t\"M\n\016ServiceOp" +
+      "tions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030" +
+      "\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:K\n\016method_opt" +
+      "ions\022\036.google.protobuf.MethodOptions\030\220\277v" +
+      " \001(\0132\021.v1.MethodOptions:E\n\014file_options\022" +
+      "\034.google.protobuf.FileOptions\030\250\302v \001(\0132\017." +
+      "v1.FileOptions:H\n\rfield_options\022\035.google" +
+      ".protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fiel" +
+      "dOptions:N\n\017message_options\022\037.google.pro" +
+      "tobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Messag" +
+      "eOptions:H\n\roneof_options\022\035.google.proto" +
+      "buf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptio" +
+      "ns:N\n\017service_options\022\037.google.protobuf." +
+      "ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOptio" +
+      "nsBU\n\034com.strongdm.api.v1.plumbingZ5gith" +
+      "ub.com/strongdm/strongdm-sdk-go/v2/inter" +
+      "nal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10797,7 +10889,7 @@ public final class Options {
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "Targets", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformDocs", "TerraformProviderName", });
+        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "Targets", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformDocs", "TerraformProviderName", "TerraformDeprecatedOverride", });
     internal_static_v1_CustomPorcelainTypeOptions_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable = new

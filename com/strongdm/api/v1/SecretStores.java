@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// SecretStores are servers where resource secrets (passwords, keys) are stored.
+/** SecretStores are servers where resource secrets (passwords, keys) are stored. */
 public class SecretStores {
   private final SecretStoresGrpc.SecretStoresBlockingStub stub;
   private final Client parent;
@@ -45,12 +45,14 @@ public class SecretStores {
     this.parent = client;
   }
 
-  // This function returns a copy of the SecretStores service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the SecretStores service which has the given deadline set for
+   * all method calls.
+   */
   public SecretStores withDeadlineAfter(long duration, TimeUnit units) {
     return new SecretStores(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-
+  /** */
   public SecretStoreCreateResponse create(SecretStore secretStore) throws RpcException {
     SecretStoresPlumbing.SecretStoreCreateRequest.Builder builder =
         SecretStoresPlumbing.SecretStoreCreateRequest.newBuilder();
@@ -76,7 +78,7 @@ public class SecretStores {
     }
     return Plumbing.convertSecretStoreCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one SecretStore by ID.
+  /** Get reads one SecretStore by ID. */
   public SecretStoreGetResponse get(String id) throws RpcException {
     SecretStoresPlumbing.SecretStoreGetRequest.Builder builder =
         SecretStoresPlumbing.SecretStoreGetRequest.newBuilder();
@@ -102,7 +104,7 @@ public class SecretStores {
     }
     return Plumbing.convertSecretStoreGetResponseToPorcelain(plumbingResponse);
   }
-  // Update patches a SecretStore by ID.
+  /** Update replaces all the fields of a SecretStore by ID. */
   public SecretStoreUpdateResponse update(SecretStore secretStore) throws RpcException {
     SecretStoresPlumbing.SecretStoreUpdateRequest.Builder builder =
         SecretStoresPlumbing.SecretStoreUpdateRequest.newBuilder();
@@ -128,7 +130,7 @@ public class SecretStores {
     }
     return Plumbing.convertSecretStoreUpdateResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a SecretStore by ID.
+  /** Delete removes a SecretStore by ID. */
   public SecretStoreDeleteResponse delete(String id) throws RpcException {
     SecretStoresPlumbing.SecretStoreDeleteRequest.Builder builder =
         SecretStoresPlumbing.SecretStoreDeleteRequest.newBuilder();
@@ -154,7 +156,7 @@ public class SecretStores {
     }
     return Plumbing.convertSecretStoreDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of SecretStores matching a given set of criteria.
+  /** List gets a list of SecretStores matching a given set of criteria. */
   public Iterable<SecretStore> list(String filter, Object... args) throws RpcException {
     SecretStoresPlumbing.SecretStoreListRequest.Builder builder =
         SecretStoresPlumbing.SecretStoreListRequest.newBuilder();

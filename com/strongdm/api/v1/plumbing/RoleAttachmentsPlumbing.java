@@ -91,7 +91,7 @@ public final class RoleAttachmentsPlumbing {
    * RoleAttachmentCreateRequest specifies what kind of RoleAttachments should be registered in
    * the organizations fleet.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentCreateRequest}
@@ -453,7 +453,7 @@ public final class RoleAttachmentsPlumbing {
      * RoleAttachmentCreateRequest specifies what kind of RoleAttachments should be registered in
      * the organizations fleet.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentCreateRequest}
@@ -1075,7 +1075,7 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentCreateResponse}
@@ -1503,7 +1503,7 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentCreateResponse reports how the RoleAttachments were created in the system.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentCreateResponse}
@@ -2260,7 +2260,7 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentGetRequest specifies which RoleAttachment to retrieve.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentGetRequest}
@@ -2617,7 +2617,7 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentGetRequest specifies which RoleAttachment to retrieve.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentGetRequest}
@@ -3173,7 +3173,7 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentGetResponse returns a requested RoleAttachment.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentGetResponse}
@@ -3601,7 +3601,7 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentGetResponse returns a requested RoleAttachment.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentGetResponse}
@@ -4358,7 +4358,7 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentDeleteRequest identifies a RoleAttachment by ID to delete.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentDeleteRequest}
@@ -4715,7 +4715,7 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentDeleteRequest identifies a RoleAttachment by ID to delete.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentDeleteRequest}
@@ -5244,7 +5244,7 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentDeleteResponse}
@@ -5605,7 +5605,7 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentDeleteResponse returns information about a RoleAttachment that was deleted.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentDeleteResponse}
@@ -6193,7 +6193,7 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * RoleAttachmentListRequest specifies criteria for retrieving a list of RoleAttachments.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentListRequest}
@@ -6550,7 +6550,7 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * RoleAttachmentListRequest specifies criteria for retrieving a list of RoleAttachments.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentListRequest}
@@ -7124,7 +7124,7 @@ public final class RoleAttachmentsPlumbing {
    * RoleAttachmentListResponse returns a list of RoleAttachments that meet the criteria of a
    * RoleAttachmentListRequest.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachmentListResponse}
@@ -7573,7 +7573,7 @@ public final class RoleAttachmentsPlumbing {
      * RoleAttachmentListResponse returns a list of RoleAttachments that meet the criteria of a
      * RoleAttachmentListRequest.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachmentListResponse}
@@ -8530,7 +8530,7 @@ public final class RoleAttachmentsPlumbing {
    * <pre>
    * A RoleAttachment assigns a role to a composite role.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleAttachment}
@@ -8946,7 +8946,7 @@ public final class RoleAttachmentsPlumbing {
      * <pre>
      * A RoleAttachment assigns a role to a composite role.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleAttachment}

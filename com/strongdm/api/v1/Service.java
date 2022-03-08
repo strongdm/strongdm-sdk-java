@@ -17,41 +17,43 @@
 
 package com.strongdm.api.v1;
 
-// A Service is a service account that can connect to resources they are granted
-// directly, or granted via roles. Services are typically automated jobs.
+/**
+ * A Service is a service account that can connect to resources they are granted directly, or
+ * granted via roles. Services are typically automated jobs.
+ */
 public class Service implements Account {
   private String id;
-  // Unique identifier of the Service.
+  /** Unique identifier of the Service. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the Service.
+  /** Unique identifier of the Service. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String name;
-  // Unique human-readable name of the Service.
+  /** Unique human-readable name of the Service. */
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Service.
+  /** Unique human-readable name of the Service. */
   public void setName(String in) {
     this.name = in;
   }
 
   private boolean suspended;
-  // The Service's suspended state.
+  /** The Service's suspended state. */
   public boolean getSuspended() {
     return this.suspended;
   }
-  // The Service's suspended state.
+  /** The Service's suspended state. */
   public void setSuspended(boolean in) {
     this.suspended = in;
   }
 
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -59,7 +61,7 @@ public class Service implements Account {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;

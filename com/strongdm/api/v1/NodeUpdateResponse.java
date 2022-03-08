@@ -17,35 +17,36 @@
 
 package com.strongdm.api.v1;
 
-// NodeUpdateResponse returns the fields of a Node after it has been updated by
-// a NodeUpdateRequest.
+/**
+ * NodeUpdateResponse returns the fields of a Node after it has been updated by a NodeUpdateRequest.
+ */
 public class NodeUpdateResponse {
   private UpdateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public UpdateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(UpdateResponseMetadata in) {
     this.meta = in;
   }
 
   private Node node;
-  // The updated Node.
+  /** The updated Node. */
   public Node getNode() {
     return this.node;
   }
-  // The updated Node.
+  /** The updated Node. */
   public void setNode(Node in) {
     this.node = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

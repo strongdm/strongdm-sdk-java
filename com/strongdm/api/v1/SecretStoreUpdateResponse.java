@@ -17,35 +17,37 @@
 
 package com.strongdm.api.v1;
 
-// SecretStoreUpdateResponse returns the fields of a SecretStore after it has been updated by
-// a SecretStoreUpdateRequest.
+/**
+ * SecretStoreUpdateResponse returns the fields of a SecretStore after it has been updated by a
+ * SecretStoreUpdateRequest.
+ */
 public class SecretStoreUpdateResponse {
   private UpdateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public UpdateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(UpdateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private SecretStore secretStore;
-  // The updated SecretStore.
+  /** The updated SecretStore. */
   public SecretStore getSecretStore() {
     return this.secretStore;
   }
-  // The updated SecretStore.
+  /** The updated SecretStore. */
   public void setSecretStore(SecretStore in) {
     this.secretStore = in;
   }

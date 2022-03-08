@@ -31,11 +31,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Roles are tools for controlling user access to resources. Each Role holds a
- * list of resources which they grant access to. Composite roles are a special
- * type of Role which have no resource associations of their own, but instead
- * grant access to the combined resources associated with a set of child roles.
- * Each user can be a member of one Role or composite role.
+ * A Role has a list of access rules which determine which Resources the members
+ * of the Role have access to. An Account can be a member of multiple Roles via
+ * AccountAttachments.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -228,11 +226,9 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are tools for controlling user access to resources. Each Role holds a
-   * list of resources which they grant access to. Composite roles are a special
-   * type of Role which have no resource associations of their own, but instead
-   * grant access to the combined resources associated with a set of child roles.
-   * Each user can be a member of one Role or composite role.
+   * A Role has a list of access rules which determine which Resources the members
+   * of the Role have access to. An Account can be a member of multiple Roles via
+   * AccountAttachments.
    * </pre>
    */
   public static abstract class RolesImplBase implements io.grpc.BindableService {
@@ -259,7 +255,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * Update patches a Role by ID.
+     * Update replaces all the fields of a Role by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request,
@@ -330,11 +326,9 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are tools for controlling user access to resources. Each Role holds a
-   * list of resources which they grant access to. Composite roles are a special
-   * type of Role which have no resource associations of their own, but instead
-   * grant access to the combined resources associated with a set of child roles.
-   * Each user can be a member of one Role or composite role.
+   * A Role has a list of access rules which determine which Resources the members
+   * of the Role have access to. An Account can be a member of multiple Roles via
+   * AccountAttachments.
    * </pre>
    */
   public static final class RolesStub extends io.grpc.stub.AbstractStub<RolesStub> {
@@ -377,7 +371,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * Update patches a Role by ID.
+     * Update replaces all the fields of a Role by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request,
@@ -411,11 +405,9 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are tools for controlling user access to resources. Each Role holds a
-   * list of resources which they grant access to. Composite roles are a special
-   * type of Role which have no resource associations of their own, but instead
-   * grant access to the combined resources associated with a set of child roles.
-   * Each user can be a member of one Role or composite role.
+   * A Role has a list of access rules which determine which Resources the members
+   * of the Role have access to. An Account can be a member of multiple Roles via
+   * AccountAttachments.
    * </pre>
    */
   public static final class RolesBlockingStub extends io.grpc.stub.AbstractStub<RolesBlockingStub> {
@@ -456,7 +448,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * Update patches a Role by ID.
+     * Update replaces all the fields of a Role by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse update(com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateRequest request) {
@@ -487,11 +479,9 @@ public final class RolesGrpc {
 
   /**
    * <pre>
-   * Roles are tools for controlling user access to resources. Each Role holds a
-   * list of resources which they grant access to. Composite roles are a special
-   * type of Role which have no resource associations of their own, but instead
-   * grant access to the combined resources associated with a set of child roles.
-   * Each user can be a member of one Role or composite role.
+   * A Role has a list of access rules which determine which Resources the members
+   * of the Role have access to. An Account can be a member of multiple Roles via
+   * AccountAttachments.
    * </pre>
    */
   public static final class RolesFutureStub extends io.grpc.stub.AbstractStub<RolesFutureStub> {
@@ -534,7 +524,7 @@ public final class RolesGrpc {
 
     /**
      * <pre>
-     * Update patches a Role by ID.
+     * Update replaces all the fields of a Role by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RolesPlumbing.RoleUpdateResponse> update(

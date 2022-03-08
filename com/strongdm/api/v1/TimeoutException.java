@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-// TimeoutException indicates an RPC call timed out.
+/** TimeoutException indicates an RPC call timed out. */
 public class TimeoutException extends RpcException {
   static final long serialVersionUID = 1;
 

@@ -21,9 +21,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/** A set of AccessRules defines which resources a role has access to. */
 public class AccessRule {
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -31,7 +32,7 @@ public class AccessRule {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;

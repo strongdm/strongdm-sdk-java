@@ -255,7 +255,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Update patches a Account by ID.
+     * Update replaces all the fields of an Account by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
@@ -265,7 +265,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Delete removes a Account by ID.
+     * Delete removes an Account by ID.
      * </pre>
      */
     public void delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
@@ -371,7 +371,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Update patches a Account by ID.
+     * Update replaces all the fields of an Account by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request,
@@ -382,7 +382,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Delete removes a Account by ID.
+     * Delete removes an Account by ID.
      * </pre>
      */
     public void delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request,
@@ -448,7 +448,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Update patches a Account by ID.
+     * Update replaces all the fields of an Account by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse update(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateRequest request) {
@@ -458,7 +458,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Delete removes a Account by ID.
+     * Delete removes an Account by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse delete(com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteRequest request) {
@@ -524,7 +524,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Update patches a Account by ID.
+     * Update replaces all the fields of an Account by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountUpdateResponse> update(
@@ -535,7 +535,7 @@ public final class AccountsGrpc {
 
     /**
      * <pre>
-     * Delete removes a Account by ID.
+     * Delete removes an Account by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.AccountsPlumbing.AccountDeleteResponse> delete(

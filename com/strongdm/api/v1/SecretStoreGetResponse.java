@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// SecretStoreGetResponse returns a requested SecretStore.
+/** SecretStoreGetResponse returns a requested SecretStore. */
 public class SecretStoreGetResponse {
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private SecretStore secretStore;
-  // The requested SecretStore.
+  /** The requested SecretStore. */
   public SecretStore getSecretStore() {
     return this.secretStore;
   }
-  // The requested SecretStore.
+  /** The requested SecretStore. */
   public void setSecretStore(SecretStore in) {
     this.secretStore = in;
   }

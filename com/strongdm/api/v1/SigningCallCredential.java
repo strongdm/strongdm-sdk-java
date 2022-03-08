@@ -19,13 +19,13 @@ package com.strongdm.api.v1;
 import io.grpc.*;
 import java.util.concurrent.Executor;
 
-public class SigningCallCredential extends CallCredentials {
+class SigningCallCredential extends CallCredentials {
   private final String apiAccessKey;
   private final String signature;
   private static final String API_VERSION = "2021-08-23";
   private static final String USER_AGENT = "strongdm-sdk-java/2.0.0";
 
-  public SigningCallCredential(String apiAccessKey, String signature) {
+  protected SigningCallCredential(String apiAccessKey, String signature) {
     this.apiAccessKey = apiAccessKey;
     this.signature = signature;
   }

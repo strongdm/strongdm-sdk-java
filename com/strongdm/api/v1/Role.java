@@ -19,58 +19,63 @@ package com.strongdm.api.v1;
 
 import java.util.List;
 
-// A Role is a collection of access grants, and typically corresponds to a team, Active Directory
-// OU, or other organizational unit. Users are granted access to resources by assigning them to
-// roles.
+/**
+ * A Role has a list of access rules which determine which Resources the members of the Role have
+ * access to. An Account can be a member of multiple Roles via AccountAttachments.
+ */
 public class Role {
   private List<AccessRule> accessRules;
-  // AccessRules is a list of access rules defining the resources this Role has access to.
+  /** AccessRules is a list of access rules defining the resources this Role has access to. */
   public List<AccessRule> getAccessRules() {
     return this.accessRules;
   }
-  // AccessRules is a list of access rules defining the resources this Role has access to.
+  /** AccessRules is a list of access rules defining the resources this Role has access to. */
   public void setAccessRules(List<AccessRule> in) {
     this.accessRules = in;
   }
 
   private boolean composite;
-  // Composite is true if the Role is a composite role.
-  //
-  // Deprecated: composite roles are deprecated, use multi-role instead.
+  /**
+   * Composite is true if the Role is a composite role.
+   *
+   * <p>Deprecated: composite roles are deprecated, use multi-role via AccountAttachments instead.
+   */
   @Deprecated
   public boolean getComposite() {
     return this.composite;
   }
-  // Composite is true if the Role is a composite role.
-  //
-  // Deprecated: composite roles are deprecated, use multi-role instead.
+  /**
+   * Composite is true if the Role is a composite role.
+   *
+   * <p>Deprecated: composite roles are deprecated, use multi-role via AccountAttachments instead.
+   */
   @Deprecated
   public void setComposite(boolean in) {
     this.composite = in;
   }
 
   private String id;
-  // Unique identifier of the Role.
+  /** Unique identifier of the Role. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the Role.
+  /** Unique identifier of the Role. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String name;
-  // Unique human-readable name of the Role.
+  /** Unique human-readable name of the Role. */
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Role.
+  /** Unique human-readable name of the Role. */
   public void setName(String in) {
     this.name = in;
   }
 
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -78,7 +83,7 @@ public class Role {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;

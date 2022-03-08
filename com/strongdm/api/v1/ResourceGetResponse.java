@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// ResourceGetResponse returns a requested Resource.
+/** ResourceGetResponse returns a requested Resource. */
 public class ResourceGetResponse {
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private Resource resource;
-  // The requested Resource.
+  /** The requested Resource. */
   public Resource getResource() {
     return this.resource;
   }
-  // The requested Resource.
+  /** The requested Resource. */
   public void setResource(Resource in) {
     this.resource = in;
   }

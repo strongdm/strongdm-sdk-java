@@ -29,12 +29,14 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// RoleGrants represent relationships between composite roles and the roles
-// that make up those composite roles. When a composite role is attached to another
-// role, the permissions granted to members of the composite role are augmented to
-// include the permissions granted to members of the attached role.
-//
-// Deprecated: use access rules instead.
+/**
+ * RoleGrants represent relationships between composite roles and the roles that make up those
+ * composite roles. When a composite role is attached to another role, the permissions granted to
+ * members of the composite role are augmented to include the permissions granted to members of the
+ * attached role.
+ *
+ * <p>Deprecated: use Role access rules instead.
+ */
 @Deprecated
 public class RoleGrants {
   private final RoleGrantsGrpc.RoleGrantsBlockingStub stub;
@@ -51,14 +53,18 @@ public class RoleGrants {
     this.parent = client;
   }
 
-  // This function returns a copy of the RoleGrants service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the RoleGrants service which has the given deadline set for all
+   * method calls.
+   */
   public RoleGrants withDeadlineAfter(long duration, TimeUnit units) {
     return new RoleGrants(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // Create registers a new RoleGrant.
-  //
-  // Deprecated: use access rules instead.
+  /**
+   * Create registers a new RoleGrant.
+   *
+   * <p>Deprecated: use Role access rules instead.
+   */
   @Deprecated
   public RoleGrantCreateResponse create(RoleGrant roleGrant) throws RpcException {
     RoleGrantsPlumbing.RoleGrantCreateRequest.Builder builder =
@@ -85,9 +91,11 @@ public class RoleGrants {
     }
     return Plumbing.convertRoleGrantCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one RoleGrant by ID.
-  //
-  // Deprecated: use access rules instead.
+  /**
+   * Get reads one RoleGrant by ID.
+   *
+   * <p>Deprecated: use Role access rules instead.
+   */
   @Deprecated
   public RoleGrantGetResponse get(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantGetRequest.Builder builder =
@@ -114,9 +122,11 @@ public class RoleGrants {
     }
     return Plumbing.convertRoleGrantGetResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a RoleGrant by ID.
-  //
-  // Deprecated: use access rules instead.
+  /**
+   * Delete removes a RoleGrant by ID.
+   *
+   * <p>Deprecated: use Role access rules instead.
+   */
   @Deprecated
   public RoleGrantDeleteResponse delete(String id) throws RpcException {
     RoleGrantsPlumbing.RoleGrantDeleteRequest.Builder builder =
@@ -143,9 +153,11 @@ public class RoleGrants {
     }
     return Plumbing.convertRoleGrantDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of RoleGrants matching a given set of criteria.
-  //
-  // Deprecated: use access rules instead.
+  /**
+   * List gets a list of RoleGrants matching a given set of criteria.
+   *
+   * <p>Deprecated: use Role access rules instead.
+   */
   @Deprecated
   public Iterable<RoleGrant> list(String filter, Object... args) throws RpcException {
     RoleGrantsPlumbing.RoleGrantListRequest.Builder builder =

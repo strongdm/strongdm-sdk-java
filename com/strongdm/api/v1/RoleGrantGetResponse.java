@@ -17,37 +17,39 @@
 
 package com.strongdm.api.v1;
 
-// RoleGrantGetResponse returns a requested RoleGrant.
-//
-// Deprecated: use access rules instead.
+/**
+ * RoleGrantGetResponse returns a requested RoleGrant.
+ *
+ * <p>Deprecated: use Role access rules instead.
+ */
 @Deprecated
 public class RoleGrantGetResponse {
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private RoleGrant roleGrant;
-  // The requested RoleGrant.
+  /** The requested RoleGrant. */
   public RoleGrant getRoleGrant() {
     return this.roleGrant;
   }
-  // The requested RoleGrant.
+  /** The requested RoleGrant. */
   public void setRoleGrant(RoleGrant in) {
     this.roleGrant = in;
   }

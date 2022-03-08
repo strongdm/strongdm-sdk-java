@@ -17,18 +17,20 @@
 
 package com.strongdm.api.v1;
 
-// A SecretStore is a server where resource secrets (passwords, keys) are stored.
-// Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support@strongdm.com to
-// request access to the beta.
+/**
+ * A SecretStore is a server where resource secrets (passwords, keys) are stored. Coming soon
+ * support for HashiCorp Vault and AWS Secret Store. Contact support@strongdm.com to request access
+ * to the beta.
+ */
 public interface SecretStore {
-  // Returns the unique identifier of the SecretStore.
+  /** Returns the unique identifier of the SecretStore. */
   String getId();
-  // Returns the tags of the SecretStore.
+  /** Returns the tags of the SecretStore. */
   java.util.Map<String, String> getTags();
-  // Sets the tags of the SecretStore.
+  /** Sets the tags of the SecretStore. */
   void setTags(java.util.Map<String, String> tags);
-  // Returns the name of the SecretStore.
+  /** Returns the name of the SecretStore. */
   String getName();
-  // Sets the name of the SecretStore.
+  /** Sets the name of the SecretStore. */
   void setName(String name);
 }

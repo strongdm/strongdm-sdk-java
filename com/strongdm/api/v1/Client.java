@@ -33,6 +33,7 @@ import java.util.concurrent.TimeUnit;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
+/** Client communicates with the strongDM API. */
 public class Client {
   private String apiAccessKey;
   private byte[] apiSecretKey;
@@ -46,61 +47,72 @@ public class Client {
   private int maxRetryDelay;
   private final AccountAttachments accountAttachments;
 
-  // AccountAttachments assign an account to a role or composite role.
+  /** AccountAttachments assign an account to a role. */
   public AccountAttachments accountAttachments() {
     return this.accountAttachments;
   }
 
   private final AccountGrants accountGrants;
 
-  // AccountGrants assign a resource directly to an account, giving the account the permission to
-  // connect to that resource.
+  /**
+   * AccountGrants assign a resource directly to an account, giving the account the permission to
+   * connect to that resource.
+   */
   public AccountGrants accountGrants() {
     return this.accountGrants;
   }
 
   private final Accounts accounts;
 
-  // Accounts are users that have access to strongDM. There are two types of accounts:
-  // 1. **Users:** humans who are authenticated through username and password or SSO.
-  // 2. **Service Accounts:** machines that are authenticated using a service token.
+  /**
+   * Accounts are users that have access to strongDM. There are two types of accounts: 1. **Users:**
+   * humans who are authenticated through username and password or SSO. 2. **Service Accounts:**
+   * machines that are authenticated using a service token.
+   */
   public Accounts accounts() {
     return this.accounts;
   }
 
   private final ControlPanel controlPanel;
 
-  // ControlPanel contains all administrative controls.
+  /** ControlPanel contains all administrative controls. */
   public ControlPanel controlPanel() {
     return this.controlPanel;
   }
 
   private final Nodes nodes;
 
-  // Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-  // There are two types of nodes:
-  // - **Gateways** are the entry points into network. They listen for connection from the strongDM
-  // client, and provide access to databases and servers.
-  // - **Relays** are used to extend the strongDM network into segmented subnets. They provide
-  // access to databases and servers but do not listen for incoming connections.
+  /**
+   * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
+   * There are two types of nodes: - **Gateways** are the entry points into network. They listen for
+   * connection from the strongDM client, and provide access to databases and servers. - **Relays**
+   * are used to extend the strongDM network into segmented subnets. They provide access to
+   * databases and servers but do not listen for incoming connections.
+   */
   public Nodes nodes() {
     return this.nodes;
   }
 
   private final Resources resources;
 
+  /**
+   * Resources are databases, servers, clusters, websites, or clouds that strongDM delegates access
+   * to.
+   */
   public Resources resources() {
     return this.resources;
   }
 
   private final RoleAttachments roleAttachments;
 
-  // RoleAttachments represent relationships between composite roles and the roles
-  // that make up those composite roles. When a composite role is attached to another
-  // role, the permissions granted to members of the composite role are augmented to
-  // include the permissions granted to members of the attached role.
-  //
-  // Deprecated: use multi-role instead.
+  /**
+   * RoleAttachments represent relationships between composite roles and the roles that make up
+   * those composite roles. When a composite role is attached to another role, the permissions
+   * granted to members of the composite role are augmented to include the permissions granted to
+   * members of the attached role.
+   *
+   * <p>Deprecated: use multi-role via AccountAttachments instead.
+   */
   @Deprecated
   public RoleAttachments roleAttachments() {
     return this.roleAttachments;
@@ -108,12 +120,14 @@ public class Client {
 
   private final RoleGrants roleGrants;
 
-  // RoleGrants represent relationships between composite roles and the roles
-  // that make up those composite roles. When a composite role is attached to another
-  // role, the permissions granted to members of the composite role are augmented to
-  // include the permissions granted to members of the attached role.
-  //
-  // Deprecated: use access rules instead.
+  /**
+   * RoleGrants represent relationships between composite roles and the roles that make up those
+   * composite roles. When a composite role is attached to another role, the permissions granted to
+   * members of the composite role are augmented to include the permissions granted to members of
+   * the attached role.
+   *
+   * <p>Deprecated: use Role access rules instead.
+   */
   @Deprecated
   public RoleGrants roleGrants() {
     return this.roleGrants;
@@ -121,27 +135,26 @@ public class Client {
 
   private final Roles roles;
 
-  // Roles are tools for controlling user access to resources. Each Role holds a
-  // list of resources which they grant access to. Composite roles are a special
-  // type of Role which have no resource associations of their own, but instead
-  // grant access to the combined resources associated with a set of child roles.
-  // Each user can be a member of one Role or composite role.
+  /**
+   * A Role has a list of access rules which determine which Resources the members of the Role have
+   * access to. An Account can be a member of multiple Roles via AccountAttachments.
+   */
   public Roles roles() {
     return this.roles;
   }
 
   private final SecretStores secretStores;
 
-  // SecretStores are servers where resource secrets (passwords, keys) are stored.
+  /** SecretStores are servers where resource secrets (passwords, keys) are stored. */
   public SecretStores secretStores() {
     return this.secretStores;
   }
-  // Creates a new strongDM API client.
+  /** Creates a new strongDM API client. */
   public Client(String apiAccessKey, String apiSecretKey) throws RpcException {
     this(apiAccessKey, apiSecretKey, new ClientOptions());
   }
 
-  // Creates a new strongDM API client with extra options.
+  /** Creates a new strongDM API client with extra options. */
   public Client(String apiAccessKey, String apiSecretKey, ClientOptions options)
       throws RpcException {
     this.apiAccessKey = apiAccessKey.trim();
@@ -214,20 +227,26 @@ public class Client {
 
   private final ManagedChannel channel;
 
-  // Attempts to close the underlying grpc connection
-  // and waits for ongoing calls to terminate. It will return
-  // whether it succeeded before timing out.
-  // Can be called with seconds, or with an explicit
-  // time unit and count, or it will default to ten seconds.
-  // Can be called multiple times safely.
+  /**
+   * Attempts to close the underlying grpc connection and waits for ongoing calls to terminate. It
+   * will return whether it succeeded before timing out. Can be called multiple times safely.
+   */
   public boolean close() throws InterruptedException {
     return this.close(10, TimeUnit.SECONDS);
   }
 
+  /**
+   * Attempts to close the underlying grpc connection and waits for ongoing calls to terminate. It
+   * will return whether it succeeded before timing out. Can be called multiple times safely.
+   */
   public boolean close(long secs) throws InterruptedException {
     return this.close(secs, TimeUnit.SECONDS);
   }
 
+  /**
+   * Attempts to close the underlying grpc connection and waits for ongoing calls to terminate. It
+   * will return whether it succeeded before timing out. Can be called multiple times safely.
+   */
   public boolean close(long timeout, TimeUnit unit) throws InterruptedException {
     if (!this.channel.isShutdown()) {
       this.channel.shutdown();

@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-// RpcException defines base class for all exceptions in the SDK
+/** RpcException defines base class for all exceptions in the SDK */
 public class RpcException extends RuntimeException {
   static final long serialVersionUID = 1;
 

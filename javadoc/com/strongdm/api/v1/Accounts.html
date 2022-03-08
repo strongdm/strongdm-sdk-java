@@ -77,6 +77,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Accounts</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Accounts are users that have access to strongDM. There are two types of accounts:
+ 1. **Users:** humans who are authenticated through username and password or SSO.
+ 2. **Service Accounts:** machines that are authenticated using a service token.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,24 +110,37 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AccountCreateResponse.html" title="class in com.strongdm.api.v1">AccountCreateResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#create(com.strongdm.api.v1.Account)" class="member-name-link">create</a><wbr>(<a href="Account.html" title="interface in com.strongdm.api.v1">Account</a>&nbsp;account)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create registers a new Account.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AccountDeleteResponse.html" title="class in com.strongdm.api.v1">AccountDeleteResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete(java.lang.String)" class="member-name-link">delete</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Delete removes an Account by ID.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AccountGetResponse.html" title="class in com.strongdm.api.v1">AccountGetResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(java.lang.String)" class="member-name-link">get</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get reads one Account by ID.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="Account.html" title="interface in com.strongdm.api.v1">Account</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#list(java.lang.String,java.lang.Object...)" class="member-name-link">list</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;filter,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">List gets a list of Accounts matching a given set of criteria.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AccountUpdateResponse.html" title="class in com.strongdm.api.v1">AccountUpdateResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(com.strongdm.api.v1.Account)" class="member-name-link">update</a><wbr>(<a href="Account.html" title="interface in com.strongdm.api.v1">Account</a>&nbsp;account)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Update replaces all the fields of an Account by ID.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Accounts.html" title="class in com.strongdm.api.v1">Accounts</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDeadlineAfter(long,java.util.concurrent.TimeUnit)" class="member-name-link">withDeadlineAfter</a><wbr>(long&nbsp;duration,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">This function returns a copy of the Accounts service which has
+ the given deadline set for all method calls.</div>
+</div>
 </div>
 </div>
 </div>
@@ -162,6 +178,8 @@ loadScripts(document, 'script');</script>
 <h3>withDeadlineAfter</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Accounts.html" title="class in com.strongdm.api.v1">Accounts</a></span>&nbsp;<span class="element-name">withDeadlineAfter</span><wbr><span class="parameters">(long&nbsp;duration,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</span></div>
+<div class="block">This function returns a copy of the Accounts service which has
+ the given deadline set for all method calls.</div>
 </section>
 </li>
 <li>
@@ -169,6 +187,7 @@ loadScripts(document, 'script');</script>
 <h3>create</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AccountCreateResponse.html" title="class in com.strongdm.api.v1">AccountCreateResponse</a></span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(<a href="Account.html" title="interface in com.strongdm.api.v1">Account</a>&nbsp;account)</span>
                              throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">Create registers a new Account.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -180,6 +199,7 @@ loadScripts(document, 'script');</script>
 <h3>get</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AccountGetResponse.html" title="class in com.strongdm.api.v1">AccountGetResponse</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span>
                        throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">Get reads one Account by ID.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -191,6 +211,7 @@ loadScripts(document, 'script');</script>
 <h3>update</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AccountUpdateResponse.html" title="class in com.strongdm.api.v1">AccountUpdateResponse</a></span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(<a href="Account.html" title="interface in com.strongdm.api.v1">Account</a>&nbsp;account)</span>
                              throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">Update replaces all the fields of an Account by ID.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -202,6 +223,7 @@ loadScripts(document, 'script');</script>
 <h3>delete</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AccountDeleteResponse.html" title="class in com.strongdm.api.v1">AccountDeleteResponse</a></span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span>
                              throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">Delete removes an Account by ID.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -214,6 +236,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;<a href="Account.html" title="interface in com.strongdm.api.v1">Account</a>&gt;</span>&nbsp;<span class="element-name">list</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;filter,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span>
                        throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">List gets a list of Accounts matching a given set of criteria.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>

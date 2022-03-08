@@ -17,24 +17,26 @@
 
 package com.strongdm.api.v1;
 
-// A Resource is a database or server for which strongDM manages access.
+/**
+ * A Resource is a database, server, cluster, website, or cloud that strongDM delegates access to.
+ */
 public interface Resource {
-  // Returns the unique identifier of the Resource.
+  /** Returns the unique identifier of the Resource. */
   String getId();
-  // Returns the name of the Resource.
+  /** Returns the name of the Resource. */
   String getName();
-  // Sets the name of the Resource.
+  /** Sets the name of the Resource. */
   void setName(String name);
-  // Returns the tags of the Resource.
+  /** Returns the tags of the Resource. */
   java.util.Map<String, String> getTags();
-  // Sets the tags of the Resource.
+  /** Sets the tags of the Resource. */
   void setTags(java.util.Map<String, String> tags);
-  // Returns the secret store id of the Resource.
+  /** Returns the secret store id of the Resource. */
   String getSecretStoreId();
-  // Sets the secret store id of the Resource.
+  /** Sets the secret store id of the Resource. */
   void setSecretStoreId(String secretStoreId);
-  // Returns the egress filter of the Resource.
+  /** Returns the egress filter of the Resource. */
   String getEgressFilter();
-  // Sets the egress filter of the Resource.
+  /** Sets the egress filter of the Resource. */
   void setEgressFilter(String egressFilter);
 }

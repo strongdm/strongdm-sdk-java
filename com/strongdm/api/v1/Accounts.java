@@ -29,9 +29,11 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// Accounts are users that have access to strongDM. There are two types of accounts:
-// 1. **Users:** humans who are authenticated through username and password or SSO.
-// 2. **Service Accounts:** machines that are authenticated using a service token.
+/**
+ * Accounts are users that have access to strongDM. There are two types of accounts: 1. **Users:**
+ * humans who are authenticated through username and password or SSO. 2. **Service Accounts:**
+ * machines that are authenticated using a service token.
+ */
 public class Accounts {
   private final AccountsGrpc.AccountsBlockingStub stub;
   private final Client parent;
@@ -47,12 +49,14 @@ public class Accounts {
     this.parent = client;
   }
 
-  // This function returns a copy of the Accounts service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the Accounts service which has the given deadline set for all
+   * method calls.
+   */
   public Accounts withDeadlineAfter(long duration, TimeUnit units) {
     return new Accounts(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // Create registers a new Account.
+  /** Create registers a new Account. */
   public AccountCreateResponse create(Account account) throws RpcException {
     AccountsPlumbing.AccountCreateRequest.Builder builder =
         AccountsPlumbing.AccountCreateRequest.newBuilder();
@@ -78,7 +82,7 @@ public class Accounts {
     }
     return Plumbing.convertAccountCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one Account by ID.
+  /** Get reads one Account by ID. */
   public AccountGetResponse get(String id) throws RpcException {
     AccountsPlumbing.AccountGetRequest.Builder builder =
         AccountsPlumbing.AccountGetRequest.newBuilder();
@@ -104,7 +108,7 @@ public class Accounts {
     }
     return Plumbing.convertAccountGetResponseToPorcelain(plumbingResponse);
   }
-  // Update patches a Account by ID.
+  /** Update replaces all the fields of an Account by ID. */
   public AccountUpdateResponse update(Account account) throws RpcException {
     AccountsPlumbing.AccountUpdateRequest.Builder builder =
         AccountsPlumbing.AccountUpdateRequest.newBuilder();
@@ -130,7 +134,7 @@ public class Accounts {
     }
     return Plumbing.convertAccountUpdateResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a Account by ID.
+  /** Delete removes an Account by ID. */
   public AccountDeleteResponse delete(String id) throws RpcException {
     AccountsPlumbing.AccountDeleteRequest.Builder builder =
         AccountsPlumbing.AccountDeleteRequest.newBuilder();
@@ -156,7 +160,7 @@ public class Accounts {
     }
     return Plumbing.convertAccountDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of Accounts matching a given set of criteria.
+  /** List gets a list of Accounts matching a given set of criteria. */
   public Iterable<Account> list(String filter, Object... args) throws RpcException {
     AccountsPlumbing.AccountListRequest.Builder builder =
         AccountsPlumbing.AccountListRequest.newBuilder();

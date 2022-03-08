@@ -29,12 +29,13 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// Nodes make up the strongDM network, and allow your users to connect securely to your resources.
-// There are two types of nodes:
-// - **Gateways** are the entry points into network. They listen for connection from the strongDM
-// client, and provide access to databases and servers.
-// - **Relays** are used to extend the strongDM network into segmented subnets. They provide access
-// to databases and servers but do not listen for incoming connections.
+/**
+ * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
+ * There are two types of nodes: - **Gateways** are the entry points into network. They listen for
+ * connection from the strongDM client, and provide access to databases and servers. - **Relays**
+ * are used to extend the strongDM network into segmented subnets. They provide access to databases
+ * and servers but do not listen for incoming connections.
+ */
 public class Nodes {
   private final NodesGrpc.NodesBlockingStub stub;
   private final Client parent;
@@ -50,12 +51,14 @@ public class Nodes {
     this.parent = client;
   }
 
-  // This function returns a copy of the Nodes service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the Nodes service which has the given deadline set for all
+   * method calls.
+   */
   public Nodes withDeadlineAfter(long duration, TimeUnit units) {
     return new Nodes(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // Create registers a new Node.
+  /** Create registers a new Node. */
   public NodeCreateResponse create(Node node) throws RpcException {
     NodesPlumbing.NodeCreateRequest.Builder builder = NodesPlumbing.NodeCreateRequest.newBuilder();
     builder.setNode(Plumbing.convertNodeToPlumbing(node));
@@ -80,7 +83,7 @@ public class Nodes {
     }
     return Plumbing.convertNodeCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one Node by ID.
+  /** Get reads one Node by ID. */
   public NodeGetResponse get(String id) throws RpcException {
     NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
     builder.setId((id));
@@ -105,7 +108,7 @@ public class Nodes {
     }
     return Plumbing.convertNodeGetResponseToPorcelain(plumbingResponse);
   }
-  // Update patches a Node by ID.
+  /** Update replaces all the fields of a Node by ID. */
   public NodeUpdateResponse update(Node node) throws RpcException {
     NodesPlumbing.NodeUpdateRequest.Builder builder = NodesPlumbing.NodeUpdateRequest.newBuilder();
     builder.setNode(Plumbing.convertNodeToPlumbing(node));
@@ -130,7 +133,7 @@ public class Nodes {
     }
     return Plumbing.convertNodeUpdateResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a Node by ID.
+  /** Delete removes a Node by ID. */
   public NodeDeleteResponse delete(String id) throws RpcException {
     NodesPlumbing.NodeDeleteRequest.Builder builder = NodesPlumbing.NodeDeleteRequest.newBuilder();
     builder.setId((id));
@@ -155,7 +158,7 @@ public class Nodes {
     }
     return Plumbing.convertNodeDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of Nodes matching a given set of criteria.
+  /** List gets a list of Nodes matching a given set of criteria. */
   public Iterable<Node> list(String filter, Object... args) throws RpcException {
     NodesPlumbing.NodeListRequest.Builder builder = NodesPlumbing.NodeListRequest.newBuilder();
     builder.setFilter(Plumbing.quoteFilterArgs(filter, args));

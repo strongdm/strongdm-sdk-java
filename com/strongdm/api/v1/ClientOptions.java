@@ -17,6 +17,7 @@
 
 package com.strongdm.api.v1;
 
+/** ClientOptions allows customization of the behavior of the strongDM API client. */
 public class ClientOptions {
   private String host;
 

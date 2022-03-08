@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// RoleGetResponse returns a requested Role.
+/** RoleGetResponse returns a requested Role. */
 public class RoleGetResponse {
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private Role role;
-  // The requested Role.
+  /** The requested Role. */
   public Role getRole() {
     return this.role;
   }
-  // The requested Role.
+  /** The requested Role. */
   public void setRole(Role in) {
     this.role = in;
   }

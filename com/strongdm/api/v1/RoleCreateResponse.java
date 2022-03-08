@@ -17,35 +17,37 @@
 
 package com.strongdm.api.v1;
 
-// RoleCreateResponse reports how the Roles were created in the system. It can
-// communicate partial successes or failures.
+/**
+ * RoleCreateResponse reports how the Roles were created in the system. It can communicate partial
+ * successes or failures.
+ */
 public class RoleCreateResponse {
   private CreateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public CreateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private Role role;
-  // The created Role.
+  /** The created Role. */
   public Role getRole() {
     return this.role;
   }
-  // The created Role.
+  /** The created Role. */
   public void setRole(Role in) {
     this.role = in;
   }

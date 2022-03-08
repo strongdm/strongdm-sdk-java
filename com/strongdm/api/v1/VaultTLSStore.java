@@ -17,79 +17,80 @@
 
 package com.strongdm.api.v1;
 
+/** */
 public class VaultTLSStore implements SecretStore {
   private String caCertPath;
-
+  /** */
   public String getCACertPath() {
     return this.caCertPath;
   }
-
+  /** */
   public void setCACertPath(String in) {
     this.caCertPath = in;
   }
 
   private String clientCertPath;
-
+  /** */
   public String getClientCertPath() {
     return this.clientCertPath;
   }
-
+  /** */
   public void setClientCertPath(String in) {
     this.clientCertPath = in;
   }
 
   private String clientKeyPath;
-
+  /** */
   public String getClientKeyPath() {
     return this.clientKeyPath;
   }
-
+  /** */
   public void setClientKeyPath(String in) {
     this.clientKeyPath = in;
   }
 
   private String id;
-  // Unique identifier of the SecretStore.
+  /** Unique identifier of the SecretStore. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the SecretStore.
+  /** Unique identifier of the SecretStore. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String name;
-  // Unique human-readable name of the SecretStore.
+  /** Unique human-readable name of the SecretStore. */
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the SecretStore.
+  /** Unique human-readable name of the SecretStore. */
   public void setName(String in) {
     this.name = in;
   }
 
   private String namespace;
-
+  /** */
   public String getNamespace() {
     return this.namespace;
   }
-
+  /** */
   public void setNamespace(String in) {
     this.namespace = in;
   }
 
   private String serverAddress;
-
+  /** */
   public String getServerAddress() {
     return this.serverAddress;
   }
-
+  /** */
   public void setServerAddress(String in) {
     this.serverAddress = in;
   }
 
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -97,7 +98,7 @@ public class VaultTLSStore implements SecretStore {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;

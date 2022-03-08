@@ -17,37 +17,39 @@
 
 package com.strongdm.api.v1;
 
-// A RoleGrant connects a resource to a role, granting members of the role access to that resource.
-//
-// Deprecated: use access rules instead.
+/**
+ * A RoleGrant connects a resource to a role, granting members of the role access to that resource.
+ *
+ * <p>Deprecated: use Role access rules instead.
+ */
 @Deprecated
 public class RoleGrant {
   private String id;
-  // Unique identifier of the RoleGrant.
+  /** Unique identifier of the RoleGrant. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the RoleGrant.
+  /** Unique identifier of the RoleGrant. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String resourceId;
-  // The id of the resource of this RoleGrant.
+  /** The id of the resource of this RoleGrant. */
   public String getResourceId() {
     return this.resourceId;
   }
-  // The id of the resource of this RoleGrant.
+  /** The id of the resource of this RoleGrant. */
   public void setResourceId(String in) {
     this.resourceId = in;
   }
 
   private String roleId;
-  // The id of the attached role of this RoleGrant.
+  /** The id of the attached role of this RoleGrant. */
   public String getRoleId() {
     return this.roleId;
   }
-  // The id of the attached role of this RoleGrant.
+  /** The id of the attached role of this RoleGrant. */
   public void setRoleId(String in) {
     this.roleId = in;
   }

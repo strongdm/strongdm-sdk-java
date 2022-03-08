@@ -10874,7 +10874,8 @@ public final class RolesPlumbing {
     /**
      * <pre>
      * Composite is true if the Role is a composite role.
-     * Deprecated: composite roles are deprecated, use multi-role instead.
+     * Deprecated: composite roles are deprecated, use multi-role via
+     * AccountAttachments instead.
      * </pre>
      *
      * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
@@ -10912,7 +10913,9 @@ public final class RolesPlumbing {
   }
   /**
    * <pre>
-   * A Role is a collection of access grants, and typically corresponds to a team, Active Directory OU, or other organizational unit. Users are granted access to resources by assigning them to roles.
+   * A Role has a list of access rules which determine which Resources the members
+   * of the Role have access to. An Account can be a member of multiple Roles via
+   * AccountAttachments.
    * </pre>
    *
    * Protobuf type {@code v1.Role}
@@ -11173,7 +11176,8 @@ public final class RolesPlumbing {
     /**
      * <pre>
      * Composite is true if the Role is a composite role.
-     * Deprecated: composite roles are deprecated, use multi-role instead.
+     * Deprecated: composite roles are deprecated, use multi-role via
+     * AccountAttachments instead.
      * </pre>
      *
      * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
@@ -11427,7 +11431,9 @@ public final class RolesPlumbing {
     }
     /**
      * <pre>
-     * A Role is a collection of access grants, and typically corresponds to a team, Active Directory OU, or other organizational unit. Users are granted access to resources by assigning them to roles.
+     * A Role has a list of access rules which determine which Resources the members
+     * of the Role have access to. An Account can be a member of multiple Roles via
+     * AccountAttachments.
      * </pre>
      *
      * Protobuf type {@code v1.Role}
@@ -11903,7 +11909,8 @@ public final class RolesPlumbing {
       /**
        * <pre>
        * Composite is true if the Role is a composite role.
-       * Deprecated: composite roles are deprecated, use multi-role instead.
+       * Deprecated: composite roles are deprecated, use multi-role via
+       * AccountAttachments instead.
        * </pre>
        *
        * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
@@ -11917,7 +11924,8 @@ public final class RolesPlumbing {
       /**
        * <pre>
        * Composite is true if the Role is a composite role.
-       * Deprecated: composite roles are deprecated, use multi-role instead.
+       * Deprecated: composite roles are deprecated, use multi-role via
+       * AccountAttachments instead.
        * </pre>
        *
        * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
@@ -11934,7 +11942,8 @@ public final class RolesPlumbing {
       /**
        * <pre>
        * Composite is true if the Role is a composite role.
-       * Deprecated: composite roles are deprecated, use multi-role instead.
+       * Deprecated: composite roles are deprecated, use multi-role via
+       * AccountAttachments instead.
        * </pre>
        *
        * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>

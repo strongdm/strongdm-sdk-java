@@ -248,7 +248,7 @@ public final class SecretStoresGrpc {
 
     /**
      * <pre>
-     * Update patches a SecretStore by ID.
+     * Update replaces all the fields of a SecretStore by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest request,
@@ -359,7 +359,7 @@ public final class SecretStoresGrpc {
 
     /**
      * <pre>
-     * Update patches a SecretStore by ID.
+     * Update replaces all the fields of a SecretStore by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest request,
@@ -431,7 +431,7 @@ public final class SecretStoresGrpc {
 
     /**
      * <pre>
-     * Update patches a SecretStore by ID.
+     * Update replaces all the fields of a SecretStore by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateResponse update(com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateRequest request) {
@@ -502,7 +502,7 @@ public final class SecretStoresGrpc {
 
     /**
      * <pre>
-     * Update patches a SecretStore by ID.
+     * Update replaces all the fields of a SecretStore by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.SecretStoresPlumbing.SecretStoreUpdateResponse> update(

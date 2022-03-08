@@ -36,7 +36,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * role, the permissions granted to members of the composite role are augmented to
  * include the permissions granted to members of the attached role.
  * 
- * Deprecated: use multi-role instead.
+ * Deprecated: use multi-role via AccountAttachments instead.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -204,7 +204,7 @@ public final class RoleAttachmentsGrpc {
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -214,7 +214,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Create registers a new RoleAttachment.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -227,7 +227,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Get reads one RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -240,7 +240,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Delete removes a RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -253,7 +253,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -303,7 +303,7 @@ public final class RoleAttachmentsGrpc {
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -327,7 +327,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Create registers a new RoleAttachment.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -341,7 +341,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Get reads one RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -355,7 +355,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Delete removes a RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -369,7 +369,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -387,7 +387,7 @@ public final class RoleAttachmentsGrpc {
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -411,7 +411,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Create registers a new RoleAttachment.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -424,7 +424,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Get reads one RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -437,7 +437,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Delete removes a RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -450,7 +450,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -467,7 +467,7 @@ public final class RoleAttachmentsGrpc {
    * role, the permissions granted to members of the composite role are augmented to
    * include the permissions granted to members of the attached role.
    * 
-   * Deprecated: use multi-role instead.
+   * Deprecated: use multi-role via AccountAttachments instead.
    * </pre>
    */
   @java.lang.Deprecated
@@ -491,7 +491,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Create registers a new RoleAttachment.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -505,7 +505,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Get reads one RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -519,7 +519,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * Delete removes a RoleAttachment by ID.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated
@@ -533,7 +533,7 @@ public final class RoleAttachmentsGrpc {
      * <pre>
      * List gets a list of RoleAttachments matching a given set of criteria.
      * 
-     * Deprecated: use multi-role instead.
+     * Deprecated: use multi-role via AccountAttachments instead.
      * </pre>
      */
     @java.lang.Deprecated

@@ -29,8 +29,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// AccountGrants assign a resource directly to an account, giving the account the permission to
-// connect to that resource.
+/**
+ * AccountGrants assign a resource directly to an account, giving the account the permission to
+ * connect to that resource.
+ */
 public class AccountGrants {
   private final AccountGrantsGrpc.AccountGrantsBlockingStub stub;
   private final Client parent;
@@ -46,12 +48,14 @@ public class AccountGrants {
     this.parent = client;
   }
 
-  // This function returns a copy of the AccountGrants service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the AccountGrants service which has the given deadline set for
+   * all method calls.
+   */
   public AccountGrants withDeadlineAfter(long duration, TimeUnit units) {
     return new AccountGrants(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // Create registers a new AccountGrant.
+  /** Create registers a new AccountGrant. */
   public AccountGrantCreateResponse create(AccountGrant accountGrant) throws RpcException {
     AccountGrantsPlumbing.AccountGrantCreateRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantCreateRequest.newBuilder();
@@ -77,7 +81,7 @@ public class AccountGrants {
     }
     return Plumbing.convertAccountGrantCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one AccountGrant by ID.
+  /** Get reads one AccountGrant by ID. */
   public AccountGrantGetResponse get(String id) throws RpcException {
     AccountGrantsPlumbing.AccountGrantGetRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantGetRequest.newBuilder();
@@ -103,7 +107,7 @@ public class AccountGrants {
     }
     return Plumbing.convertAccountGrantGetResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a AccountGrant by ID.
+  /** Delete removes a AccountGrant by ID. */
   public AccountGrantDeleteResponse delete(String id) throws RpcException {
     AccountGrantsPlumbing.AccountGrantDeleteRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantDeleteRequest.newBuilder();
@@ -129,7 +133,7 @@ public class AccountGrants {
     }
     return Plumbing.convertAccountGrantDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of AccountGrants matching a given set of criteria.
+  /** List gets a list of AccountGrants matching a given set of criteria. */
   public Iterable<AccountGrant> list(String filter, Object... args) throws RpcException {
     AccountGrantsPlumbing.AccountGrantListRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantListRequest.newBuilder();

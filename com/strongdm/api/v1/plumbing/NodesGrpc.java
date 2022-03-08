@@ -255,7 +255,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a Node by ID.
+     * Update replaces all the fields of a Node by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request,
@@ -371,7 +371,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a Node by ID.
+     * Update replaces all the fields of a Node by ID.
      * </pre>
      */
     public void update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request,
@@ -448,7 +448,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a Node by ID.
+     * Update replaces all the fields of a Node by ID.
      * </pre>
      */
     public com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse update(com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateRequest request) {
@@ -524,7 +524,7 @@ public final class NodesGrpc {
 
     /**
      * <pre>
-     * Update patches a Node by ID.
+     * Update replaces all the fields of a Node by ID.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.NodesPlumbing.NodeUpdateResponse> update(

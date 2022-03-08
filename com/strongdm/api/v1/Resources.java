@@ -29,6 +29,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
+/**
+ * Resources are databases, servers, clusters, websites, or clouds that strongDM delegates access
+ * to.
+ */
 public class Resources {
   private final ResourcesGrpc.ResourcesBlockingStub stub;
   private final Client parent;
@@ -44,12 +48,14 @@ public class Resources {
     this.parent = client;
   }
 
-  // This function returns a copy of the Resources service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the Resources service which has the given deadline set for all
+   * method calls.
+   */
   public Resources withDeadlineAfter(long duration, TimeUnit units) {
     return new Resources(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // EnumerateTags gets a list of the filter matching tags.
+  /** EnumerateTags gets a list of the filter matching tags. */
   public Iterable<Tag> enumerateTags(String filter, Object... args) throws RpcException {
     ResourcesPlumbing.EnumerateTagsRequest.Builder builder =
         ResourcesPlumbing.EnumerateTagsRequest.newBuilder();
@@ -100,7 +106,7 @@ public class Resources {
 
     return () -> iterator;
   }
-  // Create registers a new Resource.
+  /** Create registers a new Resource. */
   public ResourceCreateResponse create(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceCreateRequest.Builder builder =
         ResourcesPlumbing.ResourceCreateRequest.newBuilder();
@@ -126,7 +132,7 @@ public class Resources {
     }
     return Plumbing.convertResourceCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one Resource by ID.
+  /** Get reads one Resource by ID. */
   public ResourceGetResponse get(String id) throws RpcException {
     ResourcesPlumbing.ResourceGetRequest.Builder builder =
         ResourcesPlumbing.ResourceGetRequest.newBuilder();
@@ -152,7 +158,7 @@ public class Resources {
     }
     return Plumbing.convertResourceGetResponseToPorcelain(plumbingResponse);
   }
-  // Update patches a Resource by ID.
+  /** Update replaces all the fields of a Resource by ID. */
   public ResourceUpdateResponse update(Resource resource) throws RpcException {
     ResourcesPlumbing.ResourceUpdateRequest.Builder builder =
         ResourcesPlumbing.ResourceUpdateRequest.newBuilder();
@@ -178,7 +184,7 @@ public class Resources {
     }
     return Plumbing.convertResourceUpdateResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a Resource by ID.
+  /** Delete removes a Resource by ID. */
   public ResourceDeleteResponse delete(String id) throws RpcException {
     ResourcesPlumbing.ResourceDeleteRequest.Builder builder =
         ResourcesPlumbing.ResourceDeleteRequest.newBuilder();
@@ -204,7 +210,7 @@ public class Resources {
     }
     return Plumbing.convertResourceDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of Resources matching a given set of criteria.
+  /** List gets a list of Resources matching a given set of criteria. */
   public Iterable<Resource> list(String filter, Object... args) throws RpcException {
     ResourcesPlumbing.ResourceListRequest.Builder builder =
         ResourcesPlumbing.ResourceListRequest.newBuilder();

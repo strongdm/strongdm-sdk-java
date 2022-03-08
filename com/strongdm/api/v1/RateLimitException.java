@@ -17,7 +17,7 @@
 
 package com.strongdm.api.v1;
 
-// RateLimitException is used for rate limit excess condition
+/** RateLimitException is used for rate limit excess condition */
 public final class RateLimitException extends RpcException {
   static final long serialVersionUID = 1;
 

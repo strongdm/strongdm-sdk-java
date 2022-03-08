@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// SecretStoreCreateResponse reports how the SecretStores were created in the system.
+/** SecretStoreCreateResponse reports how the SecretStores were created in the system. */
 public class SecretStoreCreateResponse {
   private CreateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public CreateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private SecretStore secretStore;
-  // The created SecretStore.
+  /** The created SecretStore. */
   public SecretStore getSecretStore() {
     return this.secretStore;
   }
-  // The created SecretStore.
+  /** The created SecretStore. */
   public void setSecretStore(SecretStore in) {
     this.secretStore = in;
   }

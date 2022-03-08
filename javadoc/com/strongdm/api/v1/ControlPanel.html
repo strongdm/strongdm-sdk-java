@@ -77,6 +77,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ControlPanel</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">ControlPanel contains all administrative controls.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,14 +108,21 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ControlPanelGetSSHCAPublicKeyResponse.html" title="class in com.strongdm.api.v1">ControlPanelGetSSHCAPublicKeyResponse</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSSHCAPublicKey()" class="member-name-link">getSSHCAPublicKey</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">GetSSHCAPublicKey retrieves the SSH CA public key.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ControlPanelVerifyJWTResponse.html" title="class in com.strongdm.api.v1">ControlPanelVerifyJWTResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#verifyJWT(java.lang.String)" class="member-name-link">verifyJWT</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;token)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ControlPanel.html" title="class in com.strongdm.api.v1">ControlPanel</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDeadlineAfter(long,java.util.concurrent.TimeUnit)" class="member-name-link">withDeadlineAfter</a><wbr>(long&nbsp;duration,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">This function returns a copy of the ControlPanel service which has
+ the given deadline set for all method calls.</div>
+</div>
 </div>
 </div>
 </div>
@@ -152,6 +160,8 @@ loadScripts(document, 'script');</script>
 <h3>withDeadlineAfter</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ControlPanel.html" title="class in com.strongdm.api.v1">ControlPanel</a></span>&nbsp;<span class="element-name">withDeadlineAfter</span><wbr><span class="parameters">(long&nbsp;duration,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</span></div>
+<div class="block">This function returns a copy of the ControlPanel service which has
+ the given deadline set for all method calls.</div>
 </section>
 </li>
 <li>
@@ -159,6 +169,7 @@ loadScripts(document, 'script');</script>
 <h3>getSSHCAPublicKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ControlPanelGetSSHCAPublicKeyResponse.html" title="class in com.strongdm.api.v1">ControlPanelGetSSHCAPublicKeyResponse</a></span>&nbsp;<span class="element-name">getSSHCAPublicKey</span>()
                                                         throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">GetSSHCAPublicKey retrieves the SSH CA public key.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -170,6 +181,7 @@ loadScripts(document, 'script');</script>
 <h3>verifyJWT</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ControlPanelVerifyJWTResponse.html" title="class in com.strongdm.api.v1">ControlPanelVerifyJWTResponse</a></span>&nbsp;<span class="element-name">verifyJWT</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;token)</span>
                                         throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>

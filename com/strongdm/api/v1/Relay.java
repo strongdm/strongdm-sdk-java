@@ -17,60 +17,64 @@
 
 package com.strongdm.api.v1;
 
-// Relay represents a StrongDM CLI installation running in relay mode.
+/** Relay represents a StrongDM CLI installation running in relay mode. */
 public class Relay implements Node {
   private String gatewayFilter;
-  // GatewayFilter can be used to restrict the peering between relays and
-  // gateways.
+  /** GatewayFilter can be used to restrict the peering between relays and gateways. */
   public String getGatewayFilter() {
     return this.gatewayFilter;
   }
-  // GatewayFilter can be used to restrict the peering between relays and
-  // gateways.
+  /** GatewayFilter can be used to restrict the peering between relays and gateways. */
   public void setGatewayFilter(String in) {
     this.gatewayFilter = in;
   }
 
   private String id;
-  // Unique identifier of the Relay.
+  /** Unique identifier of the Relay. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the Relay.
+  /** Unique identifier of the Relay. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String name;
-  // Unique human-readable name of the Relay. Node names must include only letters, numbers, and
-  // hyphens (no spaces, underscores, or other special characters). Generated if not provided on
-  // create.
+  /**
+   * Unique human-readable name of the Relay. Node names must include only letters, numbers, and
+   * hyphens (no spaces, underscores, or other special characters). Generated if not provided on
+   * create.
+   */
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Relay. Node names must include only letters, numbers, and
-  // hyphens (no spaces, underscores, or other special characters). Generated if not provided on
-  // create.
+  /**
+   * Unique human-readable name of the Relay. Node names must include only letters, numbers, and
+   * hyphens (no spaces, underscores, or other special characters). Generated if not provided on
+   * create.
+   */
   public void setName(String in) {
     this.name = in;
   }
 
   private String state;
-  // The current state of the relay. One of: "new", "verifying_restart",
-  // "awaiting_restart", "restarting", "started", "stopped", "dead",
-  // "unknown".
+  /**
+   * The current state of the relay. One of: "new", "verifying_restart", "awaiting_restart",
+   * "restarting", "started", "stopped", "dead", "unknown".
+   */
   public String getState() {
     return this.state;
   }
-  // The current state of the relay. One of: "new", "verifying_restart",
-  // "awaiting_restart", "restarting", "started", "stopped", "dead",
-  // "unknown".
+  /**
+   * The current state of the relay. One of: "new", "verifying_restart", "awaiting_restart",
+   * "restarting", "started", "stopped", "dead", "unknown".
+   */
   public void setState(String in) {
     this.state = in;
   }
 
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -78,7 +82,7 @@ public class Relay implements Node {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;

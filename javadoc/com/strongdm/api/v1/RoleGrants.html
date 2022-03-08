@@ -79,6 +79,12 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">RoleGrants</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">RoleGrants represent relationships between composite roles and the roles
+ that make up those composite roles. When a composite role is attached to another
+ role, the permissions granted to members of the composite role are augmented to
+ include the permissions granted to members of the attached role.
+ 
+ Deprecated: use Role access rules instead.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -135,7 +141,9 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span></div>
-&nbsp;</div>
+<div class="block">This function returns a copy of the RoleGrants service which has
+ the given deadline set for all method calls.</div>
+</div>
 </div>
 </div>
 </div>
@@ -175,6 +183,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RoleGrants.html" title="class in com.strongdm.api.v1">RoleGrants</a></span>&nbsp;<span class="element-name">withDeadlineAfter</span><wbr><span class="parameters">(long&nbsp;duration,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">This function returns a copy of the RoleGrants service which has
+ the given deadline set for all method calls.</div>
 </section>
 </li>
 <li>
@@ -184,6 +194,9 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RoleGrantCreateResponse.html" title="class in com.strongdm.api.v1">RoleGrantCreateResponse</a></span>&nbsp;<span class="element-name">create</span><wbr><span class="parameters">(<a href="RoleGrant.html" title="class in com.strongdm.api.v1">RoleGrant</a>&nbsp;roleGrant)</span>
                                throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Create registers a new RoleGrant.
+ 
+ Deprecated: use Role access rules instead.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -197,6 +210,9 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RoleGrantGetResponse.html" title="class in com.strongdm.api.v1">RoleGrantGetResponse</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span>
                          throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Get reads one RoleGrant by ID.
+ 
+ Deprecated: use Role access rules instead.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -210,6 +226,9 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RoleGrantDeleteResponse.html" title="class in com.strongdm.api.v1">RoleGrantDeleteResponse</a></span>&nbsp;<span class="element-name">delete</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span>
                                throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">Delete removes a RoleGrant by ID.
+ 
+ Deprecated: use Role access rules instead.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
@@ -224,6 +243,9 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;args)</span>
                          throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
 <div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
+<div class="block">List gets a list of RoleGrants matching a given set of criteria.
+ 
+ Deprecated: use Role access rules instead.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>

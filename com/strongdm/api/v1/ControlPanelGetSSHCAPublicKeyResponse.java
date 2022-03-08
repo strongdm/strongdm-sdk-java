@@ -17,37 +17,37 @@
 
 package com.strongdm.api.v1;
 
-// ControlPanelGetSSHCAPublicKeyResponse represents a request for an
-// organization's SSH Certificate Authority public key.
+/**
+ * ControlPanelGetSSHCAPublicKeyResponse represents a request for an organization's SSH Certificate
+ * Authority public key.
+ */
 public class ControlPanelGetSSHCAPublicKeyResponse {
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private String publicKey;
-  // The public key of the SSH Certificate Authority, in OpenSSH RSA public
-  // key format.
+  /** The public key of the SSH Certificate Authority, in OpenSSH RSA public key format. */
   public String getPublicKey() {
     return this.publicKey;
   }
-  // The public key of the SSH Certificate Authority, in OpenSSH RSA public
-  // key format.
+  /** The public key of the SSH Certificate Authority, in OpenSSH RSA public key format. */
   public void setPublicKey(String in) {
     this.publicKey = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

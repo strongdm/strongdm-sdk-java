@@ -90,7 +90,7 @@ public final class RoleGrantsPlumbing {
    * <pre>
    * RoleGrantCreateRequest specifies what kind of RoleGrants should be registered in
    * the organizations fleet.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantCreateRequest}
@@ -451,7 +451,7 @@ public final class RoleGrantsPlumbing {
      * <pre>
      * RoleGrantCreateRequest specifies what kind of RoleGrants should be registered in
      * the organizations fleet.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantCreateRequest}
@@ -1072,7 +1072,7 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantCreateResponse reports how the RoleGrants were created in the system.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantCreateResponse}
@@ -1499,7 +1499,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantCreateResponse reports how the RoleGrants were created in the system.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantCreateResponse}
@@ -2255,7 +2255,7 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantGetRequest specifies which RoleGrant to retrieve.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantGetRequest}
@@ -2611,7 +2611,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantGetRequest specifies which RoleGrant to retrieve.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantGetRequest}
@@ -3166,7 +3166,7 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantGetResponse returns a requested RoleGrant.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantGetResponse}
@@ -3593,7 +3593,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantGetResponse returns a requested RoleGrant.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantGetResponse}
@@ -4349,7 +4349,7 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantDeleteRequest identifies a RoleGrant by ID to delete.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantDeleteRequest}
@@ -4705,7 +4705,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantDeleteRequest identifies a RoleGrant by ID to delete.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantDeleteRequest}
@@ -5233,7 +5233,7 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantDeleteResponse returns information about a RoleGrant that was deleted.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantDeleteResponse}
@@ -5593,7 +5593,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantDeleteResponse returns information about a RoleGrant that was deleted.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantDeleteResponse}
@@ -6180,7 +6180,7 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * RoleGrantListRequest specifies criteria for retrieving a list of RoleGrants.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantListRequest}
@@ -6536,7 +6536,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * RoleGrantListRequest specifies criteria for retrieving a list of RoleGrants.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantListRequest}
@@ -7109,7 +7109,7 @@ public final class RoleGrantsPlumbing {
    * <pre>
    * RoleGrantListResponse returns a list of RoleGrants that meet the criteria of a
    * RoleGrantListRequest.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrantListResponse}
@@ -7557,7 +7557,7 @@ public final class RoleGrantsPlumbing {
      * <pre>
      * RoleGrantListResponse returns a list of RoleGrants that meet the criteria of a
      * RoleGrantListRequest.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrantListResponse}
@@ -8513,7 +8513,7 @@ public final class RoleGrantsPlumbing {
   /**
    * <pre>
    * A RoleGrant connects a resource to a role, granting members of the role access to that resource.
-   * Deprecated: use access rules instead.
+   * Deprecated: use Role access rules instead.
    * </pre>
    *
    * Protobuf type {@code v1.RoleGrant}
@@ -8928,7 +8928,7 @@ public final class RoleGrantsPlumbing {
     /**
      * <pre>
      * A RoleGrant connects a resource to a role, granting members of the role access to that resource.
-     * Deprecated: use access rules instead.
+     * Deprecated: use Role access rules instead.
      * </pre>
      *
      * Protobuf type {@code v1.RoleGrant}

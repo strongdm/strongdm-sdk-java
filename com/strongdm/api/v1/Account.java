@@ -17,18 +17,20 @@
 
 package com.strongdm.api.v1;
 
-// Accounts are users that have access to strongDM. There are two types of accounts:
-// 1. **Users:** humans who are authenticated through username and password or SSO.
-// 2. **Service Accounts:** machines that are authenticated using a service token.
+/**
+ * Accounts are users that have access to strongDM. There are two types of accounts: 1. **Users:**
+ * humans who are authenticated through username and password or SSO. 2. **Service Accounts:**
+ * machines that are authenticated using a service token.
+ */
 public interface Account {
-  // Returns the unique identifier of the Account.
+  /** Returns the unique identifier of the Account. */
   String getId();
-  // Returns whether the Account is suspended.
+  /** Returns whether the Account is suspended. */
   boolean getSuspended();
-  // Sets whether the Account is suspended.
+  /** Sets whether the Account is suspended. */
   void setSuspended(boolean suspended);
-  // Returns the tags of the Account.
+  /** Returns the tags of the Account. */
   java.util.Map<String, String> getTags();
-  // Sets the tags of the Account.
+  /** Sets the tags of the Account. */
   void setTags(java.util.Map<String, String> tags);
 }

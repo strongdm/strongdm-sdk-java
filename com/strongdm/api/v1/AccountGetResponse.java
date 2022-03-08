@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// AccountGetResponse returns a requested Account.
+/** AccountGetResponse returns a requested Account. */
 public class AccountGetResponse {
   private Account account;
-  // The requested Account.
+  /** The requested Account. */
   public Account getAccount() {
     return this.account;
   }
-  // The requested Account.
+  /** The requested Account. */
   public void setAccount(Account in) {
     this.account = in;
   }
 
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

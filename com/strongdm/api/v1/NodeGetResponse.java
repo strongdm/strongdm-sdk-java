@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// NodeGetResponse returns a requested Node.
+/** NodeGetResponse returns a requested Node. */
 public class NodeGetResponse {
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private Node node;
-  // The requested Node.
+  /** The requested Node. */
   public Node getNode() {
     return this.node;
   }
-  // The requested Node.
+  /** The requested Node. */
   public void setNode(Node in) {
     this.node = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

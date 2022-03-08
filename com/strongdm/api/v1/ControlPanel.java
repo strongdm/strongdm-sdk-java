@@ -23,7 +23,7 @@ import com.strongdm.api.v1.plumbing.Plumbing;
 import io.grpc.ManagedChannel;
 import java.util.concurrent.TimeUnit;
 
-// ControlPanel contains all administrative controls.
+/** ControlPanel contains all administrative controls. */
 public class ControlPanel {
   private final ControlPanelGrpc.ControlPanelBlockingStub stub;
   private final Client parent;
@@ -39,12 +39,14 @@ public class ControlPanel {
     this.parent = client;
   }
 
-  // This function returns a copy of the ControlPanel service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the ControlPanel service which has the given deadline set for
+   * all method calls.
+   */
   public ControlPanel withDeadlineAfter(long duration, TimeUnit units) {
     return new ControlPanel(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // GetSSHCAPublicKey retrieves the SSH CA public key.
+  /** GetSSHCAPublicKey retrieves the SSH CA public key. */
   public ControlPanelGetSSHCAPublicKeyResponse getSSHCAPublicKey() throws RpcException {
     ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest.Builder builder =
         ControlPanelPlumbing.ControlPanelGetSSHCAPublicKeyRequest.newBuilder();
@@ -70,7 +72,7 @@ public class ControlPanel {
     }
     return Plumbing.convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(plumbingResponse);
   }
-  // VerifyJWT reports whether the given JWT token (x-sdm-token) is valid.
+  /** VerifyJWT reports whether the given JWT token (x-sdm-token) is valid. */
   public ControlPanelVerifyJWTResponse verifyJWT(String token) throws RpcException {
     ControlPanelPlumbing.ControlPanelVerifyJWTRequest.Builder builder =
         ControlPanelPlumbing.ControlPanelVerifyJWTRequest.newBuilder();

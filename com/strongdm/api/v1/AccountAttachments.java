@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
-// AccountAttachments assign an account to a role or composite role.
+/** AccountAttachments assign an account to a role. */
 public class AccountAttachments {
   private final AccountAttachmentsGrpc.AccountAttachmentsBlockingStub stub;
   private final Client parent;
@@ -46,12 +46,14 @@ public class AccountAttachments {
     this.parent = client;
   }
 
-  // This function returns a copy of the AccountAttachments service which has
-  // the given deadline set for all method calls.
+  /**
+   * This function returns a copy of the AccountAttachments service which has the given deadline set
+   * for all method calls.
+   */
   public AccountAttachments withDeadlineAfter(long duration, TimeUnit units) {
     return new AccountAttachments(this.stub.withDeadlineAfter(duration, units), this.parent);
   }
-  // Create registers a new AccountAttachment.
+  /** Create registers a new AccountAttachment. */
   public AccountAttachmentCreateResponse create(AccountAttachment accountAttachment)
       throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentCreateRequest.Builder builder =
@@ -79,7 +81,7 @@ public class AccountAttachments {
     }
     return Plumbing.convertAccountAttachmentCreateResponseToPorcelain(plumbingResponse);
   }
-  // Get reads one AccountAttachment by ID.
+  /** Get reads one AccountAttachment by ID. */
   public AccountAttachmentGetResponse get(String id) throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentGetRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentGetRequest.newBuilder();
@@ -105,7 +107,7 @@ public class AccountAttachments {
     }
     return Plumbing.convertAccountAttachmentGetResponseToPorcelain(plumbingResponse);
   }
-  // Delete removes a AccountAttachment by ID.
+  /** Delete removes a AccountAttachment by ID. */
   public AccountAttachmentDeleteResponse delete(String id) throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentDeleteRequest.newBuilder();
@@ -132,7 +134,7 @@ public class AccountAttachments {
     }
     return Plumbing.convertAccountAttachmentDeleteResponseToPorcelain(plumbingResponse);
   }
-  // List gets a list of AccountAttachments matching a given set of criteria.
+  /** List gets a list of AccountAttachments matching a given set of criteria. */
   public Iterable<AccountAttachment> list(String filter, Object... args) throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentListRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentListRequest.newBuilder();

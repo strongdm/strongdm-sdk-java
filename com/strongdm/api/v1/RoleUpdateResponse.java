@@ -17,35 +17,36 @@
 
 package com.strongdm.api.v1;
 
-// RoleUpdateResponse returns the fields of a Role after it has been updated by
-// a RoleUpdateRequest.
+/**
+ * RoleUpdateResponse returns the fields of a Role after it has been updated by a RoleUpdateRequest.
+ */
 public class RoleUpdateResponse {
   private UpdateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public UpdateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(UpdateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private Role role;
-  // The updated Role.
+  /** The updated Role. */
   public Role getRole() {
     return this.role;
   }
-  // The updated Role.
+  /** The updated Role. */
   public void setRole(Role in) {
     this.role = in;
   }

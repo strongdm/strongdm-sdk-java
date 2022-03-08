@@ -8496,7 +8496,7 @@ public final class AccountAttachmentsPlumbing {
   }
   /**
    * <pre>
-   * AccountAttachments assign an account to a role or composite role.
+   * AccountAttachments assign an account to a role.
    * </pre>
    *
    * Protobuf type {@code v1.AccountAttachment}
@@ -8910,7 +8910,7 @@ public final class AccountAttachmentsPlumbing {
     }
     /**
      * <pre>
-     * AccountAttachments assign an account to a role or composite role.
+     * AccountAttachments assign an account to a role.
      * </pre>
      *
      * Protobuf type {@code v1.AccountAttachment}

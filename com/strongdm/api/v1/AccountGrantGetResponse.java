@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// AccountGrantGetResponse returns a requested AccountGrant.
+/** AccountGrantGetResponse returns a requested AccountGrant. */
 public class AccountGrantGetResponse {
   private AccountGrant accountGrant;
-  // The requested AccountGrant.
+  /** The requested AccountGrant. */
   public AccountGrant getAccountGrant() {
     return this.accountGrant;
   }
-  // The requested AccountGrant.
+  /** The requested AccountGrant. */
   public void setAccountGrant(AccountGrant in) {
     this.accountGrant = in;
   }
 
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

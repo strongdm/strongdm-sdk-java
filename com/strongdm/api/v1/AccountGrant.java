@@ -19,59 +19,69 @@ package com.strongdm.api.v1;
 
 import java.util.Date;
 
-// AccountGrants connect a resource directly to an account, giving the account the permission to
-// connect to that resource.
+/**
+ * AccountGrants connect a resource directly to an account, giving the account the permission to
+ * connect to that resource.
+ */
 public class AccountGrant {
   private String accountId;
-  // The id of the attached role of this AccountGrant.
+  /** The id of the attached role of this AccountGrant. */
   public String getAccountId() {
     return this.accountId;
   }
-  // The id of the attached role of this AccountGrant.
+  /** The id of the attached role of this AccountGrant. */
   public void setAccountId(String in) {
     this.accountId = in;
   }
 
   private String id;
-  // Unique identifier of the AccountGrant.
+  /** Unique identifier of the AccountGrant. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the AccountGrant.
+  /** Unique identifier of the AccountGrant. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String resourceId;
-  // The id of the composite role of this AccountGrant.
+  /** The id of the composite role of this AccountGrant. */
   public String getResourceId() {
     return this.resourceId;
   }
-  // The id of the composite role of this AccountGrant.
+  /** The id of the composite role of this AccountGrant. */
   public void setResourceId(String in) {
     this.resourceId = in;
   }
 
   private Date startFrom;
-  // The timestamp when the resource will be granted. Optional. Both start_at
-  // and end_at must be defined together, or not defined at all.
+  /**
+   * The timestamp when the resource will be granted. Optional. Both start_at and end_at must be
+   * defined together, or not defined at all.
+   */
   public Date getStartFrom() {
     return this.startFrom;
   }
-  // The timestamp when the resource will be granted. Optional. Both start_at
-  // and end_at must be defined together, or not defined at all.
+  /**
+   * The timestamp when the resource will be granted. Optional. Both start_at and end_at must be
+   * defined together, or not defined at all.
+   */
   public void setStartFrom(Date in) {
     this.startFrom = in;
   }
 
   private Date validUntil;
-  // The timestamp when the resource grant will expire. Optional. Both
-  // start_at and end_at must be defined together, or not defined at all.
+  /**
+   * The timestamp when the resource grant will expire. Optional. Both start_at and end_at must be
+   * defined together, or not defined at all.
+   */
   public Date getValidUntil() {
     return this.validUntil;
   }
-  // The timestamp when the resource grant will expire. Optional. Both
-  // start_at and end_at must be defined together, or not defined at all.
+  /**
+   * The timestamp when the resource grant will expire. Optional. Both start_at and end_at must be
+   * defined together, or not defined at all.
+   */
   public void setValidUntil(Date in) {
     this.validUntil = in;
   }

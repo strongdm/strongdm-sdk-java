@@ -17,159 +17,160 @@
 
 package com.strongdm.api.v1;
 
+/** */
 public class MTLSPostgres implements Resource {
   private String certificateAuthority;
-
+  /** */
   public String getCertificateAuthority() {
     return this.certificateAuthority;
   }
-
+  /** */
   public void setCertificateAuthority(String in) {
     this.certificateAuthority = in;
   }
 
   private String clientCertificate;
-
+  /** */
   public String getClientCertificate() {
     return this.clientCertificate;
   }
-
+  /** */
   public void setClientCertificate(String in) {
     this.clientCertificate = in;
   }
 
   private String clientKey;
-
+  /** */
   public String getClientKey() {
     return this.clientKey;
   }
-
+  /** */
   public void setClientKey(String in) {
     this.clientKey = in;
   }
 
   private String database;
-
+  /** */
   public String getDatabase() {
     return this.database;
   }
-
+  /** */
   public void setDatabase(String in) {
     this.database = in;
   }
 
   private String egressFilter;
-  // A filter applied to the routing logic to pin datasource to nodes.
+  /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
     return this.egressFilter;
   }
-  // A filter applied to the routing logic to pin datasource to nodes.
+  /** A filter applied to the routing logic to pin datasource to nodes. */
   public void setEgressFilter(String in) {
     this.egressFilter = in;
   }
 
   private boolean healthy;
-  // True if the datasource is reachable and the credentials are valid.
+  /** True if the datasource is reachable and the credentials are valid. */
   public boolean getHealthy() {
     return this.healthy;
   }
-  // True if the datasource is reachable and the credentials are valid.
+  /** True if the datasource is reachable and the credentials are valid. */
   public void setHealthy(boolean in) {
     this.healthy = in;
   }
 
   private String hostname;
-
+  /** */
   public String getHostname() {
     return this.hostname;
   }
-
+  /** */
   public void setHostname(String in) {
     this.hostname = in;
   }
 
   private String id;
-  // Unique identifier of the Resource.
+  /** Unique identifier of the Resource. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the Resource.
+  /** Unique identifier of the Resource. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String name;
-  // Unique human-readable name of the Resource.
+  /** Unique human-readable name of the Resource. */
   public String getName() {
     return this.name;
   }
-  // Unique human-readable name of the Resource.
+  /** Unique human-readable name of the Resource. */
   public void setName(String in) {
     this.name = in;
   }
 
   private boolean overrideDatabase;
-
+  /** */
   public boolean getOverrideDatabase() {
     return this.overrideDatabase;
   }
-
+  /** */
   public void setOverrideDatabase(boolean in) {
     this.overrideDatabase = in;
   }
 
   private String password;
-
+  /** */
   public String getPassword() {
     return this.password;
   }
-
+  /** */
   public void setPassword(String in) {
     this.password = in;
   }
 
   private int port;
-
+  /** */
   public int getPort() {
     return this.port;
   }
-
+  /** */
   public void setPort(int in) {
     this.port = in;
   }
 
   private int portOverride;
-
+  /** */
   public int getPortOverride() {
     return this.portOverride;
   }
-
+  /** */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String secretStoreId;
-  // ID of the secret store containing credentials for this resource, if any.
+  /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {
     return this.secretStoreId;
   }
-  // ID of the secret store containing credentials for this resource, if any.
+  /** ID of the secret store containing credentials for this resource, if any. */
   public void setSecretStoreId(String in) {
     this.secretStoreId = in;
   }
 
   private String serverName;
-
+  /** */
   public String getServerName() {
     return this.serverName;
   }
-
+  /** */
   public void setServerName(String in) {
     this.serverName = in;
   }
 
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -177,7 +178,7 @@ public class MTLSPostgres implements Resource {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;
@@ -188,11 +189,11 @@ public class MTLSPostgres implements Resource {
   }
 
   private String username;
-
+  /** */
   public String getUsername() {
     return this.username;
   }
-
+  /** */
   public void setUsername(String in) {
     this.username = in;
   }

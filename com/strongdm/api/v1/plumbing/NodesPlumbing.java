@@ -13510,7 +13510,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
-     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+     * If not provided on create, set to "0.0.0.0:listen_address_port".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -13520,7 +13520,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
-     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+     * If not provided on create, set to "0.0.0.0:listen_address_port".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -13905,7 +13905,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
-     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+     * If not provided on create, set to "0.0.0.0:listen_address_port".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -13927,7 +13927,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * The hostname/port tuple which the gateway daemon will bind to.
-     * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+     * If not provided on create, set to "0.0.0.0:listen_address_port".
      * </pre>
      *
      * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14848,7 +14848,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
-       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+       * If not provided on create, set to "0.0.0.0:listen_address_port".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14869,7 +14869,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
-       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+       * If not provided on create, set to "0.0.0.0:listen_address_port".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14891,7 +14891,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
-       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+       * If not provided on create, set to "0.0.0.0:listen_address_port".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14911,7 +14911,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
-       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+       * If not provided on create, set to "0.0.0.0:listen_address_port".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>
@@ -14926,7 +14926,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * The hostname/port tuple which the gateway daemon will bind to.
-       * If not provided on create, set to "0.0.0.0:&lt;listen_address_port&gt;".
+       * If not provided on create, set to "0.0.0.0:listen_address_port".
        * </pre>
        *
        * <code>string bind_address = 5 [(.v1.field_options) = { ... }</code>

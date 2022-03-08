@@ -17,37 +17,39 @@
 
 package com.strongdm.api.v1;
 
-// RoleGrantCreateResponse reports how the RoleGrants were created in the system.
-//
-// Deprecated: use access rules instead.
+/**
+ * RoleGrantCreateResponse reports how the RoleGrants were created in the system.
+ *
+ * <p>Deprecated: use Role access rules instead.
+ */
 @Deprecated
 public class RoleGrantCreateResponse {
   private CreateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public CreateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(CreateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private RoleGrant roleGrant;
-  // The created RoleGrant.
+  /** The created RoleGrant. */
   public RoleGrant getRoleGrant() {
     return this.roleGrant;
   }
-  // The created RoleGrant.
+  /** The created RoleGrant. */
   public void setRoleGrant(RoleGrant in) {
     this.roleGrant = in;
   }

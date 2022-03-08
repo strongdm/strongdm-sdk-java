@@ -17,34 +17,34 @@
 
 package com.strongdm.api.v1;
 
-// AccountAttachmentGetResponse returns a requested AccountAttachment.
+/** AccountAttachmentGetResponse returns a requested AccountAttachment. */
 public class AccountAttachmentGetResponse {
   private AccountAttachment accountAttachment;
-  // The requested AccountAttachment.
+  /** The requested AccountAttachment. */
   public AccountAttachment getAccountAttachment() {
     return this.accountAttachment;
   }
-  // The requested AccountAttachment.
+  /** The requested AccountAttachment. */
   public void setAccountAttachment(AccountAttachment in) {
     this.accountAttachment = in;
   }
 
   private GetResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public GetResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(GetResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }

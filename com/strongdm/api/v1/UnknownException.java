@@ -15,7 +15,7 @@
 
 package com.strongdm.api.v1;
 
-// UnknownException is a generic wrapper that indicates an unknown internal error in the SDK.
+/** UnknownException is a generic wrapper that indicates an unknown internal error in the SDK. */
 public final class UnknownException extends RpcException {
   static final long serialVersionUID = 1;
 

@@ -17,61 +17,60 @@
 
 package com.strongdm.api.v1;
 
-// A User can connect to resources they are granted directly, or granted
-// via roles.
+/** A User can connect to resources they are granted directly, or granted via roles. */
 public class User implements Account {
   private String email;
-  // The User's email address. Must be unique.
+  /** The User's email address. Must be unique. */
   public String getEmail() {
     return this.email;
   }
-  // The User's email address. Must be unique.
+  /** The User's email address. Must be unique. */
   public void setEmail(String in) {
     this.email = in;
   }
 
   private String firstName;
-  // The User's first name.
+  /** The User's first name. */
   public String getFirstName() {
     return this.firstName;
   }
-  // The User's first name.
+  /** The User's first name. */
   public void setFirstName(String in) {
     this.firstName = in;
   }
 
   private String id;
-  // Unique identifier of the User.
+  /** Unique identifier of the User. */
   public String getId() {
     return this.id;
   }
-  // Unique identifier of the User.
+  /** Unique identifier of the User. */
   public void setId(String in) {
     this.id = in;
   }
 
   private String lastName;
-  // The User's last name.
+  /** The User's last name. */
   public String getLastName() {
     return this.lastName;
   }
-  // The User's last name.
+  /** The User's last name. */
   public void setLastName(String in) {
     this.lastName = in;
   }
 
   private boolean suspended;
-  // The User's suspended state.
+  /** The User's suspended state. */
   public boolean getSuspended() {
     return this.suspended;
   }
-  // The User's suspended state.
+  /** The User's suspended state. */
   public void setSuspended(boolean in) {
     this.suspended = in;
   }
 
   private java.util.Map<String, String> tags;
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public java.util.Map<String, String> getTags() {
     java.util.Map<String, String> m = new java.util.HashMap<String, String>();
     if (this.tags != null) {
@@ -79,7 +78,7 @@ public class User implements Account {
     }
     return m;
   }
-  // Tags is a map of key, value pairs.
+  /** Tags is a map of key, value pairs. */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;

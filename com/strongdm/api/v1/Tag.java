@@ -17,23 +17,24 @@
 
 package com.strongdm.api.v1;
 
+/** */
 public class Tag {
   private String name;
-
+  /** */
   public String getName() {
     return this.name;
   }
-
+  /** */
   public void setName(String in) {
     this.name = in;
   }
 
   private String value;
-
+  /** */
   public String getValue() {
     return this.value;
   }
-
+  /** */
   public void setValue(String in) {
     this.value = in;
   }

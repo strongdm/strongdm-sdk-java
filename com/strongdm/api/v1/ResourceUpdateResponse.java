@@ -17,35 +17,37 @@
 
 package com.strongdm.api.v1;
 
-// ResourceUpdateResponse returns the fields of a Resource after it has been updated by
-// a ResourceUpdateRequest.
+/**
+ * ResourceUpdateResponse returns the fields of a Resource after it has been updated by a
+ * ResourceUpdateRequest.
+ */
 public class ResourceUpdateResponse {
   private UpdateResponseMetadata meta;
-  // Reserved for future use.
+  /** Reserved for future use. */
   public UpdateResponseMetadata getMeta() {
     return this.meta;
   }
-  // Reserved for future use.
+  /** Reserved for future use. */
   public void setMeta(UpdateResponseMetadata in) {
     this.meta = in;
   }
 
   private RateLimitMetadata rateLimit;
-  // Rate limit information.
+  /** Rate limit information. */
   public RateLimitMetadata getRateLimit() {
     return this.rateLimit;
   }
-  // Rate limit information.
+  /** Rate limit information. */
   public void setRateLimit(RateLimitMetadata in) {
     this.rateLimit = in;
   }
 
   private Resource resource;
-  // The updated Resource.
+  /** The updated Resource. */
   public Resource getResource() {
     return this.resource;
   }
-  // The updated Resource.
+  /** The updated Resource. */
   public void setResource(Resource in) {
     this.resource = in;
   }
