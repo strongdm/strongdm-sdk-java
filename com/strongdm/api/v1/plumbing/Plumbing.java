@@ -3085,6 +3085,49 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.GCPStore convertGCPStoreToPorcelain(GCPStore plumbing) {
+    com.strongdm.api.v1.GCPStore porcelain = new com.strongdm.api.v1.GCPStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setProjectID((plumbing.getProjectID()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static GCPStore convertGCPStoreToPlumbing(com.strongdm.api.v1.GCPStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    GCPStore.Builder builder = GCPStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getProjectID() != null) {
+      builder.setProjectID((porcelain.getProjectID()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.GCPStore> convertRepeatedGCPStoreToPorcelain(
+      Collection<GCPStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertGCPStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<GCPStore> convertRepeatedGCPStoreToPlumbing(
+      Collection<com.strongdm.api.v1.GCPStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertGCPStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.Gateway convertGatewayToPorcelain(Gateway plumbing) {
     com.strongdm.api.v1.Gateway porcelain = new com.strongdm.api.v1.Gateway();
     porcelain.setBindAddress((plumbing.getBindAddress()));
@@ -7276,6 +7319,12 @@ public class Plumbing {
     if (plumbing.hasAzure()) {
       return convertAzureStoreToPorcelain(plumbing.getAzure());
     }
+    if (plumbing.hasGcp()) {
+      return convertGCPStoreToPorcelain(plumbing.getGcp());
+    }
+    if (plumbing.hasVaultAppRole()) {
+      return convertVaultAppRoleStoreToPorcelain(plumbing.getVaultAppRole());
+    }
     if (plumbing.hasVaultTls()) {
       return convertVaultTLSStoreToPorcelain(plumbing.getVaultTls());
     }
@@ -7298,6 +7347,17 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.v1.AzureStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setAzure(convertAzureStoreToPlumbing((com.strongdm.api.v1.AzureStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.GCPStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setGcp(convertGCPStoreToPlumbing((com.strongdm.api.v1.GCPStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.v1.VaultAppRoleStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setVaultAppRole(
+          convertVaultAppRoleStoreToPlumbing((com.strongdm.api.v1.VaultAppRoleStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.v1.VaultTLSStore) {
@@ -7987,6 +8047,55 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.User> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertUserToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.VaultAppRoleStore convertVaultAppRoleStoreToPorcelain(
+      VaultAppRoleStore plumbing) {
+    com.strongdm.api.v1.VaultAppRoleStore porcelain = new com.strongdm.api.v1.VaultAppRoleStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setNamespace((plumbing.getNamespace()));
+    porcelain.setServerAddress((plumbing.getServerAddress()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static VaultAppRoleStore convertVaultAppRoleStoreToPlumbing(
+      com.strongdm.api.v1.VaultAppRoleStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    VaultAppRoleStore.Builder builder = VaultAppRoleStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getNamespace() != null) {
+      builder.setNamespace((porcelain.getNamespace()));
+    }
+    if (porcelain.getServerAddress() != null) {
+      builder.setServerAddress((porcelain.getServerAddress()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.VaultAppRoleStore>
+      convertRepeatedVaultAppRoleStoreToPorcelain(Collection<VaultAppRoleStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertVaultAppRoleStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<VaultAppRoleStore> convertRepeatedVaultAppRoleStoreToPlumbing(
+      Collection<com.strongdm.api.v1.VaultAppRoleStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertVaultAppRoleStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
