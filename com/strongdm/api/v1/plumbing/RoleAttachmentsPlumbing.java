@@ -9546,18 +9546,18 @@ public final class RoleAttachmentsPlumbing {
       "\022\037.v1.RoleAttachmentCreateRequest\032 .v1.R" +
       "oleAttachmentCreateResponse\"C\210\002\001\202\371\263\007\t\242\363\263" +
       "\007\004post\202\371\263\007\031\252\363\263\007\024/v1/role-attachments\202\371\263\007" +
-      "\017\262\363\263\007\n2022-03-31\022\213\001\n\003Get\022\034.v1.RoleAttach" +
+      "\017\262\363\263\007\n2022-06-01\022\213\001\n\003Get\022\034.v1.RoleAttach" +
       "mentGetRequest\032\035.v1.RoleAttachmentGetRes" +
       "ponse\"G\210\002\001\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263\007\031/v1/rol" +
-      "e-attachments/{id}\202\371\263\007\017\262\363\263\007\n2022-03-31\022\227" +
+      "e-attachments/{id}\202\371\263\007\017\262\363\263\007\n2022-06-01\022\227" +
       "\001\n\006Delete\022\037.v1.RoleAttachmentDeleteReque" +
       "st\032 .v1.RoleAttachmentDeleteResponse\"J\210\002" +
       "\001\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\036\252\363\263\007\031/v1/role-atta" +
-      "chments/{id}\202\371\263\007\017\262\363\263\007\n2022-03-31\022\211\001\n\004Lis" +
+      "chments/{id}\202\371\263\007\017\262\363\263\007\n2022-06-01\022\211\001\n\004Lis" +
       "t\022\035.v1.RoleAttachmentListRequest\032\036.v1.Ro" +
       "leAttachmentListResponse\"B\210\002\001\202\371\263\007\010\242\363\263\007\003g" +
       "et\202\371\263\007\031\252\363\263\007\024/v1/role-attachments\202\371\263\007\017\262\363\263" +
-      "\007\n2022-03-31\032(\210\002\001\312\371\263\007\023\302\371\263\007\016RoleAttachmen" +
+      "\007\n2022-06-01\032(\210\002\001\312\371\263\007\023\302\371\263\007\016RoleAttachmen" +
       "t\312\371\263\007\010\322\371\263\007\003ra-Bn\n\034com.strongdm.api.v1.pl" +
       "umbingB\027RoleAttachmentsPlumbingZ5github." +
       "com/strongdm/strongdm-sdk-go/v2/internal" +
