@@ -126,7 +126,7 @@ public final class SecretStoresTypesPlumbing {
   }
   /**
    * <pre>
-   * A SecretStore is a server where resource secrets (passwords, keys) are stored. 
+   * A SecretStore is a server where resource secrets (passwords, keys) are stored.
    * Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support&#64;strongdm.com to request access to the beta.
    * </pre>
    *
@@ -770,7 +770,7 @@ public final class SecretStoresTypesPlumbing {
     }
     /**
      * <pre>
-     * A SecretStore is a server where resource secrets (passwords, keys) are stored. 
+     * A SecretStore is a server where resource secrets (passwords, keys) are stored.
      * Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support&#64;strongdm.com to request access to the beta.
      * </pre>
      *

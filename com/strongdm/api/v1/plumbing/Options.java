@@ -1722,13 +1722,13 @@ public final class Options {
 
     /**
      * <pre>
-     * expose_as_porcelain determines whether the field is exposed to the SDKs.
+     * porcelain determines whether the field is exposed to the SDKs.
      * </pre>
      *
-     * <code>bool expose_as_porcelain = 1941302;</code>
-     * @return The exposeAsPorcelain.
+     * <code>bool porcelain = 1941302;</code>
+     * @return The porcelain.
      */
-    boolean getExposeAsPorcelain();
+    boolean getPorcelain();
 
     /**
      * <pre>
@@ -1810,32 +1810,6 @@ public final class Options {
 
     /**
      * <pre>
-     * terraform_computed can have three different values:
-     * - '': field is not computed at all
-     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-     * </pre>
-     *
-     * <code>string terraform_computed = 1941307;</code>
-     * @return The terraformComputed.
-     */
-    java.lang.String getTerraformComputed();
-    /**
-     * <pre>
-     * terraform_computed can have three different values:
-     * - '': field is not computed at all
-     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-     * </pre>
-     *
-     * <code>string terraform_computed = 1941307;</code>
-     * @return The bytes for terraformComputed.
-     */
-    com.google.protobuf.ByteString
-        getTerraformComputedBytes();
-
-    /**
-     * <pre>
      * terraform_force_new forces Terraform to delete and recreate the object if the field changes.
      * </pre>
      *
@@ -1879,23 +1853,124 @@ public final class Options {
 
     /**
      * <pre>
-     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+     * comment_override replaces the entire doc string for the given targets
      * </pre>
      *
-     * <code>string terraform_comment_override = 1941320;</code>
-     * @return The terraformCommentOverride.
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
      */
-    java.lang.String getTerraformCommentOverride();
+    int getCommentOverrideCount();
     /**
      * <pre>
-     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+     * comment_override replaces the entire doc string for the given targets
      * </pre>
      *
-     * <code>string terraform_comment_override = 1941320;</code>
-     * @return The bytes for terraformCommentOverride.
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
      */
-    com.google.protobuf.ByteString
-        getTerraformCommentOverrideBytes();
+    boolean containsCommentOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getCommentOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getCommentOverride();
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getCommentOverrideMap();
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     */
+
+    java.lang.String getCommentOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     */
+
+    java.lang.String getCommentOverrideOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+    int getReadOnlyOverrideCount();
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+    boolean containsReadOnlyOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getReadOnlyOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getReadOnlyOverride();
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getReadOnlyOverrideMap();
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+
+    boolean getReadOnlyOverrideOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+
+    boolean getReadOnlyOverrideOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * terraform_computed sets the terraform Computed field to be true. if
+     * read_only is set to true, this will automatically be set for you. You
+     * should only need to set this field manually if you have a Computed
+     * Optional field in Terraform.
+     * </pre>
+     *
+     * <code>bool terraform_computed = 1941322;</code>
+     * @return The terraformComputed.
+     */
+    boolean getTerraformComputed();
 
     /**
      * <code>string cli_name = 1941311;</code>
@@ -1934,12 +2009,6 @@ public final class Options {
         getJsonGatewayNameBytes();
 
     /**
-     * <code>bool hide_from_json_gateway = 1941314;</code>
-     * @return The hideFromJsonGateway.
-     */
-    boolean getHideFromJsonGateway();
-
-    /**
      * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
      * @return Whether the custom field is set.
      */
@@ -1968,9 +2037,7 @@ public final class Options {
     }
     private FieldOptions() {
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      terraformComputed_ = "";
       terraformDiffSuppressFunc_ = "";
-      terraformCommentOverride_ = "";
       cliName_ = "";
       cliJsonName_ = "";
       jsonGatewayName_ = "";
@@ -2009,7 +2076,7 @@ public final class Options {
               break;
             case 15530416: {
 
-              exposeAsPorcelain_ = input.readBool();
+              porcelain_ = input.readBool();
               break;
             }
             case 15530424: {
@@ -2033,12 +2100,6 @@ public final class Options {
                 custom_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 15530458: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              terraformComputed_ = s;
               break;
             }
             case 15530464: {
@@ -2074,11 +2135,6 @@ public final class Options {
               jsonGatewayName_ = s;
               break;
             }
-            case 15530512: {
-
-              hideFromJsonGateway_ = input.readBool();
-              break;
-            }
             case 15530520: {
 
               readOnly_ = input.readBool();
@@ -2105,9 +2161,34 @@ public final class Options {
               break;
             }
             case 15530562: {
-              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                commentOverride_ = com.google.protobuf.MapField.newMapField(
+                    CommentOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              commentOverride__ = input.readMessage(
+                  CommentOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              commentOverride_.getMutableMap().put(
+                  commentOverride__.getKey(), commentOverride__.getValue());
+              break;
+            }
+            case 15530570: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                readOnlyOverride_ = com.google.protobuf.MapField.newMapField(
+                    ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              readOnlyOverride__ = input.readMessage(
+                  ReadOnlyOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              readOnlyOverride_.getMutableMap().put(
+                  readOnlyOverride__.getKey(), readOnlyOverride__.getValue());
+              break;
+            }
+            case 15530576: {
 
-              terraformCommentOverride_ = s;
+              terraformComputed_ = input.readBool();
               break;
             }
             default: {
@@ -2137,6 +2218,20 @@ public final class Options {
       return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FieldOptions_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1941320:
+          return internalGetCommentOverride();
+        case 1941321:
+          return internalGetReadOnlyOverride();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2145,19 +2240,19 @@ public final class Options {
               com.strongdm.api.v1.plumbing.Options.FieldOptions.class, com.strongdm.api.v1.plumbing.Options.FieldOptions.Builder.class);
     }
 
-    public static final int EXPOSE_AS_PORCELAIN_FIELD_NUMBER = 1941302;
-    private boolean exposeAsPorcelain_;
+    public static final int PORCELAIN_FIELD_NUMBER = 1941302;
+    private boolean porcelain_;
     /**
      * <pre>
-     * expose_as_porcelain determines whether the field is exposed to the SDKs.
+     * porcelain determines whether the field is exposed to the SDKs.
      * </pre>
      *
-     * <code>bool expose_as_porcelain = 1941302;</code>
-     * @return The exposeAsPorcelain.
+     * <code>bool porcelain = 1941302;</code>
+     * @return The porcelain.
      */
     @java.lang.Override
-    public boolean getExposeAsPorcelain() {
-      return exposeAsPorcelain_;
+    public boolean getPorcelain() {
+      return porcelain_;
     }
 
     public static final int ITERABLE_FIELD_NUMBER = 1941303;
@@ -2273,58 +2368,6 @@ public final class Options {
       return targets_.getByteString(index);
     }
 
-    public static final int TERRAFORM_COMPUTED_FIELD_NUMBER = 1941307;
-    private volatile java.lang.Object terraformComputed_;
-    /**
-     * <pre>
-     * terraform_computed can have three different values:
-     * - '': field is not computed at all
-     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-     * </pre>
-     *
-     * <code>string terraform_computed = 1941307;</code>
-     * @return The terraformComputed.
-     */
-    @java.lang.Override
-    public java.lang.String getTerraformComputed() {
-      java.lang.Object ref = terraformComputed_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        terraformComputed_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * terraform_computed can have three different values:
-     * - '': field is not computed at all
-     * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-     * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-     * </pre>
-     *
-     * <code>string terraform_computed = 1941307;</code>
-     * @return The bytes for terraformComputed.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTerraformComputedBytes() {
-      java.lang.Object ref = terraformComputed_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        terraformComputed_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int TERRAFORM_FORCE_NEW_FIELD_NUMBER = 1941308;
     private boolean terraformForceNew_;
     /**
@@ -2404,50 +2447,216 @@ public final class Options {
       }
     }
 
-    public static final int TERRAFORM_COMMENT_OVERRIDE_FIELD_NUMBER = 1941320;
-    private volatile java.lang.Object terraformCommentOverride_;
-    /**
-     * <pre>
-     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
-     * </pre>
-     *
-     * <code>string terraform_comment_override = 1941320;</code>
-     * @return The terraformCommentOverride.
-     */
-    @java.lang.Override
-    public java.lang.String getTerraformCommentOverride() {
-      java.lang.Object ref = terraformCommentOverride_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        terraformCommentOverride_ = s;
-        return s;
+    public static final int COMMENT_OVERRIDE_FIELD_NUMBER = 1941320;
+    private static final class CommentOverrideDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> commentOverride_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetCommentOverride() {
+      if (commentOverride_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            CommentOverrideDefaultEntryHolder.defaultEntry);
       }
+      return commentOverride_;
+    }
+
+    public int getCommentOverrideCount() {
+      return internalGetCommentOverride().getMap().size();
     }
     /**
      * <pre>
-     * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+     * comment_override replaces the entire doc string for the given targets
      * </pre>
      *
-     * <code>string terraform_comment_override = 1941320;</code>
-     * @return The bytes for terraformCommentOverride.
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsCommentOverride(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetCommentOverride().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getCommentOverrideMap()} instead.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTerraformCommentOverrideBytes() {
-      java.lang.Object ref = terraformCommentOverride_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        terraformCommentOverride_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getCommentOverride() {
+      return getCommentOverrideMap();
+    }
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getCommentOverrideMap() {
+      return internalGetCommentOverride().getMap();
+    }
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getCommentOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetCommentOverride().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getCommentOverrideOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetCommentOverride().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
+      return map.get(key);
+    }
+
+    public static final int READ_ONLY_OVERRIDE_FIELD_NUMBER = 1941321;
+    private static final class ReadOnlyOverrideDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Boolean> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> readOnlyOverride_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+    internalGetReadOnlyOverride() {
+      if (readOnlyOverride_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
+      }
+      return readOnlyOverride_;
+    }
+
+    public int getReadOnlyOverrideCount() {
+      return internalGetReadOnlyOverride().getMap().size();
+    }
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsReadOnlyOverride(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetReadOnlyOverride().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getReadOnlyOverrideMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverride() {
+      return getReadOnlyOverrideMap();
+    }
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverrideMap() {
+      return internalGetReadOnlyOverride().getMap();
+    }
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+    @java.lang.Override
+
+    public boolean getReadOnlyOverrideOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetReadOnlyOverride().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * read_only_override overrides the read_only field for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     */
+    @java.lang.Override
+
+    public boolean getReadOnlyOverrideOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetReadOnlyOverride().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int TERRAFORM_COMPUTED_FIELD_NUMBER = 1941322;
+    private boolean terraformComputed_;
+    /**
+     * <pre>
+     * terraform_computed sets the terraform Computed field to be true. if
+     * read_only is set to true, this will automatically be set for you. You
+     * should only need to set this field manually if you have a Computed
+     * Optional field in Terraform.
+     * </pre>
+     *
+     * <code>bool terraform_computed = 1941322;</code>
+     * @return The terraformComputed.
+     */
+    @java.lang.Override
+    public boolean getTerraformComputed() {
+      return terraformComputed_;
     }
 
     public static final int CLI_NAME_FIELD_NUMBER = 1941311;
@@ -2564,17 +2773,6 @@ public final class Options {
       }
     }
 
-    public static final int HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER = 1941314;
-    private boolean hideFromJsonGateway_;
-    /**
-     * <code>bool hide_from_json_gateway = 1941314;</code>
-     * @return The hideFromJsonGateway.
-     */
-    @java.lang.Override
-    public boolean getHideFromJsonGateway() {
-      return hideFromJsonGateway_;
-    }
-
     public static final int CUSTOM_FIELD_NUMBER = 1941305;
     private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
     /**
@@ -2615,8 +2813,8 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (exposeAsPorcelain_ != false) {
-        output.writeBool(1941302, exposeAsPorcelain_);
+      if (porcelain_ != false) {
+        output.writeBool(1941302, porcelain_);
       }
       if (iterable_ != false) {
         output.writeBool(1941303, iterable_);
@@ -2626,9 +2824,6 @@ public final class Options {
       }
       if (custom_ != null) {
         output.writeMessage(1941305, getCustom());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformComputed_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, terraformComputed_);
       }
       if (terraformForceNew_ != false) {
         output.writeBool(1941308, terraformForceNew_);
@@ -2648,9 +2843,6 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941313, jsonGatewayName_);
       }
-      if (hideFromJsonGateway_ != false) {
-        output.writeBool(1941314, hideFromJsonGateway_);
-      }
       if (readOnly_ != false) {
         output.writeBool(1941315, readOnly_);
       }
@@ -2663,8 +2855,20 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, terraformDiffSuppressFunc_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformCommentOverride_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941320, terraformCommentOverride_);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetCommentOverride(),
+          CommentOverrideDefaultEntryHolder.defaultEntry,
+          1941320);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetReadOnlyOverride(),
+          ReadOnlyOverrideDefaultEntryHolder.defaultEntry,
+          1941321);
+      if (terraformComputed_ != false) {
+        output.writeBool(1941322, terraformComputed_);
       }
       unknownFields.writeTo(output);
     }
@@ -2675,9 +2879,9 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
-      if (exposeAsPorcelain_ != false) {
+      if (porcelain_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941302, exposeAsPorcelain_);
+          .computeBoolSize(1941302, porcelain_);
       }
       if (iterable_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2690,9 +2894,6 @@ public final class Options {
       if (custom_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1941305, getCustom());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformComputed_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, terraformComputed_);
       }
       if (terraformForceNew_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2715,10 +2916,6 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941313, jsonGatewayName_);
       }
-      if (hideFromJsonGateway_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941314, hideFromJsonGateway_);
-      }
       if (readOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941315, readOnly_);
@@ -2738,8 +2935,29 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, terraformDiffSuppressFunc_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformCommentOverride_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941320, terraformCommentOverride_);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetCommentOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        commentOverride__ = CommentOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1941320, commentOverride__);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetReadOnlyOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        readOnlyOverride__ = ReadOnlyOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1941321, readOnlyOverride__);
+      }
+      if (terraformComputed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941322, terraformComputed_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2756,8 +2974,8 @@ public final class Options {
       }
       com.strongdm.api.v1.plumbing.Options.FieldOptions other = (com.strongdm.api.v1.plumbing.Options.FieldOptions) obj;
 
-      if (getExposeAsPorcelain()
-          != other.getExposeAsPorcelain()) return false;
+      if (getPorcelain()
+          != other.getPorcelain()) return false;
       if (getIterable()
           != other.getIterable()) return false;
       if (getRequired()
@@ -2770,24 +2988,24 @@ public final class Options {
           != other.getIsCredential()) return false;
       if (!getTargetsList()
           .equals(other.getTargetsList())) return false;
-      if (!getTerraformComputed()
-          .equals(other.getTerraformComputed())) return false;
       if (getTerraformForceNew()
           != other.getTerraformForceNew()) return false;
       if (getTerraformSensitive()
           != other.getTerraformSensitive()) return false;
       if (!getTerraformDiffSuppressFunc()
           .equals(other.getTerraformDiffSuppressFunc())) return false;
-      if (!getTerraformCommentOverride()
-          .equals(other.getTerraformCommentOverride())) return false;
+      if (!internalGetCommentOverride().equals(
+          other.internalGetCommentOverride())) return false;
+      if (!internalGetReadOnlyOverride().equals(
+          other.internalGetReadOnlyOverride())) return false;
+      if (getTerraformComputed()
+          != other.getTerraformComputed()) return false;
       if (!getCliName()
           .equals(other.getCliName())) return false;
       if (!getCliJsonName()
           .equals(other.getCliJsonName())) return false;
       if (!getJsonGatewayName()
           .equals(other.getJsonGatewayName())) return false;
-      if (getHideFromJsonGateway()
-          != other.getHideFromJsonGateway()) return false;
       if (hasCustom() != other.hasCustom()) return false;
       if (hasCustom()) {
         if (!getCustom()
@@ -2804,9 +3022,9 @@ public final class Options {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + EXPOSE_AS_PORCELAIN_FIELD_NUMBER;
+      hash = (37 * hash) + PORCELAIN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getExposeAsPorcelain());
+          getPorcelain());
       hash = (37 * hash) + ITERABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIterable());
@@ -2826,8 +3044,6 @@ public final class Options {
         hash = (37 * hash) + TARGETS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetsList().hashCode();
       }
-      hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
-      hash = (53 * hash) + getTerraformComputed().hashCode();
       hash = (37 * hash) + TERRAFORM_FORCE_NEW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getTerraformForceNew());
@@ -2836,17 +3052,23 @@ public final class Options {
           getTerraformSensitive());
       hash = (37 * hash) + TERRAFORM_DIFF_SUPPRESS_FUNC_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformDiffSuppressFunc().hashCode();
-      hash = (37 * hash) + TERRAFORM_COMMENT_OVERRIDE_FIELD_NUMBER;
-      hash = (53 * hash) + getTerraformCommentOverride().hashCode();
+      if (!internalGetCommentOverride().getMap().isEmpty()) {
+        hash = (37 * hash) + COMMENT_OVERRIDE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetCommentOverride().hashCode();
+      }
+      if (!internalGetReadOnlyOverride().getMap().isEmpty()) {
+        hash = (37 * hash) + READ_ONLY_OVERRIDE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetReadOnlyOverride().hashCode();
+      }
+      hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTerraformComputed());
       hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCliName().hashCode();
       hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getCliJsonName().hashCode();
       hash = (37 * hash) + JSON_GATEWAY_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getJsonGatewayName().hashCode();
-      hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getHideFromJsonGateway());
       if (hasCustom()) {
         hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
         hash = (53 * hash) + getCustom().hashCode();
@@ -2958,6 +3180,32 @@ public final class Options {
         return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FieldOptions_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1941320:
+            return internalGetCommentOverride();
+          case 1941321:
+            return internalGetReadOnlyOverride();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1941320:
+            return internalGetMutableCommentOverride();
+          case 1941321:
+            return internalGetMutableReadOnlyOverride();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2984,7 +3232,7 @@ public final class Options {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        exposeAsPorcelain_ = false;
+        porcelain_ = false;
 
         iterable_ = false;
 
@@ -2998,23 +3246,21 @@ public final class Options {
 
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
-        terraformComputed_ = "";
-
         terraformForceNew_ = false;
 
         terraformSensitive_ = false;
 
         terraformDiffSuppressFunc_ = "";
 
-        terraformCommentOverride_ = "";
+        internalGetMutableCommentOverride().clear();
+        internalGetMutableReadOnlyOverride().clear();
+        terraformComputed_ = false;
 
         cliName_ = "";
 
         cliJsonName_ = "";
 
         jsonGatewayName_ = "";
-
-        hideFromJsonGateway_ = false;
 
         if (customBuilder_ == null) {
           custom_ = null;
@@ -3049,7 +3295,7 @@ public final class Options {
       public com.strongdm.api.v1.plumbing.Options.FieldOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.FieldOptions result = new com.strongdm.api.v1.plumbing.Options.FieldOptions(this);
         int from_bitField0_ = bitField0_;
-        result.exposeAsPorcelain_ = exposeAsPorcelain_;
+        result.porcelain_ = porcelain_;
         result.iterable_ = iterable_;
         result.required_ = required_;
         result.writeOnly_ = writeOnly_;
@@ -3060,15 +3306,17 @@ public final class Options {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.targets_ = targets_;
-        result.terraformComputed_ = terraformComputed_;
         result.terraformForceNew_ = terraformForceNew_;
         result.terraformSensitive_ = terraformSensitive_;
         result.terraformDiffSuppressFunc_ = terraformDiffSuppressFunc_;
-        result.terraformCommentOverride_ = terraformCommentOverride_;
+        result.commentOverride_ = internalGetCommentOverride();
+        result.commentOverride_.makeImmutable();
+        result.readOnlyOverride_ = internalGetReadOnlyOverride();
+        result.readOnlyOverride_.makeImmutable();
+        result.terraformComputed_ = terraformComputed_;
         result.cliName_ = cliName_;
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
-        result.hideFromJsonGateway_ = hideFromJsonGateway_;
         if (customBuilder_ == null) {
           result.custom_ = custom_;
         } else {
@@ -3122,8 +3370,8 @@ public final class Options {
 
       public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.FieldOptions other) {
         if (other == com.strongdm.api.v1.plumbing.Options.FieldOptions.getDefaultInstance()) return this;
-        if (other.getExposeAsPorcelain() != false) {
-          setExposeAsPorcelain(other.getExposeAsPorcelain());
+        if (other.getPorcelain() != false) {
+          setPorcelain(other.getPorcelain());
         }
         if (other.getIterable() != false) {
           setIterable(other.getIterable());
@@ -3150,10 +3398,6 @@ public final class Options {
           }
           onChanged();
         }
-        if (!other.getTerraformComputed().isEmpty()) {
-          terraformComputed_ = other.terraformComputed_;
-          onChanged();
-        }
         if (other.getTerraformForceNew() != false) {
           setTerraformForceNew(other.getTerraformForceNew());
         }
@@ -3164,9 +3408,12 @@ public final class Options {
           terraformDiffSuppressFunc_ = other.terraformDiffSuppressFunc_;
           onChanged();
         }
-        if (!other.getTerraformCommentOverride().isEmpty()) {
-          terraformCommentOverride_ = other.terraformCommentOverride_;
-          onChanged();
+        internalGetMutableCommentOverride().mergeFrom(
+            other.internalGetCommentOverride());
+        internalGetMutableReadOnlyOverride().mergeFrom(
+            other.internalGetReadOnlyOverride());
+        if (other.getTerraformComputed() != false) {
+          setTerraformComputed(other.getTerraformComputed());
         }
         if (!other.getCliName().isEmpty()) {
           cliName_ = other.cliName_;
@@ -3179,9 +3426,6 @@ public final class Options {
         if (!other.getJsonGatewayName().isEmpty()) {
           jsonGatewayName_ = other.jsonGatewayName_;
           onChanged();
-        }
-        if (other.getHideFromJsonGateway() != false) {
-          setHideFromJsonGateway(other.getHideFromJsonGateway());
         }
         if (other.hasCustom()) {
           mergeCustom(other.getCustom());
@@ -3216,45 +3460,45 @@ public final class Options {
       }
       private int bitField0_;
 
-      private boolean exposeAsPorcelain_ ;
+      private boolean porcelain_ ;
       /**
        * <pre>
-       * expose_as_porcelain determines whether the field is exposed to the SDKs.
+       * porcelain determines whether the field is exposed to the SDKs.
        * </pre>
        *
-       * <code>bool expose_as_porcelain = 1941302;</code>
-       * @return The exposeAsPorcelain.
+       * <code>bool porcelain = 1941302;</code>
+       * @return The porcelain.
        */
       @java.lang.Override
-      public boolean getExposeAsPorcelain() {
-        return exposeAsPorcelain_;
+      public boolean getPorcelain() {
+        return porcelain_;
       }
       /**
        * <pre>
-       * expose_as_porcelain determines whether the field is exposed to the SDKs.
+       * porcelain determines whether the field is exposed to the SDKs.
        * </pre>
        *
-       * <code>bool expose_as_porcelain = 1941302;</code>
-       * @param value The exposeAsPorcelain to set.
+       * <code>bool porcelain = 1941302;</code>
+       * @param value The porcelain to set.
        * @return This builder for chaining.
        */
-      public Builder setExposeAsPorcelain(boolean value) {
+      public Builder setPorcelain(boolean value) {
         
-        exposeAsPorcelain_ = value;
+        porcelain_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * expose_as_porcelain determines whether the field is exposed to the SDKs.
+       * porcelain determines whether the field is exposed to the SDKs.
        * </pre>
        *
-       * <code>bool expose_as_porcelain = 1941302;</code>
+       * <code>bool porcelain = 1941302;</code>
        * @return This builder for chaining.
        */
-      public Builder clearExposeAsPorcelain() {
+      public Builder clearPorcelain() {
         
-        exposeAsPorcelain_ = false;
+        porcelain_ = false;
         onChanged();
         return this;
       }
@@ -3581,117 +3825,6 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object terraformComputed_ = "";
-      /**
-       * <pre>
-       * terraform_computed can have three different values:
-       * - '': field is not computed at all
-       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-       * </pre>
-       *
-       * <code>string terraform_computed = 1941307;</code>
-       * @return The terraformComputed.
-       */
-      public java.lang.String getTerraformComputed() {
-        java.lang.Object ref = terraformComputed_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          terraformComputed_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * terraform_computed can have three different values:
-       * - '': field is not computed at all
-       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-       * </pre>
-       *
-       * <code>string terraform_computed = 1941307;</code>
-       * @return The bytes for terraformComputed.
-       */
-      public com.google.protobuf.ByteString
-          getTerraformComputedBytes() {
-        java.lang.Object ref = terraformComputed_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          terraformComputed_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * terraform_computed can have three different values:
-       * - '': field is not computed at all
-       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-       * </pre>
-       *
-       * <code>string terraform_computed = 1941307;</code>
-       * @param value The terraformComputed to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTerraformComputed(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        terraformComputed_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * terraform_computed can have three different values:
-       * - '': field is not computed at all
-       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-       * </pre>
-       *
-       * <code>string terraform_computed = 1941307;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTerraformComputed() {
-        
-        terraformComputed_ = getDefaultInstance().getTerraformComputed();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * terraform_computed can have three different values:
-       * - '': field is not computed at all
-       * - 'optional' indicates to Terraform that this field CAN be set by users, but is computed automatically if not set.
-       * - 'readonly' indicates to Terraform that this field CANNOT be set by users.
-       * </pre>
-       *
-       * <code>string terraform_computed = 1941307;</code>
-       * @param value The bytes for terraformComputed to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTerraformComputedBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        terraformComputed_ = value;
-        onChanged();
-        return this;
-      }
-
       private boolean terraformForceNew_ ;
       /**
        * <pre>
@@ -3882,98 +4015,369 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object terraformCommentOverride_ = "";
-      /**
-       * <pre>
-       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
-       * </pre>
-       *
-       * <code>string terraform_comment_override = 1941320;</code>
-       * @return The terraformCommentOverride.
-       */
-      public java.lang.String getTerraformCommentOverride() {
-        java.lang.Object ref = terraformCommentOverride_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          terraformCommentOverride_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> commentOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetCommentOverride() {
+        if (commentOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              CommentOverrideDefaultEntryHolder.defaultEntry);
         }
+        return commentOverride_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableCommentOverride() {
+        onChanged();;
+        if (commentOverride_ == null) {
+          commentOverride_ = com.google.protobuf.MapField.newMapField(
+              CommentOverrideDefaultEntryHolder.defaultEntry);
+        }
+        if (!commentOverride_.isMutable()) {
+          commentOverride_ = commentOverride_.copy();
+        }
+        return commentOverride_;
+      }
+
+      public int getCommentOverrideCount() {
+        return internalGetCommentOverride().getMap().size();
       }
       /**
        * <pre>
-       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * comment_override replaces the entire doc string for the given targets
        * </pre>
        *
-       * <code>string terraform_comment_override = 1941320;</code>
-       * @return The bytes for terraformCommentOverride.
+       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
        */
-      public com.google.protobuf.ByteString
-          getTerraformCommentOverrideBytes() {
-        java.lang.Object ref = terraformCommentOverride_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          terraformCommentOverride_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+
+      @java.lang.Override
+      public boolean containsCommentOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetCommentOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getCommentOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getCommentOverride() {
+        return getCommentOverrideMap();
       }
       /**
        * <pre>
-       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * comment_override replaces the entire doc string for the given targets
        * </pre>
        *
-       * <code>string terraform_comment_override = 1941320;</code>
-       * @param value The terraformCommentOverride to set.
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
        */
-      public Builder setTerraformCommentOverride(
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getCommentOverrideMap() {
+        return internalGetCommentOverride().getMap();
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getCommentOverrideOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetCommentOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getCommentOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetCommentOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearCommentOverride() {
+        internalGetMutableCommentOverride().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+       */
+
+      public Builder removeCommentOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableCommentOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableCommentOverride() {
+        return internalGetMutableCommentOverride().getMutableMap();
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+       */
+      public Builder putCommentOverride(
+          java.lang.String key,
           java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        terraformCommentOverride_ = value;
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableCommentOverride().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+       */
+
+      public Builder putAllCommentOverride(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableCommentOverride().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> readOnlyOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetReadOnlyOverride() {
+        if (readOnlyOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
+        }
+        return readOnlyOverride_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetMutableReadOnlyOverride() {
+        onChanged();;
+        if (readOnlyOverride_ == null) {
+          readOnlyOverride_ = com.google.protobuf.MapField.newMapField(
+              ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
+        }
+        if (!readOnlyOverride_.isMutable()) {
+          readOnlyOverride_ = readOnlyOverride_.copy();
+        }
+        return readOnlyOverride_;
+      }
+
+      public int getReadOnlyOverrideCount() {
+        return internalGetReadOnlyOverride().getMap().size();
+      }
+      /**
+       * <pre>
+       * read_only_override overrides the read_only field for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsReadOnlyOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetReadOnlyOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getReadOnlyOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverride() {
+        return getReadOnlyOverrideMap();
+      }
+      /**
+       * <pre>
+       * read_only_override overrides the read_only field for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverrideMap() {
+        return internalGetReadOnlyOverride().getMap();
+      }
+      /**
+       * <pre>
+       * read_only_override overrides the read_only field for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+       */
+      @java.lang.Override
+
+      public boolean getReadOnlyOverrideOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetReadOnlyOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * read_only_override overrides the read_only field for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+       */
+      @java.lang.Override
+
+      public boolean getReadOnlyOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetReadOnlyOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearReadOnlyOverride() {
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * read_only_override overrides the read_only field for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+       */
+
+      public Builder removeReadOnlyOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+      getMutableReadOnlyOverride() {
+        return internalGetMutableReadOnlyOverride().getMutableMap();
+      }
+      /**
+       * <pre>
+       * read_only_override overrides the read_only field for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+       */
+      public Builder putReadOnlyOverride(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * read_only_override overrides the read_only field for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+       */
+
+      public Builder putAllReadOnlyOverride(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private boolean terraformComputed_ ;
+      /**
+       * <pre>
+       * terraform_computed sets the terraform Computed field to be true. if
+       * read_only is set to true, this will automatically be set for you. You
+       * should only need to set this field manually if you have a Computed
+       * Optional field in Terraform.
+       * </pre>
+       *
+       * <code>bool terraform_computed = 1941322;</code>
+       * @return The terraformComputed.
+       */
+      @java.lang.Override
+      public boolean getTerraformComputed() {
+        return terraformComputed_;
+      }
+      /**
+       * <pre>
+       * terraform_computed sets the terraform Computed field to be true. if
+       * read_only is set to true, this will automatically be set for you. You
+       * should only need to set this field manually if you have a Computed
+       * Optional field in Terraform.
+       * </pre>
+       *
+       * <code>bool terraform_computed = 1941322;</code>
+       * @param value The terraformComputed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTerraformComputed(boolean value) {
+        
+        terraformComputed_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
+       * terraform_computed sets the terraform Computed field to be true. if
+       * read_only is set to true, this will automatically be set for you. You
+       * should only need to set this field manually if you have a Computed
+       * Optional field in Terraform.
        * </pre>
        *
-       * <code>string terraform_comment_override = 1941320;</code>
+       * <code>bool terraform_computed = 1941322;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTerraformCommentOverride() {
+      public Builder clearTerraformComputed() {
         
-        terraformCommentOverride_ = getDefaultInstance().getTerraformCommentOverride();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * terraform_comment_override replaces the entire doc string for terraform (including optional/required indicators)
-       * </pre>
-       *
-       * <code>string terraform_comment_override = 1941320;</code>
-       * @param value The bytes for terraformCommentOverride to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTerraformCommentOverrideBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        terraformCommentOverride_ = value;
+        terraformComputed_ = false;
         onChanged();
         return this;
       }
@@ -4202,37 +4606,6 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         jsonGatewayName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean hideFromJsonGateway_ ;
-      /**
-       * <code>bool hide_from_json_gateway = 1941314;</code>
-       * @return The hideFromJsonGateway.
-       */
-      @java.lang.Override
-      public boolean getHideFromJsonGateway() {
-        return hideFromJsonGateway_;
-      }
-      /**
-       * <code>bool hide_from_json_gateway = 1941314;</code>
-       * @param value The hideFromJsonGateway to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHideFromJsonGateway(boolean value) {
-        
-        hideFromJsonGateway_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool hide_from_json_gateway = 1941314;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHideFromJsonGateway() {
-        
-        hideFromJsonGateway_ = false;
         onChanged();
         return this;
       }
@@ -4547,12 +4920,6 @@ public final class Options {
         getJsonGatewayNameBytes();
 
     /**
-     * <code>bool hide_from_json_gateway = 1941310;</code>
-     * @return The hideFromJsonGateway.
-     */
-    boolean getHideFromJsonGateway();
-
-    /**
      * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
      * @return Whether the terraformDocs field is set.
      */
@@ -4581,13 +4948,57 @@ public final class Options {
 
     /**
      * <pre>
-     * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+     * deprecated_override marks the message as deprecated for the given targets
      * </pre>
      *
-     * <code>bool terraform_deprecated_override = 1941312;</code>
-     * @return The terraformDeprecatedOverride.
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
      */
-    boolean getTerraformDeprecatedOverride();
+    int getDeprecatedOverrideCount();
+    /**
+     * <pre>
+     * deprecated_override marks the message as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    boolean containsDeprecatedOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getDeprecatedOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getDeprecatedOverride();
+    /**
+     * <pre>
+     * deprecated_override marks the message as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getDeprecatedOverrideMap();
+    /**
+     * <pre>
+     * deprecated_override marks the message as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+
+    boolean getDeprecatedOverrideOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <pre>
+     * deprecated_override marks the message as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+
+    boolean getDeprecatedOverrideOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code v1.MessageOptions}
@@ -4710,20 +5121,23 @@ public final class Options {
               jsonGatewayName_ = s;
               break;
             }
-            case 15530480: {
-
-              hideFromJsonGateway_ = input.readBool();
-              break;
-            }
             case 15530490: {
               java.lang.String s = input.readStringRequireUtf8();
 
               terraformProviderName_ = s;
               break;
             }
-            case 15530496: {
-
-              terraformDeprecatedOverride_ = input.readBool();
+            case 15530498: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                deprecatedOverride_ = com.google.protobuf.MapField.newMapField(
+                    DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              deprecatedOverride__ = input.readMessage(
+                  DeprecatedOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              deprecatedOverride_.getMutableMap().put(
+                  deprecatedOverride__.getKey(), deprecatedOverride__.getValue());
               break;
             }
             default: {
@@ -4753,6 +5167,18 @@ public final class Options {
       return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1941312:
+          return internalGetDeprecatedOverride();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -5030,17 +5456,6 @@ public final class Options {
       }
     }
 
-    public static final int HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER = 1941310;
-    private boolean hideFromJsonGateway_;
-    /**
-     * <code>bool hide_from_json_gateway = 1941310;</code>
-     * @return The hideFromJsonGateway.
-     */
-    @java.lang.Override
-    public boolean getHideFromJsonGateway() {
-      return hideFromJsonGateway_;
-    }
-
     public static final int TERRAFORM_DOCS_FIELD_NUMBER = 1941304;
     private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
     /**
@@ -5105,19 +5520,101 @@ public final class Options {
       }
     }
 
-    public static final int TERRAFORM_DEPRECATED_OVERRIDE_FIELD_NUMBER = 1941312;
-    private boolean terraformDeprecatedOverride_;
+    public static final int DEPRECATED_OVERRIDE_FIELD_NUMBER = 1941312;
+    private static final class DeprecatedOverrideDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Boolean> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> deprecatedOverride_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+    internalGetDeprecatedOverride() {
+      if (deprecatedOverride_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+      }
+      return deprecatedOverride_;
+    }
+
+    public int getDeprecatedOverrideCount() {
+      return internalGetDeprecatedOverride().getMap().size();
+    }
     /**
      * <pre>
-     * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+     * deprecated_override marks the message as deprecated for the given targets
      * </pre>
      *
-     * <code>bool terraform_deprecated_override = 1941312;</code>
-     * @return The terraformDeprecatedOverride.
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsDeprecatedOverride(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetDeprecatedOverride().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getDeprecatedOverrideMap()} instead.
      */
     @java.lang.Override
-    public boolean getTerraformDeprecatedOverride() {
-      return terraformDeprecatedOverride_;
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverride() {
+      return getDeprecatedOverrideMap();
+    }
+    /**
+     * <pre>
+     * deprecated_override marks the message as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverrideMap() {
+      return internalGetDeprecatedOverride().getMap();
+    }
+    /**
+     * <pre>
+     * deprecated_override marks the message as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    @java.lang.Override
+
+    public boolean getDeprecatedOverrideOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetDeprecatedOverride().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * deprecated_override marks the message as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    @java.lang.Override
+
+    public boolean getDeprecatedOverrideOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetDeprecatedOverride().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5161,15 +5658,15 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941309, jsonGatewayName_);
       }
-      if (hideFromJsonGateway_ != false) {
-        output.writeBool(1941310, hideFromJsonGateway_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, terraformProviderName_);
       }
-      if (terraformDeprecatedOverride_ != false) {
-        output.writeBool(1941312, terraformDeprecatedOverride_);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetDeprecatedOverride(),
+          DeprecatedOverrideDefaultEntryHolder.defaultEntry,
+          1941312);
       unknownFields.writeTo(output);
     }
 
@@ -5215,16 +5712,18 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941309, jsonGatewayName_);
       }
-      if (hideFromJsonGateway_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941310, hideFromJsonGateway_);
-      }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, terraformProviderName_);
       }
-      if (terraformDeprecatedOverride_ != false) {
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetDeprecatedOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        deprecatedOverride__ = DeprecatedOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941312, terraformDeprecatedOverride_);
+            .computeMessageSize(1941312, deprecatedOverride__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5260,8 +5759,6 @@ public final class Options {
           .equals(other.getCliJsonName())) return false;
       if (!getJsonGatewayName()
           .equals(other.getJsonGatewayName())) return false;
-      if (getHideFromJsonGateway()
-          != other.getHideFromJsonGateway()) return false;
       if (hasTerraformDocs() != other.hasTerraformDocs()) return false;
       if (hasTerraformDocs()) {
         if (!getTerraformDocs()
@@ -5269,8 +5766,8 @@ public final class Options {
       }
       if (!getTerraformProviderName()
           .equals(other.getTerraformProviderName())) return false;
-      if (getTerraformDeprecatedOverride()
-          != other.getTerraformDeprecatedOverride()) return false;
+      if (!internalGetDeprecatedOverride().equals(
+          other.internalGetDeprecatedOverride())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5303,18 +5800,16 @@ public final class Options {
       hash = (53 * hash) + getCliJsonName().hashCode();
       hash = (37 * hash) + JSON_GATEWAY_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getJsonGatewayName().hashCode();
-      hash = (37 * hash) + HIDE_FROM_JSON_GATEWAY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getHideFromJsonGateway());
       if (hasTerraformDocs()) {
         hash = (37 * hash) + TERRAFORM_DOCS_FIELD_NUMBER;
         hash = (53 * hash) + getTerraformDocs().hashCode();
       }
       hash = (37 * hash) + TERRAFORM_PROVIDER_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformProviderName().hashCode();
-      hash = (37 * hash) + TERRAFORM_DEPRECATED_OVERRIDE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getTerraformDeprecatedOverride());
+      if (!internalGetDeprecatedOverride().getMap().isEmpty()) {
+        hash = (37 * hash) + DEPRECATED_OVERRIDE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetDeprecatedOverride().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5422,6 +5917,28 @@ public final class Options {
         return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1941312:
+            return internalGetDeprecatedOverride();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1941312:
+            return internalGetMutableDeprecatedOverride();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -5468,8 +5985,6 @@ public final class Options {
 
         jsonGatewayName_ = "";
 
-        hideFromJsonGateway_ = false;
-
         if (terraformDocsBuilder_ == null) {
           terraformDocs_ = null;
         } else {
@@ -5478,8 +5993,7 @@ public final class Options {
         }
         terraformProviderName_ = "";
 
-        terraformDeprecatedOverride_ = false;
-
+        internalGetMutableDeprecatedOverride().clear();
         return this;
       }
 
@@ -5523,14 +6037,14 @@ public final class Options {
         result.cliName_ = cliName_;
         result.cliJsonName_ = cliJsonName_;
         result.jsonGatewayName_ = jsonGatewayName_;
-        result.hideFromJsonGateway_ = hideFromJsonGateway_;
         if (terraformDocsBuilder_ == null) {
           result.terraformDocs_ = terraformDocs_;
         } else {
           result.terraformDocs_ = terraformDocsBuilder_.build();
         }
         result.terraformProviderName_ = terraformProviderName_;
-        result.terraformDeprecatedOverride_ = terraformDeprecatedOverride_;
+        result.deprecatedOverride_ = internalGetDeprecatedOverride();
+        result.deprecatedOverride_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -5614,9 +6128,6 @@ public final class Options {
           jsonGatewayName_ = other.jsonGatewayName_;
           onChanged();
         }
-        if (other.getHideFromJsonGateway() != false) {
-          setHideFromJsonGateway(other.getHideFromJsonGateway());
-        }
         if (other.hasTerraformDocs()) {
           mergeTerraformDocs(other.getTerraformDocs());
         }
@@ -5624,9 +6135,8 @@ public final class Options {
           terraformProviderName_ = other.terraformProviderName_;
           onChanged();
         }
-        if (other.getTerraformDeprecatedOverride() != false) {
-          setTerraformDeprecatedOverride(other.getTerraformDeprecatedOverride());
-        }
+        internalGetMutableDeprecatedOverride().mergeFrom(
+            other.internalGetDeprecatedOverride());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6337,37 +6847,6 @@ public final class Options {
         return this;
       }
 
-      private boolean hideFromJsonGateway_ ;
-      /**
-       * <code>bool hide_from_json_gateway = 1941310;</code>
-       * @return The hideFromJsonGateway.
-       */
-      @java.lang.Override
-      public boolean getHideFromJsonGateway() {
-        return hideFromJsonGateway_;
-      }
-      /**
-       * <code>bool hide_from_json_gateway = 1941310;</code>
-       * @param value The hideFromJsonGateway to set.
-       * @return This builder for chaining.
-       */
-      public Builder setHideFromJsonGateway(boolean value) {
-        
-        hideFromJsonGateway_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool hide_from_json_gateway = 1941310;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearHideFromJsonGateway() {
-        
-        hideFromJsonGateway_ = false;
-        onChanged();
-        return this;
-      }
-
       private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> terraformDocsBuilder_;
@@ -6563,46 +7042,159 @@ public final class Options {
         return this;
       }
 
-      private boolean terraformDeprecatedOverride_ ;
-      /**
-       * <pre>
-       * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
-       * </pre>
-       *
-       * <code>bool terraform_deprecated_override = 1941312;</code>
-       * @return The terraformDeprecatedOverride.
-       */
-      @java.lang.Override
-      public boolean getTerraformDeprecatedOverride() {
-        return terraformDeprecatedOverride_;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> deprecatedOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetDeprecatedOverride() {
+        if (deprecatedOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+        }
+        return deprecatedOverride_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetMutableDeprecatedOverride() {
+        onChanged();;
+        if (deprecatedOverride_ == null) {
+          deprecatedOverride_ = com.google.protobuf.MapField.newMapField(
+              DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+        }
+        if (!deprecatedOverride_.isMutable()) {
+          deprecatedOverride_ = deprecatedOverride_.copy();
+        }
+        return deprecatedOverride_;
+      }
+
+      public int getDeprecatedOverrideCount() {
+        return internalGetDeprecatedOverride().getMap().size();
       }
       /**
        * <pre>
-       * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+       * deprecated_override marks the message as deprecated for the given targets
        * </pre>
        *
-       * <code>bool terraform_deprecated_override = 1941312;</code>
-       * @param value The terraformDeprecatedOverride to set.
-       * @return This builder for chaining.
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
        */
-      public Builder setTerraformDeprecatedOverride(boolean value) {
-        
-        terraformDeprecatedOverride_ = value;
-        onChanged();
+
+      @java.lang.Override
+      public boolean containsDeprecatedOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetDeprecatedOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDeprecatedOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverride() {
+        return getDeprecatedOverrideMap();
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverrideMap() {
+        return internalGetDeprecatedOverride().getMap();
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public boolean getDeprecatedOverrideOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetDeprecatedOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public boolean getDeprecatedOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetDeprecatedOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearDeprecatedOverride() {
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .clear();
         return this;
       }
       /**
        * <pre>
-       * terraform_deprecated_override marks the message as deprecated in Terraform even if it is not deprecated in other SDKs
+       * deprecated_override marks the message as deprecated for the given targets
        * </pre>
        *
-       * <code>bool terraform_deprecated_override = 1941312;</code>
-       * @return This builder for chaining.
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
        */
-      public Builder clearTerraformDeprecatedOverride() {
+
+      public Builder removeDeprecatedOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+      getMutableDeprecatedOverride() {
+        return internalGetMutableDeprecatedOverride().getMutableMap();
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      public Builder putDeprecatedOverride(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new NullPointerException("map key"); }
         
-        terraformDeprecatedOverride_ = false;
-        onChanged();
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+
+      public Builder putAllDeprecatedOverride(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -10775,10 +11367,25 @@ public final class Options {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_FieldOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_FieldOptions_CommentOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_MessageOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_MessageOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_MessageOptions_DeprecatedOverrideEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_CustomPorcelainTypeOptions_descriptor;
   private static final 
@@ -10809,57 +11416,74 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"L\n\rMethodOptions\022\020\n\006method" +
-      "\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecation_d" +
-      "ate\030\266\276v \001(\t\" \n\013FileOptions\022\021\n\007targets\030\304\301" +
-      "v \003(\t\"\364\003\n\014FieldOptions\022\035\n\023expose_as_porc" +
-      "elain\030\266\276v \001(\010\022\022\n\010iterable\030\267\276v \001(\010\022\022\n\010req" +
-      "uired\030\270\276v \001(\010\022\024\n\nwrite_only\030\275\276v \001(\010\022\023\n\tr" +
-      "ead_only\030\303\276v \001(\010\022\027\n\ris_credential\030\304\276v \001(" +
-      "\010\022\021\n\007targets\030\306\276v \003(\t\022\034\n\022terraform_comput" +
-      "ed\030\273\276v \001(\t\022\035\n\023terraform_force_new\030\274\276v \001(" +
-      "\010\022\035\n\023terraform_sensitive\030\276\276v \001(\010\022&\n\034terr" +
-      "aform_diff_suppress_func\030\307\276v \001(\t\022$\n\032terr" +
-      "aform_comment_override\030\310\276v \001(\t\022\022\n\010cli_na" +
-      "me\030\277\276v \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022\033\n\021j" +
-      "son_gateway_name\030\301\276v \001(\t\022 \n\026hide_from_js" +
-      "on_gateway\030\302\276v \001(\010\0220\n\006custom\030\271\276v \001(\0132\036.v" +
-      "1.CustomPorcelainTypeOptions\"\371\002\n\016Message" +
-      "Options\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n\005error\030\266\276" +
-      "v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\0220\n\006custom" +
-      "\030\271\276v \001(\0132\036.v1.CustomPorcelainTypeOptions" +
-      "\022\021\n\007targets\030\272\276v \003(\t\022\022\n\010cli_name\030\273\276v \001(\t\022" +
-      "\027\n\rcli_json_name\030\274\276v \001(\t\022\033\n\021json_gateway" +
-      "_name\030\275\276v \001(\t\022 \n\026hide_from_json_gateway\030" +
-      "\276\276v \001(\010\022+\n\016terraform_docs\030\270\276v \001(\0132\021.v1.T" +
-      "erraformDocs\022!\n\027terraform_provider_name\030" +
-      "\277\276v \001(\t\022\'\n\035terraform_deprecated_override" +
-      "\030\300\276v \001(\010\"\371\001\n\032CustomPorcelainTypeOptions\022" +
-      "\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_porcelain_typ" +
-      "e\030\276\276v \001(\t\022\035\n\023java_porcelain_type\030\277\276v \001(\t" +
-      "\022\"\n\030terraform_porcelain_type\030\300\276v \001(\t\022\035\n\023" +
-      "terraform_elem_type\030\302\276v \001(\t\022 \n\026openapi_p" +
-      "orcelain_type\030\301\276v \001(\t\022%\n\033json_gateway_po" +
-      "rcelain_type\030\303\276v \001(\t\"T\n\rTerraformDocs\022\037\n" +
-      "\025resource_example_path\030\264\276v \001(\t\022\"\n\030data_s" +
-      "ource_example_path\030\265\276v \001(\t\"\'\n\014OneofOptio" +
-      "ns\022\027\n\rcommon_fields\030\205\277v \003(\t\"M\n\016ServiceOp" +
-      "tions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030" +
-      "\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:K\n\016method_opt" +
-      "ions\022\036.google.protobuf.MethodOptions\030\220\277v" +
-      " \001(\0132\021.v1.MethodOptions:E\n\014file_options\022" +
-      "\034.google.protobuf.FileOptions\030\250\302v \001(\0132\017." +
-      "v1.FileOptions:H\n\rfield_options\022\035.google" +
-      ".protobuf.FieldOptions\030\216\277v \001(\0132\020.v1.Fiel" +
-      "dOptions:N\n\017message_options\022\037.google.pro" +
-      "tobuf.MessageOptions\030\217\277v \001(\0132\022.v1.Messag" +
-      "eOptions:H\n\roneof_options\022\035.google.proto" +
-      "buf.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptio" +
-      "ns:N\n\017service_options\022\037.google.protobuf." +
-      "ServiceOptions\030\231\277v \001(\0132\022.v1.ServiceOptio" +
-      "nsBU\n\034com.strongdm.api.v1.plumbingZ5gith" +
-      "ub.com/strongdm/strongdm-sdk-go/v2/inter" +
-      "nal/v1;v1b\006proto3"
+      "criptor.proto\"\204\001\n\rMethodOptions\022\020\n\006metho" +
+      "d\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecation_" +
+      "date\030\266\276v \001(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263" +
+      "\007\032\322\363\263\007\025!json_gateway_private\"X\n\013FileOpti" +
+      "ons\022\021\n\007targets\030\304\301v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_" +
+      "gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"\324" +
+      "\005\n\014FieldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010" +
+      "iterable\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\n" +
+      "write_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022" +
+      "\027\n\ris_credential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v " +
+      "\003(\t\022\035\n\023terraform_force_new\030\274\276v \001(\010\022\035\n\023te" +
+      "rraform_sensitive\030\276\276v \001(\010\022&\n\034terraform_d" +
+      "iff_suppress_func\030\307\276v \001(\t\022A\n\020comment_ove" +
+      "rride\030\310\276v \003(\0132%.v1.FieldOptions.CommentO" +
+      "verrideEntry\022D\n\022read_only_override\030\311\276v \003" +
+      "(\0132&.v1.FieldOptions.ReadOnlyOverrideEnt" +
+      "ry\022\034\n\022terraform_computed\030\312\276v \001(\010\022\022\n\010cli_" +
+      "name\030\277\276v \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022\033\n" +
+      "\021json_gateway_name\030\301\276v \001(\t\0220\n\006custom\030\271\276v" +
+      " \001(\0132\036.v1.CustomPorcelainTypeOptions\0326\n\024" +
+      "CommentOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\0327\n\025ReadOnlyOverrideEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:6\372\370\263\007\022\322\363\263\007" +
+      "\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_pr" +
+      "ivate\"\354\003\n\016MessageOptions\022\023\n\tporcelain\030\265\276" +
+      "v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030" +
+      "\267\276v \001(\t\0220\n\006custom\030\271\276v \001(\0132\036.v1.CustomPor" +
+      "celainTypeOptions\022\021\n\007targets\030\272\276v \003(\t\022\022\n\010" +
+      "cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001(" +
+      "\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022+\n\016terraf" +
+      "orm_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\022!\n\027t" +
+      "erraform_provider_name\030\277\276v \001(\t\022I\n\023deprec" +
+      "ated_override\030\300\276v \003(\0132*.v1.MessageOption" +
+      "s.DeprecatedOverrideEntry\0329\n\027DeprecatedO" +
+      "verrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010" +
+      ":\0028\001:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!" +
+      "json_gateway_private\"\261\002\n\032CustomPorcelain" +
+      "TypeOptions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_p" +
+      "orcelain_type\030\276\276v \001(\t\022\035\n\023java_porcelain_" +
+      "type\030\277\276v \001(\t\022\"\n\030terraform_porcelain_type" +
+      "\030\300\276v \001(\t\022\035\n\023terraform_elem_type\030\302\276v \001(\t\022" +
+      " \n\026openapi_porcelain_type\030\301\276v \001(\t\022%\n\033jso" +
+      "n_gateway_porcelain_type\030\303\276v \001(\t:6\372\370\263\007\022\322" +
+      "\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway" +
+      "_private\"\214\001\n\rTerraformDocs\022\037\n\025resource_e" +
+      "xample_path\030\264\276v \001(\t\022\"\n\030data_source_examp" +
+      "le_path\030\265\276v \001(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway" +
+      "\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"_\n\014Oneof" +
+      "Options\022\027\n\rcommon_fields\030\205\277v \003(\t:6\372\370\263\007\022\322" +
+      "\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway" +
+      "_private\"\205\001\n\016ServiceOptions\022\023\n\tmain_noun" +
+      "\030\230\277v \001(\t\022\023\n\tid_prefix\030\232\277v \001(\t\022\021\n\007targets" +
+      "\030\231\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363" +
+      "\263\007\025!json_gateway_private:K\n\016method_optio" +
+      "ns\022\036.google.protobuf.MethodOptions\030\220\277v \001" +
+      "(\0132\021.v1.MethodOptions:E\n\014file_options\022\034." +
+      "google.protobuf.FileOptions\030\250\302v \001(\0132\017.v1" +
+      ".FileOptions:H\n\rfield_options\022\035.google.p" +
+      "rotobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldO" +
+      "ptions:N\n\017message_options\022\037.google.proto" +
+      "buf.MessageOptions\030\217\277v \001(\0132\022.v1.MessageO" +
+      "ptions:H\n\roneof_options\022\035.google.protobu" +
+      "f.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptions" +
+      ":N\n\017service_options\022\037.google.protobuf.Se" +
+      "rviceOptions\030\231\277v \001(\0132\022.v1.ServiceOptions" +
+      "BU\n\034com.strongdm.api.v1.plumbingZ5github" +
+      ".com/strongdm/strongdm-sdk-go/v2/interna" +
+      "l/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10883,13 +11507,31 @@ public final class Options {
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "ExposeAsPorcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformComputed", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformCommentOverride", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "Custom", });
+        new java.lang.String[] { "Porcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "CommentOverride", "ReadOnlyOverride", "TerraformComputed", "CliName", "CliJsonName", "JsonGatewayName", "Custom", });
+    internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor =
+      internal_static_v1_FieldOptions_descriptor.getNestedTypes().get(0);
+    internal_static_v1_FieldOptions_CommentOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor =
+      internal_static_v1_FieldOptions_descriptor.getNestedTypes().get(1);
+    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "Targets", "CliName", "CliJsonName", "JsonGatewayName", "HideFromJsonGateway", "TerraformDocs", "TerraformProviderName", "TerraformDeprecatedOverride", });
+        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "Targets", "CliName", "CliJsonName", "JsonGatewayName", "TerraformDocs", "TerraformProviderName", "DeprecatedOverride", });
+    internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor =
+      internal_static_v1_MessageOptions_descriptor.getNestedTypes().get(0);
+    internal_static_v1_MessageOptions_DeprecatedOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_v1_CustomPorcelainTypeOptions_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable = new
@@ -10920,6 +11562,11 @@ public final class Options {
     messageOptions.internalInit(descriptor.getExtensions().get(3));
     oneofOptions.internalInit(descriptor.getExtensions().get(4));
     serviceOptions.internalInit(descriptor.getExtensions().get(5));
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 

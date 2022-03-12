@@ -2293,19 +2293,23 @@ public final class TagsPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntags.proto\022\002v1\032\roptions.proto\"\220\002\n\004Tags" +
-      "\022\034\n\005pairs\030\001 \003(\0132\r.v1.Tags.Pair\032/\n\004Pair\022\014" +
-      "\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\n\372\370\263\007\005\360\363\263\007\001:" +
-      "\270\001\372\370\263\007\262\001\312\363\263\007\247\001\352\363\263\007\004tags\362\363\263\007\004Tags\372\363\263\007\035jav" +
-      "a.util.Map<String, String>\202\364\263\007\007TypeMap\212\364" +
-      "\263\007;{\"type\":\"object\", \"additionalProperti" +
-      "es\":{\"type\":\"string\"}}\222\364\263\007\014tagsElemType\232" +
-      "\364\263\007\021map[string]string\360\363\263\007\001\"F\n\003Tag\022\030\n\004nam" +
-      "e\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005value\030\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001Bc\n\034com.strongdm.api.v" +
-      "1.plumbingB\014TagsPlumbingZ5github.com/str" +
-      "ongdm/strongdm-sdk-go/v2/internal/v1;v1b" +
-      "\006proto3"
+      "\n\ntags.proto\022\002v1\032\roptions.proto\"\263\003\n\004Tags" +
+      "\022\034\n\005pairs\030\001 \003(\0132\r.v1.Tags.Pair\032\200\001\n\004Pair\022" +
+      "\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:[\372\370\263\007V\322\363\263\007\001" +
+      "*\322\363\263\007\t!jopenapi\322\363\263\007\021!jopenapi_private\322\363\263" +
+      "\007\r!json_gateway\322\363\263\007\025!json_gateway_privat" +
+      "e:\211\002\372\370\263\007\203\002\312\363\263\007\247\001\352\363\263\007\004tags\362\363\263\007\004Tags\372\363\263\007\035j" +
+      "ava.util.Map<String, String>\202\364\263\007\007TypeMap" +
+      "\212\364\263\007;{\"type\":\"object\", \"additionalProper" +
+      "ties\":{\"type\":\"string\"}}\222\364\263\007\014tagsElemTyp" +
+      "e\232\364\263\007\021map[string]string\322\363\263\007\001*\322\363\263\007\t!jopen" +
+      "api\322\363\263\007\021!jopenapi_private\322\363\263\007\r!json_gate" +
+      "way\322\363\263\007\025!json_gateway_private\"F\n\003Tag\022\030\n\004" +
+      "name\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005value\030\002 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001Bc\n\034com.strongdm.ap" +
+      "i.v1.plumbingB\014TagsPlumbingZ5github.com/" +
+      "strongdm/strongdm-sdk-go/v2/internal/v1;" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

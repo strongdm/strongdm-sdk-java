@@ -10701,28 +10701,31 @@ public final class Spec {
       "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\260\363\263\007\005\"\035\n\017BadRequestErr" +
       "or:\n\372\370\263\007\005\260\363\263\007\003\"!\n\023AuthenticationError:\n\372" +
       "\370\263\007\005\260\363\263\007\020\"\035\n\017PermissionError:\n\372\370\263\007\005\260\363\263\007\007" +
-      "\"\033\n\rInternalError:\n\372\370\263\007\005\260\363\263\007\r\"]\n\016RateLim" +
-      "itError\022?\n\nrate_limit\030\001 \001(\0132\025.v1.RateLim" +
-      "itMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\260" +
-      "\363\263\007\010\"\027\n\025CreateRequestMetadata\"$\n\026CreateR" +
-      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetReques" +
-      "tMetadata\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250" +
-      "\363\263\007\001\"\027\n\025UpdateRequestMetadata\"$\n\026UpdateR" +
-      "esponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteReq" +
-      "uestMetadata\"$\n\026DeleteResponseMetadata:\n" +
-      "\372\370\263\007\005\250\363\263\007\001\"T\n\023ListRequestMetadata\022\016\n\006cur" +
-      "sor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\022\020" +
-      "\n\010order_by\030\004 \001(\t\":\n\024ListResponseMetadata" +
-      "\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 \001(\005\"\257\001\n" +
-      "\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003B\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010" +
-      "reset_at\030\003 \001(\0132\032.google.protobuf.Timesta" +
-      "mpB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestMetadata" +
-      "\"\031\n\027GenericResponseMetadataBU\n\034com.stron" +
-      "gdm.api.v1.plumbingZ5github.com/strongdm" +
-      "/strongdm-sdk-go/v2/internal/v1;v1b\006prot" +
-      "o3"
+      "\"\033\n\rInternalError:\n\372\370\263\007\005\260\363\263\007\r\"\331\001\n\016RateLi" +
+      "mitError\022\272\001\n\nrate_limit\030\001 \001(\0132\025.v1.RateL" +
+      "imitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007" +
+      "\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_priva" +
+      "te\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json" +
+      "_gateway_private\362\370\263\007\020\262\364\263\007\013!typescript:\n\372" +
+      "\370\263\007\005\260\363\263\007\010\"\027\n\025CreateRequestMetadata\"$\n\026Cr" +
+      "eateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetR" +
+      "equestMetadata\"!\n\023GetResponseMetadata:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"\027\n\025UpdateRequestMetadata\"$\n\026Up" +
+      "dateResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025Dele" +
+      "teRequestMetadata\"$\n\026DeleteResponseMetad" +
+      "ata:\n\372\370\263\007\005\250\363\263\007\001\"T\n\023ListRequestMetadata\022\016" +
+      "\n\006cursor\030\001 \001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 " +
+      "\001(\005\022\020\n\010order_by\030\004 \001(\t\":\n\024ListResponseMet" +
+      "adata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 \001(" +
+      "\005\"\257\001\n\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003B\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007" +
+      "\001\0228\n\010reset_at\030\003 \001(\0132\032.google.protobuf.Ti" +
+      "mestampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestMet" +
+      "adata\"\031\n\027GenericResponseMetadataBU\n\034com." +
+      "strongdm.api.v1.plumbingZ5github.com/str" +
+      "ongdm/strongdm-sdk-go/v2/internal/v1;v1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

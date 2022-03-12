@@ -3818,30 +3818,36 @@ public final class ControlPanelPlumbing {
       "\n\023control_panel.proto\022\002v1\032\roptions.proto" +
       "\032\nspec.proto\"L\n$ControlPanelGetSSHCAPubl" +
       "icKeyRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetReque" +
-      "stMetadata\"\307\001\n%ControlPanelGetSSHCAPubli" +
+      "stMetadata\"\303\002\n%ControlPanelGetSSHCAPubli" +
       "cKeyResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRespo" +
       "nseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\npublic_key\030\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1" +
-      ".RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001" +
-      ":\n\372\370\263\007\005\250\363\263\007\001\"_\n\034ControlPanelVerifyJWTReq" +
-      "uest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetada" +
-      "ta\022\031\n\005token\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\272\001\n\035Contro" +
-      "lPanelVerifyJWTResponse\0221\n\004meta\030\001 \001(\0132\027." +
-      "v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005va" +
-      "lid\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(" +
-      "\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007" +
-      "\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\264\002\n\014ControlPanel\022\231\001\n\021" +
-      "GetSSHCAPublicKey\022(.v1.ControlPanelGetSS" +
-      "HCAPublicKeyRequest\032).v1.ControlPanelGet" +
-      "SSHCAPublicKeyResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
-      "\007\035\252\363\263\007\030/v1/control-panel/ssh/ca\022\207\001\n\tVeri" +
-      "fyJWT\022 .v1.ControlPanelVerifyJWTRequest\032" +
-      "!.v1.ControlPanelVerifyJWTResponse\"5\202\371\263\007" +
-      "\t\242\363\263\007\004post\202\371\263\007\"\252\363\263\007\035/v1/control-panel/ht" +
-      "tp/verifyBk\n\034com.strongdm.api.v1.plumbin" +
-      "gB\024ControlPanelPlumbingZ5github.com/stro" +
-      "ngdm/strongdm-sdk-go/v2/internal/v1;v1b\006" +
-      "proto3"
+      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025.v" +
+      "1.RateLimitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263" +
+      "\007\001*\362\370\263\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenap" +
+      "i_private\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263" +
+      "\007\025!json_gateway_private\362\370\263\007\020\262\364\263\007\013!typesc" +
+      "ript:\n\372\370\263\007\005\250\363\263\007\001\"_\n\034ControlPanelVerifyJW" +
+      "TRequest\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMe" +
+      "tadata\022\031\n\005token\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\266\002\n\035Co" +
+      "ntrolPanelVerifyJWTResponse\0221\n\004meta\030\001 \001(" +
+      "\0132\027.v1.GetResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\031" +
+      "\n\005valid\030\002 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate_limit" +
+      "\030\003 \001(\0132\025.v1.RateLimitMetadataB\216\001\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263" +
+      "\007\021!jopenapi_private\362\370\263\007\022\262\364\263\007\r!json_gatew" +
+      "ay\362\370\263\007\032\262\364\263\007\025!json_gateway_private\362\370\263\007\020\262\364" +
+      "\263\007\013!typescript:\n\372\370\263\007\005\250\363\263\007\0012\264\002\n\014ControlPa" +
+      "nel\022\231\001\n\021GetSSHCAPublicKey\022(.v1.ControlPa" +
+      "nelGetSSHCAPublicKeyRequest\032).v1.Control" +
+      "PanelGetSSHCAPublicKeyResponse\"/\202\371\263\007\010\242\363\263" +
+      "\007\003get\202\371\263\007\035\252\363\263\007\030/v1/control-panel/ssh/ca\022" +
+      "\207\001\n\tVerifyJWT\022 .v1.ControlPanelVerifyJWT" +
+      "Request\032!.v1.ControlPanelVerifyJWTRespon" +
+      "se\"5\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\"\252\363\263\007\035/v1/control-" +
+      "panel/http/verifyBk\n\034com.strongdm.api.v1" +
+      ".plumbingB\024ControlPanelPlumbingZ5github." +
+      "com/strongdm/strongdm-sdk-go/v2/internal" +
+      "/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

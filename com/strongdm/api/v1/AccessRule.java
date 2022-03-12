@@ -21,7 +21,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/** A set of AccessRules defines which resources a role has access to. */
+/**
+ * An AccessRule grants access to a set of Resources. There are two kinds of AccessRules:
+ *
+ * <p>- Dynamic: a rule which identifies Resources based on their type or tags - Static: a rule
+ * which contains an explicit list of Resource IDs
+ */
 public class AccessRule {
   private java.util.Map<String, String> tags;
 
@@ -33,6 +38,11 @@ public class AccessRule {
     return m;
   }
 
+  /**
+   * Specifies a list of key/value pairs. You can set this field by itself to grant access to all
+   * Resources which have all the given tags. You can also use it in conjunction with the Type field
+   * to further narrow down the scope of Resources granted.
+   */
   public void setTags(java.util.Map<String, String> in) {
     if (in == null) {
       this.tags = null;
@@ -72,6 +82,10 @@ public class AccessRule {
     this.ids.addAll(v);
   }
 
+  /**
+   * Sets a list of Resource IDs granted by this AccessRule. If this field is set, the rule is a
+   * static access rule. No other fields can be set on a static access rule.
+   */
   public void setIds(Collection<String> in) {
     this.ids = new ArrayList<>(in);
   }
@@ -86,6 +100,14 @@ public class AccessRule {
     return this.type;
   }
 
+  /**
+   * Specifies a Resource type. You can set this field by itself to grant access to all Resources of
+   * a certain type. You can also use it in conjunction with the Tags field to further narrow down
+   * the scope of Resources granted.
+   *
+   * <p>See the following link for a list of possible values for this field:
+   * https://www.strongdm.com/docs/automation/getting-started/filters#h-potentialresourcetypevalues
+   */
   public void setType(String type) {
     this.type = type;
   }

@@ -9473,58 +9473,71 @@ public final class AccountAttachmentsPlumbing {
       "CreateRequest\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateR" +
       "equestMetadata\022=\n\022account_attachment\030\002 \001" +
       "(\0132\025.v1.AccountAttachmentB\n\362\370\263\007\005\260\363\263\007\001:\021\372" +
-      "\370\263\007\014\272\363\263\007\007options\"\343\001\n\037AccountAttachmentCr" +
+      "\370\263\007\014\272\363\263\007\007options\"\337\002\n\037AccountAttachmentCr" +
       "eateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateRe" +
       "sponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022=\n\022account_at" +
       "tachment\030\002 \001(\0132\025.v1.AccountAttachmentB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateL" +
-      "imitMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007" +
-      "\005\250\363\263\007\001\"[\n\033AccountAttachmentGetRequest\022$\n" +
-      "\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002i" +
-      "d\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\335\001\n\034AccountAttachmen" +
-      "tGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRespo" +
-      "nseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022=\n\022account_attac" +
-      "hment\030\002 \001(\0132\025.v1.AccountAttachmentB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022?\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimi" +
-      "tMetadataB\024\362\370\263\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363" +
-      "\263\007\001\"a\n\036AccountAttachmentDeleteRequest\022\'\n" +
-      "\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026" +
-      "\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\244\001\n\037AccountAttach" +
-      "mentDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.De" +
-      "leteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022?\n\nrate" +
-      "_limit\030\002 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263" +
-      "\007\005\260\363\263\007\001\362\370\263\007\005\220\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"a\n\034Account" +
-      "AttachmentListRequest\022%\n\004meta\030\001 \001(\0132\027.v1" +
-      ".ListRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\"\310\001\n\035AccountAttachmentListRespon" +
-      "se\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetada" +
-      "ta\022>\n\023account_attachments\030\002 \003(\0132\025.v1.Acc" +
-      "ountAttachmentB\n\362\370\263\007\005\270\363\263\007\001\022?\n\nrate_limit" +
-      "\030\003 \001(\0132\025.v1.RateLimitMetadataB\024\362\370\263\007\005\260\363\263\007" +
-      "\001\362\370\263\007\005\220\364\263\007\001\"\346\001\n\021AccountAttachment\022\026\n\002id\030" +
-      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\naccount_id\030\002 \001(\tB\017\362" +
-      "\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022 \n\007role_id\030\003 \001(\tB\017\362\370\263\007\n\260\363" +
-      "\263\007\001\300\363\263\007\001:r\372\370\263\007m\250\363\263\007\001\302\363\263\007c\242\363\263\007+tf_example" +
-      "s/account_attachment_resource.txt\252\363\263\007.tf" +
-      "_examples/account_attachment_data_source" +
-      ".txt2\313\004\n\022AccountAttachments\022\202\001\n\006Create\022\"" +
-      ".v1.AccountAttachmentCreateRequest\032#.v1." +
-      "AccountAttachmentCreateResponse\"/\202\371\263\007\t\242\363" +
-      "\263\007\004post\202\371\263\007\034\252\363\263\007\027/v1/account-attachments" +
-      "\022}\n\003Get\022\037.v1.AccountAttachmentGetRequest" +
-      "\032 .v1.AccountAttachmentGetResponse\"3\202\371\263\007" +
-      "\010\242\363\263\007\003get\202\371\263\007!\252\363\263\007\034/v1/account-attachmen" +
-      "ts/{id}\022\211\001\n\006Delete\022\".v1.AccountAttachmen" +
-      "tDeleteRequest\032#.v1.AccountAttachmentDel" +
-      "eteResponse\"6\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007!\252\363\263\007\034/" +
-      "v1/account-attachments/{id}\022{\n\004List\022 .v1" +
-      ".AccountAttachmentListRequest\032!.v1.Accou" +
-      "ntAttachmentListResponse\".\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007\034\252\363\263\007\027/v1/account-attachments\032(\312\371\263\007\026\302" +
-      "\371\263\007\021AccountAttachment\312\371\263\007\010\322\371\263\007\003aa-Bq\n\034co" +
-      "m.strongdm.api.v1.plumbingB\032AccountAttac" +
-      "hmentsPlumbingZ5github.com/strongdm/stro" +
-      "ngdm-sdk-go/v2/internal/v1;v1b\006proto3"
+      "\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025.v1.Rate" +
+      "LimitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
+      "\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_priv" +
+      "ate\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!jso" +
+      "n_gateway_private\362\370\263\007\020\262\364\263\007\013!typescript:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"[\n\033AccountAttachmentGetReques" +
+      "t\022$\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022" +
+      "\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\331\002\n\034AccountAttac" +
+      "hmentGetResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetR" +
+      "esponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022=\n\022account_a" +
+      "ttachment\030\002 \001(\0132\025.v1.AccountAttachmentB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025.v1.Rat" +
+      "eLimitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370" +
+      "\263\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_pri" +
+      "vate\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!js" +
+      "on_gateway_private\362\370\263\007\020\262\364\263\007\013!typescript:" +
+      "\n\372\370\263\007\005\250\363\263\007\001\"a\n\036AccountAttachmentDeleteRe" +
+      "quest\022\'\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMe" +
+      "tadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\240\002\n\037Accou" +
+      "ntAttachmentDeleteResponse\0224\n\004meta\030\001 \001(\013" +
+      "2\032.v1.DeleteResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\272\001\n\nrate_limit\030\002 \001(\0132\025.v1.RateLimitMeta" +
+      "dataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!j" +
+      "openapi\362\370\263\007\026\262\364\263\007\021!jopenapi_private\362\370\263\007\022\262" +
+      "\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json_gateway" +
+      "_private\362\370\263\007\020\262\364\263\007\013!typescript:\n\372\370\263\007\005\250\363\263\007" +
+      "\001\"a\n\034AccountAttachmentListRequest\022%\n\004met" +
+      "a\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filt" +
+      "er\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\304\002\n\035AccountAttachme" +
+      "ntListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRe" +
+      "sponseMetadata\022>\n\023account_attachments\030\002 " +
+      "\003(\0132\025.v1.AccountAttachmentB\n\362\370\263\007\005\270\363\263\007\001\022\272" +
+      "\001\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetada" +
+      "taB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!jop" +
+      "enapi\362\370\263\007\026\262\364\263\007\021!jopenapi_private\362\370\263\007\022\262\364\263" +
+      "\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json_gateway_p" +
+      "rivate\362\370\263\007\020\262\364\263\007\013!typescript\"\346\001\n\021AccountA" +
+      "ttachment\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022#\n\nacc" +
+      "ount_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022 \n\007role_i" +
+      "d\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:r\372\370\263\007m\250\363\263\007\001\302\363\263\007" +
+      "c\242\363\263\007+tf_examples/account_attachment_res" +
+      "ource.txt\252\363\263\007.tf_examples/account_attach" +
+      "ment_data_source.txt2\313\004\n\022AccountAttachme" +
+      "nts\022\202\001\n\006Create\022\".v1.AccountAttachmentCre" +
+      "ateRequest\032#.v1.AccountAttachmentCreateR" +
+      "esponse\"/\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\034\252\363\263\007\027/v1/acc" +
+      "ount-attachments\022}\n\003Get\022\037.v1.AccountAtta" +
+      "chmentGetRequest\032 .v1.AccountAttachmentG" +
+      "etResponse\"3\202\371\263\007\010\242\363\263\007\003get\202\371\263\007!\252\363\263\007\034/v1/a" +
+      "ccount-attachments/{id}\022\211\001\n\006Delete\022\".v1." +
+      "AccountAttachmentDeleteRequest\032#.v1.Acco" +
+      "untAttachmentDeleteResponse\"6\202\371\263\007\013\242\363\263\007\006d" +
+      "elete\202\371\263\007!\252\363\263\007\034/v1/account-attachments/{" +
+      "id}\022{\n\004List\022 .v1.AccountAttachmentListRe" +
+      "quest\032!.v1.AccountAttachmentListResponse" +
+      "\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/account-att" +
+      "achments\032(\312\371\263\007\026\302\371\263\007\021AccountAttachment\312\371\263" +
+      "\007\010\322\371\263\007\003aa-Bq\n\034com.strongdm.api.v1.plumbi" +
+      "ngB\032AccountAttachmentsPlumbingZ5github.c" +
+      "om/strongdm/strongdm-sdk-go/v2/internal/" +
+      "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
