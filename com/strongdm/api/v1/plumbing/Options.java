@@ -7258,6 +7258,11 @@ public final class Options {
      * <pre>
      * converter allows you to write custom "to porcelain" and "to plumbing"
      * conversion functions for this message in the SDK templates.
+     * In Go, Java, Ruby, and Python functions must be provided to
+     * convert from the message into the porcelain type.
+     * e.g. if the converter is named "tags" these functions must exist:
+     * Go: convertTagsToPorcelain, convertTagsToPlumbing
+     * in other languages the names follow the appropriate conventions.
      * </pre>
      *
      * <code>string converter = 1941309;</code>
@@ -7268,6 +7273,11 @@ public final class Options {
      * <pre>
      * converter allows you to write custom "to porcelain" and "to plumbing"
      * conversion functions for this message in the SDK templates.
+     * In Go, Java, Ruby, and Python functions must be provided to
+     * convert from the message into the porcelain type.
+     * e.g. if the converter is named "tags" these functions must exist:
+     * Go: convertTagsToPorcelain, convertTagsToPlumbing
+     * in other languages the names follow the appropriate conventions.
      * </pre>
      *
      * <code>string converter = 1941309;</code>
@@ -7278,123 +7288,81 @@ public final class Options {
 
     /**
      * <pre>
-     * go_porcelain_type allows you to customize the porcelain message type in go
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
      * </pre>
      *
-     * <code>string go_porcelain_type = 1941310;</code>
-     * @return The goPorcelainType.
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
      */
-    java.lang.String getGoPorcelainType();
+    int getPorcelainTypeOverrideCount();
     /**
      * <pre>
-     * go_porcelain_type allows you to customize the porcelain message type in go
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
      * </pre>
      *
-     * <code>string go_porcelain_type = 1941310;</code>
-     * @return The bytes for goPorcelainType.
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
      */
-    com.google.protobuf.ByteString
-        getGoPorcelainTypeBytes();
+    boolean containsPorcelainTypeOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getPorcelainTypeOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getPorcelainTypeOverride();
+    /**
+     * <pre>
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPorcelainTypeOverrideMap();
+    /**
+     * <pre>
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+     */
+
+    java.lang.String getPorcelainTypeOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+     */
+
+    java.lang.String getPorcelainTypeOverrideOrThrow(
+        java.lang.String key);
 
     /**
      * <pre>
-     * java_porcelain_type allows you to customize the porcelain message type in java
+     * terraform_elem_type controls the ElemType in Terraform. For example if
+     * you have a TypeList, the ElemType determines the schema for each element
+     * in the list.
      * </pre>
      *
-     * <code>string java_porcelain_type = 1941311;</code>
-     * @return The javaPorcelainType.
-     */
-    java.lang.String getJavaPorcelainType();
-    /**
-     * <pre>
-     * java_porcelain_type allows you to customize the porcelain message type in java
-     * </pre>
-     *
-     * <code>string java_porcelain_type = 1941311;</code>
-     * @return The bytes for javaPorcelainType.
-     */
-    com.google.protobuf.ByteString
-        getJavaPorcelainTypeBytes();
-
-    /**
-     * <pre>
-     * terraform_porcelain_type allows you to customize the porcelain message type in terraform
-     * </pre>
-     *
-     * <code>string terraform_porcelain_type = 1941312;</code>
-     * @return The terraformPorcelainType.
-     */
-    java.lang.String getTerraformPorcelainType();
-    /**
-     * <pre>
-     * terraform_porcelain_type allows you to customize the porcelain message type in terraform
-     * </pre>
-     *
-     * <code>string terraform_porcelain_type = 1941312;</code>
-     * @return The bytes for terraformPorcelainType.
-     */
-    com.google.protobuf.ByteString
-        getTerraformPorcelainTypeBytes();
-
-    /**
-     * <pre>
-     * terraform_elem_type allows you to customize the element type of a list in terraform
-     * </pre>
-     *
-     * <code>string terraform_elem_type = 1941314;</code>
+     * <code>string terraform_elem_type = 1941311;</code>
      * @return The terraformElemType.
      */
     java.lang.String getTerraformElemType();
     /**
      * <pre>
-     * terraform_elem_type allows you to customize the element type of a list in terraform
+     * terraform_elem_type controls the ElemType in Terraform. For example if
+     * you have a TypeList, the ElemType determines the schema for each element
+     * in the list.
      * </pre>
      *
-     * <code>string terraform_elem_type = 1941314;</code>
+     * <code>string terraform_elem_type = 1941311;</code>
      * @return The bytes for terraformElemType.
      */
     com.google.protobuf.ByteString
         getTerraformElemTypeBytes();
-
-    /**
-     * <pre>
-     * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-     * </pre>
-     *
-     * <code>string openapi_porcelain_type = 1941313;</code>
-     * @return The openapiPorcelainType.
-     */
-    java.lang.String getOpenapiPorcelainType();
-    /**
-     * <pre>
-     * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-     * </pre>
-     *
-     * <code>string openapi_porcelain_type = 1941313;</code>
-     * @return The bytes for openapiPorcelainType.
-     */
-    com.google.protobuf.ByteString
-        getOpenapiPorcelainTypeBytes();
-
-    /**
-     * <pre>
-     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-     * </pre>
-     *
-     * <code>string json_gateway_porcelain_type = 1941315;</code>
-     * @return The jsonGatewayPorcelainType.
-     */
-    java.lang.String getJsonGatewayPorcelainType();
-    /**
-     * <pre>
-     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-     * </pre>
-     *
-     * <code>string json_gateway_porcelain_type = 1941315;</code>
-     * @return The bytes for jsonGatewayPorcelainType.
-     */
-    com.google.protobuf.ByteString
-        getJsonGatewayPorcelainTypeBytes();
   }
   /**
    * <pre>
@@ -7416,12 +7384,7 @@ public final class Options {
     }
     private CustomPorcelainTypeOptions() {
       converter_ = "";
-      goPorcelainType_ = "";
-      javaPorcelainType_ = "";
-      terraformPorcelainType_ = "";
       terraformElemType_ = "";
-      openapiPorcelainType_ = "";
-      jsonGatewayPorcelainType_ = "";
     }
 
     @java.lang.Override
@@ -7444,6 +7407,7 @@ public final class Options {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7461,39 +7425,22 @@ public final class Options {
               break;
             }
             case 15530482: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              goPorcelainType_ = s;
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                porcelainTypeOverride_ = com.google.protobuf.MapField.newMapField(
+                    PorcelainTypeOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              porcelainTypeOverride__ = input.readMessage(
+                  PorcelainTypeOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              porcelainTypeOverride_.getMutableMap().put(
+                  porcelainTypeOverride__.getKey(), porcelainTypeOverride__.getValue());
               break;
             }
             case 15530490: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              javaPorcelainType_ = s;
-              break;
-            }
-            case 15530498: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              terraformPorcelainType_ = s;
-              break;
-            }
-            case 15530506: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              openapiPorcelainType_ = s;
-              break;
-            }
-            case 15530514: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               terraformElemType_ = s;
-              break;
-            }
-            case 15530522: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jsonGatewayPorcelainType_ = s;
               break;
             }
             default: {
@@ -7520,6 +7467,18 @@ public final class Options {
       return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1941310:
+          return internalGetPorcelainTypeOverride();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -7534,6 +7493,11 @@ public final class Options {
      * <pre>
      * converter allows you to write custom "to porcelain" and "to plumbing"
      * conversion functions for this message in the SDK templates.
+     * In Go, Java, Ruby, and Python functions must be provided to
+     * convert from the message into the porcelain type.
+     * e.g. if the converter is named "tags" these functions must exist:
+     * Go: convertTagsToPorcelain, convertTagsToPlumbing
+     * in other languages the names follow the appropriate conventions.
      * </pre>
      *
      * <code>string converter = 1941309;</code>
@@ -7556,6 +7520,11 @@ public final class Options {
      * <pre>
      * converter allows you to write custom "to porcelain" and "to plumbing"
      * conversion functions for this message in the SDK templates.
+     * In Go, Java, Ruby, and Python functions must be provided to
+     * convert from the message into the porcelain type.
+     * e.g. if the converter is named "tags" these functions must exist:
+     * Go: convertTagsToPorcelain, convertTagsToPlumbing
+     * in other languages the names follow the appropriate conventions.
      * </pre>
      *
      * <code>string converter = 1941309;</code>
@@ -7576,152 +7545,113 @@ public final class Options {
       }
     }
 
-    public static final int GO_PORCELAIN_TYPE_FIELD_NUMBER = 1941310;
-    private volatile java.lang.Object goPorcelainType_;
-    /**
-     * <pre>
-     * go_porcelain_type allows you to customize the porcelain message type in go
-     * </pre>
-     *
-     * <code>string go_porcelain_type = 1941310;</code>
-     * @return The goPorcelainType.
-     */
-    @java.lang.Override
-    public java.lang.String getGoPorcelainType() {
-      java.lang.Object ref = goPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        goPorcelainType_ = s;
-        return s;
-      }
+    public static final int PORCELAIN_TYPE_OVERRIDE_FIELD_NUMBER = 1941310;
+    private static final class PorcelainTypeOverrideDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
     }
-    /**
-     * <pre>
-     * go_porcelain_type allows you to customize the porcelain message type in go
-     * </pre>
-     *
-     * <code>string go_porcelain_type = 1941310;</code>
-     * @return The bytes for goPorcelainType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getGoPorcelainTypeBytes() {
-      java.lang.Object ref = goPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        goPorcelainType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> porcelainTypeOverride_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetPorcelainTypeOverride() {
+      if (porcelainTypeOverride_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PorcelainTypeOverrideDefaultEntryHolder.defaultEntry);
       }
+      return porcelainTypeOverride_;
     }
 
-    public static final int JAVA_PORCELAIN_TYPE_FIELD_NUMBER = 1941311;
-    private volatile java.lang.Object javaPorcelainType_;
-    /**
-     * <pre>
-     * java_porcelain_type allows you to customize the porcelain message type in java
-     * </pre>
-     *
-     * <code>string java_porcelain_type = 1941311;</code>
-     * @return The javaPorcelainType.
-     */
-    @java.lang.Override
-    public java.lang.String getJavaPorcelainType() {
-      java.lang.Object ref = javaPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        javaPorcelainType_ = s;
-        return s;
-      }
+    public int getPorcelainTypeOverrideCount() {
+      return internalGetPorcelainTypeOverride().getMap().size();
     }
     /**
      * <pre>
-     * java_porcelain_type allows you to customize the porcelain message type in java
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
      * </pre>
      *
-     * <code>string java_porcelain_type = 1941311;</code>
-     * @return The bytes for javaPorcelainType.
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsPorcelainTypeOverride(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetPorcelainTypeOverride().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPorcelainTypeOverrideMap()} instead.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getJavaPorcelainTypeBytes() {
-      java.lang.Object ref = javaPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        javaPorcelainType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getPorcelainTypeOverride() {
+      return getPorcelainTypeOverrideMap();
+    }
+    /**
+     * <pre>
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getPorcelainTypeOverrideMap() {
+      return internalGetPorcelainTypeOverride().getMap();
+    }
+    /**
+     * <pre>
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPorcelainTypeOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetPorcelainTypeOverride().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * porcelain_type_override allows you to customize the porcelain message type for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPorcelainTypeOverrideOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetPorcelainTypeOverride().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
+      return map.get(key);
     }
 
-    public static final int TERRAFORM_PORCELAIN_TYPE_FIELD_NUMBER = 1941312;
-    private volatile java.lang.Object terraformPorcelainType_;
-    /**
-     * <pre>
-     * terraform_porcelain_type allows you to customize the porcelain message type in terraform
-     * </pre>
-     *
-     * <code>string terraform_porcelain_type = 1941312;</code>
-     * @return The terraformPorcelainType.
-     */
-    @java.lang.Override
-    public java.lang.String getTerraformPorcelainType() {
-      java.lang.Object ref = terraformPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        terraformPorcelainType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * terraform_porcelain_type allows you to customize the porcelain message type in terraform
-     * </pre>
-     *
-     * <code>string terraform_porcelain_type = 1941312;</code>
-     * @return The bytes for terraformPorcelainType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTerraformPorcelainTypeBytes() {
-      java.lang.Object ref = terraformPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        terraformPorcelainType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TERRAFORM_ELEM_TYPE_FIELD_NUMBER = 1941314;
+    public static final int TERRAFORM_ELEM_TYPE_FIELD_NUMBER = 1941311;
     private volatile java.lang.Object terraformElemType_;
     /**
      * <pre>
-     * terraform_elem_type allows you to customize the element type of a list in terraform
+     * terraform_elem_type controls the ElemType in Terraform. For example if
+     * you have a TypeList, the ElemType determines the schema for each element
+     * in the list.
      * </pre>
      *
-     * <code>string terraform_elem_type = 1941314;</code>
+     * <code>string terraform_elem_type = 1941311;</code>
      * @return The terraformElemType.
      */
     @java.lang.Override
@@ -7739,10 +7669,12 @@ public final class Options {
     }
     /**
      * <pre>
-     * terraform_elem_type allows you to customize the element type of a list in terraform
+     * terraform_elem_type controls the ElemType in Terraform. For example if
+     * you have a TypeList, the ElemType determines the schema for each element
+     * in the list.
      * </pre>
      *
-     * <code>string terraform_elem_type = 1941314;</code>
+     * <code>string terraform_elem_type = 1941311;</code>
      * @return The bytes for terraformElemType.
      */
     @java.lang.Override
@@ -7754,98 +7686,6 @@ public final class Options {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         terraformElemType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int OPENAPI_PORCELAIN_TYPE_FIELD_NUMBER = 1941313;
-    private volatile java.lang.Object openapiPorcelainType_;
-    /**
-     * <pre>
-     * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-     * </pre>
-     *
-     * <code>string openapi_porcelain_type = 1941313;</code>
-     * @return The openapiPorcelainType.
-     */
-    @java.lang.Override
-    public java.lang.String getOpenapiPorcelainType() {
-      java.lang.Object ref = openapiPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        openapiPorcelainType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-     * </pre>
-     *
-     * <code>string openapi_porcelain_type = 1941313;</code>
-     * @return The bytes for openapiPorcelainType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getOpenapiPorcelainTypeBytes() {
-      java.lang.Object ref = openapiPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        openapiPorcelainType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int JSON_GATEWAY_PORCELAIN_TYPE_FIELD_NUMBER = 1941315;
-    private volatile java.lang.Object jsonGatewayPorcelainType_;
-    /**
-     * <pre>
-     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-     * </pre>
-     *
-     * <code>string json_gateway_porcelain_type = 1941315;</code>
-     * @return The jsonGatewayPorcelainType.
-     */
-    @java.lang.Override
-    public java.lang.String getJsonGatewayPorcelainType() {
-      java.lang.Object ref = jsonGatewayPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        jsonGatewayPorcelainType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-     * </pre>
-     *
-     * <code>string json_gateway_porcelain_type = 1941315;</code>
-     * @return The bytes for jsonGatewayPorcelainType.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getJsonGatewayPorcelainTypeBytes() {
-      java.lang.Object ref = jsonGatewayPorcelainType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        jsonGatewayPorcelainType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7869,23 +7709,14 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(converter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941309, converter_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(goPorcelainType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941310, goPorcelainType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(javaPorcelainType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, javaPorcelainType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformPorcelainType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, terraformPorcelainType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiPorcelainType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941313, openapiPorcelainType_);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetPorcelainTypeOverride(),
+          PorcelainTypeOverrideDefaultEntryHolder.defaultEntry,
+          1941310);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformElemType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941314, terraformElemType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayPorcelainType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941315, jsonGatewayPorcelainType_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, terraformElemType_);
       }
       unknownFields.writeTo(output);
     }
@@ -7899,23 +7730,18 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(converter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941309, converter_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(goPorcelainType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941310, goPorcelainType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(javaPorcelainType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, javaPorcelainType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformPorcelainType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, terraformPorcelainType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(openapiPorcelainType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941313, openapiPorcelainType_);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetPorcelainTypeOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        porcelainTypeOverride__ = PorcelainTypeOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1941310, porcelainTypeOverride__);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformElemType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941314, terraformElemType_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayPorcelainType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941315, jsonGatewayPorcelainType_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, terraformElemType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7934,18 +7760,10 @@ public final class Options {
 
       if (!getConverter()
           .equals(other.getConverter())) return false;
-      if (!getGoPorcelainType()
-          .equals(other.getGoPorcelainType())) return false;
-      if (!getJavaPorcelainType()
-          .equals(other.getJavaPorcelainType())) return false;
-      if (!getTerraformPorcelainType()
-          .equals(other.getTerraformPorcelainType())) return false;
+      if (!internalGetPorcelainTypeOverride().equals(
+          other.internalGetPorcelainTypeOverride())) return false;
       if (!getTerraformElemType()
           .equals(other.getTerraformElemType())) return false;
-      if (!getOpenapiPorcelainType()
-          .equals(other.getOpenapiPorcelainType())) return false;
-      if (!getJsonGatewayPorcelainType()
-          .equals(other.getJsonGatewayPorcelainType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7959,18 +7777,12 @@ public final class Options {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CONVERTER_FIELD_NUMBER;
       hash = (53 * hash) + getConverter().hashCode();
-      hash = (37 * hash) + GO_PORCELAIN_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getGoPorcelainType().hashCode();
-      hash = (37 * hash) + JAVA_PORCELAIN_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getJavaPorcelainType().hashCode();
-      hash = (37 * hash) + TERRAFORM_PORCELAIN_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getTerraformPorcelainType().hashCode();
+      if (!internalGetPorcelainTypeOverride().getMap().isEmpty()) {
+        hash = (37 * hash) + PORCELAIN_TYPE_OVERRIDE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetPorcelainTypeOverride().hashCode();
+      }
       hash = (37 * hash) + TERRAFORM_ELEM_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformElemType().hashCode();
-      hash = (37 * hash) + OPENAPI_PORCELAIN_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getOpenapiPorcelainType().hashCode();
-      hash = (37 * hash) + JSON_GATEWAY_PORCELAIN_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getJsonGatewayPorcelainType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8084,6 +7896,28 @@ public final class Options {
         return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1941310:
+            return internalGetPorcelainTypeOverride();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1941310:
+            return internalGetMutablePorcelainTypeOverride();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -8112,17 +7946,8 @@ public final class Options {
         super.clear();
         converter_ = "";
 
-        goPorcelainType_ = "";
-
-        javaPorcelainType_ = "";
-
-        terraformPorcelainType_ = "";
-
+        internalGetMutablePorcelainTypeOverride().clear();
         terraformElemType_ = "";
-
-        openapiPorcelainType_ = "";
-
-        jsonGatewayPorcelainType_ = "";
 
         return this;
       }
@@ -8150,13 +7975,11 @@ public final class Options {
       @java.lang.Override
       public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions buildPartial() {
         com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions result = new com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions(this);
+        int from_bitField0_ = bitField0_;
         result.converter_ = converter_;
-        result.goPorcelainType_ = goPorcelainType_;
-        result.javaPorcelainType_ = javaPorcelainType_;
-        result.terraformPorcelainType_ = terraformPorcelainType_;
+        result.porcelainTypeOverride_ = internalGetPorcelainTypeOverride();
+        result.porcelainTypeOverride_.makeImmutable();
         result.terraformElemType_ = terraformElemType_;
-        result.openapiPorcelainType_ = openapiPorcelainType_;
-        result.jsonGatewayPorcelainType_ = jsonGatewayPorcelainType_;
         onBuilt();
         return result;
       }
@@ -8209,28 +8032,10 @@ public final class Options {
           converter_ = other.converter_;
           onChanged();
         }
-        if (!other.getGoPorcelainType().isEmpty()) {
-          goPorcelainType_ = other.goPorcelainType_;
-          onChanged();
-        }
-        if (!other.getJavaPorcelainType().isEmpty()) {
-          javaPorcelainType_ = other.javaPorcelainType_;
-          onChanged();
-        }
-        if (!other.getTerraformPorcelainType().isEmpty()) {
-          terraformPorcelainType_ = other.terraformPorcelainType_;
-          onChanged();
-        }
+        internalGetMutablePorcelainTypeOverride().mergeFrom(
+            other.internalGetPorcelainTypeOverride());
         if (!other.getTerraformElemType().isEmpty()) {
           terraformElemType_ = other.terraformElemType_;
-          onChanged();
-        }
-        if (!other.getOpenapiPorcelainType().isEmpty()) {
-          openapiPorcelainType_ = other.openapiPorcelainType_;
-          onChanged();
-        }
-        if (!other.getJsonGatewayPorcelainType().isEmpty()) {
-          jsonGatewayPorcelainType_ = other.jsonGatewayPorcelainType_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8261,12 +8066,18 @@ public final class Options {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object converter_ = "";
       /**
        * <pre>
        * converter allows you to write custom "to porcelain" and "to plumbing"
        * conversion functions for this message in the SDK templates.
+       * In Go, Java, Ruby, and Python functions must be provided to
+       * convert from the message into the porcelain type.
+       * e.g. if the converter is named "tags" these functions must exist:
+       * Go: convertTagsToPorcelain, convertTagsToPlumbing
+       * in other languages the names follow the appropriate conventions.
        * </pre>
        *
        * <code>string converter = 1941309;</code>
@@ -8288,6 +8099,11 @@ public final class Options {
        * <pre>
        * converter allows you to write custom "to porcelain" and "to plumbing"
        * conversion functions for this message in the SDK templates.
+       * In Go, Java, Ruby, and Python functions must be provided to
+       * convert from the message into the porcelain type.
+       * e.g. if the converter is named "tags" these functions must exist:
+       * Go: convertTagsToPorcelain, convertTagsToPlumbing
+       * in other languages the names follow the appropriate conventions.
        * </pre>
        *
        * <code>string converter = 1941309;</code>
@@ -8310,6 +8126,11 @@ public final class Options {
        * <pre>
        * converter allows you to write custom "to porcelain" and "to plumbing"
        * conversion functions for this message in the SDK templates.
+       * In Go, Java, Ruby, and Python functions must be provided to
+       * convert from the message into the porcelain type.
+       * e.g. if the converter is named "tags" these functions must exist:
+       * Go: convertTagsToPorcelain, convertTagsToPlumbing
+       * in other languages the names follow the appropriate conventions.
        * </pre>
        *
        * <code>string converter = 1941309;</code>
@@ -8330,6 +8151,11 @@ public final class Options {
        * <pre>
        * converter allows you to write custom "to porcelain" and "to plumbing"
        * conversion functions for this message in the SDK templates.
+       * In Go, Java, Ruby, and Python functions must be provided to
+       * convert from the message into the porcelain type.
+       * e.g. if the converter is named "tags" these functions must exist:
+       * Go: convertTagsToPorcelain, convertTagsToPlumbing
+       * in other languages the names follow the appropriate conventions.
        * </pre>
        *
        * <code>string converter = 1941309;</code>
@@ -8345,6 +8171,11 @@ public final class Options {
        * <pre>
        * converter allows you to write custom "to porcelain" and "to plumbing"
        * conversion functions for this message in the SDK templates.
+       * In Go, Java, Ruby, and Python functions must be provided to
+       * convert from the message into the porcelain type.
+       * e.g. if the converter is named "tags" these functions must exist:
+       * Go: convertTagsToPorcelain, convertTagsToPlumbing
+       * in other languages the names follow the appropriate conventions.
        * </pre>
        *
        * <code>string converter = 1941309;</code>
@@ -8363,301 +8194,174 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object goPorcelainType_ = "";
-      /**
-       * <pre>
-       * go_porcelain_type allows you to customize the porcelain message type in go
-       * </pre>
-       *
-       * <code>string go_porcelain_type = 1941310;</code>
-       * @return The goPorcelainType.
-       */
-      public java.lang.String getGoPorcelainType() {
-        java.lang.Object ref = goPorcelainType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          goPorcelainType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> porcelainTypeOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetPorcelainTypeOverride() {
+        if (porcelainTypeOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PorcelainTypeOverrideDefaultEntryHolder.defaultEntry);
         }
+        return porcelainTypeOverride_;
       }
-      /**
-       * <pre>
-       * go_porcelain_type allows you to customize the porcelain message type in go
-       * </pre>
-       *
-       * <code>string go_porcelain_type = 1941310;</code>
-       * @return The bytes for goPorcelainType.
-       */
-      public com.google.protobuf.ByteString
-          getGoPorcelainTypeBytes() {
-        java.lang.Object ref = goPorcelainType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          goPorcelainType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutablePorcelainTypeOverride() {
+        onChanged();;
+        if (porcelainTypeOverride_ == null) {
+          porcelainTypeOverride_ = com.google.protobuf.MapField.newMapField(
+              PorcelainTypeOverrideDefaultEntryHolder.defaultEntry);
         }
-      }
-      /**
-       * <pre>
-       * go_porcelain_type allows you to customize the porcelain message type in go
-       * </pre>
-       *
-       * <code>string go_porcelain_type = 1941310;</code>
-       * @param value The goPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGoPorcelainType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        goPorcelainType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * go_porcelain_type allows you to customize the porcelain message type in go
-       * </pre>
-       *
-       * <code>string go_porcelain_type = 1941310;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGoPorcelainType() {
-        
-        goPorcelainType_ = getDefaultInstance().getGoPorcelainType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * go_porcelain_type allows you to customize the porcelain message type in go
-       * </pre>
-       *
-       * <code>string go_porcelain_type = 1941310;</code>
-       * @param value The bytes for goPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGoPorcelainTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        goPorcelainType_ = value;
-        onChanged();
-        return this;
+        if (!porcelainTypeOverride_.isMutable()) {
+          porcelainTypeOverride_ = porcelainTypeOverride_.copy();
+        }
+        return porcelainTypeOverride_;
       }
 
-      private java.lang.Object javaPorcelainType_ = "";
+      public int getPorcelainTypeOverrideCount() {
+        return internalGetPorcelainTypeOverride().getMap().size();
+      }
       /**
        * <pre>
-       * java_porcelain_type allows you to customize the porcelain message type in java
+       * porcelain_type_override allows you to customize the porcelain message type for the given targets
        * </pre>
        *
-       * <code>string java_porcelain_type = 1941311;</code>
-       * @return The javaPorcelainType.
+       * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
        */
-      public java.lang.String getJavaPorcelainType() {
-        java.lang.Object ref = javaPorcelainType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          javaPorcelainType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+
+      @java.lang.Override
+      public boolean containsPorcelainTypeOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetPorcelainTypeOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPorcelainTypeOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getPorcelainTypeOverride() {
+        return getPorcelainTypeOverrideMap();
+      }
+      /**
+       * <pre>
+       * porcelain_type_override allows you to customize the porcelain message type for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getPorcelainTypeOverrideMap() {
+        return internalGetPorcelainTypeOverride().getMap();
+      }
+      /**
+       * <pre>
+       * porcelain_type_override allows you to customize the porcelain message type for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPorcelainTypeOverrideOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetPorcelainTypeOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * porcelain_type_override allows you to customize the porcelain message type for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPorcelainTypeOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetPorcelainTypeOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
         }
-      }
-      /**
-       * <pre>
-       * java_porcelain_type allows you to customize the porcelain message type in java
-       * </pre>
-       *
-       * <code>string java_porcelain_type = 1941311;</code>
-       * @return The bytes for javaPorcelainType.
-       */
-      public com.google.protobuf.ByteString
-          getJavaPorcelainTypeBytes() {
-        java.lang.Object ref = javaPorcelainType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          javaPorcelainType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * java_porcelain_type allows you to customize the porcelain message type in java
-       * </pre>
-       *
-       * <code>string java_porcelain_type = 1941311;</code>
-       * @param value The javaPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJavaPorcelainType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        javaPorcelainType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * java_porcelain_type allows you to customize the porcelain message type in java
-       * </pre>
-       *
-       * <code>string java_porcelain_type = 1941311;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJavaPorcelainType() {
-        
-        javaPorcelainType_ = getDefaultInstance().getJavaPorcelainType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * java_porcelain_type allows you to customize the porcelain message type in java
-       * </pre>
-       *
-       * <code>string java_porcelain_type = 1941311;</code>
-       * @param value The bytes for javaPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJavaPorcelainTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        javaPorcelainType_ = value;
-        onChanged();
-        return this;
+        return map.get(key);
       }
 
-      private java.lang.Object terraformPorcelainType_ = "";
-      /**
-       * <pre>
-       * terraform_porcelain_type allows you to customize the porcelain message type in terraform
-       * </pre>
-       *
-       * <code>string terraform_porcelain_type = 1941312;</code>
-       * @return The terraformPorcelainType.
-       */
-      public java.lang.String getTerraformPorcelainType() {
-        java.lang.Object ref = terraformPorcelainType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          terraformPorcelainType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public Builder clearPorcelainTypeOverride() {
+        internalGetMutablePorcelainTypeOverride().getMutableMap()
+            .clear();
+        return this;
       }
       /**
        * <pre>
-       * terraform_porcelain_type allows you to customize the porcelain message type in terraform
+       * porcelain_type_override allows you to customize the porcelain message type for the given targets
        * </pre>
        *
-       * <code>string terraform_porcelain_type = 1941312;</code>
-       * @return The bytes for terraformPorcelainType.
+       * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
        */
-      public com.google.protobuf.ByteString
-          getTerraformPorcelainTypeBytes() {
-        java.lang.Object ref = terraformPorcelainType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          terraformPorcelainType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+
+      public Builder removePorcelainTypeOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutablePorcelainTypeOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutablePorcelainTypeOverride() {
+        return internalGetMutablePorcelainTypeOverride().getMutableMap();
       }
       /**
        * <pre>
-       * terraform_porcelain_type allows you to customize the porcelain message type in terraform
+       * porcelain_type_override allows you to customize the porcelain message type for the given targets
        * </pre>
        *
-       * <code>string terraform_porcelain_type = 1941312;</code>
-       * @param value The terraformPorcelainType to set.
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
        */
-      public Builder setTerraformPorcelainType(
+      public Builder putPorcelainTypeOverride(
+          java.lang.String key,
           java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        terraformPorcelainType_ = value;
-        onChanged();
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutablePorcelainTypeOverride().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
        * <pre>
-       * terraform_porcelain_type allows you to customize the porcelain message type in terraform
+       * porcelain_type_override allows you to customize the porcelain message type for the given targets
        * </pre>
        *
-       * <code>string terraform_porcelain_type = 1941312;</code>
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; porcelain_type_override = 1941310;</code>
        */
-      public Builder clearTerraformPorcelainType() {
-        
-        terraformPorcelainType_ = getDefaultInstance().getTerraformPorcelainType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * terraform_porcelain_type allows you to customize the porcelain message type in terraform
-       * </pre>
-       *
-       * <code>string terraform_porcelain_type = 1941312;</code>
-       * @param value The bytes for terraformPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTerraformPorcelainTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        terraformPorcelainType_ = value;
-        onChanged();
+
+      public Builder putAllPorcelainTypeOverride(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutablePorcelainTypeOverride().getMutableMap()
+            .putAll(values);
         return this;
       }
 
       private java.lang.Object terraformElemType_ = "";
       /**
        * <pre>
-       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * terraform_elem_type controls the ElemType in Terraform. For example if
+       * you have a TypeList, the ElemType determines the schema for each element
+       * in the list.
        * </pre>
        *
-       * <code>string terraform_elem_type = 1941314;</code>
+       * <code>string terraform_elem_type = 1941311;</code>
        * @return The terraformElemType.
        */
       public java.lang.String getTerraformElemType() {
@@ -8674,10 +8378,12 @@ public final class Options {
       }
       /**
        * <pre>
-       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * terraform_elem_type controls the ElemType in Terraform. For example if
+       * you have a TypeList, the ElemType determines the schema for each element
+       * in the list.
        * </pre>
        *
-       * <code>string terraform_elem_type = 1941314;</code>
+       * <code>string terraform_elem_type = 1941311;</code>
        * @return The bytes for terraformElemType.
        */
       public com.google.protobuf.ByteString
@@ -8695,10 +8401,12 @@ public final class Options {
       }
       /**
        * <pre>
-       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * terraform_elem_type controls the ElemType in Terraform. For example if
+       * you have a TypeList, the ElemType determines the schema for each element
+       * in the list.
        * </pre>
        *
-       * <code>string terraform_elem_type = 1941314;</code>
+       * <code>string terraform_elem_type = 1941311;</code>
        * @param value The terraformElemType to set.
        * @return This builder for chaining.
        */
@@ -8714,10 +8422,12 @@ public final class Options {
       }
       /**
        * <pre>
-       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * terraform_elem_type controls the ElemType in Terraform. For example if
+       * you have a TypeList, the ElemType determines the schema for each element
+       * in the list.
        * </pre>
        *
-       * <code>string terraform_elem_type = 1941314;</code>
+       * <code>string terraform_elem_type = 1941311;</code>
        * @return This builder for chaining.
        */
       public Builder clearTerraformElemType() {
@@ -8728,10 +8438,12 @@ public final class Options {
       }
       /**
        * <pre>
-       * terraform_elem_type allows you to customize the element type of a list in terraform
+       * terraform_elem_type controls the ElemType in Terraform. For example if
+       * you have a TypeList, the ElemType determines the schema for each element
+       * in the list.
        * </pre>
        *
-       * <code>string terraform_elem_type = 1941314;</code>
+       * <code>string terraform_elem_type = 1941311;</code>
        * @param value The bytes for terraformElemType to set.
        * @return This builder for chaining.
        */
@@ -8743,198 +8455,6 @@ public final class Options {
   checkByteStringIsUtf8(value);
         
         terraformElemType_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object openapiPorcelainType_ = "";
-      /**
-       * <pre>
-       * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-       * </pre>
-       *
-       * <code>string openapi_porcelain_type = 1941313;</code>
-       * @return The openapiPorcelainType.
-       */
-      public java.lang.String getOpenapiPorcelainType() {
-        java.lang.Object ref = openapiPorcelainType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          openapiPorcelainType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-       * </pre>
-       *
-       * <code>string openapi_porcelain_type = 1941313;</code>
-       * @return The bytes for openapiPorcelainType.
-       */
-      public com.google.protobuf.ByteString
-          getOpenapiPorcelainTypeBytes() {
-        java.lang.Object ref = openapiPorcelainType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          openapiPorcelainType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-       * </pre>
-       *
-       * <code>string openapi_porcelain_type = 1941313;</code>
-       * @param value The openapiPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpenapiPorcelainType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        openapiPorcelainType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-       * </pre>
-       *
-       * <code>string openapi_porcelain_type = 1941313;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOpenapiPorcelainType() {
-        
-        openapiPorcelainType_ = getDefaultInstance().getOpenapiPorcelainType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * openapi_porcelain_type allows you to customize the porcelain message type in openapi spec
-       * </pre>
-       *
-       * <code>string openapi_porcelain_type = 1941313;</code>
-       * @param value The bytes for openapiPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpenapiPorcelainTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        openapiPorcelainType_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object jsonGatewayPorcelainType_ = "";
-      /**
-       * <pre>
-       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-       * </pre>
-       *
-       * <code>string json_gateway_porcelain_type = 1941315;</code>
-       * @return The jsonGatewayPorcelainType.
-       */
-      public java.lang.String getJsonGatewayPorcelainType() {
-        java.lang.Object ref = jsonGatewayPorcelainType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          jsonGatewayPorcelainType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-       * </pre>
-       *
-       * <code>string json_gateway_porcelain_type = 1941315;</code>
-       * @return The bytes for jsonGatewayPorcelainType.
-       */
-      public com.google.protobuf.ByteString
-          getJsonGatewayPorcelainTypeBytes() {
-        java.lang.Object ref = jsonGatewayPorcelainType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          jsonGatewayPorcelainType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-       * </pre>
-       *
-       * <code>string json_gateway_porcelain_type = 1941315;</code>
-       * @param value The jsonGatewayPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonGatewayPorcelainType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        jsonGatewayPorcelainType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-       * </pre>
-       *
-       * <code>string json_gateway_porcelain_type = 1941315;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJsonGatewayPorcelainType() {
-        
-        jsonGatewayPorcelainType_ = getDefaultInstance().getJsonGatewayPorcelainType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * json_gateway_porcelain_type allows you to customize the porcelain message type in the JSON gateway
-       * </pre>
-       *
-       * <code>string json_gateway_porcelain_type = 1941315;</code>
-       * @param value The bytes for jsonGatewayPorcelainType to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonGatewayPorcelainTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        jsonGatewayPorcelainType_ = value;
         onChanged();
         return this;
       }
@@ -11392,6 +10912,11 @@ public final class Options {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_TerraformDocs_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11452,38 +10977,38 @@ public final class Options {
       "s.DeprecatedOverrideEntry\0329\n\027DeprecatedO" +
       "verrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010" +
       ":\0028\001:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!" +
-      "json_gateway_private\"\261\002\n\032CustomPorcelain" +
-      "TypeOptions\022\023\n\tconverter\030\275\276v \001(\t\022\033\n\021go_p" +
-      "orcelain_type\030\276\276v \001(\t\022\035\n\023java_porcelain_" +
-      "type\030\277\276v \001(\t\022\"\n\030terraform_porcelain_type" +
-      "\030\300\276v \001(\t\022\035\n\023terraform_elem_type\030\302\276v \001(\t\022" +
-      " \n\026openapi_porcelain_type\030\301\276v \001(\t\022%\n\033jso" +
-      "n_gateway_porcelain_type\030\303\276v \001(\t:6\372\370\263\007\022\322" +
-      "\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway" +
-      "_private\"\214\001\n\rTerraformDocs\022\037\n\025resource_e" +
-      "xample_path\030\264\276v \001(\t\022\"\n\030data_source_examp" +
-      "le_path\030\265\276v \001(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway" +
-      "\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"_\n\014Oneof" +
-      "Options\022\027\n\rcommon_fields\030\205\277v \003(\t:6\372\370\263\007\022\322" +
-      "\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway" +
-      "_private\"\205\001\n\016ServiceOptions\022\023\n\tmain_noun" +
-      "\030\230\277v \001(\t\022\023\n\tid_prefix\030\232\277v \001(\t\022\021\n\007targets" +
-      "\030\231\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363" +
-      "\263\007\025!json_gateway_private:K\n\016method_optio" +
-      "ns\022\036.google.protobuf.MethodOptions\030\220\277v \001" +
-      "(\0132\021.v1.MethodOptions:E\n\014file_options\022\034." +
-      "google.protobuf.FileOptions\030\250\302v \001(\0132\017.v1" +
-      ".FileOptions:H\n\rfield_options\022\035.google.p" +
-      "rotobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldO" +
-      "ptions:N\n\017message_options\022\037.google.proto" +
-      "buf.MessageOptions\030\217\277v \001(\0132\022.v1.MessageO" +
-      "ptions:H\n\roneof_options\022\035.google.protobu" +
-      "f.OneofOptions\030\205\277v \001(\0132\020.v1.OneofOptions" +
-      ":N\n\017service_options\022\037.google.protobuf.Se" +
-      "rviceOptions\030\231\277v \001(\0132\022.v1.ServiceOptions" +
-      "BU\n\034com.strongdm.api.v1.plumbingZ5github" +
-      ".com/strongdm/strongdm-sdk-go/v2/interna" +
-      "l/v1;v1b\006proto3"
+      "json_gateway_private\"\244\002\n\032CustomPorcelain" +
+      "TypeOptions\022\023\n\tconverter\030\275\276v \001(\t\022\\\n\027porc" +
+      "elain_type_override\030\276\276v \003(\01329.v1.CustomP" +
+      "orcelainTypeOptions.PorcelainTypeOverrid" +
+      "eEntry\022\035\n\023terraform_elem_type\030\277\276v \001(\t\032<\n" +
+      "\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001:6\372\370\263\007\022\322\363\263\007\r!json_gat" +
+      "eway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"\214\001\n\r" +
+      "TerraformDocs\022\037\n\025resource_example_path\030\264" +
+      "\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v \001" +
+      "(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!js" +
+      "on_gateway_private\"_\n\014OneofOptions\022\027\n\rco" +
+      "mmon_fields\030\205\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gat" +
+      "eway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"\205\001\n\016" +
+      "ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\ti" +
+      "d_prefix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:6\372\370\263" +
+      "\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gate" +
+      "way_private:K\n\016method_options\022\036.google.p" +
+      "rotobuf.MethodOptions\030\220\277v \001(\0132\021.v1.Metho" +
+      "dOptions:E\n\014file_options\022\034.google.protob" +
+      "uf.FileOptions\030\250\302v \001(\0132\017.v1.FileOptions:" +
+      "H\n\rfield_options\022\035.google.protobuf.Field" +
+      "Options\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017mes" +
+      "sage_options\022\037.google.protobuf.MessageOp" +
+      "tions\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\rone" +
+      "of_options\022\035.google.protobuf.OneofOption" +
+      "s\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017service_o" +
+      "ptions\022\037.google.protobuf.ServiceOptions\030" +
+      "\231\277v \001(\0132\022.v1.ServiceOptionsBU\n\034com.stron" +
+      "gdm.api.v1.plumbingZ5github.com/strongdm" +
+      "/strongdm-sdk-go/v2/internal/v1;v1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11537,7 +11062,13 @@ public final class Options {
     internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_CustomPorcelainTypeOptions_descriptor,
-        new java.lang.String[] { "Converter", "GoPorcelainType", "JavaPorcelainType", "TerraformPorcelainType", "TerraformElemType", "OpenapiPorcelainType", "JsonGatewayPorcelainType", });
+        new java.lang.String[] { "Converter", "PorcelainTypeOverride", "TerraformElemType", });
+    internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor =
+      internal_static_v1_CustomPorcelainTypeOptions_descriptor.getNestedTypes().get(0);
+    internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_v1_TerraformDocs_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_v1_TerraformDocs_fieldAccessorTable = new
