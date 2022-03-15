@@ -21,12 +21,12 @@ public final class Options {
   private Options() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
-    registry.add(com.strongdm.api.v1.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.fileOptions);
-    registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.v1.plumbing.Options.oneofOptions);
-    registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
+    registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);
   }
 
   public static void registerAllExtensions(
@@ -34,6 +34,1790 @@ public final class Options {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface FileOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.FileOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return A list containing the targets.
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code v1.FileOptions}
+   */
+  public static final class FileOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.FileOptions)
+      FileOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FileOptions.newBuilder() to construct.
+    private FileOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FileOptions() {
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FileOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FileOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 15533602: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.Options.FileOptions.class, com.strongdm.api.v1.plumbing.Options.FileOptions.Builder.class);
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 1941700;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return A list containing the targets.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <pre>
+     * targets indicates that the file should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941700;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941700, targets_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.FileOptions)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.Options.FileOptions other = (com.strongdm.api.v1.plumbing.Options.FileOptions) obj;
+
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.FileOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.FileOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.FileOptions)
+        com.strongdm.api.v1.plumbing.Options.FileOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.Options.FileOptions.class, com.strongdm.api.v1.plumbing.Options.FileOptions.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.Options.FileOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.FileOptions build() {
+        com.strongdm.api.v1.plumbing.Options.FileOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.FileOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.FileOptions result = new com.strongdm.api.v1.plumbing.Options.FileOptions(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.FileOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.FileOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.FileOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance()) return this;
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.Options.FileOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.FileOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param value The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the file should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941700;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.FileOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.FileOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.FileOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.FileOptions();
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FileOptions>
+        PARSER = new com.google.protobuf.AbstractParser<FileOptions>() {
+      @java.lang.Override
+      public FileOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FileOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FileOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FileOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ServiceOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.ServiceOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+     * </pre>
+     *
+     * <code>string main_noun = 1941400;</code>
+     * @return The mainNoun.
+     */
+    java.lang.String getMainNoun();
+    /**
+     * <pre>
+     * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+     * </pre>
+     *
+     * <code>string main_noun = 1941400;</code>
+     * @return The bytes for mainNoun.
+     */
+    com.google.protobuf.ByteString
+        getMainNounBytes();
+
+    /**
+     * <pre>
+     * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+     * </pre>
+     *
+     * <code>string id_prefix = 1941402;</code>
+     * @return The idPrefix.
+     */
+    java.lang.String getIdPrefix();
+    /**
+     * <pre>
+     * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+     * </pre>
+     *
+     * <code>string id_prefix = 1941402;</code>
+     * @return The bytes for idPrefix.
+     */
+    com.google.protobuf.ByteString
+        getIdPrefixBytes();
+
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return A list containing the targets.
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return The count of targets.
+     */
+    int getTargetsCount();
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code v1.ServiceOptions}
+   */
+  public static final class ServiceOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.ServiceOptions)
+      ServiceOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServiceOptions.newBuilder() to construct.
+    private ServiceOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServiceOptions() {
+      mainNoun_ = "";
+      idPrefix_ = "";
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServiceOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ServiceOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 15531202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mainNoun_ = s;
+              break;
+            }
+            case 15531210: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              targets_.add(s);
+              break;
+            }
+            case 15531218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              idPrefix_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.Options.ServiceOptions.class, com.strongdm.api.v1.plumbing.Options.ServiceOptions.Builder.class);
+    }
+
+    public static final int MAIN_NOUN_FIELD_NUMBER = 1941400;
+    private volatile java.lang.Object mainNoun_;
+    /**
+     * <pre>
+     * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+     * </pre>
+     *
+     * <code>string main_noun = 1941400;</code>
+     * @return The mainNoun.
+     */
+    @java.lang.Override
+    public java.lang.String getMainNoun() {
+      java.lang.Object ref = mainNoun_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mainNoun_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+     * </pre>
+     *
+     * <code>string main_noun = 1941400;</code>
+     * @return The bytes for mainNoun.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMainNounBytes() {
+      java.lang.Object ref = mainNoun_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mainNoun_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_PREFIX_FIELD_NUMBER = 1941402;
+    private volatile java.lang.Object idPrefix_;
+    /**
+     * <pre>
+     * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+     * </pre>
+     *
+     * <code>string id_prefix = 1941402;</code>
+     * @return The idPrefix.
+     */
+    @java.lang.Override
+    public java.lang.String getIdPrefix() {
+      java.lang.Object ref = idPrefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idPrefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+     * </pre>
+     *
+     * <code>string id_prefix = 1941402;</code>
+     * @return The bytes for idPrefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdPrefixBytes() {
+      java.lang.Object ref = idPrefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idPrefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 1941401;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return A list containing the targets.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @return The count of targets.
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <pre>
+     * targets indicates that the service should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941401;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941400, mainNoun_);
+      }
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941401, targets_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941402, idPrefix_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941400, mainNoun_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getTargetsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941402, idPrefix_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.ServiceOptions)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.Options.ServiceOptions other = (com.strongdm.api.v1.plumbing.Options.ServiceOptions) obj;
+
+      if (!getMainNoun()
+          .equals(other.getMainNoun())) return false;
+      if (!getIdPrefix()
+          .equals(other.getIdPrefix())) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAIN_NOUN_FIELD_NUMBER;
+      hash = (53 * hash) + getMainNoun().hashCode();
+      hash = (37 * hash) + ID_PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getIdPrefix().hashCode();
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.ServiceOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.ServiceOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.ServiceOptions)
+        com.strongdm.api.v1.plumbing.Options.ServiceOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.Options.ServiceOptions.class, com.strongdm.api.v1.plumbing.Options.ServiceOptions.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.Options.ServiceOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mainNoun_ = "";
+
+        idPrefix_ = "";
+
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.ServiceOptions build() {
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.ServiceOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions result = new com.strongdm.api.v1.plumbing.Options.ServiceOptions(this);
+        int from_bitField0_ = bitField0_;
+        result.mainNoun_ = mainNoun_;
+        result.idPrefix_ = idPrefix_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.targets_ = targets_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.ServiceOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.ServiceOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.ServiceOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance()) return this;
+        if (!other.getMainNoun().isEmpty()) {
+          mainNoun_ = other.mainNoun_;
+          onChanged();
+        }
+        if (!other.getIdPrefix().isEmpty()) {
+          idPrefix_ = other.idPrefix_;
+          onChanged();
+        }
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.ServiceOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object mainNoun_ = "";
+      /**
+       * <pre>
+       * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+       * </pre>
+       *
+       * <code>string main_noun = 1941400;</code>
+       * @return The mainNoun.
+       */
+      public java.lang.String getMainNoun() {
+        java.lang.Object ref = mainNoun_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mainNoun_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+       * </pre>
+       *
+       * <code>string main_noun = 1941400;</code>
+       * @return The bytes for mainNoun.
+       */
+      public com.google.protobuf.ByteString
+          getMainNounBytes() {
+        java.lang.Object ref = mainNoun_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mainNoun_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+       * </pre>
+       *
+       * <code>string main_noun = 1941400;</code>
+       * @param value The mainNoun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMainNoun(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mainNoun_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+       * </pre>
+       *
+       * <code>string main_noun = 1941400;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMainNoun() {
+        
+        mainNoun_ = getDefaultInstance().getMainNoun();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * main_noun is the name of the message that this service primarily deals with. For example, for Roles, main_noun would be Role.
+       * </pre>
+       *
+       * <code>string main_noun = 1941400;</code>
+       * @param value The bytes for mainNoun to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMainNounBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mainNoun_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object idPrefix_ = "";
+      /**
+       * <pre>
+       * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+       * </pre>
+       *
+       * <code>string id_prefix = 1941402;</code>
+       * @return The idPrefix.
+       */
+      public java.lang.String getIdPrefix() {
+        java.lang.Object ref = idPrefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          idPrefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+       * </pre>
+       *
+       * <code>string id_prefix = 1941402;</code>
+       * @return The bytes for idPrefix.
+       */
+      public com.google.protobuf.ByteString
+          getIdPrefixBytes() {
+        java.lang.Object ref = idPrefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          idPrefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+       * </pre>
+       *
+       * <code>string id_prefix = 1941402;</code>
+       * @param value The idPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdPrefix(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        idPrefix_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+       * </pre>
+       *
+       * <code>string id_prefix = 1941402;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdPrefix() {
+        
+        idPrefix_ = getDefaultInstance().getIdPrefix();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id_prefix is the prefix of the main noun IDs. For example, for Resources, id_prefix would be "rs-".
+       * </pre>
+       *
+       * <code>string id_prefix = 1941402;</code>
+       * @param value The bytes for idPrefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        idPrefix_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param value The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the service should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941401;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.ServiceOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.ServiceOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.ServiceOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.ServiceOptions();
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ServiceOptions>
+        PARSER = new com.google.protobuf.AbstractParser<ServiceOptions>() {
+      @java.lang.Override
+      public ServiceOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ServiceOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServiceOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServiceOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MethodOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.MethodOptions)
       com.google.protobuf.MessageOrBuilder {
@@ -1010,64 +2794,137 @@ public final class Options {
 
   }
 
-  public interface FileOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.FileOptions)
+  public interface MessageOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.MessageOptions)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * porcelain determines whether the message is exposed to the SDKs.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>bool porcelain = 1941301;</code>
+     * @return The porcelain.
+     */
+    boolean getPorcelain();
+
+    /**
+     * <pre>
+     * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+     * </pre>
+     *
+     * <code>int32 error = 1941302;</code>
+     * @return The error.
+     */
+    int getError();
+
+    /**
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     * @return The optionsField.
+     */
+    java.lang.String getOptionsField();
+    /**
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     * @return The bytes for optionsField.
+     */
+    com.google.protobuf.ByteString
+        getOptionsFieldBytes();
+
+    /**
+     * <pre>
+     * targets indicates that the message should only be exposed in the provided targets.
+     * </pre>
+     *
+     * <code>repeated string targets = 1941306;</code>
      * @return A list containing the targets.
      */
     java.util.List<java.lang.String>
         getTargetsList();
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * targets indicates that the message should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>repeated string targets = 1941306;</code>
      * @return The count of targets.
      */
     int getTargetsCount();
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * targets indicates that the message should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>repeated string targets = 1941306;</code>
      * @param index The index of the element to return.
      * @return The targets at the given index.
      */
     java.lang.String getTargets(int index);
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * targets indicates that the message should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>repeated string targets = 1941306;</code>
      * @param index The index of the value to return.
      * @return The bytes of the targets at the given index.
      */
     com.google.protobuf.ByteString
         getTargetsBytes(int index);
+
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return Whether the terraformDocs field is set.
+     */
+    boolean hasTerraformDocs();
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return The terraformDocs.
+     */
+    com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs();
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     */
+    com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder();
+
+    /**
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    boolean hasCustom();
+    /**
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    com.strongdm.api.v1.plumbing.Options.CustomOptions getCustom();
+    /**
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     */
+    com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder();
   }
   /**
-   * Protobuf type {@code v1.FileOptions}
+   * Protobuf type {@code v1.MessageOptions}
    */
-  public static final class FileOptions extends
+  public static final class MessageOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.FileOptions)
-      FileOptionsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.MessageOptions)
+      MessageOptionsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use FileOptions.newBuilder() to construct.
-    private FileOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MessageOptions.newBuilder() to construct.
+    private MessageOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private FileOptions() {
+    private MessageOptions() {
+      optionsField_ = "";
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -1075,7 +2932,7 @@ public final class Options {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new FileOptions();
+      return new MessageOptions();
     }
 
     @java.lang.Override
@@ -1083,7 +2940,7 @@ public final class Options {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FileOptions(
+    private MessageOptions(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1102,7 +2959,49 @@ public final class Options {
             case 0:
               done = true;
               break;
-            case 15533602: {
+            case 15530408: {
+
+              porcelain_ = input.readBool();
+              break;
+            }
+            case 15530416: {
+
+              error_ = input.readInt32();
+              break;
+            }
+            case 15530426: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              optionsField_ = s;
+              break;
+            }
+            case 15530434: {
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder subBuilder = null;
+              if (terraformDocs_ != null) {
+                subBuilder = terraformDocs_.toBuilder();
+              }
+              terraformDocs_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.TerraformDocs.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(terraformDocs_);
+                terraformDocs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 15530442: {
+              com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder subBuilder = null;
+              if (custom_ != null) {
+                subBuilder = custom_.toBuilder();
+              }
+              custom_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.CustomOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(custom_);
+                custom_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 15530450: {
               java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 targets_ = new com.google.protobuf.LazyStringArrayList();
@@ -1135,25 +3034,103 @@ public final class Options {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Options.FileOptions.class, com.strongdm.api.v1.plumbing.Options.FileOptions.Builder.class);
+              com.strongdm.api.v1.plumbing.Options.MessageOptions.class, com.strongdm.api.v1.plumbing.Options.MessageOptions.Builder.class);
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 1941700;
+    public static final int PORCELAIN_FIELD_NUMBER = 1941301;
+    private boolean porcelain_;
+    /**
+     * <pre>
+     * porcelain determines whether the message is exposed to the SDKs.
+     * </pre>
+     *
+     * <code>bool porcelain = 1941301;</code>
+     * @return The porcelain.
+     */
+    @java.lang.Override
+    public boolean getPorcelain() {
+      return porcelain_;
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 1941302;
+    private int error_;
+    /**
+     * <pre>
+     * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+     * </pre>
+     *
+     * <code>int32 error = 1941302;</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public int getError() {
+      return error_;
+    }
+
+    public static final int OPTIONS_FIELD_FIELD_NUMBER = 1941303;
+    private volatile java.lang.Object optionsField_;
+    /**
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     * @return The optionsField.
+     */
+    @java.lang.Override
+    public java.lang.String getOptionsField() {
+      java.lang.Object ref = optionsField_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        optionsField_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Set this option on an RPC request message to specify which field holds
+     * the "options" for that RPC method.
+     * </pre>
+     *
+     * <code>string options_field = 1941303;</code>
+     * @return The bytes for optionsField.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOptionsFieldBytes() {
+      java.lang.Object ref = optionsField_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        optionsField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 1941306;
     private com.google.protobuf.LazyStringList targets_;
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * targets indicates that the message should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>repeated string targets = 1941306;</code>
      * @return A list containing the targets.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1162,10 +3139,10 @@ public final class Options {
     }
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * targets indicates that the message should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>repeated string targets = 1941306;</code>
      * @return The count of targets.
      */
     public int getTargetsCount() {
@@ -1173,10 +3150,10 @@ public final class Options {
     }
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * targets indicates that the message should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>repeated string targets = 1941306;</code>
      * @param index The index of the element to return.
      * @return The targets at the given index.
      */
@@ -1185,16 +3162,68 @@ public final class Options {
     }
     /**
      * <pre>
-     * targets indicates that the file should only be exposed in the provided targets.
+     * targets indicates that the message should only be exposed in the provided targets.
      * </pre>
      *
-     * <code>repeated string targets = 1941700;</code>
+     * <code>repeated string targets = 1941306;</code>
      * @param index The index of the value to return.
      * @return The bytes of the targets at the given index.
      */
     public com.google.protobuf.ByteString
         getTargetsBytes(int index) {
       return targets_.getByteString(index);
+    }
+
+    public static final int TERRAFORM_DOCS_FIELD_NUMBER = 1941304;
+    private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return Whether the terraformDocs field is set.
+     */
+    @java.lang.Override
+    public boolean hasTerraformDocs() {
+      return terraformDocs_ != null;
+    }
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     * @return The terraformDocs.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
+      return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
+    }
+    /**
+     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
+      return getTerraformDocs();
+    }
+
+    public static final int CUSTOM_FIELD_NUMBER = 1941305;
+    private com.strongdm.api.v1.plumbing.Options.CustomOptions custom_;
+    /**
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustom() {
+      return custom_ != null;
+    }
+    /**
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return The custom.
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.CustomOptions getCustom() {
+      return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+    }
+    /**
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
+      return getCustom();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1211,8 +3240,23 @@ public final class Options {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (porcelain_ != false) {
+        output.writeBool(1941301, porcelain_);
+      }
+      if (error_ != 0) {
+        output.writeInt32(1941302, error_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsField_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941303, optionsField_);
+      }
+      if (terraformDocs_ != null) {
+        output.writeMessage(1941304, getTerraformDocs());
+      }
+      if (custom_ != null) {
+        output.writeMessage(1941305, getCustom());
+      }
       for (int i = 0; i < targets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941700, targets_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941306, targets_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1223,6 +3267,25 @@ public final class Options {
       if (size != -1) return size;
 
       size = 0;
+      if (porcelain_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941301, porcelain_);
+      }
+      if (error_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1941302, error_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsField_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941303, optionsField_);
+      }
+      if (terraformDocs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1941304, getTerraformDocs());
+      }
+      if (custom_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1941305, getCustom());
+      }
       {
         int dataSize = 0;
         for (int i = 0; i < targets_.size(); i++) {
@@ -1241,13 +3304,29 @@ public final class Options {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.FileOptions)) {
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.MessageOptions)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.Options.FileOptions other = (com.strongdm.api.v1.plumbing.Options.FileOptions) obj;
+      com.strongdm.api.v1.plumbing.Options.MessageOptions other = (com.strongdm.api.v1.plumbing.Options.MessageOptions) obj;
 
+      if (getPorcelain()
+          != other.getPorcelain()) return false;
+      if (getError()
+          != other.getError()) return false;
+      if (!getOptionsField()
+          .equals(other.getOptionsField())) return false;
       if (!getTargetsList()
           .equals(other.getTargetsList())) return false;
+      if (hasTerraformDocs() != other.hasTerraformDocs()) return false;
+      if (hasTerraformDocs()) {
+        if (!getTerraformDocs()
+            .equals(other.getTerraformDocs())) return false;
+      }
+      if (hasCustom() != other.hasCustom()) return false;
+      if (hasCustom()) {
+        if (!getCustom()
+            .equals(other.getCustom())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1259,78 +3338,93 @@ public final class Options {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PORCELAIN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPorcelain());
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError();
+      hash = (37 * hash) + OPTIONS_FIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getOptionsField().hashCode();
       if (getTargetsCount() > 0) {
         hash = (37 * hash) + TARGETS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetsList().hashCode();
+      }
+      if (hasTerraformDocs()) {
+        hash = (37 * hash) + TERRAFORM_DOCS_FIELD_NUMBER;
+        hash = (53 * hash) + getTerraformDocs().hashCode();
+      }
+      if (hasCustom()) {
+        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+        hash = (53 * hash) + getCustom().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(byte[] data)
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseDelimitedFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1343,7 +3437,7 @@ public final class Options {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.FileOptions prototype) {
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.MessageOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1359,26 +3453,26 @@ public final class Options {
       return builder;
     }
     /**
-     * Protobuf type {@code v1.FileOptions}
+     * Protobuf type {@code v1.MessageOptions}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.FileOptions)
-        com.strongdm.api.v1.plumbing.Options.FileOptionsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.MessageOptions)
+        com.strongdm.api.v1.plumbing.Options.MessageOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Options.FileOptions.class, com.strongdm.api.v1.plumbing.Options.FileOptions.Builder.class);
+                com.strongdm.api.v1.plumbing.Options.MessageOptions.class, com.strongdm.api.v1.plumbing.Options.MessageOptions.Builder.class);
       }
 
-      // Construct using com.strongdm.api.v1.plumbing.Options.FileOptions.newBuilder()
+      // Construct using com.strongdm.api.v1.plumbing.Options.MessageOptions.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1396,25 +3490,43 @@ public final class Options {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        porcelain_ = false;
+
+        error_ = 0;
+
+        optionsField_ = "";
+
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = null;
+        } else {
+          terraformDocs_ = null;
+          terraformDocsBuilder_ = null;
+        }
+        if (customBuilder_ == null) {
+          custom_ = null;
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_FileOptions_descriptor;
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance();
+      public com.strongdm.api.v1.plumbing.Options.MessageOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.MessageOptions.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.FileOptions build() {
-        com.strongdm.api.v1.plumbing.Options.FileOptions result = buildPartial();
+      public com.strongdm.api.v1.plumbing.Options.MessageOptions build() {
+        com.strongdm.api.v1.plumbing.Options.MessageOptions result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1422,14 +3534,27 @@ public final class Options {
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.FileOptions buildPartial() {
-        com.strongdm.api.v1.plumbing.Options.FileOptions result = new com.strongdm.api.v1.plumbing.Options.FileOptions(this);
+      public com.strongdm.api.v1.plumbing.Options.MessageOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.MessageOptions result = new com.strongdm.api.v1.plumbing.Options.MessageOptions(this);
         int from_bitField0_ = bitField0_;
+        result.porcelain_ = porcelain_;
+        result.error_ = error_;
+        result.optionsField_ = optionsField_;
         if (((bitField0_ & 0x00000001) != 0)) {
           targets_ = targets_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.targets_ = targets_;
+        if (terraformDocsBuilder_ == null) {
+          result.terraformDocs_ = terraformDocs_;
+        } else {
+          result.terraformDocs_ = terraformDocsBuilder_.build();
+        }
+        if (customBuilder_ == null) {
+          result.custom_ = custom_;
+        } else {
+          result.custom_ = customBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1468,16 +3593,26 @@ public final class Options {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Options.FileOptions) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Options.FileOptions)other);
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.MessageOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.MessageOptions)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.FileOptions other) {
-        if (other == com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.MessageOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.MessageOptions.getDefaultInstance()) return this;
+        if (other.getPorcelain() != false) {
+          setPorcelain(other.getPorcelain());
+        }
+        if (other.getError() != 0) {
+          setError(other.getError());
+        }
+        if (!other.getOptionsField().isEmpty()) {
+          optionsField_ = other.optionsField_;
+          onChanged();
+        }
         if (!other.targets_.isEmpty()) {
           if (targets_.isEmpty()) {
             targets_ = other.targets_;
@@ -1485,6 +3620,1143 @@ public final class Options {
           } else {
             ensureTargetsIsMutable();
             targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
+        if (other.hasTerraformDocs()) {
+          mergeTerraformDocs(other.getTerraformDocs());
+        }
+        if (other.hasCustom()) {
+          mergeCustom(other.getCustom());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.v1.plumbing.Options.MessageOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.MessageOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean porcelain_ ;
+      /**
+       * <pre>
+       * porcelain determines whether the message is exposed to the SDKs.
+       * </pre>
+       *
+       * <code>bool porcelain = 1941301;</code>
+       * @return The porcelain.
+       */
+      @java.lang.Override
+      public boolean getPorcelain() {
+        return porcelain_;
+      }
+      /**
+       * <pre>
+       * porcelain determines whether the message is exposed to the SDKs.
+       * </pre>
+       *
+       * <code>bool porcelain = 1941301;</code>
+       * @param value The porcelain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPorcelain(boolean value) {
+        
+        porcelain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * porcelain determines whether the message is exposed to the SDKs.
+       * </pre>
+       *
+       * <code>bool porcelain = 1941301;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPorcelain() {
+        
+        porcelain_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int error_ ;
+      /**
+       * <pre>
+       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+       * </pre>
+       *
+       * <code>int32 error = 1941302;</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public int getError() {
+        return error_;
+      }
+      /**
+       * <pre>
+       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+       * </pre>
+       *
+       * <code>int32 error = 1941302;</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(int value) {
+        
+        error_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
+       * </pre>
+       *
+       * <code>int32 error = 1941302;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        
+        error_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object optionsField_ = "";
+      /**
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       * @return The optionsField.
+       */
+      public java.lang.String getOptionsField() {
+        java.lang.Object ref = optionsField_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          optionsField_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       * @return The bytes for optionsField.
+       */
+      public com.google.protobuf.ByteString
+          getOptionsFieldBytes() {
+        java.lang.Object ref = optionsField_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          optionsField_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       * @param value The optionsField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptionsField(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        optionsField_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOptionsField() {
+        
+        optionsField_ = getDefaultInstance().getOptionsField();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set this option on an RPC request message to specify which field holds
+       * the "options" for that RPC method.
+       * </pre>
+       *
+       * <code>string options_field = 1941303;</code>
+       * @param value The bytes for optionsField to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOptionsFieldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        optionsField_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @return A list containing the targets.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @return The count of targets.
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param value The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * targets indicates that the message should only be exposed in the provided targets.
+       * </pre>
+       *
+       * <code>repeated string targets = 1941306;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> terraformDocsBuilder_;
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       * @return Whether the terraformDocs field is set.
+       */
+      public boolean hasTerraformDocs() {
+        return terraformDocsBuilder_ != null || terraformDocs_ != null;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       * @return The terraformDocs.
+       */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
+        if (terraformDocsBuilder_ == null) {
+          return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
+        } else {
+          return terraformDocsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder setTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
+        if (terraformDocsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          terraformDocs_ = value;
+          onChanged();
+        } else {
+          terraformDocsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder setTerraformDocs(
+          com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder builderForValue) {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = builderForValue.build();
+          onChanged();
+        } else {
+          terraformDocsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder mergeTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
+        if (terraformDocsBuilder_ == null) {
+          if (terraformDocs_ != null) {
+            terraformDocs_ =
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.newBuilder(terraformDocs_).mergeFrom(value).buildPartial();
+          } else {
+            terraformDocs_ = value;
+          }
+          onChanged();
+        } else {
+          terraformDocsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public Builder clearTerraformDocs() {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocs_ = null;
+          onChanged();
+        } else {
+          terraformDocs_ = null;
+          terraformDocsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder getTerraformDocsBuilder() {
+        
+        onChanged();
+        return getTerraformDocsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
+        if (terraformDocsBuilder_ != null) {
+          return terraformDocsBuilder_.getMessageOrBuilder();
+        } else {
+          return terraformDocs_ == null ?
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
+        }
+      }
+      /**
+       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> 
+          getTerraformDocsFieldBuilder() {
+        if (terraformDocsBuilder_ == null) {
+          terraformDocsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder>(
+                  getTerraformDocs(),
+                  getParentForChildren(),
+                  isClean());
+          terraformDocs_ = null;
+        }
+        return terraformDocsBuilder_;
+      }
+
+      private com.strongdm.api.v1.plumbing.Options.CustomOptions custom_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.CustomOptions, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder> customBuilder_;
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       * @return Whether the custom field is set.
+       */
+      public boolean hasCustom() {
+        return customBuilder_ != null || custom_ != null;
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       * @return The custom.
+       */
+      public com.strongdm.api.v1.plumbing.Options.CustomOptions getCustom() {
+        if (customBuilder_ == null) {
+          return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+        } else {
+          return customBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(com.strongdm.api.v1.plumbing.Options.CustomOptions value) {
+        if (customBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          custom_ = value;
+          onChanged();
+        } else {
+          customBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder setCustom(
+          com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder builderForValue) {
+        if (customBuilder_ == null) {
+          custom_ = builderForValue.build();
+          onChanged();
+        } else {
+          customBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder mergeCustom(com.strongdm.api.v1.plumbing.Options.CustomOptions value) {
+        if (customBuilder_ == null) {
+          if (custom_ != null) {
+            custom_ =
+              com.strongdm.api.v1.plumbing.Options.CustomOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
+          } else {
+            custom_ = value;
+          }
+          onChanged();
+        } else {
+          customBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public Builder clearCustom() {
+        if (customBuilder_ == null) {
+          custom_ = null;
+          onChanged();
+        } else {
+          custom_ = null;
+          customBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder getCustomBuilder() {
+        
+        onChanged();
+        return getCustomFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      public com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
+        if (customBuilder_ != null) {
+          return customBuilder_.getMessageOrBuilder();
+        } else {
+          return custom_ == null ?
+              com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
+        }
+      }
+      /**
+       * <code>.v1.CustomOptions custom = 1941305;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.v1.plumbing.Options.CustomOptions, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder> 
+          getCustomFieldBuilder() {
+        if (customBuilder_ == null) {
+          customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.v1.plumbing.Options.CustomOptions, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder>(
+                  getCustom(),
+                  getParentForChildren(),
+                  isClean());
+          custom_ = null;
+        }
+        return customBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.MessageOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.MessageOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.MessageOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.MessageOptions();
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.MessageOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageOptions>
+        PARSER = new com.google.protobuf.AbstractParser<MessageOptions>() {
+      @java.lang.Override
+      public MessageOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MessageOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.v1.plumbing.Options.MessageOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OneofOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.OneofOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @return A list containing the commonFields.
+     */
+    java.util.List<java.lang.String>
+        getCommonFieldsList();
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @return The count of commonFields.
+     */
+    int getCommonFieldsCount();
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @param index The index of the element to return.
+     * @return The commonFields at the given index.
+     */
+    java.lang.String getCommonFields(int index);
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the commonFields at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCommonFieldsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code v1.OneofOptions}
+   */
+  public static final class OneofOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.OneofOptions)
+      OneofOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OneofOptions.newBuilder() to construct.
+    private OneofOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OneofOptions() {
+      commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OneofOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OneofOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 15531050: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                commonFields_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              commonFields_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          commonFields_ = commonFields_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.v1.plumbing.Options.OneofOptions.class, com.strongdm.api.v1.plumbing.Options.OneofOptions.Builder.class);
+    }
+
+    public static final int COMMON_FIELDS_FIELD_NUMBER = 1941381;
+    private com.google.protobuf.LazyStringList commonFields_;
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @return A list containing the commonFields.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCommonFieldsList() {
+      return commonFields_;
+    }
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @return The count of commonFields.
+     */
+    public int getCommonFieldsCount() {
+      return commonFields_.size();
+    }
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @param index The index of the element to return.
+     * @return The commonFields at the given index.
+     */
+    public java.lang.String getCommonFields(int index) {
+      return commonFields_.get(index);
+    }
+    /**
+     * <pre>
+     * common_fields determines which fields will be accessible via setters and getters on the parent interface type
+     * </pre>
+     *
+     * <code>repeated string common_fields = 1941381;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the commonFields at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCommonFieldsBytes(int index) {
+      return commonFields_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < commonFields_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941381, commonFields_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < commonFields_.size(); i++) {
+          dataSize += computeStringSizeNoTag(commonFields_.getRaw(i));
+        }
+        size += dataSize;
+        size += 4 * getCommonFieldsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.OneofOptions)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.v1.plumbing.Options.OneofOptions other = (com.strongdm.api.v1.plumbing.Options.OneofOptions) obj;
+
+      if (!getCommonFieldsList()
+          .equals(other.getCommonFieldsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCommonFieldsCount() > 0) {
+        hash = (37 * hash) + COMMON_FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + getCommonFieldsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.OneofOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.OneofOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.OneofOptions)
+        com.strongdm.api.v1.plumbing.Options.OneofOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.v1.plumbing.Options.OneofOptions.class, com.strongdm.api.v1.plumbing.Options.OneofOptions.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.v1.plumbing.Options.OneofOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.OneofOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.OneofOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.OneofOptions build() {
+        com.strongdm.api.v1.plumbing.Options.OneofOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.v1.plumbing.Options.OneofOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.OneofOptions result = new com.strongdm.api.v1.plumbing.Options.OneofOptions(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          commonFields_ = commonFields_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.commonFields_ = commonFields_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.OneofOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.OneofOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.OneofOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.OneofOptions.getDefaultInstance()) return this;
+        if (!other.commonFields_.isEmpty()) {
+          if (commonFields_.isEmpty()) {
+            commonFields_ = other.commonFields_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCommonFieldsIsMutable();
+            commonFields_.addAll(other.commonFields_);
           }
           onChanged();
         }
@@ -1503,11 +4775,11 @@ public final class Options {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Options.FileOptions parsedMessage = null;
+        com.strongdm.api.v1.plumbing.Options.OneofOptions parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Options.FileOptions) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.OneofOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1518,148 +4790,148 @@ public final class Options {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTargetsIsMutable() {
+      private com.google.protobuf.LazyStringList commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureCommonFieldsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          commonFields_ = new com.google.protobuf.LazyStringArrayList(commonFields_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
-       * @return A list containing the targets.
+       * <code>repeated string common_fields = 1941381;</code>
+       * @return A list containing the commonFields.
        */
       public com.google.protobuf.ProtocolStringList
-          getTargetsList() {
-        return targets_.getUnmodifiableView();
+          getCommonFieldsList() {
+        return commonFields_.getUnmodifiableView();
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
-       * @return The count of targets.
+       * <code>repeated string common_fields = 1941381;</code>
+       * @return The count of commonFields.
        */
-      public int getTargetsCount() {
-        return targets_.size();
+      public int getCommonFieldsCount() {
+        return commonFields_.size();
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
+       * <code>repeated string common_fields = 1941381;</code>
        * @param index The index of the element to return.
-       * @return The targets at the given index.
+       * @return The commonFields at the given index.
        */
-      public java.lang.String getTargets(int index) {
-        return targets_.get(index);
+      public java.lang.String getCommonFields(int index) {
+        return commonFields_.get(index);
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
+       * <code>repeated string common_fields = 1941381;</code>
        * @param index The index of the value to return.
-       * @return The bytes of the targets at the given index.
+       * @return The bytes of the commonFields at the given index.
        */
       public com.google.protobuf.ByteString
-          getTargetsBytes(int index) {
-        return targets_.getByteString(index);
+          getCommonFieldsBytes(int index) {
+        return commonFields_.getByteString(index);
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
+       * <code>repeated string common_fields = 1941381;</code>
        * @param index The index to set the value at.
-       * @param value The targets to set.
+       * @param value The commonFields to set.
        * @return This builder for chaining.
        */
-      public Builder setTargets(
+      public Builder setCommonFields(
           int index, java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTargetsIsMutable();
-        targets_.set(index, value);
+  ensureCommonFieldsIsMutable();
+        commonFields_.set(index, value);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
-       * @param value The targets to add.
+       * <code>repeated string common_fields = 1941381;</code>
+       * @param value The commonFields to add.
        * @return This builder for chaining.
        */
-      public Builder addTargets(
+      public Builder addCommonFields(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTargetsIsMutable();
-        targets_.add(value);
+  ensureCommonFieldsIsMutable();
+        commonFields_.add(value);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
-       * @param values The targets to add.
+       * <code>repeated string common_fields = 1941381;</code>
+       * @param values The commonFields to add.
        * @return This builder for chaining.
        */
-      public Builder addAllTargets(
+      public Builder addAllCommonFields(
           java.lang.Iterable<java.lang.String> values) {
-        ensureTargetsIsMutable();
+        ensureCommonFieldsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, targets_);
+            values, commonFields_);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
+       * <code>repeated string common_fields = 1941381;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTargets() {
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      public Builder clearCommonFields() {
+        commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * targets indicates that the file should only be exposed in the provided targets.
+       * common_fields determines which fields will be accessible via setters and getters on the parent interface type
        * </pre>
        *
-       * <code>repeated string targets = 1941700;</code>
-       * @param value The bytes of the targets to add.
+       * <code>repeated string common_fields = 1941381;</code>
+       * @param value The bytes of the commonFields to add.
        * @return This builder for chaining.
        */
-      public Builder addTargetsBytes(
+      public Builder addCommonFieldsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureTargetsIsMutable();
-        targets_.add(value);
+        ensureCommonFieldsIsMutable();
+        commonFields_.add(value);
         onChanged();
         return this;
       }
@@ -1676,41 +4948,41 @@ public final class Options {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.FileOptions)
+      // @@protoc_insertion_point(builder_scope:v1.OneofOptions)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.FileOptions)
-    private static final com.strongdm.api.v1.plumbing.Options.FileOptions DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.OneofOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.OneofOptions DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.FileOptions();
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.OneofOptions();
     }
 
-    public static com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.Options.OneofOptions getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<FileOptions>
-        PARSER = new com.google.protobuf.AbstractParser<FileOptions>() {
+    private static final com.google.protobuf.Parser<OneofOptions>
+        PARSER = new com.google.protobuf.AbstractParser<OneofOptions>() {
       @java.lang.Override
-      public FileOptions parsePartialFrom(
+      public OneofOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FileOptions(input, extensionRegistry);
+        return new OneofOptions(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<FileOptions> parser() {
+    public static com.google.protobuf.Parser<OneofOptions> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<FileOptions> getParserForType() {
+    public com.google.protobuf.Parser<OneofOptions> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.FileOptions getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.Options.OneofOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1853,114 +5125,6 @@ public final class Options {
 
     /**
      * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-     */
-    int getCommentOverrideCount();
-    /**
-     * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-     */
-    boolean containsCommentOverride(
-        java.lang.String key);
-    /**
-     * Use {@link #getCommentOverrideMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getCommentOverride();
-    /**
-     * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-     */
-    java.util.Map<java.lang.String, java.lang.String>
-    getCommentOverrideMap();
-    /**
-     * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-     */
-
-    java.lang.String getCommentOverrideOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
-    /**
-     * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-     */
-
-    java.lang.String getCommentOverrideOrThrow(
-        java.lang.String key);
-
-    /**
-     * <pre>
-     * read_only_override overrides the read_only field for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-     */
-    int getReadOnlyOverrideCount();
-    /**
-     * <pre>
-     * read_only_override overrides the read_only field for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-     */
-    boolean containsReadOnlyOverride(
-        java.lang.String key);
-    /**
-     * Use {@link #getReadOnlyOverrideMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.Boolean>
-    getReadOnlyOverride();
-    /**
-     * <pre>
-     * read_only_override overrides the read_only field for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-     */
-    java.util.Map<java.lang.String, java.lang.Boolean>
-    getReadOnlyOverrideMap();
-    /**
-     * <pre>
-     * read_only_override overrides the read_only field for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-     */
-
-    boolean getReadOnlyOverrideOrDefault(
-        java.lang.String key,
-        boolean defaultValue);
-    /**
-     * <pre>
-     * read_only_override overrides the read_only field for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-     */
-
-    boolean getReadOnlyOverrideOrThrow(
-        java.lang.String key);
-
-    /**
-     * <pre>
      * terraform_computed sets the terraform Computed field to be true. if
      * read_only is set to true, this will automatically be set for you. You
      * should only need to set this field manually if you have a Computed
@@ -1973,55 +5137,73 @@ public final class Options {
     boolean getTerraformComputed();
 
     /**
-     * <code>string cli_name = 1941311;</code>
-     * @return The cliName.
-     */
-    java.lang.String getCliName();
-    /**
-     * <code>string cli_name = 1941311;</code>
-     * @return The bytes for cliName.
-     */
-    com.google.protobuf.ByteString
-        getCliNameBytes();
-
-    /**
-     * <code>string cli_json_name = 1941312;</code>
-     * @return The cliJsonName.
-     */
-    java.lang.String getCliJsonName();
-    /**
-     * <code>string cli_json_name = 1941312;</code>
-     * @return The bytes for cliJsonName.
-     */
-    com.google.protobuf.ByteString
-        getCliJsonNameBytes();
-
-    /**
-     * <code>string json_gateway_name = 1941313;</code>
-     * @return The jsonGatewayName.
-     */
-    java.lang.String getJsonGatewayName();
-    /**
-     * <code>string json_gateway_name = 1941313;</code>
-     * @return The bytes for jsonGatewayName.
-     */
-    com.google.protobuf.ByteString
-        getJsonGatewayNameBytes();
-
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     * <code>.v1.CustomOptions custom = 1941305;</code>
      * @return Whether the custom field is set.
      */
     boolean hasCustom();
     /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     * <code>.v1.CustomOptions custom = 1941305;</code>
      * @return The custom.
      */
-    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom();
+    com.strongdm.api.v1.plumbing.Options.CustomOptions getCustom();
     /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+     * <code>.v1.CustomOptions custom = 1941305;</code>
      */
-    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder();
+    com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder();
+
+    /**
+     * <pre>
+     * read_only_override marks the field as read-only for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+     */
+    int getReadOnlyOverrideCount();
+    /**
+     * <pre>
+     * read_only_override marks the field as read-only for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+     */
+    boolean containsReadOnlyOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getReadOnlyOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getReadOnlyOverride();
+    /**
+     * <pre>
+     * read_only_override marks the field as read-only for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getReadOnlyOverrideMap();
+    /**
+     * <pre>
+     * read_only_override marks the field as read-only for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+     */
+
+    boolean getReadOnlyOverrideOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <pre>
+     * read_only_override marks the field as read-only for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+     */
+
+    boolean getReadOnlyOverrideOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -2038,9 +5220,6 @@ public final class Options {
     private FieldOptions() {
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       terraformDiffSuppressFunc_ = "";
-      cliName_ = "";
-      cliJsonName_ = "";
-      jsonGatewayName_ = "";
     }
 
     @java.lang.Override
@@ -2090,11 +5269,11 @@ public final class Options {
               break;
             }
             case 15530442: {
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder subBuilder = null;
+              com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder subBuilder = null;
               if (custom_ != null) {
                 subBuilder = custom_.toBuilder();
               }
-              custom_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.parser(), extensionRegistry);
+              custom_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.CustomOptions.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(custom_);
                 custom_ = subBuilder.buildPartial();
@@ -2117,22 +5296,17 @@ public final class Options {
               terraformSensitive_ = input.readBool();
               break;
             }
-            case 15530490: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cliName_ = s;
-              break;
-            }
             case 15530498: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cliJsonName_ = s;
-              break;
-            }
-            case 15530506: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jsonGatewayName_ = s;
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                readOnlyOverride_ = com.google.protobuf.MapField.newMapField(
+                    ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              readOnlyOverride__ = input.readMessage(
+                  ReadOnlyOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              readOnlyOverride_.getMutableMap().put(
+                  readOnlyOverride__.getKey(), readOnlyOverride__.getValue());
               break;
             }
             case 15530520: {
@@ -2158,32 +5332,6 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               terraformDiffSuppressFunc_ = s;
-              break;
-            }
-            case 15530562: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                commentOverride_ = com.google.protobuf.MapField.newMapField(
-                    CommentOverrideDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              commentOverride__ = input.readMessage(
-                  CommentOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              commentOverride_.getMutableMap().put(
-                  commentOverride__.getKey(), commentOverride__.getValue());
-              break;
-            }
-            case 15530570: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                readOnlyOverride_ = com.google.protobuf.MapField.newMapField(
-                    ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
-              readOnlyOverride__ = input.readMessage(
-                  ReadOnlyOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              readOnlyOverride_.getMutableMap().put(
-                  readOnlyOverride__.getKey(), readOnlyOverride__.getValue());
               break;
             }
             case 15530576: {
@@ -2223,9 +5371,7 @@ public final class Options {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 1941320:
-          return internalGetCommentOverride();
-        case 1941321:
+        case 1941312:
           return internalGetReadOnlyOverride();
         default:
           throw new RuntimeException(
@@ -2447,104 +5593,51 @@ public final class Options {
       }
     }
 
-    public static final int COMMENT_OVERRIDE_FIELD_NUMBER = 1941320;
-    private static final class CommentOverrideDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> commentOverride_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetCommentOverride() {
-      if (commentOverride_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            CommentOverrideDefaultEntryHolder.defaultEntry);
-      }
-      return commentOverride_;
-    }
-
-    public int getCommentOverrideCount() {
-      return internalGetCommentOverride().getMap().size();
-    }
+    public static final int TERRAFORM_COMPUTED_FIELD_NUMBER = 1941322;
+    private boolean terraformComputed_;
     /**
      * <pre>
-     * comment_override replaces the entire doc string for the given targets
+     * terraform_computed sets the terraform Computed field to be true. if
+     * read_only is set to true, this will automatically be set for you. You
+     * should only need to set this field manually if you have a Computed
+     * Optional field in Terraform.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     * <code>bool terraform_computed = 1941322;</code>
+     * @return The terraformComputed.
      */
-
     @java.lang.Override
-    public boolean containsCommentOverride(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetCommentOverride().getMap().containsKey(key);
+    public boolean getTerraformComputed() {
+      return terraformComputed_;
+    }
+
+    public static final int CUSTOM_FIELD_NUMBER = 1941305;
+    private com.strongdm.api.v1.plumbing.Options.CustomOptions custom_;
+    /**
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return Whether the custom field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustom() {
+      return custom_ != null;
     }
     /**
-     * Use {@link #getCommentOverrideMap()} instead.
+     * <code>.v1.CustomOptions custom = 1941305;</code>
+     * @return The custom.
      */
     @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getCommentOverride() {
-      return getCommentOverrideMap();
+    public com.strongdm.api.v1.plumbing.Options.CustomOptions getCustom() {
+      return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
     }
     /**
-     * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
+     * <code>.v1.CustomOptions custom = 1941305;</code>
      */
     @java.lang.Override
-
-    public java.util.Map<java.lang.String, java.lang.String> getCommentOverrideMap() {
-      return internalGetCommentOverride().getMap();
-    }
-    /**
-     * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-     */
-    @java.lang.Override
-
-    public java.lang.String getCommentOverrideOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetCommentOverride().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * comment_override replaces the entire doc string for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-     */
-    @java.lang.Override
-
-    public java.lang.String getCommentOverrideOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetCommentOverride().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
+    public com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
+      return getCustom();
     }
 
-    public static final int READ_ONLY_OVERRIDE_FIELD_NUMBER = 1941321;
+    public static final int READ_ONLY_OVERRIDE_FIELD_NUMBER = 1941312;
     private static final class ReadOnlyOverrideDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.Boolean> defaultEntry =
@@ -2572,10 +5665,10 @@ public final class Options {
     }
     /**
      * <pre>
-     * read_only_override overrides the read_only field for the given targets
+     * read_only_override marks the field as read-only for the given targets
      * </pre>
      *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
      */
 
     @java.lang.Override
@@ -2594,10 +5687,10 @@ public final class Options {
     }
     /**
      * <pre>
-     * read_only_override overrides the read_only field for the given targets
+     * read_only_override marks the field as read-only for the given targets
      * </pre>
      *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
      */
     @java.lang.Override
 
@@ -2606,10 +5699,10 @@ public final class Options {
     }
     /**
      * <pre>
-     * read_only_override overrides the read_only field for the given targets
+     * read_only_override marks the field as read-only for the given targets
      * </pre>
      *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
      */
     @java.lang.Override
 
@@ -2623,10 +5716,10 @@ public final class Options {
     }
     /**
      * <pre>
-     * read_only_override overrides the read_only field for the given targets
+     * read_only_override marks the field as read-only for the given targets
      * </pre>
      *
-     * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
+     * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
      */
     @java.lang.Override
 
@@ -2639,164 +5732,6 @@ public final class Options {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
-    }
-
-    public static final int TERRAFORM_COMPUTED_FIELD_NUMBER = 1941322;
-    private boolean terraformComputed_;
-    /**
-     * <pre>
-     * terraform_computed sets the terraform Computed field to be true. if
-     * read_only is set to true, this will automatically be set for you. You
-     * should only need to set this field manually if you have a Computed
-     * Optional field in Terraform.
-     * </pre>
-     *
-     * <code>bool terraform_computed = 1941322;</code>
-     * @return The terraformComputed.
-     */
-    @java.lang.Override
-    public boolean getTerraformComputed() {
-      return terraformComputed_;
-    }
-
-    public static final int CLI_NAME_FIELD_NUMBER = 1941311;
-    private volatile java.lang.Object cliName_;
-    /**
-     * <code>string cli_name = 1941311;</code>
-     * @return The cliName.
-     */
-    @java.lang.Override
-    public java.lang.String getCliName() {
-      java.lang.Object ref = cliName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cliName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cli_name = 1941311;</code>
-     * @return The bytes for cliName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCliNameBytes() {
-      java.lang.Object ref = cliName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cliName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CLI_JSON_NAME_FIELD_NUMBER = 1941312;
-    private volatile java.lang.Object cliJsonName_;
-    /**
-     * <code>string cli_json_name = 1941312;</code>
-     * @return The cliJsonName.
-     */
-    @java.lang.Override
-    public java.lang.String getCliJsonName() {
-      java.lang.Object ref = cliJsonName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cliJsonName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cli_json_name = 1941312;</code>
-     * @return The bytes for cliJsonName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCliJsonNameBytes() {
-      java.lang.Object ref = cliJsonName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cliJsonName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int JSON_GATEWAY_NAME_FIELD_NUMBER = 1941313;
-    private volatile java.lang.Object jsonGatewayName_;
-    /**
-     * <code>string json_gateway_name = 1941313;</code>
-     * @return The jsonGatewayName.
-     */
-    @java.lang.Override
-    public java.lang.String getJsonGatewayName() {
-      java.lang.Object ref = jsonGatewayName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        jsonGatewayName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string json_gateway_name = 1941313;</code>
-     * @return The bytes for jsonGatewayName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getJsonGatewayNameBytes() {
-      java.lang.Object ref = jsonGatewayName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        jsonGatewayName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CUSTOM_FIELD_NUMBER = 1941305;
-    private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     * @return Whether the custom field is set.
-     */
-    @java.lang.Override
-    public boolean hasCustom() {
-      return custom_ != null;
-    }
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     * @return The custom.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
-      return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
-    }
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
-      return getCustom();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2834,15 +5769,12 @@ public final class Options {
       if (terraformSensitive_ != false) {
         output.writeBool(1941310, terraformSensitive_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, cliName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941312, cliJsonName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941313, jsonGatewayName_);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetReadOnlyOverride(),
+          ReadOnlyOverrideDefaultEntryHolder.defaultEntry,
+          1941312);
       if (readOnly_ != false) {
         output.writeBool(1941315, readOnly_);
       }
@@ -2855,18 +5787,6 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941319, terraformDiffSuppressFunc_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetCommentOverride(),
-          CommentOverrideDefaultEntryHolder.defaultEntry,
-          1941320);
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetReadOnlyOverride(),
-          ReadOnlyOverrideDefaultEntryHolder.defaultEntry,
-          1941321);
       if (terraformComputed_ != false) {
         output.writeBool(1941322, terraformComputed_);
       }
@@ -2907,14 +5827,15 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941310, terraformSensitive_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, cliName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941312, cliJsonName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941313, jsonGatewayName_);
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetReadOnlyOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        readOnlyOverride__ = ReadOnlyOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1941312, readOnlyOverride__);
       }
       if (readOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2934,26 +5855,6 @@ public final class Options {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformDiffSuppressFunc_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941319, terraformDiffSuppressFunc_);
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetCommentOverride().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        commentOverride__ = CommentOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1941320, commentOverride__);
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
-           : internalGetReadOnlyOverride().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
-        readOnlyOverride__ = ReadOnlyOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1941321, readOnlyOverride__);
       }
       if (terraformComputed_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2994,23 +5895,15 @@ public final class Options {
           != other.getTerraformSensitive()) return false;
       if (!getTerraformDiffSuppressFunc()
           .equals(other.getTerraformDiffSuppressFunc())) return false;
-      if (!internalGetCommentOverride().equals(
-          other.internalGetCommentOverride())) return false;
-      if (!internalGetReadOnlyOverride().equals(
-          other.internalGetReadOnlyOverride())) return false;
       if (getTerraformComputed()
           != other.getTerraformComputed()) return false;
-      if (!getCliName()
-          .equals(other.getCliName())) return false;
-      if (!getCliJsonName()
-          .equals(other.getCliJsonName())) return false;
-      if (!getJsonGatewayName()
-          .equals(other.getJsonGatewayName())) return false;
       if (hasCustom() != other.hasCustom()) return false;
       if (hasCustom()) {
         if (!getCustom()
             .equals(other.getCustom())) return false;
       }
+      if (!internalGetReadOnlyOverride().equals(
+          other.internalGetReadOnlyOverride())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3052,26 +5945,16 @@ public final class Options {
           getTerraformSensitive());
       hash = (37 * hash) + TERRAFORM_DIFF_SUPPRESS_FUNC_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformDiffSuppressFunc().hashCode();
-      if (!internalGetCommentOverride().getMap().isEmpty()) {
-        hash = (37 * hash) + COMMENT_OVERRIDE_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetCommentOverride().hashCode();
+      hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTerraformComputed());
+      if (hasCustom()) {
+        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
+        hash = (53 * hash) + getCustom().hashCode();
       }
       if (!internalGetReadOnlyOverride().getMap().isEmpty()) {
         hash = (37 * hash) + READ_ONLY_OVERRIDE_FIELD_NUMBER;
         hash = (53 * hash) + internalGetReadOnlyOverride().hashCode();
-      }
-      hash = (37 * hash) + TERRAFORM_COMPUTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getTerraformComputed());
-      hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCliName().hashCode();
-      hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCliJsonName().hashCode();
-      hash = (37 * hash) + JSON_GATEWAY_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getJsonGatewayName().hashCode();
-      if (hasCustom()) {
-        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
-        hash = (53 * hash) + getCustom().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3184,9 +6067,7 @@ public final class Options {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 1941320:
-            return internalGetCommentOverride();
-          case 1941321:
+          case 1941312:
             return internalGetReadOnlyOverride();
           default:
             throw new RuntimeException(
@@ -3197,9 +6078,7 @@ public final class Options {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 1941320:
-            return internalGetMutableCommentOverride();
-          case 1941321:
+          case 1941312:
             return internalGetMutableReadOnlyOverride();
           default:
             throw new RuntimeException(
@@ -3252,15 +6131,7 @@ public final class Options {
 
         terraformDiffSuppressFunc_ = "";
 
-        internalGetMutableCommentOverride().clear();
-        internalGetMutableReadOnlyOverride().clear();
         terraformComputed_ = false;
-
-        cliName_ = "";
-
-        cliJsonName_ = "";
-
-        jsonGatewayName_ = "";
 
         if (customBuilder_ == null) {
           custom_ = null;
@@ -3268,6 +6139,7 @@ public final class Options {
           custom_ = null;
           customBuilder_ = null;
         }
+        internalGetMutableReadOnlyOverride().clear();
         return this;
       }
 
@@ -3309,19 +6181,14 @@ public final class Options {
         result.terraformForceNew_ = terraformForceNew_;
         result.terraformSensitive_ = terraformSensitive_;
         result.terraformDiffSuppressFunc_ = terraformDiffSuppressFunc_;
-        result.commentOverride_ = internalGetCommentOverride();
-        result.commentOverride_.makeImmutable();
-        result.readOnlyOverride_ = internalGetReadOnlyOverride();
-        result.readOnlyOverride_.makeImmutable();
         result.terraformComputed_ = terraformComputed_;
-        result.cliName_ = cliName_;
-        result.cliJsonName_ = cliJsonName_;
-        result.jsonGatewayName_ = jsonGatewayName_;
         if (customBuilder_ == null) {
           result.custom_ = custom_;
         } else {
           result.custom_ = customBuilder_.build();
         }
+        result.readOnlyOverride_ = internalGetReadOnlyOverride();
+        result.readOnlyOverride_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -3408,28 +6275,14 @@ public final class Options {
           terraformDiffSuppressFunc_ = other.terraformDiffSuppressFunc_;
           onChanged();
         }
-        internalGetMutableCommentOverride().mergeFrom(
-            other.internalGetCommentOverride());
-        internalGetMutableReadOnlyOverride().mergeFrom(
-            other.internalGetReadOnlyOverride());
         if (other.getTerraformComputed() != false) {
           setTerraformComputed(other.getTerraformComputed());
-        }
-        if (!other.getCliName().isEmpty()) {
-          cliName_ = other.cliName_;
-          onChanged();
-        }
-        if (!other.getCliJsonName().isEmpty()) {
-          cliJsonName_ = other.cliJsonName_;
-          onChanged();
-        }
-        if (!other.getJsonGatewayName().isEmpty()) {
-          jsonGatewayName_ = other.jsonGatewayName_;
-          onChanged();
         }
         if (other.hasCustom()) {
           mergeCustom(other.getCustom());
         }
+        internalGetMutableReadOnlyOverride().mergeFrom(
+            other.internalGetReadOnlyOverride());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4015,321 +6868,6 @@ public final class Options {
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> commentOverride_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetCommentOverride() {
-        if (commentOverride_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              CommentOverrideDefaultEntryHolder.defaultEntry);
-        }
-        return commentOverride_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableCommentOverride() {
-        onChanged();;
-        if (commentOverride_ == null) {
-          commentOverride_ = com.google.protobuf.MapField.newMapField(
-              CommentOverrideDefaultEntryHolder.defaultEntry);
-        }
-        if (!commentOverride_.isMutable()) {
-          commentOverride_ = commentOverride_.copy();
-        }
-        return commentOverride_;
-      }
-
-      public int getCommentOverrideCount() {
-        return internalGetCommentOverride().getMap().size();
-      }
-      /**
-       * <pre>
-       * comment_override replaces the entire doc string for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsCommentOverride(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetCommentOverride().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getCommentOverrideMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getCommentOverride() {
-        return getCommentOverrideMap();
-      }
-      /**
-       * <pre>
-       * comment_override replaces the entire doc string for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.String, java.lang.String> getCommentOverrideMap() {
-        return internalGetCommentOverride().getMap();
-      }
-      /**
-       * <pre>
-       * comment_override replaces the entire doc string for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-       */
-      @java.lang.Override
-
-      public java.lang.String getCommentOverrideOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetCommentOverride().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * comment_override replaces the entire doc string for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-       */
-      @java.lang.Override
-
-      public java.lang.String getCommentOverrideOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetCommentOverride().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearCommentOverride() {
-        internalGetMutableCommentOverride().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * comment_override replaces the entire doc string for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-       */
-
-      public Builder removeCommentOverride(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableCommentOverride().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableCommentOverride() {
-        return internalGetMutableCommentOverride().getMutableMap();
-      }
-      /**
-       * <pre>
-       * comment_override replaces the entire doc string for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-       */
-      public Builder putCommentOverride(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
-        internalGetMutableCommentOverride().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * comment_override replaces the entire doc string for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; comment_override = 1941320;</code>
-       */
-
-      public Builder putAllCommentOverride(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableCommentOverride().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.Boolean> readOnlyOverride_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
-      internalGetReadOnlyOverride() {
-        if (readOnlyOverride_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
-        }
-        return readOnlyOverride_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
-      internalGetMutableReadOnlyOverride() {
-        onChanged();;
-        if (readOnlyOverride_ == null) {
-          readOnlyOverride_ = com.google.protobuf.MapField.newMapField(
-              ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
-        }
-        if (!readOnlyOverride_.isMutable()) {
-          readOnlyOverride_ = readOnlyOverride_.copy();
-        }
-        return readOnlyOverride_;
-      }
-
-      public int getReadOnlyOverrideCount() {
-        return internalGetReadOnlyOverride().getMap().size();
-      }
-      /**
-       * <pre>
-       * read_only_override overrides the read_only field for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsReadOnlyOverride(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetReadOnlyOverride().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getReadOnlyOverrideMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverride() {
-        return getReadOnlyOverrideMap();
-      }
-      /**
-       * <pre>
-       * read_only_override overrides the read_only field for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverrideMap() {
-        return internalGetReadOnlyOverride().getMap();
-      }
-      /**
-       * <pre>
-       * read_only_override overrides the read_only field for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-       */
-      @java.lang.Override
-
-      public boolean getReadOnlyOverrideOrDefault(
-          java.lang.String key,
-          boolean defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Boolean> map =
-            internalGetReadOnlyOverride().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * read_only_override overrides the read_only field for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-       */
-      @java.lang.Override
-
-      public boolean getReadOnlyOverrideOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Boolean> map =
-            internalGetReadOnlyOverride().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearReadOnlyOverride() {
-        internalGetMutableReadOnlyOverride().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * read_only_override overrides the read_only field for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-       */
-
-      public Builder removeReadOnlyOverride(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableReadOnlyOverride().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Boolean>
-      getMutableReadOnlyOverride() {
-        return internalGetMutableReadOnlyOverride().getMutableMap();
-      }
-      /**
-       * <pre>
-       * read_only_override overrides the read_only field for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-       */
-      public Builder putReadOnlyOverride(
-          java.lang.String key,
-          boolean value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        
-        internalGetMutableReadOnlyOverride().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * read_only_override overrides the read_only field for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; read_only_override = 1941321;</code>
-       */
-
-      public Builder putAllReadOnlyOverride(
-          java.util.Map<java.lang.String, java.lang.Boolean> values) {
-        internalGetMutableReadOnlyOverride().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
       private boolean terraformComputed_ ;
       /**
        * <pre>
@@ -4382,259 +6920,31 @@ public final class Options {
         return this;
       }
 
-      private java.lang.Object cliName_ = "";
-      /**
-       * <code>string cli_name = 1941311;</code>
-       * @return The cliName.
-       */
-      public java.lang.String getCliName() {
-        java.lang.Object ref = cliName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cliName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string cli_name = 1941311;</code>
-       * @return The bytes for cliName.
-       */
-      public com.google.protobuf.ByteString
-          getCliNameBytes() {
-        java.lang.Object ref = cliName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cliName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string cli_name = 1941311;</code>
-       * @param value The cliName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cliName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_name = 1941311;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCliName() {
-        
-        cliName_ = getDefaultInstance().getCliName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_name = 1941311;</code>
-       * @param value The bytes for cliName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cliName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cliJsonName_ = "";
-      /**
-       * <code>string cli_json_name = 1941312;</code>
-       * @return The cliJsonName.
-       */
-      public java.lang.String getCliJsonName() {
-        java.lang.Object ref = cliJsonName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cliJsonName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string cli_json_name = 1941312;</code>
-       * @return The bytes for cliJsonName.
-       */
-      public com.google.protobuf.ByteString
-          getCliJsonNameBytes() {
-        java.lang.Object ref = cliJsonName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cliJsonName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string cli_json_name = 1941312;</code>
-       * @param value The cliJsonName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliJsonName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cliJsonName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_json_name = 1941312;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCliJsonName() {
-        
-        cliJsonName_ = getDefaultInstance().getCliJsonName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_json_name = 1941312;</code>
-       * @param value The bytes for cliJsonName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliJsonNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cliJsonName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object jsonGatewayName_ = "";
-      /**
-       * <code>string json_gateway_name = 1941313;</code>
-       * @return The jsonGatewayName.
-       */
-      public java.lang.String getJsonGatewayName() {
-        java.lang.Object ref = jsonGatewayName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          jsonGatewayName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string json_gateway_name = 1941313;</code>
-       * @return The bytes for jsonGatewayName.
-       */
-      public com.google.protobuf.ByteString
-          getJsonGatewayNameBytes() {
-        java.lang.Object ref = jsonGatewayName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          jsonGatewayName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string json_gateway_name = 1941313;</code>
-       * @param value The jsonGatewayName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonGatewayName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        jsonGatewayName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json_gateway_name = 1941313;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJsonGatewayName() {
-        
-        jsonGatewayName_ = getDefaultInstance().getJsonGatewayName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json_gateway_name = 1941313;</code>
-       * @param value The bytes for jsonGatewayName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonGatewayNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        jsonGatewayName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
+      private com.strongdm.api.v1.plumbing.Options.CustomOptions custom_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> customBuilder_;
+          com.strongdm.api.v1.plumbing.Options.CustomOptions, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder> customBuilder_;
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        * @return Whether the custom field is set.
        */
       public boolean hasCustom() {
         return customBuilder_ != null || custom_ != null;
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        * @return The custom.
        */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
+      public com.strongdm.api.v1.plumbing.Options.CustomOptions getCustom() {
         if (customBuilder_ == null) {
-          return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
+          return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
         } else {
           return customBuilder_.getMessage();
         }
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        */
-      public Builder setCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
+      public Builder setCustom(com.strongdm.api.v1.plumbing.Options.CustomOptions value) {
         if (customBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4648,10 +6958,10 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        */
       public Builder setCustom(
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder builderForValue) {
+          com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder builderForValue) {
         if (customBuilder_ == null) {
           custom_ = builderForValue.build();
           onChanged();
@@ -4662,13 +6972,13 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        */
-      public Builder mergeCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
+      public Builder mergeCustom(com.strongdm.api.v1.plumbing.Options.CustomOptions value) {
         if (customBuilder_ == null) {
           if (custom_ != null) {
             custom_ =
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
+              com.strongdm.api.v1.plumbing.Options.CustomOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
           } else {
             custom_ = value;
           }
@@ -4680,7 +6990,7 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        */
       public Builder clearCustom() {
         if (customBuilder_ == null) {
@@ -4694,39 +7004,195 @@ public final class Options {
         return this;
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder getCustomBuilder() {
+      public com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder getCustomBuilder() {
         
         onChanged();
         return getCustomFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
+      public com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder getCustomOrBuilder() {
         if (customBuilder_ != null) {
           return customBuilder_.getMessageOrBuilder();
         } else {
           return custom_ == null ?
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
+              com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance() : custom_;
         }
       }
       /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
+       * <code>.v1.CustomOptions custom = 1941305;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> 
+          com.strongdm.api.v1.plumbing.Options.CustomOptions, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder> 
           getCustomFieldBuilder() {
         if (customBuilder_ == null) {
           customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder>(
+              com.strongdm.api.v1.plumbing.Options.CustomOptions, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder>(
                   getCustom(),
                   getParentForChildren(),
                   isClean());
           custom_ = null;
         }
         return customBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> readOnlyOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetReadOnlyOverride() {
+        if (readOnlyOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
+        }
+        return readOnlyOverride_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetMutableReadOnlyOverride() {
+        onChanged();;
+        if (readOnlyOverride_ == null) {
+          readOnlyOverride_ = com.google.protobuf.MapField.newMapField(
+              ReadOnlyOverrideDefaultEntryHolder.defaultEntry);
+        }
+        if (!readOnlyOverride_.isMutable()) {
+          readOnlyOverride_ = readOnlyOverride_.copy();
+        }
+        return readOnlyOverride_;
+      }
+
+      public int getReadOnlyOverrideCount() {
+        return internalGetReadOnlyOverride().getMap().size();
+      }
+      /**
+       * <pre>
+       * read_only_override marks the field as read-only for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsReadOnlyOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetReadOnlyOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getReadOnlyOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverride() {
+        return getReadOnlyOverrideMap();
+      }
+      /**
+       * <pre>
+       * read_only_override marks the field as read-only for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.Boolean> getReadOnlyOverrideMap() {
+        return internalGetReadOnlyOverride().getMap();
+      }
+      /**
+       * <pre>
+       * read_only_override marks the field as read-only for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public boolean getReadOnlyOverrideOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetReadOnlyOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * read_only_override marks the field as read-only for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public boolean getReadOnlyOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetReadOnlyOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearReadOnlyOverride() {
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * read_only_override marks the field as read-only for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+       */
+
+      public Builder removeReadOnlyOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+      getMutableReadOnlyOverride() {
+        return internalGetMutableReadOnlyOverride().getMutableMap();
+      }
+      /**
+       * <pre>
+       * read_only_override marks the field as read-only for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+       */
+      public Builder putReadOnlyOverride(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * read_only_override marks the field as read-only for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; read_only_override = 1941312;</code>
+       */
+
+      public Builder putAllReadOnlyOverride(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        internalGetMutableReadOnlyOverride().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4781,2477 +7247,8 @@ public final class Options {
 
   }
 
-  public interface MessageOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.MessageOptions)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * porcelain determines whether the message is exposed to the SDKs.
-     * </pre>
-     *
-     * <code>bool porcelain = 1941301;</code>
-     * @return The porcelain.
-     */
-    boolean getPorcelain();
-
-    /**
-     * <pre>
-     * Non-zero if the message is an error type. This corresponds to the gRPC status code.
-     * </pre>
-     *
-     * <code>int32 error = 1941302;</code>
-     * @return The error.
-     */
-    int getError();
-
-    /**
-     * <pre>
-     * Set this option on an RPC request message to specify which field holds
-     * the "options" for that RPC method.
-     * </pre>
-     *
-     * <code>string options_field = 1941303;</code>
-     * @return The optionsField.
-     */
-    java.lang.String getOptionsField();
-    /**
-     * <pre>
-     * Set this option on an RPC request message to specify which field holds
-     * the "options" for that RPC method.
-     * </pre>
-     *
-     * <code>string options_field = 1941303;</code>
-     * @return The bytes for optionsField.
-     */
-    com.google.protobuf.ByteString
-        getOptionsFieldBytes();
-
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     * @return Whether the custom field is set.
-     */
-    boolean hasCustom();
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     * @return The custom.
-     */
-    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom();
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     */
-    com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder();
-
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @return A list containing the targets.
-     */
-    java.util.List<java.lang.String>
-        getTargetsList();
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @return The count of targets.
-     */
-    int getTargetsCount();
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
-     */
-    java.lang.String getTargets(int index);
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
-     */
-    com.google.protobuf.ByteString
-        getTargetsBytes(int index);
-
-    /**
-     * <code>string cli_name = 1941307;</code>
-     * @return The cliName.
-     */
-    java.lang.String getCliName();
-    /**
-     * <code>string cli_name = 1941307;</code>
-     * @return The bytes for cliName.
-     */
-    com.google.protobuf.ByteString
-        getCliNameBytes();
-
-    /**
-     * <code>string cli_json_name = 1941308;</code>
-     * @return The cliJsonName.
-     */
-    java.lang.String getCliJsonName();
-    /**
-     * <code>string cli_json_name = 1941308;</code>
-     * @return The bytes for cliJsonName.
-     */
-    com.google.protobuf.ByteString
-        getCliJsonNameBytes();
-
-    /**
-     * <code>string json_gateway_name = 1941309;</code>
-     * @return The jsonGatewayName.
-     */
-    java.lang.String getJsonGatewayName();
-    /**
-     * <code>string json_gateway_name = 1941309;</code>
-     * @return The bytes for jsonGatewayName.
-     */
-    com.google.protobuf.ByteString
-        getJsonGatewayNameBytes();
-
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return Whether the terraformDocs field is set.
-     */
-    boolean hasTerraformDocs();
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return The terraformDocs.
-     */
-    com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs();
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     */
-    com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder();
-
-    /**
-     * <code>string terraform_provider_name = 1941311;</code>
-     * @return The terraformProviderName.
-     */
-    java.lang.String getTerraformProviderName();
-    /**
-     * <code>string terraform_provider_name = 1941311;</code>
-     * @return The bytes for terraformProviderName.
-     */
-    com.google.protobuf.ByteString
-        getTerraformProviderNameBytes();
-
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-    int getDeprecatedOverrideCount();
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-    boolean containsDeprecatedOverride(
-        java.lang.String key);
-    /**
-     * Use {@link #getDeprecatedOverrideMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.Boolean>
-    getDeprecatedOverride();
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-    java.util.Map<java.lang.String, java.lang.Boolean>
-    getDeprecatedOverrideMap();
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-
-    boolean getDeprecatedOverrideOrDefault(
-        java.lang.String key,
-        boolean defaultValue);
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-
-    boolean getDeprecatedOverrideOrThrow(
-        java.lang.String key);
-  }
-  /**
-   * Protobuf type {@code v1.MessageOptions}
-   */
-  public static final class MessageOptions extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.MessageOptions)
-      MessageOptionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MessageOptions.newBuilder() to construct.
-    private MessageOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private MessageOptions() {
-      optionsField_ = "";
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      cliName_ = "";
-      cliJsonName_ = "";
-      jsonGatewayName_ = "";
-      terraformProviderName_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MessageOptions();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private MessageOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 15530408: {
-
-              porcelain_ = input.readBool();
-              break;
-            }
-            case 15530416: {
-
-              error_ = input.readInt32();
-              break;
-            }
-            case 15530426: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              optionsField_ = s;
-              break;
-            }
-            case 15530434: {
-              com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder subBuilder = null;
-              if (terraformDocs_ != null) {
-                subBuilder = terraformDocs_.toBuilder();
-              }
-              terraformDocs_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.TerraformDocs.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(terraformDocs_);
-                terraformDocs_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 15530442: {
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder subBuilder = null;
-              if (custom_ != null) {
-                subBuilder = custom_.toBuilder();
-              }
-              custom_ = input.readMessage(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(custom_);
-                custom_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 15530450: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              targets_.add(s);
-              break;
-            }
-            case 15530458: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cliName_ = s;
-              break;
-            }
-            case 15530466: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cliJsonName_ = s;
-              break;
-            }
-            case 15530474: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jsonGatewayName_ = s;
-              break;
-            }
-            case 15530490: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              terraformProviderName_ = s;
-              break;
-            }
-            case 15530498: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                deprecatedOverride_ = com.google.protobuf.MapField.newMapField(
-                    DeprecatedOverrideDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
-              deprecatedOverride__ = input.readMessage(
-                  DeprecatedOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              deprecatedOverride_.getMutableMap().put(
-                  deprecatedOverride__.getKey(), deprecatedOverride__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          targets_ = targets_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 1941312:
-          return internalGetDeprecatedOverride();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Options.MessageOptions.class, com.strongdm.api.v1.plumbing.Options.MessageOptions.Builder.class);
-    }
-
-    public static final int PORCELAIN_FIELD_NUMBER = 1941301;
-    private boolean porcelain_;
-    /**
-     * <pre>
-     * porcelain determines whether the message is exposed to the SDKs.
-     * </pre>
-     *
-     * <code>bool porcelain = 1941301;</code>
-     * @return The porcelain.
-     */
-    @java.lang.Override
-    public boolean getPorcelain() {
-      return porcelain_;
-    }
-
-    public static final int ERROR_FIELD_NUMBER = 1941302;
-    private int error_;
-    /**
-     * <pre>
-     * Non-zero if the message is an error type. This corresponds to the gRPC status code.
-     * </pre>
-     *
-     * <code>int32 error = 1941302;</code>
-     * @return The error.
-     */
-    @java.lang.Override
-    public int getError() {
-      return error_;
-    }
-
-    public static final int OPTIONS_FIELD_FIELD_NUMBER = 1941303;
-    private volatile java.lang.Object optionsField_;
-    /**
-     * <pre>
-     * Set this option on an RPC request message to specify which field holds
-     * the "options" for that RPC method.
-     * </pre>
-     *
-     * <code>string options_field = 1941303;</code>
-     * @return The optionsField.
-     */
-    @java.lang.Override
-    public java.lang.String getOptionsField() {
-      java.lang.Object ref = optionsField_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        optionsField_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Set this option on an RPC request message to specify which field holds
-     * the "options" for that RPC method.
-     * </pre>
-     *
-     * <code>string options_field = 1941303;</code>
-     * @return The bytes for optionsField.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getOptionsFieldBytes() {
-      java.lang.Object ref = optionsField_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        optionsField_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CUSTOM_FIELD_NUMBER = 1941305;
-    private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     * @return Whether the custom field is set.
-     */
-    @java.lang.Override
-    public boolean hasCustom() {
-      return custom_ != null;
-    }
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     * @return The custom.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
-      return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
-    }
-    /**
-     * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
-      return getCustom();
-    }
-
-    public static final int TARGETS_FIELD_NUMBER = 1941306;
-    private com.google.protobuf.LazyStringList targets_;
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @return A list containing the targets.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTargetsList() {
-      return targets_;
-    }
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @return The count of targets.
-     */
-    public int getTargetsCount() {
-      return targets_.size();
-    }
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
-     */
-    public java.lang.String getTargets(int index) {
-      return targets_.get(index);
-    }
-    /**
-     * <pre>
-     * targets indicates that the message should only be exposed in the provided targets.
-     * </pre>
-     *
-     * <code>repeated string targets = 1941306;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getTargetsBytes(int index) {
-      return targets_.getByteString(index);
-    }
-
-    public static final int CLI_NAME_FIELD_NUMBER = 1941307;
-    private volatile java.lang.Object cliName_;
-    /**
-     * <code>string cli_name = 1941307;</code>
-     * @return The cliName.
-     */
-    @java.lang.Override
-    public java.lang.String getCliName() {
-      java.lang.Object ref = cliName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cliName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cli_name = 1941307;</code>
-     * @return The bytes for cliName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCliNameBytes() {
-      java.lang.Object ref = cliName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cliName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CLI_JSON_NAME_FIELD_NUMBER = 1941308;
-    private volatile java.lang.Object cliJsonName_;
-    /**
-     * <code>string cli_json_name = 1941308;</code>
-     * @return The cliJsonName.
-     */
-    @java.lang.Override
-    public java.lang.String getCliJsonName() {
-      java.lang.Object ref = cliJsonName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        cliJsonName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string cli_json_name = 1941308;</code>
-     * @return The bytes for cliJsonName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCliJsonNameBytes() {
-      java.lang.Object ref = cliJsonName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        cliJsonName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int JSON_GATEWAY_NAME_FIELD_NUMBER = 1941309;
-    private volatile java.lang.Object jsonGatewayName_;
-    /**
-     * <code>string json_gateway_name = 1941309;</code>
-     * @return The jsonGatewayName.
-     */
-    @java.lang.Override
-    public java.lang.String getJsonGatewayName() {
-      java.lang.Object ref = jsonGatewayName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        jsonGatewayName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string json_gateway_name = 1941309;</code>
-     * @return The bytes for jsonGatewayName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getJsonGatewayNameBytes() {
-      java.lang.Object ref = jsonGatewayName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        jsonGatewayName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TERRAFORM_DOCS_FIELD_NUMBER = 1941304;
-    private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return Whether the terraformDocs field is set.
-     */
-    @java.lang.Override
-    public boolean hasTerraformDocs() {
-      return terraformDocs_ != null;
-    }
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     * @return The terraformDocs.
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
-      return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
-    }
-    /**
-     * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
-      return getTerraformDocs();
-    }
-
-    public static final int TERRAFORM_PROVIDER_NAME_FIELD_NUMBER = 1941311;
-    private volatile java.lang.Object terraformProviderName_;
-    /**
-     * <code>string terraform_provider_name = 1941311;</code>
-     * @return The terraformProviderName.
-     */
-    @java.lang.Override
-    public java.lang.String getTerraformProviderName() {
-      java.lang.Object ref = terraformProviderName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        terraformProviderName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string terraform_provider_name = 1941311;</code>
-     * @return The bytes for terraformProviderName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTerraformProviderNameBytes() {
-      java.lang.Object ref = terraformProviderName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        terraformProviderName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DEPRECATED_OVERRIDE_FIELD_NUMBER = 1941312;
-    private static final class DeprecatedOverrideDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.Boolean> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
-                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.BOOL,
-                  false);
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.Boolean> deprecatedOverride_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
-    internalGetDeprecatedOverride() {
-      if (deprecatedOverride_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            DeprecatedOverrideDefaultEntryHolder.defaultEntry);
-      }
-      return deprecatedOverride_;
-    }
-
-    public int getDeprecatedOverrideCount() {
-      return internalGetDeprecatedOverride().getMap().size();
-    }
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsDeprecatedOverride(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetDeprecatedOverride().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getDeprecatedOverrideMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverride() {
-      return getDeprecatedOverrideMap();
-    }
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverrideMap() {
-      return internalGetDeprecatedOverride().getMap();
-    }
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-    @java.lang.Override
-
-    public boolean getDeprecatedOverrideOrDefault(
-        java.lang.String key,
-        boolean defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Boolean> map =
-          internalGetDeprecatedOverride().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * deprecated_override marks the message as deprecated for the given targets
-     * </pre>
-     *
-     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-     */
-    @java.lang.Override
-
-    public boolean getDeprecatedOverrideOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.Boolean> map =
-          internalGetDeprecatedOverride().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (porcelain_ != false) {
-        output.writeBool(1941301, porcelain_);
-      }
-      if (error_ != 0) {
-        output.writeInt32(1941302, error_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsField_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941303, optionsField_);
-      }
-      if (terraformDocs_ != null) {
-        output.writeMessage(1941304, getTerraformDocs());
-      }
-      if (custom_ != null) {
-        output.writeMessage(1941305, getCustom());
-      }
-      for (int i = 0; i < targets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941306, targets_.getRaw(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941307, cliName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941308, cliJsonName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941309, jsonGatewayName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, terraformProviderName_);
-      }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetDeprecatedOverride(),
-          DeprecatedOverrideDefaultEntryHolder.defaultEntry,
-          1941312);
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (porcelain_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1941301, porcelain_);
-      }
-      if (error_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1941302, error_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(optionsField_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941303, optionsField_);
-      }
-      if (terraformDocs_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1941304, getTerraformDocs());
-      }
-      if (custom_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1941305, getCustom());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < targets_.size(); i++) {
-          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
-        }
-        size += dataSize;
-        size += 4 * getTargetsList().size();
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941307, cliName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cliJsonName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941308, cliJsonName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jsonGatewayName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941309, jsonGatewayName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformProviderName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, terraformProviderName_);
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
-           : internalGetDeprecatedOverride().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
-        deprecatedOverride__ = DeprecatedOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1941312, deprecatedOverride__);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.MessageOptions)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.Options.MessageOptions other = (com.strongdm.api.v1.plumbing.Options.MessageOptions) obj;
-
-      if (getPorcelain()
-          != other.getPorcelain()) return false;
-      if (getError()
-          != other.getError()) return false;
-      if (!getOptionsField()
-          .equals(other.getOptionsField())) return false;
-      if (hasCustom() != other.hasCustom()) return false;
-      if (hasCustom()) {
-        if (!getCustom()
-            .equals(other.getCustom())) return false;
-      }
-      if (!getTargetsList()
-          .equals(other.getTargetsList())) return false;
-      if (!getCliName()
-          .equals(other.getCliName())) return false;
-      if (!getCliJsonName()
-          .equals(other.getCliJsonName())) return false;
-      if (!getJsonGatewayName()
-          .equals(other.getJsonGatewayName())) return false;
-      if (hasTerraformDocs() != other.hasTerraformDocs()) return false;
-      if (hasTerraformDocs()) {
-        if (!getTerraformDocs()
-            .equals(other.getTerraformDocs())) return false;
-      }
-      if (!getTerraformProviderName()
-          .equals(other.getTerraformProviderName())) return false;
-      if (!internalGetDeprecatedOverride().equals(
-          other.internalGetDeprecatedOverride())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PORCELAIN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPorcelain());
-      hash = (37 * hash) + ERROR_FIELD_NUMBER;
-      hash = (53 * hash) + getError();
-      hash = (37 * hash) + OPTIONS_FIELD_FIELD_NUMBER;
-      hash = (53 * hash) + getOptionsField().hashCode();
-      if (hasCustom()) {
-        hash = (37 * hash) + CUSTOM_FIELD_NUMBER;
-        hash = (53 * hash) + getCustom().hashCode();
-      }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
-      }
-      hash = (37 * hash) + CLI_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCliName().hashCode();
-      hash = (37 * hash) + CLI_JSON_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getCliJsonName().hashCode();
-      hash = (37 * hash) + JSON_GATEWAY_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getJsonGatewayName().hashCode();
-      if (hasTerraformDocs()) {
-        hash = (37 * hash) + TERRAFORM_DOCS_FIELD_NUMBER;
-        hash = (53 * hash) + getTerraformDocs().hashCode();
-      }
-      hash = (37 * hash) + TERRAFORM_PROVIDER_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getTerraformProviderName().hashCode();
-      if (!internalGetDeprecatedOverride().getMap().isEmpty()) {
-        hash = (37 * hash) + DEPRECATED_OVERRIDE_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetDeprecatedOverride().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.MessageOptions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code v1.MessageOptions}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.MessageOptions)
-        com.strongdm.api.v1.plumbing.Options.MessageOptionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 1941312:
-            return internalGetDeprecatedOverride();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 1941312:
-            return internalGetMutableDeprecatedOverride();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Options.MessageOptions.class, com.strongdm.api.v1.plumbing.Options.MessageOptions.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.Options.MessageOptions.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        porcelain_ = false;
-
-        error_ = 0;
-
-        optionsField_ = "";
-
-        if (customBuilder_ == null) {
-          custom_ = null;
-        } else {
-          custom_ = null;
-          customBuilder_ = null;
-        }
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        cliName_ = "";
-
-        cliJsonName_ = "";
-
-        jsonGatewayName_ = "";
-
-        if (terraformDocsBuilder_ == null) {
-          terraformDocs_ = null;
-        } else {
-          terraformDocs_ = null;
-          terraformDocsBuilder_ = null;
-        }
-        terraformProviderName_ = "";
-
-        internalGetMutableDeprecatedOverride().clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_MessageOptions_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.MessageOptions getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Options.MessageOptions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.MessageOptions build() {
-        com.strongdm.api.v1.plumbing.Options.MessageOptions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.MessageOptions buildPartial() {
-        com.strongdm.api.v1.plumbing.Options.MessageOptions result = new com.strongdm.api.v1.plumbing.Options.MessageOptions(this);
-        int from_bitField0_ = bitField0_;
-        result.porcelain_ = porcelain_;
-        result.error_ = error_;
-        result.optionsField_ = optionsField_;
-        if (customBuilder_ == null) {
-          result.custom_ = custom_;
-        } else {
-          result.custom_ = customBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.targets_ = targets_;
-        result.cliName_ = cliName_;
-        result.cliJsonName_ = cliJsonName_;
-        result.jsonGatewayName_ = jsonGatewayName_;
-        if (terraformDocsBuilder_ == null) {
-          result.terraformDocs_ = terraformDocs_;
-        } else {
-          result.terraformDocs_ = terraformDocsBuilder_.build();
-        }
-        result.terraformProviderName_ = terraformProviderName_;
-        result.deprecatedOverride_ = internalGetDeprecatedOverride();
-        result.deprecatedOverride_.makeImmutable();
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Options.MessageOptions) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Options.MessageOptions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.MessageOptions other) {
-        if (other == com.strongdm.api.v1.plumbing.Options.MessageOptions.getDefaultInstance()) return this;
-        if (other.getPorcelain() != false) {
-          setPorcelain(other.getPorcelain());
-        }
-        if (other.getError() != 0) {
-          setError(other.getError());
-        }
-        if (!other.getOptionsField().isEmpty()) {
-          optionsField_ = other.optionsField_;
-          onChanged();
-        }
-        if (other.hasCustom()) {
-          mergeCustom(other.getCustom());
-        }
-        if (!other.targets_.isEmpty()) {
-          if (targets_.isEmpty()) {
-            targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureTargetsIsMutable();
-            targets_.addAll(other.targets_);
-          }
-          onChanged();
-        }
-        if (!other.getCliName().isEmpty()) {
-          cliName_ = other.cliName_;
-          onChanged();
-        }
-        if (!other.getCliJsonName().isEmpty()) {
-          cliJsonName_ = other.cliJsonName_;
-          onChanged();
-        }
-        if (!other.getJsonGatewayName().isEmpty()) {
-          jsonGatewayName_ = other.jsonGatewayName_;
-          onChanged();
-        }
-        if (other.hasTerraformDocs()) {
-          mergeTerraformDocs(other.getTerraformDocs());
-        }
-        if (!other.getTerraformProviderName().isEmpty()) {
-          terraformProviderName_ = other.terraformProviderName_;
-          onChanged();
-        }
-        internalGetMutableDeprecatedOverride().mergeFrom(
-            other.internalGetDeprecatedOverride());
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Options.MessageOptions parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Options.MessageOptions) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean porcelain_ ;
-      /**
-       * <pre>
-       * porcelain determines whether the message is exposed to the SDKs.
-       * </pre>
-       *
-       * <code>bool porcelain = 1941301;</code>
-       * @return The porcelain.
-       */
-      @java.lang.Override
-      public boolean getPorcelain() {
-        return porcelain_;
-      }
-      /**
-       * <pre>
-       * porcelain determines whether the message is exposed to the SDKs.
-       * </pre>
-       *
-       * <code>bool porcelain = 1941301;</code>
-       * @param value The porcelain to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPorcelain(boolean value) {
-        
-        porcelain_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * porcelain determines whether the message is exposed to the SDKs.
-       * </pre>
-       *
-       * <code>bool porcelain = 1941301;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPorcelain() {
-        
-        porcelain_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int error_ ;
-      /**
-       * <pre>
-       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
-       * </pre>
-       *
-       * <code>int32 error = 1941302;</code>
-       * @return The error.
-       */
-      @java.lang.Override
-      public int getError() {
-        return error_;
-      }
-      /**
-       * <pre>
-       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
-       * </pre>
-       *
-       * <code>int32 error = 1941302;</code>
-       * @param value The error to set.
-       * @return This builder for chaining.
-       */
-      public Builder setError(int value) {
-        
-        error_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Non-zero if the message is an error type. This corresponds to the gRPC status code.
-       * </pre>
-       *
-       * <code>int32 error = 1941302;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearError() {
-        
-        error_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object optionsField_ = "";
-      /**
-       * <pre>
-       * Set this option on an RPC request message to specify which field holds
-       * the "options" for that RPC method.
-       * </pre>
-       *
-       * <code>string options_field = 1941303;</code>
-       * @return The optionsField.
-       */
-      public java.lang.String getOptionsField() {
-        java.lang.Object ref = optionsField_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          optionsField_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Set this option on an RPC request message to specify which field holds
-       * the "options" for that RPC method.
-       * </pre>
-       *
-       * <code>string options_field = 1941303;</code>
-       * @return The bytes for optionsField.
-       */
-      public com.google.protobuf.ByteString
-          getOptionsFieldBytes() {
-        java.lang.Object ref = optionsField_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          optionsField_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Set this option on an RPC request message to specify which field holds
-       * the "options" for that RPC method.
-       * </pre>
-       *
-       * <code>string options_field = 1941303;</code>
-       * @param value The optionsField to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOptionsField(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        optionsField_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Set this option on an RPC request message to specify which field holds
-       * the "options" for that RPC method.
-       * </pre>
-       *
-       * <code>string options_field = 1941303;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOptionsField() {
-        
-        optionsField_ = getDefaultInstance().getOptionsField();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Set this option on an RPC request message to specify which field holds
-       * the "options" for that RPC method.
-       * </pre>
-       *
-       * <code>string options_field = 1941303;</code>
-       * @param value The bytes for optionsField to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOptionsFieldBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        optionsField_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions custom_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> customBuilder_;
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       * @return Whether the custom field is set.
-       */
-      public boolean hasCustom() {
-        return customBuilder_ != null || custom_ != null;
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       * @return The custom.
-       */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getCustom() {
-        if (customBuilder_ == null) {
-          return custom_ == null ? com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
-        } else {
-          return customBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       */
-      public Builder setCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
-        if (customBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          custom_ = value;
-          onChanged();
-        } else {
-          customBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       */
-      public Builder setCustom(
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder builderForValue) {
-        if (customBuilder_ == null) {
-          custom_ = builderForValue.build();
-          onChanged();
-        } else {
-          customBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       */
-      public Builder mergeCustom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions value) {
-        if (customBuilder_ == null) {
-          if (custom_ != null) {
-            custom_ =
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.newBuilder(custom_).mergeFrom(value).buildPartial();
-          } else {
-            custom_ = value;
-          }
-          onChanged();
-        } else {
-          customBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       */
-      public Builder clearCustom() {
-        if (customBuilder_ == null) {
-          custom_ = null;
-          onChanged();
-        } else {
-          custom_ = null;
-          customBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder getCustomBuilder() {
-        
-        onChanged();
-        return getCustomFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       */
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder getCustomOrBuilder() {
-        if (customBuilder_ != null) {
-          return customBuilder_.getMessageOrBuilder();
-        } else {
-          return custom_ == null ?
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance() : custom_;
-        }
-      }
-      /**
-       * <code>.v1.CustomPorcelainTypeOptions custom = 1941305;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder> 
-          getCustomFieldBuilder() {
-        if (customBuilder_ == null) {
-          customBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder>(
-                  getCustom(),
-                  getParentForChildren(),
-                  isClean());
-          custom_ = null;
-        }
-        return customBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @return A list containing the targets.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTargetsList() {
-        return targets_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @return The count of targets.
-       */
-      public int getTargetsCount() {
-        return targets_.size();
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @param index The index of the element to return.
-       * @return The targets at the given index.
-       */
-      public java.lang.String getTargets(int index) {
-        return targets_.get(index);
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the targets at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getTargetsBytes(int index) {
-        return targets_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @param index The index to set the value at.
-       * @param value The targets to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTargets(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @param value The targets to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTargets(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @param values The targets to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllTargets(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTargetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, targets_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTargets() {
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * targets indicates that the message should only be exposed in the provided targets.
-       * </pre>
-       *
-       * <code>repeated string targets = 1941306;</code>
-       * @param value The bytes of the targets to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTargetsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTargetsIsMutable();
-        targets_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cliName_ = "";
-      /**
-       * <code>string cli_name = 1941307;</code>
-       * @return The cliName.
-       */
-      public java.lang.String getCliName() {
-        java.lang.Object ref = cliName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cliName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string cli_name = 1941307;</code>
-       * @return The bytes for cliName.
-       */
-      public com.google.protobuf.ByteString
-          getCliNameBytes() {
-        java.lang.Object ref = cliName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cliName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string cli_name = 1941307;</code>
-       * @param value The cliName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cliName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_name = 1941307;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCliName() {
-        
-        cliName_ = getDefaultInstance().getCliName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_name = 1941307;</code>
-       * @param value The bytes for cliName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cliName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object cliJsonName_ = "";
-      /**
-       * <code>string cli_json_name = 1941308;</code>
-       * @return The cliJsonName.
-       */
-      public java.lang.String getCliJsonName() {
-        java.lang.Object ref = cliJsonName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          cliJsonName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string cli_json_name = 1941308;</code>
-       * @return The bytes for cliJsonName.
-       */
-      public com.google.protobuf.ByteString
-          getCliJsonNameBytes() {
-        java.lang.Object ref = cliJsonName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          cliJsonName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string cli_json_name = 1941308;</code>
-       * @param value The cliJsonName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliJsonName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        cliJsonName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_json_name = 1941308;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCliJsonName() {
-        
-        cliJsonName_ = getDefaultInstance().getCliJsonName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string cli_json_name = 1941308;</code>
-       * @param value The bytes for cliJsonName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCliJsonNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        cliJsonName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object jsonGatewayName_ = "";
-      /**
-       * <code>string json_gateway_name = 1941309;</code>
-       * @return The jsonGatewayName.
-       */
-      public java.lang.String getJsonGatewayName() {
-        java.lang.Object ref = jsonGatewayName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          jsonGatewayName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string json_gateway_name = 1941309;</code>
-       * @return The bytes for jsonGatewayName.
-       */
-      public com.google.protobuf.ByteString
-          getJsonGatewayNameBytes() {
-        java.lang.Object ref = jsonGatewayName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          jsonGatewayName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string json_gateway_name = 1941309;</code>
-       * @param value The jsonGatewayName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonGatewayName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        jsonGatewayName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json_gateway_name = 1941309;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJsonGatewayName() {
-        
-        jsonGatewayName_ = getDefaultInstance().getJsonGatewayName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string json_gateway_name = 1941309;</code>
-       * @param value The bytes for jsonGatewayName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJsonGatewayNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        jsonGatewayName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.strongdm.api.v1.plumbing.Options.TerraformDocs terraformDocs_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> terraformDocsBuilder_;
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       * @return Whether the terraformDocs field is set.
-       */
-      public boolean hasTerraformDocs() {
-        return terraformDocsBuilder_ != null || terraformDocs_ != null;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       * @return The terraformDocs.
-       */
-      public com.strongdm.api.v1.plumbing.Options.TerraformDocs getTerraformDocs() {
-        if (terraformDocsBuilder_ == null) {
-          return terraformDocs_ == null ? com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
-        } else {
-          return terraformDocsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder setTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
-        if (terraformDocsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          terraformDocs_ = value;
-          onChanged();
-        } else {
-          terraformDocsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder setTerraformDocs(
-          com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder builderForValue) {
-        if (terraformDocsBuilder_ == null) {
-          terraformDocs_ = builderForValue.build();
-          onChanged();
-        } else {
-          terraformDocsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder mergeTerraformDocs(com.strongdm.api.v1.plumbing.Options.TerraformDocs value) {
-        if (terraformDocsBuilder_ == null) {
-          if (terraformDocs_ != null) {
-            terraformDocs_ =
-              com.strongdm.api.v1.plumbing.Options.TerraformDocs.newBuilder(terraformDocs_).mergeFrom(value).buildPartial();
-          } else {
-            terraformDocs_ = value;
-          }
-          onChanged();
-        } else {
-          terraformDocsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public Builder clearTerraformDocs() {
-        if (terraformDocsBuilder_ == null) {
-          terraformDocs_ = null;
-          onChanged();
-        } else {
-          terraformDocs_ = null;
-          terraformDocsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder getTerraformDocsBuilder() {
-        
-        onChanged();
-        return getTerraformDocsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      public com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder getTerraformDocsOrBuilder() {
-        if (terraformDocsBuilder_ != null) {
-          return terraformDocsBuilder_.getMessageOrBuilder();
-        } else {
-          return terraformDocs_ == null ?
-              com.strongdm.api.v1.plumbing.Options.TerraformDocs.getDefaultInstance() : terraformDocs_;
-        }
-      }
-      /**
-       * <code>.v1.TerraformDocs terraform_docs = 1941304;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder> 
-          getTerraformDocsFieldBuilder() {
-        if (terraformDocsBuilder_ == null) {
-          terraformDocsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.v1.plumbing.Options.TerraformDocs, com.strongdm.api.v1.plumbing.Options.TerraformDocs.Builder, com.strongdm.api.v1.plumbing.Options.TerraformDocsOrBuilder>(
-                  getTerraformDocs(),
-                  getParentForChildren(),
-                  isClean());
-          terraformDocs_ = null;
-        }
-        return terraformDocsBuilder_;
-      }
-
-      private java.lang.Object terraformProviderName_ = "";
-      /**
-       * <code>string terraform_provider_name = 1941311;</code>
-       * @return The terraformProviderName.
-       */
-      public java.lang.String getTerraformProviderName() {
-        java.lang.Object ref = terraformProviderName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          terraformProviderName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string terraform_provider_name = 1941311;</code>
-       * @return The bytes for terraformProviderName.
-       */
-      public com.google.protobuf.ByteString
-          getTerraformProviderNameBytes() {
-        java.lang.Object ref = terraformProviderName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          terraformProviderName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string terraform_provider_name = 1941311;</code>
-       * @param value The terraformProviderName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTerraformProviderName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        terraformProviderName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string terraform_provider_name = 1941311;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTerraformProviderName() {
-        
-        terraformProviderName_ = getDefaultInstance().getTerraformProviderName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string terraform_provider_name = 1941311;</code>
-       * @param value The bytes for terraformProviderName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTerraformProviderNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        terraformProviderName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.Boolean> deprecatedOverride_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
-      internalGetDeprecatedOverride() {
-        if (deprecatedOverride_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              DeprecatedOverrideDefaultEntryHolder.defaultEntry);
-        }
-        return deprecatedOverride_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
-      internalGetMutableDeprecatedOverride() {
-        onChanged();;
-        if (deprecatedOverride_ == null) {
-          deprecatedOverride_ = com.google.protobuf.MapField.newMapField(
-              DeprecatedOverrideDefaultEntryHolder.defaultEntry);
-        }
-        if (!deprecatedOverride_.isMutable()) {
-          deprecatedOverride_ = deprecatedOverride_.copy();
-        }
-        return deprecatedOverride_;
-      }
-
-      public int getDeprecatedOverrideCount() {
-        return internalGetDeprecatedOverride().getMap().size();
-      }
-      /**
-       * <pre>
-       * deprecated_override marks the message as deprecated for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsDeprecatedOverride(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetDeprecatedOverride().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getDeprecatedOverrideMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverride() {
-        return getDeprecatedOverrideMap();
-      }
-      /**
-       * <pre>
-       * deprecated_override marks the message as deprecated for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverrideMap() {
-        return internalGetDeprecatedOverride().getMap();
-      }
-      /**
-       * <pre>
-       * deprecated_override marks the message as deprecated for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-       */
-      @java.lang.Override
-
-      public boolean getDeprecatedOverrideOrDefault(
-          java.lang.String key,
-          boolean defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Boolean> map =
-            internalGetDeprecatedOverride().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * deprecated_override marks the message as deprecated for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-       */
-      @java.lang.Override
-
-      public boolean getDeprecatedOverrideOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.Boolean> map =
-            internalGetDeprecatedOverride().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearDeprecatedOverride() {
-        internalGetMutableDeprecatedOverride().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * deprecated_override marks the message as deprecated for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-       */
-
-      public Builder removeDeprecatedOverride(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableDeprecatedOverride().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Boolean>
-      getMutableDeprecatedOverride() {
-        return internalGetMutableDeprecatedOverride().getMutableMap();
-      }
-      /**
-       * <pre>
-       * deprecated_override marks the message as deprecated for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-       */
-      public Builder putDeprecatedOverride(
-          java.lang.String key,
-          boolean value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        
-        internalGetMutableDeprecatedOverride().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * deprecated_override marks the message as deprecated for the given targets
-       * </pre>
-       *
-       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
-       */
-
-      public Builder putAllDeprecatedOverride(
-          java.util.Map<java.lang.String, java.lang.Boolean> values) {
-        internalGetMutableDeprecatedOverride().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.MessageOptions)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.MessageOptions)
-    private static final com.strongdm.api.v1.plumbing.Options.MessageOptions DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.MessageOptions();
-    }
-
-    public static com.strongdm.api.v1.plumbing.Options.MessageOptions getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<MessageOptions>
-        PARSER = new com.google.protobuf.AbstractParser<MessageOptions>() {
-      @java.lang.Override
-      public MessageOptions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MessageOptions(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<MessageOptions> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MessageOptions> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.MessageOptions getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CustomPorcelainTypeOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.CustomPorcelainTypeOptions)
+  public interface CustomOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.CustomOptions)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7342,6 +7339,168 @@ public final class Options {
 
     /**
      * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+    int getPorcelainNameOverrideCount();
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+    boolean containsPorcelainNameOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getPorcelainNameOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getPorcelainNameOverride();
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPorcelainNameOverrideMap();
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+
+    java.lang.String getPorcelainNameOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+
+    java.lang.String getPorcelainNameOverrideOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+    int getCommentOverrideCount();
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+    boolean containsCommentOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getCommentOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getCommentOverride();
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getCommentOverrideMap();
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+
+    java.lang.String getCommentOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+
+    java.lang.String getCommentOverrideOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    int getDeprecatedOverrideCount();
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    boolean containsDeprecatedOverride(
+        java.lang.String key);
+    /**
+     * Use {@link #getDeprecatedOverrideMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getDeprecatedOverride();
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Boolean>
+    getDeprecatedOverrideMap();
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+
+    boolean getDeprecatedOverrideOrDefault(
+        java.lang.String key,
+        boolean defaultValue);
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+
+    boolean getDeprecatedOverrideOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
      * terraform_elem_type controls the ElemType in Terraform. For example if
      * you have a TypeList, the ElemType determines the schema for each element
      * in the list.
@@ -7366,23 +7525,23 @@ public final class Options {
   }
   /**
    * <pre>
-   * CustomPorcelainTypeOptions allows you to create a message type that
-   * is converted from the underlying proto message into whatever representation
-   * is most appropriate in the target languages.
+   * CustomOptions contains common customization options for both messages and
+   * fields. These options allow you to customize how messages and fields appear
+   * in the SDKs.
    * </pre>
    *
-   * Protobuf type {@code v1.CustomPorcelainTypeOptions}
+   * Protobuf type {@code v1.CustomOptions}
    */
-  public static final class CustomPorcelainTypeOptions extends
+  public static final class CustomOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.CustomPorcelainTypeOptions)
-      CustomPorcelainTypeOptionsOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.CustomOptions)
+      CustomOptionsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CustomPorcelainTypeOptions.newBuilder() to construct.
-    private CustomPorcelainTypeOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CustomOptions.newBuilder() to construct.
+    private CustomOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CustomPorcelainTypeOptions() {
+    private CustomOptions() {
       converter_ = "";
       terraformElemType_ = "";
     }
@@ -7391,7 +7550,7 @@ public final class Options {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new CustomPorcelainTypeOptions();
+      return new CustomOptions();
     }
 
     @java.lang.Override
@@ -7399,7 +7558,7 @@ public final class Options {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CustomPorcelainTypeOptions(
+    private CustomOptions(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -7443,6 +7602,45 @@ public final class Options {
               terraformElemType_ = s;
               break;
             }
+            case 15530498: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                deprecatedOverride_ = com.google.protobuf.MapField.newMapField(
+                    DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+              deprecatedOverride__ = input.readMessage(
+                  DeprecatedOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              deprecatedOverride_.getMutableMap().put(
+                  deprecatedOverride__.getKey(), deprecatedOverride__.getValue());
+              break;
+            }
+            case 15530562: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                porcelainNameOverride_ = com.google.protobuf.MapField.newMapField(
+                    PorcelainNameOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              porcelainNameOverride__ = input.readMessage(
+                  PorcelainNameOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              porcelainNameOverride_.getMutableMap().put(
+                  porcelainNameOverride__.getKey(), porcelainNameOverride__.getValue());
+              break;
+            }
+            case 15530650: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                commentOverride_ = com.google.protobuf.MapField.newMapField(
+                    CommentOverrideDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              commentOverride__ = input.readMessage(
+                  CommentOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              commentOverride_.getMutableMap().put(
+                  commentOverride__.getKey(), commentOverride__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7464,7 +7662,7 @@ public final class Options {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -7474,6 +7672,12 @@ public final class Options {
       switch (number) {
         case 1941310:
           return internalGetPorcelainTypeOverride();
+        case 1941320:
+          return internalGetPorcelainNameOverride();
+        case 1941331:
+          return internalGetCommentOverride();
+        case 1941312:
+          return internalGetDeprecatedOverride();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -7482,9 +7686,9 @@ public final class Options {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable
+      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.class, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder.class);
+              com.strongdm.api.v1.plumbing.Options.CustomOptions.class, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder.class);
     }
 
     public static final int CONVERTER_FIELD_NUMBER = 1941309;
@@ -7551,7 +7755,7 @@ public final class Options {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor, 
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -7642,6 +7846,297 @@ public final class Options {
       return map.get(key);
     }
 
+    public static final int PORCELAIN_NAME_OVERRIDE_FIELD_NUMBER = 1941320;
+    private static final class PorcelainNameOverrideDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_PorcelainNameOverrideEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> porcelainNameOverride_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetPorcelainNameOverride() {
+      if (porcelainNameOverride_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PorcelainNameOverrideDefaultEntryHolder.defaultEntry);
+      }
+      return porcelainNameOverride_;
+    }
+
+    public int getPorcelainNameOverrideCount() {
+      return internalGetPorcelainNameOverride().getMap().size();
+    }
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsPorcelainNameOverride(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetPorcelainNameOverride().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPorcelainNameOverrideMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getPorcelainNameOverride() {
+      return getPorcelainNameOverrideMap();
+    }
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getPorcelainNameOverrideMap() {
+      return internalGetPorcelainNameOverride().getMap();
+    }
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPorcelainNameOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetPorcelainNameOverride().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * porcelain_name_override overrides the porcelain name of the field or message
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getPorcelainNameOverrideOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetPorcelainNameOverride().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int COMMENT_OVERRIDE_FIELD_NUMBER = 1941331;
+    private static final class CommentOverrideDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_CommentOverrideEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> commentOverride_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetCommentOverride() {
+      if (commentOverride_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            CommentOverrideDefaultEntryHolder.defaultEntry);
+      }
+      return commentOverride_;
+    }
+
+    public int getCommentOverrideCount() {
+      return internalGetCommentOverride().getMap().size();
+    }
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsCommentOverride(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetCommentOverride().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getCommentOverrideMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getCommentOverride() {
+      return getCommentOverrideMap();
+    }
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getCommentOverrideMap() {
+      return internalGetCommentOverride().getMap();
+    }
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getCommentOverrideOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetCommentOverride().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * comment_override replaces the entire doc string for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getCommentOverrideOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetCommentOverride().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int DEPRECATED_OVERRIDE_FIELD_NUMBER = 1941312;
+    private static final class DeprecatedOverrideDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Boolean> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Boolean>newDefaultInstance(
+                  com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_DeprecatedOverrideEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BOOL,
+                  false);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Boolean> deprecatedOverride_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+    internalGetDeprecatedOverride() {
+      if (deprecatedOverride_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+      }
+      return deprecatedOverride_;
+    }
+
+    public int getDeprecatedOverrideCount() {
+      return internalGetDeprecatedOverride().getMap().size();
+    }
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsDeprecatedOverride(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetDeprecatedOverride().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getDeprecatedOverrideMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverride() {
+      return getDeprecatedOverrideMap();
+    }
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverrideMap() {
+      return internalGetDeprecatedOverride().getMap();
+    }
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    @java.lang.Override
+
+    public boolean getDeprecatedOverrideOrDefault(
+        java.lang.String key,
+        boolean defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetDeprecatedOverride().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * deprecated_override marks the message or field as deprecated for the given targets
+     * </pre>
+     *
+     * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+     */
+    @java.lang.Override
+
+    public boolean getDeprecatedOverrideOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.Boolean> map =
+          internalGetDeprecatedOverride().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     public static final int TERRAFORM_ELEM_TYPE_FIELD_NUMBER = 1941311;
     private volatile java.lang.Object terraformElemType_;
     /**
@@ -7718,6 +8213,24 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformElemType_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941311, terraformElemType_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetDeprecatedOverride(),
+          DeprecatedOverrideDefaultEntryHolder.defaultEntry,
+          1941312);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetPorcelainNameOverride(),
+          PorcelainNameOverrideDefaultEntryHolder.defaultEntry,
+          1941320);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetCommentOverride(),
+          CommentOverrideDefaultEntryHolder.defaultEntry,
+          1941331);
       unknownFields.writeTo(output);
     }
 
@@ -7743,6 +8256,36 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(terraformElemType_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941311, terraformElemType_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.Boolean> entry
+           : internalGetDeprecatedOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Boolean>
+        deprecatedOverride__ = DeprecatedOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1941312, deprecatedOverride__);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetPorcelainNameOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        porcelainNameOverride__ = PorcelainNameOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1941320, porcelainNameOverride__);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetCommentOverride().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        commentOverride__ = CommentOverrideDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1941331, commentOverride__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7753,15 +8296,21 @@ public final class Options {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions)) {
+      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.CustomOptions)) {
         return super.equals(obj);
       }
-      com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions other = (com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions) obj;
+      com.strongdm.api.v1.plumbing.Options.CustomOptions other = (com.strongdm.api.v1.plumbing.Options.CustomOptions) obj;
 
       if (!getConverter()
           .equals(other.getConverter())) return false;
       if (!internalGetPorcelainTypeOverride().equals(
           other.internalGetPorcelainTypeOverride())) return false;
+      if (!internalGetPorcelainNameOverride().equals(
+          other.internalGetPorcelainNameOverride())) return false;
+      if (!internalGetCommentOverride().equals(
+          other.internalGetCommentOverride())) return false;
+      if (!internalGetDeprecatedOverride().equals(
+          other.internalGetDeprecatedOverride())) return false;
       if (!getTerraformElemType()
           .equals(other.getTerraformElemType())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -7781,6 +8330,18 @@ public final class Options {
         hash = (37 * hash) + PORCELAIN_TYPE_OVERRIDE_FIELD_NUMBER;
         hash = (53 * hash) + internalGetPorcelainTypeOverride().hashCode();
       }
+      if (!internalGetPorcelainNameOverride().getMap().isEmpty()) {
+        hash = (37 * hash) + PORCELAIN_NAME_OVERRIDE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetPorcelainNameOverride().hashCode();
+      }
+      if (!internalGetCommentOverride().getMap().isEmpty()) {
+        hash = (37 * hash) + COMMENT_OVERRIDE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetCommentOverride().hashCode();
+      }
+      if (!internalGetDeprecatedOverride().getMap().isEmpty()) {
+        hash = (37 * hash) + DEPRECATED_OVERRIDE_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetDeprecatedOverride().hashCode();
+      }
       hash = (37 * hash) + TERRAFORM_ELEM_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformElemType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -7788,69 +8349,69 @@ public final class Options {
       return hash;
     }
 
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(byte[] data)
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseDelimitedFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parseFrom(
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7863,7 +8424,7 @@ public final class Options {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions prototype) {
+    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.CustomOptions prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7880,20 +8441,20 @@ public final class Options {
     }
     /**
      * <pre>
-     * CustomPorcelainTypeOptions allows you to create a message type that
-     * is converted from the underlying proto message into whatever representation
-     * is most appropriate in the target languages.
+     * CustomOptions contains common customization options for both messages and
+     * fields. These options allow you to customize how messages and fields appear
+     * in the SDKs.
      * </pre>
      *
-     * Protobuf type {@code v1.CustomPorcelainTypeOptions}
+     * Protobuf type {@code v1.CustomOptions}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.CustomPorcelainTypeOptions)
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptionsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.CustomOptions)
+        com.strongdm.api.v1.plumbing.Options.CustomOptionsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -7902,6 +8463,12 @@ public final class Options {
         switch (number) {
           case 1941310:
             return internalGetPorcelainTypeOverride();
+          case 1941320:
+            return internalGetPorcelainNameOverride();
+          case 1941331:
+            return internalGetCommentOverride();
+          case 1941312:
+            return internalGetDeprecatedOverride();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -7913,6 +8480,12 @@ public final class Options {
         switch (number) {
           case 1941310:
             return internalGetMutablePorcelainTypeOverride();
+          case 1941320:
+            return internalGetMutablePorcelainNameOverride();
+          case 1941331:
+            return internalGetMutableCommentOverride();
+          case 1941312:
+            return internalGetMutableDeprecatedOverride();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -7921,12 +8494,12 @@ public final class Options {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.class, com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.Builder.class);
+                com.strongdm.api.v1.plumbing.Options.CustomOptions.class, com.strongdm.api.v1.plumbing.Options.CustomOptions.Builder.class);
       }
 
-      // Construct using com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.newBuilder()
+      // Construct using com.strongdm.api.v1.plumbing.Options.CustomOptions.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7947,6 +8520,9 @@ public final class Options {
         converter_ = "";
 
         internalGetMutablePorcelainTypeOverride().clear();
+        internalGetMutablePorcelainNameOverride().clear();
+        internalGetMutableCommentOverride().clear();
+        internalGetMutableDeprecatedOverride().clear();
         terraformElemType_ = "";
 
         return this;
@@ -7955,17 +8531,17 @@ public final class Options {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomPorcelainTypeOptions_descriptor;
+        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_CustomOptions_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance();
+      public com.strongdm.api.v1.plumbing.Options.CustomOptions getDefaultInstanceForType() {
+        return com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions build() {
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions result = buildPartial();
+      public com.strongdm.api.v1.plumbing.Options.CustomOptions build() {
+        com.strongdm.api.v1.plumbing.Options.CustomOptions result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7973,12 +8549,18 @@ public final class Options {
       }
 
       @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions buildPartial() {
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions result = new com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions(this);
+      public com.strongdm.api.v1.plumbing.Options.CustomOptions buildPartial() {
+        com.strongdm.api.v1.plumbing.Options.CustomOptions result = new com.strongdm.api.v1.plumbing.Options.CustomOptions(this);
         int from_bitField0_ = bitField0_;
         result.converter_ = converter_;
         result.porcelainTypeOverride_ = internalGetPorcelainTypeOverride();
         result.porcelainTypeOverride_.makeImmutable();
+        result.porcelainNameOverride_ = internalGetPorcelainNameOverride();
+        result.porcelainNameOverride_.makeImmutable();
+        result.commentOverride_ = internalGetCommentOverride();
+        result.commentOverride_.makeImmutable();
+        result.deprecatedOverride_ = internalGetDeprecatedOverride();
+        result.deprecatedOverride_.makeImmutable();
         result.terraformElemType_ = terraformElemType_;
         onBuilt();
         return result;
@@ -8018,22 +8600,28 @@ public final class Options {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions)other);
+        if (other instanceof com.strongdm.api.v1.plumbing.Options.CustomOptions) {
+          return mergeFrom((com.strongdm.api.v1.plumbing.Options.CustomOptions)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions other) {
-        if (other == com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.CustomOptions other) {
+        if (other == com.strongdm.api.v1.plumbing.Options.CustomOptions.getDefaultInstance()) return this;
         if (!other.getConverter().isEmpty()) {
           converter_ = other.converter_;
           onChanged();
         }
         internalGetMutablePorcelainTypeOverride().mergeFrom(
             other.internalGetPorcelainTypeOverride());
+        internalGetMutablePorcelainNameOverride().mergeFrom(
+            other.internalGetPorcelainNameOverride());
+        internalGetMutableCommentOverride().mergeFrom(
+            other.internalGetCommentOverride());
+        internalGetMutableDeprecatedOverride().mergeFrom(
+            other.internalGetDeprecatedOverride());
         if (!other.getTerraformElemType().isEmpty()) {
           terraformElemType_ = other.terraformElemType_;
           onChanged();
@@ -8053,11 +8641,11 @@ public final class Options {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions parsedMessage = null;
+        com.strongdm.api.v1.plumbing.Options.CustomOptions parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.v1.plumbing.Options.CustomOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8353,6 +8941,480 @@ public final class Options {
         return this;
       }
 
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> porcelainNameOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetPorcelainNameOverride() {
+        if (porcelainNameOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PorcelainNameOverrideDefaultEntryHolder.defaultEntry);
+        }
+        return porcelainNameOverride_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutablePorcelainNameOverride() {
+        onChanged();;
+        if (porcelainNameOverride_ == null) {
+          porcelainNameOverride_ = com.google.protobuf.MapField.newMapField(
+              PorcelainNameOverrideDefaultEntryHolder.defaultEntry);
+        }
+        if (!porcelainNameOverride_.isMutable()) {
+          porcelainNameOverride_ = porcelainNameOverride_.copy();
+        }
+        return porcelainNameOverride_;
+      }
+
+      public int getPorcelainNameOverrideCount() {
+        return internalGetPorcelainNameOverride().getMap().size();
+      }
+      /**
+       * <pre>
+       * porcelain_name_override overrides the porcelain name of the field or message
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsPorcelainNameOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetPorcelainNameOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPorcelainNameOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getPorcelainNameOverride() {
+        return getPorcelainNameOverrideMap();
+      }
+      /**
+       * <pre>
+       * porcelain_name_override overrides the porcelain name of the field or message
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getPorcelainNameOverrideMap() {
+        return internalGetPorcelainNameOverride().getMap();
+      }
+      /**
+       * <pre>
+       * porcelain_name_override overrides the porcelain name of the field or message
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPorcelainNameOverrideOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetPorcelainNameOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * porcelain_name_override overrides the porcelain name of the field or message
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getPorcelainNameOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetPorcelainNameOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearPorcelainNameOverride() {
+        internalGetMutablePorcelainNameOverride().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * porcelain_name_override overrides the porcelain name of the field or message
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+       */
+
+      public Builder removePorcelainNameOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutablePorcelainNameOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutablePorcelainNameOverride() {
+        return internalGetMutablePorcelainNameOverride().getMutableMap();
+      }
+      /**
+       * <pre>
+       * porcelain_name_override overrides the porcelain name of the field or message
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+       */
+      public Builder putPorcelainNameOverride(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutablePorcelainNameOverride().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * porcelain_name_override overrides the porcelain name of the field or message
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; porcelain_name_override = 1941320;</code>
+       */
+
+      public Builder putAllPorcelainNameOverride(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutablePorcelainNameOverride().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> commentOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetCommentOverride() {
+        if (commentOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              CommentOverrideDefaultEntryHolder.defaultEntry);
+        }
+        return commentOverride_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableCommentOverride() {
+        onChanged();;
+        if (commentOverride_ == null) {
+          commentOverride_ = com.google.protobuf.MapField.newMapField(
+              CommentOverrideDefaultEntryHolder.defaultEntry);
+        }
+        if (!commentOverride_.isMutable()) {
+          commentOverride_ = commentOverride_.copy();
+        }
+        return commentOverride_;
+      }
+
+      public int getCommentOverrideCount() {
+        return internalGetCommentOverride().getMap().size();
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsCommentOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetCommentOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getCommentOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getCommentOverride() {
+        return getCommentOverrideMap();
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getCommentOverrideMap() {
+        return internalGetCommentOverride().getMap();
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getCommentOverrideOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetCommentOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getCommentOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetCommentOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearCommentOverride() {
+        internalGetMutableCommentOverride().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+       */
+
+      public Builder removeCommentOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableCommentOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableCommentOverride() {
+        return internalGetMutableCommentOverride().getMutableMap();
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+       */
+      public Builder putCommentOverride(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableCommentOverride().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * comment_override replaces the entire doc string for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; comment_override = 1941331;</code>
+       */
+
+      public Builder putAllCommentOverride(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableCommentOverride().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Boolean> deprecatedOverride_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetDeprecatedOverride() {
+        if (deprecatedOverride_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+        }
+        return deprecatedOverride_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Boolean>
+      internalGetMutableDeprecatedOverride() {
+        onChanged();;
+        if (deprecatedOverride_ == null) {
+          deprecatedOverride_ = com.google.protobuf.MapField.newMapField(
+              DeprecatedOverrideDefaultEntryHolder.defaultEntry);
+        }
+        if (!deprecatedOverride_.isMutable()) {
+          deprecatedOverride_ = deprecatedOverride_.copy();
+        }
+        return deprecatedOverride_;
+      }
+
+      public int getDeprecatedOverrideCount() {
+        return internalGetDeprecatedOverride().getMap().size();
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message or field as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsDeprecatedOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetDeprecatedOverride().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getDeprecatedOverrideMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverride() {
+        return getDeprecatedOverrideMap();
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message or field as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.Boolean> getDeprecatedOverrideMap() {
+        return internalGetDeprecatedOverride().getMap();
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message or field as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public boolean getDeprecatedOverrideOrDefault(
+          java.lang.String key,
+          boolean defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetDeprecatedOverride().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message or field as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      @java.lang.Override
+
+      public boolean getDeprecatedOverrideOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.Boolean> map =
+            internalGetDeprecatedOverride().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearDeprecatedOverride() {
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message or field as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+
+      public Builder removeDeprecatedOverride(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Boolean>
+      getMutableDeprecatedOverride() {
+        return internalGetMutableDeprecatedOverride().getMutableMap();
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message or field as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+      public Builder putDeprecatedOverride(
+          java.lang.String key,
+          boolean value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * deprecated_override marks the message or field as deprecated for the given targets
+       * </pre>
+       *
+       * <code>map&lt;string, bool&gt; deprecated_override = 1941312;</code>
+       */
+
+      public Builder putAllDeprecatedOverride(
+          java.util.Map<java.lang.String, java.lang.Boolean> values) {
+        internalGetMutableDeprecatedOverride().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private java.lang.Object terraformElemType_ = "";
       /**
        * <pre>
@@ -8471,41 +9533,41 @@ public final class Options {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.CustomPorcelainTypeOptions)
+      // @@protoc_insertion_point(builder_scope:v1.CustomOptions)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.CustomPorcelainTypeOptions)
-    private static final com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.CustomOptions)
+    private static final com.strongdm.api.v1.plumbing.Options.CustomOptions DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions();
+      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.CustomOptions();
     }
 
-    public static com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getDefaultInstance() {
+    public static com.strongdm.api.v1.plumbing.Options.CustomOptions getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CustomPorcelainTypeOptions>
-        PARSER = new com.google.protobuf.AbstractParser<CustomPorcelainTypeOptions>() {
+    private static final com.google.protobuf.Parser<CustomOptions>
+        PARSER = new com.google.protobuf.AbstractParser<CustomOptions>() {
       @java.lang.Override
-      public CustomPorcelainTypeOptions parsePartialFrom(
+      public CustomOptions parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CustomPorcelainTypeOptions(input, extensionRegistry);
+        return new CustomOptions(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CustomPorcelainTypeOptions> parser() {
+    public static com.google.protobuf.Parser<CustomOptions> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CustomPorcelainTypeOptions> getParserForType() {
+    public com.google.protobuf.Parser<CustomOptions> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.CustomPorcelainTypeOptions getDefaultInstanceForType() {
+    public com.strongdm.api.v1.plumbing.Options.CustomOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9229,1593 +10291,6 @@ public final class Options {
 
   }
 
-  public interface OneofOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.OneofOptions)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @return A list containing the commonFields.
-     */
-    java.util.List<java.lang.String>
-        getCommonFieldsList();
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @return The count of commonFields.
-     */
-    int getCommonFieldsCount();
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @param index The index of the element to return.
-     * @return The commonFields at the given index.
-     */
-    java.lang.String getCommonFields(int index);
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the commonFields at the given index.
-     */
-    com.google.protobuf.ByteString
-        getCommonFieldsBytes(int index);
-  }
-  /**
-   * Protobuf type {@code v1.OneofOptions}
-   */
-  public static final class OneofOptions extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.OneofOptions)
-      OneofOptionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use OneofOptions.newBuilder() to construct.
-    private OneofOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private OneofOptions() {
-      commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new OneofOptions();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private OneofOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 15531050: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                commonFields_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              commonFields_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          commonFields_ = commonFields_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Options.OneofOptions.class, com.strongdm.api.v1.plumbing.Options.OneofOptions.Builder.class);
-    }
-
-    public static final int COMMON_FIELDS_FIELD_NUMBER = 1941381;
-    private com.google.protobuf.LazyStringList commonFields_;
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @return A list containing the commonFields.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getCommonFieldsList() {
-      return commonFields_;
-    }
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @return The count of commonFields.
-     */
-    public int getCommonFieldsCount() {
-      return commonFields_.size();
-    }
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @param index The index of the element to return.
-     * @return The commonFields at the given index.
-     */
-    public java.lang.String getCommonFields(int index) {
-      return commonFields_.get(index);
-    }
-    /**
-     * <code>repeated string common_fields = 1941381;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the commonFields at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getCommonFieldsBytes(int index) {
-      return commonFields_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < commonFields_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941381, commonFields_.getRaw(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < commonFields_.size(); i++) {
-          dataSize += computeStringSizeNoTag(commonFields_.getRaw(i));
-        }
-        size += dataSize;
-        size += 4 * getCommonFieldsList().size();
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.OneofOptions)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.Options.OneofOptions other = (com.strongdm.api.v1.plumbing.Options.OneofOptions) obj;
-
-      if (!getCommonFieldsList()
-          .equals(other.getCommonFieldsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getCommonFieldsCount() > 0) {
-        hash = (37 * hash) + COMMON_FIELDS_FIELD_NUMBER;
-        hash = (53 * hash) + getCommonFieldsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.OneofOptions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code v1.OneofOptions}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.OneofOptions)
-        com.strongdm.api.v1.plumbing.Options.OneofOptionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Options.OneofOptions.class, com.strongdm.api.v1.plumbing.Options.OneofOptions.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.Options.OneofOptions.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_OneofOptions_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.OneofOptions getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Options.OneofOptions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.OneofOptions build() {
-        com.strongdm.api.v1.plumbing.Options.OneofOptions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.OneofOptions buildPartial() {
-        com.strongdm.api.v1.plumbing.Options.OneofOptions result = new com.strongdm.api.v1.plumbing.Options.OneofOptions(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          commonFields_ = commonFields_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.commonFields_ = commonFields_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Options.OneofOptions) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Options.OneofOptions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.OneofOptions other) {
-        if (other == com.strongdm.api.v1.plumbing.Options.OneofOptions.getDefaultInstance()) return this;
-        if (!other.commonFields_.isEmpty()) {
-          if (commonFields_.isEmpty()) {
-            commonFields_ = other.commonFields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureCommonFieldsIsMutable();
-            commonFields_.addAll(other.commonFields_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Options.OneofOptions parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Options.OneofOptions) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringList commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureCommonFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          commonFields_ = new com.google.protobuf.LazyStringArrayList(commonFields_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @return A list containing the commonFields.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getCommonFieldsList() {
-        return commonFields_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @return The count of commonFields.
-       */
-      public int getCommonFieldsCount() {
-        return commonFields_.size();
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @param index The index of the element to return.
-       * @return The commonFields at the given index.
-       */
-      public java.lang.String getCommonFields(int index) {
-        return commonFields_.get(index);
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the commonFields at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getCommonFieldsBytes(int index) {
-        return commonFields_.getByteString(index);
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @param index The index to set the value at.
-       * @param value The commonFields to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCommonFields(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCommonFieldsIsMutable();
-        commonFields_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @param value The commonFields to add.
-       * @return This builder for chaining.
-       */
-      public Builder addCommonFields(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCommonFieldsIsMutable();
-        commonFields_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @param values The commonFields to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllCommonFields(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureCommonFieldsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, commonFields_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCommonFields() {
-        commonFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string common_fields = 1941381;</code>
-       * @param value The bytes of the commonFields to add.
-       * @return This builder for chaining.
-       */
-      public Builder addCommonFieldsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureCommonFieldsIsMutable();
-        commonFields_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.OneofOptions)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.OneofOptions)
-    private static final com.strongdm.api.v1.plumbing.Options.OneofOptions DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.OneofOptions();
-    }
-
-    public static com.strongdm.api.v1.plumbing.Options.OneofOptions getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<OneofOptions>
-        PARSER = new com.google.protobuf.AbstractParser<OneofOptions>() {
-      @java.lang.Override
-      public OneofOptions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OneofOptions(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<OneofOptions> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<OneofOptions> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.OneofOptions getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ServiceOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.ServiceOptions)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string main_noun = 1941400;</code>
-     * @return The mainNoun.
-     */
-    java.lang.String getMainNoun();
-    /**
-     * <code>string main_noun = 1941400;</code>
-     * @return The bytes for mainNoun.
-     */
-    com.google.protobuf.ByteString
-        getMainNounBytes();
-
-    /**
-     * <code>string id_prefix = 1941402;</code>
-     * @return The idPrefix.
-     */
-    java.lang.String getIdPrefix();
-    /**
-     * <code>string id_prefix = 1941402;</code>
-     * @return The bytes for idPrefix.
-     */
-    com.google.protobuf.ByteString
-        getIdPrefixBytes();
-
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @return A list containing the targets.
-     */
-    java.util.List<java.lang.String>
-        getTargetsList();
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @return The count of targets.
-     */
-    int getTargetsCount();
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
-     */
-    java.lang.String getTargets(int index);
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
-     */
-    com.google.protobuf.ByteString
-        getTargetsBytes(int index);
-  }
-  /**
-   * Protobuf type {@code v1.ServiceOptions}
-   */
-  public static final class ServiceOptions extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.ServiceOptions)
-      ServiceOptionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ServiceOptions.newBuilder() to construct.
-    private ServiceOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ServiceOptions() {
-      mainNoun_ = "";
-      idPrefix_ = "";
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ServiceOptions();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ServiceOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 15531202: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              mainNoun_ = s;
-              break;
-            }
-            case 15531210: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              targets_.add(s);
-              break;
-            }
-            case 15531218: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              idPrefix_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          targets_ = targets_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.strongdm.api.v1.plumbing.Options.ServiceOptions.class, com.strongdm.api.v1.plumbing.Options.ServiceOptions.Builder.class);
-    }
-
-    public static final int MAIN_NOUN_FIELD_NUMBER = 1941400;
-    private volatile java.lang.Object mainNoun_;
-    /**
-     * <code>string main_noun = 1941400;</code>
-     * @return The mainNoun.
-     */
-    @java.lang.Override
-    public java.lang.String getMainNoun() {
-      java.lang.Object ref = mainNoun_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mainNoun_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string main_noun = 1941400;</code>
-     * @return The bytes for mainNoun.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMainNounBytes() {
-      java.lang.Object ref = mainNoun_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mainNoun_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ID_PREFIX_FIELD_NUMBER = 1941402;
-    private volatile java.lang.Object idPrefix_;
-    /**
-     * <code>string id_prefix = 1941402;</code>
-     * @return The idPrefix.
-     */
-    @java.lang.Override
-    public java.lang.String getIdPrefix() {
-      java.lang.Object ref = idPrefix_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        idPrefix_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id_prefix = 1941402;</code>
-     * @return The bytes for idPrefix.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIdPrefixBytes() {
-      java.lang.Object ref = idPrefix_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        idPrefix_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TARGETS_FIELD_NUMBER = 1941401;
-    private com.google.protobuf.LazyStringList targets_;
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @return A list containing the targets.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTargetsList() {
-      return targets_;
-    }
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @return The count of targets.
-     */
-    public int getTargetsCount() {
-      return targets_.size();
-    }
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @param index The index of the element to return.
-     * @return The targets at the given index.
-     */
-    public java.lang.String getTargets(int index) {
-      return targets_.get(index);
-    }
-    /**
-     * <code>repeated string targets = 1941401;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the targets at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getTargetsBytes(int index) {
-      return targets_.getByteString(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941400, mainNoun_);
-      }
-      for (int i = 0; i < targets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941401, targets_.getRaw(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941402, idPrefix_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mainNoun_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941400, mainNoun_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < targets_.size(); i++) {
-          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
-        }
-        size += dataSize;
-        size += 4 * getTargetsList().size();
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941402, idPrefix_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.strongdm.api.v1.plumbing.Options.ServiceOptions)) {
-        return super.equals(obj);
-      }
-      com.strongdm.api.v1.plumbing.Options.ServiceOptions other = (com.strongdm.api.v1.plumbing.Options.ServiceOptions) obj;
-
-      if (!getMainNoun()
-          .equals(other.getMainNoun())) return false;
-      if (!getIdPrefix()
-          .equals(other.getIdPrefix())) return false;
-      if (!getTargetsList()
-          .equals(other.getTargetsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MAIN_NOUN_FIELD_NUMBER;
-      hash = (53 * hash) + getMainNoun().hashCode();
-      hash = (37 * hash) + ID_PREFIX_FIELD_NUMBER;
-      hash = (53 * hash) + getIdPrefix().hashCode();
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.strongdm.api.v1.plumbing.Options.ServiceOptions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code v1.ServiceOptions}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.ServiceOptions)
-        com.strongdm.api.v1.plumbing.Options.ServiceOptionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.strongdm.api.v1.plumbing.Options.ServiceOptions.class, com.strongdm.api.v1.plumbing.Options.ServiceOptions.Builder.class);
-      }
-
-      // Construct using com.strongdm.api.v1.plumbing.Options.ServiceOptions.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        mainNoun_ = "";
-
-        idPrefix_ = "";
-
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.strongdm.api.v1.plumbing.Options.internal_static_v1_ServiceOptions_descriptor;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstanceForType() {
-        return com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.ServiceOptions build() {
-        com.strongdm.api.v1.plumbing.Options.ServiceOptions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.strongdm.api.v1.plumbing.Options.ServiceOptions buildPartial() {
-        com.strongdm.api.v1.plumbing.Options.ServiceOptions result = new com.strongdm.api.v1.plumbing.Options.ServiceOptions(this);
-        int from_bitField0_ = bitField0_;
-        result.mainNoun_ = mainNoun_;
-        result.idPrefix_ = idPrefix_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.targets_ = targets_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.v1.plumbing.Options.ServiceOptions) {
-          return mergeFrom((com.strongdm.api.v1.plumbing.Options.ServiceOptions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.strongdm.api.v1.plumbing.Options.ServiceOptions other) {
-        if (other == com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance()) return this;
-        if (!other.getMainNoun().isEmpty()) {
-          mainNoun_ = other.mainNoun_;
-          onChanged();
-        }
-        if (!other.getIdPrefix().isEmpty()) {
-          idPrefix_ = other.idPrefix_;
-          onChanged();
-        }
-        if (!other.targets_.isEmpty()) {
-          if (targets_.isEmpty()) {
-            targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureTargetsIsMutable();
-            targets_.addAll(other.targets_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.strongdm.api.v1.plumbing.Options.ServiceOptions parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.v1.plumbing.Options.ServiceOptions) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object mainNoun_ = "";
-      /**
-       * <code>string main_noun = 1941400;</code>
-       * @return The mainNoun.
-       */
-      public java.lang.String getMainNoun() {
-        java.lang.Object ref = mainNoun_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mainNoun_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string main_noun = 1941400;</code>
-       * @return The bytes for mainNoun.
-       */
-      public com.google.protobuf.ByteString
-          getMainNounBytes() {
-        java.lang.Object ref = mainNoun_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mainNoun_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string main_noun = 1941400;</code>
-       * @param value The mainNoun to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMainNoun(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        mainNoun_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string main_noun = 1941400;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMainNoun() {
-        
-        mainNoun_ = getDefaultInstance().getMainNoun();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string main_noun = 1941400;</code>
-       * @param value The bytes for mainNoun to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMainNounBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        mainNoun_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object idPrefix_ = "";
-      /**
-       * <code>string id_prefix = 1941402;</code>
-       * @return The idPrefix.
-       */
-      public java.lang.String getIdPrefix() {
-        java.lang.Object ref = idPrefix_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          idPrefix_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id_prefix = 1941402;</code>
-       * @return The bytes for idPrefix.
-       */
-      public com.google.protobuf.ByteString
-          getIdPrefixBytes() {
-        java.lang.Object ref = idPrefix_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          idPrefix_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id_prefix = 1941402;</code>
-       * @param value The idPrefix to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdPrefix(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        idPrefix_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id_prefix = 1941402;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIdPrefix() {
-        
-        idPrefix_ = getDefaultInstance().getIdPrefix();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id_prefix = 1941402;</code>
-       * @param value The bytes for idPrefix to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIdPrefixBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        idPrefix_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @return A list containing the targets.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTargetsList() {
-        return targets_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @return The count of targets.
-       */
-      public int getTargetsCount() {
-        return targets_.size();
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @param index The index of the element to return.
-       * @return The targets at the given index.
-       */
-      public java.lang.String getTargets(int index) {
-        return targets_.get(index);
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the targets at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getTargetsBytes(int index) {
-        return targets_.getByteString(index);
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @param index The index to set the value at.
-       * @param value The targets to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTargets(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @param value The targets to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTargets(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @param values The targets to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllTargets(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTargetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, targets_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTargets() {
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 1941401;</code>
-       * @param value The bytes of the targets to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTargetsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTargetsIsMutable();
-        targets_.add(value);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:v1.ServiceOptions)
-    }
-
-    // @@protoc_insertion_point(class_scope:v1.ServiceOptions)
-    private static final com.strongdm.api.v1.plumbing.Options.ServiceOptions DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.strongdm.api.v1.plumbing.Options.ServiceOptions();
-    }
-
-    public static com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ServiceOptions>
-        PARSER = new com.google.protobuf.AbstractParser<ServiceOptions>() {
-      @java.lang.Override
-      public ServiceOptions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ServiceOptions(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ServiceOptions> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ServiceOptions> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.strongdm.api.v1.plumbing.Options.ServiceOptions getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public static final int METHOD_OPTIONS_FIELD_NUMBER = 1941392;
-  /**
-   * <code>extend .google.protobuf.MethodOptions { ... }</code>
-   */
-  public static final
-    com.google.protobuf.GeneratedMessage.GeneratedExtension<
-      com.google.protobuf.DescriptorProtos.MethodOptions,
-      com.strongdm.api.v1.plumbing.Options.MethodOptions> methodOptions = com.google.protobuf.GeneratedMessage
-          .newFileScopedGeneratedExtension(
-        com.strongdm.api.v1.plumbing.Options.MethodOptions.class,
-        com.strongdm.api.v1.plumbing.Options.MethodOptions.getDefaultInstance());
   public static final int FILE_OPTIONS_FIELD_NUMBER = 1941800;
   /**
    * <code>extend .google.protobuf.FileOptions { ... }</code>
@@ -10827,17 +10302,28 @@ public final class Options {
           .newFileScopedGeneratedExtension(
         com.strongdm.api.v1.plumbing.Options.FileOptions.class,
         com.strongdm.api.v1.plumbing.Options.FileOptions.getDefaultInstance());
-  public static final int FIELD_OPTIONS_FIELD_NUMBER = 1941390;
+  public static final int SERVICE_OPTIONS_FIELD_NUMBER = 1941401;
   /**
-   * <code>extend .google.protobuf.FieldOptions { ... }</code>
+   * <code>extend .google.protobuf.ServiceOptions { ... }</code>
    */
   public static final
     com.google.protobuf.GeneratedMessage.GeneratedExtension<
-      com.google.protobuf.DescriptorProtos.FieldOptions,
-      com.strongdm.api.v1.plumbing.Options.FieldOptions> fieldOptions = com.google.protobuf.GeneratedMessage
+      com.google.protobuf.DescriptorProtos.ServiceOptions,
+      com.strongdm.api.v1.plumbing.Options.ServiceOptions> serviceOptions = com.google.protobuf.GeneratedMessage
           .newFileScopedGeneratedExtension(
-        com.strongdm.api.v1.plumbing.Options.FieldOptions.class,
-        com.strongdm.api.v1.plumbing.Options.FieldOptions.getDefaultInstance());
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions.class,
+        com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance());
+  public static final int METHOD_OPTIONS_FIELD_NUMBER = 1941392;
+  /**
+   * <code>extend .google.protobuf.MethodOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.MethodOptions,
+      com.strongdm.api.v1.plumbing.Options.MethodOptions> methodOptions = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        com.strongdm.api.v1.plumbing.Options.MethodOptions.class,
+        com.strongdm.api.v1.plumbing.Options.MethodOptions.getDefaultInstance());
   public static final int MESSAGE_OPTIONS_FIELD_NUMBER = 1941391;
   /**
    * <code>extend .google.protobuf.MessageOptions { ... }</code>
@@ -10860,77 +10346,82 @@ public final class Options {
           .newFileScopedGeneratedExtension(
         com.strongdm.api.v1.plumbing.Options.OneofOptions.class,
         com.strongdm.api.v1.plumbing.Options.OneofOptions.getDefaultInstance());
-  public static final int SERVICE_OPTIONS_FIELD_NUMBER = 1941401;
+  public static final int FIELD_OPTIONS_FIELD_NUMBER = 1941390;
   /**
-   * <code>extend .google.protobuf.ServiceOptions { ... }</code>
+   * <code>extend .google.protobuf.FieldOptions { ... }</code>
    */
   public static final
     com.google.protobuf.GeneratedMessage.GeneratedExtension<
-      com.google.protobuf.DescriptorProtos.ServiceOptions,
-      com.strongdm.api.v1.plumbing.Options.ServiceOptions> serviceOptions = com.google.protobuf.GeneratedMessage
+      com.google.protobuf.DescriptorProtos.FieldOptions,
+      com.strongdm.api.v1.plumbing.Options.FieldOptions> fieldOptions = com.google.protobuf.GeneratedMessage
           .newFileScopedGeneratedExtension(
-        com.strongdm.api.v1.plumbing.Options.ServiceOptions.class,
-        com.strongdm.api.v1.plumbing.Options.ServiceOptions.getDefaultInstance());
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_MethodOptions_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_MethodOptions_fieldAccessorTable;
+        com.strongdm.api.v1.plumbing.Options.FieldOptions.class,
+        com.strongdm.api.v1.plumbing.Options.FieldOptions.getDefaultInstance());
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_FileOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_FileOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_FieldOptions_descriptor;
+    internal_static_v1_ServiceOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_FieldOptions_fieldAccessorTable;
+      internal_static_v1_ServiceOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor;
+    internal_static_v1_MethodOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_FieldOptions_CommentOverrideEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable;
+      internal_static_v1_MethodOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_MessageOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_MessageOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_MessageOptions_DeprecatedOverrideEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_CustomPorcelainTypeOptions_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_TerraformDocs_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_TerraformDocs_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_OneofOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_OneofOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_ServiceOptions_descriptor;
+    internal_static_v1_FieldOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_ServiceOptions_fieldAccessorTable;
+      internal_static_v1_FieldOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_CustomOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_CustomOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_CustomOptions_PorcelainNameOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_CustomOptions_PorcelainNameOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_CustomOptions_CommentOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_CustomOptions_CommentOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_CustomOptions_DeprecatedOverrideEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_CustomOptions_DeprecatedOverrideEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_TerraformDocs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_TerraformDocs_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10941,158 +10432,161 @@ public final class Options {
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"\204\001\n\rMethodOptions\022\020\n\006metho" +
-      "d\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecation_" +
-      "date\030\266\276v \001(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263" +
-      "\007\032\322\363\263\007\025!json_gateway_private\"X\n\013FileOpti" +
-      "ons\022\021\n\007targets\030\304\301v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_" +
-      "gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"\324" +
-      "\005\n\014FieldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010" +
-      "iterable\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\n" +
-      "write_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022" +
-      "\027\n\ris_credential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v " +
-      "\003(\t\022\035\n\023terraform_force_new\030\274\276v \001(\010\022\035\n\023te" +
-      "rraform_sensitive\030\276\276v \001(\010\022&\n\034terraform_d" +
-      "iff_suppress_func\030\307\276v \001(\t\022A\n\020comment_ove" +
-      "rride\030\310\276v \003(\0132%.v1.FieldOptions.CommentO" +
-      "verrideEntry\022D\n\022read_only_override\030\311\276v \003" +
-      "(\0132&.v1.FieldOptions.ReadOnlyOverrideEnt" +
-      "ry\022\034\n\022terraform_computed\030\312\276v \001(\010\022\022\n\010cli_" +
-      "name\030\277\276v \001(\t\022\027\n\rcli_json_name\030\300\276v \001(\t\022\033\n" +
-      "\021json_gateway_name\030\301\276v \001(\t\0220\n\006custom\030\271\276v" +
-      " \001(\0132\036.v1.CustomPorcelainTypeOptions\0326\n\024" +
-      "CommentOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\0327\n\025ReadOnlyOverrideEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:6\372\370\263\007\022\322\363\263\007" +
-      "\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_pr" +
-      "ivate\"\354\003\n\016MessageOptions\022\023\n\tporcelain\030\265\276" +
-      "v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030" +
-      "\267\276v \001(\t\0220\n\006custom\030\271\276v \001(\0132\036.v1.CustomPor" +
-      "celainTypeOptions\022\021\n\007targets\030\272\276v \003(\t\022\022\n\010" +
-      "cli_name\030\273\276v \001(\t\022\027\n\rcli_json_name\030\274\276v \001(" +
-      "\t\022\033\n\021json_gateway_name\030\275\276v \001(\t\022+\n\016terraf" +
-      "orm_docs\030\270\276v \001(\0132\021.v1.TerraformDocs\022!\n\027t" +
-      "erraform_provider_name\030\277\276v \001(\t\022I\n\023deprec" +
-      "ated_override\030\300\276v \003(\0132*.v1.MessageOption" +
-      "s.DeprecatedOverrideEntry\0329\n\027DeprecatedO" +
-      "verrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010" +
-      ":\0028\001:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!" +
-      "json_gateway_private\"\244\002\n\032CustomPorcelain" +
-      "TypeOptions\022\023\n\tconverter\030\275\276v \001(\t\022\\\n\027porc" +
-      "elain_type_override\030\276\276v \003(\01329.v1.CustomP" +
-      "orcelainTypeOptions.PorcelainTypeOverrid" +
-      "eEntry\022\035\n\023terraform_elem_type\030\277\276v \001(\t\032<\n" +
-      "\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001:6\372\370\263\007\022\322\363\263\007\r!json_gat" +
-      "eway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"\214\001\n\r" +
-      "TerraformDocs\022\037\n\025resource_example_path\030\264" +
-      "\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v \001" +
-      "(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!js" +
-      "on_gateway_private\"_\n\014OneofOptions\022\027\n\rco" +
-      "mmon_fields\030\205\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gat" +
-      "eway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"\205\001\n\016" +
-      "ServiceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\ti" +
-      "d_prefix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:6\372\370\263" +
-      "\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_gate" +
-      "way_private:K\n\016method_options\022\036.google.p" +
-      "rotobuf.MethodOptions\030\220\277v \001(\0132\021.v1.Metho" +
-      "dOptions:E\n\014file_options\022\034.google.protob" +
-      "uf.FileOptions\030\250\302v \001(\0132\017.v1.FileOptions:" +
-      "H\n\rfield_options\022\035.google.protobuf.Field" +
-      "Options\030\216\277v \001(\0132\020.v1.FieldOptions:N\n\017mes" +
-      "sage_options\022\037.google.protobuf.MessageOp" +
-      "tions\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\rone" +
-      "of_options\022\035.google.protobuf.OneofOption" +
-      "s\030\205\277v \001(\0132\020.v1.OneofOptions:N\n\017service_o" +
-      "ptions\022\037.google.protobuf.ServiceOptions\030" +
-      "\231\277v \001(\0132\022.v1.ServiceOptionsBU\n\034com.stron" +
-      "gdm.api.v1.plumbingZ5github.com/strongdm" +
-      "/strongdm-sdk-go/v2/internal/v1;v1b\006prot" +
-      "o3"
+      "criptor.proto\"X\n\013FileOptions\022\021\n\007targets\030" +
+      "\304\301v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263" +
+      "\007\025!json_gateway_private\"\205\001\n\016ServiceOptio" +
+      "ns\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030\232\277v" +
+      " \001(\t\022\021\n\007targets\030\231\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json" +
+      "_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"" +
+      "\204\001\n\rMethodOptions\022\020\n\006method\030\264\276v \001(\t\022\r\n\003u" +
+      "rl\030\265\276v \001(\t\022\032\n\020deprecation_date\030\266\276v \001(\t:6" +
+      "\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_g" +
+      "ateway_private\"\354\001\n\016MessageOptions\022\023\n\tpor" +
+      "celain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptio" +
+      "ns_field\030\267\276v \001(\t\022\021\n\007targets\030\272\276v \003(\t\022+\n\016t" +
+      "erraform_docs\030\270\276v \001(\0132\021.v1.TerraformDocs" +
+      "\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOptions:6\372" +
+      "\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_ga" +
+      "teway_private\"_\n\014OneofOptions\022\027\n\rcommon_" +
+      "fields\030\205\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372" +
+      "\370\263\007\032\322\363\263\007\025!json_gateway_private\"\202\004\n\014Field" +
+      "Options\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010iterable" +
+      "\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite_on" +
+      "ly\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris_cr" +
+      "edential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023t" +
+      "erraform_force_new\030\274\276v \001(\010\022\035\n\023terraform_" +
+      "sensitive\030\276\276v \001(\010\022&\n\034terraform_diff_supp" +
+      "ress_func\030\307\276v \001(\t\022\034\n\022terraform_computed\030" +
+      "\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOpt" +
+      "ions\022D\n\022read_only_override\030\300\276v \003(\0132&.v1." +
+      "FieldOptions.ReadOnlyOverrideEntry\0327\n\025Re" +
+      "adOnlyOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\010:\0028\001:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007" +
+      "\032\322\363\263\007\025!json_gateway_private\"\232\005\n\rCustomOp" +
+      "tions\022\023\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_" +
+      "type_override\030\276\276v \003(\0132,.v1.CustomOptions" +
+      ".PorcelainTypeOverrideEntry\022O\n\027porcelain" +
+      "_name_override\030\310\276v \003(\0132,.v1.CustomOption" +
+      "s.PorcelainNameOverrideEntry\022B\n\020comment_" +
+      "override\030\323\276v \003(\0132&.v1.CustomOptions.Comm" +
+      "entOverrideEntry\022H\n\023deprecated_override\030" +
+      "\300\276v \003(\0132).v1.CustomOptions.DeprecatedOve" +
+      "rrideEntry\022\035\n\023terraform_elem_type\030\277\276v \001(" +
+      "\t\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032PorcelainName" +
+      "OverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverr" +
+      "ideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001" +
+      ":6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json" +
+      "_gateway_private\"\214\001\n\rTerraformDocs\022\037\n\025re" +
+      "source_example_path\030\264\276v \001(\t\022\"\n\030data_sour" +
+      "ce_example_path\030\265\276v \001(\t:6\372\370\263\007\022\322\363\263\007\r!json" +
+      "_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_private:" +
+      "E\n\014file_options\022\034.google.protobuf.FileOp" +
+      "tions\030\250\302v \001(\0132\017.v1.FileOptions:N\n\017servic" +
+      "e_options\022\037.google.protobuf.ServiceOptio" +
+      "ns\030\231\277v \001(\0132\022.v1.ServiceOptions:K\n\016method" +
+      "_options\022\036.google.protobuf.MethodOptions" +
+      "\030\220\277v \001(\0132\021.v1.MethodOptions:N\n\017message_o" +
+      "ptions\022\037.google.protobuf.MessageOptions\030" +
+      "\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_opt" +
+      "ions\022\035.google.protobuf.OneofOptions\030\205\277v " +
+      "\001(\0132\020.v1.OneofOptions:H\n\rfield_options\022\035" +
+      ".google.protobuf.FieldOptions\030\216\277v \001(\0132\020." +
+      "v1.FieldOptionsBU\n\034com.strongdm.api.v1.p" +
+      "lumbingZ5github.com/strongdm/strongdm-sd" +
+      "k-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
         });
-    internal_static_v1_MethodOptions_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_v1_MethodOptions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_MethodOptions_descriptor,
-        new java.lang.String[] { "Method", "Url", "DeprecationDate", });
     internal_static_v1_FileOptions_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_v1_FileOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FileOptions_descriptor,
         new java.lang.String[] { "Targets", });
-    internal_static_v1_FieldOptions_descriptor =
+    internal_static_v1_ServiceOptions_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_v1_ServiceOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_ServiceOptions_descriptor,
+        new java.lang.String[] { "MainNoun", "IdPrefix", "Targets", });
+    internal_static_v1_MethodOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_v1_FieldOptions_fieldAccessorTable = new
+    internal_static_v1_MethodOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Porcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "CommentOverride", "ReadOnlyOverride", "TerraformComputed", "CliName", "CliJsonName", "JsonGatewayName", "Custom", });
-    internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor =
-      internal_static_v1_FieldOptions_descriptor.getNestedTypes().get(0);
-    internal_static_v1_FieldOptions_CommentOverrideEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_FieldOptions_CommentOverrideEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor =
-      internal_static_v1_FieldOptions_descriptor.getNestedTypes().get(1);
-    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        internal_static_v1_MethodOptions_descriptor,
+        new java.lang.String[] { "Method", "Url", "DeprecationDate", });
     internal_static_v1_MessageOptions_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_v1_MessageOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_MessageOptions_descriptor,
-        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Custom", "Targets", "CliName", "CliJsonName", "JsonGatewayName", "TerraformDocs", "TerraformProviderName", "DeprecatedOverride", });
-    internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor =
-      internal_static_v1_MessageOptions_descriptor.getNestedTypes().get(0);
-    internal_static_v1_MessageOptions_DeprecatedOverrideEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_MessageOptions_DeprecatedOverrideEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_v1_CustomPorcelainTypeOptions_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_v1_CustomPorcelainTypeOptions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_CustomPorcelainTypeOptions_descriptor,
-        new java.lang.String[] { "Converter", "PorcelainTypeOverride", "TerraformElemType", });
-    internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor =
-      internal_static_v1_CustomPorcelainTypeOptions_descriptor.getNestedTypes().get(0);
-    internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_CustomPorcelainTypeOptions_PorcelainTypeOverrideEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_v1_TerraformDocs_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_v1_TerraformDocs_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_TerraformDocs_descriptor,
-        new java.lang.String[] { "ResourceExamplePath", "DataSourceExamplePath", });
+        new java.lang.String[] { "Porcelain", "Error", "OptionsField", "Targets", "TerraformDocs", "Custom", });
     internal_static_v1_OneofOptions_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_v1_OneofOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_OneofOptions_descriptor,
         new java.lang.String[] { "CommonFields", });
-    internal_static_v1_ServiceOptions_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_v1_ServiceOptions_fieldAccessorTable = new
+    internal_static_v1_FieldOptions_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_ServiceOptions_descriptor,
-        new java.lang.String[] { "MainNoun", "IdPrefix", "Targets", });
-    methodOptions.internalInit(descriptor.getExtensions().get(0));
-    fileOptions.internalInit(descriptor.getExtensions().get(1));
-    fieldOptions.internalInit(descriptor.getExtensions().get(2));
+        internal_static_v1_FieldOptions_descriptor,
+        new java.lang.String[] { "Porcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformComputed", "Custom", "ReadOnlyOverride", });
+    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor =
+      internal_static_v1_FieldOptions_descriptor.getNestedTypes().get(0);
+    internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_v1_CustomOptions_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_v1_CustomOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_CustomOptions_descriptor,
+        new java.lang.String[] { "Converter", "PorcelainTypeOverride", "PorcelainNameOverride", "CommentOverride", "DeprecatedOverride", "TerraformElemType", });
+    internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_descriptor =
+      internal_static_v1_CustomOptions_descriptor.getNestedTypes().get(0);
+    internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_v1_CustomOptions_PorcelainNameOverrideEntry_descriptor =
+      internal_static_v1_CustomOptions_descriptor.getNestedTypes().get(1);
+    internal_static_v1_CustomOptions_PorcelainNameOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_CustomOptions_PorcelainNameOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_v1_CustomOptions_CommentOverrideEntry_descriptor =
+      internal_static_v1_CustomOptions_descriptor.getNestedTypes().get(2);
+    internal_static_v1_CustomOptions_CommentOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_CustomOptions_CommentOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_v1_CustomOptions_DeprecatedOverrideEntry_descriptor =
+      internal_static_v1_CustomOptions_descriptor.getNestedTypes().get(3);
+    internal_static_v1_CustomOptions_DeprecatedOverrideEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_CustomOptions_DeprecatedOverrideEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_v1_TerraformDocs_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_v1_TerraformDocs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_TerraformDocs_descriptor,
+        new java.lang.String[] { "ResourceExamplePath", "DataSourceExamplePath", });
+    fileOptions.internalInit(descriptor.getExtensions().get(0));
+    serviceOptions.internalInit(descriptor.getExtensions().get(1));
+    methodOptions.internalInit(descriptor.getExtensions().get(2));
     messageOptions.internalInit(descriptor.getExtensions().get(3));
     oneofOptions.internalInit(descriptor.getExtensions().get(4));
-    serviceOptions.internalInit(descriptor.getExtensions().get(5));
+    fieldOptions.internalInit(descriptor.getExtensions().get(5));
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.messageOptions);
