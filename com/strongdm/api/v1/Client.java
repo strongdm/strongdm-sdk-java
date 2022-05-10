@@ -42,6 +42,8 @@ public class Client {
   private final int defaultBaseRetryDelay = 30; // 30 ms
   private final int defaultMaxRetryDelay = 300000; // 300 seconds
 
+  private boolean exposeRateLimitErrors;
+
   private int maxRetries;
   private int baseRetryDelay;
   private int maxRetryDelay;
@@ -162,6 +164,7 @@ public class Client {
     this.maxRetries = this.defaultMaxRetries;
     this.baseRetryDelay = this.defaultBaseRetryDelay;
     this.maxRetryDelay = this.defaultMaxRetryDelay;
+    this.exposeRateLimitErrors = options.getExposeRateLimitErrors();
     try {
       NettyChannelBuilder builder =
           NettyChannelBuilder.forAddress(options.getHost(), options.getPort());
@@ -276,6 +279,19 @@ public class Client {
       return true;
     }
     com.google.rpc.Status status = io.grpc.protobuf.StatusProto.fromThrowable(e);
+    if (!this.exposeRateLimitErrors) {
+      Exception porcelain = Plumbing.convertExceptionToPorcelain(e);
+      if (porcelain instanceof RateLimitException) {
+        long now = System.currentTimeMillis();
+        RateLimitException rle = (RateLimitException) porcelain;
+        long resetAt = rle.getRateLimit().getResetAt().toInstant().toEpochMilli();
+        try {
+          Thread.sleep(resetAt - now);
+        } catch (Exception e2) {
+        }
+        return true;
+      }
+    }
 
     return (status.getCode() == Code.INTERNAL_VALUE);
   }

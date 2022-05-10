@@ -37,10 +37,17 @@ public class ClientOptions {
     return this.insecure;
   }
 
+  private boolean exposeRateLimitErrors;
+
+  public boolean getExposeRateLimitErrors() {
+    return this.exposeRateLimitErrors;
+  }
+
   public ClientOptions() {
     this.host = "api.strongdm.com";
     this.port = 443;
     this.insecure = false;
+    this.exposeRateLimitErrors = false;
   }
 
   private ClientOptions copy() {
@@ -48,6 +55,7 @@ public class ClientOptions {
     c.host = this.host;
     c.insecure = this.insecure;
     c.port = this.port;
+    c.exposeRateLimitErrors = this.exposeRateLimitErrors;
     return c;
   }
 
@@ -61,6 +69,12 @@ public class ClientOptions {
   public ClientOptions withInsecure() {
     ClientOptions c = this.copy();
     c.insecure = true;
+    return c;
+  }
+
+  public ClientOptions withRateLimitRetries(boolean enabled) {
+    ClientOptions c = this.copy();
+    c.exposeRateLimitErrors = !enabled;
     return c;
   }
 }
