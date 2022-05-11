@@ -59,6 +59,8 @@ public class ClientOptions {
     return c;
   }
 
+  // withHostAndPort causes a Client to make it's calls against the provided
+  // host instead of against api.strongdm.com.
   public ClientOptions withHostAndPort(String host, int port) {
     ClientOptions c = this.copy();
     c.host = host;
@@ -66,12 +68,18 @@ public class ClientOptions {
     return c;
   }
 
+  // withInsecure enables a Client to talk to an http server instead of an https
+  // server. This is potentially useful when communicating through a proxy, but
+  // should be used with care.
   public ClientOptions withInsecure() {
     ClientOptions c = this.copy();
     c.insecure = true;
     return c;
   }
 
+  // withRateLimitRetries configures whether encountered rate limit errors should
+  // cause this client to sleep and retry (if enabled), or whether those errors should be
+  // exposed to the code using this client (if disabled). By default, it is enabled.
   public ClientOptions withRateLimitRetries(boolean enabled) {
     ClientOptions c = this.copy();
     c.exposeRateLimitErrors = !enabled;

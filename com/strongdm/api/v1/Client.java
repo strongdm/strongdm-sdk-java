@@ -285,8 +285,14 @@ public class Client {
         long now = System.currentTimeMillis();
         RateLimitException rle = (RateLimitException) porcelain;
         long resetAt = rle.getRateLimit().getResetAt().toInstant().toEpochMilli();
+        long waitFor = resetAt - now;
+        // If timezones or clock drift causes this calculation to fail,
+        // wait at most one minute.
+        if ((waitFor < 0) || (waitFor > 1000 * 60)) {
+          waitFor = 1000 * 60;
+        }
         try {
-          Thread.sleep(resetAt - now);
+          Thread.sleep(waitFor);
         } catch (Exception e2) {
         }
         return true;
