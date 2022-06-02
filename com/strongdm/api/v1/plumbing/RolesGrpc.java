@@ -37,7 +37,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: roles.proto")
 public final class RolesGrpc {
 
@@ -205,7 +205,14 @@ public final class RolesGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static RolesStub newStub(io.grpc.Channel channel) {
-    return new RolesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RolesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RolesStub>() {
+        @java.lang.Override
+        public RolesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RolesStub(channel, callOptions);
+        }
+      };
+    return RolesStub.newStub(factory, channel);
   }
 
   /**
@@ -213,7 +220,14 @@ public final class RolesGrpc {
    */
   public static RolesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RolesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RolesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RolesBlockingStub>() {
+        @java.lang.Override
+        public RolesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RolesBlockingStub(channel, callOptions);
+        }
+      };
+    return RolesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -221,7 +235,14 @@ public final class RolesGrpc {
    */
   public static RolesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RolesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RolesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RolesFutureStub>() {
+        @java.lang.Override
+        public RolesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RolesFutureStub(channel, callOptions);
+        }
+      };
+    return RolesFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -331,19 +352,15 @@ public final class RolesGrpc {
    * AccountAttachments.
    * </pre>
    */
-  public static final class RolesStub extends io.grpc.stub.AbstractStub<RolesStub> {
-    private RolesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RolesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RolesStub extends io.grpc.stub.AbstractAsyncStub<RolesStub> {
+    private RolesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RolesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RolesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RolesStub(channel, callOptions);
     }
 
@@ -410,19 +427,15 @@ public final class RolesGrpc {
    * AccountAttachments.
    * </pre>
    */
-  public static final class RolesBlockingStub extends io.grpc.stub.AbstractStub<RolesBlockingStub> {
-    private RolesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RolesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RolesBlockingStub extends io.grpc.stub.AbstractBlockingStub<RolesBlockingStub> {
+    private RolesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RolesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RolesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RolesBlockingStub(channel, callOptions);
     }
 
@@ -484,19 +497,15 @@ public final class RolesGrpc {
    * AccountAttachments.
    * </pre>
    */
-  public static final class RolesFutureStub extends io.grpc.stub.AbstractStub<RolesFutureStub> {
-    private RolesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RolesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RolesFutureStub extends io.grpc.stub.AbstractFutureStub<RolesFutureStub> {
+    private RolesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RolesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RolesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RolesFutureStub(channel, callOptions);
     }
 

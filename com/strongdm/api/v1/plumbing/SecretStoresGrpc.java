@@ -35,7 +35,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: secret_stores.proto")
 public final class SecretStoresGrpc {
 
@@ -203,7 +203,14 @@ public final class SecretStoresGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static SecretStoresStub newStub(io.grpc.Channel channel) {
-    return new SecretStoresStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SecretStoresStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SecretStoresStub>() {
+        @java.lang.Override
+        public SecretStoresStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SecretStoresStub(channel, callOptions);
+        }
+      };
+    return SecretStoresStub.newStub(factory, channel);
   }
 
   /**
@@ -211,7 +218,14 @@ public final class SecretStoresGrpc {
    */
   public static SecretStoresBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SecretStoresBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SecretStoresBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SecretStoresBlockingStub>() {
+        @java.lang.Override
+        public SecretStoresBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SecretStoresBlockingStub(channel, callOptions);
+        }
+      };
+    return SecretStoresBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -219,7 +233,14 @@ public final class SecretStoresGrpc {
    */
   public static SecretStoresFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SecretStoresFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SecretStoresFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SecretStoresFutureStub>() {
+        @java.lang.Override
+        public SecretStoresFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SecretStoresFutureStub(channel, callOptions);
+        }
+      };
+    return SecretStoresFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -322,19 +343,15 @@ public final class SecretStoresGrpc {
    * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
-  public static final class SecretStoresStub extends io.grpc.stub.AbstractStub<SecretStoresStub> {
-    private SecretStoresStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SecretStoresStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SecretStoresStub extends io.grpc.stub.AbstractAsyncStub<SecretStoresStub> {
+    private SecretStoresStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecretStoresStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SecretStoresStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SecretStoresStub(channel, callOptions);
     }
 
@@ -396,19 +413,15 @@ public final class SecretStoresGrpc {
    * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
-  public static final class SecretStoresBlockingStub extends io.grpc.stub.AbstractStub<SecretStoresBlockingStub> {
-    private SecretStoresBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SecretStoresBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SecretStoresBlockingStub extends io.grpc.stub.AbstractBlockingStub<SecretStoresBlockingStub> {
+    private SecretStoresBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecretStoresBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SecretStoresBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SecretStoresBlockingStub(channel, callOptions);
     }
 
@@ -465,19 +478,15 @@ public final class SecretStoresGrpc {
    * SecretStores are servers where resource secrets (passwords, keys) are stored.
    * </pre>
    */
-  public static final class SecretStoresFutureStub extends io.grpc.stub.AbstractStub<SecretStoresFutureStub> {
-    private SecretStoresFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SecretStoresFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SecretStoresFutureStub extends io.grpc.stub.AbstractFutureStub<SecretStoresFutureStub> {
+    private SecretStoresFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SecretStoresFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SecretStoresFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SecretStoresFutureStub(channel, callOptions);
     }
 

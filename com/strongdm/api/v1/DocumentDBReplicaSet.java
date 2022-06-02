@@ -29,6 +29,16 @@ public class DocumentDBReplicaSet implements Resource {
     this.authDatabase = in;
   }
 
+  private String bindInterface;
+  /** Bind interface */
+  public String getBindInterface() {
+    return this.bindInterface;
+  }
+  /** Bind interface */
+  public void setBindInterface(String in) {
+    this.bindInterface = in;
+  }
+
   private boolean connectToReplica;
   /** */
   public boolean getConnectToReplica() {

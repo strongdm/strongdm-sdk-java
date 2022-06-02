@@ -29,6 +29,16 @@ public class SSH implements Resource {
     this.allowDeprecatedKeyExchanges = in;
   }
 
+  private String bindInterface;
+  /** Bind interface */
+  public String getBindInterface() {
+    return this.bindInterface;
+  }
+  /** Bind interface */
+  public void setBindInterface(String in) {
+    this.bindInterface = in;
+  }
+
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {
@@ -97,6 +107,16 @@ public class SSH implements Resource {
   /** */
   public void setPortForwarding(boolean in) {
     this.portForwarding = in;
+  }
+
+  private int portOverride;
+  /** */
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+  /** */
+  public void setPortOverride(int in) {
+    this.portOverride = in;
   }
 
   private String publicKey;

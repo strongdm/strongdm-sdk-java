@@ -35,7 +35,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: control_panel.proto")
 public final class ControlPanelGrpc {
 
@@ -110,7 +110,14 @@ public final class ControlPanelGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static ControlPanelStub newStub(io.grpc.Channel channel) {
-    return new ControlPanelStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ControlPanelStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ControlPanelStub>() {
+        @java.lang.Override
+        public ControlPanelStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ControlPanelStub(channel, callOptions);
+        }
+      };
+    return ControlPanelStub.newStub(factory, channel);
   }
 
   /**
@@ -118,7 +125,14 @@ public final class ControlPanelGrpc {
    */
   public static ControlPanelBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ControlPanelBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ControlPanelBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ControlPanelBlockingStub>() {
+        @java.lang.Override
+        public ControlPanelBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ControlPanelBlockingStub(channel, callOptions);
+        }
+      };
+    return ControlPanelBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -126,7 +140,14 @@ public final class ControlPanelGrpc {
    */
   public static ControlPanelFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ControlPanelFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ControlPanelFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ControlPanelFutureStub>() {
+        @java.lang.Override
+        public ControlPanelFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ControlPanelFutureStub(channel, callOptions);
+        }
+      };
+    return ControlPanelFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -181,19 +202,15 @@ public final class ControlPanelGrpc {
    * ControlPanel contains all administrative controls.
    * </pre>
    */
-  public static final class ControlPanelStub extends io.grpc.stub.AbstractStub<ControlPanelStub> {
-    private ControlPanelStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ControlPanelStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ControlPanelStub extends io.grpc.stub.AbstractAsyncStub<ControlPanelStub> {
+    private ControlPanelStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ControlPanelStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ControlPanelStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ControlPanelStub(channel, callOptions);
     }
 
@@ -225,19 +242,15 @@ public final class ControlPanelGrpc {
    * ControlPanel contains all administrative controls.
    * </pre>
    */
-  public static final class ControlPanelBlockingStub extends io.grpc.stub.AbstractStub<ControlPanelBlockingStub> {
-    private ControlPanelBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ControlPanelBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ControlPanelBlockingStub extends io.grpc.stub.AbstractBlockingStub<ControlPanelBlockingStub> {
+    private ControlPanelBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ControlPanelBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ControlPanelBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ControlPanelBlockingStub(channel, callOptions);
     }
 
@@ -267,19 +280,15 @@ public final class ControlPanelGrpc {
    * ControlPanel contains all administrative controls.
    * </pre>
    */
-  public static final class ControlPanelFutureStub extends io.grpc.stub.AbstractStub<ControlPanelFutureStub> {
-    private ControlPanelFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ControlPanelFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ControlPanelFutureStub extends io.grpc.stub.AbstractFutureStub<ControlPanelFutureStub> {
+    private ControlPanelFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ControlPanelFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ControlPanelFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ControlPanelFutureStub(channel, callOptions);
     }
 

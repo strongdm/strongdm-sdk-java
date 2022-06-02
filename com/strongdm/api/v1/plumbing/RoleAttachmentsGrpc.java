@@ -40,7 +40,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: role_attachments.proto")
 @java.lang.Deprecated
 public final class RoleAttachmentsGrpc {
@@ -178,7 +178,14 @@ public final class RoleAttachmentsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static RoleAttachmentsStub newStub(io.grpc.Channel channel) {
-    return new RoleAttachmentsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleAttachmentsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleAttachmentsStub>() {
+        @java.lang.Override
+        public RoleAttachmentsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleAttachmentsStub(channel, callOptions);
+        }
+      };
+    return RoleAttachmentsStub.newStub(factory, channel);
   }
 
   /**
@@ -186,7 +193,14 @@ public final class RoleAttachmentsGrpc {
    */
   public static RoleAttachmentsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RoleAttachmentsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleAttachmentsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleAttachmentsBlockingStub>() {
+        @java.lang.Override
+        public RoleAttachmentsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleAttachmentsBlockingStub(channel, callOptions);
+        }
+      };
+    return RoleAttachmentsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -194,7 +208,14 @@ public final class RoleAttachmentsGrpc {
    */
   public static RoleAttachmentsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RoleAttachmentsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleAttachmentsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleAttachmentsFutureStub>() {
+        @java.lang.Override
+        public RoleAttachmentsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleAttachmentsFutureStub(channel, callOptions);
+        }
+      };
+    return RoleAttachmentsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -307,19 +328,15 @@ public final class RoleAttachmentsGrpc {
    * </pre>
    */
   @java.lang.Deprecated
-  public static final class RoleAttachmentsStub extends io.grpc.stub.AbstractStub<RoleAttachmentsStub> {
-    private RoleAttachmentsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleAttachmentsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleAttachmentsStub extends io.grpc.stub.AbstractAsyncStub<RoleAttachmentsStub> {
+    private RoleAttachmentsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleAttachmentsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleAttachmentsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleAttachmentsStub(channel, callOptions);
     }
 
@@ -391,19 +408,15 @@ public final class RoleAttachmentsGrpc {
    * </pre>
    */
   @java.lang.Deprecated
-  public static final class RoleAttachmentsBlockingStub extends io.grpc.stub.AbstractStub<RoleAttachmentsBlockingStub> {
-    private RoleAttachmentsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleAttachmentsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleAttachmentsBlockingStub extends io.grpc.stub.AbstractBlockingStub<RoleAttachmentsBlockingStub> {
+    private RoleAttachmentsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleAttachmentsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleAttachmentsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleAttachmentsBlockingStub(channel, callOptions);
     }
 
@@ -471,19 +484,15 @@ public final class RoleAttachmentsGrpc {
    * </pre>
    */
   @java.lang.Deprecated
-  public static final class RoleAttachmentsFutureStub extends io.grpc.stub.AbstractStub<RoleAttachmentsFutureStub> {
-    private RoleAttachmentsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleAttachmentsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleAttachmentsFutureStub extends io.grpc.stub.AbstractFutureStub<RoleAttachmentsFutureStub> {
+    private RoleAttachmentsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleAttachmentsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleAttachmentsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleAttachmentsFutureStub(channel, callOptions);
     }
 

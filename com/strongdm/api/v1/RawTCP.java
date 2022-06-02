@@ -19,6 +19,16 @@ package com.strongdm.api.v1;
 
 /** */
 public class RawTCP implements Resource {
+  private String bindInterface;
+  /** Bind interface */
+  public String getBindInterface() {
+    return this.bindInterface;
+  }
+  /** Bind interface */
+  public void setBindInterface(String in) {
+    this.bindInterface = in;
+  }
+
   private String egressFilter;
   /** A filter applied to the routing logic to pin datasource to nodes. */
   public String getEgressFilter() {

@@ -37,7 +37,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: accounts.proto")
 public final class AccountsGrpc {
 
@@ -205,7 +205,14 @@ public final class AccountsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountsStub newStub(io.grpc.Channel channel) {
-    return new AccountsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountsStub>() {
+        @java.lang.Override
+        public AccountsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountsStub(channel, callOptions);
+        }
+      };
+    return AccountsStub.newStub(factory, channel);
   }
 
   /**
@@ -213,7 +220,14 @@ public final class AccountsGrpc {
    */
   public static AccountsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccountsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountsBlockingStub>() {
+        @java.lang.Override
+        public AccountsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountsBlockingStub(channel, callOptions);
+        }
+      };
+    return AccountsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -221,7 +235,14 @@ public final class AccountsGrpc {
    */
   public static AccountsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccountsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountsFutureStub>() {
+        @java.lang.Override
+        public AccountsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountsFutureStub(channel, callOptions);
+        }
+      };
+    return AccountsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -331,19 +352,15 @@ public final class AccountsGrpc {
    * 2. **Service Accounts:** machines that are authenticated using a service token.
    * </pre>
    */
-  public static final class AccountsStub extends io.grpc.stub.AbstractStub<AccountsStub> {
-    private AccountsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountsStub extends io.grpc.stub.AbstractAsyncStub<AccountsStub> {
+    private AccountsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountsStub(channel, callOptions);
     }
 
@@ -410,19 +427,15 @@ public final class AccountsGrpc {
    * 2. **Service Accounts:** machines that are authenticated using a service token.
    * </pre>
    */
-  public static final class AccountsBlockingStub extends io.grpc.stub.AbstractStub<AccountsBlockingStub> {
-    private AccountsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountsBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountsBlockingStub> {
+    private AccountsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountsBlockingStub(channel, callOptions);
     }
 
@@ -484,19 +497,15 @@ public final class AccountsGrpc {
    * 2. **Service Accounts:** machines that are authenticated using a service token.
    * </pre>
    */
-  public static final class AccountsFutureStub extends io.grpc.stub.AbstractStub<AccountsFutureStub> {
-    private AccountsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountsFutureStub extends io.grpc.stub.AbstractFutureStub<AccountsFutureStub> {
+    private AccountsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountsFutureStub(channel, callOptions);
     }
 

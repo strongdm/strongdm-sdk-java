@@ -35,7 +35,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: account_attachments.proto")
 public final class AccountAttachmentsGrpc {
 
@@ -172,7 +172,14 @@ public final class AccountAttachmentsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountAttachmentsStub newStub(io.grpc.Channel channel) {
-    return new AccountAttachmentsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsStub>() {
+        @java.lang.Override
+        public AccountAttachmentsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountAttachmentsStub(channel, callOptions);
+        }
+      };
+    return AccountAttachmentsStub.newStub(factory, channel);
   }
 
   /**
@@ -180,7 +187,14 @@ public final class AccountAttachmentsGrpc {
    */
   public static AccountAttachmentsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccountAttachmentsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsBlockingStub>() {
+        @java.lang.Override
+        public AccountAttachmentsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountAttachmentsBlockingStub(channel, callOptions);
+        }
+      };
+    return AccountAttachmentsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -188,7 +202,14 @@ public final class AccountAttachmentsGrpc {
    */
   public static AccountAttachmentsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccountAttachmentsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountAttachmentsFutureStub>() {
+        @java.lang.Override
+        public AccountAttachmentsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountAttachmentsFutureStub(channel, callOptions);
+        }
+      };
+    return AccountAttachmentsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -277,19 +298,15 @@ public final class AccountAttachmentsGrpc {
    * AccountAttachments assign an account to a role.
    * </pre>
    */
-  public static final class AccountAttachmentsStub extends io.grpc.stub.AbstractStub<AccountAttachmentsStub> {
-    private AccountAttachmentsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountAttachmentsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountAttachmentsStub extends io.grpc.stub.AbstractAsyncStub<AccountAttachmentsStub> {
+    private AccountAttachmentsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountAttachmentsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountAttachmentsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAttachmentsStub(channel, callOptions);
     }
 
@@ -343,19 +360,15 @@ public final class AccountAttachmentsGrpc {
    * AccountAttachments assign an account to a role.
    * </pre>
    */
-  public static final class AccountAttachmentsBlockingStub extends io.grpc.stub.AbstractStub<AccountAttachmentsBlockingStub> {
-    private AccountAttachmentsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountAttachmentsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountAttachmentsBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountAttachmentsBlockingStub> {
+    private AccountAttachmentsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountAttachmentsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountAttachmentsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAttachmentsBlockingStub(channel, callOptions);
     }
 
@@ -405,19 +418,15 @@ public final class AccountAttachmentsGrpc {
    * AccountAttachments assign an account to a role.
    * </pre>
    */
-  public static final class AccountAttachmentsFutureStub extends io.grpc.stub.AbstractStub<AccountAttachmentsFutureStub> {
-    private AccountAttachmentsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountAttachmentsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountAttachmentsFutureStub extends io.grpc.stub.AbstractFutureStub<AccountAttachmentsFutureStub> {
+    private AccountAttachmentsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountAttachmentsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountAttachmentsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountAttachmentsFutureStub(channel, callOptions);
     }
 

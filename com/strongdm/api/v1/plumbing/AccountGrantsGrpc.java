@@ -35,7 +35,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: account_grants.proto")
 public final class AccountGrantsGrpc {
 
@@ -172,7 +172,14 @@ public final class AccountGrantsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static AccountGrantsStub newStub(io.grpc.Channel channel) {
-    return new AccountGrantsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountGrantsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountGrantsStub>() {
+        @java.lang.Override
+        public AccountGrantsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountGrantsStub(channel, callOptions);
+        }
+      };
+    return AccountGrantsStub.newStub(factory, channel);
   }
 
   /**
@@ -180,7 +187,14 @@ public final class AccountGrantsGrpc {
    */
   public static AccountGrantsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AccountGrantsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountGrantsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountGrantsBlockingStub>() {
+        @java.lang.Override
+        public AccountGrantsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountGrantsBlockingStub(channel, callOptions);
+        }
+      };
+    return AccountGrantsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -188,7 +202,14 @@ public final class AccountGrantsGrpc {
    */
   public static AccountGrantsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AccountGrantsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AccountGrantsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccountGrantsFutureStub>() {
+        @java.lang.Override
+        public AccountGrantsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccountGrantsFutureStub(channel, callOptions);
+        }
+      };
+    return AccountGrantsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -277,19 +298,15 @@ public final class AccountGrantsGrpc {
    * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
-  public static final class AccountGrantsStub extends io.grpc.stub.AbstractStub<AccountGrantsStub> {
-    private AccountGrantsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountGrantsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountGrantsStub extends io.grpc.stub.AbstractAsyncStub<AccountGrantsStub> {
+    private AccountGrantsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountGrantsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountGrantsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountGrantsStub(channel, callOptions);
     }
 
@@ -343,19 +360,15 @@ public final class AccountGrantsGrpc {
    * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
-  public static final class AccountGrantsBlockingStub extends io.grpc.stub.AbstractStub<AccountGrantsBlockingStub> {
-    private AccountGrantsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountGrantsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountGrantsBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountGrantsBlockingStub> {
+    private AccountGrantsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountGrantsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountGrantsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountGrantsBlockingStub(channel, callOptions);
     }
 
@@ -405,19 +418,15 @@ public final class AccountGrantsGrpc {
    * AccountGrants assign a resource directly to an account, giving the account the permission to connect to that resource.
    * </pre>
    */
-  public static final class AccountGrantsFutureStub extends io.grpc.stub.AbstractStub<AccountGrantsFutureStub> {
-    private AccountGrantsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AccountGrantsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AccountGrantsFutureStub extends io.grpc.stub.AbstractFutureStub<AccountGrantsFutureStub> {
+    private AccountGrantsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AccountGrantsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AccountGrantsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AccountGrantsFutureStub(channel, callOptions);
     }
 

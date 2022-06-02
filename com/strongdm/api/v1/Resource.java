@@ -39,4 +39,8 @@ public interface Resource {
   String getEgressFilter();
   /** Sets the egress filter of the Resource. */
   void setEgressFilter(String egressFilter);
+  /** Returns the bind interface of the Resource. */
+  String getBindInterface();
+  /** Sets the bind interface of the Resource. */
+  void setBindInterface(String bindInterface);
 }

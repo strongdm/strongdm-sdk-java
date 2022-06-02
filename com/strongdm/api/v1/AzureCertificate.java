@@ -29,6 +29,16 @@ public class AzureCertificate implements Resource {
     this.appId = in;
   }
 
+  private String bindInterface;
+  /** Bind interface */
+  public String getBindInterface() {
+    return this.bindInterface;
+  }
+  /** Bind interface */
+  public void setBindInterface(String in) {
+    this.bindInterface = in;
+  }
+
   private String clientCertificate;
   /** */
   public String getClientCertificate() {

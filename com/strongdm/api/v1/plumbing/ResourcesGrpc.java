@@ -36,7 +36,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: resources.proto")
 public final class ResourcesGrpc {
 
@@ -235,7 +235,14 @@ public final class ResourcesGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static ResourcesStub newStub(io.grpc.Channel channel) {
-    return new ResourcesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ResourcesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ResourcesStub>() {
+        @java.lang.Override
+        public ResourcesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ResourcesStub(channel, callOptions);
+        }
+      };
+    return ResourcesStub.newStub(factory, channel);
   }
 
   /**
@@ -243,7 +250,14 @@ public final class ResourcesGrpc {
    */
   public static ResourcesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ResourcesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ResourcesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ResourcesBlockingStub>() {
+        @java.lang.Override
+        public ResourcesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ResourcesBlockingStub(channel, callOptions);
+        }
+      };
+    return ResourcesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -251,7 +265,14 @@ public final class ResourcesGrpc {
    */
   public static ResourcesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ResourcesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ResourcesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ResourcesFutureStub>() {
+        @java.lang.Override
+        public ResourcesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ResourcesFutureStub(channel, callOptions);
+        }
+      };
+    return ResourcesFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -376,19 +397,15 @@ public final class ResourcesGrpc {
    * delegates access to.
    * </pre>
    */
-  public static final class ResourcesStub extends io.grpc.stub.AbstractStub<ResourcesStub> {
-    private ResourcesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ResourcesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ResourcesStub extends io.grpc.stub.AbstractAsyncStub<ResourcesStub> {
+    private ResourcesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ResourcesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ResourcesStub(channel, callOptions);
     }
 
@@ -465,19 +482,15 @@ public final class ResourcesGrpc {
    * delegates access to.
    * </pre>
    */
-  public static final class ResourcesBlockingStub extends io.grpc.stub.AbstractStub<ResourcesBlockingStub> {
-    private ResourcesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ResourcesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ResourcesBlockingStub extends io.grpc.stub.AbstractBlockingStub<ResourcesBlockingStub> {
+    private ResourcesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ResourcesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ResourcesBlockingStub(channel, callOptions);
     }
 
@@ -548,19 +561,15 @@ public final class ResourcesGrpc {
    * delegates access to.
    * </pre>
    */
-  public static final class ResourcesFutureStub extends io.grpc.stub.AbstractStub<ResourcesFutureStub> {
-    private ResourcesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ResourcesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ResourcesFutureStub extends io.grpc.stub.AbstractFutureStub<ResourcesFutureStub> {
+    private ResourcesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ResourcesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ResourcesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ResourcesFutureStub(channel, callOptions);
     }
 

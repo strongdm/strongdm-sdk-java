@@ -37,7 +37,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: nodes.proto")
 public final class NodesGrpc {
 
@@ -205,7 +205,14 @@ public final class NodesGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static NodesStub newStub(io.grpc.Channel channel) {
-    return new NodesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodesStub>() {
+        @java.lang.Override
+        public NodesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodesStub(channel, callOptions);
+        }
+      };
+    return NodesStub.newStub(factory, channel);
   }
 
   /**
@@ -213,7 +220,14 @@ public final class NodesGrpc {
    */
   public static NodesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new NodesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodesBlockingStub>() {
+        @java.lang.Override
+        public NodesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodesBlockingStub(channel, callOptions);
+        }
+      };
+    return NodesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -221,7 +235,14 @@ public final class NodesGrpc {
    */
   public static NodesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new NodesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<NodesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<NodesFutureStub>() {
+        @java.lang.Override
+        public NodesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new NodesFutureStub(channel, callOptions);
+        }
+      };
+    return NodesFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -331,19 +352,15 @@ public final class NodesGrpc {
    * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
-  public static final class NodesStub extends io.grpc.stub.AbstractStub<NodesStub> {
-    private NodesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodesStub extends io.grpc.stub.AbstractAsyncStub<NodesStub> {
+    private NodesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodesStub(channel, callOptions);
     }
 
@@ -410,19 +427,15 @@ public final class NodesGrpc {
    * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
-  public static final class NodesBlockingStub extends io.grpc.stub.AbstractStub<NodesBlockingStub> {
-    private NodesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodesBlockingStub extends io.grpc.stub.AbstractBlockingStub<NodesBlockingStub> {
+    private NodesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodesBlockingStub(channel, callOptions);
     }
 
@@ -484,19 +497,15 @@ public final class NodesGrpc {
    * - **Relays** are used to extend the strongDM network into segmented subnets. They provide access to databases and servers but do not listen for incoming connections.
    * </pre>
    */
-  public static final class NodesFutureStub extends io.grpc.stub.AbstractStub<NodesFutureStub> {
-    private NodesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private NodesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class NodesFutureStub extends io.grpc.stub.AbstractFutureStub<NodesFutureStub> {
+    private NodesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NodesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected NodesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new NodesFutureStub(channel, callOptions);
     }
 

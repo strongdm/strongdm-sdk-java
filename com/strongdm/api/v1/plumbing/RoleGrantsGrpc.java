@@ -39,7 +39,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.25.0)",
+    value = "by gRPC proto compiler (version 1.26.0)",
     comments = "Source: role_grants.proto")
 @java.lang.Deprecated
 public final class RoleGrantsGrpc {
@@ -177,7 +177,14 @@ public final class RoleGrantsGrpc {
    * Creates a new async stub that supports all call types for the service
    */
   public static RoleGrantsStub newStub(io.grpc.Channel channel) {
-    return new RoleGrantsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleGrantsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleGrantsStub>() {
+        @java.lang.Override
+        public RoleGrantsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleGrantsStub(channel, callOptions);
+        }
+      };
+    return RoleGrantsStub.newStub(factory, channel);
   }
 
   /**
@@ -185,7 +192,14 @@ public final class RoleGrantsGrpc {
    */
   public static RoleGrantsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RoleGrantsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleGrantsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleGrantsBlockingStub>() {
+        @java.lang.Override
+        public RoleGrantsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleGrantsBlockingStub(channel, callOptions);
+        }
+      };
+    return RoleGrantsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -193,7 +207,14 @@ public final class RoleGrantsGrpc {
    */
   public static RoleGrantsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RoleGrantsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RoleGrantsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RoleGrantsFutureStub>() {
+        @java.lang.Override
+        public RoleGrantsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RoleGrantsFutureStub(channel, callOptions);
+        }
+      };
+    return RoleGrantsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -300,19 +321,15 @@ public final class RoleGrantsGrpc {
    * </pre>
    */
   @java.lang.Deprecated
-  public static final class RoleGrantsStub extends io.grpc.stub.AbstractStub<RoleGrantsStub> {
-    private RoleGrantsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleGrantsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleGrantsStub extends io.grpc.stub.AbstractAsyncStub<RoleGrantsStub> {
+    private RoleGrantsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleGrantsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleGrantsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleGrantsStub(channel, callOptions);
     }
 
@@ -379,19 +396,15 @@ public final class RoleGrantsGrpc {
    * </pre>
    */
   @java.lang.Deprecated
-  public static final class RoleGrantsBlockingStub extends io.grpc.stub.AbstractStub<RoleGrantsBlockingStub> {
-    private RoleGrantsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleGrantsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleGrantsBlockingStub extends io.grpc.stub.AbstractBlockingStub<RoleGrantsBlockingStub> {
+    private RoleGrantsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleGrantsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleGrantsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleGrantsBlockingStub(channel, callOptions);
     }
 
@@ -454,19 +467,15 @@ public final class RoleGrantsGrpc {
    * </pre>
    */
   @java.lang.Deprecated
-  public static final class RoleGrantsFutureStub extends io.grpc.stub.AbstractStub<RoleGrantsFutureStub> {
-    private RoleGrantsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RoleGrantsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RoleGrantsFutureStub extends io.grpc.stub.AbstractFutureStub<RoleGrantsFutureStub> {
+    private RoleGrantsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RoleGrantsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RoleGrantsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RoleGrantsFutureStub(channel, callOptions);
     }
 

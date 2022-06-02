@@ -19,6 +19,16 @@ package com.strongdm.api.v1;
 
 /** */
 public class HTTPBasicAuth implements Resource {
+  private String bindInterface;
+  /** Bind interface */
+  public String getBindInterface() {
+    return this.bindInterface;
+  }
+  /** Bind interface */
+  public void setBindInterface(String in) {
+    this.bindInterface = in;
+  }
+
   private String defaultPath;
   /** */
   public String getDefaultPath() {
