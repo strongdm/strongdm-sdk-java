@@ -35,6 +35,7 @@ import com.strongdm.api.v1.plumbing.AccountsPlumbing.*;
 import com.strongdm.api.v1.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.v1.plumbing.DriversPlumbing.*;
 import com.strongdm.api.v1.plumbing.NodesPlumbing.*;
+import com.strongdm.api.v1.plumbing.RemoteIdentityGroupsPlumbing.*;
 import com.strongdm.api.v1.plumbing.ResourcesPlumbing.*;
 import com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.*;
 import com.strongdm.api.v1.plumbing.RoleGrantsPlumbing.*;
@@ -6025,6 +6026,90 @@ public class Plumbing {
       Collection<com.strongdm.api.v1.Relay> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertRelayToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RemoteIdentityGroup convertRemoteIdentityGroupToPorcelain(
+      RemoteIdentityGroup plumbing) {
+    com.strongdm.api.v1.RemoteIdentityGroup porcelain =
+        new com.strongdm.api.v1.RemoteIdentityGroup();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    return porcelain;
+  }
+
+  public static RemoteIdentityGroup convertRemoteIdentityGroupToPlumbing(
+      com.strongdm.api.v1.RemoteIdentityGroup porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RemoteIdentityGroup.Builder builder = RemoteIdentityGroup.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RemoteIdentityGroup>
+      convertRepeatedRemoteIdentityGroupToPorcelain(Collection<RemoteIdentityGroup> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertRemoteIdentityGroupToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RemoteIdentityGroup> convertRepeatedRemoteIdentityGroupToPlumbing(
+      Collection<com.strongdm.api.v1.RemoteIdentityGroup> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertRemoteIdentityGroupToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RemoteIdentityGroupGetResponse
+      convertRemoteIdentityGroupGetResponseToPorcelain(RemoteIdentityGroupGetResponse plumbing) {
+    com.strongdm.api.v1.RemoteIdentityGroupGetResponse porcelain =
+        new com.strongdm.api.v1.RemoteIdentityGroupGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setRemoteIdentityGroup(
+        Plumbing.convertRemoteIdentityGroupToPorcelain(plumbing.getRemoteIdentityGroup()));
+    return porcelain;
+  }
+
+  public static RemoteIdentityGroupGetResponse convertRemoteIdentityGroupGetResponseToPlumbing(
+      com.strongdm.api.v1.RemoteIdentityGroupGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RemoteIdentityGroupGetResponse.Builder builder = RemoteIdentityGroupGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getRemoteIdentityGroup() != null) {
+      builder.setRemoteIdentityGroup(
+          Plumbing.convertRemoteIdentityGroupToPlumbing(porcelain.getRemoteIdentityGroup()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RemoteIdentityGroupGetResponse>
+      convertRepeatedRemoteIdentityGroupGetResponseToPorcelain(
+          Collection<RemoteIdentityGroupGetResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertRemoteIdentityGroupGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RemoteIdentityGroupGetResponse>
+      convertRepeatedRemoteIdentityGroupGetResponseToPlumbing(
+          Collection<com.strongdm.api.v1.RemoteIdentityGroupGetResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertRemoteIdentityGroupGetResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

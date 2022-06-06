@@ -95,6 +95,16 @@ public class Client {
     return this.nodes;
   }
 
+  private final RemoteIdentityGroups remoteIdentityGroups;
+
+  /**
+   * A RemoteIdentityGroup is a named grouping of Remote Identities for Accounts. An Account's
+   * relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
+   */
+  public RemoteIdentityGroups remoteIdentityGroups() {
+    return this.remoteIdentityGroups;
+  }
+
   private final Resources resources;
 
   /**
@@ -179,6 +189,7 @@ public class Client {
       this.accounts = new Accounts(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
+      this.remoteIdentityGroups = new RemoteIdentityGroups(this.channel, this);
       this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);
       this.roleGrants = new RoleGrants(this.channel, this);
