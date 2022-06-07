@@ -127,10 +127,15 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">List gets a list of RemoteIdentities matching a given set of criteria.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDeadlineAfter(long,java.util.concurrent.TimeUnit)" class="member-name-link">withDeadlineAfter</a><wbr>(long&nbsp;duration,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update(com.strongdm.api.v1.RemoteIdentity)" class="member-name-link">update</a><wbr>(<a href="RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a>&nbsp;remoteIdentity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Update replaces all the fields of a RemoteIdentity by ID.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDeadlineAfter(long,java.util.concurrent.TimeUnit)" class="member-name-link">withDeadlineAfter</a><wbr>(long&nbsp;duration,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/TimeUnit.html" title="class or interface in java.util.concurrent" class="external-link">TimeUnit</a>&nbsp;units)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">This function returns a copy of the RemoteIdentities service which has
  the given deadline set for all method calls.</div>
 </div>
@@ -193,6 +198,18 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span>
                               throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
 <div class="block">Get reads one RemoteIdentity by ID.</div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="update(com.strongdm.api.v1.RemoteIdentity)">
+<h3>update</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></span>&nbsp;<span class="element-name">update</span><wbr><span class="parameters">(<a href="RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a>&nbsp;remoteIdentity)</span>
+                                    throws <span class="exceptions"><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></span></div>
+<div class="block">Update replaces all the fields of a RemoteIdentity by ID.</div>
 <dl class="notes">
 <dt>Throws:</dt>
 <dd><code><a href="RpcException.html" title="class in com.strongdm.api.v1">RpcException</a></code></dd>

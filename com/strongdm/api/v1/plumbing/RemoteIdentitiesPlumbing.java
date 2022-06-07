@@ -12102,24 +12102,27 @@ public final class RemoteIdentitiesPlumbing {
       "\363\263\007\001\300\363\263\007\001\022!\n\010username\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
       "\363\263\007\001:l\372\370\263\007g\250\363\263\007\001\302\363\263\007]\242\363\263\007(tf_examples/re" +
       "mote_identity_resource.txt\252\363\263\007+tf_exampl" +
-      "es/remote_identity_data_source.txt2\244\004\n\020R" +
+      "es/remote_identity_data_source.txt2\244\005\n\020R" +
       "emoteIdentities\022z\n\006Create\022\037.v1.RemoteIde" +
       "ntityCreateRequest\032 .v1.RemoteIdentityCr" +
       "eateResponse\"-\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\032\252\363\263\007\025/v" +
       "1/remote-identities\022u\n\003Get\022\034.v1.RemoteId" +
       "entityGetRequest\032\035.v1.RemoteIdentityGetR" +
       "esponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/remo" +
-      "te-identities/{id}\022\201\001\n\006Delete\022\037.v1.Remot" +
-      "eIdentityDeleteRequest\032 .v1.RemoteIdenti" +
-      "tyDeleteResponse\"4\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\037\252" +
-      "\363\263\007\032/v1/remote-identities/{id}\022s\n\004List\022\035" +
-      ".v1.RemoteIdentityListRequest\032\036.v1.Remot" +
-      "eIdentityListResponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007" +
-      "\032\252\363\263\007\025/v1/remote-identities\032$\312\371\263\007\023\302\371\263\007\016R" +
-      "emoteIdentity\312\371\263\007\007\322\371\263\007\002i-Bo\n\034com.strongd" +
-      "m.api.v1.plumbingB\030RemoteIdentitiesPlumb" +
-      "ingZ5github.com/strongdm/strongdm-sdk-go" +
-      "/v2/internal/v1;v1b\006proto3"
+      "te-identities/{id}\022~\n\006Update\022\037.v1.Remote" +
+      "IdentityUpdateRequest\032 .v1.RemoteIdentit" +
+      "yUpdateResponse\"1\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\037\252\363\263\007\032" +
+      "/v1/remote-identities/{id}\022\201\001\n\006Delete\022\037." +
+      "v1.RemoteIdentityDeleteRequest\032 .v1.Remo" +
+      "teIdentityDeleteResponse\"4\202\371\263\007\013\242\363\263\007\006dele" +
+      "te\202\371\263\007\037\252\363\263\007\032/v1/remote-identities/{id}\022s" +
+      "\n\004List\022\035.v1.RemoteIdentityListRequest\032\036." +
+      "v1.RemoteIdentityListResponse\",\202\371\263\007\010\242\363\263\007" +
+      "\003get\202\371\263\007\032\252\363\263\007\025/v1/remote-identities\032$\312\371\263" +
+      "\007\023\302\371\263\007\016RemoteIdentity\312\371\263\007\007\322\371\263\007\002i-Bo\n\034com" +
+      ".strongdm.api.v1.plumbingB\030RemoteIdentit" +
+      "iesPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

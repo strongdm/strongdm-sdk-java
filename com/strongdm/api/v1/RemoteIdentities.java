@@ -107,6 +107,32 @@ public class RemoteIdentities {
     }
     return Plumbing.convertRemoteIdentityGetResponseToPorcelain(plumbingResponse);
   }
+  /** Update replaces all the fields of a RemoteIdentity by ID. */
+  public RemoteIdentityUpdateResponse update(RemoteIdentity remoteIdentity) throws RpcException {
+    RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest.Builder builder =
+        RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest.newBuilder();
+    builder.setRemoteIdentity(Plumbing.convertRemoteIdentityToPlumbing(remoteIdentity));
+    RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest req = builder.build();
+    RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse plumbingResponse;
+    int tries = 0;
+    while (true) {
+      try {
+        plumbingResponse =
+            this.stub
+                .withCallCredentials(this.parent.getCallCredentials("RemoteIdentities.Update", req))
+                .update(req);
+      } catch (Exception e) {
+        if (this.parent.shouldRetry(tries, e)) {
+          tries++;
+          this.parent.jitterSleep(tries);
+          continue;
+        }
+        throw Plumbing.convertExceptionToPorcelain(e);
+      }
+      break;
+    }
+    return Plumbing.convertRemoteIdentityUpdateResponseToPorcelain(plumbingResponse);
+  }
   /** Delete removes a RemoteIdentity by ID. */
   public RemoteIdentityDeleteResponse delete(String id) throws RpcException {
     RemoteIdentitiesPlumbing.RemoteIdentityDeleteRequest.Builder builder =

@@ -106,6 +106,37 @@ public final class RemoteIdentitiesGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest,
+      com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest.class,
+      responseType = com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest,
+      com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse> getUpdateMethod() {
+    io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest, com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse> getUpdateMethod;
+    if ((getUpdateMethod = RemoteIdentitiesGrpc.getUpdateMethod) == null) {
+      synchronized (RemoteIdentitiesGrpc.class) {
+        if ((getUpdateMethod = RemoteIdentitiesGrpc.getUpdateMethod) == null) {
+          RemoteIdentitiesGrpc.getUpdateMethod = getUpdateMethod =
+              io.grpc.MethodDescriptor.<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest, com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RemoteIdentitiesMethodDescriptorSupplier("Update"))
+              .build();
+        }
+      }
+    }
+    return getUpdateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityDeleteRequest,
       com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityDeleteResponse> getDeleteMethod;
 
@@ -241,6 +272,16 @@ public final class RemoteIdentitiesGrpc {
 
     /**
      * <pre>
+     * Update replaces all the fields of a RemoteIdentity by ID.
+     * </pre>
+     */
+    public void update(com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Delete removes a RemoteIdentity by ID.
      * </pre>
      */
@@ -275,6 +316,13 @@ public final class RemoteIdentitiesGrpc {
                 com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityGetRequest,
                 com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityGetResponse>(
                   this, METHODID_GET)))
+          .addMethod(
+            getUpdateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest,
+                com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse>(
+                  this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
@@ -330,6 +378,17 @@ public final class RemoteIdentitiesGrpc {
         io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityGetResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update replaces all the fields of a RemoteIdentity by ID.
+     * </pre>
+     */
+    public void update(com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -394,6 +453,16 @@ public final class RemoteIdentitiesGrpc {
 
     /**
      * <pre>
+     * Update replaces all the fields of a RemoteIdentity by ID.
+     * </pre>
+     */
+    public com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse update(com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Delete removes a RemoteIdentity by ID.
      * </pre>
      */
@@ -454,6 +523,17 @@ public final class RemoteIdentitiesGrpc {
 
     /**
      * <pre>
+     * Update replaces all the fields of a RemoteIdentity by ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse> update(
+        com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Delete removes a RemoteIdentity by ID.
      * </pre>
      */
@@ -477,8 +557,9 @@ public final class RemoteIdentitiesGrpc {
 
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_GET = 1;
-  private static final int METHODID_DELETE = 2;
-  private static final int METHODID_LIST = 3;
+  private static final int METHODID_UPDATE = 2;
+  private static final int METHODID_DELETE = 3;
+  private static final int METHODID_LIST = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -504,6 +585,10 @@ public final class RemoteIdentitiesGrpc {
         case METHODID_GET:
           serviceImpl.get((com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityGetRequest) request,
               (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityGetResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE:
+          serviceImpl.update((com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateRequest) request,
+              (io.grpc.stub.StreamObserver<com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityUpdateResponse>) responseObserver);
           break;
         case METHODID_DELETE:
           serviceImpl.delete((com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.RemoteIdentityDeleteRequest) request,
@@ -576,6 +661,7 @@ public final class RemoteIdentitiesGrpc {
               .setSchemaDescriptor(new RemoteIdentitiesFileDescriptorSupplier())
               .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
+              .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListMethod())
               .build();
