@@ -25,11 +25,11 @@ import java.util.Date;
  */
 public class AccountGrant {
   private String accountId;
-  /** The id of the attached role of this AccountGrant. */
+  /** The account id of this AccountGrant. */
   public String getAccountId() {
     return this.accountId;
   }
-  /** The id of the attached role of this AccountGrant. */
+  /** The account id of this AccountGrant. */
   public void setAccountId(String in) {
     this.accountId = in;
   }
@@ -45,11 +45,11 @@ public class AccountGrant {
   }
 
   private String resourceId;
-  /** The id of the composite role of this AccountGrant. */
+  /** The resource id of this AccountGrant. */
   public String getResourceId() {
     return this.resourceId;
   }
-  /** The id of the composite role of this AccountGrant. */
+  /** The resource id of this AccountGrant. */
   public void setResourceId(String in) {
     this.resourceId = in;
   }

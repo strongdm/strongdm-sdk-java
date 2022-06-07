@@ -361,6 +361,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Create registers a new Node.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentities.html#create(com.strongdm.api.v1.RemoteIdentity)" class="member-name-link">create(RemoteIdentity)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></dt>
+<dd>
+<div class="block">Create registers a new RemoteIdentity.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/Resources.html#create(com.strongdm.api.v1.Resource)" class="member-name-link">create(Resource)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Resources.html" title="class in com.strongdm.api.v1">Resources</a></dt>
 <dd>
 <div class="block">Create registers a new Resource.</div>
@@ -411,6 +415,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/strongdm/api/v1/Nodes.html#delete(java.lang.String)" class="member-name-link">delete(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Nodes.html" title="class in com.strongdm.api.v1">Nodes</a></dt>
 <dd>
 <div class="block">Delete removes a Node by ID.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentities.html#delete(java.lang.String)" class="member-name-link">delete(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></dt>
+<dd>
+<div class="block">Delete removes a RemoteIdentity by ID.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/Resources.html#delete(java.lang.String)" class="member-name-link">delete(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Resources.html" title="class in com.strongdm.api.v1">Resources</a></dt>
 <dd>
@@ -502,6 +510,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Get reads one Node by ID.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentities.html#get(java.lang.String)" class="member-name-link">get(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></dt>
+<dd>
+<div class="block">Get reads one RemoteIdentity by ID.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroups.html#get(java.lang.String)" class="member-name-link">get(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroups.html" title="class in com.strongdm.api.v1">RemoteIdentityGroups</a></dt>
 <dd>
 <div class="block">Get reads one RemoteIdentityGroup by ID.</div>
@@ -578,7 +590,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/strongdm/api/v1/AccountGrant.html#getAccountId()" class="member-name-link">getAccountId()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/AccountGrant.html" title="class in com.strongdm.api.v1">AccountGrant</a></dt>
 <dd>
-<div class="block">The id of the attached role of this AccountGrant.</div>
+<div class="block">The account id of this AccountGrant.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#getAccountId()" class="member-name-link">getAccountId()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">The account for this remote identity.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/SSH.html#getAllowDeprecatedKeyExchanges()" class="member-name-link">getAllowDeprecatedKeyExchanges()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/SSH.html" title="class in com.strongdm.api.v1">SSH</a></dt>
 <dd>&nbsp;</dd>
@@ -2107,6 +2123,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Unique identifier of the Relay.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#getId()" class="member-name-link">getId()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">Unique identifier of the RemoteIdentity.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroup.html#getId()" class="member-name-link">getId()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroup.html" title="class in com.strongdm.api.v1">RemoteIdentityGroup</a></dt>
 <dd>
 <div class="block">Unique identifier of the RemoteIdentityGroup.</div>
@@ -2276,7 +2296,23 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reserved for future use.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html#getMeta()" class="member-name-link">getMeta()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html#getMeta()" class="member-name-link">getMeta()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityDeleteResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html#getMeta()" class="member-name-link">getMeta()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html#getMeta()" class="member-name-link">getMeta()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGroupGetResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html#getMeta()" class="member-name-link">getMeta()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></dt>
 <dd>
 <div class="block">Reserved for future use.</div>
 </dd>
@@ -3119,7 +3155,23 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/strongdm/api/v1/RateLimitException.html#getRateLimit()" class="member-name-link">getRateLimit()</a> - Method in exception com.strongdm.api.v1.<a href="com/strongdm/api/v1/RateLimitException.html" title="class in com.strongdm.api.v1">RateLimitException</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html#getRateLimit()" class="member-name-link">getRateLimit()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html#getRateLimit()" class="member-name-link">getRateLimit()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityDeleteResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html#getRateLimit()" class="member-name-link">getRateLimit()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html#getRateLimit()" class="member-name-link">getRateLimit()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGroupGetResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html#getRateLimit()" class="member-name-link">getRateLimit()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></dt>
 <dd>
 <div class="block">Rate limit information.</div>
 </dd>
@@ -3219,9 +3271,25 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">How many remaining requests out of the limit are still avaialable.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html#getRemoteIdentity()" class="member-name-link">getRemoteIdentity()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a></dt>
+<dd>
+<div class="block">The created RemoteIdentity.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html#getRemoteIdentity()" class="member-name-link">getRemoteIdentity()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></dt>
+<dd>
+<div class="block">The requested RemoteIdentity.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html#getRemoteIdentity()" class="member-name-link">getRemoteIdentity()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></dt>
+<dd>
+<div class="block">The updated RemoteIdentity.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html#getRemoteIdentityGroup()" class="member-name-link">getRemoteIdentityGroup()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGroupGetResponse</a></dt>
 <dd>
 <div class="block">The requested RemoteIdentityGroup.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#getRemoteIdentityGroupId()" class="member-name-link">getRemoteIdentityGroupId()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">The remote identity group.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/DocumentDBReplicaSet.html#getReplicaSet()" class="member-name-link">getReplicaSet()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/DocumentDBReplicaSet.html" title="class in com.strongdm.api.v1">DocumentDBReplicaSet</a></dt>
 <dd>&nbsp;</dd>
@@ -3249,7 +3317,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/strongdm/api/v1/AccountGrant.html#getResourceId()" class="member-name-link">getResourceId()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/AccountGrant.html" title="class in com.strongdm.api.v1">AccountGrant</a></dt>
 <dd>
-<div class="block">The id of the composite role of this AccountGrant.</div>
+<div class="block">The resource id of this AccountGrant.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/RoleGrant.html#getResourceId()" class="member-name-link">getResourceId()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RoleGrant.html" title="class in com.strongdm.api.v1">RoleGrant</a></dt>
 <dd>
@@ -4169,6 +4237,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/strongdm/api/v1/Redshift.html#getUsername()" class="member-name-link">getUsername()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Redshift.html" title="class in com.strongdm.api.v1">Redshift</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#getUsername()" class="member-name-link">getUsername()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">The username to be used as the remote identity for this account.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/SingleStore.html#getUsername()" class="member-name-link">getUsername()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/SingleStore.html" title="class in com.strongdm.api.v1">SingleStore</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/strongdm/api/v1/Snowflake.html#getUsername()" class="member-name-link">getUsername()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Snowflake.html" title="class in com.strongdm.api.v1">Snowflake</a></dt>
@@ -4281,6 +4353,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/strongdm/api/v1/Nodes.html#list(java.lang.String,java.lang.Object...)" class="member-name-link">list(String, Object...)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Nodes.html" title="class in com.strongdm.api.v1">Nodes</a></dt>
 <dd>
 <div class="block">List gets a list of Nodes matching a given set of criteria.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentities.html#list(java.lang.String,java.lang.Object...)" class="member-name-link">list(String, Object...)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></dt>
+<dd>
+<div class="block">List gets a list of RemoteIdentities matching a given set of criteria.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroups.html#list(java.lang.String,java.lang.Object...)" class="member-name-link">list(String, Object...)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroups.html" title="class in com.strongdm.api.v1">RemoteIdentityGroups</a></dt>
 <dd>
@@ -4475,10 +4551,44 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/strongdm/api/v1/Relay.html#%3Cinit%3E()" class="member-name-link">Relay()</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Relay.html" title="class in com.strongdm.api.v1">Relay</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/Client.html#remoteIdentities()" class="member-name-link">remoteIdentities()</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Client.html" title="class in com.strongdm.api.v1">Client</a></dt>
+<dd>
+<div class="block">RemoteIdentities assign a resource directly to an account, giving the account the permission to connect to that resource.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentities.html" class="type-name-link" title="class in com.strongdm.api.v1">RemoteIdentities</a> - Class in <a href="com/strongdm/api/v1/package-summary.html">com.strongdm.api.v1</a></dt>
+<dd>
+<div class="block">RemoteIdentities assign a resource directly to an account, giving the account the permission to connect to that resource.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentities.html#%3Cinit%3E(io.grpc.ManagedChannel,com.strongdm.api.v1.Client)" class="member-name-link">RemoteIdentities(ManagedChannel, Client)</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html" class="type-name-link" title="class in com.strongdm.api.v1">RemoteIdentity</a> - Class in <a href="com/strongdm/api/v1/package-summary.html">com.strongdm.api.v1</a></dt>
+<dd>
+<div class="block">RemoteIdentities define the username to be used for a specific account
+ when connecting to a remote resource using that group.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#%3Cinit%3E()" class="member-name-link">RemoteIdentity()</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" class="type-name-link" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a> - Class in <a href="com/strongdm/api/v1/package-summary.html">com.strongdm.api.v1</a></dt>
+<dd>
+<div class="block">RemoteIdentityCreateResponse reports how the RemoteIdentities were created in the system.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html#%3Cinit%3E()" class="member-name-link">RemoteIdentityCreateResponse()</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html" class="type-name-link" title="class in com.strongdm.api.v1">RemoteIdentityDeleteResponse</a> - Class in <a href="com/strongdm/api/v1/package-summary.html">com.strongdm.api.v1</a></dt>
+<dd>
+<div class="block">RemoteIdentityDeleteResponse returns information about a RemoteIdentity that was deleted.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html#%3Cinit%3E()" class="member-name-link">RemoteIdentityDeleteResponse()</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityDeleteResponse</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" class="type-name-link" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a> - Class in <a href="com/strongdm/api/v1/package-summary.html">com.strongdm.api.v1</a></dt>
+<dd>
+<div class="block">RemoteIdentityGetResponse returns a requested RemoteIdentity.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html#%3Cinit%3E()" class="member-name-link">RemoteIdentityGetResponse()</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroup.html" class="type-name-link" title="class in com.strongdm.api.v1">RemoteIdentityGroup</a> - Class in <a href="com/strongdm/api/v1/package-summary.html">com.strongdm.api.v1</a></dt>
 <dd>
-<div class="block">A RemoteIdentityGroup has a list of access rules which determine which Resources the members
- of the RemoteIdentityGroup have access to.</div>
+<div class="block">A RemoteIdentityGroup defines a group of remote identities.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroup.html#%3Cinit%3E()" class="member-name-link">RemoteIdentityGroup()</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroup.html" title="class in com.strongdm.api.v1">RemoteIdentityGroup</a></dt>
 <dd>&nbsp;</dd>
@@ -4497,6 +4607,13 @@ loadScripts(document, 'script');</script>
 <div class="block">A RemoteIdentityGroup is a named grouping of Remote Identities for Accounts.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroups.html#%3Cinit%3E(io.grpc.ManagedChannel,com.strongdm.api.v1.Client)" class="member-name-link">RemoteIdentityGroups(ManagedChannel, Client)</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroups.html" title="class in com.strongdm.api.v1">RemoteIdentityGroups</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" class="type-name-link" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a> - Class in <a href="com/strongdm/api/v1/package-summary.html">com.strongdm.api.v1</a></dt>
+<dd>
+<div class="block">RemoteIdentityUpdateResponse returns the fields of a RemoteIdentity after it has been updated by
+ a RemoteIdentityUpdateRequest.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html#%3Cinit%3E()" class="member-name-link">RemoteIdentityUpdateResponse()</a> - Constructor for class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/strongdm/api/v1/AccessRule.html#removeId(int)" class="member-name-link">removeId(int)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/AccessRule.html" title="class in com.strongdm.api.v1">AccessRule</a></dt>
 <dd>&nbsp;</dd>
@@ -4783,7 +4900,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/strongdm/api/v1/AccountGrant.html#setAccountId(java.lang.String)" class="member-name-link">setAccountId(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/AccountGrant.html" title="class in com.strongdm.api.v1">AccountGrant</a></dt>
 <dd>
-<div class="block">The id of the attached role of this AccountGrant.</div>
+<div class="block">The account id of this AccountGrant.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#setAccountId(java.lang.String)" class="member-name-link">setAccountId(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">The account for this remote identity.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/SSH.html#setAllowDeprecatedKeyExchanges(boolean)" class="member-name-link">setAllowDeprecatedKeyExchanges(boolean)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/SSH.html" title="class in com.strongdm.api.v1">SSH</a></dt>
 <dd>&nbsp;</dd>
@@ -6298,6 +6419,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Unique identifier of the Relay.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#setId(java.lang.String)" class="member-name-link">setId(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">Unique identifier of the RemoteIdentity.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroup.html#setId(java.lang.String)" class="member-name-link">setId(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroup.html" title="class in com.strongdm.api.v1">RemoteIdentityGroup</a></dt>
 <dd>
 <div class="block">Unique identifier of the RemoteIdentityGroup.</div>
@@ -6407,6 +6532,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reserved for future use.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html#setMeta(com.strongdm.api.v1.CreateResponseMetadata)" class="member-name-link">setMeta(CreateResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/ResourceCreateResponse.html#setMeta(com.strongdm.api.v1.CreateResponseMetadata)" class="member-name-link">setMeta(CreateResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/ResourceCreateResponse.html" title="class in com.strongdm.api.v1">ResourceCreateResponse</a></dt>
 <dd>
 <div class="block">Reserved for future use.</div>
@@ -6442,6 +6571,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Reserved for future use.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/NodeDeleteResponse.html#setMeta(com.strongdm.api.v1.DeleteResponseMetadata)" class="member-name-link">setMeta(DeleteResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/NodeDeleteResponse.html" title="class in com.strongdm.api.v1">NodeDeleteResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html#setMeta(com.strongdm.api.v1.DeleteResponseMetadata)" class="member-name-link">setMeta(DeleteResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityDeleteResponse</a></dt>
 <dd>
 <div class="block">Reserved for future use.</div>
 </dd>
@@ -6491,6 +6624,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reserved for future use.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html#setMeta(com.strongdm.api.v1.GetResponseMetadata)" class="member-name-link">setMeta(GetResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html#setMeta(com.strongdm.api.v1.GetResponseMetadata)" class="member-name-link">setMeta(GetResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGroupGetResponse</a></dt>
 <dd>
 <div class="block">Reserved for future use.</div>
@@ -6522,6 +6659,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Reserved for future use.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/NodeUpdateResponse.html#setMeta(com.strongdm.api.v1.UpdateResponseMetadata)" class="member-name-link">setMeta(UpdateResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/NodeUpdateResponse.html" title="class in com.strongdm.api.v1">NodeUpdateResponse</a></dt>
+<dd>
+<div class="block">Reserved for future use.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html#setMeta(com.strongdm.api.v1.UpdateResponseMetadata)" class="member-name-link">setMeta(UpdateResponseMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></dt>
 <dd>
 <div class="block">Reserved for future use.</div>
 </dd>
@@ -7294,7 +7435,23 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Rate limit information.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html#setRateLimit(com.strongdm.api.v1.RateLimitMetadata)" class="member-name-link">setRateLimit(RateLimitMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html#setRateLimit(com.strongdm.api.v1.RateLimitMetadata)" class="member-name-link">setRateLimit(RateLimitMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityDeleteResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityDeleteResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html#setRateLimit(com.strongdm.api.v1.RateLimitMetadata)" class="member-name-link">setRateLimit(RateLimitMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html#setRateLimit(com.strongdm.api.v1.RateLimitMetadata)" class="member-name-link">setRateLimit(RateLimitMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGroupGetResponse</a></dt>
+<dd>
+<div class="block">Rate limit information.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html#setRateLimit(com.strongdm.api.v1.RateLimitMetadata)" class="member-name-link">setRateLimit(RateLimitMetadata)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></dt>
 <dd>
 <div class="block">Rate limit information.</div>
 </dd>
@@ -7394,9 +7551,25 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">How many remaining requests out of the limit are still avaialable.</div>
 </dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html#setRemoteIdentity(com.strongdm.api.v1.RemoteIdentity)" class="member-name-link">setRemoteIdentity(RemoteIdentity)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityCreateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityCreateResponse</a></dt>
+<dd>
+<div class="block">The created RemoteIdentity.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html#setRemoteIdentity(com.strongdm.api.v1.RemoteIdentity)" class="member-name-link">setRemoteIdentity(RemoteIdentity)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGetResponse</a></dt>
+<dd>
+<div class="block">The requested RemoteIdentity.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html#setRemoteIdentity(com.strongdm.api.v1.RemoteIdentity)" class="member-name-link">setRemoteIdentity(RemoteIdentity)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityUpdateResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityUpdateResponse</a></dt>
+<dd>
+<div class="block">The updated RemoteIdentity.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html#setRemoteIdentityGroup(com.strongdm.api.v1.RemoteIdentityGroup)" class="member-name-link">setRemoteIdentityGroup(RemoteIdentityGroup)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroupGetResponse.html" title="class in com.strongdm.api.v1">RemoteIdentityGroupGetResponse</a></dt>
 <dd>
 <div class="block">The requested RemoteIdentityGroup.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#setRemoteIdentityGroupId(java.lang.String)" class="member-name-link">setRemoteIdentityGroupId(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">The remote identity group.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/DocumentDBReplicaSet.html#setReplicaSet(java.lang.String)" class="member-name-link">setReplicaSet(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/DocumentDBReplicaSet.html" title="class in com.strongdm.api.v1">DocumentDBReplicaSet</a></dt>
 <dd>&nbsp;</dd>
@@ -7424,7 +7597,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="com/strongdm/api/v1/AccountGrant.html#setResourceId(java.lang.String)" class="member-name-link">setResourceId(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/AccountGrant.html" title="class in com.strongdm.api.v1">AccountGrant</a></dt>
 <dd>
-<div class="block">The id of the composite role of this AccountGrant.</div>
+<div class="block">The resource id of this AccountGrant.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/RoleGrant.html#setResourceId(java.lang.String)" class="member-name-link">setResourceId(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RoleGrant.html" title="class in com.strongdm.api.v1">RoleGrant</a></dt>
 <dd>
@@ -8338,6 +8511,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="com/strongdm/api/v1/Redshift.html#setUsername(java.lang.String)" class="member-name-link">setUsername(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Redshift.html" title="class in com.strongdm.api.v1">Redshift</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentity.html#setUsername(java.lang.String)" class="member-name-link">setUsername(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentity.html" title="class in com.strongdm.api.v1">RemoteIdentity</a></dt>
+<dd>
+<div class="block">The username to be used as the remote identity for this account.</div>
+</dd>
 <dt><a href="com/strongdm/api/v1/SingleStore.html#setUsername(java.lang.String)" class="member-name-link">setUsername(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/SingleStore.html" title="class in com.strongdm.api.v1">SingleStore</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/strongdm/api/v1/Snowflake.html#setUsername(java.lang.String)" class="member-name-link">setUsername(String)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Snowflake.html" title="class in com.strongdm.api.v1">Snowflake</a></dt>
@@ -8512,6 +8689,11 @@ loadScripts(document, 'script');</script>
 <dt><a href="com/strongdm/api/v1/Nodes.html#withDeadlineAfter(long,java.util.concurrent.TimeUnit)" class="member-name-link">withDeadlineAfter(long, TimeUnit)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/Nodes.html" title="class in com.strongdm.api.v1">Nodes</a></dt>
 <dd>
 <div class="block">This function returns a copy of the Nodes service which has
+ the given deadline set for all method calls.</div>
+</dd>
+<dt><a href="com/strongdm/api/v1/RemoteIdentities.html#withDeadlineAfter(long,java.util.concurrent.TimeUnit)" class="member-name-link">withDeadlineAfter(long, TimeUnit)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentities.html" title="class in com.strongdm.api.v1">RemoteIdentities</a></dt>
+<dd>
+<div class="block">This function returns a copy of the RemoteIdentities service which has
  the given deadline set for all method calls.</div>
 </dd>
 <dt><a href="com/strongdm/api/v1/RemoteIdentityGroups.html#withDeadlineAfter(long,java.util.concurrent.TimeUnit)" class="member-name-link">withDeadlineAfter(long, TimeUnit)</a> - Method in class com.strongdm.api.v1.<a href="com/strongdm/api/v1/RemoteIdentityGroups.html" title="class in com.strongdm.api.v1">RemoteIdentityGroups</a></dt>

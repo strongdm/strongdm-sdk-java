@@ -17,25 +17,25 @@
 
 package com.strongdm.api.v1;
 
-/** A RemoteIdentityGroup defines a group of remote identities. */
-public class RemoteIdentityGroup {
-  private String id;
-  /** Unique identifier of the RemoteIdentityGroup. */
-  public String getId() {
-    return this.id;
+/** RemoteIdentityDeleteResponse returns information about a RemoteIdentity that was deleted. */
+public class RemoteIdentityDeleteResponse {
+  private DeleteResponseMetadata meta;
+  /** Reserved for future use. */
+  public DeleteResponseMetadata getMeta() {
+    return this.meta;
   }
-  /** Unique identifier of the RemoteIdentityGroup. */
-  public void setId(String in) {
-    this.id = in;
+  /** Reserved for future use. */
+  public void setMeta(DeleteResponseMetadata in) {
+    this.meta = in;
   }
 
-  private String name;
-  /** Unique human-readable name of the RemoteIdentityGroup. */
-  public String getName() {
-    return this.name;
+  private RateLimitMetadata rateLimit;
+  /** Rate limit information. */
+  public RateLimitMetadata getRateLimit() {
+    return this.rateLimit;
   }
-  /** Unique human-readable name of the RemoteIdentityGroup. */
-  public void setName(String in) {
-    this.name = in;
+  /** Rate limit information. */
+  public void setRateLimit(RateLimitMetadata in) {
+    this.rateLimit = in;
   }
 }

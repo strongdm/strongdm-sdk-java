@@ -95,6 +95,16 @@ public class Client {
     return this.nodes;
   }
 
+  private final RemoteIdentities remoteIdentities;
+
+  /**
+   * RemoteIdentities assign a resource directly to an account, giving the account the permission to
+   * connect to that resource.
+   */
+  public RemoteIdentities remoteIdentities() {
+    return this.remoteIdentities;
+  }
+
   private final RemoteIdentityGroups remoteIdentityGroups;
 
   /**
@@ -189,6 +199,7 @@ public class Client {
       this.accounts = new Accounts(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
+      this.remoteIdentities = new RemoteIdentities(this.channel, this);
       this.remoteIdentityGroups = new RemoteIdentityGroups(this.channel, this);
       this.resources = new Resources(this.channel, this);
       this.roleAttachments = new RoleAttachments(this.channel, this);

@@ -35,6 +35,7 @@ import com.strongdm.api.v1.plumbing.AccountsPlumbing.*;
 import com.strongdm.api.v1.plumbing.ControlPanelPlumbing.*;
 import com.strongdm.api.v1.plumbing.DriversPlumbing.*;
 import com.strongdm.api.v1.plumbing.NodesPlumbing.*;
+import com.strongdm.api.v1.plumbing.RemoteIdentitiesPlumbing.*;
 import com.strongdm.api.v1.plumbing.RemoteIdentityGroupsPlumbing.*;
 import com.strongdm.api.v1.plumbing.ResourcesPlumbing.*;
 import com.strongdm.api.v1.plumbing.RoleAttachmentsPlumbing.*;
@@ -6029,6 +6030,182 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.v1.RemoteIdentity convertRemoteIdentityToPorcelain(
+      RemoteIdentity plumbing) {
+    com.strongdm.api.v1.RemoteIdentity porcelain = new com.strongdm.api.v1.RemoteIdentity();
+    porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static RemoteIdentity convertRemoteIdentityToPlumbing(
+      com.strongdm.api.v1.RemoteIdentity porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RemoteIdentity.Builder builder = RemoteIdentity.newBuilder();
+    if (porcelain.getAccountId() != null) {
+      builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RemoteIdentity> convertRepeatedRemoteIdentityToPorcelain(
+      Collection<RemoteIdentity> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertRemoteIdentityToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RemoteIdentity> convertRepeatedRemoteIdentityToPlumbing(
+      Collection<com.strongdm.api.v1.RemoteIdentity> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertRemoteIdentityToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RemoteIdentityCreateResponse
+      convertRemoteIdentityCreateResponseToPorcelain(RemoteIdentityCreateResponse plumbing) {
+    com.strongdm.api.v1.RemoteIdentityCreateResponse porcelain =
+        new com.strongdm.api.v1.RemoteIdentityCreateResponse();
+    porcelain.setMeta(Plumbing.convertCreateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setRemoteIdentity(
+        Plumbing.convertRemoteIdentityToPorcelain(plumbing.getRemoteIdentity()));
+    return porcelain;
+  }
+
+  public static RemoteIdentityCreateResponse convertRemoteIdentityCreateResponseToPlumbing(
+      com.strongdm.api.v1.RemoteIdentityCreateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RemoteIdentityCreateResponse.Builder builder = RemoteIdentityCreateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertCreateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getRemoteIdentity() != null) {
+      builder.setRemoteIdentity(
+          Plumbing.convertRemoteIdentityToPlumbing(porcelain.getRemoteIdentity()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RemoteIdentityCreateResponse>
+      convertRepeatedRemoteIdentityCreateResponseToPorcelain(
+          Collection<RemoteIdentityCreateResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertRemoteIdentityCreateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RemoteIdentityCreateResponse>
+      convertRepeatedRemoteIdentityCreateResponseToPlumbing(
+          Collection<com.strongdm.api.v1.RemoteIdentityCreateResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertRemoteIdentityCreateResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RemoteIdentityDeleteResponse
+      convertRemoteIdentityDeleteResponseToPorcelain(RemoteIdentityDeleteResponse plumbing) {
+    com.strongdm.api.v1.RemoteIdentityDeleteResponse porcelain =
+        new com.strongdm.api.v1.RemoteIdentityDeleteResponse();
+    porcelain.setMeta(Plumbing.convertDeleteResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    return porcelain;
+  }
+
+  public static RemoteIdentityDeleteResponse convertRemoteIdentityDeleteResponseToPlumbing(
+      com.strongdm.api.v1.RemoteIdentityDeleteResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RemoteIdentityDeleteResponse.Builder builder = RemoteIdentityDeleteResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertDeleteResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RemoteIdentityDeleteResponse>
+      convertRepeatedRemoteIdentityDeleteResponseToPorcelain(
+          Collection<RemoteIdentityDeleteResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertRemoteIdentityDeleteResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RemoteIdentityDeleteResponse>
+      convertRepeatedRemoteIdentityDeleteResponseToPlumbing(
+          Collection<com.strongdm.api.v1.RemoteIdentityDeleteResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertRemoteIdentityDeleteResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RemoteIdentityGetResponse
+      convertRemoteIdentityGetResponseToPorcelain(RemoteIdentityGetResponse plumbing) {
+    com.strongdm.api.v1.RemoteIdentityGetResponse porcelain =
+        new com.strongdm.api.v1.RemoteIdentityGetResponse();
+    porcelain.setMeta(Plumbing.convertGetResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setRemoteIdentity(
+        Plumbing.convertRemoteIdentityToPorcelain(plumbing.getRemoteIdentity()));
+    return porcelain;
+  }
+
+  public static RemoteIdentityGetResponse convertRemoteIdentityGetResponseToPlumbing(
+      com.strongdm.api.v1.RemoteIdentityGetResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RemoteIdentityGetResponse.Builder builder = RemoteIdentityGetResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertGetResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getRemoteIdentity() != null) {
+      builder.setRemoteIdentity(
+          Plumbing.convertRemoteIdentityToPlumbing(porcelain.getRemoteIdentity()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RemoteIdentityGetResponse>
+      convertRepeatedRemoteIdentityGetResponseToPorcelain(
+          Collection<RemoteIdentityGetResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertRemoteIdentityGetResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RemoteIdentityGetResponse> convertRepeatedRemoteIdentityGetResponseToPlumbing(
+      Collection<com.strongdm.api.v1.RemoteIdentityGetResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertRemoteIdentityGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.v1.RemoteIdentityGroup convertRemoteIdentityGroupToPorcelain(
       RemoteIdentityGroup plumbing) {
     com.strongdm.api.v1.RemoteIdentityGroup porcelain =
@@ -6110,6 +6287,52 @@ public class Plumbing {
           Collection<com.strongdm.api.v1.RemoteIdentityGroupGetResponse> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertRemoteIdentityGroupGetResponseToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.v1.RemoteIdentityUpdateResponse
+      convertRemoteIdentityUpdateResponseToPorcelain(RemoteIdentityUpdateResponse plumbing) {
+    com.strongdm.api.v1.RemoteIdentityUpdateResponse porcelain =
+        new com.strongdm.api.v1.RemoteIdentityUpdateResponse();
+    porcelain.setMeta(Plumbing.convertUpdateResponseMetadataToPorcelain(plumbing.getMeta()));
+    porcelain.setRateLimit(Plumbing.convertRateLimitMetadataToPorcelain(plumbing.getRateLimit()));
+    porcelain.setRemoteIdentity(
+        Plumbing.convertRemoteIdentityToPorcelain(plumbing.getRemoteIdentity()));
+    return porcelain;
+  }
+
+  public static RemoteIdentityUpdateResponse convertRemoteIdentityUpdateResponseToPlumbing(
+      com.strongdm.api.v1.RemoteIdentityUpdateResponse porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    RemoteIdentityUpdateResponse.Builder builder = RemoteIdentityUpdateResponse.newBuilder();
+    if (porcelain.getMeta() != null) {
+      builder.setMeta(Plumbing.convertUpdateResponseMetadataToPlumbing(porcelain.getMeta()));
+    }
+    if (porcelain.getRateLimit() != null) {
+      builder.setRateLimit(Plumbing.convertRateLimitMetadataToPlumbing(porcelain.getRateLimit()));
+    }
+    if (porcelain.getRemoteIdentity() != null) {
+      builder.setRemoteIdentity(
+          Plumbing.convertRemoteIdentityToPlumbing(porcelain.getRemoteIdentity()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.v1.RemoteIdentityUpdateResponse>
+      convertRepeatedRemoteIdentityUpdateResponseToPorcelain(
+          Collection<RemoteIdentityUpdateResponse> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertRemoteIdentityUpdateResponseToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<RemoteIdentityUpdateResponse>
+      convertRepeatedRemoteIdentityUpdateResponseToPlumbing(
+          Collection<com.strongdm.api.v1.RemoteIdentityUpdateResponse> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertRemoteIdentityUpdateResponseToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 

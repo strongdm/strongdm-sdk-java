@@ -8456,7 +8456,7 @@ public final class AccountGrantsPlumbing {
 
     /**
      * <pre>
-     * The id of the composite role of this AccountGrant.
+     * The resource id of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8465,7 +8465,7 @@ public final class AccountGrantsPlumbing {
     java.lang.String getResourceId();
     /**
      * <pre>
-     * The id of the composite role of this AccountGrant.
+     * The resource id of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8476,7 +8476,7 @@ public final class AccountGrantsPlumbing {
 
     /**
      * <pre>
-     * The id of the attached role of this AccountGrant.
+     * The account id of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -8485,7 +8485,7 @@ public final class AccountGrantsPlumbing {
     java.lang.String getAccountId();
     /**
      * <pre>
-     * The id of the attached role of this AccountGrant.
+     * The account id of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -8732,7 +8732,7 @@ public final class AccountGrantsPlumbing {
     private volatile java.lang.Object resourceId_;
     /**
      * <pre>
-     * The id of the composite role of this AccountGrant.
+     * The resource id of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8753,7 +8753,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The id of the composite role of this AccountGrant.
+     * The resource id of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8778,7 +8778,7 @@ public final class AccountGrantsPlumbing {
     private volatile java.lang.Object accountId_;
     /**
      * <pre>
-     * The id of the attached role of this AccountGrant.
+     * The account id of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -8799,7 +8799,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The id of the attached role of this AccountGrant.
+     * The account id of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9401,7 +9401,7 @@ public final class AccountGrantsPlumbing {
       private java.lang.Object resourceId_ = "";
       /**
        * <pre>
-       * The id of the composite role of this AccountGrant.
+       * The resource id of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9421,7 +9421,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the composite role of this AccountGrant.
+       * The resource id of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9442,7 +9442,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the composite role of this AccountGrant.
+       * The resource id of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9461,7 +9461,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the composite role of this AccountGrant.
+       * The resource id of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9475,7 +9475,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the composite role of this AccountGrant.
+       * The resource id of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9497,7 +9497,7 @@ public final class AccountGrantsPlumbing {
       private java.lang.Object accountId_ = "";
       /**
        * <pre>
-       * The id of the attached role of this AccountGrant.
+       * The account id of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9517,7 +9517,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the attached role of this AccountGrant.
+       * The account id of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9538,7 +9538,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the attached role of this AccountGrant.
+       * The account id of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9557,7 +9557,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the attached role of this AccountGrant.
+       * The account id of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9571,7 +9571,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The id of the attached role of this AccountGrant.
+       * The account id of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
