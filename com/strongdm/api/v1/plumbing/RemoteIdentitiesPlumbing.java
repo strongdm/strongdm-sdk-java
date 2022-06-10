@@ -12039,36 +12039,23 @@ public final class RemoteIdentitiesPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027remote_identities.proto\022\002v1\032\037google/pr" +
-      "otobuf/timestamp.proto\032\roptions.proto\032\ns" +
-      "pec.proto\"\177\n\033RemoteIdentityCreateRequest" +
-      "\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequestMetadat" +
-      "a\0227\n\017remote_identity\030\002 \001(\0132\022.v1.RemoteId" +
-      "entityB\n\362\370\263\007\005\260\363\263\007\001\"\326\002\n\034RemoteIdentityCre" +
-      "ateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.CreateRes" +
-      "ponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017remote_iden" +
-      "tity\030\002 \001(\0132\022.v1.RemoteIdentityB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
-      "tadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t" +
-      "!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_private\362\370\263\007" +
-      "\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json_gatew" +
-      "ay_private\362\370\263\007\020\262\364\263\007\013!typescript:\n\372\370\263\007\005\250\363" +
-      "\263\007\001\"X\n\030RemoteIdentityGetRequest\022$\n\004meta\030" +
-      "\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\"\320\002\n\031RemoteIdentityGetRespo" +
-      "nse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetada" +
-      "taB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017remote_identity\030\002 \001(\0132" +
-      "\022.v1.RemoteIdentityB\n\362\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate" +
-      "_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB\216\001\362\370" +
-      "\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!jopenapi\362\370" +
-      "\263\007\026\262\364\263\007\021!jopenapi_private\362\370\263\007\022\262\364\263\007\r!json" +
-      "_gateway\362\370\263\007\032\262\364\263\007\025!json_gateway_private\362" +
-      "\370\263\007\020\262\364\263\007\013!typescript:\n\372\370\263\007\005\250\363\263\007\001\"\213\001\n\033Rem" +
-      "oteIdentityUpdateRequest\022\'\n\004meta\030\001 \001(\0132\031" +
-      ".v1.UpdateRequestMetadata\022\n\n\002id\030\002 \001(\t\0227\n" +
-      "\017remote_identity\030\003 \001(\0132\022.v1.RemoteIdenti" +
-      "tyB\n\362\370\263\007\005\260\363\263\007\001\"\326\002\n\034RemoteIdentityUpdateR" +
-      "esponse\0224\n\004meta\030\001 \001(\0132\032.v1.UpdateRespons" +
+      "\n\027remote_identities.proto\022\002v1\032\roptions.p" +
+      "roto\032\nspec.proto\"\177\n\033RemoteIdentityCreate" +
+      "Request\022\'\n\004meta\030\001 \001(\0132\031.v1.CreateRequest" +
+      "Metadata\0227\n\017remote_identity\030\002 \001(\0132\022.v1.R" +
+      "emoteIdentityB\n\362\370\263\007\005\260\363\263\007\001\"\326\002\n\034RemoteIden" +
+      "tityCreateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Cr" +
+      "eateResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017remo" +
+      "te_identity\030\002 \001(\0132\022.v1.RemoteIdentityB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025.v1.Rate" +
+      "LimitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
+      "\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_priv" +
+      "ate\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!jso" +
+      "n_gateway_private\362\370\263\007\020\262\364\263\007\013!typescript:\n" +
+      "\372\370\263\007\005\250\363\263\007\001\"X\n\030RemoteIdentityGetRequest\022$" +
+      "\n\004meta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002" +
+      "id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\320\002\n\031RemoteIdentityG" +
+      "etResponse\0221\n\004meta\030\001 \001(\0132\027.v1.GetRespons" +
       "eMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017remote_identity" +
       "\030\002 \001(\0132\022.v1.RemoteIdentityB\n\362\370\263\007\005\260\363\263\007\001\022\272" +
       "\001\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetada" +
@@ -12076,58 +12063,70 @@ public final class RemoteIdentitiesPlumbing {
       "enapi\362\370\263\007\026\262\364\263\007\021!jopenapi_private\362\370\263\007\022\262\364\263" +
       "\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json_gateway_p" +
       "rivate\362\370\263\007\020\262\364\263\007\013!typescript:\n\372\370\263\007\005\250\363\263\007\001\"" +
-      "^\n\033RemoteIdentityDeleteRequest\022\'\n\004meta\030\001" +
-      " \001(\0132\031.v1.DeleteRequestMetadata\022\026\n\002id\030\002 " +
-      "\001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\235\002\n\034RemoteIdentityDelete" +
-      "Response\0224\n\004meta\030\001 \001(\0132\032.v1.DeleteRespon" +
-      "seMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate_limit\030\002 " +
-      "\001(\0132\025.v1.RateLimitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!" +
-      "jopenapi_private\362\370\263\007\022\262\364\263\007\r!json_gateway\362" +
-      "\370\263\007\032\262\364\263\007\025!json_gateway_private\362\370\263\007\020\262\364\263\007\013" +
-      "!typescript:\n\372\370\263\007\005\250\363\263\007\001\"^\n\031RemoteIdentit" +
-      "yListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequ" +
-      "estMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"" +
-      "\274\002\n\032RemoteIdentityListResponse\022&\n\004meta\030\001" +
-      " \001(\0132\030.v1.ListResponseMetadata\0229\n\021remote" +
-      "_identities\030\002 \003(\0132\022.v1.RemoteIdentityB\n\362" +
-      "\370\263\007\005\270\363\263\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025.v1.Rate" +
-      "LimitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263" +
-      "\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_priv" +
-      "ate\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!jso" +
-      "n_gateway_private\362\370\263\007\020\262\364\263\007\013!typescript\"\221" +
-      "\002\n\016RemoteIdentity\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022#\n\naccount_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\0221" +
-      "\n\030remote_identity_group_id\030\003 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\300\363\263\007\001\022!\n\010username\030\004 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300" +
-      "\363\263\007\001:l\372\370\263\007g\250\363\263\007\001\302\363\263\007]\242\363\263\007(tf_examples/re" +
-      "mote_identity_resource.txt\252\363\263\007+tf_exampl" +
-      "es/remote_identity_data_source.txt2\244\005\n\020R" +
-      "emoteIdentities\022z\n\006Create\022\037.v1.RemoteIde" +
-      "ntityCreateRequest\032 .v1.RemoteIdentityCr" +
-      "eateResponse\"-\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\032\252\363\263\007\025/v" +
-      "1/remote-identities\022u\n\003Get\022\034.v1.RemoteId" +
-      "entityGetRequest\032\035.v1.RemoteIdentityGetR" +
-      "esponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/v1/remo" +
-      "te-identities/{id}\022~\n\006Update\022\037.v1.Remote" +
-      "IdentityUpdateRequest\032 .v1.RemoteIdentit" +
-      "yUpdateResponse\"1\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\037\252\363\263\007\032" +
-      "/v1/remote-identities/{id}\022\201\001\n\006Delete\022\037." +
-      "v1.RemoteIdentityDeleteRequest\032 .v1.Remo" +
-      "teIdentityDeleteResponse\"4\202\371\263\007\013\242\363\263\007\006dele" +
-      "te\202\371\263\007\037\252\363\263\007\032/v1/remote-identities/{id}\022s" +
-      "\n\004List\022\035.v1.RemoteIdentityListRequest\032\036." +
-      "v1.RemoteIdentityListResponse\",\202\371\263\007\010\242\363\263\007" +
-      "\003get\202\371\263\007\032\252\363\263\007\025/v1/remote-identities\032$\312\371\263" +
-      "\007\023\302\371\263\007\016RemoteIdentity\312\371\263\007\007\322\371\263\007\002i-Bo\n\034com" +
-      ".strongdm.api.v1.plumbingB\030RemoteIdentit" +
-      "iesPlumbingZ5github.com/strongdm/strongd" +
-      "m-sdk-go/v2/internal/v1;v1b\006proto3"
+      "\213\001\n\033RemoteIdentityUpdateRequest\022\'\n\004meta\030" +
+      "\001 \001(\0132\031.v1.UpdateRequestMetadata\022\n\n\002id\030\002" +
+      " \001(\t\0227\n\017remote_identity\030\003 \001(\0132\022.v1.Remot" +
+      "eIdentityB\n\362\370\263\007\005\260\363\263\007\001\"\326\002\n\034RemoteIdentity" +
+      "UpdateResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Update" +
+      "ResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\0227\n\017remote_i" +
+      "dentity\030\002 \001(\0132\022.v1.RemoteIdentityB\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimi" +
+      "tMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364" +
+      "\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_private\362" +
+      "\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json_ga" +
+      "teway_private\362\370\263\007\020\262\364\263\007\013!typescript:\n\372\370\263\007" +
+      "\005\250\363\263\007\001\"^\n\033RemoteIdentityDeleteRequest\022\'\n" +
+      "\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022\026" +
+      "\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\235\002\n\034RemoteIdentit" +
+      "yDeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delet" +
+      "eResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022\272\001\n\nrate_l" +
+      "imit\030\002 \001(\0132\025.v1.RateLimitMetadataB\216\001\362\370\263\007" +
+      "\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!jopenapi\362\370\263\007" +
+      "\026\262\364\263\007\021!jopenapi_private\362\370\263\007\022\262\364\263\007\r!json_g" +
+      "ateway\362\370\263\007\032\262\364\263\007\025!json_gateway_private\362\370\263" +
+      "\007\020\262\364\263\007\013!typescript:\n\372\370\263\007\005\250\363\263\007\001\"^\n\031Remote" +
+      "IdentityListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.L" +
+      "istRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\"\274\002\n\032RemoteIdentityListResponse\022&\n" +
+      "\004meta\030\001 \001(\0132\030.v1.ListResponseMetadata\0229\n" +
+      "\021remote_identities\030\002 \003(\0132\022.v1.RemoteIden" +
+      "tityB\n\362\370\263\007\005\270\363\263\007\001\022\272\001\n\nrate_limit\030\003 \001(\0132\025." +
+      "v1.RateLimitMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364" +
+      "\263\007\001*\362\370\263\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopena" +
+      "pi_private\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364" +
+      "\263\007\025!json_gateway_private\362\370\263\007\020\262\364\263\007\013!types" +
+      "cript\"\221\002\n\016RemoteIdentity\022\026\n\002id\030\001 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022#\n\naccount_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001" +
+      "\300\363\263\007\001\0221\n\030remote_identity_group_id\030\003 \001(\tB" +
+      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022!\n\010username\030\004 \001(\tB\017\362\370\263\007" +
+      "\n\260\363\263\007\001\300\363\263\007\001:l\372\370\263\007g\250\363\263\007\001\302\363\263\007]\242\363\263\007(tf_exam" +
+      "ples/remote_identity_resource.txt\252\363\263\007+tf" +
+      "_examples/remote_identity_data_source.tx" +
+      "t2\244\005\n\020RemoteIdentities\022z\n\006Create\022\037.v1.Re" +
+      "moteIdentityCreateRequest\032 .v1.RemoteIde" +
+      "ntityCreateResponse\"-\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\032" +
+      "\252\363\263\007\025/v1/remote-identities\022u\n\003Get\022\034.v1.R" +
+      "emoteIdentityGetRequest\032\035.v1.RemoteIdent" +
+      "ityGetResponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363\263\007\032/" +
+      "v1/remote-identities/{id}\022~\n\006Update\022\037.v1" +
+      ".RemoteIdentityUpdateRequest\032 .v1.Remote" +
+      "IdentityUpdateResponse\"1\202\371\263\007\010\242\363\263\007\003put\202\371\263" +
+      "\007\037\252\363\263\007\032/v1/remote-identities/{id}\022\201\001\n\006De" +
+      "lete\022\037.v1.RemoteIdentityDeleteRequest\032 ." +
+      "v1.RemoteIdentityDeleteResponse\"4\202\371\263\007\013\242\363" +
+      "\263\007\006delete\202\371\263\007\037\252\363\263\007\032/v1/remote-identities" +
+      "/{id}\022s\n\004List\022\035.v1.RemoteIdentityListReq" +
+      "uest\032\036.v1.RemoteIdentityListResponse\",\202\371" +
+      "\263\007\010\242\363\263\007\003get\202\371\263\007\032\252\363\263\007\025/v1/remote-identiti" +
+      "es\032$\312\371\263\007\023\302\371\263\007\016RemoteIdentity\312\371\263\007\007\322\371\263\007\002i-" +
+      "Bo\n\034com.strongdm.api.v1.plumbingB\030Remote" +
+      "IdentitiesPlumbingZ5github.com/strongdm/" +
+      "strongdm-sdk-go/v2/internal/v1;v1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
           com.strongdm.api.v1.plumbing.Options.getDescriptor(),
           com.strongdm.api.v1.plumbing.Spec.getDescriptor(),
         });
@@ -12205,7 +12204,6 @@ public final class RemoteIdentitiesPlumbing {
     registry.add(com.strongdm.api.v1.plumbing.Options.serviceOptions);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.TimestampProto.getDescriptor();
     com.strongdm.api.v1.plumbing.Options.getDescriptor();
     com.strongdm.api.v1.plumbing.Spec.getDescriptor();
   }

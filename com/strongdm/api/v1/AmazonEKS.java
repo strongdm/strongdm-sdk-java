@@ -129,6 +129,26 @@ public class AmazonEKS implements Resource {
     this.region = in;
   }
 
+  private String remoteIdentityGroupId;
+  /** */
+  public String getRemoteIdentityGroupId() {
+    return this.remoteIdentityGroupId;
+  }
+  /** */
+  public void setRemoteIdentityGroupId(String in) {
+    this.remoteIdentityGroupId = in;
+  }
+
+  private String remoteIdentityHealthcheckUsername;
+  /** */
+  public String getRemoteIdentityHealthcheckUsername() {
+    return this.remoteIdentityHealthcheckUsername;
+  }
+  /** */
+  public void setRemoteIdentityHealthcheckUsername(String in) {
+    this.remoteIdentityHealthcheckUsername = in;
+  }
+
   private String roleArn;
   /** */
   public String getRoleArn() {

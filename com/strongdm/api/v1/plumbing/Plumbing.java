@@ -192,6 +192,9 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -231,6 +234,13 @@ public class Plumbing {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -338,6 +348,9 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     porcelain.setToken((plumbing.getToken()));
@@ -370,6 +383,13 @@ public class Plumbing {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -1238,6 +1258,9 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
@@ -1281,6 +1304,13 @@ public class Plumbing {
     }
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
     }
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
@@ -3345,6 +3375,9 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setServiceAccountKey((plumbing.getServiceAccountKey()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
@@ -3377,6 +3410,13 @@ public class Plumbing {
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
     }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
@@ -3799,6 +3839,9 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -3838,6 +3881,13 @@ public class Plumbing {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -3947,6 +3997,9 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPort((plumbing.getPort()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     porcelain.setToken((plumbing.getToken()));
@@ -3979,6 +4032,13 @@ public class Plumbing {
       builder.setName((porcelain.getName()));
     }
     builder.setPort(porcelain.getPort());
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -7847,6 +7907,9 @@ public class Plumbing {
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortForwarding((plumbing.getPortForwarding()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     porcelain.setUsername((plumbing.getUsername()));
@@ -7878,6 +7941,13 @@ public class Plumbing {
     builder.setPort(porcelain.getPort());
     builder.setPortForwarding(porcelain.getPortForwarding());
     builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
