@@ -79,16 +79,6 @@ public class SSHCert implements Resource {
     this.id = in;
   }
 
-  private String keyType;
-  /** */
-  public String getKeyType() {
-    return this.keyType;
-  }
-  /** */
-  public void setKeyType(String in) {
-    this.keyType = in;
-  }
-
   private String name;
   /** Unique human-readable name of the Resource. */
   public String getName() {
