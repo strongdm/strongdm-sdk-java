@@ -5289,24 +5289,22 @@ public final class RemoteIdentityGroupsPlumbing {
       "aB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!jope" +
       "napi\362\370\263\007\026\262\364\263\007\021!jopenapi_private\362\370\263\007\022\262\364\263\007" +
       "\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json_gateway_pr" +
-      "ivate\362\370\263\007\020\262\364\263\007\013!typescript\"\306\001\n\023RemoteIde" +
+      "ivate\362\370\263\007\020\262\364\263\007\013!typescript\"\223\001\n\023RemoteIde" +
       "ntityGroup\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
-      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:x\372\370\263\007s\250\363\263\007\001\302\363\263" +
-      "\007i\242\363\263\007.tf_examples/remote_identity_group" +
-      "_resource.txt\252\363\263\0071tf_examples/remote_ide" +
-      "ntity_group_data_source.txt2\316\002\n\024RemoteId" +
-      "entityGroups\022\204\001\n\003Get\022!.v1.RemoteIdentity" +
-      "GroupGetRequest\032\".v1.RemoteIdentityGroup" +
-      "GetResponse\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v1/" +
-      "remote-identity-groups/{id}\022\202\001\n\004List\022\".v" +
-      "1.RemoteIdentityGroupListRequest\032#.v1.Re" +
-      "moteIdentityGroupListResponse\"1\202\371\263\007\010\242\363\263\007" +
-      "\003get\202\371\263\007\037\252\363\263\007\032/v1/remote-identity-groups" +
-      "\032*\312\371\263\007\030\302\371\263\007\023RemoteIdentityGroup\312\371\263\007\010\322\371\263\007" +
-      "\003ig-Bs\n\034com.strongdm.api.v1.plumbingB\034Re" +
-      "moteIdentityGroupsPlumbingZ5github.com/s" +
-      "trongdm/strongdm-sdk-go/v2/internal/v1;v" +
-      "1b\006proto3"
+      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001:E\372\370\263\007@\250\363\263\007\001\302\363\263" +
+      "\0076\252\363\263\0071tf_examples/remote_identity_group" +
+      "_data_source.txt2\316\002\n\024RemoteIdentityGroup" +
+      "s\022\204\001\n\003Get\022!.v1.RemoteIdentityGroupGetReq" +
+      "uest\032\".v1.RemoteIdentityGroupGetResponse" +
+      "\"6\202\371\263\007\010\242\363\263\007\003get\202\371\263\007$\252\363\263\007\037/v1/remote-iden" +
+      "tity-groups/{id}\022\202\001\n\004List\022\".v1.RemoteIde" +
+      "ntityGroupListRequest\032#.v1.RemoteIdentit" +
+      "yGroupListResponse\"1\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\037\252\363" +
+      "\263\007\032/v1/remote-identity-groups\032*\312\371\263\007\030\302\371\263\007" +
+      "\023RemoteIdentityGroup\312\371\263\007\010\322\371\263\007\003ig-Bs\n\034com" +
+      ".strongdm.api.v1.plumbingB\034RemoteIdentit" +
+      "yGroupsPlumbingZ5github.com/strongdm/str" +
+      "ongdm-sdk-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
