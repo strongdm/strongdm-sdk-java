@@ -129,6 +129,16 @@ public class KubernetesUserImpersonation implements Resource {
     this.port = in;
   }
 
+  private int portOverride;
+  /** */
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+  /** */
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {
