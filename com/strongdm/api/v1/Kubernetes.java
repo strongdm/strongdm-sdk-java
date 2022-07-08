@@ -129,6 +129,16 @@ public class Kubernetes implements Resource {
     this.port = in;
   }
 
+  private int portOverride;
+  /** */
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+  /** */
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
   private String remoteIdentityGroupId;
   /** */
   public String getRemoteIdentityGroupId() {
