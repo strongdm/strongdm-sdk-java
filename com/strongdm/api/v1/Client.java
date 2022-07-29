@@ -125,36 +125,6 @@ public class Client {
     return this.resources;
   }
 
-  private final RoleAttachments roleAttachments;
-
-  /**
-   * RoleAttachments represent relationships between composite roles and the roles that make up
-   * those composite roles. When a composite role is attached to another role, the permissions
-   * granted to members of the composite role are augmented to include the permissions granted to
-   * members of the attached role.
-   *
-   * <p>Deprecated: use multi-role via AccountAttachments instead.
-   */
-  @Deprecated
-  public RoleAttachments roleAttachments() {
-    return this.roleAttachments;
-  }
-
-  private final RoleGrants roleGrants;
-
-  /**
-   * RoleGrants represent relationships between composite roles and the roles that make up those
-   * composite roles. When a composite role is attached to another role, the permissions granted to
-   * members of the composite role are augmented to include the permissions granted to members of
-   * the attached role.
-   *
-   * <p>Deprecated: use Role access rules instead.
-   */
-  @Deprecated
-  public RoleGrants roleGrants() {
-    return this.roleGrants;
-  }
-
   private final Roles roles;
 
   /**
@@ -202,8 +172,6 @@ public class Client {
       this.remoteIdentities = new RemoteIdentities(this.channel, this);
       this.remoteIdentityGroups = new RemoteIdentityGroups(this.channel, this);
       this.resources = new Resources(this.channel, this);
-      this.roleAttachments = new RoleAttachments(this.channel, this);
-      this.roleGrants = new RoleGrants(this.channel, this);
       this.roles = new Roles(this.channel, this);
       this.secretStores = new SecretStores(this.channel, this);
     } catch (Exception e) {

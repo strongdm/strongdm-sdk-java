@@ -269,6 +269,8 @@ public final class SecretStoresTypesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1077,8 +1079,9 @@ public final class SecretStoresTypesPlumbing {
         } else {
           if (secretStoreCase_ == 3) {
             awsBuilder_.mergeFrom(value);
+          } else {
+            awsBuilder_.setMessage(value);
           }
-          awsBuilder_.setMessage(value);
         }
         secretStoreCase_ = 3;
         return this;
@@ -1218,8 +1221,9 @@ public final class SecretStoresTypesPlumbing {
         } else {
           if (secretStoreCase_ == 101) {
             azureBuilder_.mergeFrom(value);
+          } else {
+            azureBuilder_.setMessage(value);
           }
-          azureBuilder_.setMessage(value);
         }
         secretStoreCase_ = 101;
         return this;
@@ -1359,8 +1363,9 @@ public final class SecretStoresTypesPlumbing {
         } else {
           if (secretStoreCase_ == 201) {
             gcpBuilder_.mergeFrom(value);
+          } else {
+            gcpBuilder_.setMessage(value);
           }
-          gcpBuilder_.setMessage(value);
         }
         secretStoreCase_ = 201;
         return this;
@@ -1500,8 +1505,9 @@ public final class SecretStoresTypesPlumbing {
         } else {
           if (secretStoreCase_ == 4) {
             vaultAppRoleBuilder_.mergeFrom(value);
+          } else {
+            vaultAppRoleBuilder_.setMessage(value);
           }
-          vaultAppRoleBuilder_.setMessage(value);
         }
         secretStoreCase_ = 4;
         return this;
@@ -1641,8 +1647,9 @@ public final class SecretStoresTypesPlumbing {
         } else {
           if (secretStoreCase_ == 1) {
             vaultTlsBuilder_.mergeFrom(value);
+          } else {
+            vaultTlsBuilder_.setMessage(value);
           }
-          vaultTlsBuilder_.setMessage(value);
         }
         secretStoreCase_ = 1;
         return this;
@@ -1782,8 +1789,9 @@ public final class SecretStoresTypesPlumbing {
         } else {
           if (secretStoreCase_ == 2) {
             vaultTokenBuilder_.mergeFrom(value);
+          } else {
+            vaultTokenBuilder_.setMessage(value);
           }
-          vaultTokenBuilder_.setMessage(value);
         }
         secretStoreCase_ = 2;
         return this;
@@ -2074,6 +2082,8 @@ public final class SecretStoresTypesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3277,6 +3287,8 @@ public final class SecretStoresTypesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4480,6 +4492,8 @@ public final class SecretStoresTypesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5702,6 +5716,8 @@ public final class SecretStoresTypesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7112,6 +7128,8 @@ public final class SecretStoresTypesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8858,6 +8876,8 @@ public final class SecretStoresTypesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

@@ -34,26 +34,6 @@ public class Role {
     this.accessRules = in;
   }
 
-  private boolean composite;
-  /**
-   * Composite is true if the Role is a composite role.
-   *
-   * <p>Deprecated: composite roles are deprecated, use multi-role via AccountAttachments instead.
-   */
-  @Deprecated
-  public boolean getComposite() {
-    return this.composite;
-  }
-  /**
-   * Composite is true if the Role is a composite role.
-   *
-   * <p>Deprecated: composite roles are deprecated, use multi-role via AccountAttachments instead.
-   */
-  @Deprecated
-  public void setComposite(boolean in) {
-    this.composite = in;
-  }
-
   private String id;
   /** Unique identifier of the Role. */
   public String getId() {

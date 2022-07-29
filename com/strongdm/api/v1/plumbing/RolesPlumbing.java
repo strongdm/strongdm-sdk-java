@@ -173,6 +173,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1167,6 +1169,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2330,6 +2334,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3258,6 +3264,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4465,6 +4473,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5632,6 +5642,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6795,6 +6807,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7683,6 +7697,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8622,6 +8638,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9566,6 +9584,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10873,19 +10893,6 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
-     * Composite is true if the Role is a composite role.
-     * Deprecated: composite roles are deprecated, use multi-role via
-     * AccountAttachments instead.
-     * </pre>
-     *
-     * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
-     * @deprecated
-     * @return The composite.
-     */
-    @java.lang.Deprecated boolean getComposite();
-
-    /**
-     * <pre>
      * Tags is a map of key, value pairs.
      * </pre>
      *
@@ -10977,11 +10984,6 @@ public final class RolesPlumbing {
               name_ = s;
               break;
             }
-            case 24: {
-
-              composite_ = input.readBool();
-              break;
-            }
             case 34: {
               com.strongdm.api.v1.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
               if (tags_ != null) {
@@ -11012,6 +11014,8 @@ public final class RolesPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11171,24 +11175,6 @@ public final class RolesPlumbing {
       }
     }
 
-    public static final int COMPOSITE_FIELD_NUMBER = 3;
-    private boolean composite_;
-    /**
-     * <pre>
-     * Composite is true if the Role is a composite role.
-     * Deprecated: composite roles are deprecated, use multi-role via
-     * AccountAttachments instead.
-     * </pre>
-     *
-     * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
-     * @deprecated
-     * @return The composite.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated public boolean getComposite() {
-      return composite_;
-    }
-
     public static final int TAGS_FIELD_NUMBER = 4;
     private com.strongdm.api.v1.plumbing.TagsPlumbing.Tags tags_;
     /**
@@ -11247,9 +11233,6 @@ public final class RolesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (composite_ != false) {
-        output.writeBool(3, composite_);
-      }
       if (tags_ != null) {
         output.writeMessage(4, getTags());
       }
@@ -11270,10 +11253,6 @@ public final class RolesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
-      }
-      if (composite_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, composite_);
       }
       if (tags_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -11303,8 +11282,6 @@ public final class RolesPlumbing {
           .equals(other.getName())) return false;
       if (!getAccessRules()
           .equals(other.getAccessRules())) return false;
-      if (getComposite()
-          != other.getComposite()) return false;
       if (hasTags() != other.hasTags()) return false;
       if (hasTags()) {
         if (!getTags()
@@ -11327,9 +11304,6 @@ public final class RolesPlumbing {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
       hash = (53 * hash) + getAccessRules().hashCode();
-      hash = (37 * hash) + COMPOSITE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getComposite());
       if (hasTags()) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
@@ -11479,8 +11453,6 @@ public final class RolesPlumbing {
 
         accessRules_ = "";
 
-        composite_ = false;
-
         if (tagsBuilder_ == null) {
           tags_ = null;
         } else {
@@ -11516,7 +11488,6 @@ public final class RolesPlumbing {
         result.id_ = id_;
         result.name_ = name_;
         result.accessRules_ = accessRules_;
-        result.composite_ = composite_;
         if (tagsBuilder_ == null) {
           result.tags_ = tags_;
         } else {
@@ -11581,9 +11552,6 @@ public final class RolesPlumbing {
         if (!other.getAccessRules().isEmpty()) {
           accessRules_ = other.accessRules_;
           onChanged();
-        }
-        if (other.getComposite() != false) {
-          setComposite(other.getComposite());
         }
         if (other.hasTags()) {
           mergeTags(other.getTags());
@@ -11901,58 +11869,6 @@ public final class RolesPlumbing {
   checkByteStringIsUtf8(value);
         
         accessRules_ = value;
-        onChanged();
-        return this;
-      }
-
-      private boolean composite_ ;
-      /**
-       * <pre>
-       * Composite is true if the Role is a composite role.
-       * Deprecated: composite roles are deprecated, use multi-role via
-       * AccountAttachments instead.
-       * </pre>
-       *
-       * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
-       * @deprecated
-       * @return The composite.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated public boolean getComposite() {
-        return composite_;
-      }
-      /**
-       * <pre>
-       * Composite is true if the Role is a composite role.
-       * Deprecated: composite roles are deprecated, use multi-role via
-       * AccountAttachments instead.
-       * </pre>
-       *
-       * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
-       * @deprecated
-       * @param value The composite to set.
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder setComposite(boolean value) {
-        
-        composite_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Composite is true if the Role is a composite role.
-       * Deprecated: composite roles are deprecated, use multi-role via
-       * AccountAttachments instead.
-       * </pre>
-       *
-       * <code>bool composite = 3 [deprecated = true, (.v1.field_options) = { ... }</code>
-       * @deprecated
-       * @return This builder for chaining.
-       */
-      @java.lang.Deprecated public Builder clearComposite() {
-        
-        composite_ = false;
         onChanged();
         return this;
       }
@@ -12278,7 +12194,7 @@ public final class RolesPlumbing {
       "\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262\364\263\007\t!jopenapi\362\370\263\007\026" +
       "\262\364\263\007\021!jopenapi_private\362\370\263\007\022\262\364\263\007\r!json_ga" +
       "teway\362\370\263\007\032\262\364\263\007\025!json_gateway_private\362\370\263\007" +
-      "\020\262\364\263\007\013!typescript\"\203\004\n\004Role\022\026\n\002id\030\001 \001(\tB\n" +
+      "\020\262\364\263\007\013!typescript\"\343\003\n\004Role\022\026\n\002id\030\001 \001(\tB\n" +
       "\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007" +
       "\001\022\241\002\n\014access_rules\030\005 \001(\tB\212\002\362\370\263\007\204\002\260\363\263\007\001\312\363" +
       "\263\007\330\001\352\363\263\007\014access_rules\362\363\263\007\021\n\002go\022\013AccessRu" +
@@ -12287,26 +12203,25 @@ public final class RolesPlumbing {
       "st<AccessRule>\362\363\263\007\"\n\014json_gateway\022\022model" +
       "s.AccessRules\362\363\263\007*\n\024json_gateway_private" +
       "\022\022models.AccessRules\272\364\263\007\027accessRulesDiff" +
-      "Suppress\320\364\263\007\001\022$\n\tcomposite\030\003 \001(\010B\021\030\001\362\370\263\007" +
-      "\n\260\363\263\007\001\340\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263" +
-      "\007\005\260\363\263\007\001:V\372\370\263\007Q\250\363\263\007\001\302\363\263\007G\242\363\263\007\035tf_examples" +
-      "/role_resource.txt\252\363\263\007 tf_examples/role_" +
-      "data_source.txt2\356\003\n\005Roles\022Z\n\006Create\022\025.v1" +
-      ".RoleCreateRequest\032\026.v1.RoleCreateRespon" +
-      "se\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/roles\022U\n" +
-      "\003Get\022\022.v1.RoleGetRequest\032\023.v1.RoleGetRes" +
-      "ponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v1/roles/" +
-      "{id}\022^\n\006Update\022\025.v1.RoleUpdateRequest\032\026." +
-      "v1.RoleUpdateResponse\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007" +
-      "\023\252\363\263\007\016/v1/roles/{id}\022a\n\006Delete\022\025.v1.Role" +
-      "DeleteRequest\032\026.v1.RoleDeleteResponse\"(\202" +
-      "\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022" +
-      "S\n\004List\022\023.v1.RoleListRequest\032\024.v1.RoleLi" +
-      "stResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/r" +
-      "oles\032\032\312\371\263\007\t\302\371\263\007\004Role\312\371\263\007\007\322\371\263\007\002r-Bd\n\034com." +
-      "strongdm.api.v1.plumbingB\rRolesPlumbingZ" +
-      "5github.com/strongdm/strongdm-sdk-go/v2/" +
-      "internal/v1;v1b\006proto3"
+      "Suppress\320\364\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:V\372\370\263\007Q\250\363\263\007\001\302\363\263\007G\242\363\263\007\035tf_exampl" +
+      "es/role_resource.txt\252\363\263\007 tf_examples/rol" +
+      "e_data_source.txtJ\004\010\003\020\0042\356\003\n\005Roles\022Z\n\006Cre" +
+      "ate\022\025.v1.RoleCreateRequest\032\026.v1.RoleCrea" +
+      "teResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/" +
+      "roles\022U\n\003Get\022\022.v1.RoleGetRequest\032\023.v1.Ro" +
+      "leGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v" +
+      "1/roles/{id}\022^\n\006Update\022\025.v1.RoleUpdateRe" +
+      "quest\032\026.v1.RoleUpdateResponse\"%\202\371\263\007\010\242\363\263\007" +
+      "\003put\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022a\n\006Delete\022\025" +
+      ".v1.RoleDeleteRequest\032\026.v1.RoleDeleteRes" +
+      "ponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/rol" +
+      "es/{id}\022S\n\004List\022\023.v1.RoleListRequest\032\024.v" +
+      "1.RoleListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363" +
+      "\263\007\t/v1/roles\032\032\312\371\263\007\t\302\371\263\007\004Role\312\371\263\007\007\322\371\263\007\002r-" +
+      "Bd\n\034com.strongdm.api.v1.plumbingB\rRolesP" +
+      "lumbingZ5github.com/strongdm/strongdm-sd" +
+      "k-go/v2/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12380,7 +12295,7 @@ public final class RolesPlumbing {
     internal_static_v1_Role_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Role_descriptor,
-        new java.lang.String[] { "Id", "Name", "AccessRules", "Composite", "Tags", });
+        new java.lang.String[] { "Id", "Name", "AccessRules", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.v1.plumbing.Options.fieldOptions);

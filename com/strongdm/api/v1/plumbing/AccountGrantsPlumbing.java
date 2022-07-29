@@ -173,6 +173,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1166,6 +1168,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2328,6 +2332,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3256,6 +3262,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4418,6 +4426,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5306,6 +5316,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6245,6 +6257,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7189,6 +7203,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8661,6 +8677,8 @@ public final class AccountGrantsPlumbing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10067,33 +10085,34 @@ public final class AccountGrantsPlumbing {
       "itMetadataB\216\001\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\016\262" +
       "\364\263\007\t!jopenapi\362\370\263\007\026\262\364\263\007\021!jopenapi_private" +
       "\362\370\263\007\022\262\364\263\007\r!json_gateway\362\370\263\007\032\262\364\263\007\025!json_g" +
-      "ateway_private\362\370\263\007\020\262\364\263\007\013!typescript\"\366\002\n\014" +
+      "ateway_private\362\370\263\007\020\262\364\263\007\013!typescript\"\364\002\n\014" +
       "AccountGrant\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\013" +
       "resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nac" +
       "count_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022:\n\nstart" +
       "_from\030\004 \001(\0132\032.google.protobuf.TimestampB" +
       "\n\362\370\263\007\005\260\363\263\007\001\022;\n\013valid_until\030\005 \001(\0132\032.googl" +
-      "e.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\211\001\372\370\263\007\203" +
+      "e.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\207\001\372\370\263\007\201" +
       "\001\250\363\263\007\001\302\363\263\007Y\242\363\263\007&tf_examples/account_gran" +
       "t_resource.txt\252\363\263\007)tf_examples/account_g" +
-      "rant_data_source.txt\312\363\263\007\033\202\364\263\007\026\n\022terrafor" +
-      "m-provider\020\0012\203\004\n\rAccountGrants\022s\n\006Create" +
-      "\022\035.v1.AccountGrantCreateRequest\032\036.v1.Acc" +
-      "ountGrantCreateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202" +
-      "\371\263\007\027\252\363\263\007\022/v1/account-grants\022n\n\003Get\022\032.v1." +
-      "AccountGrantGetRequest\032\033.v1.AccountGrant" +
-      "GetResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/" +
-      "account-grants/{id}\022z\n\006Delete\022\035.v1.Accou" +
-      "ntGrantDeleteRequest\032\036.v1.AccountGrantDe" +
-      "leteResponse\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027" +
-      "/v1/account-grants/{id}\022l\n\004List\022\033.v1.Acc" +
-      "ountGrantListRequest\032\034.v1.AccountGrantLi" +
-      "stResponse\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/a" +
-      "ccount-grants\032#\312\371\263\007\021\302\371\263\007\014AccountGrant\312\371\263" +
-      "\007\010\322\371\263\007\003ag-Bl\n\034com.strongdm.api.v1.plumbi" +
-      "ngB\025AccountGrantsPlumbingZ5github.com/st" +
-      "rongdm/strongdm-sdk-go/v2/internal/v1;v1" +
-      "b\006proto3"
+      "rant_data_source.txt\322\363\263\007\001*\322\363\263\007\023!terrafor" +
+      "m-provider2\253\004\n\rAccountGrants\022s\n\006Create\022\035" +
+      ".v1.AccountGrantCreateRequest\032\036.v1.Accou" +
+      "ntGrantCreateResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263" +
+      "\007\027\252\363\263\007\022/v1/account-grants\022n\n\003Get\022\032.v1.Ac" +
+      "countGrantGetRequest\032\033.v1.AccountGrantGe" +
+      "tResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/ac" +
+      "count-grants/{id}\022z\n\006Delete\022\035.v1.Account" +
+      "GrantDeleteRequest\032\036.v1.AccountGrantDele" +
+      "teResponse\"1\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027/v" +
+      "1/account-grants/{id}\022l\n\004List\022\033.v1.Accou" +
+      "ntGrantListRequest\032\034.v1.AccountGrantList" +
+      "Response\")\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/acc" +
+      "ount-grants\032K\312\371\263\007\021\302\371\263\007\014AccountGrant\312\371\263\007\010" +
+      "\322\371\263\007\003ag-\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-" +
+      "providerBl\n\034com.strongdm.api.v1.plumbing" +
+      "B\025AccountGrantsPlumbingZ5github.com/stro" +
+      "ngdm/strongdm-sdk-go/v2/internal/v1;v1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
