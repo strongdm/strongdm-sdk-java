@@ -25,11 +25,11 @@ import java.util.Date;
  */
 public class AccountGrant {
   private String accountId;
-  /** The account id of this AccountGrant. */
+  /** The account ID of this AccountGrant. */
   public String getAccountId() {
     return this.accountId;
   }
-  /** The account id of this AccountGrant. */
+  /** The account ID of this AccountGrant. */
   public void setAccountId(String in) {
     this.accountId = in;
   }
@@ -45,43 +45,37 @@ public class AccountGrant {
   }
 
   private String resourceId;
-  /** The resource id of this AccountGrant. */
+  /** The resource ID of this AccountGrant. */
   public String getResourceId() {
     return this.resourceId;
   }
-  /** The resource id of this AccountGrant. */
+  /** The resource ID of this AccountGrant. */
   public void setResourceId(String in) {
     this.resourceId = in;
   }
 
   private Date startFrom;
   /**
-   * The timestamp when the resource will be granted. Optional. Both start_at and end_at must be
-   * defined together, or not defined at all.
+   * The timestamp when the resource will be granted. When creating an AccountGrant, if this field
+   * is not specified, it will default to the current time.
    */
   public Date getStartFrom() {
     return this.startFrom;
   }
   /**
-   * The timestamp when the resource will be granted. Optional. Both start_at and end_at must be
-   * defined together, or not defined at all.
+   * The timestamp when the resource will be granted. When creating an AccountGrant, if this field
+   * is not specified, it will default to the current time.
    */
   public void setStartFrom(Date in) {
     this.startFrom = in;
   }
 
   private Date validUntil;
-  /**
-   * The timestamp when the resource grant will expire. Optional. Both start_at and end_at must be
-   * defined together, or not defined at all.
-   */
+  /** The timestamp when the resource grant will expire. */
   public Date getValidUntil() {
     return this.validUntil;
   }
-  /**
-   * The timestamp when the resource grant will expire. Optional. Both start_at and end_at must be
-   * defined together, or not defined at all.
-   */
+  /** The timestamp when the resource grant will expire. */
   public void setValidUntil(Date in) {
     this.validUntil = in;
   }

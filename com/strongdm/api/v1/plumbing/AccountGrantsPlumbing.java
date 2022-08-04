@@ -88,8 +88,7 @@ public final class AccountGrantsPlumbing {
   }
   /**
    * <pre>
-   * AccountGrantCreateRequest specifies what kind of AccountGrants should be registered in
-   * the organizations fleet.
+   * AccountGrantCreateRequest specifies what kind of AccountGrants should be registered in the organizations fleet.
    * </pre>
    *
    * Protobuf type {@code v1.AccountGrantCreateRequest}
@@ -450,8 +449,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * AccountGrantCreateRequest specifies what kind of AccountGrants should be registered in
-     * the organizations fleet.
+     * AccountGrantCreateRequest specifies what kind of AccountGrants should be registered in the organizations fleet.
      * </pre>
      *
      * Protobuf type {@code v1.AccountGrantCreateRequest}
@@ -7107,8 +7105,7 @@ public final class AccountGrantsPlumbing {
   }
   /**
    * <pre>
-   * AccountGrantListResponse returns a list of AccountGrants that meet the criteria of a
-   * AccountGrantListRequest.
+   * AccountGrantListResponse returns a list of AccountGrants that meet the criteria of a AccountGrantListRequest.
    * </pre>
    *
    * Protobuf type {@code v1.AccountGrantListResponse}
@@ -7556,8 +7553,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * AccountGrantListResponse returns a list of AccountGrants that meet the criteria of a
-     * AccountGrantListRequest.
+     * AccountGrantListResponse returns a list of AccountGrants that meet the criteria of a AccountGrantListRequest.
      * </pre>
      *
      * Protobuf type {@code v1.AccountGrantListResponse}
@@ -8472,7 +8468,7 @@ public final class AccountGrantsPlumbing {
 
     /**
      * <pre>
-     * The resource id of this AccountGrant.
+     * The resource ID of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8481,7 +8477,7 @@ public final class AccountGrantsPlumbing {
     java.lang.String getResourceId();
     /**
      * <pre>
-     * The resource id of this AccountGrant.
+     * The resource ID of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8492,7 +8488,7 @@ public final class AccountGrantsPlumbing {
 
     /**
      * <pre>
-     * The account id of this AccountGrant.
+     * The account ID of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -8501,7 +8497,7 @@ public final class AccountGrantsPlumbing {
     java.lang.String getAccountId();
     /**
      * <pre>
-     * The account id of this AccountGrant.
+     * The account ID of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -8512,8 +8508,7 @@ public final class AccountGrantsPlumbing {
 
     /**
      * <pre>
-     * The timestamp when the resource will be granted. Optional. Both start_at
-     * and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -8522,8 +8517,7 @@ public final class AccountGrantsPlumbing {
     boolean hasStartFrom();
     /**
      * <pre>
-     * The timestamp when the resource will be granted. Optional. Both start_at
-     * and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -8532,8 +8526,7 @@ public final class AccountGrantsPlumbing {
     com.google.protobuf.Timestamp getStartFrom();
     /**
      * <pre>
-     * The timestamp when the resource will be granted. Optional. Both start_at
-     * and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -8542,8 +8535,7 @@ public final class AccountGrantsPlumbing {
 
     /**
      * <pre>
-     * The timestamp when the resource grant will expire. Optional. Both
-     * start_at and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource grant will expire.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -8552,8 +8544,7 @@ public final class AccountGrantsPlumbing {
     boolean hasValidUntil();
     /**
      * <pre>
-     * The timestamp when the resource grant will expire. Optional. Both
-     * start_at and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource grant will expire.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -8562,8 +8553,7 @@ public final class AccountGrantsPlumbing {
     com.google.protobuf.Timestamp getValidUntil();
     /**
      * <pre>
-     * The timestamp when the resource grant will expire. Optional. Both
-     * start_at and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource grant will expire.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -8750,7 +8740,7 @@ public final class AccountGrantsPlumbing {
     private volatile java.lang.Object resourceId_;
     /**
      * <pre>
-     * The resource id of this AccountGrant.
+     * The resource ID of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8771,7 +8761,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The resource id of this AccountGrant.
+     * The resource ID of this AccountGrant.
      * </pre>
      *
      * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -8796,7 +8786,7 @@ public final class AccountGrantsPlumbing {
     private volatile java.lang.Object accountId_;
     /**
      * <pre>
-     * The account id of this AccountGrant.
+     * The account ID of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -8817,7 +8807,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The account id of this AccountGrant.
+     * The account ID of this AccountGrant.
      * </pre>
      *
      * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -8842,8 +8832,7 @@ public final class AccountGrantsPlumbing {
     private com.google.protobuf.Timestamp startFrom_;
     /**
      * <pre>
-     * The timestamp when the resource will be granted. Optional. Both start_at
-     * and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -8855,8 +8844,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The timestamp when the resource will be granted. Optional. Both start_at
-     * and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -8868,8 +8856,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The timestamp when the resource will be granted. Optional. Both start_at
-     * and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -8883,8 +8870,7 @@ public final class AccountGrantsPlumbing {
     private com.google.protobuf.Timestamp validUntil_;
     /**
      * <pre>
-     * The timestamp when the resource grant will expire. Optional. Both
-     * start_at and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource grant will expire.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -8896,8 +8882,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The timestamp when the resource grant will expire. Optional. Both
-     * start_at and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource grant will expire.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -8909,8 +8894,7 @@ public final class AccountGrantsPlumbing {
     }
     /**
      * <pre>
-     * The timestamp when the resource grant will expire. Optional. Both
-     * start_at and end_at must be defined together, or not defined at all.
+     * The timestamp when the resource grant will expire.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9419,7 +9403,7 @@ public final class AccountGrantsPlumbing {
       private java.lang.Object resourceId_ = "";
       /**
        * <pre>
-       * The resource id of this AccountGrant.
+       * The resource ID of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9439,7 +9423,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The resource id of this AccountGrant.
+       * The resource ID of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9460,7 +9444,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The resource id of this AccountGrant.
+       * The resource ID of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9479,7 +9463,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The resource id of this AccountGrant.
+       * The resource ID of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9493,7 +9477,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The resource id of this AccountGrant.
+       * The resource ID of this AccountGrant.
        * </pre>
        *
        * <code>string resource_id = 2 [(.v1.field_options) = { ... }</code>
@@ -9515,7 +9499,7 @@ public final class AccountGrantsPlumbing {
       private java.lang.Object accountId_ = "";
       /**
        * <pre>
-       * The account id of this AccountGrant.
+       * The account ID of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9535,7 +9519,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The account id of this AccountGrant.
+       * The account ID of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9556,7 +9540,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The account id of this AccountGrant.
+       * The account ID of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9575,7 +9559,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The account id of this AccountGrant.
+       * The account ID of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9589,7 +9573,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The account id of this AccountGrant.
+       * The account ID of this AccountGrant.
        * </pre>
        *
        * <code>string account_id = 3 [(.v1.field_options) = { ... }</code>
@@ -9613,8 +9597,7 @@ public final class AccountGrantsPlumbing {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startFromBuilder_;
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9625,8 +9608,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9641,8 +9623,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9662,8 +9643,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9681,8 +9661,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9704,8 +9683,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9723,8 +9701,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9736,8 +9713,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9752,8 +9728,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource will be granted. Optional. Both start_at
-       * and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource will be granted. When creating an AccountGrant, if this field is not specified, it will default to the current time.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp start_from = 4 [(.v1.field_options) = { ... }</code>
@@ -9777,8 +9752,7 @@ public final class AccountGrantsPlumbing {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> validUntilBuilder_;
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9789,8 +9763,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9805,8 +9778,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9826,8 +9798,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9845,8 +9816,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9868,8 +9838,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9887,8 +9856,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9900,8 +9868,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
@@ -9916,8 +9883,7 @@ public final class AccountGrantsPlumbing {
       }
       /**
        * <pre>
-       * The timestamp when the resource grant will expire. Optional. Both
-       * start_at and end_at must be defined together, or not defined at all.
+       * The timestamp when the resource grant will expire.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp valid_until = 5 [(.v1.field_options) = { ... }</code>
