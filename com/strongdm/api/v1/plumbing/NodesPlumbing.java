@@ -15438,7 +15438,7 @@ public final class NodesPlumbing {
       "\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302" +
       "\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-Bd\n\034com.strongdm.api" +
       ".v1.plumbingB\rNodesPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v2/internal/v1;" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
       "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

@@ -15013,7 +15013,7 @@ public final class AccountsPlumbing {
       "v1/accounts\032\035\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002" +
       "a-Bg\n\034com.strongdm.api.v1.plumbingB\020Acco" +
       "untsPlumbingZ5github.com/strongdm/strong" +
-      "dm-sdk-go/v2/internal/v1;v1b\006proto3"
+      "dm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

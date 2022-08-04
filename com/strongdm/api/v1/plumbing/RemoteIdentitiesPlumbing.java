@@ -12143,7 +12143,7 @@ public final class RemoteIdentitiesPlumbing {
       "es\032$\312\371\263\007\023\302\371\263\007\016RemoteIdentity\312\371\263\007\007\322\371\263\007\002i-" +
       "Bo\n\034com.strongdm.api.v1.plumbingB\030Remote" +
       "IdentitiesPlumbingZ5github.com/strongdm/" +
-      "strongdm-sdk-go/v2/internal/v1;v1b\006proto" +
+      "strongdm-sdk-go/v3/internal/v1;v1b\006proto" +
       "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

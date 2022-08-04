@@ -12221,7 +12221,7 @@ public final class RolesPlumbing {
       "\263\007\t/v1/roles\032\032\312\371\263\007\t\302\371\263\007\004Role\312\371\263\007\007\322\371\263\007\002r-" +
       "Bd\n\034com.strongdm.api.v1.plumbingB\rRolesP" +
       "lumbingZ5github.com/strongdm/strongdm-sd" +
-      "k-go/v2/internal/v1;v1b\006proto3"
+      "k-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

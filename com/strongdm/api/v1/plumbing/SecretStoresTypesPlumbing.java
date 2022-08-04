@@ -10191,7 +10191,7 @@ public final class SecretStoresTypesPlumbing {
       "vaultToken\302\364\263\007!\n\022terraform-provider\022\013vau" +
       "lt_tokenBp\n\034com.strongdm.api.v1.plumbing" +
       "B\031SecretStoresTypesPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v2/internal/v1;" +
+      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
       "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

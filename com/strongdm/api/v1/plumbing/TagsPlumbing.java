@@ -2318,7 +2318,7 @@ public final class TagsPlumbing {
       "e\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005value\030\002 \001(\tB\n\362\370\263\007" +
       "\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001Bc\n\034com.strongdm.api.v" +
       "1.plumbingB\014TagsPlumbingZ5github.com/str" +
-      "ongdm/strongdm-sdk-go/v2/internal/v1;v1b" +
+      "ongdm/strongdm-sdk-go/v3/internal/v1;v1b" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

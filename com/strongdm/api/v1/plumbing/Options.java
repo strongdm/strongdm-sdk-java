@@ -10518,7 +10518,7 @@ java.lang.String defaultValue);
       ".google.protobuf.FieldOptions\030\216\277v \001(\0132\020." +
       "v1.FieldOptionsBU\n\034com.strongdm.api.v1.p" +
       "lumbingZ5github.com/strongdm/strongdm-sd" +
-      "k-go/v2/internal/v1;v1b\006proto3"
+      "k-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

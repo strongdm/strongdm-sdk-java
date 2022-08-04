@@ -13293,7 +13293,7 @@ public final class ResourcesPlumbing {
       "\371\263\007\010\242\363\263\007\003get\202\371\263\007\022\252\363\263\007\r/v1/resources\032\037\312\371\263" +
       "\007\r\302\371\263\007\010Resource\312\371\263\007\010\322\371\263\007\003rs-Bh\n\034com.stro" +
       "ngdm.api.v1.plumbingB\021ResourcesPlumbingZ" +
-      "5github.com/strongdm/strongdm-sdk-go/v2/" +
+      "5github.com/strongdm/strongdm-sdk-go/v3/" +
       "internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

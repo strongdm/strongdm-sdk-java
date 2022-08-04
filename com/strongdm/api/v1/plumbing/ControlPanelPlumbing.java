@@ -3854,7 +3854,7 @@ public final class ControlPanelPlumbing {
       "se\"5\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\"\252\363\263\007\035/v1/control-" +
       "panel/http/verifyBk\n\034com.strongdm.api.v1" +
       ".plumbingB\024ControlPanelPlumbingZ5github." +
-      "com/strongdm/strongdm-sdk-go/v2/internal" +
+      "com/strongdm/strongdm-sdk-go/v3/internal" +
       "/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

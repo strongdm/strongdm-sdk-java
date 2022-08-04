@@ -9554,7 +9554,7 @@ public final class AccountAttachmentsPlumbing {
       "achments\032(\312\371\263\007\026\302\371\263\007\021AccountAttachment\312\371\263" +
       "\007\010\322\371\263\007\003aa-Bq\n\034com.strongdm.api.v1.plumbi" +
       "ngB\032AccountAttachmentsPlumbingZ5github.c" +
-      "om/strongdm/strongdm-sdk-go/v2/internal/" +
+      "om/strongdm/strongdm-sdk-go/v3/internal/" +
       "v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

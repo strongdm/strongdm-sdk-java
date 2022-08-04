@@ -5314,7 +5314,7 @@ public final class RemoteIdentityGroupsPlumbing {
       "\023RemoteIdentityGroup\312\371\263\007\010\322\371\263\007\003ig-Bs\n\034com" +
       ".strongdm.api.v1.plumbingB\034RemoteIdentit" +
       "yGroupsPlumbingZ5github.com/strongdm/str" +
-      "ongdm-sdk-go/v2/internal/v1;v1b\006proto3"
+      "ongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

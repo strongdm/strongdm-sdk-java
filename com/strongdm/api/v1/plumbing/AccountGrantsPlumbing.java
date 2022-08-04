@@ -10075,7 +10075,7 @@ public final class AccountGrantsPlumbing {
       "\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerBl\n\034com." +
       "strongdm.api.v1.plumbingB\025AccountGrantsP" +
       "lumbingZ5github.com/strongdm/strongdm-sd" +
-      "k-go/v2/internal/v1;v1b\006proto3"
+      "k-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

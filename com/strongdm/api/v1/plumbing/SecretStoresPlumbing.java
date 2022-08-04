@@ -10956,7 +10956,7 @@ public final class SecretStoresPlumbing {
       "\371\263\007\026\252\363\263\007\021/v1/secret-stores\032\"\312\371\263\007\020\302\371\263\007\013Se" +
       "cretStore\312\371\263\007\010\322\371\263\007\003se-Bk\n\034com.strongdm.a" +
       "pi.v1.plumbingB\024SecretStoresPlumbingZ5gi" +
-      "thub.com/strongdm/strongdm-sdk-go/v2/int" +
+      "thub.com/strongdm/strongdm-sdk-go/v3/int" +
       "ernal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

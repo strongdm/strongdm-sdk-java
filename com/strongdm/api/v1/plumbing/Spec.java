@@ -10764,7 +10764,7 @@ public final class Spec {
       "\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestMet" +
       "adata\"\031\n\027GenericResponseMetadataBU\n\034com." +
       "strongdm.api.v1.plumbingZ5github.com/str" +
-      "ongdm/strongdm-sdk-go/v2/internal/v1;v1b" +
+      "ongdm/strongdm-sdk-go/v3/internal/v1;v1b" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
