@@ -10013,62 +10013,59 @@ public final class AccountGrantsPlumbing {
       ".proto\"y\n\031AccountGrantCreateRequest\022\'\n\004m" +
       "eta\030\001 \001(\0132\031.v1.CreateRequestMetadata\0223\n\r" +
       "account_grant\030\002 \001(\0132\020.v1.AccountGrantB\n\362" +
-      "\370\263\007\005\260\363\263\007\001\"\213\002\n\032AccountGrantCreateResponse" +
+      "\370\263\007\005\260\363\263\007\001\"\354\001\n\032AccountGrantCreateResponse" +
       "\0224\n\004meta\030\001 \001(\0132\032.v1.CreateResponseMetada" +
       "taB\n\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\0132\020." +
-      "v1.AccountGrantB\n\362\370\263\007\005\260\363\263\007\001\022v\n\nrate_limi" +
-      "t\030\003 \001(\0132\025.v1.RateLimitMetadataBK\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\032\262\364\263\007\025!json_gateway_pri" +
-      "vate\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"" +
-      "V\n\026AccountGrantGetRequest\022$\n\004meta\030\001 \001(\0132" +
-      "\026.v1.GetRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263" +
-      "\007\005\260\363\263\007\001\"\205\002\n\027AccountGrantGetResponse\0221\n\004m" +
-      "eta\030\001 \001(\0132\027.v1.GetResponseMetadataB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\0132\020.v1.Accou" +
-      "ntGrantB\n\362\370\263\007\005\260\363\263\007\001\022v\n\nrate_limit\030\003 \001(\0132" +
-      "\025.v1.RateLimitMetadataBK\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262" +
-      "\364\263\007\001*\362\370\263\007\032\262\364\263\007\025!json_gateway_private\362\370\263\007" +
-      "\022\262\364\263\007\r!json_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\031Accou" +
-      "ntGrantDeleteRequest\022\'\n\004meta\030\001 \001(\0132\031.v1." +
-      "DeleteRequestMetadata\022\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\"\326\001\n\032AccountGrantDeleteResponse\0224\n\004" +
-      "meta\030\001 \001(\0132\032.v1.DeleteResponseMetadataB\n" +
-      "\362\370\263\007\005\260\363\263\007\001\022v\n\nrate_limit\030\002 \001(\0132\025.v1.Rate" +
-      "LimitMetadataBK\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007" +
-      "\032\262\364\263\007\025!json_gateway_private\362\370\263\007\022\262\364\263\007\r!js" +
-      "on_gateway:\n\372\370\263\007\005\250\363\263\007\001\"\\\n\027AccountGrantLi" +
-      "stRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequest" +
-      "Metadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\360\001\n" +
-      "\030AccountGrantListResponse\022&\n\004meta\030\001 \001(\0132" +
-      "\030.v1.ListResponseMetadata\0224\n\016account_gra" +
-      "nts\030\002 \003(\0132\020.v1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001\022" +
-      "v\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetada" +
-      "taBK\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\032\262\364\263\007\025!json" +
-      "_gateway_private\362\370\263\007\022\262\364\263\007\r!json_gateway\"" +
-      "\224\002\n\014AccountGrant\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\022$\n\013resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#" +
-      "\n\naccount_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022:\n\ns" +
-      "tart_from\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "ampB\n\362\370\263\007\005\260\363\263\007\001\022;\n\013valid_until\030\005 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:(\372\370" +
-      "\263\007#\250\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!terraform-provider2\253" +
-      "\004\n\rAccountGrants\022s\n\006Create\022\035.v1.AccountG" +
-      "rantCreateRequest\032\036.v1.AccountGrantCreat" +
-      "eResponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/v1/a" +
-      "ccount-grants\022n\n\003Get\022\032.v1.AccountGrantGe" +
-      "tRequest\032\033.v1.AccountGrantGetResponse\".\202" +
-      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/account-grants" +
-      "/{id}\022z\n\006Delete\022\035.v1.AccountGrantDeleteR" +
-      "equest\032\036.v1.AccountGrantDeleteResponse\"1" +
-      "\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027/v1/account-gr" +
-      "ants/{id}\022l\n\004List\022\033.v1.AccountGrantListR" +
-      "equest\032\034.v1.AccountGrantListResponse\")\202\371" +
-      "\263\007\010\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/account-grants\032" +
-      "K\312\371\263\007\021\302\371\263\007\014AccountGrant\312\371\263\007\010\322\371\263\007\003ag-\312\371\263\007" +
-      "\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerBi\n\031" +
-      "com.strongdm.api.plumbingB\025AccountGrants" +
-      "PlumbingZ5github.com/strongdm/strongdm-s" +
-      "dk-go/v3/internal/v1;v1b\006proto3"
+      "v1.AccountGrantB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_limi" +
+      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372\370" +
+      "\263\007\005\250\363\263\007\001\"V\n\026AccountGrantGetRequest\022$\n\004me" +
+      "ta\030\001 \001(\0132\026.v1.GetRequestMetadata\022\026\n\002id\030\002" +
+      " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\346\001\n\027AccountGrantGetResp" +
+      "onse\0221\n\004meta\030\001 \001(\0132\027.v1.GetResponseMetad" +
+      "ataB\n\362\370\263\007\005\260\363\263\007\001\0223\n\raccount_grant\030\002 \001(\0132\020" +
+      ".v1.AccountGrantB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_lim" +
+      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"\\\n\031AccountGrantDeleteRequest\022\'" +
+      "\n\004meta\030\001 \001(\0132\031.v1.DeleteRequestMetadata\022" +
+      "\026\n\002id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\267\001\n\032AccountGrant" +
+      "DeleteResponse\0224\n\004meta\030\001 \001(\0132\032.v1.Delete" +
+      "ResponseMetadataB\n\362\370\263\007\005\260\363\263\007\001\022W\n\nrate_lim" +
+      "it\030\002 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:\n\372" +
+      "\370\263\007\005\250\363\263\007\001\"\\\n\027AccountGrantListRequest\022%\n\004" +
+      "meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006f" +
+      "ilter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\030AccountGrant" +
+      "ListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResp" +
+      "onseMetadata\0224\n\016account_grants\030\002 \003(\0132\020.v" +
+      "1.AccountGrantB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit" +
+      "\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\224\002\n\014" +
+      "AccountGrant\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022$\n\013" +
+      "resource_id\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nac" +
+      "count_id\030\003 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022:\n\nstart" +
+      "_from\030\004 \001(\0132\032.google.protobuf.TimestampB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022;\n\013valid_until\030\005 \001(\0132\032.googl" +
+      "e.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007#\250" +
+      "\363\263\007\001\322\363\263\007\001*\322\363\263\007\023!terraform-provider2\253\004\n\rA" +
+      "ccountGrants\022s\n\006Create\022\035.v1.AccountGrant" +
+      "CreateRequest\032\036.v1.AccountGrantCreateRes" +
+      "ponse\"*\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\027\252\363\263\007\022/v1/accou" +
+      "nt-grants\022n\n\003Get\022\032.v1.AccountGrantGetReq" +
+      "uest\032\033.v1.AccountGrantGetResponse\".\202\371\263\007\010" +
+      "\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/account-grants/{id" +
+      "}\022z\n\006Delete\022\035.v1.AccountGrantDeleteReque" +
+      "st\032\036.v1.AccountGrantDeleteResponse\"1\202\371\263\007" +
+      "\013\242\363\263\007\006delete\202\371\263\007\034\252\363\263\007\027/v1/account-grants" +
+      "/{id}\022l\n\004List\022\033.v1.AccountGrantListReque" +
+      "st\032\034.v1.AccountGrantListResponse\")\202\371\263\007\010\242" +
+      "\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/account-grants\032K\312\371\263" +
+      "\007\021\302\371\263\007\014AccountGrant\312\371\263\007\010\322\371\263\007\003ag-\312\371\263\007\006\312\371\263" +
+      "\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerBi\n\031com." +
+      "strongdm.api.plumbingB\025AccountGrantsPlum" +
+      "bingZ5github.com/strongdm/strongdm-sdk-g" +
+      "o/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

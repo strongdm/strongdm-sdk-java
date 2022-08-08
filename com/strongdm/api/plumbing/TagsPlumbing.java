@@ -2299,23 +2299,20 @@ public final class TagsPlumbing {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntags.proto\022\002v1\032\roptions.proto\"\274\003\n\004Tags" +
-      "\022\034\n\005pairs\030\001 \003(\0132\r.v1.Tags.Pair\032\\\n\004Pair\022\014" +
-      "\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:7\372\370\263\0072\322\363\263\007\001*" +
-      "\322\363\263\007\025!json_gateway_private\322\363\263\007\r!json_gat" +
-      "eway:\267\002\372\370\263\007\261\002\312\363\263\007\371\001\352\363\263\007\004tags\362\363\263\007\n\n\002go\022\004T" +
-      "ags\362\363\263\007\022\n\ngo_private\022\004Tags\362\363\263\007\024\n\014go_terr" +
-      "aform\022\004Tags\362\363\263\007%\n\004java\022\035java.util.Map<St" +
-      "ring, String>\362\363\263\007\035\n\022terraform-provider\022\007" +
-      "TypeMap\362\363\263\007)\n\024json_gateway_private\022\021map[" +
-      "string]string\362\363\263\007!\n\014json_gateway\022\021map[st" +
-      "ring]string\372\363\263\007\014tagsElemType\322\363\263\007\001*\322\363\263\007\025!" +
-      "json_gateway_private\322\363\263\007\r!json_gateway\"F" +
-      "\n\003Tag\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005value" +
-      "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001B`\n\031com.st" +
-      "rongdm.api.plumbingB\014TagsPlumbingZ5githu" +
-      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
-      "al/v1;v1b\006proto3"
+      "\n\ntags.proto\022\002v1\032\roptions.proto\"\332\002\n\004Tags" +
+      "\022\034\n\005pairs\030\001 \003(\0132\r.v1.Tags.Pair\032B\n\004Pair\022\014" +
+      "\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\035\372\370\263\007\030\322\363\263\007\001*" +
+      "\322\363\263\007\r!json_gateway:\357\001\372\370\263\007\351\001\312\363\263\007\313\001\352\363\263\007\004ta" +
+      "gs\362\363\263\007\n\n\002go\022\004Tags\362\363\263\007\022\n\ngo_private\022\004Tags" +
+      "\362\363\263\007\024\n\014go_terraform\022\004Tags\362\363\263\007%\n\004java\022\035ja" +
+      "va.util.Map<String, String>\362\363\263\007\035\n\022terraf" +
+      "orm-provider\022\007TypeMap\362\363\263\007!\n\014json_gateway" +
+      "\022\021map[string]string\372\363\263\007\014tagsElemType\322\363\263\007" +
+      "\001*\322\363\263\007\r!json_gateway\"F\n\003Tag\022\030\n\004name\030\001 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005value\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      ":\n\372\370\263\007\005\250\363\263\007\001B`\n\031com.strongdm.api.plumbin" +
+      "gB\014TagsPlumbingZ5github.com/strongdm/str" +
+      "ongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

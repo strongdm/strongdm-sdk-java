@@ -10454,71 +10454,65 @@ java.lang.String defaultValue);
   static {
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
-      "criptor.proto\"X\n\013FileOptions\022\021\n\007targets\030" +
-      "\304\301v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263" +
-      "\007\025!json_gateway_private\"\205\001\n\016ServiceOptio" +
-      "ns\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_prefix\030\232\277v" +
-      " \001(\t\022\021\n\007targets\030\231\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json" +
-      "_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_private\"" +
-      "\204\001\n\rMethodOptions\022\020\n\006method\030\264\276v \001(\t\022\r\n\003u" +
-      "rl\030\265\276v \001(\t\022\032\n\020deprecation_date\030\266\276v \001(\t:6" +
-      "\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_g" +
-      "ateway_private\"\354\001\n\016MessageOptions\022\023\n\tpor" +
-      "celain\030\265\276v \001(\010\022\017\n\005error\030\266\276v \001(\005\022\027\n\roptio" +
-      "ns_field\030\267\276v \001(\t\022\021\n\007targets\030\272\276v \003(\t\022+\n\016t" +
-      "erraform_docs\030\270\276v \001(\0132\021.v1.TerraformDocs" +
-      "\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOptions:6\372" +
-      "\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json_ga" +
-      "teway_private\"_\n\014OneofOptions\022\027\n\rcommon_" +
-      "fields\030\205\277v \003(\t:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372" +
-      "\370\263\007\032\322\363\263\007\025!json_gateway_private\"\202\004\n\014Field" +
-      "Options\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010iterable" +
-      "\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite_on" +
-      "ly\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris_cr" +
-      "edential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023t" +
-      "erraform_force_new\030\274\276v \001(\010\022\035\n\023terraform_" +
-      "sensitive\030\276\276v \001(\010\022&\n\034terraform_diff_supp" +
-      "ress_func\030\307\276v \001(\t\022\034\n\022terraform_computed\030" +
-      "\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOpt" +
-      "ions\022D\n\022read_only_override\030\300\276v \003(\0132&.v1." +
-      "FieldOptions.ReadOnlyOverrideEntry\0327\n\025Re" +
-      "adOnlyOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\010:\0028\001:6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007" +
-      "\032\322\363\263\007\025!json_gateway_private\"\232\005\n\rCustomOp" +
-      "tions\022\023\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_" +
-      "type_override\030\276\276v \003(\0132,.v1.CustomOptions" +
-      ".PorcelainTypeOverrideEntry\022O\n\027porcelain" +
-      "_name_override\030\310\276v \003(\0132,.v1.CustomOption" +
-      "s.PorcelainNameOverrideEntry\022B\n\020comment_" +
-      "override\030\323\276v \003(\0132&.v1.CustomOptions.Comm" +
-      "entOverrideEntry\022H\n\023deprecated_override\030" +
-      "\300\276v \003(\0132).v1.CustomOptions.DeprecatedOve" +
-      "rrideEntry\022\035\n\023terraform_elem_type\030\277\276v \001(" +
-      "\t\032<\n\032PorcelainTypeOverrideEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032PorcelainName" +
-      "OverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\0326\n\024CommentOverrideEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverr" +
-      "ideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001" +
-      ":6\372\370\263\007\022\322\363\263\007\r!json_gateway\372\370\263\007\032\322\363\263\007\025!json" +
-      "_gateway_private\"\214\001\n\rTerraformDocs\022\037\n\025re" +
-      "source_example_path\030\264\276v \001(\t\022\"\n\030data_sour" +
-      "ce_example_path\030\265\276v \001(\t:6\372\370\263\007\022\322\363\263\007\r!json" +
-      "_gateway\372\370\263\007\032\322\363\263\007\025!json_gateway_private:" +
-      "E\n\014file_options\022\034.google.protobuf.FileOp" +
-      "tions\030\250\302v \001(\0132\017.v1.FileOptions:N\n\017servic" +
-      "e_options\022\037.google.protobuf.ServiceOptio" +
-      "ns\030\231\277v \001(\0132\022.v1.ServiceOptions:K\n\016method" +
-      "_options\022\036.google.protobuf.MethodOptions" +
-      "\030\220\277v \001(\0132\021.v1.MethodOptions:N\n\017message_o" +
-      "ptions\022\037.google.protobuf.MessageOptions\030" +
-      "\217\277v \001(\0132\022.v1.MessageOptions:H\n\roneof_opt" +
-      "ions\022\035.google.protobuf.OneofOptions\030\205\277v " +
-      "\001(\0132\020.v1.OneofOptions:H\n\rfield_options\022\035" +
-      ".google.protobuf.FieldOptions\030\216\277v \001(\0132\020." +
-      "v1.FieldOptionsBR\n\031com.strongdm.api.plum" +
-      "bingZ5github.com/strongdm/strongdm-sdk-g" +
-      "o/v3/internal/v1;v1b\006proto3"
+      "criptor.proto\"9\n\013FileOptions\022\021\n\007targets\030" +
+      "\304\301v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"f\n\016Serv" +
+      "iceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_pr" +
+      "efix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:\027\372\370\263\007\022\322\363" +
+      "\263\007\r!json_gateway\"e\n\rMethodOptions\022\020\n\006met" +
+      "hod\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecatio" +
+      "n_date\030\266\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"" +
+      "\315\001\n\016MessageOptions\022\023\n\tporcelain\030\265\276v \001(\010\022" +
+      "\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(" +
+      "\t\022\021\n\007targets\030\272\276v \003(\t\022+\n\016terraform_docs\030\270" +
+      "\276v \001(\0132\021.v1.TerraformDocs\022#\n\006custom\030\271\276v " +
+      "\001(\0132\021.v1.CustomOptions:\027\372\370\263\007\022\322\363\263\007\r!json_" +
+      "gateway\"@\n\014OneofOptions\022\027\n\rcommon_fields" +
+      "\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\343\003\n\014Fi" +
+      "eldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010itera" +
+      "ble\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite" +
+      "_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris" +
+      "_credential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035" +
+      "\n\023terraform_force_new\030\274\276v \001(\010\022\035\n\023terrafo" +
+      "rm_sensitive\030\276\276v \001(\010\022&\n\034terraform_diff_s" +
+      "uppress_func\030\307\276v \001(\t\022\034\n\022terraform_comput" +
+      "ed\030\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v1.Custom" +
+      "Options\022D\n\022read_only_override\030\300\276v \003(\0132&." +
+      "v1.FieldOptions.ReadOnlyOverrideEntry\0327\n" +
+      "\025ReadOnlyOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"" +
+      "\373\004\n\rCustomOptions\022\023\n\tconverter\030\275\276v \001(\t\022O" +
+      "\n\027porcelain_type_override\030\276\276v \003(\0132,.v1.C" +
+      "ustomOptions.PorcelainTypeOverrideEntry\022" +
+      "O\n\027porcelain_name_override\030\310\276v \003(\0132,.v1." +
+      "CustomOptions.PorcelainNameOverrideEntry" +
+      "\022B\n\020comment_override\030\323\276v \003(\0132&.v1.Custom" +
+      "Options.CommentOverrideEntry\022H\n\023deprecat" +
+      "ed_override\030\300\276v \003(\0132).v1.CustomOptions.D" +
+      "eprecatedOverrideEntry\022\035\n\023terraform_elem" +
+      "_type\030\277\276v \001(\t\032<\n\032PorcelainTypeOverrideEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032P" +
+      "orcelainNameOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverrideEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027Dep" +
+      "recatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n" +
+      "\rTerraformDocs\022\037\n\025resource_example_path\030" +
+      "\264\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v " +
+      "\001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file_opt" +
+      "ions\022\034.google.protobuf.FileOptions\030\250\302v \001" +
+      "(\0132\017.v1.FileOptions:N\n\017service_options\022\037" +
+      ".google.protobuf.ServiceOptions\030\231\277v \001(\0132" +
+      "\022.v1.ServiceOptions:K\n\016method_options\022\036." +
+      "google.protobuf.MethodOptions\030\220\277v \001(\0132\021." +
+      "v1.MethodOptions:N\n\017message_options\022\037.go" +
+      "ogle.protobuf.MessageOptions\030\217\277v \001(\0132\022.v" +
+      "1.MessageOptions:H\n\roneof_options\022\035.goog" +
+      "le.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.On" +
+      "eofOptions:H\n\rfield_options\022\035.google.pro" +
+      "tobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOpt" +
+      "ionsBR\n\031com.strongdm.api.plumbingZ5githu" +
+      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
+      "al/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
