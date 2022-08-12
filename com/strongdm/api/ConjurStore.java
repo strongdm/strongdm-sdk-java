@@ -18,10 +18,10 @@
 package com.strongdm.api;
 
 /**
- * ConjurClientStore is currently unstable, and its API may change, or it may be removed, without a
- * major version bump.
+ * ConjurStore is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
  */
-public class ConjurClientStore implements SecretStore {
+public class ConjurStore implements SecretStore {
   private String appUrl;
   /** */
   public String getAppURL() {
