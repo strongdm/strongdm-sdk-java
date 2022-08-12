@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class DynamoDB implements Resource {
   private String accessKey;
   /** */

@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class SSHCert implements Resource {
   private boolean allowDeprecatedKeyExchanges;
   /** */

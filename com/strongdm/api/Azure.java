@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class Azure implements Resource {
   private String appId;
   /** */

@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class Tag {
   private String name;
   /** */

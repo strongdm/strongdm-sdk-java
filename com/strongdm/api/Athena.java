@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class Athena implements Resource {
   private String accessKey;
   /** */

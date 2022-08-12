@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class NeptuneIAM implements Resource {
   private String accessKey;
   /** */

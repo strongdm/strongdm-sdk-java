@@ -2438,6 +2438,51 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.ConjurClientStore convertConjurClientStoreToPorcelain(
+      ConjurClientStore plumbing) {
+    com.strongdm.api.ConjurClientStore porcelain = new com.strongdm.api.ConjurClientStore();
+    porcelain.setAppURL((plumbing.getAppURL()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static ConjurClientStore convertConjurClientStoreToPlumbing(
+      com.strongdm.api.ConjurClientStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    ConjurClientStore.Builder builder = ConjurClientStore.newBuilder();
+    if (porcelain.getAppURL() != null) {
+      builder.setAppURL((porcelain.getAppURL()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.ConjurClientStore>
+      convertRepeatedConjurClientStoreToPorcelain(Collection<ConjurClientStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertConjurClientStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<ConjurClientStore> convertRepeatedConjurClientStoreToPlumbing(
+      Collection<com.strongdm.api.ConjurClientStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertConjurClientStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.ControlPanelGetSSHCAPublicKeyResponse
       convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(
           ControlPanelGetSSHCAPublicKeyResponse plumbing) {
@@ -2730,6 +2775,55 @@ public class Plumbing {
       Collection<com.strongdm.api.DeleteResponseMetadata> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertDeleteResponseMetadataToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.DelineaStore convertDelineaStoreToPorcelain(
+      DelineaStore plumbing) {
+    com.strongdm.api.DelineaStore porcelain = new com.strongdm.api.DelineaStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setServerUrl((plumbing.getServerUrl()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTenantName((plumbing.getTenantName()));
+    return porcelain;
+  }
+
+  public static DelineaStore convertDelineaStoreToPlumbing(
+      com.strongdm.api.DelineaStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    DelineaStore.Builder builder = DelineaStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getServerUrl() != null) {
+      builder.setServerUrl((porcelain.getServerUrl()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getTenantName() != null) {
+      builder.setTenantName((porcelain.getTenantName()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.DelineaStore> convertRepeatedDelineaStoreToPorcelain(
+      Collection<DelineaStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertDelineaStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<DelineaStore> convertRepeatedDelineaStoreToPlumbing(
+      Collection<com.strongdm.api.DelineaStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertDelineaStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -3172,6 +3266,45 @@ public class Plumbing {
       Collection<com.strongdm.api.ElasticacheRedis> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertElasticacheRedisToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.EnvStore convertEnvStoreToPorcelain(EnvStore plumbing) {
+    com.strongdm.api.EnvStore porcelain = new com.strongdm.api.EnvStore();
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static EnvStore convertEnvStoreToPlumbing(com.strongdm.api.EnvStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    EnvStore.Builder builder = EnvStore.newBuilder();
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.EnvStore> convertRepeatedEnvStoreToPorcelain(
+      Collection<EnvStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertEnvStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<EnvStore> convertRepeatedEnvStoreToPlumbing(
+      Collection<com.strongdm.api.EnvStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertEnvStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -7726,6 +7859,12 @@ public class Plumbing {
     if (plumbing.hasAzure()) {
       return convertAzureStoreToPorcelain(plumbing.getAzure());
     }
+    if (plumbing.hasConjur()) {
+      return convertConjurClientStoreToPorcelain(plumbing.getConjur());
+    }
+    if (plumbing.hasDelinea()) {
+      return convertDelineaStoreToPorcelain(plumbing.getDelinea());
+    }
     if (plumbing.hasGcp()) {
       return convertGCPStoreToPorcelain(plumbing.getGcp());
     }
@@ -7753,6 +7892,17 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.AzureStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setAzure(convertAzureStoreToPlumbing((com.strongdm.api.AzureStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.ConjurClientStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setConjur(
+          convertConjurClientStoreToPlumbing((com.strongdm.api.ConjurClientStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.DelineaStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setDelinea(convertDelineaStoreToPlumbing((com.strongdm.api.DelineaStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.GCPStore) {

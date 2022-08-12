@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class AmazonES implements Resource {
   private String accessKey;
   /** */

@@ -17,7 +17,10 @@
 
 package com.strongdm.api;
 
-/** */
+/**
+ * MongoShardedCluster is currently unstable, and its API may change, or it may be removed, without
+ * a major version bump.
+ */
 public class MongoShardedCluster implements Resource {
   private String authDatabase;
   /** */

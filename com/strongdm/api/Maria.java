@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class Maria implements Resource {
   private String bindInterface;
   /** Bind interface */

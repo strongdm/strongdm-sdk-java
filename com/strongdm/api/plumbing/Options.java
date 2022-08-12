@@ -7540,6 +7540,17 @@ java.lang.String defaultValue);
      */
     com.google.protobuf.ByteString
         getTerraformElemTypeBytes();
+
+    /**
+     * <pre>
+     * unstable notes entities which require explicit annotation that they
+     * do not have a stable API yet. 
+     * </pre>
+     *
+     * <code>bool unstable = 1941313;</code>
+     * @return The unstable.
+     */
+    boolean getUnstable();
   }
   /**
    * <pre>
@@ -7631,6 +7642,11 @@ java.lang.String defaultValue);
                   DeprecatedOverrideDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               deprecatedOverride_.getMutableMap().put(
                   deprecatedOverride__.getKey(), deprecatedOverride__.getValue());
+              break;
+            }
+            case 15530504: {
+
+              unstable_ = input.readBool();
               break;
             }
             case 15530562: {
@@ -8207,6 +8223,22 @@ java.lang.String defaultValue);
       }
     }
 
+    public static final int UNSTABLE_FIELD_NUMBER = 1941313;
+    private boolean unstable_;
+    /**
+     * <pre>
+     * unstable notes entities which require explicit annotation that they
+     * do not have a stable API yet. 
+     * </pre>
+     *
+     * <code>bool unstable = 1941313;</code>
+     * @return The unstable.
+     */
+    @java.lang.Override
+    public boolean getUnstable() {
+      return unstable_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8239,6 +8271,9 @@ java.lang.String defaultValue);
           internalGetDeprecatedOverride(),
           DeprecatedOverrideDefaultEntryHolder.defaultEntry,
           1941312);
+      if (unstable_ != false) {
+        output.writeBool(1941313, unstable_);
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -8285,6 +8320,10 @@ java.lang.String defaultValue);
             .build();
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1941312, deprecatedOverride__);
+      }
+      if (unstable_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941313, unstable_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetPorcelainNameOverride().getMap().entrySet()) {
@@ -8333,6 +8372,8 @@ java.lang.String defaultValue);
           other.internalGetDeprecatedOverride())) return false;
       if (!getTerraformElemType()
           .equals(other.getTerraformElemType())) return false;
+      if (getUnstable()
+          != other.getUnstable()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8364,6 +8405,9 @@ java.lang.String defaultValue);
       }
       hash = (37 * hash) + TERRAFORM_ELEM_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getTerraformElemType().hashCode();
+      hash = (37 * hash) + UNSTABLE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnstable());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8545,6 +8589,8 @@ java.lang.String defaultValue);
         internalGetMutableDeprecatedOverride().clear();
         terraformElemType_ = "";
 
+        unstable_ = false;
+
         return this;
       }
 
@@ -8582,6 +8628,7 @@ java.lang.String defaultValue);
         result.deprecatedOverride_ = internalGetDeprecatedOverride();
         result.deprecatedOverride_.makeImmutable();
         result.terraformElemType_ = terraformElemType_;
+        result.unstable_ = unstable_;
         onBuilt();
         return result;
       }
@@ -8645,6 +8692,9 @@ java.lang.String defaultValue);
         if (!other.getTerraformElemType().isEmpty()) {
           terraformElemType_ = other.terraformElemType_;
           onChanged();
+        }
+        if (other.getUnstable() != false) {
+          setUnstable(other.getUnstable());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9537,6 +9587,52 @@ java.lang.String defaultValue);
   checkByteStringIsUtf8(value);
         
         terraformElemType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean unstable_ ;
+      /**
+       * <pre>
+       * unstable notes entities which require explicit annotation that they
+       * do not have a stable API yet. 
+       * </pre>
+       *
+       * <code>bool unstable = 1941313;</code>
+       * @return The unstable.
+       */
+      @java.lang.Override
+      public boolean getUnstable() {
+        return unstable_;
+      }
+      /**
+       * <pre>
+       * unstable notes entities which require explicit annotation that they
+       * do not have a stable API yet. 
+       * </pre>
+       *
+       * <code>bool unstable = 1941313;</code>
+       * @param value The unstable to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstable(boolean value) {
+        
+        unstable_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unstable notes entities which require explicit annotation that they
+       * do not have a stable API yet. 
+       * </pre>
+       *
+       * <code>bool unstable = 1941313;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnstable() {
+        
+        unstable_ = false;
         onChanged();
         return this;
       }
@@ -10480,7 +10576,7 @@ java.lang.String defaultValue);
       "v1.FieldOptions.ReadOnlyOverrideEntry\0327\n" +
       "\025ReadOnlyOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
       "alue\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"" +
-      "\373\004\n\rCustomOptions\022\023\n\tconverter\030\275\276v \001(\t\022O" +
+      "\217\005\n\rCustomOptions\022\023\n\tconverter\030\275\276v \001(\t\022O" +
       "\n\027porcelain_type_override\030\276\276v \003(\0132,.v1.C" +
       "ustomOptions.PorcelainTypeOverrideEntry\022" +
       "O\n\027porcelain_name_override\030\310\276v \003(\0132,.v1." +
@@ -10489,30 +10585,30 @@ java.lang.String defaultValue);
       "Options.CommentOverrideEntry\022H\n\023deprecat" +
       "ed_override\030\300\276v \003(\0132).v1.CustomOptions.D" +
       "eprecatedOverrideEntry\022\035\n\023terraform_elem" +
-      "_type\030\277\276v \001(\t\032<\n\032PorcelainTypeOverrideEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032P" +
-      "orcelainNameOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverrideEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027Dep" +
-      "recatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n" +
-      "\rTerraformDocs\022\037\n\025resource_example_path\030" +
-      "\264\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v " +
-      "\001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file_opt" +
-      "ions\022\034.google.protobuf.FileOptions\030\250\302v \001" +
-      "(\0132\017.v1.FileOptions:N\n\017service_options\022\037" +
-      ".google.protobuf.ServiceOptions\030\231\277v \001(\0132" +
-      "\022.v1.ServiceOptions:K\n\016method_options\022\036." +
-      "google.protobuf.MethodOptions\030\220\277v \001(\0132\021." +
-      "v1.MethodOptions:N\n\017message_options\022\037.go" +
-      "ogle.protobuf.MessageOptions\030\217\277v \001(\0132\022.v" +
-      "1.MessageOptions:H\n\roneof_options\022\035.goog" +
-      "le.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.On" +
-      "eofOptions:H\n\rfield_options\022\035.google.pro" +
-      "tobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOpt" +
-      "ionsBR\n\031com.strongdm.api.plumbingZ5githu" +
-      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
-      "al/v1;v1b\006proto3"
+      "_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276v \001(\010\032<\n\032Por" +
+      "celainTypeOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\032<\n\032PorcelainNameOverride" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n" +
+      "\024CommentOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverrideEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322" +
+      "\363\263\007\r!json_gateway\"m\n\rTerraformDocs\022\037\n\025re" +
+      "source_example_path\030\264\276v \001(\t\022\"\n\030data_sour" +
+      "ce_example_path\030\265\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json" +
+      "_gateway:E\n\014file_options\022\034.google.protob" +
+      "uf.FileOptions\030\250\302v \001(\0132\017.v1.FileOptions:" +
+      "N\n\017service_options\022\037.google.protobuf.Ser" +
+      "viceOptions\030\231\277v \001(\0132\022.v1.ServiceOptions:" +
+      "K\n\016method_options\022\036.google.protobuf.Meth" +
+      "odOptions\030\220\277v \001(\0132\021.v1.MethodOptions:N\n\017" +
+      "message_options\022\037.google.protobuf.Messag" +
+      "eOptions\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\r" +
+      "oneof_options\022\035.google.protobuf.OneofOpt" +
+      "ions\030\205\277v \001(\0132\020.v1.OneofOptions:H\n\rfield_" +
+      "options\022\035.google.protobuf.FieldOptions\030\216" +
+      "\277v \001(\0132\020.v1.FieldOptionsBR\n\031com.strongdm" +
+      ".api.plumbingZ5github.com/strongdm/stron" +
+      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10566,7 +10662,7 @@ java.lang.String defaultValue);
     internal_static_v1_CustomOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_CustomOptions_descriptor,
-        new java.lang.String[] { "Converter", "PorcelainTypeOverride", "PorcelainNameOverride", "CommentOverride", "DeprecatedOverride", "TerraformElemType", });
+        new java.lang.String[] { "Converter", "PorcelainTypeOverride", "PorcelainNameOverride", "CommentOverride", "DeprecatedOverride", "TerraformElemType", "Unstable", });
     internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_descriptor =
       internal_static_v1_CustomOptions_descriptor.getNestedTypes().get(0);
     internal_static_v1_CustomOptions_PorcelainTypeOverrideEntry_fieldAccessorTable = new

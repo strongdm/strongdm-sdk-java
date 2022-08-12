@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class GCP implements Resource {
   private String bindInterface;
   /** Bind interface */

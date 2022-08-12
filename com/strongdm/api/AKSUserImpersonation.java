@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class AKSUserImpersonation implements Resource {
   private String bindInterface;
   /** Bind interface */

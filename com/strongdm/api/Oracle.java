@@ -17,7 +17,10 @@
 
 package com.strongdm.api;
 
-/** */
+/**
+ * Oracle is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
 public class Oracle implements Resource {
   private String bindInterface;
   /** Bind interface */

@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class VaultAppRoleStore implements SecretStore {
   private String id;
   /** Unique identifier of the SecretStore. */

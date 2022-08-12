@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class SSH implements Resource {
   private boolean allowDeprecatedKeyExchanges;
   /** */

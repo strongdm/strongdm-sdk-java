@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class HTTPAuth implements Resource {
   private String authHeader;
   /** */

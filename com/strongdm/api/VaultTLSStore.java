@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class VaultTLSStore implements SecretStore {
   private String caCertPath;
   /** */

@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class Memsql implements Resource {
   private String bindInterface;
   /** Bind interface */

@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class AWSStore implements SecretStore {
   private String id;
   /** Unique identifier of the SecretStore. */

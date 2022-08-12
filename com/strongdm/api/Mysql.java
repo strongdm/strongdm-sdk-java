@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class Mysql implements Resource {
   private String bindInterface;
   /** Bind interface */

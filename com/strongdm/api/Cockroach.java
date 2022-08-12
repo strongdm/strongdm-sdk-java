@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class Cockroach implements Resource {
   private String bindInterface;
   /** Bind interface */

@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class MongoLegacyReplicaset implements Resource {
   private String authDatabase;
   /** */

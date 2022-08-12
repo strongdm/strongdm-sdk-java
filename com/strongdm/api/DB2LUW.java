@@ -17,7 +17,6 @@
 
 package com.strongdm.api;
 
-/** */
 public class DB2LUW implements Resource {
   private String bindInterface;
   /** Bind interface */
