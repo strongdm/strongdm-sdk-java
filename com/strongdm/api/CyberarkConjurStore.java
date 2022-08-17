@@ -18,10 +18,10 @@
 package com.strongdm.api;
 
 /**
- * ConjurStore is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
+ * CyberarkConjurStore is currently unstable, and its API may change, or it may be removed, without
+ * a major version bump.
  */
-public class ConjurStore implements SecretStore {
+public class CyberarkConjurStore implements SecretStore {
   private String appUrl;
   /** */
   public String getAppURL() {

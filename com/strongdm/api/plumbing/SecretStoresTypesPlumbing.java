@@ -63,19 +63,34 @@ public final class SecretStoresTypesPlumbing {
     com.strongdm.api.plumbing.SecretStoresTypesPlumbing.AzureStoreOrBuilder getAzureOrBuilder();
 
     /**
-     * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
-     * @return Whether the conjur field is set.
+     * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
+     * @return Whether the cyberarkConjur field is set.
      */
-    boolean hasConjur();
+    boolean hasCyberarkConjur();
     /**
-     * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
-     * @return The conjur.
+     * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
+     * @return The cyberarkConjur.
      */
-    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore getConjur();
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore getCyberarkConjur();
     /**
-     * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
      */
-    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStoreOrBuilder getConjurOrBuilder();
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStoreOrBuilder getCyberarkConjurOrBuilder();
+
+    /**
+     * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+     * @return Whether the cyberarkPamExperimental field is set.
+     */
+    boolean hasCyberarkPamExperimental();
+    /**
+     * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+     * @return The cyberarkPamExperimental.
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore getCyberarkPamExperimental();
+    /**
+     * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStoreOrBuilder getCyberarkPamExperimentalOrBuilder();
 
     /**
      * <code>.v1.DelineaStore delinea = 2900 [(.v1.field_options) = { ... }</code>
@@ -289,17 +304,31 @@ public final class SecretStoresTypesPlumbing {
               break;
             }
             case 2410: {
-              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder subBuilder = null;
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder subBuilder = null;
               if (secretStoreCase_ == 301) {
-                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_).toBuilder();
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_).toBuilder();
               }
               secretStore_ =
-                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.parser(), extensionRegistry);
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_);
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_);
                 secretStore_ = subBuilder.buildPartial();
               }
               secretStoreCase_ = 301;
+              break;
+            }
+            case 2418: {
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder subBuilder = null;
+              if (secretStoreCase_ == 302) {
+                subBuilder = ((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_).toBuilder();
+              }
+              secretStore_ =
+                  input.readMessage(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_);
+                secretStore_ = subBuilder.buildPartial();
+              }
+              secretStoreCase_ = 302;
               break;
             }
             case 23202: {
@@ -357,7 +386,8 @@ public final class SecretStoresTypesPlumbing {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       AWS(3),
       AZURE(101),
-      CONJUR(301),
+      CYBERARK_CONJUR(301),
+      CYBERARK_PAM_EXPERIMENTAL(302),
       DELINEA(2900),
       GCP(201),
       VAULT_APP_ROLE(4),
@@ -382,7 +412,8 @@ public final class SecretStoresTypesPlumbing {
         switch (value) {
           case 3: return AWS;
           case 101: return AZURE;
-          case 301: return CONJUR;
+          case 301: return CYBERARK_CONJUR;
+          case 302: return CYBERARK_PAM_EXPERIMENTAL;
           case 2900: return DELINEA;
           case 201: return GCP;
           case 4: return VAULT_APP_ROLE;
@@ -465,35 +496,66 @@ public final class SecretStoresTypesPlumbing {
       return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.AzureStore.getDefaultInstance();
     }
 
-    public static final int CONJUR_FIELD_NUMBER = 301;
+    public static final int CYBERARK_CONJUR_FIELD_NUMBER = 301;
     /**
-     * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
-     * @return Whether the conjur field is set.
+     * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
+     * @return Whether the cyberarkConjur field is set.
      */
     @java.lang.Override
-    public boolean hasConjur() {
+    public boolean hasCyberarkConjur() {
       return secretStoreCase_ == 301;
     }
     /**
-     * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
-     * @return The conjur.
+     * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
+     * @return The cyberarkConjur.
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore getConjur() {
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore getCyberarkConjur() {
       if (secretStoreCase_ == 301) {
-         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_;
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_;
       }
-      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance();
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance();
     }
     /**
-     * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+     * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
      */
     @java.lang.Override
-    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStoreOrBuilder getConjurOrBuilder() {
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStoreOrBuilder getCyberarkConjurOrBuilder() {
       if (secretStoreCase_ == 301) {
-         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_;
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_;
       }
-      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance();
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance();
+    }
+
+    public static final int CYBERARK_PAM_EXPERIMENTAL_FIELD_NUMBER = 302;
+    /**
+     * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+     * @return Whether the cyberarkPamExperimental field is set.
+     */
+    @java.lang.Override
+    public boolean hasCyberarkPamExperimental() {
+      return secretStoreCase_ == 302;
+    }
+    /**
+     * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+     * @return The cyberarkPamExperimental.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore getCyberarkPamExperimental() {
+      if (secretStoreCase_ == 302) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance();
+    }
+    /**
+     * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStoreOrBuilder getCyberarkPamExperimentalOrBuilder() {
+      if (secretStoreCase_ == 302) {
+         return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_;
+      }
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance();
     }
 
     public static final int DELINEA_FIELD_NUMBER = 2900;
@@ -684,7 +746,10 @@ public final class SecretStoresTypesPlumbing {
         output.writeMessage(201, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.GCPStore) secretStore_);
       }
       if (secretStoreCase_ == 301) {
-        output.writeMessage(301, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_);
+        output.writeMessage(301, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_);
+      }
+      if (secretStoreCase_ == 302) {
+        output.writeMessage(302, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_);
       }
       if (secretStoreCase_ == 2900) {
         output.writeMessage(2900, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.DelineaStore) secretStore_);
@@ -724,7 +789,11 @@ public final class SecretStoresTypesPlumbing {
       }
       if (secretStoreCase_ == 301) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(301, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_);
+          .computeMessageSize(301, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_);
+      }
+      if (secretStoreCase_ == 302) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(302, (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_);
       }
       if (secretStoreCase_ == 2900) {
         size += com.google.protobuf.CodedOutputStream
@@ -756,8 +825,12 @@ public final class SecretStoresTypesPlumbing {
               .equals(other.getAzure())) return false;
           break;
         case 301:
-          if (!getConjur()
-              .equals(other.getConjur())) return false;
+          if (!getCyberarkConjur()
+              .equals(other.getCyberarkConjur())) return false;
+          break;
+        case 302:
+          if (!getCyberarkPamExperimental()
+              .equals(other.getCyberarkPamExperimental())) return false;
           break;
         case 2900:
           if (!getDelinea()
@@ -803,8 +876,12 @@ public final class SecretStoresTypesPlumbing {
           hash = (53 * hash) + getAzure().hashCode();
           break;
         case 301:
-          hash = (37 * hash) + CONJUR_FIELD_NUMBER;
-          hash = (53 * hash) + getConjur().hashCode();
+          hash = (37 * hash) + CYBERARK_CONJUR_FIELD_NUMBER;
+          hash = (53 * hash) + getCyberarkConjur().hashCode();
+          break;
+        case 302:
+          hash = (37 * hash) + CYBERARK_PAM_EXPERIMENTAL_FIELD_NUMBER;
+          hash = (53 * hash) + getCyberarkPamExperimental().hashCode();
           break;
         case 2900:
           hash = (37 * hash) + DELINEA_FIELD_NUMBER;
@@ -1010,10 +1087,17 @@ public final class SecretStoresTypesPlumbing {
           }
         }
         if (secretStoreCase_ == 301) {
-          if (conjurBuilder_ == null) {
+          if (cyberarkConjurBuilder_ == null) {
             result.secretStore_ = secretStore_;
           } else {
-            result.secretStore_ = conjurBuilder_.build();
+            result.secretStore_ = cyberarkConjurBuilder_.build();
+          }
+        }
+        if (secretStoreCase_ == 302) {
+          if (cyberarkPamExperimentalBuilder_ == null) {
+            result.secretStore_ = secretStore_;
+          } else {
+            result.secretStore_ = cyberarkPamExperimentalBuilder_.build();
           }
         }
         if (secretStoreCase_ == 2900) {
@@ -1109,8 +1193,12 @@ public final class SecretStoresTypesPlumbing {
             mergeAzure(other.getAzure());
             break;
           }
-          case CONJUR: {
-            mergeConjur(other.getConjur());
+          case CYBERARK_CONJUR: {
+            mergeCyberarkConjur(other.getCyberarkConjur());
+            break;
+          }
+          case CYBERARK_PAM_EXPERIMENTAL: {
+            mergeCyberarkPamExperimental(other.getCyberarkPamExperimental());
             break;
           }
           case DELINEA: {
@@ -1466,71 +1554,71 @@ public final class SecretStoresTypesPlumbing {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStoreOrBuilder> conjurBuilder_;
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStoreOrBuilder> cyberarkConjurBuilder_;
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
-       * @return Whether the conjur field is set.
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
+       * @return Whether the cyberarkConjur field is set.
        */
       @java.lang.Override
-      public boolean hasConjur() {
+      public boolean hasCyberarkConjur() {
         return secretStoreCase_ == 301;
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
-       * @return The conjur.
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
+       * @return The cyberarkConjur.
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore getConjur() {
-        if (conjurBuilder_ == null) {
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore getCyberarkConjur() {
+        if (cyberarkConjurBuilder_ == null) {
           if (secretStoreCase_ == 301) {
-            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_;
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_;
           }
-          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance();
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance();
         } else {
           if (secretStoreCase_ == 301) {
-            return conjurBuilder_.getMessage();
+            return cyberarkConjurBuilder_.getMessage();
           }
-          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance();
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance();
         }
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setConjur(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore value) {
-        if (conjurBuilder_ == null) {
+      public Builder setCyberarkConjur(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore value) {
+        if (cyberarkConjurBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           secretStore_ = value;
           onChanged();
         } else {
-          conjurBuilder_.setMessage(value);
+          cyberarkConjurBuilder_.setMessage(value);
         }
         secretStoreCase_ = 301;
         return this;
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
        */
-      public Builder setConjur(
-          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder builderForValue) {
-        if (conjurBuilder_ == null) {
+      public Builder setCyberarkConjur(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder builderForValue) {
+        if (cyberarkConjurBuilder_ == null) {
           secretStore_ = builderForValue.build();
           onChanged();
         } else {
-          conjurBuilder_.setMessage(builderForValue.build());
+          cyberarkConjurBuilder_.setMessage(builderForValue.build());
         }
         secretStoreCase_ = 301;
         return this;
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
        */
-      public Builder mergeConjur(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore value) {
-        if (conjurBuilder_ == null) {
+      public Builder mergeCyberarkConjur(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore value) {
+        if (cyberarkConjurBuilder_ == null) {
           if (secretStoreCase_ == 301 &&
-              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance()) {
-            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_)
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_)
                 .mergeFrom(value).buildPartial();
           } else {
             secretStore_ = value;
@@ -1538,19 +1626,19 @@ public final class SecretStoresTypesPlumbing {
           onChanged();
         } else {
           if (secretStoreCase_ == 301) {
-            conjurBuilder_.mergeFrom(value);
+            cyberarkConjurBuilder_.mergeFrom(value);
           } else {
-            conjurBuilder_.setMessage(value);
+            cyberarkConjurBuilder_.setMessage(value);
           }
         }
         secretStoreCase_ = 301;
         return this;
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
        */
-      public Builder clearConjur() {
-        if (conjurBuilder_ == null) {
+      public Builder clearCyberarkConjur() {
+        if (cyberarkConjurBuilder_ == null) {
           if (secretStoreCase_ == 301) {
             secretStoreCase_ = 0;
             secretStore_ = null;
@@ -1561,50 +1649,192 @@ public final class SecretStoresTypesPlumbing {
             secretStoreCase_ = 0;
             secretStore_ = null;
           }
-          conjurBuilder_.clear();
+          cyberarkConjurBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
        */
-      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder getConjurBuilder() {
-        return getConjurFieldBuilder().getBuilder();
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder getCyberarkConjurBuilder() {
+        return getCyberarkConjurFieldBuilder().getBuilder();
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
        */
       @java.lang.Override
-      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStoreOrBuilder getConjurOrBuilder() {
-        if ((secretStoreCase_ == 301) && (conjurBuilder_ != null)) {
-          return conjurBuilder_.getMessageOrBuilder();
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStoreOrBuilder getCyberarkConjurOrBuilder() {
+        if ((secretStoreCase_ == 301) && (cyberarkConjurBuilder_ != null)) {
+          return cyberarkConjurBuilder_.getMessageOrBuilder();
         } else {
           if (secretStoreCase_ == 301) {
-            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_;
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_;
           }
-          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance();
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance();
         }
       }
       /**
-       * <code>.v1.ConjurStore conjur = 301 [(.v1.field_options) = { ... }</code>
+       * <code>.v1.CyberarkConjurStore cyberark_conjur = 301 [(.v1.field_options) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStoreOrBuilder> 
-          getConjurFieldBuilder() {
-        if (conjurBuilder_ == null) {
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStoreOrBuilder> 
+          getCyberarkConjurFieldBuilder() {
+        if (cyberarkConjurBuilder_ == null) {
           if (!(secretStoreCase_ == 301)) {
-            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance();
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance();
           }
-          conjurBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStoreOrBuilder>(
-                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) secretStore_,
+          cyberarkConjurBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) secretStore_,
                   getParentForChildren(),
                   isClean());
           secretStore_ = null;
         }
         secretStoreCase_ = 301;
         onChanged();;
-        return conjurBuilder_;
+        return cyberarkConjurBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStoreOrBuilder> cyberarkPamExperimentalBuilder_;
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       * @return Whether the cyberarkPamExperimental field is set.
+       */
+      @java.lang.Override
+      public boolean hasCyberarkPamExperimental() {
+        return secretStoreCase_ == 302;
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       * @return The cyberarkPamExperimental.
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore getCyberarkPamExperimental() {
+        if (cyberarkPamExperimentalBuilder_ == null) {
+          if (secretStoreCase_ == 302) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance();
+        } else {
+          if (secretStoreCase_ == 302) {
+            return cyberarkPamExperimentalBuilder_.getMessage();
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCyberarkPamExperimental(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore value) {
+        if (cyberarkPamExperimentalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secretStore_ = value;
+          onChanged();
+        } else {
+          cyberarkPamExperimentalBuilder_.setMessage(value);
+        }
+        secretStoreCase_ = 302;
+        return this;
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCyberarkPamExperimental(
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder builderForValue) {
+        if (cyberarkPamExperimentalBuilder_ == null) {
+          secretStore_ = builderForValue.build();
+          onChanged();
+        } else {
+          cyberarkPamExperimentalBuilder_.setMessage(builderForValue.build());
+        }
+        secretStoreCase_ = 302;
+        return this;
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCyberarkPamExperimental(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore value) {
+        if (cyberarkPamExperimentalBuilder_ == null) {
+          if (secretStoreCase_ == 302 &&
+              secretStore_ != com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance()) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.newBuilder((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            secretStore_ = value;
+          }
+          onChanged();
+        } else {
+          if (secretStoreCase_ == 302) {
+            cyberarkPamExperimentalBuilder_.mergeFrom(value);
+          } else {
+            cyberarkPamExperimentalBuilder_.setMessage(value);
+          }
+        }
+        secretStoreCase_ = 302;
+        return this;
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCyberarkPamExperimental() {
+        if (cyberarkPamExperimentalBuilder_ == null) {
+          if (secretStoreCase_ == 302) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+            onChanged();
+          }
+        } else {
+          if (secretStoreCase_ == 302) {
+            secretStoreCase_ = 0;
+            secretStore_ = null;
+          }
+          cyberarkPamExperimentalBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder getCyberarkPamExperimentalBuilder() {
+        return getCyberarkPamExperimentalFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStoreOrBuilder getCyberarkPamExperimentalOrBuilder() {
+        if ((secretStoreCase_ == 302) && (cyberarkPamExperimentalBuilder_ != null)) {
+          return cyberarkPamExperimentalBuilder_.getMessageOrBuilder();
+        } else {
+          if (secretStoreCase_ == 302) {
+            return (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_;
+          }
+          return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.v1.CyberarkPAMExperimentalStore cyberark_pam_experimental = 302 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStoreOrBuilder> 
+          getCyberarkPamExperimentalFieldBuilder() {
+        if (cyberarkPamExperimentalBuilder_ == null) {
+          if (!(secretStoreCase_ == 302)) {
+            secretStore_ = com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance();
+          }
+          cyberarkPamExperimentalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStoreOrBuilder>(
+                  (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) secretStore_,
+                  getParentForChildren(),
+                  isClean());
+          secretStore_ = null;
+        }
+        secretStoreCase_ = 302;
+        onChanged();;
+        return cyberarkPamExperimentalBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4779,8 +5009,8 @@ public final class SecretStoresTypesPlumbing {
 
   }
 
-  public interface ConjurStoreOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:v1.ConjurStore)
+  public interface CyberarkConjurStoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.CyberarkConjurStore)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4863,18 +5093,18 @@ public final class SecretStoresTypesPlumbing {
     com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
   }
   /**
-   * Protobuf type {@code v1.ConjurStore}
+   * Protobuf type {@code v1.CyberarkConjurStore}
    */
-  public static final class ConjurStore extends
+  public static final class CyberarkConjurStore extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:v1.ConjurStore)
-      ConjurStoreOrBuilder {
+      // @@protoc_insertion_point(message_implements:v1.CyberarkConjurStore)
+      CyberarkConjurStoreOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ConjurStore.newBuilder() to construct.
-    private ConjurStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CyberarkConjurStore.newBuilder() to construct.
+    private CyberarkConjurStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ConjurStore() {
+    private CyberarkConjurStore() {
       id_ = "";
       name_ = "";
       appURL_ = "";
@@ -4884,7 +5114,7 @@ public final class SecretStoresTypesPlumbing {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new ConjurStore();
+      return new CyberarkConjurStore();
     }
 
     @java.lang.Override
@@ -4892,7 +5122,7 @@ public final class SecretStoresTypesPlumbing {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ConjurStore(
+    private CyberarkConjurStore(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4964,15 +5194,15 @@ public final class SecretStoresTypesPlumbing {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_ConjurStore_descriptor;
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkConjurStore_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_ConjurStore_fieldAccessorTable
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkConjurStore_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder.class);
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -5201,10 +5431,10 @@ public final class SecretStoresTypesPlumbing {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore)) {
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore)) {
         return super.equals(obj);
       }
-      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) obj;
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) obj;
 
       if (!getId()
           .equals(other.getId())) return false;
@@ -5243,69 +5473,69 @@ public final class SecretStoresTypesPlumbing {
       return hash;
     }
 
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(byte[] data)
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseDelimitedFrom(java.io.InputStream input)
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseDelimitedFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parseFrom(
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5318,7 +5548,7 @@ public final class SecretStoresTypesPlumbing {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore prototype) {
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5334,26 +5564,26 @@ public final class SecretStoresTypesPlumbing {
       return builder;
     }
     /**
-     * Protobuf type {@code v1.ConjurStore}
+     * Protobuf type {@code v1.CyberarkConjurStore}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:v1.ConjurStore)
-        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStoreOrBuilder {
+        // @@protoc_insertion_point(builder_implements:v1.CyberarkConjurStore)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStoreOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_ConjurStore_descriptor;
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkConjurStore_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_ConjurStore_fieldAccessorTable
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkConjurStore_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.Builder.class);
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.Builder.class);
       }
 
-      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.newBuilder()
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5389,17 +5619,17 @@ public final class SecretStoresTypesPlumbing {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_ConjurStore_descriptor;
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkConjurStore_descriptor;
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore getDefaultInstanceForType() {
-        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance();
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore build() {
-        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore result = buildPartial();
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5407,8 +5637,8 @@ public final class SecretStoresTypesPlumbing {
       }
 
       @java.lang.Override
-      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore buildPartial() {
-        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore(this);
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore(this);
         result.id_ = id_;
         result.name_ = name_;
         result.appURL_ = appURL_;
@@ -5455,16 +5685,16 @@ public final class SecretStoresTypesPlumbing {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) {
-          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore)other);
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore other) {
-        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -5495,11 +5725,11 @@ public final class SecretStoresTypesPlumbing {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore parsedMessage = null;
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore) e.getUnfinishedMessage();
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5944,41 +6174,1246 @@ public final class SecretStoresTypesPlumbing {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:v1.ConjurStore)
+      // @@protoc_insertion_point(builder_scope:v1.CyberarkConjurStore)
     }
 
-    // @@protoc_insertion_point(class_scope:v1.ConjurStore)
-    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:v1.CyberarkConjurStore)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore();
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore();
     }
 
-    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore getDefaultInstance() {
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ConjurStore>
-        PARSER = new com.google.protobuf.AbstractParser<ConjurStore>() {
+    private static final com.google.protobuf.Parser<CyberarkConjurStore>
+        PARSER = new com.google.protobuf.AbstractParser<CyberarkConjurStore>() {
       @java.lang.Override
-      public ConjurStore parsePartialFrom(
+      public CyberarkConjurStore parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ConjurStore(input, extensionRegistry);
+        return new CyberarkConjurStore(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<ConjurStore> parser() {
+    public static com.google.protobuf.Parser<CyberarkConjurStore> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ConjurStore> getParserForType() {
+    public com.google.protobuf.Parser<CyberarkConjurStore> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.ConjurStore getDefaultInstanceForType() {
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkConjurStore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CyberarkPAMExperimentalStoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.CyberarkPAMExperimentalStore)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+     * @return The appURL.
+     */
+    java.lang.String getAppURL();
+    /**
+     * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for appURL.
+     */
+    com.google.protobuf.ByteString
+        getAppURLBytes();
+
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    boolean hasTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.Tags getTags();
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v1.CyberarkPAMExperimentalStore}
+   */
+  public static final class CyberarkPAMExperimentalStore extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.CyberarkPAMExperimentalStore)
+      CyberarkPAMExperimentalStoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CyberarkPAMExperimentalStore.newBuilder() to construct.
+    private CyberarkPAMExperimentalStore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CyberarkPAMExperimentalStore() {
+      id_ = "";
+      name_ = "";
+      appURL_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CyberarkPAMExperimentalStore();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CyberarkPAMExperimentalStore(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              appURL_ = s;
+              break;
+            }
+            case 262170: {
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder subBuilder = null;
+              if (tags_ != null) {
+                subBuilder = tags_.toBuilder();
+              }
+              tags_ = input.readMessage(com.strongdm.api.plumbing.TagsPlumbing.Tags.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tags_);
+                tags_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkPAMExperimentalStore_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkPAMExperimentalStore_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique identifier of the SecretStore.
+     * </pre>
+     *
+     * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Unique human-readable name of the SecretStore.
+     * </pre>
+     *
+     * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPURL_FIELD_NUMBER = 3;
+    private volatile java.lang.Object appURL_;
+    /**
+     * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+     * @return The appURL.
+     */
+    @java.lang.Override
+    public java.lang.String getAppURL() {
+      java.lang.Object ref = appURL_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        appURL_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for appURL.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAppURLBytes() {
+      java.lang.Object ref = appURL_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        appURL_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 32771;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
+     */
+    @java.lang.Override
+    public boolean hasTags() {
+      return tags_ != null;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appURL_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, appURL_);
+      }
+      if (tags_ != null) {
+        output.writeMessage(32771, getTags());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appURL_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, appURL_);
+      }
+      if (tags_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32771, getTags());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore other = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getAppURL()
+          .equals(other.getAppURL())) return false;
+      if (hasTags() != other.hasTags()) return false;
+      if (hasTags()) {
+        if (!getTags()
+            .equals(other.getTags())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + APPURL_FIELD_NUMBER;
+      hash = (53 * hash) + getAppURL().hashCode();
+      if (hasTags()) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTags().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v1.CyberarkPAMExperimentalStore}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.CyberarkPAMExperimentalStore)
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkPAMExperimentalStore_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkPAMExperimentalStore_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.class, com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        name_ = "";
+
+        appURL_ = "";
+
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.internal_static_v1_CyberarkPAMExperimentalStore_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore build() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore buildPartial() {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore result = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore(this);
+        result.id_ = id_;
+        result.name_ = name_;
+        result.appURL_ = appURL_;
+        if (tagsBuilder_ == null) {
+          result.tags_ = tags_;
+        } else {
+          result.tags_ = tagsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) {
+          return mergeFrom((com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore other) {
+        if (other == com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getAppURL().isEmpty()) {
+          appURL_ = other.appURL_;
+          onChanged();
+        }
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique identifier of the SecretStore.
+       * </pre>
+       *
+       * <code>string id = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Unique human-readable name of the SecretStore.
+       * </pre>
+       *
+       * <code>string name = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object appURL_ = "";
+      /**
+       * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+       * @return The appURL.
+       */
+      public java.lang.String getAppURL() {
+        java.lang.Object ref = appURL_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          appURL_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for appURL.
+       */
+      public com.google.protobuf.ByteString
+          getAppURLBytes() {
+        java.lang.Object ref = appURL_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          appURL_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The appURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppURL(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        appURL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppURL() {
+        
+        appURL_ = getDefaultInstance().getAppURL();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for appURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppURLBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        appURL_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return Whether the tags field is set.
+       */
+      public boolean hasTags() {
+        return tagsBuilder_ != null || tags_ != null;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       * @return The tags.
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+        if (tagsBuilder_ == null) {
+          return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        } else {
+          return tagsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tags_ = value;
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setTags(
+          com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder builderForValue) {
+        if (tagsBuilder_ == null) {
+          tags_ = builderForValue.build();
+          onChanged();
+        } else {
+          tagsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeTags(com.strongdm.api.plumbing.TagsPlumbing.Tags value) {
+        if (tagsBuilder_ == null) {
+          if (tags_ != null) {
+            tags_ =
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.newBuilder(tags_).mergeFrom(value).buildPartial();
+          } else {
+            tags_ = value;
+          }
+          onChanged();
+        } else {
+          tagsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearTags() {
+        if (tagsBuilder_ == null) {
+          tags_ = null;
+          onChanged();
+        } else {
+          tags_ = null;
+          tagsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder getTagsBuilder() {
+        
+        onChanged();
+        return getTagsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+        if (tagsBuilder_ != null) {
+          return tagsBuilder_.getMessageOrBuilder();
+        } else {
+          return tags_ == null ?
+              com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+        }
+      }
+      /**
+       * <pre>
+       * Tags is a map of key, value pairs.
+       * </pre>
+       *
+       * <code>.v1.Tags tags = 32771 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> 
+          getTagsFieldBuilder() {
+        if (tagsBuilder_ == null) {
+          tagsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder>(
+                  getTags(),
+                  getParentForChildren(),
+                  isClean());
+          tags_ = null;
+        }
+        return tagsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.CyberarkPAMExperimentalStore)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.CyberarkPAMExperimentalStore)
+    private static final com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore();
+    }
+
+    public static com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CyberarkPAMExperimentalStore>
+        PARSER = new com.google.protobuf.AbstractParser<CyberarkPAMExperimentalStore>() {
+      @java.lang.Override
+      public CyberarkPAMExperimentalStore parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CyberarkPAMExperimentalStore(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CyberarkPAMExperimentalStore> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CyberarkPAMExperimentalStore> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.SecretStoresTypesPlumbing.CyberarkPAMExperimentalStore getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13075,10 +14510,15 @@ public final class SecretStoresTypesPlumbing {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_AzureStore_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_v1_ConjurStore_descriptor;
+    internal_static_v1_CyberarkConjurStore_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_v1_ConjurStore_fieldAccessorTable;
+      internal_static_v1_CyberarkConjurStore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_CyberarkPAMExperimentalStore_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_CyberarkPAMExperimentalStore_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_DelineaStore_descriptor;
   private static final 
@@ -13114,92 +14554,107 @@ public final class SecretStoresTypesPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\030secret_store_types.proto\022\002v1\032\roptions." +
-      "proto\032\ntags.proto\"\260\005\n\013SecretStore\022?\n\003aws" +
+      "proto\032\ntags.proto\"\311\006\n\013SecretStore\022?\n\003aws" +
       "\030\003 \001(\0132\014.v1.AWSStoreB\"\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023\n\014j" +
       "son_gateway\022\003awsH\000\022E\n\005azure\030e \001(\0132\016.v1.A" +
       "zureStoreB$\362\370\263\007\037\312\363\263\007\032\302\364\263\007\025\n\014json_gateway" +
-      "\022\005azureH\000\022I\n\006conjur\030\255\002 \001(\0132\017.v1.ConjurSt" +
-      "oreB%\362\370\263\007 \312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006conj" +
-      "urH\000\022L\n\007delinea\030\324\026 \001(\0132\020.v1.DelineaStore" +
-      "B&\362\370\263\007!\312\363\263\007\034\302\364\263\007\027\n\014json_gateway\022\007delinea" +
-      "H\000\022@\n\003gcp\030\311\001 \001(\0132\014.v1.GCPStoreB\"\362\370\263\007\035\312\363\263" +
-      "\007\030\302\364\263\007\023\n\014json_gateway\022\003gcpH\000\022\\\n\016vault_ap" +
-      "p_role\030\004 \001(\0132\025.v1.VaultAppRoleStoreB+\362\370\263" +
-      "\007&\312\363\263\007!\302\364\263\007\034\n\014json_gateway\022\014vaultAppRole" +
-      "H\000\022O\n\tvault_tls\030\001 \001(\0132\021.v1.VaultTLSStore" +
-      "B\'\362\370\263\007\"\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultTL" +
-      "SH\000\022U\n\013vault_token\030\002 \001(\0132\023.v1.VaultToken" +
-      "StoreB)\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\nva" +
-      "ultTokenH\000:\n\372\370\263\007\005\250\363\263\007\001B,\n\014secret_store\022\034" +
-      "\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\374\001\n\010AWSStor" +
-      "e\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB" +
-      "\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260" +
-      "\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006regio" +
-      "n\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:T\372" +
-      "\370\263\007O\250\363\263\007\001\312\363\263\007E\302\364\263\007\n\n\003cli\022\003aws\302\364\263\007\023\n\014json" +
-      "_gateway\022\003aws\302\364\263\007\031\n\022terraform-provider\022\003" +
-      "aws\"\353\001\n\nAzureStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\tvau" +
-      "lt_uri\030\003 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n" +
-      "\014json_gateway\022\010vaultUri\022$\n\004tags\030\203\200\002 \001(\0132" +
-      "\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001::\372\370\263\0075\250\363\263\007\001\312\363\263\007+\302\364" +
-      "\263\007\014\n\003cli\022\005azure\302\364\263\007\025\n\014json_gateway\022\005azur" +
-      "e\"\356\001\n\013ConjurStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appU" +
-      "RL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014jso" +
-      "n_gateway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001:A\372\370\263\007<\250\363\263\007\001\312\363\263\0072\210\364\263\007\001\302\364\263" +
-      "\007\r\n\003cli\022\006conjur\302\364\263\007\026\n\014json_gateway\022\006conj" +
-      "ur\"\270\002\n\014DelineaStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022A\n\nse" +
-      "rver_url\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014js" +
-      "on_gateway\022\tserverUrl\022C\n\013tenant_name\030\004 \001" +
-      "(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\n" +
-      "tenantName\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.TagsB\n\362\370" +
-      "\263\007\005\260\363\263\007\001:C\372\370\263\007>\250\363\263\007\001\312\363\263\0074\210\364\263\007\001\302\364\263\007\016\n\003cli" +
-      "\022\007delinea\302\364\263\007\027\n\014json_gateway\022\007delinea\"\346\001" +
-      "\n\010GCPStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004na" +
-      "me\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022E\n\tprojectID\030\003" +
-      " \001(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_ga" +
-      "teway\022\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
-      "gsB\n\362\370\263\007\005\260\363\263\007\001:6\372\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263\007\n\n\003cl" +
-      "i\022\003gcp\302\364\263\007\023\n\014json_gateway\022\003gcp\"\362\002\n\021Vault" +
-      "AppRoleStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
-      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespace" +
-      "\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gatew" +
-      "ay\022\tnamespace\022N\n\016server_address\030\003 \001(\tB6\362" +
-      "\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway\022\r" +
-      "serverAddress\022\"\n\004tags\030\010 \001(\0132\010.v1.TagsB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001\312\363\263\007a\302\364\263\007\023\n\003cli\022\014va" +
-      "ultAppRole\302\364\263\007\034\n\014json_gateway\022\014vaultAppR" +
-      "ole\302\364\263\007#\n\022terraform-provider\022\rvault_appr" +
-      "ole\"\314\004\n\rVaultTLSStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\014" +
-      "CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032" +
-      "\n\014json_gateway\022\ncaCertPath\022Q\n\020client_cer" +
-      "t_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#\302\364\263\007\036\n" +
-      "\014json_gateway\022\016clientCertPath\022O\n\017client_" +
-      "key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007" +
-      "\035\n\014json_gateway\022\rclientKeyPath\022@\n\tnamesp" +
-      "ace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_ga" +
-      "teway\022\tnamespace\022N\n\016server_address\030\003 \001(\t" +
-      "B6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gatewa" +
-      "y\022\rserverAddress\022\"\n\004tags\030\007 \001(\0132\010.v1.Tags" +
-      "B\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\312\363\263\007U\302\364\263\007\017\n\003cli\022" +
-      "\010vaultTLS\302\364\263\007\030\n\014json_gateway\022\010vaultTLS\302\364" +
-      "\263\007\037\n\022terraform-provider\022\tvault_tls\"\352\002\n\017V" +
-      "aultTokenStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035" +
-      "\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnamespa" +
-      "ce\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json_gat" +
-      "eway\022\tnamespace\022N\n\016server_address\030\003 \001(\tB" +
-      "6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gateway" +
-      "\022\rserverAddress\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB" +
-      "\n\362\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n\003cli\022\n" +
-      "vaultToken\302\364\263\007\032\n\014json_gateway\022\nvaultToke" +
-      "n\302\364\263\007!\n\022terraform-provider\022\013vault_tokenB" +
-      "m\n\031com.strongdm.api.plumbingB\031SecretStor" +
-      "esTypesPlumbingZ5github.com/strongdm/str" +
-      "ongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "\022\005azureH\000\022b\n\017cyberark_conjur\030\255\002 \001(\0132\027.v1" +
+      ".CyberarkConjurStoreB-\362\370\263\007(\312\363\263\007#\302\364\263\007\036\n\014j" +
+      "son_gateway\022\016cyberarkConjurH\000\022~\n\031cyberar" +
+      "k_pam_experimental\030\256\002 \001(\0132 .v1.CyberarkP" +
+      "AMExperimentalStoreB6\362\370\263\0071\312\363\263\007,\302\364\263\007\'\n\014js" +
+      "on_gateway\022\027cyberarkPAMExperimentalH\000\022L\n" +
+      "\007delinea\030\324\026 \001(\0132\020.v1.DelineaStoreB&\362\370\263\007!" +
+      "\312\363\263\007\034\302\364\263\007\027\n\014json_gateway\022\007delineaH\000\022@\n\003g" +
+      "cp\030\311\001 \001(\0132\014.v1.GCPStoreB\"\362\370\263\007\035\312\363\263\007\030\302\364\263\007\023" +
+      "\n\014json_gateway\022\003gcpH\000\022\\\n\016vault_app_role\030" +
+      "\004 \001(\0132\025.v1.VaultAppRoleStoreB+\362\370\263\007&\312\363\263\007!" +
+      "\302\364\263\007\034\n\014json_gateway\022\014vaultAppRoleH\000\022O\n\tv" +
+      "ault_tls\030\001 \001(\0132\021.v1.VaultTLSStoreB\'\362\370\263\007\"" +
+      "\312\363\263\007\035\302\364\263\007\030\n\014json_gateway\022\010vaultTLSH\000\022U\n\013" +
+      "vault_token\030\002 \001(\0132\023.v1.VaultTokenStoreB)" +
+      "\362\370\263\007$\312\363\263\007\037\302\364\263\007\032\n\014json_gateway\022\nvaultToke" +
+      "nH\000:\n\372\370\263\007\005\250\363\263\007\001B,\n\014secret_store\022\034\252\370\263\007\t\252\370" +
+      "\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\374\001\n\010AWSStore\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\300\363\263\007\001\022?\n\006region\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263" +
+      "\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_gateway\022\006region\022\"\n\004ta" +
+      "gs\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:T\372\370\263\007O\250\363\263" +
+      "\007\001\312\363\263\007E\302\364\263\007\n\n\003cli\022\003aws\302\364\263\007\023\n\014json_gatewa" +
+      "y\022\003aws\302\364\263\007\031\n\022terraform-provider\022\003aws\"\353\001\n" +
+      "\nAzureStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004n" +
+      "ame\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022D\n\tvault_uri\030" +
+      "\003 \001(\tB1\362\370\263\007,\260\363\263\007\001\300\363\263\007\001\312\363\263\007\035\302\364\263\007\030\n\014json_g" +
+      "ateway\022\010vaultUri\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001::\372\370\263\0075\250\363\263\007\001\312\363\263\007+\302\364\263\007\014\n\003cl" +
+      "i\022\005azure\302\364\263\007\025\n\014json_gateway\022\005azure\"\260\002\n\023C" +
+      "yberarkConjurStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006app" +
+      "URL\030\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014js" +
+      "on_gateway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1." +
+      "TagsB\n\362\370\263\007\005\260\363\263\007\001:{\372\370\263\007v\250\363\263\007\001\312\363\263\007l\210\364\263\007\001\302\364" +
+      "\263\007\025\n\003cli\022\016cyberarkConjur\302\364\263\007\036\n\014json_gate" +
+      "way\022\016cyberarkConjur\302\364\263\007%\n\022terraform-prov" +
+      "ider\022\017cyberark_conjur\"\330\002\n\034CyberarkPAMExp" +
+      "erimentalStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035" +
+      "\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022?\n\006appURL\030" +
+      "\003 \001(\tB/\362\370\263\007*\260\363\263\007\001\300\363\263\007\001\312\363\263\007\033\302\364\263\007\026\n\014json_g" +
+      "ateway\022\006appUrl\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Tags" +
+      "B\n\362\370\263\007\005\260\363\263\007\001:\231\001\372\370\263\007\223\001\250\363\263\007\001\312\363\263\007\210\001\210\364\263\007\001\302\364\263" +
+      "\007\036\n\003cli\022\027cyberarkPAMExperimental\302\364\263\007\'\n\014j" +
+      "son_gateway\022\027cyberarkPAMExperimental\302\364\263\007" +
+      "/\n\022terraform-provider\022\031cyberark_pam_expe" +
+      "rimental\"\270\002\n\014DelineaStore\022\026\n\002id\030\001 \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001" +
+      "\022A\n\nserver_url\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263" +
+      "\007\031\n\014json_gateway\022\tserverUrl\022C\n\013tenant_na" +
+      "me\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007\037\302\364\263\007\032\n\014json_gat" +
+      "eway\022\ntenantName\022$\n\004tags\030\203\200\002 \001(\0132\010.v1.Ta" +
+      "gsB\n\362\370\263\007\005\260\363\263\007\001:C\372\370\263\007>\250\363\263\007\001\312\363\263\0074\210\364\263\007\001\302\364\263\007" +
+      "\016\n\003cli\022\007delinea\302\364\263\007\027\n\014json_gateway\022\007deli" +
+      "nea\"\346\001\n\010GCPStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022E\n\tproje" +
+      "ctID\030\003 \001(\tB2\362\370\263\007-\260\363\263\007\001\300\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014j" +
+      "son_gateway\022\tprojectId\022$\n\004tags\030\203\200\002 \001(\0132\010" +
+      ".v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:6\372\370\263\0071\250\363\263\007\001\312\363\263\007\'\302\364\263" +
+      "\007\n\n\003cli\022\003gcp\302\364\263\007\023\n\014json_gateway\022\003gcp\"\362\002\n" +
+      "\021VaultAppRoleStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tnam" +
+      "espace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014json" +
+      "_gateway\022\tnamespace\022N\n\016server_address\030\003 " +
+      "\001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_gat" +
+      "eway\022\rserverAddress\022\"\n\004tags\030\010 \001(\0132\010.v1.T" +
+      "agsB\n\362\370\263\007\005\260\363\263\007\001:p\372\370\263\007k\250\363\263\007\001\312\363\263\007a\302\364\263\007\023\n\003c" +
+      "li\022\014vaultAppRole\302\364\263\007\034\n\014json_gateway\022\014vau" +
+      "ltAppRole\302\364\263\007#\n\022terraform-provider\022\rvaul" +
+      "t_approle\"\314\004\n\rVaultTLSStore\022\026\n\002id\030\001 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263" +
+      "\007\001\022D\n\014CA_cert_path\030\004 \001(\tB.\362\370\263\007)\260\363\263\007\001\312\363\263\007" +
+      "\037\302\364\263\007\032\n\014json_gateway\022\ncaCertPath\022Q\n\020clie" +
+      "nt_cert_path\030\005 \001(\tB7\362\370\263\0072\260\363\263\007\001\300\363\263\007\001\312\363\263\007#" +
+      "\302\364\263\007\036\n\014json_gateway\022\016clientCertPath\022O\n\017c" +
+      "lient_key_path\030\006 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263" +
+      "\007\"\302\364\263\007\035\n\014json_gateway\022\rclientKeyPath\022@\n\t" +
+      "namespace\030\010 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014j" +
+      "son_gateway\022\tnamespace\022N\n\016server_address" +
+      "\030\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_" +
+      "gateway\022\rserverAddress\022\"\n\004tags\030\007 \001(\0132\010.v" +
+      "1.TagsB\n\362\370\263\007\005\260\363\263\007\001:d\372\370\263\007_\250\363\263\007\001\312\363\263\007U\302\364\263\007\017" +
+      "\n\003cli\022\010vaultTLS\302\364\263\007\030\n\014json_gateway\022\010vaul" +
+      "tTLS\302\364\263\007\037\n\022terraform-provider\022\tvault_tls" +
+      "\"\352\002\n\017VaultTokenStore\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022@\n\tn" +
+      "amespace\030\005 \001(\tB-\362\370\263\007(\260\363\263\007\001\312\363\263\007\036\302\364\263\007\031\n\014js" +
+      "on_gateway\022\tnamespace\022N\n\016server_address\030" +
+      "\003 \001(\tB6\362\370\263\0071\260\363\263\007\001\300\363\263\007\001\312\363\263\007\"\302\364\263\007\035\n\014json_g" +
+      "ateway\022\rserverAddress\022\"\n\004tags\030\004 \001(\0132\010.v1" +
+      ".TagsB\n\362\370\263\007\005\260\363\263\007\001:j\372\370\263\007e\250\363\263\007\001\312\363\263\007[\302\364\263\007\021\n" +
+      "\003cli\022\nvaultToken\302\364\263\007\032\n\014json_gateway\022\nvau" +
+      "ltToken\302\364\263\007!\n\022terraform-provider\022\013vault_" +
+      "tokenBm\n\031com.strongdm.api.plumbingB\031Secr" +
+      "etStoresTypesPlumbingZ5github.com/strong" +
+      "dm/strongdm-sdk-go/v3/internal/v1;v1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13212,7 +14667,7 @@ public final class SecretStoresTypesPlumbing {
     internal_static_v1_SecretStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_SecretStore_descriptor,
-        new java.lang.String[] { "Aws", "Azure", "Conjur", "Delinea", "Gcp", "VaultAppRole", "VaultTls", "VaultToken", "SecretStore", });
+        new java.lang.String[] { "Aws", "Azure", "CyberarkConjur", "CyberarkPamExperimental", "Delinea", "Gcp", "VaultAppRole", "VaultTls", "VaultToken", "SecretStore", });
     internal_static_v1_AWSStore_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_v1_AWSStore_fieldAccessorTable = new
@@ -13225,38 +14680,44 @@ public final class SecretStoresTypesPlumbing {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AzureStore_descriptor,
         new java.lang.String[] { "Id", "Name", "VaultUri", "Tags", });
-    internal_static_v1_ConjurStore_descriptor =
+    internal_static_v1_CyberarkConjurStore_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_v1_ConjurStore_fieldAccessorTable = new
+    internal_static_v1_CyberarkConjurStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_v1_ConjurStore_descriptor,
+        internal_static_v1_CyberarkConjurStore_descriptor,
+        new java.lang.String[] { "Id", "Name", "AppURL", "Tags", });
+    internal_static_v1_CyberarkPAMExperimentalStore_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_v1_CyberarkPAMExperimentalStore_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_CyberarkPAMExperimentalStore_descriptor,
         new java.lang.String[] { "Id", "Name", "AppURL", "Tags", });
     internal_static_v1_DelineaStore_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_v1_DelineaStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_DelineaStore_descriptor,
         new java.lang.String[] { "Id", "Name", "ServerUrl", "TenantName", "Tags", });
     internal_static_v1_GCPStore_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_v1_GCPStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GCPStore_descriptor,
         new java.lang.String[] { "Id", "Name", "ProjectID", "Tags", });
     internal_static_v1_VaultAppRoleStore_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_v1_VaultAppRoleStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultAppRoleStore_descriptor,
         new java.lang.String[] { "Id", "Name", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTLSStore_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_v1_VaultTLSStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTLSStore_descriptor,
         new java.lang.String[] { "Id", "Name", "CACertPath", "ClientCertPath", "ClientKeyPath", "Namespace", "ServerAddress", "Tags", });
     internal_static_v1_VaultTokenStore_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_v1_VaultTokenStore_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_VaultTokenStore_descriptor,

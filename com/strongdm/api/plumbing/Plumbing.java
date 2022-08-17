@@ -647,6 +647,190 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AWSConsole convertAWSConsoleToPorcelain(AWSConsole plumbing) {
+    com.strongdm.api.AWSConsole porcelain = new com.strongdm.api.AWSConsole();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setEnableEnvVariables((plumbing.getEnableEnvVariables()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSessionExpiry((plumbing.getSessionExpiry()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AWSConsole convertAWSConsoleToPlumbing(com.strongdm.api.AWSConsole porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWSConsole.Builder builder = AWSConsole.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setEnableEnvVariables(porcelain.getEnableEnvVariables());
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSessionExpiry() != null) {
+      builder.setSessionExpiry((porcelain.getSessionExpiry()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AWSConsole> convertRepeatedAWSConsoleToPorcelain(
+      Collection<AWSConsole> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAWSConsoleToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWSConsole> convertRepeatedAWSConsoleToPlumbing(
+      Collection<com.strongdm.api.AWSConsole> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAWSConsoleToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AWSConsoleStaticKeyPair convertAWSConsoleStaticKeyPairToPorcelain(
+      AWSConsoleStaticKeyPair plumbing) {
+    com.strongdm.api.AWSConsoleStaticKeyPair porcelain =
+        new com.strongdm.api.AWSConsoleStaticKeyPair();
+    porcelain.setAccessKey((plumbing.getAccessKey()));
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRegion((plumbing.getRegion()));
+    porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
+    porcelain.setRemoteIdentityHealthcheckUsername(
+        (plumbing.getRemoteIdentityHealthcheckUsername()));
+    porcelain.setRoleArn((plumbing.getRoleArn()));
+    porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
+    porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSessionExpiry((plumbing.getSessionExpiry()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static AWSConsoleStaticKeyPair convertAWSConsoleStaticKeyPairToPlumbing(
+      com.strongdm.api.AWSConsoleStaticKeyPair porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AWSConsoleStaticKeyPair.Builder builder = AWSConsoleStaticKeyPair.newBuilder();
+    if (porcelain.getAccessKey() != null) {
+      builder.setAccessKey((porcelain.getAccessKey()));
+    }
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRegion() != null) {
+      builder.setRegion((porcelain.getRegion()));
+    }
+    if (porcelain.getRemoteIdentityGroupId() != null) {
+      builder.setRemoteIdentityGroupId((porcelain.getRemoteIdentityGroupId()));
+    }
+    if (porcelain.getRemoteIdentityHealthcheckUsername() != null) {
+      builder.setRemoteIdentityHealthcheckUsername(
+          (porcelain.getRemoteIdentityHealthcheckUsername()));
+    }
+    if (porcelain.getRoleArn() != null) {
+      builder.setRoleArn((porcelain.getRoleArn()));
+    }
+    if (porcelain.getRoleExternalId() != null) {
+      builder.setRoleExternalId((porcelain.getRoleExternalId()));
+    }
+    if (porcelain.getSecretAccessKey() != null) {
+      builder.setSecretAccessKey((porcelain.getSecretAccessKey()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSessionExpiry() != null) {
+      builder.setSessionExpiry((porcelain.getSessionExpiry()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AWSConsoleStaticKeyPair>
+      convertRepeatedAWSConsoleStaticKeyPairToPorcelain(
+          Collection<AWSConsoleStaticKeyPair> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAWSConsoleStaticKeyPairToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AWSConsoleStaticKeyPair> convertRepeatedAWSConsoleStaticKeyPairToPlumbing(
+      Collection<com.strongdm.api.AWSConsoleStaticKeyPair> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAWSConsoleStaticKeyPairToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AWSStore convertAWSStoreToPorcelain(AWSStore plumbing) {
     com.strongdm.api.AWSStore porcelain = new com.strongdm.api.AWSStore();
     porcelain.setId((plumbing.getId()));
@@ -2438,49 +2622,6 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.ConjurStore convertConjurStoreToPorcelain(ConjurStore plumbing) {
-    com.strongdm.api.ConjurStore porcelain = new com.strongdm.api.ConjurStore();
-    porcelain.setAppURL((plumbing.getAppURL()));
-    porcelain.setId((plumbing.getId()));
-    porcelain.setName((plumbing.getName()));
-    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    return porcelain;
-  }
-
-  public static ConjurStore convertConjurStoreToPlumbing(com.strongdm.api.ConjurStore porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    ConjurStore.Builder builder = ConjurStore.newBuilder();
-    if (porcelain.getAppURL() != null) {
-      builder.setAppURL((porcelain.getAppURL()));
-    }
-    if (porcelain.getId() != null) {
-      builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getName() != null) {
-      builder.setName((porcelain.getName()));
-    }
-    if (porcelain.getTags() != null) {
-      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.ConjurStore> convertRepeatedConjurStoreToPorcelain(
-      Collection<ConjurStore> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertConjurStoreToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<ConjurStore> convertRepeatedConjurStoreToPlumbing(
-      Collection<com.strongdm.api.ConjurStore> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertConjurStoreToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
   public static com.strongdm.api.ControlPanelGetSSHCAPublicKeyResponse
       convertControlPanelGetSSHCAPublicKeyResponseToPorcelain(
           ControlPanelGetSSHCAPublicKeyResponse plumbing) {
@@ -2598,6 +2739,99 @@ public class Plumbing {
       Collection<com.strongdm.api.CreateResponseMetadata> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertCreateResponseMetadataToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.CyberarkConjurStore convertCyberarkConjurStoreToPorcelain(
+      CyberarkConjurStore plumbing) {
+    com.strongdm.api.CyberarkConjurStore porcelain = new com.strongdm.api.CyberarkConjurStore();
+    porcelain.setAppURL((plumbing.getAppURL()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static CyberarkConjurStore convertCyberarkConjurStoreToPlumbing(
+      com.strongdm.api.CyberarkConjurStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    CyberarkConjurStore.Builder builder = CyberarkConjurStore.newBuilder();
+    if (porcelain.getAppURL() != null) {
+      builder.setAppURL((porcelain.getAppURL()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.CyberarkConjurStore>
+      convertRepeatedCyberarkConjurStoreToPorcelain(Collection<CyberarkConjurStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertCyberarkConjurStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<CyberarkConjurStore> convertRepeatedCyberarkConjurStoreToPlumbing(
+      Collection<com.strongdm.api.CyberarkConjurStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertCyberarkConjurStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.CyberarkPAMExperimentalStore
+      convertCyberarkPAMExperimentalStoreToPorcelain(CyberarkPAMExperimentalStore plumbing) {
+    com.strongdm.api.CyberarkPAMExperimentalStore porcelain =
+        new com.strongdm.api.CyberarkPAMExperimentalStore();
+    porcelain.setAppURL((plumbing.getAppURL()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static CyberarkPAMExperimentalStore convertCyberarkPAMExperimentalStoreToPlumbing(
+      com.strongdm.api.CyberarkPAMExperimentalStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    CyberarkPAMExperimentalStore.Builder builder = CyberarkPAMExperimentalStore.newBuilder();
+    if (porcelain.getAppURL() != null) {
+      builder.setAppURL((porcelain.getAppURL()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.CyberarkPAMExperimentalStore>
+      convertRepeatedCyberarkPAMExperimentalStoreToPorcelain(
+          Collection<CyberarkPAMExperimentalStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertCyberarkPAMExperimentalStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<CyberarkPAMExperimentalStore>
+      convertRepeatedCyberarkPAMExperimentalStoreToPlumbing(
+          Collection<com.strongdm.api.CyberarkPAMExperimentalStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertCyberarkPAMExperimentalStoreToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
@@ -6536,6 +6770,12 @@ public class Plumbing {
     if (plumbing.hasAws()) {
       return convertAWSToPorcelain(plumbing.getAws());
     }
+    if (plumbing.hasAwsConsole()) {
+      return convertAWSConsoleToPorcelain(plumbing.getAwsConsole());
+    }
+    if (plumbing.hasAwsConsoleStaticKeyPair()) {
+      return convertAWSConsoleStaticKeyPairToPorcelain(plumbing.getAwsConsoleStaticKeyPair());
+    }
     if (plumbing.hasAzure()) {
       return convertAzureToPorcelain(plumbing.getAzure());
     }
@@ -6792,6 +7032,18 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.AWS) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAws(convertAWSToPlumbing((com.strongdm.api.AWS) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AWSConsole) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAwsConsole(convertAWSConsoleToPlumbing((com.strongdm.api.AWSConsole) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AWSConsoleStaticKeyPair) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAwsConsoleStaticKeyPair(
+          convertAWSConsoleStaticKeyPairToPlumbing(
+              (com.strongdm.api.AWSConsoleStaticKeyPair) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.Azure) {
@@ -7818,8 +8070,11 @@ public class Plumbing {
     if (plumbing.hasAzure()) {
       return convertAzureStoreToPorcelain(plumbing.getAzure());
     }
-    if (plumbing.hasConjur()) {
-      return convertConjurStoreToPorcelain(plumbing.getConjur());
+    if (plumbing.hasCyberarkConjur()) {
+      return convertCyberarkConjurStoreToPorcelain(plumbing.getCyberarkConjur());
+    }
+    if (plumbing.hasCyberarkPamExperimental()) {
+      return convertCyberarkPAMExperimentalStoreToPorcelain(plumbing.getCyberarkPamExperimental());
     }
     if (plumbing.hasDelinea()) {
       return convertDelineaStoreToPorcelain(plumbing.getDelinea());
@@ -7853,9 +8108,17 @@ public class Plumbing {
       builder.setAzure(convertAzureStoreToPlumbing((com.strongdm.api.AzureStore) porcelain));
       return builder.build();
     }
-    if (porcelain instanceof com.strongdm.api.ConjurStore) {
+    if (porcelain instanceof com.strongdm.api.CyberarkConjurStore) {
       SecretStore.Builder builder = SecretStore.newBuilder();
-      builder.setConjur(convertConjurStoreToPlumbing((com.strongdm.api.ConjurStore) porcelain));
+      builder.setCyberarkConjur(
+          convertCyberarkConjurStoreToPlumbing((com.strongdm.api.CyberarkConjurStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.CyberarkPAMExperimentalStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setCyberarkPamExperimental(
+          convertCyberarkPAMExperimentalStoreToPlumbing(
+              (com.strongdm.api.CyberarkPAMExperimentalStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.DelineaStore) {
