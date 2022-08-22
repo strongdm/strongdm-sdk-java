@@ -655,7 +655,6 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
-    porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
     porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
@@ -689,7 +688,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
-    builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
