@@ -708,9 +708,7 @@ public class Plumbing {
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
-    if (porcelain.getSessionExpiry() != null) {
-      builder.setSessionExpiry((porcelain.getSessionExpiry()));
-    }
+    builder.setSessionExpiry(porcelain.getSessionExpiry());
     if (porcelain.getSubdomain() != null) {
       builder.setSubdomain((porcelain.getSubdomain()));
     }
@@ -804,9 +802,7 @@ public class Plumbing {
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
-    if (porcelain.getSessionExpiry() != null) {
-      builder.setSessionExpiry((porcelain.getSessionExpiry()));
-    }
+    builder.setSessionExpiry(porcelain.getSessionExpiry());
     if (porcelain.getSubdomain() != null) {
       builder.setSubdomain((porcelain.getSubdomain()));
     }

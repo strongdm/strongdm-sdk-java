@@ -162,13 +162,13 @@ public class AWSConsoleStaticKeyPair implements Resource {
     this.secretStoreId = in;
   }
 
-  private String sessionExpiry;
+  private int sessionExpiry;
   /** */
-  public String getSessionExpiry() {
+  public int getSessionExpiry() {
     return this.sessionExpiry;
   }
   /** */
-  public void setSessionExpiry(String in) {
+  public void setSessionExpiry(int in) {
     this.sessionExpiry = in;
   }
 
