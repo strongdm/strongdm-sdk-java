@@ -82,6 +82,16 @@ public class AWSConsole implements Resource {
     this.name = in;
   }
 
+  private int port;
+  /** */
+  public int getPort() {
+    return this.port;
+  }
+  /** */
+  public void setPort(int in) {
+    this.port = in;
+  }
+
   private int portOverride;
   /** */
   public int getPortOverride() {
