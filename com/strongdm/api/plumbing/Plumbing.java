@@ -655,7 +655,6 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
-    porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
     porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
@@ -689,7 +688,6 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
-    builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
@@ -6929,6 +6927,9 @@ public class Plumbing {
     if (plumbing.hasSnowflake()) {
       return convertSnowflakeToPorcelain(plumbing.getSnowflake());
     }
+    if (plumbing.hasSnowsight()) {
+      return convertSnowsightToPorcelain(plumbing.getSnowsight());
+    }
     if (plumbing.hasSqlServer()) {
       return convertSQLServerToPorcelain(plumbing.getSqlServer());
     }
@@ -7320,6 +7321,11 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.Snowflake) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setSnowflake(convertSnowflakeToPlumbing((com.strongdm.api.Snowflake) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.Snowsight) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setSnowsight(convertSnowsightToPlumbing((com.strongdm.api.Snowsight) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.SQLServer) {
@@ -8518,6 +8524,73 @@ public class Plumbing {
       Collection<com.strongdm.api.Snowflake> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertSnowflakeToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.Snowsight convertSnowsightToPorcelain(Snowsight plumbing) {
+    com.strongdm.api.Snowsight porcelain = new com.strongdm.api.Snowsight();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthcheckUsername((plumbing.getHealthcheckUsername()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSamlMetadata((plumbing.getSamlMetadata()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static Snowsight convertSnowsightToPlumbing(com.strongdm.api.Snowsight porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    Snowsight.Builder builder = Snowsight.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    if (porcelain.getHealthcheckUsername() != null) {
+      builder.setHealthcheckUsername((porcelain.getHealthcheckUsername()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSamlMetadata() != null) {
+      builder.setSamlMetadata((porcelain.getSamlMetadata()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.Snowsight> convertRepeatedSnowsightToPorcelain(
+      Collection<Snowsight> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertSnowsightToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<Snowsight> convertRepeatedSnowsightToPlumbing(
+      Collection<com.strongdm.api.Snowsight> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertSnowsightToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
