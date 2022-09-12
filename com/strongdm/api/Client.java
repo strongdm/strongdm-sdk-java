@@ -289,7 +289,7 @@ public class Client {
       }
     }
 
-    return (status.getCode() == Code.INTERNAL_VALUE);
+    return (status.getCode() == Code.INTERNAL_VALUE || status.getCode() == Code.UNAVAILABLE_VALUE);
   }
 
   protected Map<String, Object> testOptions;
