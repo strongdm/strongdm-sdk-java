@@ -3922,6 +3922,7 @@ public class Plumbing {
     porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
     porcelain.setHealthcheckPath((plumbing.getHealthcheckPath()));
     porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostOverride((plumbing.getHostOverride()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
@@ -3955,6 +3956,9 @@ public class Plumbing {
       builder.setHealthcheckPath((porcelain.getHealthcheckPath()));
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostOverride() != null) {
+      builder.setHostOverride((porcelain.getHostOverride()));
+    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
@@ -3999,6 +4003,7 @@ public class Plumbing {
     porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
     porcelain.setHealthcheckPath((plumbing.getHealthcheckPath()));
     porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostOverride((plumbing.getHostOverride()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
@@ -4032,6 +4037,9 @@ public class Plumbing {
       builder.setHealthcheckPath((porcelain.getHealthcheckPath()));
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostOverride() != null) {
+      builder.setHostOverride((porcelain.getHostOverride()));
+    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }
@@ -4081,6 +4089,7 @@ public class Plumbing {
     porcelain.setHeadersBlacklist((plumbing.getHeadersBlacklist()));
     porcelain.setHealthcheckPath((plumbing.getHealthcheckPath()));
     porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostOverride((plumbing.getHostOverride()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
@@ -4111,6 +4120,9 @@ public class Plumbing {
       builder.setHealthcheckPath((porcelain.getHealthcheckPath()));
     }
     builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostOverride() != null) {
+      builder.setHostOverride((porcelain.getHostOverride()));
+    }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
     }

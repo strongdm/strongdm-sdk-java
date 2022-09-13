@@ -78,6 +78,16 @@ public class HTTPNoAuth implements Resource {
     this.healthy = in;
   }
 
+  private String hostOverride;
+  /** */
+  public String getHostOverride() {
+    return this.hostOverride;
+  }
+  /** */
+  public void setHostOverride(String in) {
+    this.hostOverride = in;
+  }
+
   private String id;
   /** Unique identifier of the Resource. */
   public String getId() {
