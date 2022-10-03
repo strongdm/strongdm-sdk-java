@@ -5214,6 +5214,26 @@ public final class Options {
 
     boolean getReadOnlyOverrideOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * a condition under which this field becomes required
+     * </pre>
+     *
+     * <code>string condition = 1941323;</code>
+     * @return The condition.
+     */
+    java.lang.String getCondition();
+    /**
+     * <pre>
+     * a condition under which this field becomes required
+     * </pre>
+     *
+     * <code>string condition = 1941323;</code>
+     * @return The bytes for condition.
+     */
+    com.google.protobuf.ByteString
+        getConditionBytes();
   }
   /**
    * Protobuf type {@code v1.FieldOptions}
@@ -5230,6 +5250,7 @@ public final class Options {
     private FieldOptions() {
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       terraformDiffSuppressFunc_ = "";
+      condition_ = "";
     }
 
     @java.lang.Override
@@ -5347,6 +5368,12 @@ public final class Options {
             case 15530576: {
 
               terraformComputed_ = input.readBool();
+              break;
+            }
+            case 15530586: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              condition_ = s;
               break;
             }
             default: {
@@ -5746,6 +5773,52 @@ public final class Options {
       return map.get(key);
     }
 
+    public static final int CONDITION_FIELD_NUMBER = 1941323;
+    private volatile java.lang.Object condition_;
+    /**
+     * <pre>
+     * a condition under which this field becomes required
+     * </pre>
+     *
+     * <code>string condition = 1941323;</code>
+     * @return The condition.
+     */
+    @java.lang.Override
+    public java.lang.String getCondition() {
+      java.lang.Object ref = condition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        condition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * a condition under which this field becomes required
+     * </pre>
+     *
+     * <code>string condition = 1941323;</code>
+     * @return The bytes for condition.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConditionBytes() {
+      java.lang.Object ref = condition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        condition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5801,6 +5874,9 @@ public final class Options {
       }
       if (terraformComputed_ != false) {
         output.writeBool(1941322, terraformComputed_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(condition_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1941323, condition_);
       }
       unknownFields.writeTo(output);
     }
@@ -5872,6 +5948,9 @@ public final class Options {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1941322, terraformComputed_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(condition_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941323, condition_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5916,6 +5995,8 @@ public final class Options {
       }
       if (!internalGetReadOnlyOverride().equals(
           other.internalGetReadOnlyOverride())) return false;
+      if (!getCondition()
+          .equals(other.getCondition())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5968,6 +6049,8 @@ public final class Options {
         hash = (37 * hash) + READ_ONLY_OVERRIDE_FIELD_NUMBER;
         hash = (53 * hash) + internalGetReadOnlyOverride().hashCode();
       }
+      hash = (37 * hash) + CONDITION_FIELD_NUMBER;
+      hash = (53 * hash) + getCondition().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6152,6 +6235,8 @@ public final class Options {
           customBuilder_ = null;
         }
         internalGetMutableReadOnlyOverride().clear();
+        condition_ = "";
+
         return this;
       }
 
@@ -6201,6 +6286,7 @@ public final class Options {
         }
         result.readOnlyOverride_ = internalGetReadOnlyOverride();
         result.readOnlyOverride_.makeImmutable();
+        result.condition_ = condition_;
         onBuilt();
         return result;
       }
@@ -6295,6 +6381,10 @@ public final class Options {
         }
         internalGetMutableReadOnlyOverride().mergeFrom(
             other.internalGetReadOnlyOverride());
+        if (!other.getCondition().isEmpty()) {
+          condition_ = other.condition_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -7204,6 +7294,102 @@ public final class Options {
           java.util.Map<java.lang.String, java.lang.Boolean> values) {
         internalGetMutableReadOnlyOverride().getMutableMap()
             .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object condition_ = "";
+      /**
+       * <pre>
+       * a condition under which this field becomes required
+       * </pre>
+       *
+       * <code>string condition = 1941323;</code>
+       * @return The condition.
+       */
+      public java.lang.String getCondition() {
+        java.lang.Object ref = condition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          condition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a condition under which this field becomes required
+       * </pre>
+       *
+       * <code>string condition = 1941323;</code>
+       * @return The bytes for condition.
+       */
+      public com.google.protobuf.ByteString
+          getConditionBytes() {
+        java.lang.Object ref = condition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          condition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a condition under which this field becomes required
+       * </pre>
+       *
+       * <code>string condition = 1941323;</code>
+       * @param value The condition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCondition(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        condition_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a condition under which this field becomes required
+       * </pre>
+       *
+       * <code>string condition = 1941323;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCondition() {
+        
+        condition_ = getDefaultInstance().getCondition();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a condition under which this field becomes required
+       * </pre>
+       *
+       * <code>string condition = 1941323;</code>
+       * @param value The bytes for condition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConditionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        condition_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -10563,7 +10749,7 @@ java.lang.String defaultValue);
       "\276v \001(\0132\021.v1.TerraformDocs\022#\n\006custom\030\271\276v " +
       "\001(\0132\021.v1.CustomOptions:\027\372\370\263\007\022\322\363\263\007\r!json_" +
       "gateway\"@\n\014OneofOptions\022\027\n\rcommon_fields" +
-      "\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\343\003\n\014Fi" +
+      "\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\370\003\n\014Fi" +
       "eldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010itera" +
       "ble\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite" +
       "_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris" +
@@ -10573,42 +10759,43 @@ java.lang.String defaultValue);
       "uppress_func\030\307\276v \001(\t\022\034\n\022terraform_comput" +
       "ed\030\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v1.Custom" +
       "Options\022D\n\022read_only_override\030\300\276v \003(\0132&." +
-      "v1.FieldOptions.ReadOnlyOverrideEntry\0327\n" +
-      "\025ReadOnlyOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"" +
-      "\217\005\n\rCustomOptions\022\023\n\tconverter\030\275\276v \001(\t\022O" +
-      "\n\027porcelain_type_override\030\276\276v \003(\0132,.v1.C" +
-      "ustomOptions.PorcelainTypeOverrideEntry\022" +
-      "O\n\027porcelain_name_override\030\310\276v \003(\0132,.v1." +
-      "CustomOptions.PorcelainNameOverrideEntry" +
-      "\022B\n\020comment_override\030\323\276v \003(\0132&.v1.Custom" +
-      "Options.CommentOverrideEntry\022H\n\023deprecat" +
-      "ed_override\030\300\276v \003(\0132).v1.CustomOptions.D" +
-      "eprecatedOverrideEntry\022\035\n\023terraform_elem" +
-      "_type\030\277\276v \001(\t\022\022\n\010unstable\030\301\276v \001(\010\032<\n\032Por" +
-      "celainTypeOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\032<\n\032PorcelainNameOverride" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n" +
-      "\024CommentOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\0329\n\027DeprecatedOverrideEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322" +
-      "\363\263\007\r!json_gateway\"m\n\rTerraformDocs\022\037\n\025re" +
-      "source_example_path\030\264\276v \001(\t\022\"\n\030data_sour" +
-      "ce_example_path\030\265\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json" +
-      "_gateway:E\n\014file_options\022\034.google.protob" +
-      "uf.FileOptions\030\250\302v \001(\0132\017.v1.FileOptions:" +
-      "N\n\017service_options\022\037.google.protobuf.Ser" +
-      "viceOptions\030\231\277v \001(\0132\022.v1.ServiceOptions:" +
-      "K\n\016method_options\022\036.google.protobuf.Meth" +
-      "odOptions\030\220\277v \001(\0132\021.v1.MethodOptions:N\n\017" +
-      "message_options\022\037.google.protobuf.Messag" +
-      "eOptions\030\217\277v \001(\0132\022.v1.MessageOptions:H\n\r" +
-      "oneof_options\022\035.google.protobuf.OneofOpt" +
-      "ions\030\205\277v \001(\0132\020.v1.OneofOptions:H\n\rfield_" +
-      "options\022\035.google.protobuf.FieldOptions\030\216" +
-      "\277v \001(\0132\020.v1.FieldOptionsBR\n\031com.strongdm" +
-      ".api.plumbingZ5github.com/strongdm/stron" +
-      "gdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "v1.FieldOptions.ReadOnlyOverrideEntry\022\023\n" +
+      "\tcondition\030\313\276v \001(\t\0327\n\025ReadOnlyOverrideEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263" +
+      "\007\022\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOptions\022\023" +
+      "\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_type_ov" +
+      "erride\030\276\276v \003(\0132,.v1.CustomOptions.Porcel" +
+      "ainTypeOverrideEntry\022O\n\027porcelain_name_o" +
+      "verride\030\310\276v \003(\0132,.v1.CustomOptions.Porce" +
+      "lainNameOverrideEntry\022B\n\020comment_overrid" +
+      "e\030\323\276v \003(\0132&.v1.CustomOptions.CommentOver" +
+      "rideEntry\022H\n\023deprecated_override\030\300\276v \003(\013" +
+      "2).v1.CustomOptions.DeprecatedOverrideEn" +
+      "try\022\035\n\023terraform_elem_type\030\277\276v \001(\t\022\022\n\010un" +
+      "stable\030\301\276v \001(\010\032<\n\032PorcelainTypeOverrideE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032" +
+      "PorcelainNameOverrideEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverrideEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027De" +
+      "precatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m" +
+      "\n\rTerraformDocs\022\037\n\025resource_example_path" +
+      "\030\264\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v" +
+      " \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file_op" +
+      "tions\022\034.google.protobuf.FileOptions\030\250\302v " +
+      "\001(\0132\017.v1.FileOptions:N\n\017service_options\022" +
+      "\037.google.protobuf.ServiceOptions\030\231\277v \001(\013" +
+      "2\022.v1.ServiceOptions:K\n\016method_options\022\036" +
+      ".google.protobuf.MethodOptions\030\220\277v \001(\0132\021" +
+      ".v1.MethodOptions:N\n\017message_options\022\037.g" +
+      "oogle.protobuf.MessageOptions\030\217\277v \001(\0132\022." +
+      "v1.MessageOptions:H\n\roneof_options\022\035.goo" +
+      "gle.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.O" +
+      "neofOptions:H\n\rfield_options\022\035.google.pr" +
+      "otobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOp" +
+      "tionsBR\n\031com.strongdm.api.plumbingZ5gith" +
+      "ub.com/strongdm/strongdm-sdk-go/v3/inter" +
+      "nal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10650,7 +10837,7 @@ java.lang.String defaultValue);
     internal_static_v1_FieldOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_FieldOptions_descriptor,
-        new java.lang.String[] { "Porcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformComputed", "Custom", "ReadOnlyOverride", });
+        new java.lang.String[] { "Porcelain", "Iterable", "Required", "WriteOnly", "ReadOnly", "IsCredential", "Targets", "TerraformForceNew", "TerraformSensitive", "TerraformDiffSuppressFunc", "TerraformComputed", "Custom", "ReadOnlyOverride", "Condition", });
     internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_descriptor =
       internal_static_v1_FieldOptions_descriptor.getNestedTypes().get(0);
     internal_static_v1_FieldOptions_ReadOnlyOverrideEntry_fieldAccessorTable = new
