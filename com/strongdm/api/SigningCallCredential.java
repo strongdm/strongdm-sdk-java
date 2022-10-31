@@ -23,7 +23,7 @@ class SigningCallCredential extends CallCredentials {
   private final String apiAccessKey;
   private final String signature;
   private static final String API_VERSION = "2021-08-23";
-  private static final String USER_AGENT = "strongdm-sdk-java/3.3.1";
+  private static final String USER_AGENT = "strongdm-sdk-java/3.4.0";
 
   protected SigningCallCredential(String apiAccessKey, String signature) {
     this.apiAccessKey = apiAccessKey;

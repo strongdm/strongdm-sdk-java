@@ -7,7 +7,7 @@ plugins {
 }
 
 def grpcVersion = '1.42.2'
-def protobufVersion = '3.19.3'
+def protobufVersion = '3.19.6'
 def protocVersion = protobufVersion
 def jsonVersion = '20190722'
 def releaseVersion = System.getenv('JAVA_SDK_VERSION')
