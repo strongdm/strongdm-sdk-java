@@ -12106,7 +12106,7 @@ public final class AccountsPlumbing {
 
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -12115,7 +12115,7 @@ public final class AccountsPlumbing {
     java.lang.String getPermissionLevel();
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -12123,46 +12123,6 @@ public final class AccountsPlumbing {
      */
     com.google.protobuf.ByteString
         getPermissionLevelBytes();
-
-    /**
-     * <pre>
-     * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-     * </pre>
-     *
-     * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-     * @return The managedBy.
-     */
-    java.lang.String getManagedBy();
-    /**
-     * <pre>
-     * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-     * </pre>
-     *
-     * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for managedBy.
-     */
-    com.google.protobuf.ByteString
-        getManagedByBytes();
-
-    /**
-     * <pre>
-     * External ID is an alternative unique ID this user is represented by within an external service.
-     * </pre>
-     *
-     * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-     * @return The externalId.
-     */
-    java.lang.String getExternalId();
-    /**
-     * <pre>
-     * External ID is an alternative unique ID this user is represented by within an external service.
-     * </pre>
-     *
-     * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for externalId.
-     */
-    com.google.protobuf.ByteString
-        getExternalIdBytes();
   }
   /**
    * <pre>
@@ -12187,8 +12147,6 @@ public final class AccountsPlumbing {
       firstName_ = "";
       lastName_ = "";
       permissionLevel_ = "";
-      managedBy_ = "";
-      externalId_ = "";
     }
 
     @java.lang.Override
@@ -12267,18 +12225,6 @@ public final class AccountsPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               permissionLevel_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              managedBy_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalId_ = s;
               break;
             }
             default: {
@@ -12556,7 +12502,7 @@ public final class AccountsPlumbing {
     private volatile java.lang.Object permissionLevel_;
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -12577,7 +12523,7 @@ public final class AccountsPlumbing {
     }
     /**
      * <pre>
-     * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+     * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
      * </pre>
      *
      * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -12592,98 +12538,6 @@ public final class AccountsPlumbing {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         permissionLevel_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MANAGED_BY_FIELD_NUMBER = 8;
-    private volatile java.lang.Object managedBy_;
-    /**
-     * <pre>
-     * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-     * </pre>
-     *
-     * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-     * @return The managedBy.
-     */
-    @java.lang.Override
-    public java.lang.String getManagedBy() {
-      java.lang.Object ref = managedBy_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        managedBy_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-     * </pre>
-     *
-     * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for managedBy.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getManagedByBytes() {
-      java.lang.Object ref = managedBy_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        managedBy_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int EXTERNAL_ID_FIELD_NUMBER = 9;
-    private volatile java.lang.Object externalId_;
-    /**
-     * <pre>
-     * External ID is an alternative unique ID this user is represented by within an external service.
-     * </pre>
-     *
-     * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-     * @return The externalId.
-     */
-    @java.lang.Override
-    public java.lang.String getExternalId() {
-      java.lang.Object ref = externalId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        externalId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * External ID is an alternative unique ID this user is represented by within an external service.
-     * </pre>
-     *
-     * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for externalId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getExternalIdBytes() {
-      java.lang.Object ref = externalId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        externalId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -12725,12 +12579,6 @@ public final class AccountsPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permissionLevel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, permissionLevel_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, managedBy_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, externalId_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -12762,12 +12610,6 @@ public final class AccountsPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permissionLevel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, permissionLevel_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, managedBy_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, externalId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12801,10 +12643,6 @@ public final class AccountsPlumbing {
       }
       if (!getPermissionLevel()
           .equals(other.getPermissionLevel())) return false;
-      if (!getManagedBy()
-          .equals(other.getManagedBy())) return false;
-      if (!getExternalId()
-          .equals(other.getExternalId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12833,10 +12671,6 @@ public final class AccountsPlumbing {
       }
       hash = (37 * hash) + PERMISSION_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + getPermissionLevel().hashCode();
-      hash = (37 * hash) + MANAGED_BY_FIELD_NUMBER;
-      hash = (53 * hash) + getManagedBy().hashCode();
-      hash = (37 * hash) + EXTERNAL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getExternalId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12993,10 +12827,6 @@ public final class AccountsPlumbing {
         }
         permissionLevel_ = "";
 
-        managedBy_ = "";
-
-        externalId_ = "";
-
         return this;
       }
 
@@ -13034,8 +12864,6 @@ public final class AccountsPlumbing {
           result.tags_ = tagsBuilder_.build();
         }
         result.permissionLevel_ = permissionLevel_;
-        result.managedBy_ = managedBy_;
-        result.externalId_ = externalId_;
         onBuilt();
         return result;
       }
@@ -13108,14 +12936,6 @@ public final class AccountsPlumbing {
         }
         if (!other.getPermissionLevel().isEmpty()) {
           permissionLevel_ = other.permissionLevel_;
-          onChanged();
-        }
-        if (!other.getManagedBy().isEmpty()) {
-          managedBy_ = other.managedBy_;
-          onChanged();
-        }
-        if (!other.getExternalId().isEmpty()) {
-          externalId_ = other.externalId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -13732,7 +13552,7 @@ public final class AccountsPlumbing {
       private java.lang.Object permissionLevel_ = "";
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -13752,7 +13572,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -13773,7 +13593,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -13792,7 +13612,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -13806,7 +13626,7 @@ public final class AccountsPlumbing {
       }
       /**
        * <pre>
-       * PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user.
+       * PRIVATE: PermissionLevel exposes the user's strongRole for AdminUI purposes.
        * </pre>
        *
        * <code>string permission_level = 7 [(.v1.field_options) = { ... }</code>
@@ -13821,198 +13641,6 @@ public final class AccountsPlumbing {
   checkByteStringIsUtf8(value);
         
         permissionLevel_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object managedBy_ = "";
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-       * @return The managedBy.
-       */
-      public java.lang.String getManagedBy() {
-        java.lang.Object ref = managedBy_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          managedBy_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for managedBy.
-       */
-      public com.google.protobuf.ByteString
-          getManagedByBytes() {
-        java.lang.Object ref = managedBy_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          managedBy_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-       * @param value The managedBy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setManagedBy(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        managedBy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearManagedBy() {
-        
-        managedBy_ = getDefaultInstance().getManagedBy();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 8 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for managedBy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setManagedByBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        managedBy_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object externalId_ = "";
-      /**
-       * <pre>
-       * External ID is an alternative unique ID this user is represented by within an external service.
-       * </pre>
-       *
-       * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-       * @return The externalId.
-       */
-      public java.lang.String getExternalId() {
-        java.lang.Object ref = externalId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          externalId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * External ID is an alternative unique ID this user is represented by within an external service.
-       * </pre>
-       *
-       * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for externalId.
-       */
-      public com.google.protobuf.ByteString
-          getExternalIdBytes() {
-        java.lang.Object ref = externalId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          externalId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * External ID is an alternative unique ID this user is represented by within an external service.
-       * </pre>
-       *
-       * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-       * @param value The externalId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExternalId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        externalId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * External ID is an alternative unique ID this user is represented by within an external service.
-       * </pre>
-       *
-       * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExternalId() {
-        
-        externalId_ = getDefaultInstance().getExternalId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * External ID is an alternative unique ID this user is represented by within an external service.
-       * </pre>
-       *
-       * <code>string external_id = 9 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for externalId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExternalIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        externalId_ = value;
         onChanged();
         return this;
       }
@@ -15344,36 +14972,34 @@ public final class AccountsPlumbing {
       "erviceH\000:a\372\370\263\007\005\250\363\263\007\001\372\370\263\007R\302\363\263\007M\242\363\263\007 tf_ex" +
       "amples/account_resource.txt\252\363\263\007#tf_examp" +
       "les/account_data_source.txtB,\n\007account\022!" +
-      "\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263\007\004tags\"\307\002\n\004Us" +
+      "\252\370\263\007\016\252\370\263\007\tsuspended\252\370\263\007\t\252\370\263\007\004tags\"\220\002\n\004Us" +
       "er\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\005email\030\002 \001(" +
       "\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022#\n\nfirst_name\030\003 \001(\tB\017" +
       "\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\tlast_name\030\004 \001(\tB\017\362\370\263\007" +
       "\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\005 \001(\010B\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022)" +
-      "\n\020permission_level\030\007 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007" +
-      "\001\022#\n\nmanaged_by\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022\037" +
-      "\n\013external_id\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363" +
-      "\263\007\001\"\217\001\n\007Service\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspen" +
-      "ded\030\003 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1" +
-      ".TagsB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\241\004\n\010Accoun" +
-      "ts\022c\n\006Create\022\030.v1.AccountCreateRequest\032\031" +
-      ".v1.AccountCreateResponse\"$\202\371\263\007\t\242\363\263\007\004pos" +
-      "t\202\371\263\007\021\252\363\263\007\014/v1/accounts\022^\n\003Get\022\025.v1.Acco" +
-      "untGetRequest\032\026.v1.AccountGetResponse\"(\202" +
-      "\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022" +
-      "g\n\006Update\022\030.v1.AccountUpdateRequest\032\031.v1" +
-      ".AccountUpdateResponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263" +
-      "\007\026\252\363\263\007\021/v1/accounts/{id}\022j\n\006Delete\022\030.v1." +
-      "AccountDeleteRequest\032\031.v1.AccountDeleteR" +
-      "esponse\"+\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/a" +
-      "ccounts/{id}\022\\\n\004List\022\026.v1.AccountListReq" +
-      "uest\032\027.v1.AccountListResponse\"#\202\371\263\007\010\242\363\263\007" +
-      "\003get\202\371\263\007\021\252\363\263\007\014/v1/accounts\032\035\312\371\263\007\014\302\371\263\007\007Ac" +
-      "count\312\371\263\007\007\322\371\263\007\002a-Bd\n\031com.strongdm.api.pl" +
-      "umbingB\020AccountsPlumbingZ5github.com/str" +
-      "ongdm/strongdm-sdk-go/v3/internal/v1;v1b" +
-      "\006proto3"
+      "\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\0228" +
+      "\n\020permission_level\030\007 \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007" +
+      "\001\262\364\263\007\ngo_private:\n\372\370\263\007\005\250\363\263\007\001\"\217\001\n\007Service" +
+      "\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017" +
+      "\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\035\n\tsuspended\030\003 \001(\010B\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:\n\372\370\263\007\005\250\363\263\007\0012\241\004\n\010Accounts\022c\n\006Create\022\030." +
+      "v1.AccountCreateRequest\032\031.v1.AccountCrea" +
+      "teResponse\"$\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\021\252\363\263\007\014/v1/" +
+      "accounts\022^\n\003Get\022\025.v1.AccountGetRequest\032\026" +
+      ".v1.AccountGetResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\026\252\363\263\007\021/v1/accounts/{id}\022g\n\006Update\022\030.v1." +
+      "AccountUpdateRequest\032\031.v1.AccountUpdateR" +
+      "esponse\"(\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\026\252\363\263\007\021/v1/acco" +
+      "unts/{id}\022j\n\006Delete\022\030.v1.AccountDeleteRe" +
+      "quest\032\031.v1.AccountDeleteResponse\"+\202\371\263\007\013\242" +
+      "\363\263\007\006delete\202\371\263\007\026\252\363\263\007\021/v1/accounts/{id}\022\\\n" +
+      "\004List\022\026.v1.AccountListRequest\032\027.v1.Accou" +
+      "ntListResponse\"#\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\021\252\363\263\007\014/" +
+      "v1/accounts\032\035\312\371\263\007\014\302\371\263\007\007Account\312\371\263\007\007\322\371\263\007\002" +
+      "a-Bd\n\031com.strongdm.api.plumbingB\020Account" +
+      "sPlumbingZ5github.com/strongdm/strongdm-" +
+      "sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15453,7 +15079,7 @@ public final class AccountsPlumbing {
     internal_static_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_User_descriptor,
-        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", "ManagedBy", "ExternalId", });
+        new java.lang.String[] { "Id", "Email", "FirstName", "LastName", "Suspended", "Tags", "PermissionLevel", });
     internal_static_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Service_fieldAccessorTable = new

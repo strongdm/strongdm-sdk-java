@@ -35,16 +35,6 @@ public class Gateway implements Node {
     this.bindAddress = in;
   }
 
-  private String device;
-  /** Device is a read only device name uploaded by the gateway process when it comes online. */
-  public String getDevice() {
-    return this.device;
-  }
-  /** Device is a read only device name uploaded by the gateway process when it comes online. */
-  public void setDevice(String in) {
-    this.device = in;
-  }
-
   private String gatewayFilter;
   /** GatewayFilter can be used to restrict the peering between relays and gateways. */
   public String getGatewayFilter() {
@@ -73,20 +63,6 @@ public class Gateway implements Node {
   /** The public hostname/port tuple at which the gateway will be accessible to clients. */
   public void setListenAddress(String in) {
     this.listenAddress = in;
-  }
-
-  private String location;
-  /**
-   * Location is a read only network location uploaded by the gateway process when it comes online.
-   */
-  public String getLocation() {
-    return this.location;
-  }
-  /**
-   * Location is a read only network location uploaded by the gateway process when it comes online.
-   */
-  public void setLocation(String in) {
-    this.location = in;
   }
 
   private String name;
@@ -140,19 +116,5 @@ public class Gateway implements Node {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private String version;
-  /**
-   * Version is a read only sdm binary version uploaded by the gateway process when it comes online.
-   */
-  public String getVersion() {
-    return this.version;
-  }
-  /**
-   * Version is a read only sdm binary version uploaded by the gateway process when it comes online.
-   */
-  public void setVersion(String in) {
-    this.version = in;
   }
 }

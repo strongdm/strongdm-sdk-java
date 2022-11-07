@@ -6,8 +6,8 @@ plugins {
     id 'signing'
 }
 
-def grpcVersion = '1.43.2'
-def protobufVersion = '3.21.7'
+def grpcVersion = '1.42.2'
+def protobufVersion = '3.19.6'
 def protocVersion = protobufVersion
 def jsonVersion = '20190722'
 def releaseVersion = System.getenv('JAVA_SDK_VERSION')
@@ -42,10 +42,6 @@ dependencies {
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-stub:${grpcVersion}"
     implementation "io.grpc:grpc-netty:${grpcVersion}"
-    
-    // locking this version down due to a cve
-    implementation "io.netty:netty-codec-http2:4.1.68.Final"
-    
     implementation "org.json:json:${jsonVersion}"
     compileOnly "javax.annotation:javax.annotation-api:1.2"
 }

@@ -146,14 +146,4 @@ public class ElasticacheRedis implements Resource {
   public void setTlsRequired(boolean in) {
     this.tlsRequired = in;
   }
-
-  private String username;
-  /** */
-  public String getUsername() {
-    return this.username;
-  }
-  /** */
-  public void setUsername(String in) {
-    this.username = in;
-  }
 }
