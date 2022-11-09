@@ -2133,79 +2133,6 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.AzureMysql convertAzureMysqlToPorcelain(AzureMysql plumbing) {
-    com.strongdm.api.AzureMysql porcelain = new com.strongdm.api.AzureMysql();
-    porcelain.setBindInterface((plumbing.getBindInterface()));
-    porcelain.setDatabase((plumbing.getDatabase()));
-    porcelain.setEgressFilter((plumbing.getEgressFilter()));
-    porcelain.setHealthy((plumbing.getHealthy()));
-    porcelain.setHostname((plumbing.getHostname()));
-    porcelain.setId((plumbing.getId()));
-    porcelain.setName((plumbing.getName()));
-    porcelain.setPassword((plumbing.getPassword()));
-    porcelain.setPort((plumbing.getPort()));
-    porcelain.setPortOverride((plumbing.getPortOverride()));
-    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
-    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    porcelain.setUsername((plumbing.getUsername()));
-    return porcelain;
-  }
-
-  public static AzureMysql convertAzureMysqlToPlumbing(com.strongdm.api.AzureMysql porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    AzureMysql.Builder builder = AzureMysql.newBuilder();
-    if (porcelain.getBindInterface() != null) {
-      builder.setBindInterface((porcelain.getBindInterface()));
-    }
-    if (porcelain.getDatabase() != null) {
-      builder.setDatabase((porcelain.getDatabase()));
-    }
-    if (porcelain.getEgressFilter() != null) {
-      builder.setEgressFilter((porcelain.getEgressFilter()));
-    }
-    builder.setHealthy(porcelain.getHealthy());
-    if (porcelain.getHostname() != null) {
-      builder.setHostname((porcelain.getHostname()));
-    }
-    if (porcelain.getId() != null) {
-      builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getName() != null) {
-      builder.setName((porcelain.getName()));
-    }
-    if (porcelain.getPassword() != null) {
-      builder.setPassword((porcelain.getPassword()));
-    }
-    builder.setPort(porcelain.getPort());
-    builder.setPortOverride(porcelain.getPortOverride());
-    if (porcelain.getSecretStoreId() != null) {
-      builder.setSecretStoreId((porcelain.getSecretStoreId()));
-    }
-    if (porcelain.getTags() != null) {
-      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    if (porcelain.getUsername() != null) {
-      builder.setUsername((porcelain.getUsername()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.AzureMysql> convertRepeatedAzureMysqlToPorcelain(
-      Collection<AzureMysql> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertAzureMysqlToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<AzureMysql> convertRepeatedAzureMysqlToPlumbing(
-      Collection<com.strongdm.api.AzureMysql> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertAzureMysqlToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
   public static com.strongdm.api.AzurePostgres convertAzurePostgresToPorcelain(
       AzurePostgres plumbing) {
     com.strongdm.api.AzurePostgres porcelain = new com.strongdm.api.AzurePostgres();
@@ -2904,51 +2831,6 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
-  public static com.strongdm.api.CyberarkPAMStore convertCyberarkPAMStoreToPorcelain(
-      CyberarkPAMStore plumbing) {
-    com.strongdm.api.CyberarkPAMStore porcelain = new com.strongdm.api.CyberarkPAMStore();
-    porcelain.setAppURL((plumbing.getAppURL()));
-    porcelain.setId((plumbing.getId()));
-    porcelain.setName((plumbing.getName()));
-    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    return porcelain;
-  }
-
-  public static CyberarkPAMStore convertCyberarkPAMStoreToPlumbing(
-      com.strongdm.api.CyberarkPAMStore porcelain) {
-    if (porcelain == null) {
-      return null;
-    }
-    CyberarkPAMStore.Builder builder = CyberarkPAMStore.newBuilder();
-    if (porcelain.getAppURL() != null) {
-      builder.setAppURL((porcelain.getAppURL()));
-    }
-    if (porcelain.getId() != null) {
-      builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getName() != null) {
-      builder.setName((porcelain.getName()));
-    }
-    if (porcelain.getTags() != null) {
-      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    return builder.build();
-  }
-
-  public static List<com.strongdm.api.CyberarkPAMStore> convertRepeatedCyberarkPAMStoreToPorcelain(
-      Collection<CyberarkPAMStore> plumbings) {
-    return plumbings.stream()
-        .map(plumbing -> convertCyberarkPAMStoreToPorcelain(plumbing))
-        .collect(Collectors.toList());
-  }
-
-  public static List<CyberarkPAMStore> convertRepeatedCyberarkPAMStoreToPlumbing(
-      Collection<com.strongdm.api.CyberarkPAMStore> porcelains) {
-    return porcelains.stream()
-        .map(porcelain -> convertCyberarkPAMStoreToPlumbing(porcelain))
-        .collect(Collectors.toList());
-  }
-
   public static com.strongdm.api.DB2I convertDB2IToPorcelain(DB2I plumbing) {
     com.strongdm.api.DB2I porcelain = new com.strongdm.api.DB2I();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -3561,7 +3443,6 @@ public class Plumbing {
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     porcelain.setTlsRequired((plumbing.getTlsRequired()));
-    porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
 
@@ -3599,9 +3480,6 @@ public class Plumbing {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
     builder.setTlsRequired(porcelain.getTlsRequired());
-    if (porcelain.getUsername() != null) {
-      builder.setUsername((porcelain.getUsername()));
-    }
     return builder.build();
   }
 
@@ -3726,15 +3604,12 @@ public class Plumbing {
   public static com.strongdm.api.Gateway convertGatewayToPorcelain(Gateway plumbing) {
     com.strongdm.api.Gateway porcelain = new com.strongdm.api.Gateway();
     porcelain.setBindAddress((plumbing.getBindAddress()));
-    porcelain.setDevice((plumbing.getDevice()));
     porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     porcelain.setId((plumbing.getId()));
     porcelain.setListenAddress((plumbing.getListenAddress()));
-    porcelain.setLocation((plumbing.getLocation()));
     porcelain.setName((plumbing.getName()));
     porcelain.setState((plumbing.getState()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    porcelain.setVersion((plumbing.getVersion()));
     return porcelain;
   }
 
@@ -3746,9 +3621,6 @@ public class Plumbing {
     if (porcelain.getBindAddress() != null) {
       builder.setBindAddress((porcelain.getBindAddress()));
     }
-    if (porcelain.getDevice() != null) {
-      builder.setDevice((porcelain.getDevice()));
-    }
     if (porcelain.getGatewayFilter() != null) {
       builder.setGatewayFilter((porcelain.getGatewayFilter()));
     }
@@ -3758,9 +3630,6 @@ public class Plumbing {
     if (porcelain.getListenAddress() != null) {
       builder.setListenAddress((porcelain.getListenAddress()));
     }
-    if (porcelain.getLocation() != null) {
-      builder.setLocation((porcelain.getLocation()));
-    }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
@@ -3769,9 +3638,6 @@ public class Plumbing {
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    if (porcelain.getVersion() != null) {
-      builder.setVersion((porcelain.getVersion()));
     }
     return builder.build();
   }
@@ -6389,8 +6255,6 @@ public class Plumbing {
     porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    porcelain.setTlsRequired((plumbing.getTlsRequired()));
-    porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
 
@@ -6425,10 +6289,6 @@ public class Plumbing {
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    builder.setTlsRequired(porcelain.getTlsRequired());
-    if (porcelain.getUsername() != null) {
-      builder.setUsername((porcelain.getUsername()));
     }
     return builder.build();
   }
@@ -6524,14 +6384,11 @@ public class Plumbing {
 
   public static com.strongdm.api.Relay convertRelayToPorcelain(Relay plumbing) {
     com.strongdm.api.Relay porcelain = new com.strongdm.api.Relay();
-    porcelain.setDevice((plumbing.getDevice()));
     porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     porcelain.setId((plumbing.getId()));
-    porcelain.setLocation((plumbing.getLocation()));
     porcelain.setName((plumbing.getName()));
     porcelain.setState((plumbing.getState()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
-    porcelain.setVersion((plumbing.getVersion()));
     return porcelain;
   }
 
@@ -6540,17 +6397,11 @@ public class Plumbing {
       return null;
     }
     Relay.Builder builder = Relay.newBuilder();
-    if (porcelain.getDevice() != null) {
-      builder.setDevice((porcelain.getDevice()));
-    }
     if (porcelain.getGatewayFilter() != null) {
       builder.setGatewayFilter((porcelain.getGatewayFilter()));
     }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getLocation() != null) {
-      builder.setLocation((porcelain.getLocation()));
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
@@ -6560,9 +6411,6 @@ public class Plumbing {
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
-    }
-    if (porcelain.getVersion() != null) {
-      builder.setVersion((porcelain.getVersion()));
     }
     return builder.build();
   }
@@ -6942,9 +6790,6 @@ public class Plumbing {
     if (plumbing.hasAzureCertificate()) {
       return convertAzureCertificateToPorcelain(plumbing.getAzureCertificate());
     }
-    if (plumbing.hasAzureMysql()) {
-      return convertAzureMysqlToPorcelain(plumbing.getAzureMysql());
-    }
     if (plumbing.hasAzurePostgres()) {
       return convertAzurePostgresToPorcelain(plumbing.getAzurePostgres());
     }
@@ -7221,11 +7066,6 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAzureCertificate(
           convertAzureCertificateToPlumbing((com.strongdm.api.AzureCertificate) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.AzureMysql) {
-      Resource.Builder builder = Resource.newBuilder();
-      builder.setAzureMysql(convertAzureMysqlToPlumbing((com.strongdm.api.AzureMysql) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.AzurePostgres) {
@@ -7723,7 +7563,6 @@ public class Plumbing {
     com.strongdm.api.Role porcelain = new com.strongdm.api.Role();
     porcelain.setAccessRules(Plumbing.convertAccessRulesToPorcelain(plumbing.getAccessRules()));
     porcelain.setId((plumbing.getId()));
-    porcelain.setManagedBy((plumbing.getManagedBy()));
     porcelain.setName((plumbing.getName()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -7739,9 +7578,6 @@ public class Plumbing {
     }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
-    }
-    if (porcelain.getManagedBy() != null) {
-      builder.setManagedBy((porcelain.getManagedBy()));
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
@@ -8253,9 +8089,6 @@ public class Plumbing {
     if (plumbing.hasCyberarkConjur()) {
       return convertCyberarkConjurStoreToPorcelain(plumbing.getCyberarkConjur());
     }
-    if (plumbing.hasCyberarkPam()) {
-      return convertCyberarkPAMStoreToPorcelain(plumbing.getCyberarkPam());
-    }
     if (plumbing.hasCyberarkPamExperimental()) {
       return convertCyberarkPAMExperimentalStoreToPorcelain(plumbing.getCyberarkPamExperimental());
     }
@@ -8295,12 +8128,6 @@ public class Plumbing {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setCyberarkConjur(
           convertCyberarkConjurStoreToPlumbing((com.strongdm.api.CyberarkConjurStore) porcelain));
-      return builder.build();
-    }
-    if (porcelain instanceof com.strongdm.api.CyberarkPAMStore) {
-      SecretStore.Builder builder = SecretStore.newBuilder();
-      builder.setCyberarkPam(
-          convertCyberarkPAMStoreToPlumbing((com.strongdm.api.CyberarkPAMStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.CyberarkPAMExperimentalStore) {
@@ -9055,12 +8882,9 @@ public class Plumbing {
   public static com.strongdm.api.User convertUserToPorcelain(User plumbing) {
     com.strongdm.api.User porcelain = new com.strongdm.api.User();
     porcelain.setEmail((plumbing.getEmail()));
-    porcelain.setExternalId((plumbing.getExternalId()));
     porcelain.setFirstName((plumbing.getFirstName()));
     porcelain.setId((plumbing.getId()));
     porcelain.setLastName((plumbing.getLastName()));
-    porcelain.setManagedBy((plumbing.getManagedBy()));
-    porcelain.setPermissionLevel((plumbing.getPermissionLevel()));
     porcelain.setSuspended((plumbing.getSuspended()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -9074,9 +8898,6 @@ public class Plumbing {
     if (porcelain.getEmail() != null) {
       builder.setEmail((porcelain.getEmail()));
     }
-    if (porcelain.getExternalId() != null) {
-      builder.setExternalId((porcelain.getExternalId()));
-    }
     if (porcelain.getFirstName() != null) {
       builder.setFirstName((porcelain.getFirstName()));
     }
@@ -9085,12 +8906,6 @@ public class Plumbing {
     }
     if (porcelain.getLastName() != null) {
       builder.setLastName((porcelain.getLastName()));
-    }
-    if (porcelain.getManagedBy() != null) {
-      builder.setManagedBy((porcelain.getManagedBy()));
-    }
-    if (porcelain.getPermissionLevel() != null) {
-      builder.setPermissionLevel((porcelain.getPermissionLevel()));
     }
     builder.setSuspended(porcelain.getSuspended());
     if (porcelain.getTags() != null) {

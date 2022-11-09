@@ -44,20 +44,6 @@ public class Role {
     this.id = in;
   }
 
-  private String managedBy;
-  /**
-   * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-   */
-  public String getManagedBy() {
-    return this.managedBy;
-  }
-  /**
-   * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-   */
-  public void setManagedBy(String in) {
-    this.managedBy = in;
-  }
-
   private String name;
   /** Unique human-readable name of the Role. */
   public String getName() {

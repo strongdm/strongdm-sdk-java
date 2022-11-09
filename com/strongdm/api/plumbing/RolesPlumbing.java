@@ -10873,6 +10873,26 @@ public final class RolesPlumbing {
 
     /**
      * <pre>
+     * AccessRules is a list of access rules defining the resources this Role has access to.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The accessRules.
+     */
+    java.lang.String getAccessRules();
+    /**
+     * <pre>
+     * AccessRules is a list of access rules defining the resources this Role has access to.
+     * </pre>
+     *
+     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for accessRules.
+     */
+    com.google.protobuf.ByteString
+        getAccessRulesBytes();
+
+    /**
+     * <pre>
      * Tags is a map of key, value pairs.
      * </pre>
      *
@@ -10897,46 +10917,6 @@ public final class RolesPlumbing {
      * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
      */
     com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder();
-
-    /**
-     * <pre>
-     * AccessRules is a list of access rules defining the resources this Role has access to.
-     * </pre>
-     *
-     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
-     * @return The accessRules.
-     */
-    java.lang.String getAccessRules();
-    /**
-     * <pre>
-     * AccessRules is a list of access rules defining the resources this Role has access to.
-     * </pre>
-     *
-     * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for accessRules.
-     */
-    com.google.protobuf.ByteString
-        getAccessRulesBytes();
-
-    /**
-     * <pre>
-     * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-     * </pre>
-     *
-     * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-     * @return The managedBy.
-     */
-    java.lang.String getManagedBy();
-    /**
-     * <pre>
-     * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-     * </pre>
-     *
-     * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for managedBy.
-     */
-    com.google.protobuf.ByteString
-        getManagedByBytes();
   }
   /**
    * <pre>
@@ -10960,7 +10940,6 @@ public final class RolesPlumbing {
       id_ = "";
       name_ = "";
       accessRules_ = "";
-      managedBy_ = "";
     }
 
     @java.lang.Override
@@ -11022,12 +11001,6 @@ public final class RolesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               accessRules_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              managedBy_ = s;
               break;
             }
             default: {
@@ -11156,44 +11129,6 @@ public final class RolesPlumbing {
       }
     }
 
-    public static final int TAGS_FIELD_NUMBER = 4;
-    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return Whether the tags field is set.
-     */
-    @java.lang.Override
-    public boolean hasTags() {
-      return tags_ != null;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     * @return The tags.
-     */
-    @java.lang.Override
-    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
-      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
-    }
-    /**
-     * <pre>
-     * Tags is a map of key, value pairs.
-     * </pre>
-     *
-     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
-     */
-    @java.lang.Override
-    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
-      return getTags();
-    }
-
     public static final int ACCESS_RULES_FIELD_NUMBER = 5;
     private volatile java.lang.Object accessRules_;
     /**
@@ -11240,50 +11175,42 @@ public final class RolesPlumbing {
       }
     }
 
-    public static final int MANAGED_BY_FIELD_NUMBER = 6;
-    private volatile java.lang.Object managedBy_;
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
     /**
      * <pre>
-     * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
+     * Tags is a map of key, value pairs.
      * </pre>
      *
-     * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-     * @return The managedBy.
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return Whether the tags field is set.
      */
     @java.lang.Override
-    public java.lang.String getManagedBy() {
-      java.lang.Object ref = managedBy_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        managedBy_ = s;
-        return s;
-      }
+    public boolean hasTags() {
+      return tags_ != null;
     }
     /**
      * <pre>
-     * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
+     * Tags is a map of key, value pairs.
      * </pre>
      *
-     * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-     * @return The bytes for managedBy.
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     * @return The tags.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getManagedByBytes() {
-      java.lang.Object ref = managedBy_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        managedBy_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.strongdm.api.plumbing.TagsPlumbing.Tags getTags() {
+      return tags_ == null ? com.strongdm.api.plumbing.TagsPlumbing.Tags.getDefaultInstance() : tags_;
+    }
+    /**
+     * <pre>
+     * Tags is a map of key, value pairs.
+     * </pre>
+     *
+     * <code>.v1.Tags tags = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder getTagsOrBuilder() {
+      return getTags();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11312,9 +11239,6 @@ public final class RolesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRules_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, accessRules_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, managedBy_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -11337,9 +11261,6 @@ public final class RolesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessRules_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, accessRules_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(managedBy_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, managedBy_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11359,15 +11280,13 @@ public final class RolesPlumbing {
           .equals(other.getId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getAccessRules()
+          .equals(other.getAccessRules())) return false;
       if (hasTags() != other.hasTags()) return false;
       if (hasTags()) {
         if (!getTags()
             .equals(other.getTags())) return false;
       }
-      if (!getAccessRules()
-          .equals(other.getAccessRules())) return false;
-      if (!getManagedBy()
-          .equals(other.getManagedBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11383,14 +11302,12 @@ public final class RolesPlumbing {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessRules().hashCode();
       if (hasTags()) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTags().hashCode();
       }
-      hash = (37 * hash) + ACCESS_RULES_FIELD_NUMBER;
-      hash = (53 * hash) + getAccessRules().hashCode();
-      hash = (37 * hash) + MANAGED_BY_FIELD_NUMBER;
-      hash = (53 * hash) + getManagedBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11534,16 +11451,14 @@ public final class RolesPlumbing {
 
         name_ = "";
 
+        accessRules_ = "";
+
         if (tagsBuilder_ == null) {
           tags_ = null;
         } else {
           tags_ = null;
           tagsBuilder_ = null;
         }
-        accessRules_ = "";
-
-        managedBy_ = "";
-
         return this;
       }
 
@@ -11572,13 +11487,12 @@ public final class RolesPlumbing {
         com.strongdm.api.plumbing.RolesPlumbing.Role result = new com.strongdm.api.plumbing.RolesPlumbing.Role(this);
         result.id_ = id_;
         result.name_ = name_;
+        result.accessRules_ = accessRules_;
         if (tagsBuilder_ == null) {
           result.tags_ = tags_;
         } else {
           result.tags_ = tagsBuilder_.build();
         }
-        result.accessRules_ = accessRules_;
-        result.managedBy_ = managedBy_;
         onBuilt();
         return result;
       }
@@ -11635,16 +11549,12 @@ public final class RolesPlumbing {
           name_ = other.name_;
           onChanged();
         }
-        if (other.hasTags()) {
-          mergeTags(other.getTags());
-        }
         if (!other.getAccessRules().isEmpty()) {
           accessRules_ = other.accessRules_;
           onChanged();
         }
-        if (!other.getManagedBy().isEmpty()) {
-          managedBy_ = other.managedBy_;
-          onChanged();
+        if (other.hasTags()) {
+          mergeTags(other.getTags());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11867,6 +11777,102 @@ public final class RolesPlumbing {
         return this;
       }
 
+      private java.lang.Object accessRules_ = "";
+      /**
+       * <pre>
+       * AccessRules is a list of access rules defining the resources this Role has access to.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return The accessRules.
+       */
+      public java.lang.String getAccessRules() {
+        java.lang.Object ref = accessRules_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessRules_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AccessRules is a list of access rules defining the resources this Role has access to.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for accessRules.
+       */
+      public com.google.protobuf.ByteString
+          getAccessRulesBytes() {
+        java.lang.Object ref = accessRules_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessRules_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * AccessRules is a list of access rules defining the resources this Role has access to.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The accessRules to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRules(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessRules_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccessRules is a list of access rules defining the resources this Role has access to.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessRules() {
+        
+        accessRules_ = getDefaultInstance().getAccessRules();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * AccessRules is a list of access rules defining the resources this Role has access to.
+       * </pre>
+       *
+       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for accessRules to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessRulesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessRules_ = value;
+        onChanged();
+        return this;
+      }
+
       private com.strongdm.api.plumbing.TagsPlumbing.Tags tags_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.strongdm.api.plumbing.TagsPlumbing.Tags, com.strongdm.api.plumbing.TagsPlumbing.Tags.Builder, com.strongdm.api.plumbing.TagsPlumbing.TagsOrBuilder> tagsBuilder_;
@@ -12020,198 +12026,6 @@ public final class RolesPlumbing {
           tags_ = null;
         }
         return tagsBuilder_;
-      }
-
-      private java.lang.Object accessRules_ = "";
-      /**
-       * <pre>
-       * AccessRules is a list of access rules defining the resources this Role has access to.
-       * </pre>
-       *
-       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
-       * @return The accessRules.
-       */
-      public java.lang.String getAccessRules() {
-        java.lang.Object ref = accessRules_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          accessRules_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * AccessRules is a list of access rules defining the resources this Role has access to.
-       * </pre>
-       *
-       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for accessRules.
-       */
-      public com.google.protobuf.ByteString
-          getAccessRulesBytes() {
-        java.lang.Object ref = accessRules_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accessRules_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * AccessRules is a list of access rules defining the resources this Role has access to.
-       * </pre>
-       *
-       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
-       * @param value The accessRules to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAccessRules(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        accessRules_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * AccessRules is a list of access rules defining the resources this Role has access to.
-       * </pre>
-       *
-       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAccessRules() {
-        
-        accessRules_ = getDefaultInstance().getAccessRules();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * AccessRules is a list of access rules defining the resources this Role has access to.
-       * </pre>
-       *
-       * <code>string access_rules = 5 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for accessRules to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAccessRulesBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        accessRules_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object managedBy_ = "";
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-       * @return The managedBy.
-       */
-      public java.lang.String getManagedBy() {
-        java.lang.Object ref = managedBy_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          managedBy_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-       * @return The bytes for managedBy.
-       */
-      public com.google.protobuf.ByteString
-          getManagedByBytes() {
-        java.lang.Object ref = managedBy_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          managedBy_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-       * @param value The managedBy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setManagedBy(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        managedBy_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearManagedBy() {
-        
-        managedBy_ = getDefaultInstance().getManagedBy();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Managed By is a read only field for what service manages this role, e.g. StrongDM, Okta, Azure.
-       * </pre>
-       *
-       * <code>string managed_by = 6 [(.v1.field_options) = { ... }</code>
-       * @param value The bytes for managedBy to set.
-       * @return This builder for chaining.
-       */
-      public Builder setManagedByBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        managedBy_ = value;
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12367,34 +12181,33 @@ public final class RolesPlumbing {
       "\001 \001(\0132\030.v1.ListResponseMetadata\022#\n\005roles" +
       "\030\002 \003(\0132\010.v1.RoleB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_lim" +
       "it\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363" +
-      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\331\003" +
+      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\264\003" +
       "\n\004Role\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\"\n\004tags\030\004 \001(\0132\010.v1" +
-      ".TagsB\n\362\370\263\007\005\260\363\263\007\001\022\362\001\n\014access_rules\030\005 \001(\t" +
-      "B\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rules\362\363\263" +
-      "\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private\022\013Ac" +
-      "cessRules\362\363\263\007\033\n\014go_terraform\022\013AccessRule" +
-      "s\362\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n\014jso" +
-      "n_gateway\022\022models.AccessRules\272\364\263\007\027access" +
-      "RulesDiffSuppress\320\364\263\007\001\022#\n\nmanaged_by\030\006 \001" +
-      "(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:V\372\370\263\007Q\250\363\263\007\001\302\363\263\007G\242\363\263\007" +
-      "\035tf_examples/role_resource.txt\252\363\263\007 tf_ex" +
-      "amples/role_data_source.txtJ\004\010\003\020\0042\356\003\n\005Ro" +
-      "les\022Z\n\006Create\022\025.v1.RoleCreateRequest\032\026.v" +
-      "1.RoleCreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007" +
-      "\016\252\363\263\007\t/v1/roles\022U\n\003Get\022\022.v1.RoleGetReque" +
-      "st\032\023.v1.RoleGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371" +
-      "\263\007\023\252\363\263\007\016/v1/roles/{id}\022^\n\006Update\022\025.v1.Ro" +
-      "leUpdateRequest\032\026.v1.RoleUpdateResponse\"" +
-      "%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022a" +
-      "\n\006Delete\022\025.v1.RoleDeleteRequest\032\026.v1.Rol" +
-      "eDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363" +
-      "\263\007\016/v1/roles/{id}\022S\n\004List\022\023.v1.RoleListR" +
-      "equest\032\024.v1.RoleListResponse\" \202\371\263\007\010\242\363\263\007\003" +
-      "get\202\371\263\007\016\252\363\263\007\t/v1/roles\032\032\312\371\263\007\t\302\371\263\007\004Role\312\371" +
-      "\263\007\007\322\371\263\007\002r-Ba\n\031com.strongdm.api.plumbingB" +
-      "\rRolesPlumbingZ5github.com/strongdm/stro" +
-      "ngdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\300\363\263\007\001\022\362\001\n\014access_rules\030\005" +
+      " \001(\tB\333\001\362\370\263\007\325\001\260\363\263\007\001\312\363\263\007\251\001\352\363\263\007\014access_rule" +
+      "s\362\363\263\007\021\n\002go\022\013AccessRules\362\363\263\007\031\n\ngo_private" +
+      "\022\013AccessRules\362\363\263\007\033\n\014go_terraform\022\013Access" +
+      "Rules\362\363\263\007\030\n\004java\022\020List<AccessRule>\362\363\263\007\"\n" +
+      "\014json_gateway\022\022models.AccessRules\272\364\263\007\027ac" +
+      "cessRulesDiffSuppress\320\364\263\007\001\022\"\n\004tags\030\004 \001(\013" +
+      "2\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001:V\372\370\263\007Q\250\363\263\007\001\302\363\263\007G\242" +
+      "\363\263\007\035tf_examples/role_resource.txt\252\363\263\007 tf" +
+      "_examples/role_data_source.txtJ\004\010\003\020\0042\356\003\n" +
+      "\005Roles\022Z\n\006Create\022\025.v1.RoleCreateRequest\032" +
+      "\026.v1.RoleCreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202" +
+      "\371\263\007\016\252\363\263\007\t/v1/roles\022U\n\003Get\022\022.v1.RoleGetRe" +
+      "quest\032\023.v1.RoleGetResponse\"%\202\371\263\007\010\242\363\263\007\003ge" +
+      "t\202\371\263\007\023\252\363\263\007\016/v1/roles/{id}\022^\n\006Update\022\025.v1" +
+      ".RoleUpdateRequest\032\026.v1.RoleUpdateRespon" +
+      "se\"%\202\371\263\007\010\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/roles/{id" +
+      "}\022a\n\006Delete\022\025.v1.RoleDeleteRequest\032\026.v1." +
+      "RoleDeleteResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007" +
+      "\023\252\363\263\007\016/v1/roles/{id}\022S\n\004List\022\023.v1.RoleLi" +
+      "stRequest\032\024.v1.RoleListResponse\" \202\371\263\007\010\242\363" +
+      "\263\007\003get\202\371\263\007\016\252\363\263\007\t/v1/roles\032\032\312\371\263\007\t\302\371\263\007\004Rol" +
+      "e\312\371\263\007\007\322\371\263\007\002r-Ba\n\031com.strongdm.api.plumbi" +
+      "ngB\rRolesPlumbingZ5github.com/strongdm/s" +
+      "trongdm-sdk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12468,7 +12281,7 @@ public final class RolesPlumbing {
     internal_static_v1_Role_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Role_descriptor,
-        new java.lang.String[] { "Id", "Name", "Tags", "AccessRules", "ManagedBy", });
+        new java.lang.String[] { "Id", "Name", "AccessRules", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

@@ -19,16 +19,6 @@ package com.strongdm.api;
 
 /** Relay represents a StrongDM CLI installation running in relay mode. */
 public class Relay implements Node {
-  private String device;
-  /** Device is a read only device name uploaded by the gateway process when it comes online. */
-  public String getDevice() {
-    return this.device;
-  }
-  /** Device is a read only device name uploaded by the gateway process when it comes online. */
-  public void setDevice(String in) {
-    this.device = in;
-  }
-
   private String gatewayFilter;
   /** GatewayFilter can be used to restrict the peering between relays and gateways. */
   public String getGatewayFilter() {
@@ -47,20 +37,6 @@ public class Relay implements Node {
   /** Unique identifier of the Relay. */
   public void setId(String in) {
     this.id = in;
-  }
-
-  private String location;
-  /**
-   * Location is a read only network location uploaded by the gateway process when it comes online.
-   */
-  public String getLocation() {
-    return this.location;
-  }
-  /**
-   * Location is a read only network location uploaded by the gateway process when it comes online.
-   */
-  public void setLocation(String in) {
-    this.location = in;
   }
 
   private String name;
@@ -114,19 +90,5 @@ public class Relay implements Node {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private String version;
-  /**
-   * Version is a read only sdm binary version uploaded by the gateway process when it comes online.
-   */
-  public String getVersion() {
-    return this.version;
-  }
-  /**
-   * Version is a read only sdm binary version uploaded by the gateway process when it comes online.
-   */
-  public void setVersion(String in) {
-    this.version = in;
   }
 }
