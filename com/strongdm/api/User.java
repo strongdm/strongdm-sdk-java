@@ -29,6 +29,20 @@ public class User implements Account {
     this.email = in;
   }
 
+  private String externalId;
+  /**
+   * External ID is an alternative unique ID this user is represented by within an external service.
+   */
+  public String getExternalId() {
+    return this.externalId;
+  }
+  /**
+   * External ID is an alternative unique ID this user is represented by within an external service.
+   */
+  public void setExternalId(String in) {
+    this.externalId = in;
+  }
+
   private String firstName;
   /** The User's first name. */
   public String getFirstName() {
@@ -57,6 +71,30 @@ public class User implements Account {
   /** The User's last name. */
   public void setLastName(String in) {
     this.lastName = in;
+  }
+
+  private String managedBy;
+  /**
+   * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
+   */
+  public String getManagedBy() {
+    return this.managedBy;
+  }
+  /**
+   * Managed By is a read only field for what service manages this user, e.g. StrongDM, Okta, Azure.
+   */
+  public void setManagedBy(String in) {
+    this.managedBy = in;
+  }
+
+  private String permissionLevel;
+  /** PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user. */
+  public String getPermissionLevel() {
+    return this.permissionLevel;
+  }
+  /** PermissionLevel is a read only field for the user's permission level e.g. admin, DBA, user. */
+  public void setPermissionLevel(String in) {
+    this.permissionLevel = in;
   }
 
   private boolean suspended;

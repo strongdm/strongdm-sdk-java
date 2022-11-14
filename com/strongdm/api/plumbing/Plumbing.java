@@ -7668,6 +7668,7 @@ public class Plumbing {
     com.strongdm.api.Role porcelain = new com.strongdm.api.Role();
     porcelain.setAccessRules(Plumbing.convertAccessRulesToPorcelain(plumbing.getAccessRules()));
     porcelain.setId((plumbing.getId()));
+    porcelain.setManagedBy((plumbing.getManagedBy()));
     porcelain.setName((plumbing.getName()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -7683,6 +7684,9 @@ public class Plumbing {
     }
     if (porcelain.getId() != null) {
       builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getManagedBy() != null) {
+      builder.setManagedBy((porcelain.getManagedBy()));
     }
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
@@ -8987,9 +8991,12 @@ public class Plumbing {
   public static com.strongdm.api.User convertUserToPorcelain(User plumbing) {
     com.strongdm.api.User porcelain = new com.strongdm.api.User();
     porcelain.setEmail((plumbing.getEmail()));
+    porcelain.setExternalId((plumbing.getExternalId()));
     porcelain.setFirstName((plumbing.getFirstName()));
     porcelain.setId((plumbing.getId()));
     porcelain.setLastName((plumbing.getLastName()));
+    porcelain.setManagedBy((plumbing.getManagedBy()));
+    porcelain.setPermissionLevel((plumbing.getPermissionLevel()));
     porcelain.setSuspended((plumbing.getSuspended()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
@@ -9003,6 +9010,9 @@ public class Plumbing {
     if (porcelain.getEmail() != null) {
       builder.setEmail((porcelain.getEmail()));
     }
+    if (porcelain.getExternalId() != null) {
+      builder.setExternalId((porcelain.getExternalId()));
+    }
     if (porcelain.getFirstName() != null) {
       builder.setFirstName((porcelain.getFirstName()));
     }
@@ -9011,6 +9021,12 @@ public class Plumbing {
     }
     if (porcelain.getLastName() != null) {
       builder.setLastName((porcelain.getLastName()));
+    }
+    if (porcelain.getManagedBy() != null) {
+      builder.setManagedBy((porcelain.getManagedBy()));
+    }
+    if (porcelain.getPermissionLevel() != null) {
+      builder.setPermissionLevel((porcelain.getPermissionLevel()));
     }
     builder.setSuspended(porcelain.getSuspended());
     if (porcelain.getTags() != null) {
