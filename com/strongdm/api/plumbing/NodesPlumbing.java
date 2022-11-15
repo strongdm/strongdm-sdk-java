@@ -12101,6 +12101,72 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getGatewayFilterBytes();
+
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+     * @return The device.
+     */
+    java.lang.String getDevice();
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for device.
+     */
+    com.google.protobuf.ByteString
+        getDeviceBytes();
+
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+     * @return The location.
+     */
+    java.lang.String getLocation();
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for location.
+     */
+    com.google.protobuf.ByteString
+        getLocationBytes();
+
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
   }
   /**
    * <pre>
@@ -12123,6 +12189,9 @@ public final class NodesPlumbing {
       name_ = "";
       state_ = "";
       gatewayFilter_ = "";
+      device_ = "";
+      location_ = "";
+      version_ = "";
     }
 
     @java.lang.Override
@@ -12190,6 +12259,24 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               gatewayFilter_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              device_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              version_ = s;
               break;
             }
             default: {
@@ -12454,6 +12541,150 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int DEVICE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object device_;
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+     * @return The device.
+     */
+    @java.lang.Override
+    public java.lang.String getDevice() {
+      java.lang.Object ref = device_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        device_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for device.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeviceBytes() {
+      java.lang.Object ref = device_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        device_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 7;
+    private volatile java.lang.Object location_;
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for location.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 8;
+    private volatile java.lang.Object version_;
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12483,6 +12714,15 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, gatewayFilter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(device_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, device_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, location_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, version_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12507,6 +12747,15 @@ public final class NodesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, gatewayFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(device_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, device_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, location_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, version_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12536,6 +12785,12 @@ public final class NodesPlumbing {
       }
       if (!getGatewayFilter()
           .equals(other.getGatewayFilter())) return false;
+      if (!getDevice()
+          .equals(other.getDevice())) return false;
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12559,6 +12814,12 @@ public final class NodesPlumbing {
       }
       hash = (37 * hash) + GATEWAY_FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getGatewayFilter().hashCode();
+      hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+      hash = (53 * hash) + getDevice().hashCode();
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12710,6 +12971,12 @@ public final class NodesPlumbing {
         }
         gatewayFilter_ = "";
 
+        device_ = "";
+
+        location_ = "";
+
+        version_ = "";
+
         return this;
       }
 
@@ -12745,6 +13012,9 @@ public final class NodesPlumbing {
           result.tags_ = tagsBuilder_.build();
         }
         result.gatewayFilter_ = gatewayFilter_;
+        result.device_ = device_;
+        result.location_ = location_;
+        result.version_ = version_;
         onBuilt();
         return result;
       }
@@ -12810,6 +13080,18 @@ public final class NodesPlumbing {
         }
         if (!other.getGatewayFilter().isEmpty()) {
           gatewayFilter_ = other.gatewayFilter_;
+          onChanged();
+        }
+        if (!other.getDevice().isEmpty()) {
+          device_ = other.device_;
+          onChanged();
+        }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
+          onChanged();
+        }
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -13394,6 +13676,309 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object device_ = "";
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+       * @return The device.
+       */
+      public java.lang.String getDevice() {
+        java.lang.Object ref = device_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          device_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for device.
+       */
+      public com.google.protobuf.ByteString
+          getDeviceBytes() {
+        java.lang.Object ref = device_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          device_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The device to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDevice(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        device_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDevice() {
+        
+        device_ = getDefaultInstance().getDevice();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for device to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        device_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object location_ = "";
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+       * @return The location.
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for location.
+       */
+      public com.google.protobuf.ByteString
+          getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        location_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocation() {
+        
+        location_ = getDefaultInstance().getLocation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        location_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        version_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13603,6 +14188,72 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getGatewayFilterBytes();
+
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+     * @return The device.
+     */
+    java.lang.String getDevice();
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for device.
+     */
+    com.google.protobuf.ByteString
+        getDeviceBytes();
+
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+     * @return The location.
+     */
+    java.lang.String getLocation();
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for location.
+     */
+    com.google.protobuf.ByteString
+        getLocationBytes();
+
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
   }
   /**
    * <pre>
@@ -13627,6 +14278,9 @@ public final class NodesPlumbing {
       listenAddress_ = "";
       bindAddress_ = "";
       gatewayFilter_ = "";
+      device_ = "";
+      location_ = "";
+      version_ = "";
     }
 
     @java.lang.Override
@@ -13706,6 +14360,24 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               gatewayFilter_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              device_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              location_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              version_ = s;
               break;
             }
             default: {
@@ -14062,6 +14734,150 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int DEVICE_FIELD_NUMBER = 8;
+    private volatile java.lang.Object device_;
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+     * @return The device.
+     */
+    @java.lang.Override
+    public java.lang.String getDevice() {
+      java.lang.Object ref = device_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        device_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Device is a read only device name uploaded by the gateway process when 
+     * it comes online.
+     * </pre>
+     *
+     * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for device.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeviceBytes() {
+      java.lang.Object ref = device_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        device_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_FIELD_NUMBER = 9;
+    private volatile java.lang.Object location_;
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public java.lang.String getLocation() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        location_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Location is a read only network location uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for location.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationBytes() {
+      java.lang.Object ref = location_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        location_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 10;
+    private volatile java.lang.Object version_;
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Version is a read only sdm binary version uploaded by the gateway process
+     * when it comes online.
+     * </pre>
+     *
+     * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14097,6 +14913,15 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, gatewayFilter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(device_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, device_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, location_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, version_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14127,6 +14952,15 @@ public final class NodesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gatewayFilter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, gatewayFilter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(device_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, device_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(location_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, location_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, version_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14160,6 +14994,12 @@ public final class NodesPlumbing {
       }
       if (!getGatewayFilter()
           .equals(other.getGatewayFilter())) return false;
+      if (!getDevice()
+          .equals(other.getDevice())) return false;
+      if (!getLocation()
+          .equals(other.getLocation())) return false;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14187,6 +15027,12 @@ public final class NodesPlumbing {
       }
       hash = (37 * hash) + GATEWAY_FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getGatewayFilter().hashCode();
+      hash = (37 * hash) + DEVICE_FIELD_NUMBER;
+      hash = (53 * hash) + getDevice().hashCode();
+      hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + getLocation().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14342,6 +15188,12 @@ public final class NodesPlumbing {
         }
         gatewayFilter_ = "";
 
+        device_ = "";
+
+        location_ = "";
+
+        version_ = "";
+
         return this;
       }
 
@@ -14379,6 +15231,9 @@ public final class NodesPlumbing {
           result.tags_ = tagsBuilder_.build();
         }
         result.gatewayFilter_ = gatewayFilter_;
+        result.device_ = device_;
+        result.location_ = location_;
+        result.version_ = version_;
         onBuilt();
         return result;
       }
@@ -14452,6 +15307,18 @@ public final class NodesPlumbing {
         }
         if (!other.getGatewayFilter().isEmpty()) {
           gatewayFilter_ = other.gatewayFilter_;
+          onChanged();
+        }
+        if (!other.getDevice().isEmpty()) {
+          device_ = other.device_;
+          onChanged();
+        }
+        if (!other.getLocation().isEmpty()) {
+          location_ = other.location_;
+          onChanged();
+        }
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -15228,6 +16095,309 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object device_ = "";
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+       * @return The device.
+       */
+      public java.lang.String getDevice() {
+        java.lang.Object ref = device_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          device_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for device.
+       */
+      public com.google.protobuf.ByteString
+          getDeviceBytes() {
+        java.lang.Object ref = device_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          device_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The device to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDevice(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        device_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDevice() {
+        
+        device_ = getDefaultInstance().getDevice();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Device is a read only device name uploaded by the gateway process when 
+       * it comes online.
+       * </pre>
+       *
+       * <code>string device = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for device to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeviceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        device_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object location_ = "";
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+       * @return The location.
+       */
+      public java.lang.String getLocation() {
+        java.lang.Object ref = location_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          location_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for location.
+       */
+      public com.google.protobuf.ByteString
+          getLocationBytes() {
+        java.lang.Object ref = location_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          location_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        location_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocation() {
+        
+        location_ = getDefaultInstance().getLocation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Location is a read only network location uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string location = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for location to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        location_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Version is a read only sdm binary version uploaded by the gateway process
+       * when it comes online.
+       * </pre>
+       *
+       * <code>string version = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        version_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15398,35 +16568,40 @@ public final class NodesPlumbing {
       "\001(\0132\013.v1.GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_ex" +
       "amples/node_resource.txt\252\363\263\007 tf_examples" +
       "/node_data_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022" +
-      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\320\001\n\005Relay\022" +
+      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\266\002\n\005Relay\022" +
       "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
       "\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007" +
       "\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004" +
       "tags\030\004 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gate" +
-      "way_filter\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001" +
-      "\"\254\002\n\007Gateway\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004" +
-      "name\030\002 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001" +
-      "(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform" +
-      "-provider\022,\n\016listen_address\030\004 \001(\tB\024\362\370\263\007\017" +
-      "\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014bind_address\030\005 \001(\tB\024\362" +
-      "\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001\022\"\n\004tags\030\006 \001(\0132\010.v1.T" +
-      "agsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016gateway_filter\030\007 \001(\tB" +
-      "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\356\003\n\005Nodes\022Z\n\006Cre" +
-      "ate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCrea" +
-      "teResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v1/" +
-      "nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1.No" +
-      "deGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016/v" +
-      "1/nodes/{id}\022^\n\006Update\022\025.v1.NodeUpdateRe" +
-      "quest\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363\263\007" +
-      "\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete\022\025" +
-      ".v1.NodeDeleteRequest\032\026.v1.NodeDeleteRes" +
-      "ponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/nod" +
-      "es/{id}\022S\n\004List\022\023.v1.NodeListRequest\032\024.v" +
-      "1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016\252\363" +
-      "\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002n-" +
-      "Ba\n\031com.strongdm.api.plumbingB\rNodesPlum" +
-      "bingZ5github.com/strongdm/strongdm-sdk-g" +
-      "o/v3/internal/v1;v1b\006proto3"
+      "way_filter\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\006" +
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\007 \001(\tB" +
+      "\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n" +
+      "\260\363\263\007\001\230\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\222\003\n\007Gateway\022\026\n\002id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
+      "\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007" +
+      "\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016liste" +
+      "n_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n" +
+      "\014bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007" +
+      "\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n" +
+      "\016gateway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006dev" +
+      "ice\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t" +
+      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017" +
+      "\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\356\003\n\005Nodes\022Z\n" +
+      "\006Create\022\025.v1.NodeCreateRequest\032\026.v1.Node" +
+      "CreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t" +
+      "/v1/nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v" +
+      "1.NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263" +
+      "\007\016/v1/nodes/{id}\022^\n\006Update\022\025.v1.NodeUpda" +
+      "teRequest\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010" +
+      "\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Dele" +
+      "te\022\025.v1.NodeDeleteRequest\032\026.v1.NodeDelet" +
+      "eResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1" +
+      "/nodes/{id}\022S\n\004List\022\023.v1.NodeListRequest" +
+      "\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263" +
+      "\007\002n-Ba\n\031com.strongdm.api.plumbingB\rNodes" +
+      "PlumbingZ5github.com/strongdm/strongdm-s" +
+      "dk-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15506,13 +16681,13 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", });
+        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
