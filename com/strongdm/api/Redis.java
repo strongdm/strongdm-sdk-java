@@ -137,6 +137,16 @@ public class Redis implements Resource {
     this.tags.putAll(in);
   }
 
+  private boolean tlsRequired;
+  /** */
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
+  }
+  /** */
+  public void setTlsRequired(boolean in) {
+    this.tlsRequired = in;
+  }
+
   private String username;
   /** */
   public String getUsername() {
