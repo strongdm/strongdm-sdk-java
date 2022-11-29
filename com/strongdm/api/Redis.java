@@ -136,4 +136,24 @@ public class Redis implements Resource {
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
   }
+
+  private boolean tlsRequired;
+  /** */
+  public boolean getTlsRequired() {
+    return this.tlsRequired;
+  }
+  /** */
+  public void setTlsRequired(boolean in) {
+    this.tlsRequired = in;
+  }
+
+  private String username;
+  /** */
+  public String getUsername() {
+    return this.username;
+  }
+  /** */
+  public void setUsername(String in) {
+    this.username = in;
+  }
 }
