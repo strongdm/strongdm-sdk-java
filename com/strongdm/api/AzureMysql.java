@@ -17,7 +17,11 @@
 
 package com.strongdm.api;
 
-public class ElasticacheRedis implements Resource {
+/**
+ * AzureMysql is currently unstable, and its API may change, or it may be removed, without a major
+ * version bump.
+ */
+public class AzureMysql implements Resource {
   private String bindInterface;
   /** Bind interface */
   public String getBindInterface() {
@@ -26,6 +30,16 @@ public class ElasticacheRedis implements Resource {
   /** Bind interface */
   public void setBindInterface(String in) {
     this.bindInterface = in;
+  }
+
+  private String database;
+  /** */
+  public String getDatabase() {
+    return this.database;
+  }
+  /** */
+  public void setDatabase(String in) {
+    this.database = in;
   }
 
   private String egressFilter;
@@ -135,16 +149,6 @@ public class ElasticacheRedis implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
-  }
-
-  private boolean tlsRequired;
-  /** */
-  public boolean getTlsRequired() {
-    return this.tlsRequired;
-  }
-  /** */
-  public void setTlsRequired(boolean in) {
-    this.tlsRequired = in;
   }
 
   private String username;
