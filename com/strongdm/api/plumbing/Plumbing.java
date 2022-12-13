@@ -2904,6 +2904,51 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.CyberarkPAMStore convertCyberarkPAMStoreToPorcelain(
+      CyberarkPAMStore plumbing) {
+    com.strongdm.api.CyberarkPAMStore porcelain = new com.strongdm.api.CyberarkPAMStore();
+    porcelain.setAppURL((plumbing.getAppURL()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    return porcelain;
+  }
+
+  public static CyberarkPAMStore convertCyberarkPAMStoreToPlumbing(
+      com.strongdm.api.CyberarkPAMStore porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    CyberarkPAMStore.Builder builder = CyberarkPAMStore.newBuilder();
+    if (porcelain.getAppURL() != null) {
+      builder.setAppURL((porcelain.getAppURL()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.CyberarkPAMStore> convertRepeatedCyberarkPAMStoreToPorcelain(
+      Collection<CyberarkPAMStore> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertCyberarkPAMStoreToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<CyberarkPAMStore> convertRepeatedCyberarkPAMStoreToPlumbing(
+      Collection<com.strongdm.api.CyberarkPAMStore> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertCyberarkPAMStoreToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.DB2I convertDB2IToPorcelain(DB2I plumbing) {
     com.strongdm.api.DB2I porcelain = new com.strongdm.api.DB2I();
     porcelain.setBindInterface((plumbing.getBindInterface()));
@@ -8208,6 +8253,9 @@ public class Plumbing {
     if (plumbing.hasCyberarkConjur()) {
       return convertCyberarkConjurStoreToPorcelain(plumbing.getCyberarkConjur());
     }
+    if (plumbing.hasCyberarkPam()) {
+      return convertCyberarkPAMStoreToPorcelain(plumbing.getCyberarkPam());
+    }
     if (plumbing.hasCyberarkPamExperimental()) {
       return convertCyberarkPAMExperimentalStoreToPorcelain(plumbing.getCyberarkPamExperimental());
     }
@@ -8247,6 +8295,12 @@ public class Plumbing {
       SecretStore.Builder builder = SecretStore.newBuilder();
       builder.setCyberarkConjur(
           convertCyberarkConjurStoreToPlumbing((com.strongdm.api.CyberarkConjurStore) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.CyberarkPAMStore) {
+      SecretStore.Builder builder = SecretStore.newBuilder();
+      builder.setCyberarkPam(
+          convertCyberarkPAMStoreToPlumbing((com.strongdm.api.CyberarkPAMStore) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.CyberarkPAMExperimentalStore) {
