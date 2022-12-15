@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * CyberarkConjurStore is currently unstable, and its API may change, or it may be removed, without
- * a major version bump.
- */
 public class CyberarkConjurStore implements SecretStore {
   private String appUrl;
   /** */

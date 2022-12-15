@@ -4386,10 +4386,37 @@ public final class Spec {
   public interface GetRequestMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:v1.GetRequestMetadata)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * If set, queries entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+     * @return Whether the snapshotAt field is set.
+     */
+    boolean hasSnapshotAt();
+    /**
+     * <pre>
+     * If set, queries entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+     * @return The snapshotAt.
+     */
+    com.google.protobuf.Timestamp getSnapshotAt();
+    /**
+     * <pre>
+     * If set, queries entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder();
   }
   /**
    * <pre>
-   * GetRequestMetadata is reserved for future use.
+   * GetRequestMetadata allows one to specify a historical version of an entity to query.
    * </pre>
    *
    * Protobuf type {@code v1.GetRequestMetadata}
@@ -4436,6 +4463,19 @@ public final class Spec {
             case 0:
               done = true;
               break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (snapshotAt_ != null) {
+                subBuilder = snapshotAt_.toBuilder();
+              }
+              snapshotAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(snapshotAt_);
+                snapshotAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4470,6 +4510,44 @@ public final class Spec {
               com.strongdm.api.plumbing.Spec.GetRequestMetadata.class, com.strongdm.api.plumbing.Spec.GetRequestMetadata.Builder.class);
     }
 
+    public static final int SNAPSHOT_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp snapshotAt_;
+    /**
+     * <pre>
+     * If set, queries entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+     * @return Whether the snapshotAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasSnapshotAt() {
+      return snapshotAt_ != null;
+    }
+    /**
+     * <pre>
+     * If set, queries entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+     * @return The snapshotAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getSnapshotAt() {
+      return snapshotAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : snapshotAt_;
+    }
+    /**
+     * <pre>
+     * If set, queries entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder() {
+      return getSnapshotAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4484,6 +4562,9 @@ public final class Spec {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (snapshotAt_ != null) {
+        output.writeMessage(1, getSnapshotAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4493,6 +4574,10 @@ public final class Spec {
       if (size != -1) return size;
 
       size = 0;
+      if (snapshotAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSnapshotAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4508,6 +4593,11 @@ public final class Spec {
       }
       com.strongdm.api.plumbing.Spec.GetRequestMetadata other = (com.strongdm.api.plumbing.Spec.GetRequestMetadata) obj;
 
+      if (hasSnapshotAt() != other.hasSnapshotAt()) return false;
+      if (hasSnapshotAt()) {
+        if (!getSnapshotAt()
+            .equals(other.getSnapshotAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4519,6 +4609,10 @@ public final class Spec {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSnapshotAt()) {
+        hash = (37 * hash) + SNAPSHOT_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshotAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4616,7 +4710,7 @@ public final class Spec {
     }
     /**
      * <pre>
-     * GetRequestMetadata is reserved for future use.
+     * GetRequestMetadata allows one to specify a historical version of an entity to query.
      * </pre>
      *
      * Protobuf type {@code v1.GetRequestMetadata}
@@ -4656,6 +4750,12 @@ public final class Spec {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (snapshotAtBuilder_ == null) {
+          snapshotAt_ = null;
+        } else {
+          snapshotAt_ = null;
+          snapshotAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -4682,6 +4782,11 @@ public final class Spec {
       @java.lang.Override
       public com.strongdm.api.plumbing.Spec.GetRequestMetadata buildPartial() {
         com.strongdm.api.plumbing.Spec.GetRequestMetadata result = new com.strongdm.api.plumbing.Spec.GetRequestMetadata(this);
+        if (snapshotAtBuilder_ == null) {
+          result.snapshotAt_ = snapshotAt_;
+        } else {
+          result.snapshotAt_ = snapshotAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4730,6 +4835,9 @@ public final class Spec {
 
       public Builder mergeFrom(com.strongdm.api.plumbing.Spec.GetRequestMetadata other) {
         if (other == com.strongdm.api.plumbing.Spec.GetRequestMetadata.getDefaultInstance()) return this;
+        if (other.hasSnapshotAt()) {
+          mergeSnapshotAt(other.getSnapshotAt());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4757,6 +4865,161 @@ public final class Spec {
           }
         }
         return this;
+      }
+
+      private com.google.protobuf.Timestamp snapshotAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> snapshotAtBuilder_;
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       * @return Whether the snapshotAt field is set.
+       */
+      public boolean hasSnapshotAt() {
+        return snapshotAtBuilder_ != null || snapshotAt_ != null;
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       * @return The snapshotAt.
+       */
+      public com.google.protobuf.Timestamp getSnapshotAt() {
+        if (snapshotAtBuilder_ == null) {
+          return snapshotAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : snapshotAt_;
+        } else {
+          return snapshotAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       */
+      public Builder setSnapshotAt(com.google.protobuf.Timestamp value) {
+        if (snapshotAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          snapshotAt_ = value;
+          onChanged();
+        } else {
+          snapshotAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       */
+      public Builder setSnapshotAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (snapshotAtBuilder_ == null) {
+          snapshotAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          snapshotAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       */
+      public Builder mergeSnapshotAt(com.google.protobuf.Timestamp value) {
+        if (snapshotAtBuilder_ == null) {
+          if (snapshotAt_ != null) {
+            snapshotAt_ =
+              com.google.protobuf.Timestamp.newBuilder(snapshotAt_).mergeFrom(value).buildPartial();
+          } else {
+            snapshotAt_ = value;
+          }
+          onChanged();
+        } else {
+          snapshotAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       */
+      public Builder clearSnapshotAt() {
+        if (snapshotAtBuilder_ == null) {
+          snapshotAt_ = null;
+          onChanged();
+        } else {
+          snapshotAt_ = null;
+          snapshotAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getSnapshotAtBuilder() {
+        
+        onChanged();
+        return getSnapshotAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder() {
+        if (snapshotAtBuilder_ != null) {
+          return snapshotAtBuilder_.getMessageOrBuilder();
+        } else {
+          return snapshotAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : snapshotAt_;
+        }
+      }
+      /**
+       * <pre>
+       * If set, queries entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getSnapshotAtFieldBuilder() {
+        if (snapshotAtBuilder_ == null) {
+          snapshotAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getSnapshotAt(),
+                  getParentForChildren(),
+                  isClean());
+          snapshotAt_ = null;
+        }
+        return snapshotAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7020,6 +7283,33 @@ public final class Spec {
      */
     com.google.protobuf.ByteString
         getOrderByBytes();
+
+    /**
+     * <pre>
+     * If set, lists entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+     * @return Whether the snapshotAt field is set.
+     */
+    boolean hasSnapshotAt();
+    /**
+     * <pre>
+     * If set, lists entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+     * @return The snapshotAt.
+     */
+    com.google.protobuf.Timestamp getSnapshotAt();
+    /**
+     * <pre>
+     * If set, lists entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder();
   }
   /**
    * <pre>
@@ -7094,6 +7384,19 @@ public final class Spec {
               java.lang.String s = input.readStringRequireUtf8();
 
               orderBy_ = s;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (snapshotAt_ != null) {
+                subBuilder = snapshotAt_.toBuilder();
+              }
+              snapshotAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(snapshotAt_);
+                snapshotAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7258,6 +7561,44 @@ public final class Spec {
       }
     }
 
+    public static final int SNAPSHOT_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp snapshotAt_;
+    /**
+     * <pre>
+     * If set, lists entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+     * @return Whether the snapshotAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasSnapshotAt() {
+      return snapshotAt_ != null;
+    }
+    /**
+     * <pre>
+     * If set, lists entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+     * @return The snapshotAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getSnapshotAt() {
+      return snapshotAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : snapshotAt_;
+    }
+    /**
+     * <pre>
+     * If set, lists entities at a point in time instead of the current time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder() {
+      return getSnapshotAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7284,6 +7625,9 @@ public final class Spec {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orderBy_);
       }
+      if (snapshotAt_ != null) {
+        output.writeMessage(5, getSnapshotAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7306,6 +7650,10 @@ public final class Spec {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orderBy_);
+      }
+      if (snapshotAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSnapshotAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7330,6 +7678,11 @@ public final class Spec {
           != other.getLimit()) return false;
       if (!getOrderBy()
           .equals(other.getOrderBy())) return false;
+      if (hasSnapshotAt() != other.hasSnapshotAt()) return false;
+      if (hasSnapshotAt()) {
+        if (!getSnapshotAt()
+            .equals(other.getSnapshotAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7349,6 +7702,10 @@ public final class Spec {
       hash = (53 * hash) + getLimit();
       hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
       hash = (53 * hash) + getOrderBy().hashCode();
+      if (hasSnapshotAt()) {
+        hash = (37 * hash) + SNAPSHOT_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getSnapshotAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7496,6 +7853,12 @@ public final class Spec {
 
         orderBy_ = "";
 
+        if (snapshotAtBuilder_ == null) {
+          snapshotAt_ = null;
+        } else {
+          snapshotAt_ = null;
+          snapshotAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -7526,6 +7889,11 @@ public final class Spec {
         result.page_ = page_;
         result.limit_ = limit_;
         result.orderBy_ = orderBy_;
+        if (snapshotAtBuilder_ == null) {
+          result.snapshotAt_ = snapshotAt_;
+        } else {
+          result.snapshotAt_ = snapshotAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7587,6 +7955,9 @@ public final class Spec {
         if (!other.getOrderBy().isEmpty()) {
           orderBy_ = other.orderBy_;
           onChanged();
+        }
+        if (other.hasSnapshotAt()) {
+          mergeSnapshotAt(other.getSnapshotAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7909,6 +8280,161 @@ public final class Spec {
         orderBy_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Timestamp snapshotAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> snapshotAtBuilder_;
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       * @return Whether the snapshotAt field is set.
+       */
+      public boolean hasSnapshotAt() {
+        return snapshotAtBuilder_ != null || snapshotAt_ != null;
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       * @return The snapshotAt.
+       */
+      public com.google.protobuf.Timestamp getSnapshotAt() {
+        if (snapshotAtBuilder_ == null) {
+          return snapshotAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : snapshotAt_;
+        } else {
+          return snapshotAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       */
+      public Builder setSnapshotAt(com.google.protobuf.Timestamp value) {
+        if (snapshotAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          snapshotAt_ = value;
+          onChanged();
+        } else {
+          snapshotAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       */
+      public Builder setSnapshotAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (snapshotAtBuilder_ == null) {
+          snapshotAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          snapshotAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       */
+      public Builder mergeSnapshotAt(com.google.protobuf.Timestamp value) {
+        if (snapshotAtBuilder_ == null) {
+          if (snapshotAt_ != null) {
+            snapshotAt_ =
+              com.google.protobuf.Timestamp.newBuilder(snapshotAt_).mergeFrom(value).buildPartial();
+          } else {
+            snapshotAt_ = value;
+          }
+          onChanged();
+        } else {
+          snapshotAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       */
+      public Builder clearSnapshotAt() {
+        if (snapshotAtBuilder_ == null) {
+          snapshotAt_ = null;
+          onChanged();
+        } else {
+          snapshotAt_ = null;
+          snapshotAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getSnapshotAtBuilder() {
+        
+        onChanged();
+        return getSnapshotAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getSnapshotAtOrBuilder() {
+        if (snapshotAtBuilder_ != null) {
+          return snapshotAtBuilder_.getMessageOrBuilder();
+        } else {
+          return snapshotAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : snapshotAt_;
+        }
+      }
+      /**
+       * <pre>
+       * If set, lists entities at a point in time instead of the current time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp snapshot_at = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getSnapshotAtFieldBuilder() {
+        if (snapshotAtBuilder_ == null) {
+          snapshotAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getSnapshotAt(),
+                  getParentForChildren(),
+                  isClean());
+          snapshotAt_ = null;
+        }
+        return snapshotAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10746,23 +11272,26 @@ public final class Spec {
       "itMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364" +
       "\263\007\r!json_gateway:\n\372\370\263\007\005\260\363\263\007\010\"\027\n\025CreateRe" +
       "questMetadata\"$\n\026CreateResponseMetadata:" +
-      "\n\372\370\263\007\005\250\363\263\007\001\"\024\n\022GetRequestMetadata\"!\n\023Get" +
-      "ResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025UpdateRe" +
-      "questMetadata\"$\n\026UpdateResponseMetadata:" +
-      "\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMetadata\"$\n\026" +
-      "DeleteResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"T\n\023Li" +
-      "stRequestMetadata\022\016\n\006cursor\030\001 \001(\t\022\014\n\004pag" +
-      "e\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\022\020\n\010order_by\030\004 \001(\t" +
-      "\":\n\024ListResponseMetadata\022\023\n\013next_cursor\030" +
-      "\001 \001(\t\022\r\n\005total\030\002 \001(\005\"\257\001\n\021RateLimitMetada" +
-      "ta\022\031\n\005limit\030\001 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tremaini" +
-      "ng\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\0228\n\010reset_at\030\003 \001(\0132\032" +
-      ".google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\032" +
-      "\n\006bucket\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030" +
-      "\n\026GenericRequestMetadata\"\031\n\027GenericRespo" +
-      "nseMetadataBR\n\031com.strongdm.api.plumbing" +
-      "Z5github.com/strongdm/strongdm-sdk-go/v3" +
-      "/internal/v1;v1b\006proto3"
+      "\n\372\370\263\007\005\250\363\263\007\001\"E\n\022GetRequestMetadata\022/\n\013sna" +
+      "pshot_at\030\001 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\"!\n\023GetResponseMetadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n" +
+      "\025UpdateRequestMetadata\"$\n\026UpdateResponse" +
+      "Metadata:\n\372\370\263\007\005\250\363\263\007\001\"\027\n\025DeleteRequestMet" +
+      "adata\"$\n\026DeleteResponseMetadata:\n\372\370\263\007\005\250\363" +
+      "\263\007\001\"\205\001\n\023ListRequestMetadata\022\016\n\006cursor\030\001 " +
+      "\001(\t\022\014\n\004page\030\002 \001(\005\022\r\n\005limit\030\003 \001(\005\022\020\n\010orde" +
+      "r_by\030\004 \001(\t\022/\n\013snapshot_at\030\005 \001(\0132\032.google" +
+      ".protobuf.Timestamp\":\n\024ListResponseMetad" +
+      "ata\022\023\n\013next_cursor\030\001 \001(\t\022\r\n\005total\030\002 \001(\005\"" +
+      "\257\001\n\021RateLimitMetadata\022\031\n\005limit\030\001 \001(\003B\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022\035\n\tremaining\030\002 \001(\003B\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "8\n\010reset_at\030\003 \001(\0132\032.google.protobuf.Time" +
+      "stampB\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006bucket\030\004 \001(\tB\n\362\370\263\007\005" +
+      "\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\030\n\026GenericRequestMetad" +
+      "ata\"\031\n\027GenericResponseMetadataBR\n\031com.st" +
+      "rongdm.api.plumbingZ5github.com/strongdm" +
+      "/strongdm-sdk-go/v3/internal/v1;v1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10829,7 +11358,7 @@ public final class Spec {
     internal_static_v1_GetRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_GetRequestMetadata_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "SnapshotAt", });
     internal_static_v1_GetResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_v1_GetResponseMetadata_fieldAccessorTable = new
@@ -10865,7 +11394,7 @@ public final class Spec {
     internal_static_v1_ListRequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ListRequestMetadata_descriptor,
-        new java.lang.String[] { "Cursor", "Page", "Limit", "OrderBy", });
+        new java.lang.String[] { "Cursor", "Page", "Limit", "OrderBy", "SnapshotAt", });
     internal_static_v1_ListResponseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_v1_ListResponseMetadata_fieldAccessorTable = new
