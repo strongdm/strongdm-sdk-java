@@ -880,7 +880,7 @@ public class Plumbing {
     if (plumbing.hasUser()) {
       return convertUserToPorcelain(plumbing.getUser());
     }
-    return null;
+    throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
 
   public static Account convertAccountToPlumbing(com.strongdm.api.Account porcelain) {
@@ -5707,7 +5707,7 @@ public class Plumbing {
     if (plumbing.hasRelay()) {
       return convertRelayToPorcelain(plumbing.getRelay());
     }
-    return null;
+    throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
 
   public static Node convertNodeToPlumbing(com.strongdm.api.Node porcelain) {
@@ -7118,7 +7118,7 @@ public class Plumbing {
     if (plumbing.hasTeradata()) {
       return convertTeradataToPorcelain(plumbing.getTeradata());
     }
-    return null;
+    throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
 
   public static Resource convertResourceToPlumbing(com.strongdm.api.Resource porcelain) {
@@ -8274,7 +8274,7 @@ public class Plumbing {
     if (plumbing.hasVaultToken()) {
       return convertVaultTokenStoreToPorcelain(plumbing.getVaultToken());
     }
-    return null;
+    throw new UnknownException("unknown polymorphic type, please upgrade your SDK");
   }
 
   public static SecretStore convertSecretStoreToPlumbing(com.strongdm.api.SecretStore porcelain) {
