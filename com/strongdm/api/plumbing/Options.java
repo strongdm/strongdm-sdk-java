@@ -826,6 +826,16 @@ public final class Options {
      */
     com.google.protobuf.ByteString
         getTargetsBytes(int index);
+
+    /**
+     * <pre>
+     * if true, will not generate a snapshot utility for the service
+     * </pre>
+     *
+     * <code>bool disable_snapshot_vertical = 1941403;</code>
+     * @return The disableSnapshotVertical.
+     */
+    boolean getDisableSnapshotVertical();
   }
   /**
    * Protobuf type {@code v1.ServiceOptions}
@@ -895,6 +905,11 @@ public final class Options {
               java.lang.String s = input.readStringRequireUtf8();
 
               idPrefix_ = s;
+              break;
+            }
+            case 15531224: {
+
+              disableSnapshotVertical_ = input.readBool();
               break;
             }
             default: {
@@ -1077,6 +1092,21 @@ public final class Options {
       return targets_.getByteString(index);
     }
 
+    public static final int DISABLE_SNAPSHOT_VERTICAL_FIELD_NUMBER = 1941403;
+    private boolean disableSnapshotVertical_;
+    /**
+     * <pre>
+     * if true, will not generate a snapshot utility for the service
+     * </pre>
+     *
+     * <code>bool disable_snapshot_vertical = 1941403;</code>
+     * @return The disableSnapshotVertical.
+     */
+    @java.lang.Override
+    public boolean getDisableSnapshotVertical() {
+      return disableSnapshotVertical_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1099,6 +1129,9 @@ public final class Options {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1941402, idPrefix_);
+      }
+      if (disableSnapshotVertical_ != false) {
+        output.writeBool(1941403, disableSnapshotVertical_);
       }
       unknownFields.writeTo(output);
     }
@@ -1123,6 +1156,10 @@ public final class Options {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(idPrefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1941402, idPrefix_);
       }
+      if (disableSnapshotVertical_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1941403, disableSnapshotVertical_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1144,6 +1181,8 @@ public final class Options {
           .equals(other.getIdPrefix())) return false;
       if (!getTargetsList()
           .equals(other.getTargetsList())) return false;
+      if (getDisableSnapshotVertical()
+          != other.getDisableSnapshotVertical()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1163,6 +1202,9 @@ public final class Options {
         hash = (37 * hash) + TARGETS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetsList().hashCode();
       }
+      hash = (37 * hash) + DISABLE_SNAPSHOT_VERTICAL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDisableSnapshotVertical());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1302,6 +1344,8 @@ public final class Options {
 
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        disableSnapshotVertical_ = false;
+
         return this;
       }
 
@@ -1336,6 +1380,7 @@ public final class Options {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.targets_ = targets_;
+        result.disableSnapshotVertical_ = disableSnapshotVertical_;
         onBuilt();
         return result;
       }
@@ -1401,6 +1446,9 @@ public final class Options {
             targets_.addAll(other.targets_);
           }
           onChanged();
+        }
+        if (other.getDisableSnapshotVertical() != false) {
+          setDisableSnapshotVertical(other.getDisableSnapshotVertical());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1766,6 +1814,49 @@ public final class Options {
   checkByteStringIsUtf8(value);
         ensureTargetsIsMutable();
         targets_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean disableSnapshotVertical_ ;
+      /**
+       * <pre>
+       * if true, will not generate a snapshot utility for the service
+       * </pre>
+       *
+       * <code>bool disable_snapshot_vertical = 1941403;</code>
+       * @return The disableSnapshotVertical.
+       */
+      @java.lang.Override
+      public boolean getDisableSnapshotVertical() {
+        return disableSnapshotVertical_;
+      }
+      /**
+       * <pre>
+       * if true, will not generate a snapshot utility for the service
+       * </pre>
+       *
+       * <code>bool disable_snapshot_vertical = 1941403;</code>
+       * @param value The disableSnapshotVertical to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisableSnapshotVertical(boolean value) {
+        
+        disableSnapshotVertical_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * if true, will not generate a snapshot utility for the service
+       * </pre>
+       *
+       * <code>bool disable_snapshot_vertical = 1941403;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisableSnapshotVertical() {
+        
+        disableSnapshotVertical_ = false;
         onChanged();
         return this;
       }
@@ -7730,7 +7821,7 @@ java.lang.String defaultValue);
     /**
      * <pre>
      * unstable notes entities which require explicit annotation that they
-     * do not have a stable API yet. 
+     * do not have a stable API yet.
      * </pre>
      *
      * <code>bool unstable = 1941313;</code>
@@ -8414,7 +8505,7 @@ java.lang.String defaultValue);
     /**
      * <pre>
      * unstable notes entities which require explicit annotation that they
-     * do not have a stable API yet. 
+     * do not have a stable API yet.
      * </pre>
      *
      * <code>bool unstable = 1941313;</code>
@@ -9781,7 +9872,7 @@ java.lang.String defaultValue);
       /**
        * <pre>
        * unstable notes entities which require explicit annotation that they
-       * do not have a stable API yet. 
+       * do not have a stable API yet.
        * </pre>
        *
        * <code>bool unstable = 1941313;</code>
@@ -9794,7 +9885,7 @@ java.lang.String defaultValue);
       /**
        * <pre>
        * unstable notes entities which require explicit annotation that they
-       * do not have a stable API yet. 
+       * do not have a stable API yet.
        * </pre>
        *
        * <code>bool unstable = 1941313;</code>
@@ -9810,7 +9901,7 @@ java.lang.String defaultValue);
       /**
        * <pre>
        * unstable notes entities which require explicit annotation that they
-       * do not have a stable API yet. 
+       * do not have a stable API yet.
        * </pre>
        *
        * <code>bool unstable = 1941313;</code>
@@ -10737,65 +10828,66 @@ java.lang.String defaultValue);
     java.lang.String[] descriptorData = {
       "\n\roptions.proto\022\002v1\032 google/protobuf/des" +
       "criptor.proto\"9\n\013FileOptions\022\021\n\007targets\030" +
-      "\304\301v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"f\n\016Serv" +
-      "iceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_pr" +
-      "efix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t:\027\372\370\263\007\022\322\363" +
-      "\263\007\r!json_gateway\"e\n\rMethodOptions\022\020\n\006met" +
-      "hod\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecatio" +
-      "n_date\030\266\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"" +
-      "\315\001\n\016MessageOptions\022\023\n\tporcelain\030\265\276v \001(\010\022" +
-      "\017\n\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(" +
-      "\t\022\021\n\007targets\030\272\276v \003(\t\022+\n\016terraform_docs\030\270" +
-      "\276v \001(\0132\021.v1.TerraformDocs\022#\n\006custom\030\271\276v " +
-      "\001(\0132\021.v1.CustomOptions:\027\372\370\263\007\022\322\363\263\007\r!json_" +
-      "gateway\"@\n\014OneofOptions\022\027\n\rcommon_fields" +
-      "\030\205\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\370\003\n\014Fi" +
-      "eldOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010itera" +
-      "ble\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite" +
-      "_only\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris" +
-      "_credential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035" +
-      "\n\023terraform_force_new\030\274\276v \001(\010\022\035\n\023terrafo" +
-      "rm_sensitive\030\276\276v \001(\010\022&\n\034terraform_diff_s" +
-      "uppress_func\030\307\276v \001(\t\022\034\n\022terraform_comput" +
-      "ed\030\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v1.Custom" +
-      "Options\022D\n\022read_only_override\030\300\276v \003(\0132&." +
-      "v1.FieldOptions.ReadOnlyOverrideEntry\022\023\n" +
-      "\tcondition\030\313\276v \001(\t\0327\n\025ReadOnlyOverrideEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263" +
-      "\007\022\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOptions\022\023" +
-      "\n\tconverter\030\275\276v \001(\t\022O\n\027porcelain_type_ov" +
-      "erride\030\276\276v \003(\0132,.v1.CustomOptions.Porcel" +
-      "ainTypeOverrideEntry\022O\n\027porcelain_name_o" +
-      "verride\030\310\276v \003(\0132,.v1.CustomOptions.Porce" +
-      "lainNameOverrideEntry\022B\n\020comment_overrid" +
-      "e\030\323\276v \003(\0132&.v1.CustomOptions.CommentOver" +
-      "rideEntry\022H\n\023deprecated_override\030\300\276v \003(\013" +
-      "2).v1.CustomOptions.DeprecatedOverrideEn" +
-      "try\022\035\n\023terraform_elem_type\030\277\276v \001(\t\022\022\n\010un" +
-      "stable\030\301\276v \001(\010\032<\n\032PorcelainTypeOverrideE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032" +
-      "PorcelainNameOverrideEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverrideEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027De" +
-      "precatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m" +
-      "\n\rTerraformDocs\022\037\n\025resource_example_path" +
-      "\030\264\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v" +
-      " \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file_op" +
-      "tions\022\034.google.protobuf.FileOptions\030\250\302v " +
-      "\001(\0132\017.v1.FileOptions:N\n\017service_options\022" +
-      "\037.google.protobuf.ServiceOptions\030\231\277v \001(\013" +
-      "2\022.v1.ServiceOptions:K\n\016method_options\022\036" +
-      ".google.protobuf.MethodOptions\030\220\277v \001(\0132\021" +
-      ".v1.MethodOptions:N\n\017message_options\022\037.g" +
-      "oogle.protobuf.MessageOptions\030\217\277v \001(\0132\022." +
-      "v1.MessageOptions:H\n\roneof_options\022\035.goo" +
-      "gle.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.O" +
-      "neofOptions:H\n\rfield_options\022\035.google.pr" +
-      "otobuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOp" +
-      "tionsBR\n\031com.strongdm.api.plumbingZ5gith" +
-      "ub.com/strongdm/strongdm-sdk-go/v3/inter" +
-      "nal/v1;v1b\006proto3"
+      "\304\301v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\213\001\n\016Ser" +
+      "viceOptions\022\023\n\tmain_noun\030\230\277v \001(\t\022\023\n\tid_p" +
+      "refix\030\232\277v \001(\t\022\021\n\007targets\030\231\277v \003(\t\022#\n\031disa" +
+      "ble_snapshot_vertical\030\233\277v \001(\010:\027\372\370\263\007\022\322\363\263\007" +
+      "\r!json_gateway\"e\n\rMethodOptions\022\020\n\006metho" +
+      "d\030\264\276v \001(\t\022\r\n\003url\030\265\276v \001(\t\022\032\n\020deprecation_" +
+      "date\030\266\276v \001(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\315\001" +
+      "\n\016MessageOptions\022\023\n\tporcelain\030\265\276v \001(\010\022\017\n" +
+      "\005error\030\266\276v \001(\005\022\027\n\roptions_field\030\267\276v \001(\t\022" +
+      "\021\n\007targets\030\272\276v \003(\t\022+\n\016terraform_docs\030\270\276v" +
+      " \001(\0132\021.v1.TerraformDocs\022#\n\006custom\030\271\276v \001(" +
+      "\0132\021.v1.CustomOptions:\027\372\370\263\007\022\322\363\263\007\r!json_ga" +
+      "teway\"@\n\014OneofOptions\022\027\n\rcommon_fields\030\205" +
+      "\277v \003(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"\370\003\n\014Fiel" +
+      "dOptions\022\023\n\tporcelain\030\266\276v \001(\010\022\022\n\010iterabl" +
+      "e\030\267\276v \001(\010\022\022\n\010required\030\270\276v \001(\010\022\024\n\nwrite_o" +
+      "nly\030\275\276v \001(\010\022\023\n\tread_only\030\303\276v \001(\010\022\027\n\ris_c" +
+      "redential\030\304\276v \001(\010\022\021\n\007targets\030\306\276v \003(\t\022\035\n\023" +
+      "terraform_force_new\030\274\276v \001(\010\022\035\n\023terraform" +
+      "_sensitive\030\276\276v \001(\010\022&\n\034terraform_diff_sup" +
+      "press_func\030\307\276v \001(\t\022\034\n\022terraform_computed" +
+      "\030\312\276v \001(\010\022#\n\006custom\030\271\276v \001(\0132\021.v1.CustomOp" +
+      "tions\022D\n\022read_only_override\030\300\276v \003(\0132&.v1" +
+      ".FieldOptions.ReadOnlyOverrideEntry\022\023\n\tc" +
+      "ondition\030\313\276v \001(\t\0327\n\025ReadOnlyOverrideEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\010:\0028\001:\027\372\370\263\007\022" +
+      "\322\363\263\007\r!json_gateway\"\217\005\n\rCustomOptions\022\023\n\t" +
+      "converter\030\275\276v \001(\t\022O\n\027porcelain_type_over" +
+      "ride\030\276\276v \003(\0132,.v1.CustomOptions.Porcelai" +
+      "nTypeOverrideEntry\022O\n\027porcelain_name_ove" +
+      "rride\030\310\276v \003(\0132,.v1.CustomOptions.Porcela" +
+      "inNameOverrideEntry\022B\n\020comment_override\030" +
+      "\323\276v \003(\0132&.v1.CustomOptions.CommentOverri" +
+      "deEntry\022H\n\023deprecated_override\030\300\276v \003(\0132)" +
+      ".v1.CustomOptions.DeprecatedOverrideEntr" +
+      "y\022\035\n\023terraform_elem_type\030\277\276v \001(\t\022\022\n\010unst" +
+      "able\030\301\276v \001(\010\032<\n\032PorcelainTypeOverrideEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032<\n\032Po" +
+      "rcelainNameOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\0326\n\024CommentOverrideEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0329\n\027Depr" +
+      "ecatedOverrideEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\010:\0028\001:\027\372\370\263\007\022\322\363\263\007\r!json_gateway\"m\n\r" +
+      "TerraformDocs\022\037\n\025resource_example_path\030\264" +
+      "\276v \001(\t\022\"\n\030data_source_example_path\030\265\276v \001" +
+      "(\t:\027\372\370\263\007\022\322\363\263\007\r!json_gateway:E\n\014file_opti" +
+      "ons\022\034.google.protobuf.FileOptions\030\250\302v \001(" +
+      "\0132\017.v1.FileOptions:N\n\017service_options\022\037." +
+      "google.protobuf.ServiceOptions\030\231\277v \001(\0132\022" +
+      ".v1.ServiceOptions:K\n\016method_options\022\036.g" +
+      "oogle.protobuf.MethodOptions\030\220\277v \001(\0132\021.v" +
+      "1.MethodOptions:N\n\017message_options\022\037.goo" +
+      "gle.protobuf.MessageOptions\030\217\277v \001(\0132\022.v1" +
+      ".MessageOptions:H\n\roneof_options\022\035.googl" +
+      "e.protobuf.OneofOptions\030\205\277v \001(\0132\020.v1.One" +
+      "ofOptions:H\n\rfield_options\022\035.google.prot" +
+      "obuf.FieldOptions\030\216\277v \001(\0132\020.v1.FieldOpti" +
+      "onsBR\n\031com.strongdm.api.plumbingZ5github" +
+      ".com/strongdm/strongdm-sdk-go/v3/interna" +
+      "l/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10813,7 +10905,7 @@ java.lang.String defaultValue);
     internal_static_v1_ServiceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_ServiceOptions_descriptor,
-        new java.lang.String[] { "MainNoun", "IdPrefix", "Targets", });
+        new java.lang.String[] { "MainNoun", "IdPrefix", "Targets", "DisableSnapshotVertical", });
     internal_static_v1_MethodOptions_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_v1_MethodOptions_fieldAccessorTable = new
