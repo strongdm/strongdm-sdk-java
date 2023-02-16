@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * DelineaStore is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class DelineaStore implements SecretStore {
   private String id;
   /** Unique identifier of the SecretStore. */

@@ -17,6 +17,7 @@
 
 package com.strongdm.api.plumbing;
 
+import com.google.protobuf.Duration;
 import com.google.protobuf.Timestamp;
 import com.google.rpc.Code;
 import com.strongdm.api.AlreadyExistsException;
@@ -84,6 +85,14 @@ public class Plumbing {
 
   public static Date convertTimestampToPorcelain(Timestamp t) {
     return new Date(t.getSeconds() * 1000 + t.getNanos() / 1000000);
+  }
+
+  public static Duration convertDurationToPlumbing(java.time.Duration d) {
+    return Duration.newBuilder().setSeconds(d.getSeconds()).setNanos(d.getNano()).build();
+  }
+
+  public static java.time.Duration convertDurationToPorcelain(Duration d) {
+    return java.time.Duration.ofSeconds(d.getSeconds()).plusNanos(d.getNanos());
   }
 
   public static java.util.Map<String, String> convertTagsToPorcelain(Tags plumbing) {

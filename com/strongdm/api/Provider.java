@@ -18,6 +18,7 @@ package com.strongdm.api;
 
 // Providers responsible for managing roles and users.
 // None, or an empty string, implies the user is managed by strongDM.
+// Deprecated: Please use SCIMProvider instead.
 public final class Provider {
   public static final String NONE = "";
   public static final String OKTA = "okta";
