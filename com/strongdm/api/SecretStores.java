@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.SecretStoresGrpc;
 import com.strongdm.api.plumbing.SecretStoresPlumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -30,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /** SecretStores are servers where resource secrets (passwords, keys) are stored. */
-public class SecretStores {
+public class SecretStores implements SnapshotSecretStores {
   private final SecretStoresGrpc.SecretStoresBlockingStub stub;
   private final Client parent;
 
@@ -82,6 +83,11 @@ public class SecretStores {
   public SecretStoreGetResponse get(String id) throws RpcException {
     SecretStoresPlumbing.SecretStoreGetRequest.Builder builder =
         SecretStoresPlumbing.SecretStoreGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     SecretStoresPlumbing.SecretStoreGetRequest req = builder.build();
     SecretStoresPlumbing.SecretStoreGetResponse plumbingResponse;
@@ -165,6 +171,9 @@ public class SecretStores {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

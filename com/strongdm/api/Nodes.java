@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.NodesPlumbing;
 import com.strongdm.api.plumbing.PageIterator;
 import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -36,7 +37,7 @@ import java.util.function.Supplier;
  * are used to extend the strongDM network into segmented subnets. They provide access to databases
  * and servers but do not listen for incoming connections.
  */
-public class Nodes {
+public class Nodes implements SnapshotNodes {
   private final NodesGrpc.NodesBlockingStub stub;
   private final Client parent;
 
@@ -86,6 +87,11 @@ public class Nodes {
   /** Get reads one Node by ID. */
   public NodeGetResponse get(String id) throws RpcException {
     NodesPlumbing.NodeGetRequest.Builder builder = NodesPlumbing.NodeGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     NodesPlumbing.NodeGetRequest req = builder.build();
     NodesPlumbing.NodeGetResponse plumbingResponse;
@@ -166,6 +172,9 @@ public class Nodes {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

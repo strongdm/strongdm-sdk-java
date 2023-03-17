@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.AccountGrantsPlumbing;
 import com.strongdm.api.plumbing.PageIterator;
 import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ import java.util.function.Supplier;
  * AccountGrants assign a resource directly to an account, giving the account the permission to
  * connect to that resource.
  */
-public class AccountGrants {
+public class AccountGrants implements SnapshotAccountGrants {
   private final AccountGrantsGrpc.AccountGrantsBlockingStub stub;
   private final Client parent;
 
@@ -85,6 +86,11 @@ public class AccountGrants {
   public AccountGrantGetResponse get(String id) throws RpcException {
     AccountGrantsPlumbing.AccountGrantGetRequest.Builder builder =
         AccountGrantsPlumbing.AccountGrantGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     AccountGrantsPlumbing.AccountGrantGetRequest req = builder.build();
     AccountGrantsPlumbing.AccountGrantGetResponse plumbingResponse;
@@ -142,6 +148,9 @@ public class AccountGrants {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

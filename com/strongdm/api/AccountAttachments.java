@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.AccountAttachmentsPlumbing;
 import com.strongdm.api.plumbing.PageIterator;
 import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -30,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /** AccountAttachments assign an account to a role. */
-public class AccountAttachments {
+public class AccountAttachments implements SnapshotAccountAttachments {
   private final AccountAttachmentsGrpc.AccountAttachmentsBlockingStub stub;
   private final Client parent;
 
@@ -85,6 +86,11 @@ public class AccountAttachments {
   public AccountAttachmentGetResponse get(String id) throws RpcException {
     AccountAttachmentsPlumbing.AccountAttachmentGetRequest.Builder builder =
         AccountAttachmentsPlumbing.AccountAttachmentGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     AccountAttachmentsPlumbing.AccountAttachmentGetRequest req = builder.build();
     AccountAttachmentsPlumbing.AccountAttachmentGetResponse plumbingResponse;
@@ -143,6 +149,9 @@ public class AccountAttachments {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

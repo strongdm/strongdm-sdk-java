@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.RemoteIdentityGroupsGrpc;
 import com.strongdm.api.plumbing.RemoteIdentityGroupsPlumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ import java.util.function.Supplier;
  * A RemoteIdentityGroup is a named grouping of Remote Identities for Accounts. An Account's
  * relationship to a RemoteIdentityGroup is defined via RemoteIdentity objects.
  */
-public class RemoteIdentityGroups {
+public class RemoteIdentityGroups implements SnapshotRemoteIdentityGroups {
   private final RemoteIdentityGroupsGrpc.RemoteIdentityGroupsBlockingStub stub;
   private final Client parent;
 
@@ -60,6 +61,11 @@ public class RemoteIdentityGroups {
   public RemoteIdentityGroupGetResponse get(String id) throws RpcException {
     RemoteIdentityGroupsPlumbing.RemoteIdentityGroupGetRequest.Builder builder =
         RemoteIdentityGroupsPlumbing.RemoteIdentityGroupGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     RemoteIdentityGroupsPlumbing.RemoteIdentityGroupGetRequest req = builder.build();
     RemoteIdentityGroupsPlumbing.RemoteIdentityGroupGetResponse plumbingResponse;
@@ -92,6 +98,9 @@ public class RemoteIdentityGroups {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

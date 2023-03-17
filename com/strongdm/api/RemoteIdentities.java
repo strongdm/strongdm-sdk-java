@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.RemoteIdentitiesGrpc;
 import com.strongdm.api.plumbing.RemoteIdentitiesPlumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ import java.util.function.Supplier;
  * RemoteIdentities assign a resource directly to an account, giving the account the permission to
  * connect to that resource.
  */
-public class RemoteIdentities {
+public class RemoteIdentities implements SnapshotRemoteIdentities {
   private final RemoteIdentitiesGrpc.RemoteIdentitiesBlockingStub stub;
   private final Client parent;
 
@@ -85,6 +86,11 @@ public class RemoteIdentities {
   public RemoteIdentityGetResponse get(String id) throws RpcException {
     RemoteIdentitiesPlumbing.RemoteIdentityGetRequest.Builder builder =
         RemoteIdentitiesPlumbing.RemoteIdentityGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     RemoteIdentitiesPlumbing.RemoteIdentityGetRequest req = builder.build();
     RemoteIdentitiesPlumbing.RemoteIdentityGetResponse plumbingResponse;
@@ -168,6 +174,9 @@ public class RemoteIdentities {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

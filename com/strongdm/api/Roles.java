@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.RolesGrpc;
 import com.strongdm.api.plumbing.RolesPlumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ import java.util.function.Supplier;
  * A Role has a list of access rules which determine which Resources the members of the Role have
  * access to. An Account can be a member of multiple Roles via AccountAttachments.
  */
-public class Roles {
+public class Roles implements SnapshotRoles {
   private final RolesGrpc.RolesBlockingStub stub;
   private final Client parent;
 
@@ -83,6 +84,11 @@ public class Roles {
   /** Get reads one Role by ID. */
   public RoleGetResponse get(String id) throws RpcException {
     RolesPlumbing.RoleGetRequest.Builder builder = RolesPlumbing.RoleGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     RolesPlumbing.RoleGetRequest req = builder.build();
     RolesPlumbing.RoleGetResponse plumbingResponse;
@@ -163,6 +169,9 @@ public class Roles {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

@@ -25,6 +25,7 @@ import io.grpc.netty.NettyChannelBuilder;
 import java.security.MessageDigest;
 import java.util.Base64;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -47,14 +48,22 @@ public class Client {
   private int maxRetries;
   private int baseRetryDelay;
   private int maxRetryDelay;
-  private final AccountAttachments accountAttachments;
+  protected Date snapshotDate;
+  protected final AccountAttachments accountAttachments;
 
   /** AccountAttachments assign an account to a role. */
   public AccountAttachments accountAttachments() {
     return this.accountAttachments;
   }
 
-  private final AccountGrants accountGrants;
+  protected final AccountAttachmentsHistory accountAttachmentsHistory;
+
+  /** AccountAttachmentsHistory records all changes to the state of an AccountAttachment. */
+  public AccountAttachmentsHistory accountAttachmentsHistory() {
+    return this.accountAttachmentsHistory;
+  }
+
+  protected final AccountGrants accountGrants;
 
   /**
    * AccountGrants assign a resource directly to an account, giving the account the permission to
@@ -64,7 +73,34 @@ public class Client {
     return this.accountGrants;
   }
 
-  private final Accounts accounts;
+  protected final AccountGrantsHistory accountGrantsHistory;
+
+  /** AccountGrantsHistory records all changes to the state of an AccountGrant. */
+  public AccountGrantsHistory accountGrantsHistory() {
+    return this.accountGrantsHistory;
+  }
+
+  protected final AccountPermissions accountPermissions;
+
+  /**
+   * AccountPermissions records the granular permissions accounts have, allowing them to execute
+   * relevant commands via StrongDM's APIs.
+   */
+  public AccountPermissions accountPermissions() {
+    return this.accountPermissions;
+  }
+
+  protected final AccountResources accountResources;
+
+  /**
+   * AccountResources enumerates the resources to which accounts have access. The AccountResources
+   * service is read-only.
+   */
+  public AccountResources accountResources() {
+    return this.accountResources;
+  }
+
+  protected final Accounts accounts;
 
   /**
    * Accounts are users that have access to strongDM. There are two types of accounts: 1. **Users:**
@@ -75,14 +111,31 @@ public class Client {
     return this.accounts;
   }
 
-  private final ControlPanel controlPanel;
+  protected final AccountsHistory accountsHistory;
+
+  /** AccountsHistory records all changes to the state of an Account. */
+  public AccountsHistory accountsHistory() {
+    return this.accountsHistory;
+  }
+
+  protected final Activities activities;
+
+  /**
+   * An Activity is a record of an action taken against a strongDM deployment, e.g. a user creation,
+   * resource deletion, sso configuration change, etc. The Activities service is read-only.
+   */
+  public Activities activities() {
+    return this.activities;
+  }
+
+  protected final ControlPanel controlPanel;
 
   /** ControlPanel contains all administrative controls. */
   public ControlPanel controlPanel() {
     return this.controlPanel;
   }
 
-  private final Nodes nodes;
+  protected final Nodes nodes;
 
   /**
    * Nodes make up the strongDM network, and allow your users to connect securely to your resources.
@@ -95,7 +148,32 @@ public class Client {
     return this.nodes;
   }
 
-  private final RemoteIdentities remoteIdentities;
+  protected final NodesHistory nodesHistory;
+
+  /** NodesHistory records all changes to the state of a Node. */
+  public NodesHistory nodesHistory() {
+    return this.nodesHistory;
+  }
+
+  protected final OrganizationHistory organizationHistory;
+
+  /** OrganizationHistory records all changes to the state of an Organization. */
+  public OrganizationHistory organizationHistory() {
+    return this.organizationHistory;
+  }
+
+  protected final Queries queries;
+
+  /**
+   * A Query is a record of a single client request to a resource, such as an SQL query.
+   * Long-running SSH, RDP, or Kubernetes interactive sessions also count as queries. The Queries
+   * service is read-only.
+   */
+  public Queries queries() {
+    return this.queries;
+  }
+
+  protected final RemoteIdentities remoteIdentities;
 
   /**
    * RemoteIdentities assign a resource directly to an account, giving the account the permission to
@@ -105,7 +183,14 @@ public class Client {
     return this.remoteIdentities;
   }
 
-  private final RemoteIdentityGroups remoteIdentityGroups;
+  protected final RemoteIdentitiesHistory remoteIdentitiesHistory;
+
+  /** RemoteIdentitiesHistory records all changes to the state of a RemoteIdentity. */
+  public RemoteIdentitiesHistory remoteIdentitiesHistory() {
+    return this.remoteIdentitiesHistory;
+  }
+
+  protected final RemoteIdentityGroups remoteIdentityGroups;
 
   /**
    * A RemoteIdentityGroup is a named grouping of Remote Identities for Accounts. An Account's
@@ -115,7 +200,24 @@ public class Client {
     return this.remoteIdentityGroups;
   }
 
-  private final Resources resources;
+  protected final RemoteIdentityGroupsHistory remoteIdentityGroupsHistory;
+
+  /** RemoteIdentityGroupsHistory records all changes to the state of a RemoteIdentityGroup. */
+  public RemoteIdentityGroupsHistory remoteIdentityGroupsHistory() {
+    return this.remoteIdentityGroupsHistory;
+  }
+
+  protected final Replays replays;
+
+  /**
+   * A Replay captures the data transferred over a long-running SSH, RDP, or Kubernetes interactive
+   * session (otherwise referred to as a query). The Replays service is read-only.
+   */
+  public Replays replays() {
+    return this.replays;
+  }
+
+  protected final Resources resources;
 
   /**
    * Resources are databases, servers, clusters, websites, or clouds that strongDM delegates access
@@ -125,7 +227,31 @@ public class Client {
     return this.resources;
   }
 
-  private final Roles roles;
+  protected final ResourcesHistory resourcesHistory;
+
+  /** ResourcesHistory records all changes to the state of a Resource. */
+  public ResourcesHistory resourcesHistory() {
+    return this.resourcesHistory;
+  }
+
+  protected final RoleResources roleResources;
+
+  /**
+   * RoleResources enumerates the resources to which roles have access. The RoleResources service is
+   * read-only.
+   */
+  public RoleResources roleResources() {
+    return this.roleResources;
+  }
+
+  protected final RoleResourcesHistory roleResourcesHistory;
+
+  /** RoleResourcesHistory records all changes to the state of a RoleResource. */
+  public RoleResourcesHistory roleResourcesHistory() {
+    return this.roleResourcesHistory;
+  }
+
+  protected final Roles roles;
 
   /**
    * A Role has a list of access rules which determine which Resources the members of the Role have
@@ -135,15 +261,68 @@ public class Client {
     return this.roles;
   }
 
-  private final SecretStores secretStores;
+  protected final RolesHistory rolesHistory;
+
+  /** RolesHistory records all changes to the state of a Role. */
+  public RolesHistory rolesHistory() {
+    return this.rolesHistory;
+  }
+
+  protected final SecretStores secretStores;
 
   /** SecretStores are servers where resource secrets (passwords, keys) are stored. */
   public SecretStores secretStores() {
     return this.secretStores;
   }
+
+  protected final SecretStoresHistory secretStoresHistory;
+
+  /** SecretStoresHistory records all changes to the state of a SecretStore. */
+  public SecretStoresHistory secretStoresHistory() {
+    return this.secretStoresHistory;
+  }
   /** Creates a new strongDM API client. */
   public Client(String apiAccessKey, String apiSecretKey) throws RpcException {
     this(apiAccessKey, apiSecretKey, new ClientOptions());
+  }
+
+  private Client(Client client) {
+    this.apiAccessKey = client.apiAccessKey;
+    this.apiSecretKey = client.apiSecretKey;
+    this.maxRetries = client.defaultMaxRetries;
+    this.baseRetryDelay = client.defaultBaseRetryDelay;
+    this.maxRetryDelay = client.defaultMaxRetryDelay;
+    this.exposeRateLimitErrors = client.exposeRateLimitErrors;
+    this.channel = client.channel;
+    this.snapshotDate = client.snapshotDate;
+    this.accountAttachments = new AccountAttachments(this.channel, this);
+    this.accountAttachmentsHistory = new AccountAttachmentsHistory(this.channel, this);
+    this.accountGrants = new AccountGrants(this.channel, this);
+    this.accountGrantsHistory = new AccountGrantsHistory(this.channel, this);
+    this.accountPermissions = new AccountPermissions(this.channel, this);
+    this.accountResources = new AccountResources(this.channel, this);
+    this.accounts = new Accounts(this.channel, this);
+    this.accountsHistory = new AccountsHistory(this.channel, this);
+    this.activities = new Activities(this.channel, this);
+    this.controlPanel = new ControlPanel(this.channel, this);
+    this.nodes = new Nodes(this.channel, this);
+    this.nodesHistory = new NodesHistory(this.channel, this);
+    this.organizationHistory = new OrganizationHistory(this.channel, this);
+    this.queries = new Queries(this.channel, this);
+    this.remoteIdentities = new RemoteIdentities(this.channel, this);
+    this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);
+    this.remoteIdentityGroups = new RemoteIdentityGroups(this.channel, this);
+    this.remoteIdentityGroupsHistory = new RemoteIdentityGroupsHistory(this.channel, this);
+    this.replays = new Replays(this.channel, this);
+    this.resources = new Resources(this.channel, this);
+    this.resourcesHistory = new ResourcesHistory(this.channel, this);
+    this.roleResources = new RoleResources(this.channel, this);
+    this.roleResourcesHistory = new RoleResourcesHistory(this.channel, this);
+    this.roles = new Roles(this.channel, this);
+    this.rolesHistory = new RolesHistory(this.channel, this);
+    this.secretStores = new SecretStores(this.channel, this);
+    this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
+    this.testOptions = client.testOptions;
   }
 
   /** Creates a new strongDM API client with extra options. */
@@ -165,19 +344,42 @@ public class Client {
       }
       this.channel = builder.build();
       this.accountAttachments = new AccountAttachments(this.channel, this);
+      this.accountAttachmentsHistory = new AccountAttachmentsHistory(this.channel, this);
       this.accountGrants = new AccountGrants(this.channel, this);
+      this.accountGrantsHistory = new AccountGrantsHistory(this.channel, this);
+      this.accountPermissions = new AccountPermissions(this.channel, this);
+      this.accountResources = new AccountResources(this.channel, this);
       this.accounts = new Accounts(this.channel, this);
+      this.accountsHistory = new AccountsHistory(this.channel, this);
+      this.activities = new Activities(this.channel, this);
       this.controlPanel = new ControlPanel(this.channel, this);
       this.nodes = new Nodes(this.channel, this);
+      this.nodesHistory = new NodesHistory(this.channel, this);
+      this.organizationHistory = new OrganizationHistory(this.channel, this);
+      this.queries = new Queries(this.channel, this);
       this.remoteIdentities = new RemoteIdentities(this.channel, this);
+      this.remoteIdentitiesHistory = new RemoteIdentitiesHistory(this.channel, this);
       this.remoteIdentityGroups = new RemoteIdentityGroups(this.channel, this);
+      this.remoteIdentityGroupsHistory = new RemoteIdentityGroupsHistory(this.channel, this);
+      this.replays = new Replays(this.channel, this);
       this.resources = new Resources(this.channel, this);
+      this.resourcesHistory = new ResourcesHistory(this.channel, this);
+      this.roleResources = new RoleResources(this.channel, this);
+      this.roleResourcesHistory = new RoleResourcesHistory(this.channel, this);
       this.roles = new Roles(this.channel, this);
+      this.rolesHistory = new RolesHistory(this.channel, this);
       this.secretStores = new SecretStores(this.channel, this);
+      this.secretStoresHistory = new SecretStoresHistory(this.channel, this);
     } catch (Exception e) {
       throw Plumbing.convertExceptionToPorcelain(e);
     }
     this.testOptions = new HashMap<String, Object>();
+  }
+
+  public SnapshotClient snapshotAt(Date date) {
+    Client copy = new Client(this);
+    copy.snapshotDate = date;
+    return new SnapshotClient(copy);
   }
 
   protected io.grpc.CallCredentials getCallCredentials(

@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.AccountsPlumbing;
 import com.strongdm.api.plumbing.PageIterator;
 import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -34,7 +35,7 @@ import java.util.function.Supplier;
  * humans who are authenticated through username and password or SSO. 2. **Service Accounts:**
  * machines that are authenticated using a service token.
  */
-public class Accounts {
+public class Accounts implements SnapshotAccounts {
   private final AccountsGrpc.AccountsBlockingStub stub;
   private final Client parent;
 
@@ -86,6 +87,11 @@ public class Accounts {
   public AccountGetResponse get(String id) throws RpcException {
     AccountsPlumbing.AccountGetRequest.Builder builder =
         AccountsPlumbing.AccountGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     AccountsPlumbing.AccountGetRequest req = builder.build();
     AccountsPlumbing.AccountGetResponse plumbingResponse;
@@ -169,6 +175,9 @@ public class Accounts {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 

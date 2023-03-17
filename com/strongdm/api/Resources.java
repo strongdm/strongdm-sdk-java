@@ -22,6 +22,7 @@ import com.strongdm.api.plumbing.PageResult;
 import com.strongdm.api.plumbing.Plumbing;
 import com.strongdm.api.plumbing.ResourcesGrpc;
 import com.strongdm.api.plumbing.ResourcesPlumbing;
+import com.strongdm.api.plumbing.Spec.GetRequestMetadata;
 import com.strongdm.api.plumbing.Spec.ListRequestMetadata;
 import io.grpc.ManagedChannel;
 import java.util.Iterator;
@@ -33,7 +34,7 @@ import java.util.function.Supplier;
  * Resources are databases, servers, clusters, websites, or clouds that strongDM delegates access
  * to.
  */
-public class Resources {
+public class Resources implements SnapshotResources {
   private final ResourcesGrpc.ResourcesBlockingStub stub;
   private final Client parent;
 
@@ -64,6 +65,9 @@ public class Resources {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 
@@ -136,6 +140,11 @@ public class Resources {
   public ResourceGetResponse get(String id) throws RpcException {
     ResourcesPlumbing.ResourceGetRequest.Builder builder =
         ResourcesPlumbing.ResourceGetRequest.newBuilder();
+    if (this.parent.snapshotDate != null) {
+      GetRequestMetadata.Builder metaBuilder = GetRequestMetadata.newBuilder();
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
+      builder.setMeta(metaBuilder);
+    }
     builder.setId((id));
     ResourcesPlumbing.ResourceGetRequest req = builder.build();
     ResourcesPlumbing.ResourceGetResponse plumbingResponse;
@@ -219,6 +228,9 @@ public class Resources {
     Object pageSizeOption = this.parent.testOptions.get("PageSize");
     if (pageSizeOption instanceof Integer) {
       metaBuilder.setLimit((int) pageSizeOption);
+    }
+    if (this.parent.snapshotDate != null) {
+      metaBuilder.setSnapshotAt(Plumbing.convertTimestampToPlumbing(this.parent.snapshotDate));
     }
     builder.setMeta(metaBuilder);
 
