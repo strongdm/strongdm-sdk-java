@@ -3793,31 +3793,36 @@ public final class RemoteIdentityGroupsHistoryPlumbing {
       "\n$remote_identity_groups_history.proto\022\002" +
       "v1\032\037google/protobuf/timestamp.proto\032\034rem" +
       "ote_identity_groups.proto\032\roptions.proto" +
-      "\032\nspec.proto\"j\n%RemoteIdentityGroupHisto" +
-      "ryListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListReq" +
-      "uestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
-      "\"\346\001\n&RemoteIdentityGroupHistoryListRespo" +
-      "nse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMetad" +
-      "ata\022;\n\007history\030\002 \003(\0132\036.v1.RemoteIdentity" +
-      "GroupHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003" +
-      " \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362" +
-      "\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\204\002\n\032Re" +
-      "moteIdentityGroupHistory\022\037\n\013activity_id\030" +
-      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022B\n\025" +
-      "remote_identity_group\030\003 \001(\0132\027.v1.RemoteI" +
-      "dentityGroupB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004" +
-      " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\350\001\n\033RemoteIdentityGroup" +
-      "sHistory\022\230\001\n\004List\022).v1.RemoteIdentityGro" +
-      "upHistoryListRequest\032*.v1.RemoteIdentity" +
-      "GroupHistoryListResponse\"9\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007\'\252\363\263\007\"/v1/remote-identity_groups-hist" +
-      "ory\032.\312\371\263\007\037\302\371\263\007\032RemoteIdentityGroupHistor" +
-      "y\312\371\263\007\005\330\371\263\007\001Bw\n\031com.strongdm.api.plumbing" +
-      "B#RemoteIdentityGroupsHistoryPlumbingZ5g" +
-      "ithub.com/strongdm/strongdm-sdk-go/v3/in" +
-      "ternal/v1;v1b\006proto3"
+      "\032\nspec.proto\"\224\001\n%RemoteIdentityGroupHist" +
+      "oryListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRe" +
+      "questMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
+      "\001:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provi" +
+      "der\"\220\002\n&RemoteIdentityGroupHistoryListRe" +
+      "sponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResponseMe" +
+      "tadata\022;\n\007history\030\002 \003(\0132\036.v1.RemoteIdent" +
+      "ityGroupHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limi" +
+      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263" +
+      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:(\372\370" +
+      "\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\254" +
+      "\002\n\032RemoteIdentityGroupHistory\022\037\n\013activit" +
+      "y_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(" +
+      "\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022B\n\025remote_identity_group\030\003 \001(\0132\027.v1.Re" +
+      "moteIdentityGroupB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted" +
+      "_at\030\004 \001(\0132\032.google.protobuf.TimestampB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263" +
+      "\007\023!terraform-provider2\220\002\n\033RemoteIdentity" +
+      "GroupsHistory\022\230\001\n\004List\022).v1.RemoteIdenti" +
+      "tyGroupHistoryListRequest\032*.v1.RemoteIde" +
+      "ntityGroupHistoryListResponse\"9\202\371\263\007\010\242\363\263\007" +
+      "\003get\202\371\263\007\'\252\363\263\007\"/v1/remote-identity_groups" +
+      "-history\032V\312\371\263\007\037\302\371\263\007\032RemoteIdentityGroupH" +
+      "istory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!te" +
+      "rraform-providerB\237\001\n\031com.strongdm.api.pl" +
+      "umbingB#RemoteIdentityGroupsHistoryPlumb" +
+      "ingZ5github.com/strongdm/strongdm-sdk-go" +
+      "/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!" +
+      "terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3848,6 +3853,7 @@ public final class RemoteIdentityGroupsHistoryPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

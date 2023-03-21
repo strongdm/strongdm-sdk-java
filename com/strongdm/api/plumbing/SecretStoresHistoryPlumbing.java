@@ -3793,28 +3793,33 @@ public final class SecretStoresHistoryPlumbing {
       "\n\033secret_stores_history.proto\022\002v1\032\037googl" +
       "e/protobuf/timestamp.proto\032\030secret_store" +
       "_types.proto\032\roptions.proto\032\nspec.proto\"" +
-      "b\n\035SecretStoreHistoryListRequest\022%\n\004meta" +
-      "\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filte" +
-      "r\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\326\001\n\036SecretStoreHisto" +
-      "ryListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRe" +
-      "sponseMetadata\0223\n\007history\030\002 \003(\0132\026.v1.Sec" +
-      "retStoreHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limi" +
-      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\353\001\n" +
-      "\022SecretStoreHistory\022\037\n\013activity_id\030\001 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.google" +
-      ".protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014secre" +
-      "t_store\030\003 \001(\0132\017.v1.SecretStoreB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google.protobuf" +
-      ".TimestampB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\276\001\n\023S" +
-      "ecretStoresHistory\022\177\n\004List\022!.v1.SecretSt" +
-      "oreHistoryListRequest\032\".v1.SecretStoreHi" +
-      "storyListResponse\"0\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\036\252\363\263" +
-      "\007\031/v1/secret-stores-history\032&\312\371\263\007\027\302\371\263\007\022S" +
-      "ecretStoreHistory\312\371\263\007\005\330\371\263\007\001Bo\n\031com.stron" +
-      "gdm.api.plumbingB\033SecretStoresHistoryPlu" +
-      "mbingZ5github.com/strongdm/strongdm-sdk-" +
-      "go/v3/internal/v1;v1b\006proto3"
+      "\214\001\n\035SecretStoreHistoryListRequest\022%\n\004met" +
+      "a\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filt" +
+      "er\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363" +
+      "\263\007\023!terraform-provider\"\200\002\n\036SecretStoreHi" +
+      "storyListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Lis" +
+      "tResponseMetadata\0223\n\007history\030\002 \003(\0132\026.v1." +
+      "SecretStoreHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_l" +
+      "imit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:" +
+      "(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
+      "r\"\223\002\n\022SecretStoreHistory\022\037\n\013activity_id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0221\n\014" +
+      "secret_store\030\003 \001(\0132\017.v1.SecretStoreB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372" +
+      "\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2" +
+      "\346\001\n\023SecretStoresHistory\022\177\n\004List\022!.v1.Sec" +
+      "retStoreHistoryListRequest\032\".v1.SecretSt" +
+      "oreHistoryListResponse\"0\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
+      "\007\036\252\363\263\007\031/v1/secret-stores-history\032N\312\371\263\007\027\302" +
+      "\371\263\007\022SecretStoreHistory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263" +
+      "\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\227\001\n\031com" +
+      ".strongdm.api.plumbingB\033SecretStoresHist" +
+      "oryPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264" +
+      "\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3845,6 +3850,7 @@ public final class SecretStoresHistoryPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

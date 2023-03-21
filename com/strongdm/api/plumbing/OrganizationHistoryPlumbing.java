@@ -8422,60 +8422,67 @@ public final class OrganizationHistoryPlumbing {
       "\n\032organization_history.proto\022\002v1\032\036google" +
       "/protobuf/duration.proto\032\037google/protobu" +
       "f/timestamp.proto\032\roptions.proto\032\nspec.p" +
-      "roto\"c\n\036OrganizationHistoryListRequest\022%" +
-      "\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n" +
-      "\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\336\001\n\037Organizati" +
-      "onHistoryListResponse\022&\n\004meta\030\001 \001(\0132\030.v1" +
-      ".ListResponseMetadata\022:\n\007history\030\002 \003(\0132\035" +
-      ".v1.OrganizationHistoryRecordB\n\362\370\263\007\005\270\363\263\007" +
-      "\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMeta" +
-      "dataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!js" +
-      "on_gateway\"\267\001\n\031OrganizationHistoryRecord" +
-      "\022\037\n\013activity_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttim" +
-      "estamp\030\002 \001(\0132\032.google.protobuf.Timestamp" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132\020.v1." +
-      "OrganizationB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\245\n\n" +
-      "\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      ":\n\ncreated_at\030\002 \001(\0132\032.google.protobuf.Ti" +
-      "mestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003 \001(\0132" +
-      "\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022" +
-      "!\n\rauth_provider\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022(\n\024id" +
-      "le_timeout_enabled\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022;\n\014" +
-      "idle_timeout\030\006 \001(\0132\031.google.protobuf.Dur" +
-      "ationB\n\362\370\263\007\005\260\363\263\007\001\022+\n\027session_timeout_ena" +
-      "bled\030\007 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022>\n\017session_timeou" +
-      "t\030\010 \001(\0132\031.google.protobuf.DurationB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\0229\n\013mfa_enabled\030\t \001(\010B$\362\370\263\007\037\260\363\263\007\001\312" +
-      "\363\263\007\025\302\364\263\007\020\n\002go\022\nMFAEnabled\022;\n\014mfa_provide" +
-      "r\030\n \001(\tB%\362\370\263\007 \260\363\263\007\001\312\363\263\007\026\302\364\263\007\021\n\002go\022\013MFAPr" +
-      "ovider\022&\n\022log_remote_encoder\030\013 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\022%\n\021log_local_storage\030\014 \001(\tB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022%\n\021log_local_encoder\030\r \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022$\n\020log_local_format\030\016 \001(\tB\n\362\370\263\007\005\260\363\263" +
-      "\007\001\022@\n\017log_tcp_address\030\017 \001(\tB\'\362\370\263\007\"\260\363\263\007\001\312" +
-      "\363\263\007\030\302\364\263\007\023\n\002go\022\rLogTCPAddress\022#\n\017log_sock" +
-      "et_path\030\020 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022=\n\rscim_provid" +
-      "er\030\021 \001(\tB&\362\370\263\007!\260\363\263\007\001\312\363\263\007\027\302\364\263\007\022\n\002go\022\014SCIM" +
-      "Provider\022&\n\022websites_subdomain\030\022 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022h\n$ssh_certificate_authority_pu" +
-      "blic_key\030\023 \001(\tB:\362\370\263\0075\260\363\263\007\001\312\363\263\007+\302\364\263\007&\n\002go" +
-      "\022 SSHCertificateAuthorityPublicKey\022\204\001\n$s" +
-      "sh_certificate_authority_updated_at\030\024 \001(" +
-      "\0132\032.google.protobuf.TimestampB:\362\370\263\0075\260\363\263\007" +
-      "\001\312\363\263\007+\302\364\263\007&\n\002go\022 SSHCertificateAuthority" +
-      "UpdatedAt\022(\n\024require_secret_store\030\025 \001(\010B" +
-      "\n\362\370\263\007\005\260\363\263\007\001\022#\n\017sensitive_label\030\026 \001(\tB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022D\n\021saml_metadata_url\030\027 \001(\tB)\362\370\263" +
-      "\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017SAMLMetadataURL\022\030" +
-      "\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\307\001\n" +
-      "\023OrganizationHistory\022\200\001\n\004List\022\".v1.Organ" +
-      "izationHistoryListRequest\032#.v1.Organizat" +
-      "ionHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003get\202\371\263" +
-      "\007\035\252\363\263\007\030/v1/organization-history\032-\312\371\263\007\036\302\371" +
-      "\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371\263\007\001Bo" +
-      "\n\031com.strongdm.api.plumbingB\033Organizatio" +
-      "nHistoryPlumbingZ5github.com/strongdm/st" +
-      "rongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "roto\"\215\001\n\036OrganizationHistoryListRequest\022" +
+      "%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032" +
+      "\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372" +
+      "\370\263\007\030\322\363\263\007\023!terraform-provider\"\210\002\n\037Organiz" +
+      "ationHistoryListResponse\022&\n\004meta\030\001 \001(\0132\030" +
+      ".v1.ListResponseMetadata\022:\n\007history\030\002 \003(" +
+      "\0132\035.v1.OrganizationHistoryRecordB\n\362\370\263\007\005\270" +
+      "\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitM" +
+      "etadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r" +
+      "!json_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!ter" +
+      "raform-provider\"\337\001\n\031OrganizationHistoryR" +
+      "ecord\022\037\n\013activity_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229" +
+      "\n\ttimestamp\030\002 \001(\0132\032.google.protobuf.Time" +
+      "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
+      "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
+      "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
+      "r\"\315\n\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
+      "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
+      " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
+      "\363\263\007\001\022!\n\rauth_provider\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "(\n\024idle_timeout_enabled\030\005 \001(\010B\n\362\370\263\007\005\260\363\263\007" +
+      "\001\022;\n\014idle_timeout\030\006 \001(\0132\031.google.protobu" +
+      "f.DurationB\n\362\370\263\007\005\260\363\263\007\001\022+\n\027session_timeou" +
+      "t_enabled\030\007 \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022>\n\017session_t" +
+      "imeout\030\010 \001(\0132\031.google.protobuf.DurationB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\0229\n\013mfa_enabled\030\t \001(\010B$\362\370\263\007\037\260" +
+      "\363\263\007\001\312\363\263\007\025\302\364\263\007\020\n\002go\022\nMFAEnabled\022;\n\014mfa_pr" +
+      "ovider\030\n \001(\tB%\362\370\263\007 \260\363\263\007\001\312\363\263\007\026\302\364\263\007\021\n\002go\022\013" +
+      "MFAProvider\022&\n\022log_remote_encoder\030\013 \001(\tB" +
+      "\n\362\370\263\007\005\260\363\263\007\001\022%\n\021log_local_storage\030\014 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022%\n\021log_local_encoder\030\r \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022$\n\020log_local_format\030\016 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001\022@\n\017log_tcp_address\030\017 \001(\tB\'\362\370\263\007\"\260" +
+      "\363\263\007\001\312\363\263\007\030\302\364\263\007\023\n\002go\022\rLogTCPAddress\022#\n\017log" +
+      "_socket_path\030\020 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022=\n\rscim_p" +
+      "rovider\030\021 \001(\tB&\362\370\263\007!\260\363\263\007\001\312\363\263\007\027\302\364\263\007\022\n\002go\022" +
+      "\014SCIMProvider\022&\n\022websites_subdomain\030\022 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022h\n$ssh_certificate_authori" +
+      "ty_public_key\030\023 \001(\tB:\362\370\263\0075\260\363\263\007\001\312\363\263\007+\302\364\263\007" +
+      "&\n\002go\022 SSHCertificateAuthorityPublicKey\022" +
+      "\204\001\n$ssh_certificate_authority_updated_at" +
+      "\030\024 \001(\0132\032.google.protobuf.TimestampB:\362\370\263\007" +
+      "5\260\363\263\007\001\312\363\263\007+\302\364\263\007&\n\002go\022 SSHCertificateAuth" +
+      "orityUpdatedAt\022(\n\024require_secret_store\030\025" +
+      " \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022#\n\017sensitive_label\030\026 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021saml_metadata_url\030\027 \001(\t" +
+      "B)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017SAMLMetadata" +
+      "URL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
+      "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
+      "r2\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1." +
+      "OrganizationHistoryListRequest\032#.v1.Orga" +
+      "nizationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003g" +
+      "et\202\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312\371" +
+      "\263\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371" +
+      "\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
+      "derB\227\001\n\031com.strongdm.api.plumbingB\033Organ" +
+      "izationHistoryPlumbingZ5github.com/stron" +
+      "gdm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264" +
+      "\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8512,6 +8519,7 @@ public final class OrganizationHistoryPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

@@ -4204,26 +4204,32 @@ public final class ReplaysPlumbing {
   static {
     java.lang.String[] descriptorData = {
       "\n\rreplays.proto\022\002v1\032\036google/protobuf/dur" +
-      "ation.proto\032\roptions.proto\032\nspec.proto\"V" +
-      "\n\021ReplayListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.L" +
-      "istRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007" +
-      "\005\260\363\263\007\001\"\302\001\n\022ReplayListResponse\022&\n\004meta\030\001 " +
-      "\001(\0132\030.v1.ListResponseMetadata\022+\n\006chunks\030" +
-      "\002 \003(\0132\017.v1.ReplayChunkB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nra" +
-      "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362" +
-      "\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gate" +
-      "way\"e\n\013ReplayChunk\022\030\n\004data\030\001 \001(\014B\n\362\370\263\007\005\260" +
-      "\363\263\007\001\0220\n\006events\030\002 \003(\0132\024.v1.ReplayChunkEve" +
-      "ntB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"q\n\020ReplayChun" +
-      "kEvent\022\030\n\004data\030\001 \001(\014B\n\362\370\263\007\005\260\363\263\007\001\0227\n\010dura" +
-      "tion\030\002 \001(\0132\031.google.protobuf.DurationB\n\362" +
-      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\205\001\n\007Replays\022Y\n\004Lis" +
-      "t\022\025.v1.ReplayListRequest\032\026.v1.ReplayList" +
-      "Response\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/rep" +
-      "lays\032\037\312\371\263\007\020\302\371\263\007\013ReplayChunk\312\371\263\007\005\330\371\263\007\001Bc\n" +
-      "\031com.strongdm.api.plumbingB\017ReplaysPlumb" +
-      "ingZ5github.com/strongdm/strongdm-sdk-go" +
-      "/v3/internal/v1;v1b\006proto3"
+      "ation.proto\032\roptions.proto\032\nspec.proto\"\200" +
+      "\001\n\021ReplayListRequest\022%\n\004meta\030\001 \001(\0132\027.v1." +
+      "ListRequestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263" +
+      "\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform" +
+      "-provider\"\354\001\n\022ReplayListResponse\022&\n\004meta" +
+      "\030\001 \001(\0132\030.v1.ListResponseMetadata\022+\n\006chun" +
+      "ks\030\002 \003(\0132\017.v1.ReplayChunkB\n\362\370\263\007\005\270\363\263\007\001\022W\n" +
+      "\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadata" +
+      "B,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_g" +
+      "ateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-" +
+      "provider\"\215\001\n\013ReplayChunk\022\030\n\004data\030\001 \001(\014B\n" +
+      "\362\370\263\007\005\260\363\263\007\001\0220\n\006events\030\002 \003(\0132\024.v1.ReplayCh" +
+      "unkEventB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263" +
+      "\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\231\001\n\020Rep" +
+      "layChunkEvent\022\030\n\004data\030\001 \001(\014B\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "7\n\010duration\030\002 \001(\0132\031.google.protobuf.Dura" +
+      "tionB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372" +
+      "\370\263\007\030\322\363\263\007\023!terraform-provider2\255\001\n\007Replays" +
+      "\022Y\n\004List\022\025.v1.ReplayListRequest\032\026.v1.Rep" +
+      "layListResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013" +
+      "/v1/replays\032G\312\371\263\007\020\302\371\263\007\013ReplayChunk\312\371\263\007\005\330" +
+      "\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-prov" +
+      "iderB\213\001\n\031com.strongdm.api.plumbingB\017Repl" +
+      "aysPlumbingZ5github.com/strongdm/strongd" +
+      "m-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264" +
+      "\007\030\242\214\264\007\023!terraform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4259,6 +4265,7 @@ public final class ReplaysPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

@@ -3880,28 +3880,33 @@ public final class AccountPermissionsPlumbing {
     java.lang.String[] descriptorData = {
       "\n\031account_permissions.proto\022\002v1\032\037google/" +
       "protobuf/timestamp.proto\032\roptions.proto\032" +
-      "\nspec.proto\"a\n\034AccountPermissionListRequ" +
-      "est\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetada" +
-      "ta\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\330\001\n\035Accou" +
-      "ntPermissionListResponse\022&\n\004meta\030\001 \001(\0132\030" +
-      ".v1.ListResponseMetadata\0226\n\013permissions\030" +
-      "\002 \003(\0132\025.v1.AccountPermissionB\n\362\370\263\007\005\270\363\263\007\001" +
-      "\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetad" +
-      "ataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!jso" +
-      "n_gateway\"\325\001\n\021AccountPermission\022\036\n\naccou" +
-      "nt_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ngranted_at\030\002 " +
-      "\001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\022\036\n\npermission\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\031\n\005s" +
-      "cope\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tscoped_id\030\005 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\256\001\n\022AccountPer" +
-      "missions\022{\n\004List\022 .v1.AccountPermissionL" +
-      "istRequest\032!.v1.AccountPermissionListRes" +
-      "ponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/accoun" +
-      "t-permissions\032\033\312\371\263\007\026\302\371\263\007\021AccountPermissi" +
-      "onBn\n\031com.strongdm.api.plumbingB\032Account" +
-      "PermissionsPlumbingZ5github.com/strongdm" +
-      "/strongdm-sdk-go/v3/internal/v1;v1b\006prot" +
-      "o3"
+      "\nspec.proto\"\213\001\n\034AccountPermissionListReq" +
+      "uest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetad" +
+      "ata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363" +
+      "\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\202\002\n\035Ac" +
+      "countPermissionListResponse\022&\n\004meta\030\001 \001(" +
+      "\0132\030.v1.ListResponseMetadata\0226\n\013permissio" +
+      "ns\030\002 \003(\0132\025.v1.AccountPermissionB\n\362\370\263\007\005\270\363" +
+      "\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
+      "tadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!" +
+      "json_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terr" +
+      "aform-provider\"\375\001\n\021AccountPermission\022\036\n\n" +
+      "account_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ngranted_" +
+      "at\030\002 \001(\0132\032.google.protobuf.TimestampB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\022\036\n\npermission\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001" +
+      "\022\031\n\005scope\030\004 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tscoped_id" +
+      "\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001" +
+      "*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\326\001\n\022Accou" +
+      "ntPermissions\022{\n\004List\022 .v1.AccountPermis" +
+      "sionListRequest\032!.v1.AccountPermissionLi" +
+      "stResponse\".\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\034\252\363\263\007\027/v1/a" +
+      "ccount-permissions\032C\312\371\263\007\026\302\371\263\007\021AccountPer" +
+      "mission\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-p" +
+      "roviderB\226\001\n\031com.strongdm.api.plumbingB\032A" +
+      "ccountPermissionsPlumbingZ5github.com/st" +
+      "rongdm/strongdm-sdk-go/v3/internal/v1;v1" +
+      "\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provider" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3931,6 +3936,7 @@ public final class AccountPermissionsPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

@@ -3792,29 +3792,35 @@ public final class RoleResourcesHistoryPlumbing {
     java.lang.String[] descriptorData = {
       "\n\034role_resources_history.proto\022\002v1\032\037goog" +
       "le/protobuf/timestamp.proto\032\024role_resour" +
-      "ces.proto\032\roptions.proto\032\nspec.proto\"c\n\036" +
-      "RoleResourceHistoryListRequest\022%\n\004meta\030\001" +
-      " \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filter\030" +
-      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\330\001\n\037RoleResourceHistor" +
-      "yListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRes" +
-      "ponseMetadata\0224\n\007history\030\002 \003(\0132\027.v1.Role" +
-      "ResourceHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limi" +
-      "t\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263" +
-      "\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\356\001\n" +
-      "\023RoleResourceHistory\022\037\n\013activity_id\030\001 \001(" +
-      "\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.googl" +
-      "e.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0223\n\rrole" +
-      "_resource\030\003 \001(\0132\020.v1.RoleResourceB\n\362\370\263\007\005" +
-      "\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google.proto" +
-      "buf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\305\001" +
-      "\n\024RoleResourcesHistory\022\203\001\n\004List\022\".v1.Rol" +
-      "eResourceHistoryListRequest\032#.v1.RoleRes" +
-      "ourceHistoryListResponse\"2\202\371\263\007\010\242\363\263\007\003get\202" +
-      "\371\263\007 \252\363\263\007\033/v1/roles-resources-history\032\'\312\371" +
-      "\263\007\030\302\371\263\007\023RoleResourceHistory\312\371\263\007\005\330\371\263\007\001Bp\n" +
-      "\031com.strongdm.api.plumbingB\034RoleResource" +
-      "sHistoryPlumbingZ5github.com/strongdm/st" +
-      "rongdm-sdk-go/v3/internal/v1;v1b\006proto3"
+      "ces.proto\032\roptions.proto\032\nspec.proto\"\215\001\n" +
+      "\036RoleResourceHistoryListRequest\022%\n\004meta\030" +
+      "\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filter" +
+      "\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007" +
+      "\023!terraform-provider\"\202\002\n\037RoleResourceHis" +
+      "toryListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.List" +
+      "ResponseMetadata\0224\n\007history\030\002 \003(\0132\027.v1.R" +
+      "oleResourceHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_l" +
+      "imit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005" +
+      "\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:" +
+      "(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
+      "r\"\226\002\n\023RoleResourceHistory\022\037\n\013activity_id" +
+      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032." +
+      "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\0223\n" +
+      "\rrole_resource\030\003 \001(\0132\020.v1.RoleResourceB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google." +
+      "protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263" +
+      "\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provid" +
+      "er2\355\001\n\024RoleResourcesHistory\022\203\001\n\004List\022\".v" +
+      "1.RoleResourceHistoryListRequest\032#.v1.Ro" +
+      "leResourceHistoryListResponse\"2\202\371\263\007\010\242\363\263\007" +
+      "\003get\202\371\263\007 \252\363\263\007\033/v1/roles-resources-histor" +
+      "y\032O\312\371\263\007\030\302\371\263\007\023RoleResourceHistory\312\371\263\007\005\330\371\263" +
+      "\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provid" +
+      "erB\230\001\n\031com.strongdm.api.plumbingB\034RoleRe" +
+      "sourcesHistoryPlumbingZ5github.com/stron" +
+      "gdm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264" +
+      "\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3845,6 +3851,7 @@ public final class RoleResourcesHistoryPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

@@ -4105,29 +4105,34 @@ public final class AccountResourcesPlumbing {
     java.lang.String[] descriptorData = {
       "\n\027account_resources.proto\022\002v1\032\037google/pr" +
       "otobuf/timestamp.proto\032\roptions.proto\032\ns" +
-      "pec.proto\"_\n\032AccountResourceListRequest\022" +
-      "%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032" +
-      "\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\332\001\n\033AccountRe" +
-      "sourceListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.Li" +
-      "stResponseMetadata\022:\n\021account_resources\030" +
-      "\002 \003(\0132\023.v1.AccountResourceB\n\362\370\263\007\005\270\363\263\007\001\022W" +
-      "\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMetadat" +
-      "aB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_" +
-      "gateway\"\231\002\n\017AccountResource\022\036\n\naccount_i" +
-      "d\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resource_id\030\002 \001(\t" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022:\n\ngranted_at\030\003 \001(\0132\032.googl" +
-      "e.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nexpi" +
-      "res_at\030\004 \001(\0132\032.google.protobuf.Timestamp" +
-      "B\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\022$\n\020account_grant_id\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:" +
-      "\n\372\370\263\007\005\250\363\263\007\0012\244\001\n\020AccountResources\022u\n\004List" +
-      "\022\036.v1.AccountResourceListRequest\032\037.v1.Ac" +
-      "countResourceListResponse\",\202\371\263\007\010\242\363\263\007\003get" +
-      "\202\371\263\007\032\252\363\263\007\025/v1/account-resources\032\031\312\371\263\007\024\302\371" +
-      "\263\007\017AccountResourceBl\n\031com.strongdm.api.p" +
-      "lumbingB\030AccountResourcesPlumbingZ5githu" +
-      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
-      "al/v1;v1b\006proto3"
+      "pec.proto\"\211\001\n\032AccountResourceListRequest" +
+      "\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetadata\022" +
+      "\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*" +
+      "\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\204\002\n\033Accoun" +
+      "tResourceListResponse\022&\n\004meta\030\001 \001(\0132\030.v1" +
+      ".ListResponseMetadata\022:\n\021account_resourc" +
+      "es\030\002 \003(\0132\023.v1.AccountResourceB\n\362\370\263\007\005\270\363\263\007" +
+      "\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMeta" +
+      "dataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!js" +
+      "on_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraf" +
+      "orm-provider\"\301\002\n\017AccountResource\022\036\n\nacco" +
+      "unt_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resource_id\030" +
+      "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ngranted_at\030\003 \001(\0132\032." +
+      "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n" +
+      "\nexpires_at\030\004 \001(\0132\032.google.protobuf.Time" +
+      "stampB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030\005 \001(\tB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022$\n\020account_grant_id\030\006 \001(\tB\n\362\370\263\007\005\260" +
+      "\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!te" +
+      "rraform-provider2\314\001\n\020AccountResources\022u\n" +
+      "\004List\022\036.v1.AccountResourceListRequest\032\037." +
+      "v1.AccountResourceListResponse\",\202\371\263\007\010\242\363\263" +
+      "\007\003get\202\371\263\007\032\252\363\263\007\025/v1/account-resources\032A\312\371" +
+      "\263\007\024\302\371\263\007\017AccountResource\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312" +
+      "\371\263\007\023!terraform-providerB\224\001\n\031com.strongdm" +
+      ".api.plumbingB\030AccountResourcesPlumbingZ" +
+      "5github.com/strongdm/strongdm-sdk-go/v3/" +
+      "internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terr" +
+      "aform-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4157,6 +4162,7 @@ public final class AccountResourcesPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

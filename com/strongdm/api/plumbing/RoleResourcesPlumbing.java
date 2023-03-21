@@ -3452,25 +3452,30 @@ public final class RoleResourcesPlumbing {
     java.lang.String[] descriptorData = {
       "\n\024role_resources.proto\022\002v1\032\037google/proto" +
       "buf/timestamp.proto\032\roptions.proto\032\nspec" +
-      ".proto\"\\\n\027RoleResourceListRequest\022%\n\004met" +
-      "a\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006filt" +
-      "er\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\321\001\n\030RoleResourceLis" +
-      "tResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListRespons" +
-      "eMetadata\0224\n\016role_resources\030\002 \003(\0132\020.v1.R" +
-      "oleResourceB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030\003 " +
-      "\001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370" +
-      "\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\224\001\n\014Rol" +
-      "eResource\022\033\n\007role_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037" +
-      "\n\013resource_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ngrant" +
-      "ed_at\030\003 \001(\0132\032.google.protobuf.TimestampB" +
-      "\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\225\001\n\rRoleResource" +
-      "s\022l\n\004List\022\033.v1.RoleResourceListRequest\032\034" +
-      ".v1.RoleResourceListResponse\")\202\371\263\007\010\242\363\263\007\003" +
-      "get\202\371\263\007\027\252\363\263\007\022/v1/role-resources\032\026\312\371\263\007\021\302\371" +
-      "\263\007\014RoleResourceBi\n\031com.strongdm.api.plum" +
-      "bingB\025RoleResourcesPlumbingZ5github.com/" +
-      "strongdm/strongdm-sdk-go/v3/internal/v1;" +
-      "v1b\006proto3"
+      ".proto\"\206\001\n\027RoleResourceListRequest\022%\n\004me" +
+      "ta\030\001 \001(\0132\027.v1.ListRequestMetadata\022\032\n\006fil" +
+      "ter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322" +
+      "\363\263\007\023!terraform-provider\"\373\001\n\030RoleResource" +
+      "ListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.ListResp" +
+      "onseMetadata\0224\n\016role_resources\030\002 \003(\0132\020.v" +
+      "1.RoleResourceB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit" +
+      "\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007" +
+      "\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:(\372\370\263" +
+      "\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\274\001" +
+      "\n\014RoleResource\022\033\n\007role_id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
+      "\263\007\001\022\037\n\013resource_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\n" +
+      "granted_at\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372" +
+      "\370\263\007\030\322\363\263\007\023!terraform-provider2\275\001\n\rRoleRes" +
+      "ources\022l\n\004List\022\033.v1.RoleResourceListRequ" +
+      "est\032\034.v1.RoleResourceListResponse\")\202\371\263\007\010" +
+      "\242\363\263\007\003get\202\371\263\007\027\252\363\263\007\022/v1/role-resources\032>\312\371" +
+      "\263\007\021\302\371\263\007\014RoleResource\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007" +
+      "\023!terraform-providerB\221\001\n\031com.strongdm.ap" +
+      "i.plumbingB\025RoleResourcesPlumbingZ5githu" +
+      "b.com/strongdm/strongdm-sdk-go/v3/intern" +
+      "al/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-" +
+      "providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3500,6 +3505,7 @@ public final class RoleResourcesPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

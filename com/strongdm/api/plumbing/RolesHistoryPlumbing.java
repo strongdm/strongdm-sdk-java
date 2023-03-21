@@ -3792,27 +3792,32 @@ public final class RolesHistoryPlumbing {
     java.lang.String[] descriptorData = {
       "\n\023roles_history.proto\022\002v1\032\037google/protob" +
       "uf/timestamp.proto\032\013roles.proto\032\roptions" +
-      ".proto\032\nspec.proto\"[\n\026RoleHistoryListReq" +
-      "uest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMetad" +
-      "ata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\"\310\001\n\027Role" +
-      "HistoryListResponse\022&\n\004meta\030\001 \001(\0132\030.v1.L" +
-      "istResponseMetadata\022,\n\007history\030\002 \003(\0132\017.v" +
-      "1.RoleHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_limit\030" +
-      "\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363\263\007\001" +
-      "\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway\"\325\001\n\013R" +
-      "oleHistory\022\037\n\013activity_id\030\001 \001(\tB\n\362\370\263\007\005\260\363" +
-      "\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.google.protobuf" +
-      ".TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\003 \001(\0132\010.v" +
-      "1.RoleB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032" +
-      ".google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\n" +
-      "\372\370\263\007\005\250\363\263\007\0012\232\001\n\014RolesHistory\022i\n\004List\022\032.v1" +
-      ".RoleHistoryListRequest\032\033.v1.RoleHistory" +
-      "ListResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263\007\021/v1" +
-      "/roles-history\032\037\312\371\263\007\020\302\371\263\007\013RoleHistory\312\371\263" +
-      "\007\005\330\371\263\007\001Bh\n\031com.strongdm.api.plumbingB\024Ro" +
-      "lesHistoryPlumbingZ5github.com/strongdm/" +
-      "strongdm-sdk-go/v3/internal/v1;v1b\006proto" +
-      "3"
+      ".proto\032\nspec.proto\"\205\001\n\026RoleHistoryListRe" +
+      "quest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRequestMeta" +
+      "data\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:(\372\370\263\007\006\322" +
+      "\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"\362\001\n\027R" +
+      "oleHistoryListResponse\022&\n\004meta\030\001 \001(\0132\030.v" +
+      "1.ListResponseMetadata\022,\n\007history\030\002 \003(\0132" +
+      "\017.v1.RoleHistoryB\n\362\370\263\007\005\270\363\263\007\001\022W\n\nrate_lim" +
+      "it\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362\370\263\007\005\260\363" +
+      "\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gateway:(\372" +
+      "\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider\"" +
+      "\375\001\n\013RoleHistory\022\037\n\013activity_id\030\001 \001(\tB\n\362\370" +
+      "\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002 \001(\0132\032.google.pro" +
+      "tobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\004role\030\003 \001(" +
+      "\0132\010.v1.RoleB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 " +
+      "\001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260\363" +
+      "\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!ter" +
+      "raform-provider2\302\001\n\014RolesHistory\022i\n\004List" +
+      "\022\032.v1.RoleHistoryListRequest\032\033.v1.RoleHi" +
+      "storyListResponse\"(\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\026\252\363\263" +
+      "\007\021/v1/roles-history\032G\312\371\263\007\020\302\371\263\007\013RoleHisto" +
+      "ry\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraf" +
+      "orm-providerB\220\001\n\031com.strongdm.api.plumbi" +
+      "ngB\024RolesHistoryPlumbingZ5github.com/str" +
+      "ongdm/strongdm-sdk-go/v3/internal/v1;v1\302" +
+      "\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3843,6 +3848,7 @@ public final class RolesHistoryPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);

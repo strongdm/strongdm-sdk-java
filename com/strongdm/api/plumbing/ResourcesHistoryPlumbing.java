@@ -3792,28 +3792,33 @@ public final class ResourcesHistoryPlumbing {
     java.lang.String[] descriptorData = {
       "\n\027resources_history.proto\022\002v1\032\037google/pr" +
       "otobuf/timestamp.proto\032\rdrivers.proto\032\ro" +
-      "ptions.proto\032\nspec.proto\"_\n\032ResourceHist" +
-      "oryListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListRe" +
-      "questMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007" +
-      "\001\"\320\001\n\033ResourceHistoryListResponse\022&\n\004met" +
-      "a\030\001 \001(\0132\030.v1.ListResponseMetadata\0220\n\007his" +
-      "tory\030\002 \003(\0132\023.v1.ResourceHistoryB\n\362\370\263\007\005\270\363" +
-      "\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMe" +
-      "tadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!" +
-      "json_gateway\"\341\001\n\017ResourceHistory\022\037\n\013acti" +
-      "vity_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimestamp\030\002" +
-      " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
-      "\363\263\007\001\022*\n\010resource\030\003 \001(\0132\014.v1.ResourceB\n\362\370" +
-      "\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.google.pr" +
-      "otobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001" +
-      "2\256\001\n\020ResourcesHistory\022u\n\004List\022\036.v1.Resou" +
-      "rceHistoryListRequest\032\037.v1.ResourceHisto" +
-      "ryListResponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\032\252\363\263\007\025/" +
-      "v1/resources-history\032#\312\371\263\007\024\302\371\263\007\017Resource" +
-      "History\312\371\263\007\005\330\371\263\007\001Bl\n\031com.strongdm.api.pl" +
-      "umbingB\030ResourcesHistoryPlumbingZ5github" +
-      ".com/strongdm/strongdm-sdk-go/v3/interna" +
-      "l/v1;v1b\006proto3"
+      "ptions.proto\032\nspec.proto\"\211\001\n\032ResourceHis" +
+      "toryListRequest\022%\n\004meta\030\001 \001(\0132\027.v1.ListR" +
+      "equestMetadata\022\032\n\006filter\030\002 \001(\tB\n\362\370\263\007\005\260\363\263" +
+      "\007\001:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-prov" +
+      "ider\"\372\001\n\033ResourceHistoryListResponse\022&\n\004" +
+      "meta\030\001 \001(\0132\030.v1.ListResponseMetadata\0220\n\007" +
+      "history\030\002 \003(\0132\023.v1.ResourceHistoryB\n\362\370\263\007" +
+      "\005\270\363\263\007\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimi" +
+      "tMetadataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263" +
+      "\007\r!json_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!t" +
+      "erraform-provider\"\211\002\n\017ResourceHistory\022\037\n" +
+      "\013activity_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\ttimest" +
+      "amp\030\002 \001(\0132\032.google.protobuf.TimestampB\n\362" +
+      "\370\263\007\005\260\363\263\007\001\022*\n\010resource\030\003 \001(\0132\014.v1.Resourc" +
+      "eB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ndeleted_at\030\004 \001(\0132\032.goog" +
+      "le.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005" +
+      "\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pro" +
+      "vider2\326\001\n\020ResourcesHistory\022u\n\004List\022\036.v1." +
+      "ResourceHistoryListRequest\032\037.v1.Resource" +
+      "HistoryListResponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\032\252" +
+      "\363\263\007\025/v1/resources-history\032K\312\371\263\007\024\302\371\263\007\017Res" +
+      "ourceHistory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371" +
+      "\263\007\023!terraform-providerB\224\001\n\031com.strongdm." +
+      "api.plumbingB\030ResourcesHistoryPlumbingZ5" +
+      "github.com/strongdm/strongdm-sdk-go/v3/i" +
+      "nternal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terra" +
+      "form-providerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3844,6 +3849,7 @@ public final class ResourcesHistoryPlumbing {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);
+    registry.add(com.strongdm.api.plumbing.Options.fileOptions);
     registry.add(com.strongdm.api.plumbing.Options.messageOptions);
     registry.add(com.strongdm.api.plumbing.Options.methodOptions);
     registry.add(com.strongdm.api.plumbing.Options.serviceOptions);
