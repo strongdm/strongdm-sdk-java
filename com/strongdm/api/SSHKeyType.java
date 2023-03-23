@@ -16,14 +16,12 @@
 
 package com.strongdm.api;
 
-// Providers responsible for managing roles and users.
-// None, or an empty string, implies the user is managed by strongDM.
-public final class SCIMProvider {
-  public static final String NONE = "";
-  public static final String OKTA = "okta";
-  public static final String SAIL_POINT = "sailpoint";
-  public static final String AZURE = "azure";
-  public static final String GENERIC = "generic";
-  public static final String ONE_LOGIN = "onelogin";
-  public static final String GOOGLE = "google";
+// KeyType defines the supported SSH key types
+public final class SSHKeyType {
+  public static final String RSA_2048 = "rsa-2048";
+  public static final String RSA_4096 = "rsa-4096";
+  public static final String ECDSA_256 = "ecdsa-256";
+  public static final String ECDSA_384 = "ecdsa-384";
+  public static final String ECDSA_521 = "ecdsa-521";
+  public static final String ED_25519 = "ed25519";
 }
