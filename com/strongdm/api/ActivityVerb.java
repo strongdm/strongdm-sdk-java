@@ -179,6 +179,8 @@ public final class ActivityVerb {
   public static final String WORKFLOW_NOTIFICATION_OPTIONS_UPDATED =
       "workflow notification settings updated";
   public static final String ORG_VNM_SUBNET_UPDATED = "organization VNM subnet updated";
+  public static final String ORG_VNM_RESOURCES_ALLOCATED =
+      "organization resources allocated within VNM subnet";
   public static final String DEPRECATED_ORG_ACTIVATE_DEVICE_APPROVAL = "activate device approval";
   public static final String DEPRECATED_ORG_DEACTIVATE_DEVICE_APPROVAL =
       "deactivate device approval";

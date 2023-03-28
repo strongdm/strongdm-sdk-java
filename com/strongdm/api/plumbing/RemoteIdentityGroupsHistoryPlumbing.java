@@ -3815,7 +3815,7 @@ public final class RemoteIdentityGroupsHistoryPlumbing {
       "GroupsHistory\022\230\001\n\004List\022).v1.RemoteIdenti" +
       "tyGroupHistoryListRequest\032*.v1.RemoteIde" +
       "ntityGroupHistoryListResponse\"9\202\371\263\007\010\242\363\263\007" +
-      "\003get\202\371\263\007\'\252\363\263\007\"/v1/remote-identity_groups" +
+      "\003get\202\371\263\007\'\252\363\263\007\"/v1/remote-identity-groups" +
       "-history\032V\312\371\263\007\037\302\371\263\007\032RemoteIdentityGroupH" +
       "istory\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!te" +
       "rraform-providerB\237\001\n\031com.strongdm.api.pl" +

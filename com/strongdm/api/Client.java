@@ -100,6 +100,13 @@ public class Client {
     return this.accountResources;
   }
 
+  protected final AccountResourcesHistory accountResourcesHistory;
+
+  /** AccountResourcesHistory records all changes to the state of a AccountResource. */
+  public AccountResourcesHistory accountResourcesHistory() {
+    return this.accountResourcesHistory;
+  }
+
   protected final Accounts accounts;
 
   /**
@@ -301,6 +308,7 @@ public class Client {
     this.accountGrantsHistory = new AccountGrantsHistory(this.channel, this);
     this.accountPermissions = new AccountPermissions(this.channel, this);
     this.accountResources = new AccountResources(this.channel, this);
+    this.accountResourcesHistory = new AccountResourcesHistory(this.channel, this);
     this.accounts = new Accounts(this.channel, this);
     this.accountsHistory = new AccountsHistory(this.channel, this);
     this.activities = new Activities(this.channel, this);
@@ -349,6 +357,7 @@ public class Client {
       this.accountGrantsHistory = new AccountGrantsHistory(this.channel, this);
       this.accountPermissions = new AccountPermissions(this.channel, this);
       this.accountResources = new AccountResources(this.channel, this);
+      this.accountResourcesHistory = new AccountResourcesHistory(this.channel, this);
       this.accounts = new Accounts(this.channel, this);
       this.accountsHistory = new AccountsHistory(this.channel, this);
       this.activities = new Activities(this.channel, this);
