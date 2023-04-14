@@ -20,4 +20,5 @@ package com.strongdm.api;
 public final class MFAProvider {
   public static final String NONE = "";
   public static final String DUO = "duo";
+  public static final String TOTP = "totp";
 }

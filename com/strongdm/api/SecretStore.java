@@ -19,8 +19,7 @@ package com.strongdm.api;
 
 /**
  * A SecretStore is a server where resource secrets (passwords, keys) are stored. Coming soon
- * support for HashiCorp Vault and AWS Secret Store. Contact support@strongdm.com to request access
- * to the beta.
+ * support for HashiCorp Vault and AWS Secret Store.
  */
 public interface SecretStore {
   /** Returns the unique identifier of the SecretStore. */

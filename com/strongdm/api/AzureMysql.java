@@ -17,10 +17,6 @@
 
 package com.strongdm.api;
 
-/**
- * AzureMysql is currently unstable, and its API may change, or it may be removed, without a major
- * version bump.
- */
 public class AzureMysql implements Resource {
   private String bindInterface;
   /** Bind interface */

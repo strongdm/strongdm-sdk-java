@@ -31,7 +31,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A Query is a record of a single client request to a resource, such as an SQL query.
+ * A Query is a record of a single client request to a resource, such as a SQL query.
  * Long-running SSH, RDP, or Kubernetes interactive sessions also count as queries.
  * The Queries service is read-only.
  * </pre>
@@ -123,7 +123,7 @@ public final class QueriesGrpc {
 
   /**
    * <pre>
-   * A Query is a record of a single client request to a resource, such as an SQL query.
+   * A Query is a record of a single client request to a resource, such as a SQL query.
    * Long-running SSH, RDP, or Kubernetes interactive sessions also count as queries.
    * The Queries service is read-only.
    * </pre>
@@ -155,7 +155,7 @@ public final class QueriesGrpc {
 
   /**
    * <pre>
-   * A Query is a record of a single client request to a resource, such as an SQL query.
+   * A Query is a record of a single client request to a resource, such as a SQL query.
    * Long-running SSH, RDP, or Kubernetes interactive sessions also count as queries.
    * The Queries service is read-only.
    * </pre>
@@ -186,7 +186,7 @@ public final class QueriesGrpc {
 
   /**
    * <pre>
-   * A Query is a record of a single client request to a resource, such as an SQL query.
+   * A Query is a record of a single client request to a resource, such as a SQL query.
    * Long-running SSH, RDP, or Kubernetes interactive sessions also count as queries.
    * The Queries service is read-only.
    * </pre>
@@ -216,7 +216,7 @@ public final class QueriesGrpc {
 
   /**
    * <pre>
-   * A Query is a record of a single client request to a resource, such as an SQL query.
+   * A Query is a record of a single client request to a resource, such as a SQL query.
    * Long-running SSH, RDP, or Kubernetes interactive sessions also count as queries.
    * The Queries service is read-only.
    * </pre>

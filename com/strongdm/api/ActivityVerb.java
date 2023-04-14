@@ -166,6 +166,8 @@ public final class ActivityVerb {
       "access request to resource denied";
   public static final String ACCESS_REQUEST_TO_RESOURCE_TIMED_OUT =
       "access request to resource timed out";
+  public static final String WORKFLOW_ADDED = "access workflow added";
+  public static final String WORKFLOW_DELETED = "access workflow deleted";
   public static final String WORKFLOW_RESOURCE_ASSIGNED = "resource assigned to workflow";
   public static final String WORKFLOW_RESOURCE_UNASSIGNED = "resource unassigned from workflow";
   public static final String WORKFLOW_RESOURCE_MULTIPLE_ASSIGNED =
@@ -178,6 +180,8 @@ public final class ActivityVerb {
       "workflow notification type removed";
   public static final String WORKFLOW_NOTIFICATION_OPTIONS_UPDATED =
       "workflow notification settings updated";
+  public static final String WORKFLOW_NAME_UPDATED = "workflow name updated";
+  public static final String WORKFLOW_DESCRIPTION_UPDATED = "workflow description updated";
   public static final String ORG_VNM_SUBNET_UPDATED = "organization VNM subnet updated";
   public static final String ORG_VNM_RESOURCES_ALLOCATED =
       "organization resources allocated within VNM subnet";

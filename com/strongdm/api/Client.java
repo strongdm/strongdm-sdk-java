@@ -172,9 +172,9 @@ public class Client {
   protected final Queries queries;
 
   /**
-   * A Query is a record of a single client request to a resource, such as an SQL query.
-   * Long-running SSH, RDP, or Kubernetes interactive sessions also count as queries. The Queries
-   * service is read-only.
+   * A Query is a record of a single client request to a resource, such as a SQL query. Long-running
+   * SSH, RDP, or Kubernetes interactive sessions also count as queries. The Queries service is
+   * read-only.
    */
   public Queries queries() {
     return this.queries;

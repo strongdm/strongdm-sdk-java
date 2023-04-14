@@ -29,4 +29,5 @@ public final class ActivityEntityType {
   public static final String REMOTE_IDENTITY = "remote_identity";
   public static final String ACCESS_REQUEST = "access_request";
   public static final String WORKFLOW = "workflow";
+  public static final String NODE = "node";
 }

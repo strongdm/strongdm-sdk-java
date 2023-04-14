@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 /**
- * A Query is a record of a single client request to a resource, such as an SQL query. Long-running
+ * A Query is a record of a single client request to a resource, such as a SQL query. Long-running
  * SSH, RDP, or Kubernetes interactive sessions also count as queries. The Queries service is
  * read-only.
  */

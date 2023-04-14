@@ -2511,7 +2511,7 @@ public final class QueriesPlumbing {
 
     /**
      * <pre>
-     * The time at which the Query was performed.
+     * The time at which the Query was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -2520,7 +2520,7 @@ public final class QueriesPlumbing {
     boolean hasTimestamp();
     /**
      * <pre>
-     * The time at which the Query was performed.
+     * The time at which the Query was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -2529,7 +2529,7 @@ public final class QueriesPlumbing {
     com.google.protobuf.Timestamp getTimestamp();
     /**
      * <pre>
-     * The time at which the Query was performed.
+     * The time at which the Query was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -2809,10 +2809,44 @@ public final class QueriesPlumbing {
      */
     com.google.protobuf.ByteString
         getQueryKeyIdBytes();
+
+    /**
+     * <pre>
+     * The time at which the Query was completed.
+     * Empty if this record indicates the start of a long-running query.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+     * @return Whether the completedAt field is set.
+     */
+    boolean hasCompletedAt();
+    /**
+     * <pre>
+     * The time at which the Query was completed.
+     * Empty if this record indicates the start of a long-running query.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+     * @return The completedAt.
+     */
+    com.google.protobuf.Timestamp getCompletedAt();
+    /**
+     * <pre>
+     * The time at which the Query was completed.
+     * Empty if this record indicates the start of a long-running query.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCompletedAtOrBuilder();
   }
   /**
    * <pre>
-   * A Query is a record of a single client request to a resource, such as an SQL query.
+   * A Query is a record of a single client request to a resource, such as a SQL query.
+   * Longer-running queries including long-running SSH commands and SSH, RDP, or Kubernetes
+   * interactive sessions will return two Query records with the same identifier, one record
+   * at the start of the query and a second record upon the completion of the query with
+   * additional detail.
    * </pre>
    *
    * Protobuf type {@code v1.Query}
@@ -3029,6 +3063,19 @@ public final class QueriesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               queryKeyId_ = s;
+              break;
+            }
+            case 186: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (completedAt_ != null) {
+                subBuilder = completedAt_.toBuilder();
+              }
+              completedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(completedAt_);
+                completedAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3398,7 +3445,7 @@ public final class QueriesPlumbing {
     private com.google.protobuf.Timestamp timestamp_;
     /**
      * <pre>
-     * The time at which the Query was performed.
+     * The time at which the Query was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -3410,7 +3457,7 @@ public final class QueriesPlumbing {
     }
     /**
      * <pre>
-     * The time at which the Query was performed.
+     * The time at which the Query was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -3422,7 +3469,7 @@ public final class QueriesPlumbing {
     }
     /**
      * <pre>
-     * The time at which the Query was performed.
+     * The time at which the Query was started.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -3972,6 +4019,47 @@ public final class QueriesPlumbing {
       }
     }
 
+    public static final int COMPLETED_AT_FIELD_NUMBER = 23;
+    private com.google.protobuf.Timestamp completedAt_;
+    /**
+     * <pre>
+     * The time at which the Query was completed.
+     * Empty if this record indicates the start of a long-running query.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+     * @return Whether the completedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCompletedAt() {
+      return completedAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time at which the Query was completed.
+     * Empty if this record indicates the start of a long-running query.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+     * @return The completedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCompletedAt() {
+      return completedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completedAt_;
+    }
+    /**
+     * <pre>
+     * The time at which the Query was completed.
+     * Empty if this record indicates the start of a long-running query.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCompletedAtOrBuilder() {
+      return getCompletedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4051,6 +4139,9 @@ public final class QueriesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 22, queryKeyId_);
+      }
+      if (completedAt_ != null) {
+        output.writeMessage(23, getCompletedAt());
       }
       unknownFields.writeTo(output);
     }
@@ -4134,6 +4225,10 @@ public final class QueriesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(queryKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, queryKeyId_);
       }
+      if (completedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getCompletedAt());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4205,6 +4300,11 @@ public final class QueriesPlumbing {
       }
       if (!getQueryKeyId()
           .equals(other.getQueryKeyId())) return false;
+      if (hasCompletedAt() != other.hasCompletedAt()) return false;
+      if (hasCompletedAt()) {
+        if (!getCompletedAt()
+            .equals(other.getCompletedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4271,6 +4371,10 @@ public final class QueriesPlumbing {
       }
       hash = (37 * hash) + QUERY_KEY_ID_FIELD_NUMBER;
       hash = (53 * hash) + getQueryKeyId().hashCode();
+      if (hasCompletedAt()) {
+        hash = (37 * hash) + COMPLETED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCompletedAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4368,7 +4472,11 @@ public final class QueriesPlumbing {
     }
     /**
      * <pre>
-     * A Query is a record of a single client request to a resource, such as an SQL query.
+     * A Query is a record of a single client request to a resource, such as a SQL query.
+     * Longer-running queries including long-running SSH commands and SSH, RDP, or Kubernetes
+     * interactive sessions will return two Query records with the same identifier, one record
+     * at the start of the query and a second record upon the completion of the query with
+     * additional detail.
      * </pre>
      *
      * Protobuf type {@code v1.Query}
@@ -4468,6 +4576,12 @@ public final class QueriesPlumbing {
         }
         queryKeyId_ = "";
 
+        if (completedAtBuilder_ == null) {
+          completedAt_ = null;
+        } else {
+          completedAt_ = null;
+          completedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -4532,6 +4646,11 @@ public final class QueriesPlumbing {
           result.accountTags_ = accountTagsBuilder_.build();
         }
         result.queryKeyId_ = queryKeyId_;
+        if (completedAtBuilder_ == null) {
+          result.completedAt_ = completedAt_;
+        } else {
+          result.completedAt_ = completedAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4660,6 +4779,9 @@ public final class QueriesPlumbing {
         if (!other.getQueryKeyId().isEmpty()) {
           queryKeyId_ = other.queryKeyId_;
           onChanged();
+        }
+        if (other.hasCompletedAt()) {
+          mergeCompletedAt(other.getCompletedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5469,7 +5591,7 @@ public final class QueriesPlumbing {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5480,7 +5602,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5495,7 +5617,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5515,7 +5637,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5533,7 +5655,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5555,7 +5677,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5573,7 +5695,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5585,7 +5707,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -5600,7 +5722,7 @@ public final class QueriesPlumbing {
       }
       /**
        * <pre>
-       * The time at which the Query was performed.
+       * The time at which the Query was started.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp timestamp = 9 [(.v1.field_options) = { ... }</code>
@@ -6931,6 +7053,170 @@ public final class QueriesPlumbing {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp completedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> completedAtBuilder_;
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       * @return Whether the completedAt field is set.
+       */
+      public boolean hasCompletedAt() {
+        return completedAtBuilder_ != null || completedAt_ != null;
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       * @return The completedAt.
+       */
+      public com.google.protobuf.Timestamp getCompletedAt() {
+        if (completedAtBuilder_ == null) {
+          return completedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completedAt_;
+        } else {
+          return completedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCompletedAt(com.google.protobuf.Timestamp value) {
+        if (completedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          completedAt_ = value;
+          onChanged();
+        } else {
+          completedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCompletedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (completedAtBuilder_ == null) {
+          completedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          completedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCompletedAt(com.google.protobuf.Timestamp value) {
+        if (completedAtBuilder_ == null) {
+          if (completedAt_ != null) {
+            completedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(completedAt_).mergeFrom(value).buildPartial();
+          } else {
+            completedAt_ = value;
+          }
+          onChanged();
+        } else {
+          completedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCompletedAt() {
+        if (completedAtBuilder_ == null) {
+          completedAt_ = null;
+          onChanged();
+        } else {
+          completedAt_ = null;
+          completedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCompletedAtBuilder() {
+        
+        onChanged();
+        return getCompletedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCompletedAtOrBuilder() {
+        if (completedAtBuilder_ != null) {
+          return completedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return completedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : completedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time at which the Query was completed.
+       * Empty if this record indicates the start of a long-running query.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCompletedAtFieldBuilder() {
+        if (completedAtBuilder_ == null) {
+          completedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCompletedAt(),
+                  getParentForChildren(),
+                  isClean());
+          completedAt_ = null;
+        }
+        return completedAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7020,7 +7306,7 @@ public final class QueriesPlumbing {
       "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362" +
       "\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gate" +
       "way:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pro" +
-      "vider\"\200\007\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "vider\"\276\007\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "\036\n\naccount_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resou" +
       "rce_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nquery_body\030\004" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030\005 \001(\0132\031.goo" +
@@ -7041,16 +7327,18 @@ public final class QueriesPlumbing {
       "\363\263\007\001\022!\n\raccount_email\030\024 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "*\n\014account_tags\030\025 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
       "\263\007\001\022/\n\014query_key_id\030\026 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263" +
-      "\007\ngo_private:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030" +
-      "\322\363\263\007\023!terraform-provider2\245\001\n\007Queries\022W\n\004" +
-      "List\022\024.v1.QueryListRequest\032\025.v1.QueryLis" +
-      "tResponse\"\"\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/qu" +
-      "eries\032A\312\371\263\007\n\302\371\263\007\005Query\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263" +
-      "\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-providerB\213\001\n\031com" +
-      ".strongdm.api.plumbingB\017QueriesPlumbingZ" +
-      "5github.com/strongdm/strongdm-sdk-go/v3/" +
-      "internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terr" +
-      "aform-providerb\006proto3"
+      "\007\ngo_private\022<\n\014completed_at\030\027 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007" +
+      "\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pr" +
+      "ovider2\245\001\n\007Queries\022W\n\004List\022\024.v1.QueryLis" +
+      "tRequest\032\025.v1.QueryListResponse\"\"\202\371\263\007\010\242\363" +
+      "\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/queries\032A\312\371\263\007\n\302\371\263\007\005Q" +
+      "uery\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terr" +
+      "aform-providerB\213\001\n\031com.strongdm.api.plum" +
+      "bingB\017QueriesPlumbingZ5github.com/strong" +
+      "dm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007" +
+      "\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7078,7 +7366,7 @@ public final class QueriesPlumbing {
     internal_static_v1_Query_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Query_descriptor,
-        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", });
+        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

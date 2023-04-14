@@ -187,7 +187,7 @@ public final class SecretStoresTypesPlumbing {
   /**
    * <pre>
    * A SecretStore is a server where resource secrets (passwords, keys) are stored.
-   * Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support&#64;strongdm.com to request access to the beta.
+   * Coming soon support for HashiCorp Vault and AWS Secret Store.
    * </pre>
    *
    * Protobuf type {@code v1.SecretStore}
@@ -1081,7 +1081,7 @@ public final class SecretStoresTypesPlumbing {
     /**
      * <pre>
      * A SecretStore is a server where resource secrets (passwords, keys) are stored.
-     * Coming soon support for HashiCorp Vault and AWS Secret Store. Contact support&#64;strongdm.com to request access to the beta.
+     * Coming soon support for HashiCorp Vault and AWS Secret Store.
      * </pre>
      *
      * Protobuf type {@code v1.SecretStore}

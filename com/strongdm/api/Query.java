@@ -20,7 +20,12 @@ package com.strongdm.api;
 import java.time.Duration;
 import java.util.Date;
 
-/** A Query is a record of a single client request to a resource, such as an SQL query. */
+/**
+ * A Query is a record of a single client request to a resource, such as a SQL query. Longer-running
+ * queries including long-running SSH commands and SSH, RDP, or Kubernetes interactive sessions will
+ * return two Query records with the same identifier, one record at the start of the query and a
+ * second record upon the completion of the query with additional detail.
+ */
 public class Query {
   private String accountEmail;
   /**
@@ -103,6 +108,22 @@ public class Query {
     }
     this.accountTags = new java.util.HashMap<String, String>();
     this.accountTags.putAll(in);
+  }
+
+  private Date completedAt;
+  /**
+   * The time at which the Query was completed. Empty if this record indicates the start of a
+   * long-running query.
+   */
+  public Date getCompletedAt() {
+    return this.completedAt;
+  }
+  /**
+   * The time at which the Query was completed. Empty if this record indicates the start of a
+   * long-running query.
+   */
+  public void setCompletedAt(Date in) {
+    this.completedAt = in;
   }
 
   private Duration duration;
@@ -291,11 +312,11 @@ public class Query {
   }
 
   private Date timestamp;
-  /** The time at which the Query was performed. */
+  /** The time at which the Query was started. */
   public Date getTimestamp() {
     return this.timestamp;
   }
-  /** The time at which the Query was performed. */
+  /** The time at which the Query was started. */
   public void setTimestamp(Date in) {
     this.timestamp = in;
   }
