@@ -2415,6 +2415,7 @@ public final class QueriesPlumbing {
     /**
      * <pre>
      * The captured content of the Query.
+     * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
      * </pre>
      *
      * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -2424,6 +2425,7 @@ public final class QueriesPlumbing {
     /**
      * <pre>
      * The captured content of the Query.
+     * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
      * </pre>
      *
      * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -2839,6 +2841,36 @@ public final class QueriesPlumbing {
      * <code>.google.protobuf.Timestamp completed_at = 23 [(.v1.field_options) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getCompletedAtOrBuilder();
+
+    /**
+     * <pre>
+     * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+     * about the captured query.
+     * </pre>
+     *
+     * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+     * @return Whether the capture field is set.
+     */
+    boolean hasCapture();
+    /**
+     * <pre>
+     * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+     * about the captured query.
+     * </pre>
+     *
+     * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+     * @return The capture.
+     */
+    com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture getCapture();
+    /**
+     * <pre>
+     * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+     * about the captured query.
+     * </pre>
+     *
+     * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+     */
+    com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder getCaptureOrBuilder();
   }
   /**
    * <pre>
@@ -3078,6 +3110,19 @@ public final class QueriesPlumbing {
 
               break;
             }
+            case 194: {
+              com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder subBuilder = null;
+              if (capture_ != null) {
+                subBuilder = capture_.toBuilder();
+              }
+              capture_ = input.readMessage(com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(capture_);
+                capture_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3255,6 +3300,7 @@ public final class QueriesPlumbing {
     /**
      * <pre>
      * The captured content of the Query.
+     * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
      * </pre>
      *
      * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -3276,6 +3322,7 @@ public final class QueriesPlumbing {
     /**
      * <pre>
      * The captured content of the Query.
+     * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
      * </pre>
      *
      * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -4060,6 +4107,47 @@ public final class QueriesPlumbing {
       return getCompletedAt();
     }
 
+    public static final int CAPTURE_FIELD_NUMBER = 24;
+    private com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture capture_;
+    /**
+     * <pre>
+     * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+     * about the captured query.
+     * </pre>
+     *
+     * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+     * @return Whether the capture field is set.
+     */
+    @java.lang.Override
+    public boolean hasCapture() {
+      return capture_ != null;
+    }
+    /**
+     * <pre>
+     * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+     * about the captured query.
+     * </pre>
+     *
+     * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+     * @return The capture.
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture getCapture() {
+      return capture_ == null ? com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.getDefaultInstance() : capture_;
+    }
+    /**
+     * <pre>
+     * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+     * about the captured query.
+     * </pre>
+     *
+     * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder getCaptureOrBuilder() {
+      return getCapture();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4142,6 +4230,9 @@ public final class QueriesPlumbing {
       }
       if (completedAt_ != null) {
         output.writeMessage(23, getCompletedAt());
+      }
+      if (capture_ != null) {
+        output.writeMessage(24, getCapture());
       }
       unknownFields.writeTo(output);
     }
@@ -4229,6 +4320,10 @@ public final class QueriesPlumbing {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(23, getCompletedAt());
       }
+      if (capture_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getCapture());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4305,6 +4400,11 @@ public final class QueriesPlumbing {
         if (!getCompletedAt()
             .equals(other.getCompletedAt())) return false;
       }
+      if (hasCapture() != other.hasCapture()) return false;
+      if (hasCapture()) {
+        if (!getCapture()
+            .equals(other.getCapture())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4374,6 +4474,10 @@ public final class QueriesPlumbing {
       if (hasCompletedAt()) {
         hash = (37 * hash) + COMPLETED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCompletedAt().hashCode();
+      }
+      if (hasCapture()) {
+        hash = (37 * hash) + CAPTURE_FIELD_NUMBER;
+        hash = (53 * hash) + getCapture().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4582,6 +4686,12 @@ public final class QueriesPlumbing {
           completedAt_ = null;
           completedAtBuilder_ = null;
         }
+        if (captureBuilder_ == null) {
+          capture_ = null;
+        } else {
+          capture_ = null;
+          captureBuilder_ = null;
+        }
         return this;
       }
 
@@ -4650,6 +4760,11 @@ public final class QueriesPlumbing {
           result.completedAt_ = completedAt_;
         } else {
           result.completedAt_ = completedAtBuilder_.build();
+        }
+        if (captureBuilder_ == null) {
+          result.capture_ = capture_;
+        } else {
+          result.capture_ = captureBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4782,6 +4897,9 @@ public final class QueriesPlumbing {
         }
         if (other.hasCompletedAt()) {
           mergeCompletedAt(other.getCompletedAt());
+        }
+        if (other.hasCapture()) {
+          mergeCapture(other.getCapture());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5104,6 +5222,7 @@ public final class QueriesPlumbing {
       /**
        * <pre>
        * The captured content of the Query.
+       * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
        * </pre>
        *
        * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -5124,6 +5243,7 @@ public final class QueriesPlumbing {
       /**
        * <pre>
        * The captured content of the Query.
+       * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
        * </pre>
        *
        * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -5145,6 +5265,7 @@ public final class QueriesPlumbing {
       /**
        * <pre>
        * The captured content of the Query.
+       * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
        * </pre>
        *
        * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -5164,6 +5285,7 @@ public final class QueriesPlumbing {
       /**
        * <pre>
        * The captured content of the Query.
+       * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
        * </pre>
        *
        * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -5178,6 +5300,7 @@ public final class QueriesPlumbing {
       /**
        * <pre>
        * The captured content of the Query.
+       * For queries against SSH, Kubernetes, and RDP resources, this contains a JSON representation of the QueryCapture.
        * </pre>
        *
        * <code>string query_body = 4 [(.v1.field_options) = { ... }</code>
@@ -7217,6 +7340,170 @@ public final class QueriesPlumbing {
         }
         return completedAtBuilder_;
       }
+
+      private com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture capture_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture, com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder, com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder> captureBuilder_;
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       * @return Whether the capture field is set.
+       */
+      public boolean hasCapture() {
+        return captureBuilder_ != null || capture_ != null;
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       * @return The capture.
+       */
+      public com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture getCapture() {
+        if (captureBuilder_ == null) {
+          return capture_ == null ? com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.getDefaultInstance() : capture_;
+        } else {
+          return captureBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCapture(com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture value) {
+        if (captureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          capture_ = value;
+          onChanged();
+        } else {
+          captureBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCapture(
+          com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder builderForValue) {
+        if (captureBuilder_ == null) {
+          capture_ = builderForValue.build();
+          onChanged();
+        } else {
+          captureBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCapture(com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture value) {
+        if (captureBuilder_ == null) {
+          if (capture_ != null) {
+            capture_ =
+              com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.newBuilder(capture_).mergeFrom(value).buildPartial();
+          } else {
+            capture_ = value;
+          }
+          onChanged();
+        } else {
+          captureBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCapture() {
+        if (captureBuilder_ == null) {
+          capture_ = null;
+          onChanged();
+        } else {
+          capture_ = null;
+          captureBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder getCaptureBuilder() {
+        
+        onChanged();
+        return getCaptureFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       */
+      public com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder getCaptureOrBuilder() {
+        if (captureBuilder_ != null) {
+          return captureBuilder_.getMessageOrBuilder();
+        } else {
+          return capture_ == null ?
+              com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.getDefaultInstance() : capture_;
+        }
+      }
+      /**
+       * <pre>
+       * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+       * about the captured query.
+       * </pre>
+       *
+       * <code>.v1.QueryCapture capture = 24 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture, com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder, com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder> 
+          getCaptureFieldBuilder() {
+        if (captureBuilder_ == null) {
+          captureBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture, com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder, com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder>(
+                  getCapture(),
+                  getParentForChildren(),
+                  isClean());
+          capture_ = null;
+        }
+        return captureBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7270,6 +7557,2676 @@ public final class QueriesPlumbing {
 
   }
 
+  public interface QueryCaptureOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v1.QueryCapture)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The width of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+     * </pre>
+     *
+     * <code>int32 width = 1 [(.v1.field_options) = { ... }</code>
+     * @return The width.
+     */
+    int getWidth();
+
+    /**
+     * <pre>
+     * The height of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+     * </pre>
+     *
+     * <code>int32 height = 2 [(.v1.field_options) = { ... }</code>
+     * @return The height.
+     */
+    int getHeight();
+
+    /**
+     * <pre>
+     * The command executed over an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+     * @return The command.
+     */
+    java.lang.String getCommand();
+    /**
+     * <pre>
+     * The command executed over an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for command.
+     */
+    com.google.protobuf.ByteString
+        getCommandBytes();
+
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+    int getEnvCount();
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+    boolean containsEnv(
+        java.lang.String key);
+    /**
+     * Use {@link #getEnvMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getEnv();
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getEnvMap();
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+
+    /* nullable */
+java.lang.String getEnvOrDefault(
+        java.lang.String key,
+        /* nullable */
+java.lang.String defaultValue);
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+
+    java.lang.String getEnvOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * The CaptureType of this query capture.
+     * </pre>
+     *
+     * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * The CaptureType of this query capture.
+     * </pre>
+     *
+     * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <pre>
+     * The remote file name of an SCP operation.
+     * </pre>
+     *
+     * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+     * @return The fileName.
+     */
+    java.lang.String getFileName();
+    /**
+     * <pre>
+     * The remote file name of an SCP operation.
+     * </pre>
+     *
+     * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for fileName.
+     */
+    com.google.protobuf.ByteString
+        getFileNameBytes();
+
+    /**
+     * <pre>
+     * The file size transferred for an SCP operation.
+     * </pre>
+     *
+     * <code>int64 file_size = 7 [(.v1.field_options) = { ... }</code>
+     * @return The fileSize.
+     */
+    long getFileSize();
+
+    /**
+     * <pre>
+     * The command executed on the client for a Kubernetes session.
+     * </pre>
+     *
+     * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+     * @return The clientCommand.
+     */
+    java.lang.String getClientCommand();
+    /**
+     * <pre>
+     * The command executed on the client for a Kubernetes session.
+     * </pre>
+     *
+     * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for clientCommand.
+     */
+    com.google.protobuf.ByteString
+        getClientCommandBytes();
+
+    /**
+     * <pre>
+     * The target pod of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+     * @return The pod.
+     */
+    java.lang.String getPod();
+    /**
+     * <pre>
+     * The target pod of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for pod.
+     */
+    com.google.protobuf.ByteString
+        getPodBytes();
+
+    /**
+     * <pre>
+     * The target container of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+     * @return The container.
+     */
+    java.lang.String getContainer();
+    /**
+     * <pre>
+     * The target container of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for container.
+     */
+    com.google.protobuf.ByteString
+        getContainerBytes();
+
+    /**
+     * <pre>
+     * The HTTP request method of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+     * @return The requestMethod.
+     */
+    java.lang.String getRequestMethod();
+    /**
+     * <pre>
+     * The HTTP request method of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for requestMethod.
+     */
+    com.google.protobuf.ByteString
+        getRequestMethodBytes();
+
+    /**
+     * <pre>
+     * The HTTP request URI of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+     * @return The requestUri.
+     */
+    java.lang.String getRequestUri();
+    /**
+     * <pre>
+     * The HTTP request URI of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for requestUri.
+     */
+    com.google.protobuf.ByteString
+        getRequestUriBytes();
+
+    /**
+     * <pre>
+     * The HTTP request body of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>bytes request_body = 13 [(.v1.field_options) = { ... }</code>
+     * @return The requestBody.
+     */
+    com.google.protobuf.ByteString getRequestBody();
+  }
+  /**
+   * <pre>
+   * A QueryCapture contains additional information about queries against SSH, Kubernetes, and RDP resources.
+   * </pre>
+   *
+   * Protobuf type {@code v1.QueryCapture}
+   */
+  public static final class QueryCapture extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v1.QueryCapture)
+      QueryCaptureOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCapture.newBuilder() to construct.
+    private QueryCapture(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCapture() {
+      command_ = "";
+      type_ = "";
+      fileName_ = "";
+      clientCommand_ = "";
+      pod_ = "";
+      container_ = "";
+      requestMethod_ = "";
+      requestUri_ = "";
+      requestBody_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCapture();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private QueryCapture(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              width_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              height_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              command_ = s;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                env_ = com.google.protobuf.MapField.newMapField(
+                    EnvDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              env__ = input.readMessage(
+                  EnvDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              env_.getMutableMap().put(
+                  env__.getKey(), env__.getValue());
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fileName_ = s;
+              break;
+            }
+            case 56: {
+
+              fileSize_ = input.readInt64();
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clientCommand_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pod_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              container_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requestMethod_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requestUri_ = s;
+              break;
+            }
+            case 106: {
+
+              requestBody_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_QueryCapture_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetEnv();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_QueryCapture_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.class, com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder.class);
+    }
+
+    public static final int WIDTH_FIELD_NUMBER = 1;
+    private int width_;
+    /**
+     * <pre>
+     * The width of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+     * </pre>
+     *
+     * <code>int32 width = 1 [(.v1.field_options) = { ... }</code>
+     * @return The width.
+     */
+    @java.lang.Override
+    public int getWidth() {
+      return width_;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private int height_;
+    /**
+     * <pre>
+     * The height of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+     * </pre>
+     *
+     * <code>int32 height = 2 [(.v1.field_options) = { ... }</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public int getHeight() {
+      return height_;
+    }
+
+    public static final int COMMAND_FIELD_NUMBER = 3;
+    private volatile java.lang.Object command_;
+    /**
+     * <pre>
+     * The command executed over an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+     * @return The command.
+     */
+    @java.lang.Override
+    public java.lang.String getCommand() {
+      java.lang.Object ref = command_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        command_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The command executed over an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for command.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommandBytes() {
+      java.lang.Object ref = command_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        command_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENV_FIELD_NUMBER = 4;
+    private static final class EnvDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_QueryCapture_EnvEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> env_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetEnv() {
+      if (env_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            EnvDefaultEntryHolder.defaultEntry);
+      }
+      return env_;
+    }
+
+    public int getEnvCount() {
+      return internalGetEnv().getMap().size();
+    }
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsEnv(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetEnv().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getEnvMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getEnv() {
+      return getEnvMap();
+    }
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getEnvMap() {
+      return internalGetEnv().getMap();
+    }
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getEnvOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetEnv().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * The environment variables for an SSH or Kubernetes session.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getEnvOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetEnv().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * The CaptureType of this query capture.
+     * </pre>
+     *
+     * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The CaptureType of this query capture.
+     * </pre>
+     *
+     * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILE_NAME_FIELD_NUMBER = 6;
+    private volatile java.lang.Object fileName_;
+    /**
+     * <pre>
+     * The remote file name of an SCP operation.
+     * </pre>
+     *
+     * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+     * @return The fileName.
+     */
+    @java.lang.Override
+    public java.lang.String getFileName() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fileName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The remote file name of an SCP operation.
+     * </pre>
+     *
+     * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for fileName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFileNameBytes() {
+      java.lang.Object ref = fileName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILE_SIZE_FIELD_NUMBER = 7;
+    private long fileSize_;
+    /**
+     * <pre>
+     * The file size transferred for an SCP operation.
+     * </pre>
+     *
+     * <code>int64 file_size = 7 [(.v1.field_options) = { ... }</code>
+     * @return The fileSize.
+     */
+    @java.lang.Override
+    public long getFileSize() {
+      return fileSize_;
+    }
+
+    public static final int CLIENT_COMMAND_FIELD_NUMBER = 8;
+    private volatile java.lang.Object clientCommand_;
+    /**
+     * <pre>
+     * The command executed on the client for a Kubernetes session.
+     * </pre>
+     *
+     * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+     * @return The clientCommand.
+     */
+    @java.lang.Override
+    public java.lang.String getClientCommand() {
+      java.lang.Object ref = clientCommand_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientCommand_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The command executed on the client for a Kubernetes session.
+     * </pre>
+     *
+     * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for clientCommand.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientCommandBytes() {
+      java.lang.Object ref = clientCommand_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientCommand_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POD_FIELD_NUMBER = 9;
+    private volatile java.lang.Object pod_;
+    /**
+     * <pre>
+     * The target pod of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+     * @return The pod.
+     */
+    @java.lang.Override
+    public java.lang.String getPod() {
+      java.lang.Object ref = pod_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pod_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The target pod of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for pod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPodBytes() {
+      java.lang.Object ref = pod_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pod_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONTAINER_FIELD_NUMBER = 10;
+    private volatile java.lang.Object container_;
+    /**
+     * <pre>
+     * The target container of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+     * @return The container.
+     */
+    @java.lang.Override
+    public java.lang.String getContainer() {
+      java.lang.Object ref = container_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        container_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The target container of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for container.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getContainerBytes() {
+      java.lang.Object ref = container_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        container_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_METHOD_FIELD_NUMBER = 11;
+    private volatile java.lang.Object requestMethod_;
+    /**
+     * <pre>
+     * The HTTP request method of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+     * @return The requestMethod.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestMethod() {
+      java.lang.Object ref = requestMethod_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestMethod_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The HTTP request method of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for requestMethod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestMethodBytes() {
+      java.lang.Object ref = requestMethod_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestMethod_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_URI_FIELD_NUMBER = 12;
+    private volatile java.lang.Object requestUri_;
+    /**
+     * <pre>
+     * The HTTP request URI of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+     * @return The requestUri.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestUri() {
+      java.lang.Object ref = requestUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The HTTP request URI of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for requestUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestUriBytes() {
+      java.lang.Object ref = requestUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_BODY_FIELD_NUMBER = 13;
+    private com.google.protobuf.ByteString requestBody_;
+    /**
+     * <pre>
+     * The HTTP request body of a Kubernetes operation.
+     * </pre>
+     *
+     * <code>bytes request_body = 13 [(.v1.field_options) = { ... }</code>
+     * @return The requestBody.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRequestBody() {
+      return requestBody_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (width_ != 0) {
+        output.writeInt32(1, width_);
+      }
+      if (height_ != 0) {
+        output.writeInt32(2, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(command_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, command_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetEnv(),
+          EnvDefaultEntryHolder.defaultEntry,
+          4);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fileName_);
+      }
+      if (fileSize_ != 0L) {
+        output.writeInt64(7, fileSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientCommand_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, clientCommand_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pod_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, pod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(container_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, container_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestMethod_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, requestMethod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, requestUri_);
+      }
+      if (!requestBody_.isEmpty()) {
+        output.writeBytes(13, requestBody_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (width_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, width_);
+      }
+      if (height_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, height_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(command_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, command_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetEnv().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        env__ = EnvDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, env__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fileName_);
+      }
+      if (fileSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, fileSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientCommand_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, clientCommand_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pod_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, pod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(container_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, container_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestMethod_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, requestMethod_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, requestUri_);
+      }
+      if (!requestBody_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, requestBody_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture)) {
+        return super.equals(obj);
+      }
+      com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture other = (com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture) obj;
+
+      if (getWidth()
+          != other.getWidth()) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getCommand()
+          .equals(other.getCommand())) return false;
+      if (!internalGetEnv().equals(
+          other.internalGetEnv())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getFileName()
+          .equals(other.getFileName())) return false;
+      if (getFileSize()
+          != other.getFileSize()) return false;
+      if (!getClientCommand()
+          .equals(other.getClientCommand())) return false;
+      if (!getPod()
+          .equals(other.getPod())) return false;
+      if (!getContainer()
+          .equals(other.getContainer())) return false;
+      if (!getRequestMethod()
+          .equals(other.getRequestMethod())) return false;
+      if (!getRequestUri()
+          .equals(other.getRequestUri())) return false;
+      if (!getRequestBody()
+          .equals(other.getRequestBody())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WIDTH_FIELD_NUMBER;
+      hash = (53 * hash) + getWidth();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getHeight();
+      hash = (37 * hash) + COMMAND_FIELD_NUMBER;
+      hash = (53 * hash) + getCommand().hashCode();
+      if (!internalGetEnv().getMap().isEmpty()) {
+        hash = (37 * hash) + ENV_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetEnv().hashCode();
+      }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + FILE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFileName().hashCode();
+      hash = (37 * hash) + FILE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFileSize());
+      hash = (37 * hash) + CLIENT_COMMAND_FIELD_NUMBER;
+      hash = (53 * hash) + getClientCommand().hashCode();
+      hash = (37 * hash) + POD_FIELD_NUMBER;
+      hash = (53 * hash) + getPod().hashCode();
+      hash = (37 * hash) + CONTAINER_FIELD_NUMBER;
+      hash = (53 * hash) + getContainer().hashCode();
+      hash = (37 * hash) + REQUEST_METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestMethod().hashCode();
+      hash = (37 * hash) + REQUEST_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestUri().hashCode();
+      hash = (37 * hash) + REQUEST_BODY_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestBody().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A QueryCapture contains additional information about queries against SSH, Kubernetes, and RDP resources.
+     * </pre>
+     *
+     * Protobuf type {@code v1.QueryCapture}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v1.QueryCapture)
+        com.strongdm.api.plumbing.QueriesPlumbing.QueryCaptureOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_QueryCapture_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetEnv();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableEnv();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_QueryCapture_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.class, com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.Builder.class);
+      }
+
+      // Construct using com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        width_ = 0;
+
+        height_ = 0;
+
+        command_ = "";
+
+        internalGetMutableEnv().clear();
+        type_ = "";
+
+        fileName_ = "";
+
+        fileSize_ = 0L;
+
+        clientCommand_ = "";
+
+        pod_ = "";
+
+        container_ = "";
+
+        requestMethod_ = "";
+
+        requestUri_ = "";
+
+        requestBody_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.internal_static_v1_QueryCapture_descriptor;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture getDefaultInstanceForType() {
+        return com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture build() {
+        com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture buildPartial() {
+        com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture result = new com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture(this);
+        int from_bitField0_ = bitField0_;
+        result.width_ = width_;
+        result.height_ = height_;
+        result.command_ = command_;
+        result.env_ = internalGetEnv();
+        result.env_.makeImmutable();
+        result.type_ = type_;
+        result.fileName_ = fileName_;
+        result.fileSize_ = fileSize_;
+        result.clientCommand_ = clientCommand_;
+        result.pod_ = pod_;
+        result.container_ = container_;
+        result.requestMethod_ = requestMethod_;
+        result.requestUri_ = requestUri_;
+        result.requestBody_ = requestBody_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture) {
+          return mergeFrom((com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture other) {
+        if (other == com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture.getDefaultInstance()) return this;
+        if (other.getWidth() != 0) {
+          setWidth(other.getWidth());
+        }
+        if (other.getHeight() != 0) {
+          setHeight(other.getHeight());
+        }
+        if (!other.getCommand().isEmpty()) {
+          command_ = other.command_;
+          onChanged();
+        }
+        internalGetMutableEnv().mergeFrom(
+            other.internalGetEnv());
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getFileName().isEmpty()) {
+          fileName_ = other.fileName_;
+          onChanged();
+        }
+        if (other.getFileSize() != 0L) {
+          setFileSize(other.getFileSize());
+        }
+        if (!other.getClientCommand().isEmpty()) {
+          clientCommand_ = other.clientCommand_;
+          onChanged();
+        }
+        if (!other.getPod().isEmpty()) {
+          pod_ = other.pod_;
+          onChanged();
+        }
+        if (!other.getContainer().isEmpty()) {
+          container_ = other.container_;
+          onChanged();
+        }
+        if (!other.getRequestMethod().isEmpty()) {
+          requestMethod_ = other.requestMethod_;
+          onChanged();
+        }
+        if (!other.getRequestUri().isEmpty()) {
+          requestUri_ = other.requestUri_;
+          onChanged();
+        }
+        if (other.getRequestBody() != com.google.protobuf.ByteString.EMPTY) {
+          setRequestBody(other.getRequestBody());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int width_ ;
+      /**
+       * <pre>
+       * The width of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+       * </pre>
+       *
+       * <code>int32 width = 1 [(.v1.field_options) = { ... }</code>
+       * @return The width.
+       */
+      @java.lang.Override
+      public int getWidth() {
+        return width_;
+      }
+      /**
+       * <pre>
+       * The width of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+       * </pre>
+       *
+       * <code>int32 width = 1 [(.v1.field_options) = { ... }</code>
+       * @param value The width to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWidth(int value) {
+        
+        width_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The width of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+       * </pre>
+       *
+       * <code>int32 width = 1 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWidth() {
+        
+        width_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int height_ ;
+      /**
+       * <pre>
+       * The height of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+       * </pre>
+       *
+       * <code>int32 height = 2 [(.v1.field_options) = { ... }</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public int getHeight() {
+        return height_;
+      }
+      /**
+       * <pre>
+       * The height of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+       * </pre>
+       *
+       * <code>int32 height = 2 [(.v1.field_options) = { ... }</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(int value) {
+        
+        height_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The height of the terminal or window for SSH, Kubernetes, and RDP interactive sessions.
+       * </pre>
+       *
+       * <code>int32 height = 2 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        
+        height_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object command_ = "";
+      /**
+       * <pre>
+       * The command executed over an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+       * @return The command.
+       */
+      public java.lang.String getCommand() {
+        java.lang.Object ref = command_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          command_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The command executed over an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for command.
+       */
+      public com.google.protobuf.ByteString
+          getCommandBytes() {
+        java.lang.Object ref = command_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          command_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The command executed over an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The command to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommand(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        command_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The command executed over an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommand() {
+        
+        command_ = getDefaultInstance().getCommand();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The command executed over an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>string command = 3 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for command to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommandBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        command_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> env_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetEnv() {
+        if (env_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              EnvDefaultEntryHolder.defaultEntry);
+        }
+        return env_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableEnv() {
+        onChanged();;
+        if (env_ == null) {
+          env_ = com.google.protobuf.MapField.newMapField(
+              EnvDefaultEntryHolder.defaultEntry);
+        }
+        if (!env_.isMutable()) {
+          env_ = env_.copy();
+        }
+        return env_;
+      }
+
+      public int getEnvCount() {
+        return internalGetEnv().getMap().size();
+      }
+      /**
+       * <pre>
+       * The environment variables for an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsEnv(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetEnv().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getEnvMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getEnv() {
+        return getEnvMap();
+      }
+      /**
+       * <pre>
+       * The environment variables for an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getEnvMap() {
+        return internalGetEnv().getMap();
+      }
+      /**
+       * <pre>
+       * The environment variables for an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getEnvOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetEnv().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * The environment variables for an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getEnvOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetEnv().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearEnv() {
+        internalGetMutableEnv().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * The environment variables for an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+       */
+
+      public Builder removeEnv(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableEnv().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableEnv() {
+        return internalGetMutableEnv().getMutableMap();
+      }
+      /**
+       * <pre>
+       * The environment variables for an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder putEnv(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableEnv().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * The environment variables for an SSH or Kubernetes session.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; env = 4 [(.v1.field_options) = { ... }</code>
+       */
+
+      public Builder putAllEnv(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableEnv().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * The CaptureType of this query capture.
+       * </pre>
+       *
+       * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The CaptureType of this query capture.
+       * </pre>
+       *
+       * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The CaptureType of this query capture.
+       * </pre>
+       *
+       * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The CaptureType of this query capture.
+       * </pre>
+       *
+       * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The CaptureType of this query capture.
+       * </pre>
+       *
+       * <code>string type = 5 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fileName_ = "";
+      /**
+       * <pre>
+       * The remote file name of an SCP operation.
+       * </pre>
+       *
+       * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+       * @return The fileName.
+       */
+      public java.lang.String getFileName() {
+        java.lang.Object ref = fileName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fileName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The remote file name of an SCP operation.
+       * </pre>
+       *
+       * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for fileName.
+       */
+      public com.google.protobuf.ByteString
+          getFileNameBytes() {
+        java.lang.Object ref = fileName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fileName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The remote file name of an SCP operation.
+       * </pre>
+       *
+       * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fileName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The remote file name of an SCP operation.
+       * </pre>
+       *
+       * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileName() {
+        
+        fileName_ = getDefaultInstance().getFileName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The remote file name of an SCP operation.
+       * </pre>
+       *
+       * <code>string file_name = 6 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for fileName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fileName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long fileSize_ ;
+      /**
+       * <pre>
+       * The file size transferred for an SCP operation.
+       * </pre>
+       *
+       * <code>int64 file_size = 7 [(.v1.field_options) = { ... }</code>
+       * @return The fileSize.
+       */
+      @java.lang.Override
+      public long getFileSize() {
+        return fileSize_;
+      }
+      /**
+       * <pre>
+       * The file size transferred for an SCP operation.
+       * </pre>
+       *
+       * <code>int64 file_size = 7 [(.v1.field_options) = { ... }</code>
+       * @param value The fileSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFileSize(long value) {
+        
+        fileSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The file size transferred for an SCP operation.
+       * </pre>
+       *
+       * <code>int64 file_size = 7 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFileSize() {
+        
+        fileSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientCommand_ = "";
+      /**
+       * <pre>
+       * The command executed on the client for a Kubernetes session.
+       * </pre>
+       *
+       * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+       * @return The clientCommand.
+       */
+      public java.lang.String getClientCommand() {
+        java.lang.Object ref = clientCommand_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientCommand_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The command executed on the client for a Kubernetes session.
+       * </pre>
+       *
+       * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for clientCommand.
+       */
+      public com.google.protobuf.ByteString
+          getClientCommandBytes() {
+        java.lang.Object ref = clientCommand_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientCommand_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The command executed on the client for a Kubernetes session.
+       * </pre>
+       *
+       * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The clientCommand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientCommand(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clientCommand_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The command executed on the client for a Kubernetes session.
+       * </pre>
+       *
+       * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientCommand() {
+        
+        clientCommand_ = getDefaultInstance().getClientCommand();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The command executed on the client for a Kubernetes session.
+       * </pre>
+       *
+       * <code>string client_command = 8 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for clientCommand to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientCommandBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clientCommand_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pod_ = "";
+      /**
+       * <pre>
+       * The target pod of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+       * @return The pod.
+       */
+      public java.lang.String getPod() {
+        java.lang.Object ref = pod_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pod_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The target pod of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for pod.
+       */
+      public com.google.protobuf.ByteString
+          getPodBytes() {
+        java.lang.Object ref = pod_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pod_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The target pod of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The pod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPod(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pod_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The target pod of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPod() {
+        
+        pod_ = getDefaultInstance().getPod();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The target pod of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string pod = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for pod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPodBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pod_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object container_ = "";
+      /**
+       * <pre>
+       * The target container of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+       * @return The container.
+       */
+      public java.lang.String getContainer() {
+        java.lang.Object ref = container_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          container_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The target container of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for container.
+       */
+      public com.google.protobuf.ByteString
+          getContainerBytes() {
+        java.lang.Object ref = container_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          container_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The target container of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The container to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContainer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        container_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The target container of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContainer() {
+        
+        container_ = getDefaultInstance().getContainer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The target container of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string container = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for container to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContainerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        container_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requestMethod_ = "";
+      /**
+       * <pre>
+       * The HTTP request method of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+       * @return The requestMethod.
+       */
+      public java.lang.String getRequestMethod() {
+        java.lang.Object ref = requestMethod_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestMethod_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The HTTP request method of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for requestMethod.
+       */
+      public com.google.protobuf.ByteString
+          getRequestMethodBytes() {
+        java.lang.Object ref = requestMethod_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestMethod_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The HTTP request method of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The requestMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestMethod(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requestMethod_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The HTTP request method of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestMethod() {
+        
+        requestMethod_ = getDefaultInstance().getRequestMethod();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The HTTP request method of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_method = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for requestMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestMethodBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        requestMethod_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requestUri_ = "";
+      /**
+       * <pre>
+       * The HTTP request URI of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+       * @return The requestUri.
+       */
+      public java.lang.String getRequestUri() {
+        java.lang.Object ref = requestUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The HTTP request URI of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for requestUri.
+       */
+      public com.google.protobuf.ByteString
+          getRequestUriBytes() {
+        java.lang.Object ref = requestUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The HTTP request URI of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The requestUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requestUri_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The HTTP request URI of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestUri() {
+        
+        requestUri_ = getDefaultInstance().getRequestUri();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The HTTP request URI of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>string request_uri = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for requestUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        requestUri_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString requestBody_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * The HTTP request body of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>bytes request_body = 13 [(.v1.field_options) = { ... }</code>
+       * @return The requestBody.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRequestBody() {
+        return requestBody_;
+      }
+      /**
+       * <pre>
+       * The HTTP request body of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>bytes request_body = 13 [(.v1.field_options) = { ... }</code>
+       * @param value The requestBody to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestBody(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requestBody_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The HTTP request body of a Kubernetes operation.
+       * </pre>
+       *
+       * <code>bytes request_body = 13 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestBody() {
+        
+        requestBody_ = getDefaultInstance().getRequestBody();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v1.QueryCapture)
+    }
+
+    // @@protoc_insertion_point(class_scope:v1.QueryCapture)
+    private static final com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture();
+    }
+
+    public static com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCapture>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCapture>() {
+      @java.lang.Override
+      public QueryCapture parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new QueryCapture(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCapture> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCapture> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.strongdm.api.plumbing.QueriesPlumbing.QueryCapture getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v1_QueryListRequest_descriptor;
   private static final 
@@ -7285,6 +10242,16 @@ public final class QueriesPlumbing {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v1_Query_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_QueryCapture_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_QueryCapture_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v1_QueryCapture_EnvEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v1_QueryCapture_EnvEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7306,7 +10273,7 @@ public final class QueriesPlumbing {
       "te_limit\030\003 \001(\0132\025.v1.RateLimitMetadataB,\362" +
       "\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!json_gate" +
       "way:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pro" +
-      "vider\"\276\007\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
+      "vider\"\355\007\n\005Query\022\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022" +
       "\036\n\naccount_id\030\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resou" +
       "rce_id\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\036\n\nquery_body\030\004" +
       " \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0227\n\010duration\030\005 \001(\0132\031.goo" +
@@ -7328,17 +10295,32 @@ public final class QueriesPlumbing {
       "*\n\014account_tags\030\025 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363" +
       "\263\007\001\022/\n\014query_key_id\030\026 \001(\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263" +
       "\007\ngo_private\022<\n\014completed_at\030\027 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007" +
-      "\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-pr" +
-      "ovider2\245\001\n\007Queries\022W\n\004List\022\024.v1.QueryLis" +
-      "tRequest\032\025.v1.QueryListResponse\"\"\202\371\263\007\010\242\363" +
-      "\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/queries\032A\312\371\263\007\n\302\371\263\007\005Q" +
-      "uery\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terr" +
-      "aform-providerB\213\001\n\031com.strongdm.api.plum" +
-      "bingB\017QueriesPlumbingZ5github.com/strong" +
-      "dm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007" +
-      "\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006pr" +
-      "oto3"
+      "gle.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022-\n\007ca" +
+      "pture\030\030 \001(\0132\020.v1.QueryCaptureB\n\362\370\263\007\005\260\363\263\007" +
+      "\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terra" +
+      "form-provider\"\253\004\n\014QueryCapture\022\031\n\005width\030" +
+      "\001 \001(\005B\n\362\370\263\007\005\260\363\263\007\001\022\032\n\006height\030\002 \001(\005B\n\362\370\263\007\005" +
+      "\260\363\263\007\001\022\033\n\007command\030\003 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0222\n\003en" +
+      "v\030\004 \003(\0132\031.v1.QueryCapture.EnvEntryB\n\362\370\263\007" +
+      "\005\260\363\263\007\001\022\030\n\004type\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tfile" +
+      "_name\030\006 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tfile_size\030\007 \001" +
+      "(\003B\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016client_command\030\010 \001(\tB\n" +
+      "\362\370\263\007\005\260\363\263\007\001\022\027\n\003pod\030\t \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\tc" +
+      "ontainer\030\n \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016request_me" +
+      "thod\030\013 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\0229\n\013request_uri\030\014 " +
+      "\001(\tB$\362\370\263\007\037\260\363\263\007\001\312\363\263\007\025\302\364\263\007\020\n\002go\022\nRequestUR" +
+      "I\022 \n\014request_body\030\r \001(\014B\n\362\370\263\007\005\260\363\263\007\001\032*\n\010E" +
+      "nvEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:" +
+      "2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terrafo" +
+      "rm-provider2\245\001\n\007Queries\022W\n\004List\022\024.v1.Que" +
+      "ryListRequest\032\025.v1.QueryListResponse\"\"\202\371" +
+      "\263\007\010\242\363\263\007\003get\202\371\263\007\020\252\363\263\007\013/v1/queries\032A\312\371\263\007\n\302" +
+      "\371\263\007\005Query\312\371\263\007\005\330\371\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023" +
+      "!terraform-providerB\213\001\n\031com.strongdm.api" +
+      ".plumbingB\017QueriesPlumbingZ5github.com/s" +
+      "trongdm/strongdm-sdk-go/v3/internal/v1;v" +
+      "1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-provide" +
+      "rb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7366,7 +10348,19 @@ public final class QueriesPlumbing {
     internal_static_v1_Query_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Query_descriptor,
-        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", });
+        new java.lang.String[] { "Id", "AccountId", "ResourceId", "QueryBody", "Duration", "Encrypted", "QueryHash", "RemoteIdentityUsername", "Timestamp", "EgressNodeId", "Replayable", "RecordCount", "ResourceType", "QueryCategory", "QueryKey", "ResourceName", "ResourceTags", "AccountFirstName", "AccountLastName", "AccountEmail", "AccountTags", "QueryKeyId", "CompletedAt", "Capture", });
+    internal_static_v1_QueryCapture_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_v1_QueryCapture_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_QueryCapture_descriptor,
+        new java.lang.String[] { "Width", "Height", "Command", "Env", "Type", "FileName", "FileSize", "ClientCommand", "Pod", "Container", "RequestMethod", "RequestUri", "RequestBody", });
+    internal_static_v1_QueryCapture_EnvEntry_descriptor =
+      internal_static_v1_QueryCapture_descriptor.getNestedTypes().get(0);
+    internal_static_v1_QueryCapture_EnvEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v1_QueryCapture_EnvEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

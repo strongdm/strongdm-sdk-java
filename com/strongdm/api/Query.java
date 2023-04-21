@@ -110,6 +110,22 @@ public class Query {
     this.accountTags.putAll(in);
   }
 
+  private QueryCapture capture;
+  /**
+   * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+   * about the captured query.
+   */
+  public QueryCapture getCapture() {
+    return this.capture;
+  }
+  /**
+   * For queries against SSH, Kubernetes, and RDP resources, this contains additional information
+   * about the captured query.
+   */
+  public void setCapture(QueryCapture in) {
+    this.capture = in;
+  }
+
   private Date completedAt;
   /**
    * The time at which the Query was completed. Empty if this record indicates the start of a
@@ -167,11 +183,17 @@ public class Query {
   }
 
   private String queryBody;
-  /** The captured content of the Query. */
+  /**
+   * The captured content of the Query. For queries against SSH, Kubernetes, and RDP resources, this
+   * contains a JSON representation of the QueryCapture.
+   */
   public String getQueryBody() {
     return this.queryBody;
   }
-  /** The captured content of the Query. */
+  /**
+   * The captured content of the Query. For queries against SSH, Kubernetes, and RDP resources, this
+   * contains a JSON representation of the QueryCapture.
+   */
   public void setQueryBody(String in) {
     this.queryBody = in;
   }

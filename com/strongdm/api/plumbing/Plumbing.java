@@ -7268,6 +7268,7 @@ public class Plumbing {
     porcelain.setAccountId((plumbing.getAccountId()));
     porcelain.setAccountLastName((plumbing.getAccountLastName()));
     porcelain.setAccountTags(Plumbing.convertTagsToPorcelain(plumbing.getAccountTags()));
+    porcelain.setCapture(Plumbing.convertQueryCaptureToPorcelain(plumbing.getCapture()));
     porcelain.setCompletedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCompletedAt()));
     porcelain.setDuration(Plumbing.convertDurationToPorcelain(plumbing.getDuration()));
     porcelain.setEgressNodeId((plumbing.getEgressNodeId()));
@@ -7307,6 +7308,9 @@ public class Plumbing {
     }
     if (porcelain.getAccountTags() != null) {
       builder.setAccountTags(Plumbing.convertTagsToPlumbing(porcelain.getAccountTags()));
+    }
+    if (porcelain.getCapture() != null) {
+      builder.setCapture(Plumbing.convertQueryCaptureToPlumbing(porcelain.getCapture()));
     }
     if (porcelain.getCompletedAt() != null) {
       builder.setCompletedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCompletedAt()));
@@ -7367,6 +7371,79 @@ public class Plumbing {
       Collection<com.strongdm.api.Query> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertQueryToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.QueryCapture convertQueryCaptureToPorcelain(
+      QueryCapture plumbing) {
+    com.strongdm.api.QueryCapture porcelain = new com.strongdm.api.QueryCapture();
+    porcelain.setClientCommand((plumbing.getClientCommand()));
+    porcelain.setCommand((plumbing.getCommand()));
+    porcelain.setContainer((plumbing.getContainer()));
+    porcelain.setEnv((plumbing.getEnv()));
+    porcelain.setFileName((plumbing.getFileName()));
+    porcelain.setFileSize((plumbing.getFileSize()));
+    porcelain.setHeight((plumbing.getHeight()));
+    porcelain.setPod((plumbing.getPod()));
+    porcelain.setRequestBody(Plumbing.convertBytesToPorcelain(plumbing.getRequestBody()));
+    porcelain.setRequestMethod((plumbing.getRequestMethod()));
+    porcelain.setRequestUri((plumbing.getRequestUri()));
+    porcelain.setType((plumbing.getType()));
+    porcelain.setWidth((plumbing.getWidth()));
+    return porcelain;
+  }
+
+  public static QueryCapture convertQueryCaptureToPlumbing(
+      com.strongdm.api.QueryCapture porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    QueryCapture.Builder builder = QueryCapture.newBuilder();
+    if (porcelain.getClientCommand() != null) {
+      builder.setClientCommand((porcelain.getClientCommand()));
+    }
+    if (porcelain.getCommand() != null) {
+      builder.setCommand((porcelain.getCommand()));
+    }
+    if (porcelain.getContainer() != null) {
+      builder.setContainer((porcelain.getContainer()));
+    }
+    builder.putAllEnv((porcelain.getEnv()));
+    if (porcelain.getFileName() != null) {
+      builder.setFileName((porcelain.getFileName()));
+    }
+    builder.setFileSize(porcelain.getFileSize());
+    builder.setHeight(porcelain.getHeight());
+    if (porcelain.getPod() != null) {
+      builder.setPod((porcelain.getPod()));
+    }
+    if (porcelain.getRequestBody() != null) {
+      builder.setRequestBody(Plumbing.convertBytesToPlumbing(porcelain.getRequestBody()));
+    }
+    if (porcelain.getRequestMethod() != null) {
+      builder.setRequestMethod((porcelain.getRequestMethod()));
+    }
+    if (porcelain.getRequestUri() != null) {
+      builder.setRequestUri((porcelain.getRequestUri()));
+    }
+    if (porcelain.getType() != null) {
+      builder.setType((porcelain.getType()));
+    }
+    builder.setWidth(porcelain.getWidth());
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.QueryCapture> convertRepeatedQueryCaptureToPorcelain(
+      Collection<QueryCapture> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertQueryCaptureToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<QueryCapture> convertRepeatedQueryCaptureToPlumbing(
+      Collection<com.strongdm.api.QueryCapture> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertQueryCaptureToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
