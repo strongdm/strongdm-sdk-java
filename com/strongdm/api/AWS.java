@@ -88,6 +88,16 @@ public class AWS implements Resource {
     this.name = in;
   }
 
+  private int portOverride;
+  /** */
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+  /** */
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
   private String roleArn;
   /** */
   public String getRoleArn() {
@@ -126,6 +136,22 @@ public class AWS implements Resource {
   /** ID of the secret store containing credentials for this resource, if any. */
   public void setSecretStoreId(String in) {
     this.secretStoreId = in;
+  }
+
+  private String subdomain;
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
+  public String getSubdomain() {
+    return this.subdomain;
+  }
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
+  public void setSubdomain(String in) {
+    this.subdomain = in;
   }
 
   private java.util.Map<String, String> tags;

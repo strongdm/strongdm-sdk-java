@@ -638,10 +638,12 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
     porcelain.setSecretAccessKey((plumbing.getSecretAccessKey()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
   }
@@ -670,6 +672,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRoleArn() != null) {
       builder.setRoleArn((porcelain.getRoleArn()));
     }
@@ -681,6 +684,9 @@ public class Plumbing {
     }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
@@ -2779,7 +2785,9 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
     porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     porcelain.setTenantId((plumbing.getTenantId()));
     return porcelain;
@@ -2809,8 +2817,12 @@ public class Plumbing {
     if (porcelain.getPassword() != null) {
       builder.setPassword((porcelain.getPassword()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
@@ -2845,7 +2857,9 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     porcelain.setTenantId((plumbing.getTenantId()));
     return porcelain;
@@ -2876,8 +2890,12 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
@@ -4456,8 +4474,10 @@ public class Plumbing {
     porcelain.setId((plumbing.getId()));
     porcelain.setKeyfile((plumbing.getKeyfile()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setScopes((plumbing.getScopes()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
     return porcelain;
   }
@@ -4483,11 +4503,15 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getScopes() != null) {
       builder.setScopes((porcelain.getScopes()));
     }
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
     }
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));

@@ -130,6 +130,7 @@ public final class ActivityVerb {
   public static final String ORG_SELF_REGISTRATION_DEACTIVATED = "self-registration deactivated";
   public static final String ORG_NAME_UPDATED = "organization name updated";
   public static final String ORG_SETTING_UPDATED = "organization setting updated";
+  public static final String ORG_LOG_SYNC_SETTING_UPDATED = "organization log sync setting updated";
   public static final String ORG_CREATED = "organization created";
   public static final String ORG_SCIM_PROVISIONING_UPDATED = "SCIM provider set";
   public static final String ORG_SCIM_PROVISIONING_DELETED = "SCIM provider deleted";
@@ -174,6 +175,7 @@ public final class ActivityVerb {
       "multiple resources assigned to workflow";
   public static final String WORKFLOW_RESOURCE_MULTIPLE_UNASSIGNED =
       "multiple resources unassigned from workflow";
+  public static final String WORKFLOW_ROLES_UPDATED = "workflow roles updated";
   public static final String WORKFLOW_NOTIFICATION_OPTION_ADDED =
       "workflow notification type added";
   public static final String WORKFLOW_NOTIFICATION_OPTION_REMOVED =
