@@ -47,6 +47,24 @@ public class AccountResource {
     this.accountId = in;
   }
 
+  private Date createdAt;
+  /**
+   * The time this grant was created, distinct from 'granted at' in the case where access is
+   * scheduled for the future. If access was granted, revoked, and granted again, this will reflect
+   * the later creation time.
+   */
+  public Date getCreatedAt() {
+    return this.createdAt;
+  }
+  /**
+   * The time this grant was created, distinct from 'granted at' in the case where access is
+   * scheduled for the future. If access was granted, revoked, and granted again, this will reflect
+   * the later creation time.
+   */
+  public void setCreatedAt(Date in) {
+    this.createdAt = in;
+  }
+
   private Date expiresAt;
   /** The time at which access will expire. If empty, this access has no expiration. */
   public Date getExpiresAt() {

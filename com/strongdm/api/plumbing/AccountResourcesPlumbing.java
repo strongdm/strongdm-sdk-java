@@ -2492,6 +2492,36 @@ public final class AccountResourcesPlumbing {
      */
     com.google.protobuf.ByteString
         getAccountGrantIdBytes();
+
+    /**
+     * <pre>
+     * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+     * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+     * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+     * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
    * <pre>
@@ -2594,6 +2624,19 @@ public final class AccountResourcesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               accountGrantId_ = s;
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2897,6 +2940,47 @@ public final class AccountResourcesPlumbing {
       }
     }
 
+    public static final int CREATED_AT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+     * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+     * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+     * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2929,6 +3013,9 @@ public final class AccountResourcesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountGrantId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, accountGrantId_);
       }
+      if (createdAt_ != null) {
+        output.writeMessage(7, getCreatedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2957,6 +3044,10 @@ public final class AccountResourcesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountGrantId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, accountGrantId_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getCreatedAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2991,6 +3082,11 @@ public final class AccountResourcesPlumbing {
           .equals(other.getRoleId())) return false;
       if (!getAccountGrantId()
           .equals(other.getAccountGrantId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3018,6 +3114,10 @@ public final class AccountResourcesPlumbing {
       hash = (53 * hash) + getRoleId().hashCode();
       hash = (37 * hash) + ACCOUNT_GRANT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getAccountGrantId().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3175,6 +3275,12 @@ public final class AccountResourcesPlumbing {
 
         accountGrantId_ = "";
 
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -3215,6 +3321,11 @@ public final class AccountResourcesPlumbing {
         }
         result.roleId_ = roleId_;
         result.accountGrantId_ = accountGrantId_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3284,6 +3395,9 @@ public final class AccountResourcesPlumbing {
         if (!other.getAccountGrantId().isEmpty()) {
           accountGrantId_ = other.accountGrantId_;
           onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4026,6 +4140,170 @@ public final class AccountResourcesPlumbing {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time this grant was created, distinct from 'granted at' in the case where access is scheduled
+       * for the future. If access was granted, revoked, and granted again, this will reflect the later creation time.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 7 [(.v1.field_options) = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4115,24 +4393,26 @@ public final class AccountResourcesPlumbing {
       "\001\022W\n\nrate_limit\030\003 \001(\0132\025.v1.RateLimitMeta" +
       "dataB,\362\370\263\007\005\260\363\263\007\001\362\370\263\007\006\262\364\263\007\001*\362\370\263\007\022\262\364\263\007\r!js" +
       "on_gateway:(\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraf" +
-      "orm-provider\"\301\002\n\017AccountResource\022\036\n\nacco" +
+      "orm-provider\"\375\002\n\017AccountResource\022\036\n\nacco" +
       "unt_id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\013resource_id\030" +
       "\002 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022:\n\ngranted_at\030\003 \001(\0132\032." +
       "google.protobuf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n" +
       "\nexpires_at\030\004 \001(\0132\032.google.protobuf.Time" +
       "stampB\n\362\370\263\007\005\260\363\263\007\001\022\033\n\007role_id\030\005 \001(\tB\n\362\370\263\007" +
       "\005\260\363\263\007\001\022$\n\020account_grant_id\030\006 \001(\tB\n\362\370\263\007\005\260" +
-      "\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!te" +
-      "rraform-provider2\314\001\n\020AccountResources\022u\n" +
-      "\004List\022\036.v1.AccountResourceListRequest\032\037." +
-      "v1.AccountResourceListResponse\",\202\371\263\007\010\242\363\263" +
-      "\007\003get\202\371\263\007\032\252\363\263\007\025/v1/account-resources\032A\312\371" +
-      "\263\007\024\302\371\263\007\017AccountResource\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312" +
-      "\371\263\007\023!terraform-providerB\224\001\n\031com.strongdm" +
-      ".api.plumbingB\030AccountResourcesPlumbingZ" +
-      "5github.com/strongdm/strongdm-sdk-go/v3/" +
-      "internal/v1;v1\302\222\264\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terr" +
-      "aform-providerb\006proto3"
+      "\363\263\007\001\022:\n\ncreated_at\030\007 \001(\0132\032.google.protob" +
+      "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007\001\372\370\263\007" +
+      "\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider2\314\001\n" +
+      "\020AccountResources\022u\n\004List\022\036.v1.AccountRe" +
+      "sourceListRequest\032\037.v1.AccountResourceLi" +
+      "stResponse\",\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\032\252\363\263\007\025/v1/a" +
+      "ccount-resources\032A\312\371\263\007\024\302\371\263\007\017AccountResou" +
+      "rce\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
+      "derB\224\001\n\031com.strongdm.api.plumbingB\030Accou" +
+      "ntResourcesPlumbingZ5github.com/strongdm" +
+      "/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007\006\242" +
+      "\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4158,7 +4438,7 @@ public final class AccountResourcesPlumbing {
     internal_static_v1_AccountResource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_AccountResource_descriptor,
-        new java.lang.String[] { "AccountId", "ResourceId", "GrantedAt", "ExpiresAt", "RoleId", "AccountGrantId", });
+        new java.lang.String[] { "AccountId", "ResourceId", "GrantedAt", "ExpiresAt", "RoleId", "AccountGrantId", "CreatedAt", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

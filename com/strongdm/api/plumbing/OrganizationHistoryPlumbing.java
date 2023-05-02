@@ -3979,6 +3979,26 @@ public final class OrganizationHistoryPlumbing {
      */
     com.google.protobuf.ByteString
         getKindBytes();
+
+    /**
+     * <pre>
+     * The ID of this organization.
+     * </pre>
+     *
+     * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * The ID of this organization.
+     * </pre>
+     *
+     * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
   }
   /**
    * Protobuf type {@code v1.Organization}
@@ -4008,6 +4028,7 @@ public final class OrganizationHistoryPlumbing {
       sensitiveLabel_ = "";
       samlMetadataUrl_ = "";
       kind_ = "";
+      id_ = "";
     }
 
     @java.lang.Override
@@ -4213,6 +4234,12 @@ public final class OrganizationHistoryPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               kind_ = s;
+              break;
+            }
+            case 202: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
               break;
             }
             default: {
@@ -5189,6 +5216,52 @@ public final class OrganizationHistoryPlumbing {
       }
     }
 
+    public static final int ID_FIELD_NUMBER = 25;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * The ID of this organization.
+     * </pre>
+     *
+     * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The ID of this organization.
+     * </pre>
+     *
+     * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5274,6 +5347,9 @@ public final class OrganizationHistoryPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kind_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 24, kind_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 25, id_);
       }
       unknownFields.writeTo(output);
     }
@@ -5365,6 +5441,9 @@ public final class OrganizationHistoryPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kind_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, kind_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(25, id_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5443,6 +5522,8 @@ public final class OrganizationHistoryPlumbing {
           .equals(other.getSamlMetadataUrl())) return false;
       if (!getKind()
           .equals(other.getKind())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5516,6 +5597,8 @@ public final class OrganizationHistoryPlumbing {
       hash = (53 * hash) + getSamlMetadataUrl().hashCode();
       hash = (37 * hash) + KIND_FIELD_NUMBER;
       hash = (53 * hash) + getKind().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5717,6 +5800,8 @@ public final class OrganizationHistoryPlumbing {
 
         kind_ = "";
 
+        id_ = "";
+
         return this;
       }
 
@@ -5787,6 +5872,7 @@ public final class OrganizationHistoryPlumbing {
         result.sensitiveLabel_ = sensitiveLabel_;
         result.samlMetadataUrl_ = samlMetadataUrl_;
         result.kind_ = kind_;
+        result.id_ = id_;
         onBuilt();
         return result;
       }
@@ -5920,6 +6006,10 @@ public final class OrganizationHistoryPlumbing {
         }
         if (!other.getKind().isEmpty()) {
           kind_ = other.kind_;
+          onChanged();
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8337,6 +8427,102 @@ public final class OrganizationHistoryPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * The ID of this organization.
+       * </pre>
+       *
+       * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of this organization.
+       * </pre>
+       *
+       * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The ID of this organization.
+       * </pre>
+       *
+       * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of this organization.
+       * </pre>
+       *
+       * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The ID of this organization.
+       * </pre>
+       *
+       * <code>string id = 25 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8438,7 +8624,7 @@ public final class OrganizationHistoryPlumbing {
       "stampB\n\362\370\263\007\005\260\363\263\007\001\0222\n\014organization\030\003 \001(\0132" +
       "\020.v1.OrganizationB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
       "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r\"\315\n\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
+      "r\"\364\n\n\014Organization\022\030\n\004name\030\001 \001(\tB\n\362\370\263\007\005\260" +
       "\363\263\007\001\022:\n\ncreated_at\030\002 \001(\0132\032.google.protob" +
       "uf.TimestampB\n\362\370\263\007\005\260\363\263\007\001\022:\n\nupdated_at\030\003" +
       " \001(\0132\032.google.protobuf.TimestampB\n\362\370\263\007\005\260" +
@@ -8470,19 +8656,20 @@ public final class OrganizationHistoryPlumbing {
       " \001(\010B\n\362\370\263\007\005\260\363\263\007\001\022#\n\017sensitive_label\030\026 \001(" +
       "\tB\n\362\370\263\007\005\260\363\263\007\001\022D\n\021saml_metadata_url\030\027 \001(\t" +
       "B)\362\370\263\007$\260\363\263\007\001\312\363\263\007\032\302\364\263\007\025\n\002go\022\017SAMLMetadata" +
-      "URL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001:2\372\370\263\007\005\250\363\263\007" +
-      "\001\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provide" +
-      "r2\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1." +
-      "OrganizationHistoryListRequest\032#.v1.Orga" +
-      "nizationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003g" +
-      "et\202\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312\371" +
-      "\263\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371" +
-      "\263\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provi" +
-      "derB\227\001\n\031com.strongdm.api.plumbingB\033Organ" +
-      "izationHistoryPlumbingZ5github.com/stron" +
-      "gdm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264" +
-      "\007\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006p" +
-      "roto3"
+      "URL\022\030\n\004kind\030\030 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022%\n\002id\030\031 \001(" +
+      "\tB\031\362\370\263\007\024\260\363\263\007\001\262\364\263\007\ngo_private:2\372\370\263\007\005\250\363\263\007\001" +
+      "\372\370\263\007\006\322\363\263\007\001*\372\370\263\007\030\322\363\263\007\023!terraform-provider" +
+      "2\357\001\n\023OrganizationHistory\022\200\001\n\004List\022\".v1.O" +
+      "rganizationHistoryListRequest\032#.v1.Organ" +
+      "izationHistoryListResponse\"/\202\371\263\007\010\242\363\263\007\003ge" +
+      "t\202\371\263\007\035\252\363\263\007\030/v1/organization-history\032U\312\371\263" +
+      "\007\036\302\371\263\007\031OrganizationHistoryRecord\312\371\263\007\005\330\371\263" +
+      "\007\001\312\371\263\007\006\312\371\263\007\001*\312\371\263\007\030\312\371\263\007\023!terraform-provid" +
+      "erB\227\001\n\031com.strongdm.api.plumbingB\033Organi" +
+      "zationHistoryPlumbingZ5github.com/strong" +
+      "dm/strongdm-sdk-go/v3/internal/v1;v1\302\222\264\007" +
+      "\006\242\214\264\007\001*\302\222\264\007\030\242\214\264\007\023!terraform-providerb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8515,7 +8702,7 @@ public final class OrganizationHistoryPlumbing {
     internal_static_v1_Organization_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Organization_descriptor,
-        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", });
+        new java.lang.String[] { "Name", "CreatedAt", "UpdatedAt", "AuthProvider", "IdleTimeoutEnabled", "IdleTimeout", "SessionTimeoutEnabled", "SessionTimeout", "MfaEnabled", "MfaProvider", "LogRemoteEncoder", "LogLocalStorage", "LogLocalEncoder", "LogLocalFormat", "LogTcpAddress", "LogSocketPath", "ScimProvider", "WebsitesSubdomain", "SshCertificateAuthorityPublicKey", "SshCertificateAuthorityUpdatedAt", "RequireSecretStore", "SensitiveLabel", "SamlMetadataUrl", "Kind", "Id", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

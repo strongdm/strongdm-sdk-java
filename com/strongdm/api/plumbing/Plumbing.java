@@ -1640,6 +1640,7 @@ public class Plumbing {
     com.strongdm.api.AccountResource porcelain = new com.strongdm.api.AccountResource();
     porcelain.setAccountGrantId((plumbing.getAccountGrantId()));
     porcelain.setAccountId((plumbing.getAccountId()));
+    porcelain.setCreatedAt(Plumbing.convertTimestampToPorcelain(plumbing.getCreatedAt()));
     porcelain.setExpiresAt(Plumbing.convertTimestampToPorcelain(plumbing.getExpiresAt()));
     porcelain.setGrantedAt(Plumbing.convertTimestampToPorcelain(plumbing.getGrantedAt()));
     porcelain.setResourceId((plumbing.getResourceId()));
@@ -1658,6 +1659,9 @@ public class Plumbing {
     }
     if (porcelain.getAccountId() != null) {
       builder.setAccountId((porcelain.getAccountId()));
+    }
+    if (porcelain.getCreatedAt() != null) {
+      builder.setCreatedAt(Plumbing.convertTimestampToPlumbing(porcelain.getCreatedAt()));
     }
     if (porcelain.getExpiresAt() != null) {
       builder.setExpiresAt(Plumbing.convertTimestampToPlumbing(porcelain.getExpiresAt()));
