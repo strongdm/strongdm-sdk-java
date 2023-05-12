@@ -118,6 +118,16 @@ public class AmazonEKS implements Resource {
     this.name = in;
   }
 
+  private int portOverride;
+  /** */
+  public int getPortOverride() {
+    return this.portOverride;
+  }
+  /** */
+  public void setPortOverride(int in) {
+    this.portOverride = in;
+  }
+
   private String region;
   /** */
   public String getRegion() {

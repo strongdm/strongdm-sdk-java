@@ -130,7 +130,8 @@ public final class ActivityVerb {
   public static final String ORG_SELF_REGISTRATION_DEACTIVATED = "self-registration deactivated";
   public static final String ORG_NAME_UPDATED = "organization name updated";
   public static final String ORG_SETTING_UPDATED = "organization setting updated";
-  public static final String ORG_LOG_SYNC_SETTING_UPDATED = "organization log sync setting updated";
+  public static final String ORG_LOG_SYNC_SETTING_UPDATED =
+      "organization log stream setting updated";
   public static final String ORG_CREATED = "organization created";
   public static final String ORG_SCIM_PROVISIONING_UPDATED = "SCIM provider set";
   public static final String ORG_SCIM_PROVISIONING_DELETED = "SCIM provider deleted";
@@ -159,14 +160,16 @@ public final class ActivityVerb {
   public static final String REMOTE_IDENTITY_UPDATED = "remote identity updated";
   public static final String REMOTE_IDENTITY_DELETED = "remote identity deleted";
   public static final String ACCESS_REQUESTED_TO_RESOURCE = "access requested to resource";
-  public static final String ACCESS_REQUEST_TO_RESOURCE_APPROVED =
-      "access request to resource approved";
+  public static final String ACCESS_REQUEST_TO_RESOURCE_APPROVAL_ADDED =
+      "access request to resource approval added";
   public static final String ACCESS_REQUEST_TO_RESOURCE_CANCELED =
       "access request to resource canceled";
   public static final String ACCESS_REQUEST_TO_RESOURCE_DENIED =
       "access request to resource denied";
   public static final String ACCESS_REQUEST_TO_RESOURCE_TIMED_OUT =
       "access request to resource timed out";
+  public static final String ACCESS_REQUEST_TO_RESOURCE_GRANTED =
+      "access request to resource granted";
   public static final String WORKFLOW_ADDED = "access workflow added";
   public static final String WORKFLOW_DELETED = "access workflow deleted";
   public static final String WORKFLOW_RESOURCE_ASSIGNED = "resource assigned to workflow";
@@ -180,10 +183,11 @@ public final class ActivityVerb {
       "workflow notification type added";
   public static final String WORKFLOW_NOTIFICATION_OPTION_REMOVED =
       "workflow notification type removed";
-  public static final String WORKFLOW_NOTIFICATION_OPTIONS_UPDATED =
-      "workflow notification settings updated";
+  public static final String WORKFLOW_NOTIFICATION_OPTIONS_UPDATED = "workflow approvers updated";
   public static final String WORKFLOW_NAME_UPDATED = "workflow name updated";
   public static final String WORKFLOW_DESCRIPTION_UPDATED = "workflow description updated";
+  public static final String WORKFLOW_AUTO_GRANT_UPDATED = "workflow auto grant updated";
+  public static final String WORKFLOW_REQUIRES_REASON_UPDATED = "workflow requires reason updated";
   public static final String ORG_VNM_SUBNET_UPDATED = "organization VNM subnet updated";
   public static final String ORG_VNM_RESOURCES_ALLOCATED =
       "organization resources allocated within VNM subnet";
@@ -195,4 +199,8 @@ public final class ActivityVerb {
       "access overhaul migration completed";
   public static final String ACTIVATED_SSH_PORT_FORWARDING_ALL_SERVER =
       "enabled SSH port forwarding on all servers";
+  public static final String TOTP_ENROLLMENT_ADDED = "user enrolled a totp device";
+  public static final String TOTP_ENROLLMENT_DELETED = "user reset their totp enrollment";
+  public static final String SUSPENDED_USER_ENROLL_ATTEMPT_FROM_THE_UI =
+      "attempt to enroll by a suspended user from the Admin UI";
 }

@@ -1988,6 +1988,7 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
     porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
     porcelain.setRemoteIdentityHealthcheckUsername(
@@ -2034,6 +2035,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
     }
@@ -2092,6 +2094,7 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
     porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
     porcelain.setRemoteIdentityHealthcheckUsername(
@@ -2135,6 +2138,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
     }
@@ -2192,6 +2196,7 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
     porcelain.setRemoteIdentityGroupId((plumbing.getRemoteIdentityGroupId()));
     porcelain.setRemoteIdentityHealthcheckUsername(
@@ -2237,6 +2242,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
     }
@@ -2295,6 +2301,7 @@ public class Plumbing {
     porcelain.setHealthy((plumbing.getHealthy()));
     porcelain.setId((plumbing.getId()));
     porcelain.setName((plumbing.getName()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
     porcelain.setRegion((plumbing.getRegion()));
     porcelain.setRoleArn((plumbing.getRoleArn()));
     porcelain.setRoleExternalId((plumbing.getRoleExternalId()));
@@ -2339,6 +2346,7 @@ public class Plumbing {
     if (porcelain.getName() != null) {
       builder.setName((porcelain.getName()));
     }
+    builder.setPortOverride(porcelain.getPortOverride());
     if (porcelain.getRegion() != null) {
       builder.setRegion((porcelain.getRegion()));
     }
