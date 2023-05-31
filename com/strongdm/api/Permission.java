@@ -94,4 +94,5 @@ public final class Permission {
   public static final String GRANT_READ = "grant:read";
   public static final String GRANT_WRITE = "grant:write";
   public static final String REPORT_READ = "report:read";
+  public static final String BILLING_READ = "billing:read";
 }

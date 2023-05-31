@@ -8648,6 +8648,12 @@ public class Plumbing {
     if (plumbing.hasSqlServer()) {
       return convertSQLServerToPorcelain(plumbing.getSqlServer());
     }
+    if (plumbing.hasSqlServerAzureAd()) {
+      return convertSQLServerAzureADToPorcelain(plumbing.getSqlServerAzureAd());
+    }
+    if (plumbing.hasSqlServerKerberosAd()) {
+      return convertSQLServerKerberosADToPorcelain(plumbing.getSqlServerKerberosAd());
+    }
     if (plumbing.hasSsh()) {
       return convertSSHToPorcelain(plumbing.getSsh());
     }
@@ -9068,6 +9074,18 @@ public class Plumbing {
     if (porcelain instanceof com.strongdm.api.SQLServer) {
       Resource.Builder builder = Resource.newBuilder();
       builder.setSqlServer(convertSQLServerToPlumbing((com.strongdm.api.SQLServer) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.SQLServerAzureAD) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setSqlServerAzureAd(
+          convertSQLServerAzureADToPlumbing((com.strongdm.api.SQLServerAzureAD) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.SQLServerKerberosAD) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setSqlServerKerberosAd(
+          convertSQLServerKerberosADToPlumbing((com.strongdm.api.SQLServerKerberosAD) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.SSH) {
@@ -9750,6 +9768,192 @@ public class Plumbing {
       Collection<com.strongdm.api.SQLServer> porcelains) {
     return porcelains.stream()
         .map(porcelain -> convertSQLServerToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.SQLServerAzureAD convertSQLServerAzureADToPorcelain(
+      SQLServerAzureAD plumbing) {
+    com.strongdm.api.SQLServerAzureAD porcelain = new com.strongdm.api.SQLServerAzureAD();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setClientId((plumbing.getClientId()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSchema((plumbing.getSchema()));
+    porcelain.setSecret((plumbing.getSecret()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setTenantId((plumbing.getTenantId()));
+    return porcelain;
+  }
+
+  public static SQLServerAzureAD convertSQLServerAzureADToPlumbing(
+      com.strongdm.api.SQLServerAzureAD porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SQLServerAzureAD.Builder builder = SQLServerAzureAD.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getClientId() != null) {
+      builder.setClientId((porcelain.getClientId()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSchema() != null) {
+      builder.setSchema((porcelain.getSchema()));
+    }
+    if (porcelain.getSecret() != null) {
+      builder.setSecret((porcelain.getSecret()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getTenantId() != null) {
+      builder.setTenantId((porcelain.getTenantId()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.SQLServerAzureAD> convertRepeatedSQLServerAzureADToPorcelain(
+      Collection<SQLServerAzureAD> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertSQLServerAzureADToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SQLServerAzureAD> convertRepeatedSQLServerAzureADToPlumbing(
+      Collection<com.strongdm.api.SQLServerAzureAD> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertSQLServerAzureADToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.SQLServerKerberosAD convertSQLServerKerberosADToPorcelain(
+      SQLServerKerberosAD plumbing) {
+    com.strongdm.api.SQLServerKerberosAD porcelain = new com.strongdm.api.SQLServerKerberosAD();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setKeytab((plumbing.getKeytab()));
+    porcelain.setKrbConfig((plumbing.getKrbConfig()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRealm((plumbing.getRealm()));
+    porcelain.setSchema((plumbing.getSchema()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setServerSpn((plumbing.getServerSpn()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static SQLServerKerberosAD convertSQLServerKerberosADToPlumbing(
+      com.strongdm.api.SQLServerKerberosAD porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    SQLServerKerberosAD.Builder builder = SQLServerKerberosAD.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getKeytab() != null) {
+      builder.setKeytab((porcelain.getKeytab()));
+    }
+    if (porcelain.getKrbConfig() != null) {
+      builder.setKrbConfig((porcelain.getKrbConfig()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getRealm() != null) {
+      builder.setRealm((porcelain.getRealm()));
+    }
+    if (porcelain.getSchema() != null) {
+      builder.setSchema((porcelain.getSchema()));
+    }
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getServerSpn() != null) {
+      builder.setServerSpn((porcelain.getServerSpn()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.SQLServerKerberosAD>
+      convertRepeatedSQLServerKerberosADToPorcelain(Collection<SQLServerKerberosAD> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertSQLServerKerberosADToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<SQLServerKerberosAD> convertRepeatedSQLServerKerberosADToPlumbing(
+      Collection<com.strongdm.api.SQLServerKerberosAD> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertSQLServerKerberosADToPlumbing(porcelain))
         .collect(Collectors.toList());
   }
 
