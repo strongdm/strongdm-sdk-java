@@ -2642,9 +2642,11 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -2678,6 +2680,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -2687,6 +2690,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
@@ -2944,9 +2948,11 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -2980,6 +2986,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -2989,6 +2996,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
@@ -3374,9 +3382,11 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -3410,6 +3420,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -3419,6 +3430,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
@@ -5608,10 +5620,12 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setServerName((plumbing.getServerName()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -5654,6 +5668,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -5666,6 +5681,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
@@ -5795,9 +5811,11 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -5831,6 +5849,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -5840,6 +5859,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
@@ -5937,9 +5957,11 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -5973,6 +5995,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -5982,6 +6005,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
@@ -6431,9 +6455,11 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -6467,6 +6493,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -6476,6 +6503,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }
@@ -10585,9 +10613,11 @@ public class Plumbing {
     porcelain.setPassword((plumbing.getPassword()));
     porcelain.setPort((plumbing.getPort()));
     porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setRequireNativeAuth((plumbing.getRequireNativeAuth()));
     porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
     porcelain.setSubdomain((plumbing.getSubdomain()));
     porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUseAzureSingleServerUsernames((plumbing.getUseAzureSingleServerUsernames()));
     porcelain.setUsername((plumbing.getUsername()));
     return porcelain;
   }
@@ -10621,6 +10651,7 @@ public class Plumbing {
     }
     builder.setPort(porcelain.getPort());
     builder.setPortOverride(porcelain.getPortOverride());
+    builder.setRequireNativeAuth(porcelain.getRequireNativeAuth());
     if (porcelain.getSecretStoreId() != null) {
       builder.setSecretStoreId((porcelain.getSecretStoreId()));
     }
@@ -10630,6 +10661,7 @@ public class Plumbing {
     if (porcelain.getTags() != null) {
       builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
     }
+    builder.setUseAzureSingleServerUsernames(porcelain.getUseAzureSingleServerUsernames());
     if (porcelain.getUsername() != null) {
       builder.setUsername((porcelain.getUsername()));
     }

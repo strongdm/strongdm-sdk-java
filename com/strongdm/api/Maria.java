@@ -118,6 +118,16 @@ public class Maria implements Resource {
     this.portOverride = in;
   }
 
+  private boolean requireNativeAuth;
+  /** */
+  public boolean getRequireNativeAuth() {
+    return this.requireNativeAuth;
+  }
+  /** */
+  public void setRequireNativeAuth(boolean in) {
+    this.requireNativeAuth = in;
+  }
+
   private String secretStoreId;
   /** ID of the secret store containing credentials for this resource, if any. */
   public String getSecretStoreId() {
@@ -161,6 +171,16 @@ public class Maria implements Resource {
     }
     this.tags = new java.util.HashMap<String, String>();
     this.tags.putAll(in);
+  }
+
+  private boolean useAzureSingleServerUsernames;
+  /** */
+  public boolean getUseAzureSingleServerUsernames() {
+    return this.useAzureSingleServerUsernames;
+  }
+  /** */
+  public void setUseAzureSingleServerUsernames(boolean in) {
+    this.useAzureSingleServerUsernames = in;
   }
 
   private String username;
