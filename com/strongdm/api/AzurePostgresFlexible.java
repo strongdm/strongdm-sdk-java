@@ -17,23 +17,11 @@
 
 package com.strongdm.api;
 
-public class SSHCert implements Resource {
-  private boolean allowDeprecatedKeyExchanges;
-  /**
-   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
-   * server.
-   */
-  public boolean getAllowDeprecatedKeyExchanges() {
-    return this.allowDeprecatedKeyExchanges;
-  }
-  /**
-   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
-   * server.
-   */
-  public void setAllowDeprecatedKeyExchanges(boolean in) {
-    this.allowDeprecatedKeyExchanges = in;
-  }
-
+/**
+ * AzurePostgresFlexible is currently unstable, and its API may change, or it may be removed,
+ * without a major version bump.
+ */
+public class AzurePostgresFlexible implements Resource {
   private String bindInterface;
   /**
    * The bind interface is the IP address to which the port override of a resource is bound (for
@@ -48,6 +36,22 @@ public class SSHCert implements Resource {
    */
   public void setBindInterface(String in) {
     this.bindInterface = in;
+  }
+
+  private String database;
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
+  public String getDatabase() {
+    return this.database;
+  }
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
+  public void setDatabase(String in) {
+    this.database = in;
   }
 
   private String egressFilter;
@@ -90,16 +94,6 @@ public class SSHCert implements Resource {
     this.id = in;
   }
 
-  private String keyType;
-  /** The key type to use e.g. rsa-2048 or ed25519 */
-  public String getKeyType() {
-    return this.keyType;
-  }
-  /** The key type to use e.g. rsa-2048 or ed25519 */
-  public void setKeyType(String in) {
-    this.keyType = in;
-  }
-
   private String name;
   /** Unique human-readable name of the Resource. */
   public String getName() {
@@ -108,6 +102,34 @@ public class SSHCert implements Resource {
   /** Unique human-readable name of the Resource. */
   public void setName(String in) {
     this.name = in;
+  }
+
+  private boolean overrideDatabase;
+  /**
+   * If set, the database configured cannot be changed by users. This setting is not recommended for
+   * most use cases, as some clients will insist their database has changed when it has not, leading
+   * to user confusion.
+   */
+  public boolean getOverrideDatabase() {
+    return this.overrideDatabase;
+  }
+  /**
+   * If set, the database configured cannot be changed by users. This setting is not recommended for
+   * most use cases, as some clients will insist their database has changed when it has not, leading
+   * to user confusion.
+   */
+  public void setOverrideDatabase(boolean in) {
+    this.overrideDatabase = in;
+  }
+
+  private String password;
+  /** The password to authenticate with. */
+  public String getPassword() {
+    return this.password;
+  }
+  /** The password to authenticate with. */
+  public void setPassword(String in) {
+    this.password = in;
   }
 
   private int port;
@@ -120,16 +142,6 @@ public class SSHCert implements Resource {
     this.port = in;
   }
 
-  private boolean portForwarding;
-  /** Whether port forwarding is allowed through this server. */
-  public boolean getPortForwarding() {
-    return this.portForwarding;
-  }
-  /** Whether port forwarding is allowed through this server. */
-  public void setPortForwarding(boolean in) {
-    this.portForwarding = in;
-  }
-
   private int portOverride;
   /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
@@ -138,32 +150,6 @@ public class SSHCert implements Resource {
   /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
-  }
-
-  private String remoteIdentityGroupId;
-  /** The ID of the remote identity group to use for remote identity connections. */
-  public String getRemoteIdentityGroupId() {
-    return this.remoteIdentityGroupId;
-  }
-  /** The ID of the remote identity group to use for remote identity connections. */
-  public void setRemoteIdentityGroupId(String in) {
-    this.remoteIdentityGroupId = in;
-  }
-
-  private String remoteIdentityHealthcheckUsername;
-  /**
-   * The username to use for healthchecks, when clients otherwise connect with their own remote
-   * identity username.
-   */
-  public String getRemoteIdentityHealthcheckUsername() {
-    return this.remoteIdentityHealthcheckUsername;
-  }
-  /**
-   * The username to use for healthchecks, when clients otherwise connect with their own remote
-   * identity username.
-   */
-  public void setRemoteIdentityHealthcheckUsername(String in) {
-    this.remoteIdentityHealthcheckUsername = in;
   }
 
   private String secretStoreId;

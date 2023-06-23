@@ -19,21 +19,33 @@ package com.strongdm.api;
 
 public class SSHCustomerKey implements Resource {
   private boolean allowDeprecatedKeyExchanges;
-  /** */
+  /**
+   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
+   * server.
+   */
   public boolean getAllowDeprecatedKeyExchanges() {
     return this.allowDeprecatedKeyExchanges;
   }
-  /** */
+  /**
+   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
+   * server.
+   */
   public void setAllowDeprecatedKeyExchanges(boolean in) {
     this.allowDeprecatedKeyExchanges = in;
   }
 
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -59,11 +71,11 @@ public class SSHCustomerKey implements Resource {
   }
 
   private String hostname;
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public String getHostname() {
     return this.hostname;
   }
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public void setHostname(String in) {
     this.hostname = in;
   }
@@ -89,41 +101,41 @@ public class SSHCustomerKey implements Resource {
   }
 
   private int port;
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
     return this.port;
   }
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public void setPort(int in) {
     this.port = in;
   }
 
   private boolean portForwarding;
-  /** */
+  /** Whether port forwarding is allowed through this server. */
   public boolean getPortForwarding() {
     return this.portForwarding;
   }
-  /** */
+  /** Whether port forwarding is allowed through this server. */
   public void setPortForwarding(boolean in) {
     this.portForwarding = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String privateKey;
-  /** */
+  /** The private key used to authenticate with the server. */
   public String getPrivateKey() {
     return this.privateKey;
   }
-  /** */
+  /** The private key used to authenticate with the server. */
   public void setPrivateKey(String in) {
     this.privateKey = in;
   }
@@ -174,11 +186,11 @@ public class SSHCustomerKey implements Resource {
   }
 
   private String username;
-  /** */
+  /** The username to authenticate with. */
   public String getUsername() {
     return this.username;
   }
-  /** */
+  /** The username to authenticate with. */
   public void setUsername(String in) {
     this.username = in;
   }

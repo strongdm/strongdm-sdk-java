@@ -19,41 +19,47 @@ package com.strongdm.api;
 
 public class KubernetesUserImpersonation implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String certificateAuthority;
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public String getCertificateAuthority() {
     return this.certificateAuthority;
   }
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public void setCertificateAuthority(String in) {
     this.certificateAuthority = in;
   }
 
   private String clientCertificate;
-  /** */
+  /** The certificate to authenticate TLS connections with. */
   public String getClientCertificate() {
     return this.clientCertificate;
   }
-  /** */
+  /** The certificate to authenticate TLS connections with. */
   public void setClientCertificate(String in) {
     this.clientCertificate = in;
   }
 
   private String clientKey;
-  /** */
+  /** The key to authenticate TLS connections with. */
   public String getClientKey() {
     return this.clientKey;
   }
-  /** */
+  /** The key to authenticate TLS connections with. */
   public void setClientKey(String in) {
     this.clientKey = in;
   }
@@ -89,11 +95,11 @@ public class KubernetesUserImpersonation implements Resource {
   }
 
   private String hostname;
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public String getHostname() {
     return this.hostname;
   }
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public void setHostname(String in) {
     this.hostname = in;
   }
@@ -119,21 +125,21 @@ public class KubernetesUserImpersonation implements Resource {
   }
 
   private int port;
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
     return this.port;
   }
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public void setPort(int in) {
     this.port = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }

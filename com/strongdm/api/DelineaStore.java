@@ -39,11 +39,11 @@ public class DelineaStore implements SecretStore {
   }
 
   private String serverUrl;
-  /** */
+  /** The URL of the Delinea instance */
   public String getServerUrl() {
     return this.serverUrl;
   }
-  /** */
+  /** The URL of the Delinea instance */
   public void setServerUrl(String in) {
     this.serverUrl = in;
   }
@@ -68,11 +68,11 @@ public class DelineaStore implements SecretStore {
   }
 
   private String tenantName;
-  /** */
+  /** The tenant name to target */
   public String getTenantName() {
     return this.tenantName;
   }
-  /** */
+  /** The tenant name to target */
   public void setTenantName(String in) {
     this.tenantName = in;
   }

@@ -23,11 +23,11 @@ package com.strongdm.api;
  */
 public class CyberarkPAMExperimentalStore implements SecretStore {
   private String appUrl;
-  /** */
+  /** The URL of the Cyberark instance */
   public String getAppURL() {
     return this.appUrl;
   }
-  /** */
+  /** The URL of the Cyberark instance */
   public void setAppURL(String in) {
     this.appUrl = in;
   }

@@ -19,21 +19,27 @@ package com.strongdm.api;
 
 public class HTTPNoAuth implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String defaultPath;
-  /** */
+  /** Automatically redirect to this path upon connecting. */
   public String getDefaultPath() {
     return this.defaultPath;
   }
-  /** */
+  /** Automatically redirect to this path upon connecting. */
   public void setDefaultPath(String in) {
     this.defaultPath = in;
   }
@@ -49,21 +55,21 @@ public class HTTPNoAuth implements Resource {
   }
 
   private String headersBlacklist;
-  /** */
+  /** Header names (e.g. Authorization), to omit from logs. */
   public String getHeadersBlacklist() {
     return this.headersBlacklist;
   }
-  /** */
+  /** Header names (e.g. Authorization), to omit from logs. */
   public void setHeadersBlacklist(String in) {
     this.headersBlacklist = in;
   }
 
   private String healthcheckPath;
-  /** */
+  /** This path will be used to check the health of your site. */
   public String getHealthcheckPath() {
     return this.healthcheckPath;
   }
-  /** */
+  /** This path will be used to check the health of your site. */
   public void setHealthcheckPath(String in) {
     this.healthcheckPath = in;
   }
@@ -79,11 +85,11 @@ public class HTTPNoAuth implements Resource {
   }
 
   private String hostOverride;
-  /** */
+  /** The host header will be overwritten with this field if provided. */
   public String getHostOverride() {
     return this.hostOverride;
   }
-  /** */
+  /** The host header will be overwritten with this field if provided. */
   public void setHostOverride(String in) {
     this.hostOverride = in;
   }
@@ -119,11 +125,17 @@ public class HTTPNoAuth implements Resource {
   }
 
   private String subdomain;
-  /** */
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
   public String getSubdomain() {
     return this.subdomain;
   }
-  /** */
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
   public void setSubdomain(String in) {
     this.subdomain = in;
   }
@@ -148,11 +160,11 @@ public class HTTPNoAuth implements Resource {
   }
 
   private String url;
-  /** */
+  /** The base address of your website without the path. */
   public String getUrl() {
     return this.url;
   }
-  /** */
+  /** The base address of your website without the path. */
   public void setUrl(String in) {
     this.url = in;
   }

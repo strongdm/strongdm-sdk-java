@@ -19,11 +19,17 @@ package com.strongdm.api;
 
 public class BigQuery implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -39,11 +45,11 @@ public class BigQuery implements Resource {
   }
 
   private String endpoint;
-  /** */
+  /** The endpoint to dial. */
   public String getEndpoint() {
     return this.endpoint;
   }
-  /** */
+  /** The endpoint to dial. */
   public void setEndpoint(String in) {
     this.endpoint = in;
   }
@@ -79,31 +85,31 @@ public class BigQuery implements Resource {
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String privateKey;
-  /** */
+  /** The JSON Private key to authenticate with. */
   public String getPrivateKey() {
     return this.privateKey;
   }
-  /** */
+  /** The JSON Private key to authenticate with. */
   public void setPrivateKey(String in) {
     this.privateKey = in;
   }
 
   private String project;
-  /** */
+  /** The project to connect to. */
   public String getProject() {
     return this.project;
   }
-  /** */
+  /** The project to connect to. */
   public void setProject(String in) {
     this.project = in;
   }
@@ -154,11 +160,11 @@ public class BigQuery implements Resource {
   }
 
   private String username;
-  /** */
+  /** The username to authenticate with. */
   public String getUsername() {
     return this.username;
   }
-  /** */
+  /** The username to authenticate with. */
   public void setUsername(String in) {
     this.username = in;
   }

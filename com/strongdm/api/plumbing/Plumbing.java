@@ -3098,6 +3098,168 @@ public class Plumbing {
         .collect(Collectors.toList());
   }
 
+  public static com.strongdm.api.AzurePostgresFlexible convertAzurePostgresFlexibleToPorcelain(
+      AzurePostgresFlexible plumbing) {
+    com.strongdm.api.AzurePostgresFlexible porcelain = new com.strongdm.api.AzurePostgresFlexible();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static AzurePostgresFlexible convertAzurePostgresFlexibleToPlumbing(
+      com.strongdm.api.AzurePostgresFlexible porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AzurePostgresFlexible.Builder builder = AzurePostgresFlexible.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AzurePostgresFlexible>
+      convertRepeatedAzurePostgresFlexibleToPorcelain(Collection<AzurePostgresFlexible> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAzurePostgresFlexibleToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AzurePostgresFlexible> convertRepeatedAzurePostgresFlexibleToPlumbing(
+      Collection<com.strongdm.api.AzurePostgresFlexible> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAzurePostgresFlexibleToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
+  public static com.strongdm.api.AzurePostgresSingle convertAzurePostgresSingleToPorcelain(
+      AzurePostgresSingle plumbing) {
+    com.strongdm.api.AzurePostgresSingle porcelain = new com.strongdm.api.AzurePostgresSingle();
+    porcelain.setBindInterface((plumbing.getBindInterface()));
+    porcelain.setDatabase((plumbing.getDatabase()));
+    porcelain.setEgressFilter((plumbing.getEgressFilter()));
+    porcelain.setHealthy((plumbing.getHealthy()));
+    porcelain.setHostname((plumbing.getHostname()));
+    porcelain.setId((plumbing.getId()));
+    porcelain.setName((plumbing.getName()));
+    porcelain.setOverrideDatabase((plumbing.getOverrideDatabase()));
+    porcelain.setPassword((plumbing.getPassword()));
+    porcelain.setPort((plumbing.getPort()));
+    porcelain.setPortOverride((plumbing.getPortOverride()));
+    porcelain.setSecretStoreId((plumbing.getSecretStoreId()));
+    porcelain.setSubdomain((plumbing.getSubdomain()));
+    porcelain.setTags(Plumbing.convertTagsToPorcelain(plumbing.getTags()));
+    porcelain.setUsername((plumbing.getUsername()));
+    return porcelain;
+  }
+
+  public static AzurePostgresSingle convertAzurePostgresSingleToPlumbing(
+      com.strongdm.api.AzurePostgresSingle porcelain) {
+    if (porcelain == null) {
+      return null;
+    }
+    AzurePostgresSingle.Builder builder = AzurePostgresSingle.newBuilder();
+    if (porcelain.getBindInterface() != null) {
+      builder.setBindInterface((porcelain.getBindInterface()));
+    }
+    if (porcelain.getDatabase() != null) {
+      builder.setDatabase((porcelain.getDatabase()));
+    }
+    if (porcelain.getEgressFilter() != null) {
+      builder.setEgressFilter((porcelain.getEgressFilter()));
+    }
+    builder.setHealthy(porcelain.getHealthy());
+    if (porcelain.getHostname() != null) {
+      builder.setHostname((porcelain.getHostname()));
+    }
+    if (porcelain.getId() != null) {
+      builder.setId((porcelain.getId()));
+    }
+    if (porcelain.getName() != null) {
+      builder.setName((porcelain.getName()));
+    }
+    builder.setOverrideDatabase(porcelain.getOverrideDatabase());
+    if (porcelain.getPassword() != null) {
+      builder.setPassword((porcelain.getPassword()));
+    }
+    builder.setPort(porcelain.getPort());
+    builder.setPortOverride(porcelain.getPortOverride());
+    if (porcelain.getSecretStoreId() != null) {
+      builder.setSecretStoreId((porcelain.getSecretStoreId()));
+    }
+    if (porcelain.getSubdomain() != null) {
+      builder.setSubdomain((porcelain.getSubdomain()));
+    }
+    if (porcelain.getTags() != null) {
+      builder.setTags(Plumbing.convertTagsToPlumbing(porcelain.getTags()));
+    }
+    if (porcelain.getUsername() != null) {
+      builder.setUsername((porcelain.getUsername()));
+    }
+    return builder.build();
+  }
+
+  public static List<com.strongdm.api.AzurePostgresSingle>
+      convertRepeatedAzurePostgresSingleToPorcelain(Collection<AzurePostgresSingle> plumbings) {
+    return plumbings.stream()
+        .map(plumbing -> convertAzurePostgresSingleToPorcelain(plumbing))
+        .collect(Collectors.toList());
+  }
+
+  public static List<AzurePostgresSingle> convertRepeatedAzurePostgresSingleToPlumbing(
+      Collection<com.strongdm.api.AzurePostgresSingle> porcelains) {
+    return porcelains.stream()
+        .map(porcelain -> convertAzurePostgresSingleToPlumbing(porcelain))
+        .collect(Collectors.toList());
+  }
+
   public static com.strongdm.api.AzureStore convertAzureStoreToPorcelain(AzureStore plumbing) {
     com.strongdm.api.AzureStore porcelain = new com.strongdm.api.AzureStore();
     porcelain.setId((plumbing.getId()));
@@ -4603,6 +4765,7 @@ public class Plumbing {
   public static com.strongdm.api.Gateway convertGatewayToPorcelain(Gateway plumbing) {
     com.strongdm.api.Gateway porcelain = new com.strongdm.api.Gateway();
     porcelain.setBindAddress((plumbing.getBindAddress()));
+    porcelain.setConnectsTo((plumbing.getConnectsTo()));
     porcelain.setDevice((plumbing.getDevice()));
     porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     porcelain.setId((plumbing.getId()));
@@ -4622,6 +4785,9 @@ public class Plumbing {
     Gateway.Builder builder = Gateway.newBuilder();
     if (porcelain.getBindAddress() != null) {
       builder.setBindAddress((porcelain.getBindAddress()));
+    }
+    if (porcelain.getConnectsTo() != null) {
+      builder.setConnectsTo((porcelain.getConnectsTo()));
     }
     if (porcelain.getDevice() != null) {
       builder.setDevice((porcelain.getDevice()));
@@ -7925,6 +8091,7 @@ public class Plumbing {
 
   public static com.strongdm.api.Relay convertRelayToPorcelain(Relay plumbing) {
     com.strongdm.api.Relay porcelain = new com.strongdm.api.Relay();
+    porcelain.setConnectsTo((plumbing.getConnectsTo()));
     porcelain.setDevice((plumbing.getDevice()));
     porcelain.setGatewayFilter((plumbing.getGatewayFilter()));
     porcelain.setId((plumbing.getId()));
@@ -7941,6 +8108,9 @@ public class Plumbing {
       return null;
     }
     Relay.Builder builder = Relay.newBuilder();
+    if (porcelain.getConnectsTo() != null) {
+      builder.setConnectsTo((porcelain.getConnectsTo()));
+    }
     if (porcelain.getDevice() != null) {
       builder.setDevice((porcelain.getDevice()));
     }
@@ -8524,6 +8694,12 @@ public class Plumbing {
     if (plumbing.hasAzurePostgres()) {
       return convertAzurePostgresToPorcelain(plumbing.getAzurePostgres());
     }
+    if (plumbing.hasAzurePostgresFlexible()) {
+      return convertAzurePostgresFlexibleToPorcelain(plumbing.getAzurePostgresFlexible());
+    }
+    if (plumbing.hasAzurePostgresSingle()) {
+      return convertAzurePostgresSingleToPorcelain(plumbing.getAzurePostgresSingle());
+    }
     if (plumbing.hasBigQuery()) {
       return convertBigQueryToPorcelain(plumbing.getBigQuery());
     }
@@ -8831,6 +9007,19 @@ public class Plumbing {
       Resource.Builder builder = Resource.newBuilder();
       builder.setAzurePostgres(
           convertAzurePostgresToPlumbing((com.strongdm.api.AzurePostgres) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AzurePostgresFlexible) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAzurePostgresFlexible(
+          convertAzurePostgresFlexibleToPlumbing(
+              (com.strongdm.api.AzurePostgresFlexible) porcelain));
+      return builder.build();
+    }
+    if (porcelain instanceof com.strongdm.api.AzurePostgresSingle) {
+      Resource.Builder builder = Resource.newBuilder();
+      builder.setAzurePostgresSingle(
+          convertAzurePostgresSingleToPlumbing((com.strongdm.api.AzurePostgresSingle) porcelain));
       return builder.build();
     }
     if (porcelain instanceof com.strongdm.api.BigQuery) {

@@ -19,21 +19,27 @@ package com.strongdm.api;
 
 public class Azure implements Resource {
   private String appId;
-  /** */
+  /** The application ID to authenticate with. */
   public String getAppId() {
     return this.appId;
   }
-  /** */
+  /** The application ID to authenticate with. */
   public void setAppId(String in) {
     this.appId = in;
   }
 
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -79,21 +85,21 @@ public class Azure implements Resource {
   }
 
   private String password;
-  /** */
+  /** The password to authenticate with. */
   public String getPassword() {
     return this.password;
   }
-  /** */
+  /** The password to authenticate with. */
   public void setPassword(String in) {
     this.password = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
@@ -144,11 +150,11 @@ public class Azure implements Resource {
   }
 
   private String tenantId;
-  /** */
+  /** The tenant ID to authenticate to. */
   public String getTenantId() {
     return this.tenantId;
   }
-  /** */
+  /** The tenant ID to authenticate to. */
   public void setTenantId(String in) {
     this.tenantId = in;
   }

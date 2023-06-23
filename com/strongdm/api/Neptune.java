@@ -19,11 +19,17 @@ package com.strongdm.api;
 
 public class Neptune implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -39,11 +45,11 @@ public class Neptune implements Resource {
   }
 
   private String endpoint;
-  /** */
+  /** The neptune endpoint to connect to as in endpoint.region.neptune.amazonaws.com */
   public String getEndpoint() {
     return this.endpoint;
   }
-  /** */
+  /** The neptune endpoint to connect to as in endpoint.region.neptune.amazonaws.com */
   public void setEndpoint(String in) {
     this.endpoint = in;
   }
@@ -79,21 +85,21 @@ public class Neptune implements Resource {
   }
 
   private int port;
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
     return this.port;
   }
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public void setPort(int in) {
     this.port = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }

@@ -19,41 +19,47 @@ package com.strongdm.api;
 
 public class AmazonEKSUserImpersonation implements Resource {
   private String accessKey;
-  /** */
+  /** The Access Key ID to use to authenticate. */
   public String getAccessKey() {
     return this.accessKey;
   }
-  /** */
+  /** The Access Key ID to use to authenticate. */
   public void setAccessKey(String in) {
     this.accessKey = in;
   }
 
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String certificateAuthority;
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public String getCertificateAuthority() {
     return this.certificateAuthority;
   }
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public void setCertificateAuthority(String in) {
     this.certificateAuthority = in;
   }
 
   private String clusterName;
-  /** */
+  /** The name of the cluster to connect to. */
   public String getClusterName() {
     return this.clusterName;
   }
-  /** */
+  /** The name of the cluster to connect to. */
   public void setClusterName(String in) {
     this.clusterName = in;
   }
@@ -69,11 +75,11 @@ public class AmazonEKSUserImpersonation implements Resource {
   }
 
   private String endpoint;
-  /** */
+  /** The endpoint to dial. */
   public String getEndpoint() {
     return this.endpoint;
   }
-  /** */
+  /** The endpoint to dial. */
   public void setEndpoint(String in) {
     this.endpoint = in;
   }
@@ -119,51 +125,57 @@ public class AmazonEKSUserImpersonation implements Resource {
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String region;
-  /** */
+  /** The AWS region to connect to e.g. us-east-1. */
   public String getRegion() {
     return this.region;
   }
-  /** */
+  /** The AWS region to connect to e.g. us-east-1. */
   public void setRegion(String in) {
     this.region = in;
   }
 
   private String roleArn;
-  /** */
+  /** The role to assume after logging in. */
   public String getRoleArn() {
     return this.roleArn;
   }
-  /** */
+  /** The role to assume after logging in. */
   public void setRoleArn(String in) {
     this.roleArn = in;
   }
 
   private String roleExternalId;
-  /** */
+  /**
+   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
+   * provided.
+   */
   public String getRoleExternalId() {
     return this.roleExternalId;
   }
-  /** */
+  /**
+   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
+   * provided.
+   */
   public void setRoleExternalId(String in) {
     this.roleExternalId = in;
   }
 
   private String secretAccessKey;
-  /** */
+  /** The Secret Access Key to use to authenticate. */
   public String getSecretAccessKey() {
     return this.secretAccessKey;
   }
-  /** */
+  /** The Secret Access Key to use to authenticate. */
   public void setSecretAccessKey(String in) {
     this.secretAccessKey = in;
   }

@@ -19,11 +19,17 @@ package com.strongdm.api;
 
 public class GCP implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -59,11 +65,11 @@ public class GCP implements Resource {
   }
 
   private String keyfile;
-  /** */
+  /** The service account keyfile to authenticate with. */
   public String getKeyfile() {
     return this.keyfile;
   }
-  /** */
+  /** The service account keyfile to authenticate with. */
   public void setKeyfile(String in) {
     this.keyfile = in;
   }
@@ -79,21 +85,21 @@ public class GCP implements Resource {
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String scopes;
-  /** */
+  /** Space separated scopes that this login should assume into when authenticating. */
   public String getScopes() {
     return this.scopes;
   }
-  /** */
+  /** Space separated scopes that this login should assume into when authenticating. */
   public void setScopes(String in) {
     this.scopes = in;
   }

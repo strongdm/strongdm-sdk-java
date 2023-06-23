@@ -2874,11 +2874,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The AWS region to target e.g. us-east-1
+     * </pre>
+     *
      * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      * @return The region.
      */
     java.lang.String getRegion();
     /**
+     * <pre>
+     * The AWS region to target e.g. us-east-1
+     * </pre>
+     *
      * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for region.
      */
@@ -3120,6 +3128,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int REGION_FIELD_NUMBER = 3;
     private volatile java.lang.Object region_;
     /**
+     * <pre>
+     * The AWS region to target e.g. us-east-1
+     * </pre>
+     *
      * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      * @return The region.
      */
@@ -3137,6 +3149,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The AWS region to target e.g. us-east-1
+     * </pre>
+     *
      * <code>string region = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for region.
      */
@@ -3753,6 +3769,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object region_ = "";
       /**
+       * <pre>
+       * The AWS region to target e.g. us-east-1
+       * </pre>
+       *
        * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        * @return The region.
        */
@@ -3769,6 +3789,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The AWS region to target e.g. us-east-1
+       * </pre>
+       *
        * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for region.
        */
@@ -3786,6 +3810,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The AWS region to target e.g. us-east-1
+       * </pre>
+       *
        * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        * @param value The region to set.
        * @return This builder for chaining.
@@ -3801,6 +3829,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The AWS region to target e.g. us-east-1
+       * </pre>
+       *
        * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -3811,6 +3843,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The AWS region to target e.g. us-east-1
+       * </pre>
+       *
        * <code>string region = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for region to set.
        * @return This builder for chaining.
@@ -4079,11 +4115,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+     * </pre>
+     *
      * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
      * @return The vaultUri.
      */
     java.lang.String getVaultUri();
     /**
+     * <pre>
+     * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+     * </pre>
+     *
      * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for vaultUri.
      */
@@ -4325,6 +4369,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int VAULT_URI_FIELD_NUMBER = 3;
     private volatile java.lang.Object vaultUri_;
     /**
+     * <pre>
+     * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+     * </pre>
+     *
      * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
      * @return The vaultUri.
      */
@@ -4342,6 +4390,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+     * </pre>
+     *
      * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for vaultUri.
      */
@@ -4958,6 +5010,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object vaultUri_ = "";
       /**
+       * <pre>
+       * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+       * </pre>
+       *
        * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
        * @return The vaultUri.
        */
@@ -4974,6 +5030,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+       * </pre>
+       *
        * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for vaultUri.
        */
@@ -4991,6 +5051,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+       * </pre>
+       *
        * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
        * @param value The vaultUri to set.
        * @return This builder for chaining.
@@ -5006,6 +5070,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+       * </pre>
+       *
        * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -5016,6 +5084,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URI of the key vault to target e.g. https://myvault.vault.azure.net
+       * </pre>
+       *
        * <code>string vault_uri = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for vaultUri to set.
        * @return This builder for chaining.
@@ -5284,11 +5356,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The appURL.
      */
     java.lang.String getAppURL();
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for appURL.
      */
@@ -5530,6 +5610,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int APPURL_FIELD_NUMBER = 3;
     private volatile java.lang.Object appURL_;
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The appURL.
      */
@@ -5547,6 +5631,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for appURL.
      */
@@ -6163,6 +6251,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object appURL_ = "";
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return The appURL.
        */
@@ -6179,6 +6271,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for appURL.
        */
@@ -6196,6 +6292,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @param value The appURL to set.
        * @return This builder for chaining.
@@ -6211,6 +6311,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -6221,6 +6325,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for appURL to set.
        * @return This builder for chaining.
@@ -6489,11 +6597,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The appURL.
      */
     java.lang.String getAppURL();
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for appURL.
      */
@@ -6735,6 +6851,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int APPURL_FIELD_NUMBER = 3;
     private volatile java.lang.Object appURL_;
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The appURL.
      */
@@ -6752,6 +6872,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for appURL.
      */
@@ -7368,6 +7492,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object appURL_ = "";
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return The appURL.
        */
@@ -7384,6 +7512,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for appURL.
        */
@@ -7401,6 +7533,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @param value The appURL to set.
        * @return This builder for chaining.
@@ -7416,6 +7552,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -7426,6 +7566,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for appURL to set.
        * @return This builder for chaining.
@@ -7694,11 +7838,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The appURL.
      */
     java.lang.String getAppURL();
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for appURL.
      */
@@ -7940,6 +8092,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int APPURL_FIELD_NUMBER = 3;
     private volatile java.lang.Object appURL_;
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The appURL.
      */
@@ -7957,6 +8113,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URL of the Cyberark instance
+     * </pre>
+     *
      * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for appURL.
      */
@@ -8573,6 +8733,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object appURL_ = "";
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return The appURL.
        */
@@ -8589,6 +8753,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for appURL.
        */
@@ -8606,6 +8774,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @param value The appURL to set.
        * @return This builder for chaining.
@@ -8621,6 +8793,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -8631,6 +8807,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Cyberark instance
+       * </pre>
+       *
        * <code>string appURL = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for appURL to set.
        * @return This builder for chaining.
@@ -8899,11 +9079,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The URL of the Delinea instance
+     * </pre>
+     *
      * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverUrl.
      */
     java.lang.String getServerUrl();
     /**
+     * <pre>
+     * The URL of the Delinea instance
+     * </pre>
+     *
      * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverUrl.
      */
@@ -8911,11 +9099,19 @@ public final class SecretStoresTypesPlumbing {
         getServerUrlBytes();
 
     /**
+     * <pre>
+     * The tenant name to target
+     * </pre>
+     *
      * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
      * @return The tenantName.
      */
     java.lang.String getTenantName();
     /**
+     * <pre>
+     * The tenant name to target
+     * </pre>
+     *
      * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for tenantName.
      */
@@ -9164,6 +9360,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int SERVER_URL_FIELD_NUMBER = 3;
     private volatile java.lang.Object serverUrl_;
     /**
+     * <pre>
+     * The URL of the Delinea instance
+     * </pre>
+     *
      * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverUrl.
      */
@@ -9181,6 +9381,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URL of the Delinea instance
+     * </pre>
+     *
      * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverUrl.
      */
@@ -9202,6 +9406,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int TENANT_NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object tenantName_;
     /**
+     * <pre>
+     * The tenant name to target
+     * </pre>
+     *
      * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
      * @return The tenantName.
      */
@@ -9219,6 +9427,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The tenant name to target
+     * </pre>
+     *
      * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for tenantName.
      */
@@ -9852,6 +10064,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object serverUrl_ = "";
       /**
+       * <pre>
+       * The URL of the Delinea instance
+       * </pre>
+       *
        * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
        * @return The serverUrl.
        */
@@ -9868,6 +10084,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Delinea instance
+       * </pre>
+       *
        * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for serverUrl.
        */
@@ -9885,6 +10105,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Delinea instance
+       * </pre>
+       *
        * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
        * @param value The serverUrl to set.
        * @return This builder for chaining.
@@ -9900,6 +10124,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Delinea instance
+       * </pre>
+       *
        * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -9910,6 +10138,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Delinea instance
+       * </pre>
+       *
        * <code>string server_url = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for serverUrl to set.
        * @return This builder for chaining.
@@ -9928,6 +10160,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object tenantName_ = "";
       /**
+       * <pre>
+       * The tenant name to target
+       * </pre>
+       *
        * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
        * @return The tenantName.
        */
@@ -9944,6 +10180,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The tenant name to target
+       * </pre>
+       *
        * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
        * @return The bytes for tenantName.
        */
@@ -9961,6 +10201,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The tenant name to target
+       * </pre>
+       *
        * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
        * @param value The tenantName to set.
        * @return This builder for chaining.
@@ -9976,6 +10220,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The tenant name to target
+       * </pre>
+       *
        * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -9986,6 +10234,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The tenant name to target
+       * </pre>
+       *
        * <code>string tenant_name = 4 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for tenantName to set.
        * @return This builder for chaining.
@@ -10254,11 +10506,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The GCP project ID to target.
+     * </pre>
+     *
      * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
      * @return The projectID.
      */
     java.lang.String getProjectID();
     /**
+     * <pre>
+     * The GCP project ID to target.
+     * </pre>
+     *
      * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for projectID.
      */
@@ -10500,6 +10760,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int PROJECTID_FIELD_NUMBER = 3;
     private volatile java.lang.Object projectID_;
     /**
+     * <pre>
+     * The GCP project ID to target.
+     * </pre>
+     *
      * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
      * @return The projectID.
      */
@@ -10517,6 +10781,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The GCP project ID to target.
+     * </pre>
+     *
      * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for projectID.
      */
@@ -11133,6 +11401,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object projectID_ = "";
       /**
+       * <pre>
+       * The GCP project ID to target.
+       * </pre>
+       *
        * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
        * @return The projectID.
        */
@@ -11149,6 +11421,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The GCP project ID to target.
+       * </pre>
+       *
        * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for projectID.
        */
@@ -11166,6 +11442,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The GCP project ID to target.
+       * </pre>
+       *
        * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
        * @param value The projectID to set.
        * @return This builder for chaining.
@@ -11181,6 +11461,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The GCP project ID to target.
+       * </pre>
+       *
        * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -11191,6 +11475,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The GCP project ID to target.
+       * </pre>
+       *
        * <code>string projectID = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for projectID to set.
        * @return This builder for chaining.
@@ -11459,11 +11747,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The namespace.
      */
     java.lang.String getNamespace();
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for namespace.
      */
@@ -11471,11 +11767,19 @@ public final class SecretStoresTypesPlumbing {
         getNamespaceBytes();
 
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverAddress.
      */
     java.lang.String getServerAddress();
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverAddress.
      */
@@ -11724,6 +12028,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int NAMESPACE_FIELD_NUMBER = 5;
     private volatile java.lang.Object namespace_;
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The namespace.
      */
@@ -11741,6 +12049,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for namespace.
      */
@@ -11762,6 +12074,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
     private volatile java.lang.Object serverAddress_;
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverAddress.
      */
@@ -11779,6 +12095,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverAddress.
      */
@@ -12412,6 +12732,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object namespace_ = "";
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @return The namespace.
        */
@@ -12428,6 +12752,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @return The bytes for namespace.
        */
@@ -12445,6 +12773,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @param value The namespace to set.
        * @return This builder for chaining.
@@ -12460,6 +12792,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -12470,6 +12806,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for namespace to set.
        * @return This builder for chaining.
@@ -12488,6 +12828,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object serverAddress_ = "";
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return The serverAddress.
        */
@@ -12504,6 +12848,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for serverAddress.
        */
@@ -12521,6 +12869,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @param value The serverAddress to set.
        * @return This builder for chaining.
@@ -12536,6 +12888,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -12546,6 +12902,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for serverAddress to set.
        * @return This builder for chaining.
@@ -12814,11 +13174,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * A path to a CA file accessible by a Node
+     * </pre>
+     *
      * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The cACertPath.
      */
     java.lang.String getCACertPath();
     /**
+     * <pre>
+     * A path to a CA file accessible by a Node
+     * </pre>
+     *
      * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for cACertPath.
      */
@@ -12826,11 +13194,19 @@ public final class SecretStoresTypesPlumbing {
         getCACertPathBytes();
 
     /**
+     * <pre>
+     * A path to a client certificate file accessible by a Node
+     * </pre>
+     *
      * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
      * @return The clientCertPath.
      */
     java.lang.String getClientCertPath();
     /**
+     * <pre>
+     * A path to a client certificate file accessible by a Node
+     * </pre>
+     *
      * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for clientCertPath.
      */
@@ -12838,11 +13214,19 @@ public final class SecretStoresTypesPlumbing {
         getClientCertPathBytes();
 
     /**
+     * <pre>
+     * A path to a client key file accessible by a Node
+     * </pre>
+     *
      * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
      * @return The clientKeyPath.
      */
     java.lang.String getClientKeyPath();
     /**
+     * <pre>
+     * A path to a client key file accessible by a Node
+     * </pre>
+     *
      * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
      * @return The bytes for clientKeyPath.
      */
@@ -12850,11 +13234,19 @@ public final class SecretStoresTypesPlumbing {
         getClientKeyPathBytes();
 
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
      * @return The namespace.
      */
     java.lang.String getNamespace();
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
      * @return The bytes for namespace.
      */
@@ -12862,11 +13254,19 @@ public final class SecretStoresTypesPlumbing {
         getNamespaceBytes();
 
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverAddress.
      */
     java.lang.String getServerAddress();
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverAddress.
      */
@@ -13136,6 +13536,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int CA_CERT_PATH_FIELD_NUMBER = 4;
     private volatile java.lang.Object cACertPath_;
     /**
+     * <pre>
+     * A path to a CA file accessible by a Node
+     * </pre>
+     *
      * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The cACertPath.
      */
@@ -13153,6 +13557,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * A path to a CA file accessible by a Node
+     * </pre>
+     *
      * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
      * @return The bytes for cACertPath.
      */
@@ -13174,6 +13582,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int CLIENT_CERT_PATH_FIELD_NUMBER = 5;
     private volatile java.lang.Object clientCertPath_;
     /**
+     * <pre>
+     * A path to a client certificate file accessible by a Node
+     * </pre>
+     *
      * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
      * @return The clientCertPath.
      */
@@ -13191,6 +13603,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * A path to a client certificate file accessible by a Node
+     * </pre>
+     *
      * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for clientCertPath.
      */
@@ -13212,6 +13628,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int CLIENT_KEY_PATH_FIELD_NUMBER = 6;
     private volatile java.lang.Object clientKeyPath_;
     /**
+     * <pre>
+     * A path to a client key file accessible by a Node
+     * </pre>
+     *
      * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
      * @return The clientKeyPath.
      */
@@ -13229,6 +13649,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * A path to a client key file accessible by a Node
+     * </pre>
+     *
      * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
      * @return The bytes for clientKeyPath.
      */
@@ -13250,6 +13674,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int NAMESPACE_FIELD_NUMBER = 8;
     private volatile java.lang.Object namespace_;
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
      * @return The namespace.
      */
@@ -13267,6 +13695,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
      * @return The bytes for namespace.
      */
@@ -13288,6 +13720,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
     private volatile java.lang.Object serverAddress_;
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverAddress.
      */
@@ -13305,6 +13741,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverAddress.
      */
@@ -13989,6 +14429,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object cACertPath_ = "";
       /**
+       * <pre>
+       * A path to a CA file accessible by a Node
+       * </pre>
+       *
        * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @return The cACertPath.
        */
@@ -14005,6 +14449,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A path to a CA file accessible by a Node
+       * </pre>
+       *
        * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @return The bytes for cACertPath.
        */
@@ -14022,6 +14470,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A path to a CA file accessible by a Node
+       * </pre>
+       *
        * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @param value The cACertPath to set.
        * @return This builder for chaining.
@@ -14037,6 +14489,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A path to a CA file accessible by a Node
+       * </pre>
+       *
        * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14047,6 +14503,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A path to a CA file accessible by a Node
+       * </pre>
+       *
        * <code>string CA_cert_path = 4 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for cACertPath to set.
        * @return This builder for chaining.
@@ -14065,6 +14525,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object clientCertPath_ = "";
       /**
+       * <pre>
+       * A path to a client certificate file accessible by a Node
+       * </pre>
+       *
        * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
        * @return The clientCertPath.
        */
@@ -14081,6 +14545,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A path to a client certificate file accessible by a Node
+       * </pre>
+       *
        * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
        * @return The bytes for clientCertPath.
        */
@@ -14098,6 +14566,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A path to a client certificate file accessible by a Node
+       * </pre>
+       *
        * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
        * @param value The clientCertPath to set.
        * @return This builder for chaining.
@@ -14113,6 +14585,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A path to a client certificate file accessible by a Node
+       * </pre>
+       *
        * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14123,6 +14599,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A path to a client certificate file accessible by a Node
+       * </pre>
+       *
        * <code>string client_cert_path = 5 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for clientCertPath to set.
        * @return This builder for chaining.
@@ -14141,6 +14621,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object clientKeyPath_ = "";
       /**
+       * <pre>
+       * A path to a client key file accessible by a Node
+       * </pre>
+       *
        * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
        * @return The clientKeyPath.
        */
@@ -14157,6 +14641,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A path to a client key file accessible by a Node
+       * </pre>
+       *
        * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
        * @return The bytes for clientKeyPath.
        */
@@ -14174,6 +14662,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * A path to a client key file accessible by a Node
+       * </pre>
+       *
        * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
        * @param value The clientKeyPath to set.
        * @return This builder for chaining.
@@ -14189,6 +14681,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A path to a client key file accessible by a Node
+       * </pre>
+       *
        * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14199,6 +14695,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * A path to a client key file accessible by a Node
+       * </pre>
+       *
        * <code>string client_key_path = 6 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for clientKeyPath to set.
        * @return This builder for chaining.
@@ -14217,6 +14717,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object namespace_ = "";
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
        * @return The namespace.
        */
@@ -14233,6 +14737,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
        * @return The bytes for namespace.
        */
@@ -14250,6 +14758,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
        * @param value The namespace to set.
        * @return This builder for chaining.
@@ -14265,6 +14777,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14275,6 +14791,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 8 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for namespace to set.
        * @return This builder for chaining.
@@ -14293,6 +14813,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object serverAddress_ = "";
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return The serverAddress.
        */
@@ -14309,6 +14833,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for serverAddress.
        */
@@ -14326,6 +14854,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @param value The serverAddress to set.
        * @return This builder for chaining.
@@ -14341,6 +14873,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14351,6 +14887,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for serverAddress to set.
        * @return This builder for chaining.
@@ -14619,11 +15159,19 @@ public final class SecretStoresTypesPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The namespace.
      */
     java.lang.String getNamespace();
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for namespace.
      */
@@ -14631,11 +15179,19 @@ public final class SecretStoresTypesPlumbing {
         getNamespaceBytes();
 
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverAddress.
      */
     java.lang.String getServerAddress();
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverAddress.
      */
@@ -14884,6 +15440,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int NAMESPACE_FIELD_NUMBER = 5;
     private volatile java.lang.Object namespace_;
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The namespace.
      */
@@ -14901,6 +15461,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The namespace to make requests within
+     * </pre>
+     *
      * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
      * @return The bytes for namespace.
      */
@@ -14922,6 +15486,10 @@ public final class SecretStoresTypesPlumbing {
     public static final int SERVER_ADDRESS_FIELD_NUMBER = 3;
     private volatile java.lang.Object serverAddress_;
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The serverAddress.
      */
@@ -14939,6 +15507,10 @@ public final class SecretStoresTypesPlumbing {
       }
     }
     /**
+     * <pre>
+     * The URL of the Vault to target
+     * </pre>
+     *
      * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
      * @return The bytes for serverAddress.
      */
@@ -15572,6 +16144,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object namespace_ = "";
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @return The namespace.
        */
@@ -15588,6 +16164,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @return The bytes for namespace.
        */
@@ -15605,6 +16185,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @param value The namespace to set.
        * @return This builder for chaining.
@@ -15620,6 +16204,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -15630,6 +16218,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The namespace to make requests within
+       * </pre>
+       *
        * <code>string namespace = 5 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for namespace to set.
        * @return This builder for chaining.
@@ -15648,6 +16240,10 @@ public final class SecretStoresTypesPlumbing {
 
       private java.lang.Object serverAddress_ = "";
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return The serverAddress.
        */
@@ -15664,6 +16260,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return The bytes for serverAddress.
        */
@@ -15681,6 +16281,10 @@ public final class SecretStoresTypesPlumbing {
         }
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @param value The serverAddress to set.
        * @return This builder for chaining.
@@ -15696,6 +16300,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -15706,6 +16314,10 @@ public final class SecretStoresTypesPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The URL of the Vault to target
+       * </pre>
+       *
        * <code>string server_address = 3 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for serverAddress to set.
        * @return This builder for chaining.

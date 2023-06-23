@@ -23,11 +23,17 @@ package com.strongdm.api;
  */
 public class Snowsight implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -43,11 +49,11 @@ public class Snowsight implements Resource {
   }
 
   private String healthcheckUsername;
-  /** */
+  /** The StrongDM user email to use for healthchecks. */
   public String getHealthcheckUsername() {
     return this.healthcheckUsername;
   }
-  /** */
+  /** The StrongDM user email to use for healthchecks. */
   public void setHealthcheckUsername(String in) {
     this.healthcheckUsername = in;
   }
@@ -83,21 +89,21 @@ public class Snowsight implements Resource {
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String samlMetadata;
-  /** */
+  /** The Metadata for your snowflake IDP integration */
   public String getSamlMetadata() {
     return this.samlMetadata;
   }
-  /** */
+  /** The Metadata for your snowflake IDP integration */
   public void setSamlMetadata(String in) {
     this.samlMetadata = in;
   }
@@ -113,11 +119,17 @@ public class Snowsight implements Resource {
   }
 
   private String subdomain;
-  /** */
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
   public String getSubdomain() {
     return this.subdomain;
   }
-  /** */
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
   public void setSubdomain(String in) {
     this.subdomain = in;
   }

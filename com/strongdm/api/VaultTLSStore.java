@@ -19,31 +19,31 @@ package com.strongdm.api;
 
 public class VaultTLSStore implements SecretStore {
   private String caCertPath;
-  /** */
+  /** A path to a CA file accessible by a Node */
   public String getCACertPath() {
     return this.caCertPath;
   }
-  /** */
+  /** A path to a CA file accessible by a Node */
   public void setCACertPath(String in) {
     this.caCertPath = in;
   }
 
   private String clientCertPath;
-  /** */
+  /** A path to a client certificate file accessible by a Node */
   public String getClientCertPath() {
     return this.clientCertPath;
   }
-  /** */
+  /** A path to a client certificate file accessible by a Node */
   public void setClientCertPath(String in) {
     this.clientCertPath = in;
   }
 
   private String clientKeyPath;
-  /** */
+  /** A path to a client key file accessible by a Node */
   public String getClientKeyPath() {
     return this.clientKeyPath;
   }
-  /** */
+  /** A path to a client key file accessible by a Node */
   public void setClientKeyPath(String in) {
     this.clientKeyPath = in;
   }
@@ -69,21 +69,21 @@ public class VaultTLSStore implements SecretStore {
   }
 
   private String namespace;
-  /** */
+  /** The namespace to make requests within */
   public String getNamespace() {
     return this.namespace;
   }
-  /** */
+  /** The namespace to make requests within */
   public void setNamespace(String in) {
     this.namespace = in;
   }
 
   private String serverAddress;
-  /** */
+  /** The URL of the Vault to target */
   public String getServerAddress() {
     return this.serverAddress;
   }
-  /** */
+  /** The URL of the Vault to target */
   public void setServerAddress(String in) {
     this.serverAddress = in;
   }

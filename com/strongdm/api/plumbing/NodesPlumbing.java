@@ -12083,7 +12083,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -12093,7 +12093,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -12104,7 +12104,7 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -12114,7 +12114,7 @@ public final class NodesPlumbing {
     java.lang.String getDevice();
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -12167,6 +12167,48 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getVersionBytes();
+
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+     * @return The uuid.
+     */
+    java.lang.String getUuid();
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for uuid.
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+     * @return The connectsTo.
+     */
+    java.lang.String getConnectsTo();
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for connectsTo.
+     */
+    com.google.protobuf.ByteString
+        getConnectsToBytes();
   }
   /**
    * <pre>
@@ -12192,6 +12234,8 @@ public final class NodesPlumbing {
       device_ = "";
       location_ = "";
       version_ = "";
+      uuid_ = "";
+      connectsTo_ = "";
     }
 
     @java.lang.Override
@@ -12277,6 +12321,18 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               version_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectsTo_ = s;
               break;
             }
             default: {
@@ -12498,7 +12554,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -12520,7 +12576,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -12545,7 +12601,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object device_;
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -12567,7 +12623,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -12685,6 +12741,100 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int UUID_FIELD_NUMBER = 9;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for uuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTS_TO_FIELD_NUMBER = 10;
+    private volatile java.lang.Object connectsTo_;
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+     * @return The connectsTo.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectsTo() {
+      java.lang.Object ref = connectsTo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectsTo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for connectsTo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectsToBytes() {
+      java.lang.Object ref = connectsTo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectsTo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12723,6 +12873,12 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, version_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, uuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, connectsTo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12756,6 +12912,12 @@ public final class NodesPlumbing {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, version_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, uuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, connectsTo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12791,6 +12953,10 @@ public final class NodesPlumbing {
           .equals(other.getLocation())) return false;
       if (!getVersion()
           .equals(other.getVersion())) return false;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!getConnectsTo()
+          .equals(other.getConnectsTo())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12820,6 +12986,10 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getLocation().hashCode();
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
+      hash = (37 * hash) + UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getUuid().hashCode();
+      hash = (37 * hash) + CONNECTS_TO_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectsTo().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12977,6 +13147,10 @@ public final class NodesPlumbing {
 
         version_ = "";
 
+        uuid_ = "";
+
+        connectsTo_ = "";
+
         return this;
       }
 
@@ -13015,6 +13189,8 @@ public final class NodesPlumbing {
         result.device_ = device_;
         result.location_ = location_;
         result.version_ = version_;
+        result.uuid_ = uuid_;
+        result.connectsTo_ = connectsTo_;
         onBuilt();
         return result;
       }
@@ -13092,6 +13268,14 @@ public final class NodesPlumbing {
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          onChanged();
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.getConnectsTo().isEmpty()) {
+          connectsTo_ = other.connectsTo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -13580,7 +13764,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -13601,7 +13785,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -13623,7 +13807,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -13643,7 +13827,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -13658,7 +13842,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 5 [(.v1.field_options) = { ... }</code>
@@ -13680,7 +13864,7 @@ public final class NodesPlumbing {
       private java.lang.Object device_ = "";
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -13701,7 +13885,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -13723,7 +13907,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -13743,7 +13927,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -13758,7 +13942,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -13979,6 +14163,203 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+       * @return The uuid.
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for uuid.
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 9 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectsTo_ = "";
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+       * @return The connectsTo.
+       */
+      public java.lang.String getConnectsTo() {
+        java.lang.Object ref = connectsTo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectsTo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for connectsTo.
+       */
+      public com.google.protobuf.ByteString
+          getConnectsToBytes() {
+        java.lang.Object ref = connectsTo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectsTo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The connectsTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectsTo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectsTo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectsTo() {
+        
+        connectsTo_ = getDefaultInstance().getConnectsTo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 10 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for connectsTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectsToBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectsTo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14170,7 +14551,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -14180,7 +14561,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -14191,7 +14572,7 @@ public final class NodesPlumbing {
 
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -14201,7 +14582,7 @@ public final class NodesPlumbing {
     java.lang.String getDevice();
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -14254,6 +14635,48 @@ public final class NodesPlumbing {
      */
     com.google.protobuf.ByteString
         getVersionBytes();
+
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+     * @return The uuid.
+     */
+    java.lang.String getUuid();
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for uuid.
+     */
+    com.google.protobuf.ByteString
+        getUuidBytes();
+
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+     * @return The connectsTo.
+     */
+    java.lang.String getConnectsTo();
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for connectsTo.
+     */
+    com.google.protobuf.ByteString
+        getConnectsToBytes();
   }
   /**
    * <pre>
@@ -14281,6 +14704,8 @@ public final class NodesPlumbing {
       device_ = "";
       location_ = "";
       version_ = "";
+      uuid_ = "";
+      connectsTo_ = "";
     }
 
     @java.lang.Override
@@ -14378,6 +14803,18 @@ public final class NodesPlumbing {
               java.lang.String s = input.readStringRequireUtf8();
 
               version_ = s;
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uuid_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              connectsTo_ = s;
               break;
             }
             default: {
@@ -14691,7 +15128,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -14713,7 +15150,7 @@ public final class NodesPlumbing {
     /**
      * <pre>
      * GatewayFilter can be used to restrict the peering between relays and
-     * gateways.
+     * gateways. Deprecated.
      * </pre>
      *
      * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -14738,7 +15175,7 @@ public final class NodesPlumbing {
     private volatile java.lang.Object device_;
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -14760,7 +15197,7 @@ public final class NodesPlumbing {
     }
     /**
      * <pre>
-     * Device is a read only device name uploaded by the gateway process when 
+     * Device is a read only device name uploaded by the gateway process when
      * it comes online.
      * </pre>
      *
@@ -14878,6 +15315,100 @@ public final class NodesPlumbing {
       }
     }
 
+    public static final int UUID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object uuid_;
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+     * @return The uuid.
+     */
+    @java.lang.Override
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * UUID is an alternative unique identifier representing this node.
+     * </pre>
+     *
+     * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for uuid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTS_TO_FIELD_NUMBER = 12;
+    private volatile java.lang.Object connectsTo_;
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+     * @return The connectsTo.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectsTo() {
+      java.lang.Object ref = connectsTo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectsTo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ConnectsTo can be used to restrict the peering between relays and
+     * gateways.
+     * </pre>
+     *
+     * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+     * @return The bytes for connectsTo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectsToBytes() {
+      java.lang.Object ref = connectsTo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectsTo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14922,6 +15453,12 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, version_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, uuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, connectsTo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14962,6 +15499,12 @@ public final class NodesPlumbing {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, version_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, uuid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectsTo_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, connectsTo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15000,6 +15543,10 @@ public final class NodesPlumbing {
           .equals(other.getLocation())) return false;
       if (!getVersion()
           .equals(other.getVersion())) return false;
+      if (!getUuid()
+          .equals(other.getUuid())) return false;
+      if (!getConnectsTo()
+          .equals(other.getConnectsTo())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15033,6 +15580,10 @@ public final class NodesPlumbing {
       hash = (53 * hash) + getLocation().hashCode();
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
+      hash = (37 * hash) + UUID_FIELD_NUMBER;
+      hash = (53 * hash) + getUuid().hashCode();
+      hash = (37 * hash) + CONNECTS_TO_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectsTo().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15194,6 +15745,10 @@ public final class NodesPlumbing {
 
         version_ = "";
 
+        uuid_ = "";
+
+        connectsTo_ = "";
+
         return this;
       }
 
@@ -15234,6 +15789,8 @@ public final class NodesPlumbing {
         result.device_ = device_;
         result.location_ = location_;
         result.version_ = version_;
+        result.uuid_ = uuid_;
+        result.connectsTo_ = connectsTo_;
         onBuilt();
         return result;
       }
@@ -15319,6 +15876,14 @@ public final class NodesPlumbing {
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          onChanged();
+        }
+        if (!other.getUuid().isEmpty()) {
+          uuid_ = other.uuid_;
+          onChanged();
+        }
+        if (!other.getConnectsTo().isEmpty()) {
+          connectsTo_ = other.connectsTo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -15999,7 +16564,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -16020,7 +16585,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -16042,7 +16607,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -16062,7 +16627,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -16077,7 +16642,7 @@ public final class NodesPlumbing {
       /**
        * <pre>
        * GatewayFilter can be used to restrict the peering between relays and
-       * gateways.
+       * gateways. Deprecated.
        * </pre>
        *
        * <code>string gateway_filter = 7 [(.v1.field_options) = { ... }</code>
@@ -16099,7 +16664,7 @@ public final class NodesPlumbing {
       private java.lang.Object device_ = "";
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -16120,7 +16685,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -16142,7 +16707,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -16162,7 +16727,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -16177,7 +16742,7 @@ public final class NodesPlumbing {
       }
       /**
        * <pre>
-       * Device is a read only device name uploaded by the gateway process when 
+       * Device is a read only device name uploaded by the gateway process when
        * it comes online.
        * </pre>
        *
@@ -16398,6 +16963,203 @@ public final class NodesPlumbing {
         onChanged();
         return this;
       }
+
+      private java.lang.Object uuid_ = "";
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+       * @return The uuid.
+       */
+      public java.lang.String getUuid() {
+        java.lang.Object ref = uuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uuid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for uuid.
+       */
+      public com.google.protobuf.ByteString
+          getUuidBytes() {
+        java.lang.Object ref = uuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUuid() {
+        
+        uuid_ = getDefaultInstance().getUuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * UUID is an alternative unique identifier representing this node.
+       * </pre>
+       *
+       * <code>string uuid = 11 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for uuid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uuid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectsTo_ = "";
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+       * @return The connectsTo.
+       */
+      public java.lang.String getConnectsTo() {
+        java.lang.Object ref = connectsTo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectsTo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+       * @return The bytes for connectsTo.
+       */
+      public com.google.protobuf.ByteString
+          getConnectsToBytes() {
+        java.lang.Object ref = connectsTo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectsTo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The connectsTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectsTo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        connectsTo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectsTo() {
+        
+        connectsTo_ = getDefaultInstance().getConnectsTo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ConnectsTo can be used to restrict the peering between relays and
+       * gateways.
+       * </pre>
+       *
+       * <code>string connects_to = 12 [(.v1.field_options) = { ... }</code>
+       * @param value The bytes for connectsTo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectsToBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        connectsTo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16568,7 +17330,7 @@ public final class NodesPlumbing {
       "\001(\0132\013.v1.GatewayH\000:[\372\370\263\007L\302\363\263\007G\242\363\263\007\035tf_ex" +
       "amples/node_resource.txt\252\363\263\007 tf_examples" +
       "/node_data_source.txt\372\370\263\007\005\250\363\263\007\001B$\n\004node\022" +
-      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\266\002\n\005Relay\022" +
+      "\034\252\370\263\007\t\252\370\263\007\004tags\252\370\263\007\t\252\370\263\007\004name\"\205\003\n\005Relay\022" +
       "\026\n\002id\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362" +
       "\370\263\007\n\260\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007" +
       "\001\230\364\263\007\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022\"\n\004" +
@@ -16576,32 +17338,36 @@ public final class NodesPlumbing {
       "way_filter\030\005 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006device\030\006" +
       " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\007 \001(\tB" +
       "\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\010 \001(\tB\017\362\370\263\007\n" +
-      "\260\363\263\007\001\230\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\222\003\n\007Gateway\022\026\n\002id" +
-      "\030\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260" +
-      "\363\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007" +
-      "\001\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016liste" +
-      "n_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n" +
-      "\014bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007" +
-      "\001\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n" +
-      "\016gateway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006dev" +
-      "ice\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t" +
-      " \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017" +
-      "\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\356\003\n\005Nodes\022Z\n" +
-      "\006Create\022\025.v1.NodeCreateRequest\032\026.v1.Node" +
-      "CreateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t" +
-      "/v1/nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v" +
-      "1.NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263" +
-      "\007\016/v1/nodes/{id}\022^\n\006Update\022\025.v1.NodeUpda" +
-      "teRequest\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010" +
-      "\242\363\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Dele" +
-      "te\022\025.v1.NodeDeleteRequest\032\026.v1.NodeDelet" +
-      "eResponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1" +
-      "/nodes/{id}\022S\n\004List\022\023.v1.NodeListRequest" +
-      "\032\024.v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263" +
-      "\007\016\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263" +
-      "\007\002n-Ba\n\031com.strongdm.api.plumbingB\rNodes" +
-      "PlumbingZ5github.com/strongdm/strongdm-s" +
-      "dk-go/v3/internal/v1;v1b\006proto3"
+      "\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\t \001(\tB\036\362\370\263\007\031\260\363\263\007\001\230\364\263\007" +
+      "\001\262\364\263\007\ngo_private\022\037\n\013connects_to\030\n \001(\tB\n\362" +
+      "\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\001\"\341\003\n\007Gateway\022\026\n\002id\030" +
+      "\001 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\035\n\004name\030\002 \001(\tB\017\362\370\263\007\n\260\363" +
+      "\263\007\001\320\364\263\007\001\022<\n\005state\030\003 \001(\tB-\362\370\263\007(\260\363\263\007\001\230\364\263\007\001" +
+      "\262\364\263\007\001*\262\364\263\007\023!terraform-provider\022,\n\016listen" +
+      "_address\030\004 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\300\363\263\007\001\340\363\263\007\001\022*\n\014" +
+      "bind_address\030\005 \001(\tB\024\362\370\263\007\017\260\363\263\007\001\340\363\263\007\001\320\364\263\007\001" +
+      "\022\"\n\004tags\030\006 \001(\0132\010.v1.TagsB\n\362\370\263\007\005\260\363\263\007\001\022\"\n\016" +
+      "gateway_filter\030\007 \001(\tB\n\362\370\263\007\005\260\363\263\007\001\022\037\n\006devi" +
+      "ce\030\010 \001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022!\n\010location\030\t " +
+      "\001(\tB\017\362\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022 \n\007version\030\n \001(\tB\017\362" +
+      "\370\263\007\n\260\363\263\007\001\230\364\263\007\001\022,\n\004uuid\030\013 \001(\tB\036\362\370\263\007\031\260\363\263\007\001" +
+      "\230\364\263\007\001\262\364\263\007\ngo_private\022\037\n\013connects_to\030\014 \001(" +
+      "\tB\n\362\370\263\007\005\260\363\263\007\001:\n\372\370\263\007\005\250\363\263\007\0012\356\003\n\005Nodes\022Z\n\006C" +
+      "reate\022\025.v1.NodeCreateRequest\032\026.v1.NodeCr" +
+      "eateResponse\"!\202\371\263\007\t\242\363\263\007\004post\202\371\263\007\016\252\363\263\007\t/v" +
+      "1/nodes\022U\n\003Get\022\022.v1.NodeGetRequest\032\023.v1." +
+      "NodeGetResponse\"%\202\371\263\007\010\242\363\263\007\003get\202\371\263\007\023\252\363\263\007\016" +
+      "/v1/nodes/{id}\022^\n\006Update\022\025.v1.NodeUpdate" +
+      "Request\032\026.v1.NodeUpdateResponse\"%\202\371\263\007\010\242\363" +
+      "\263\007\003put\202\371\263\007\023\252\363\263\007\016/v1/nodes/{id}\022a\n\006Delete" +
+      "\022\025.v1.NodeDeleteRequest\032\026.v1.NodeDeleteR" +
+      "esponse\"(\202\371\263\007\013\242\363\263\007\006delete\202\371\263\007\023\252\363\263\007\016/v1/n" +
+      "odes/{id}\022S\n\004List\022\023.v1.NodeListRequest\032\024" +
+      ".v1.NodeListResponse\" \202\371\263\007\010\242\363\263\007\003get\202\371\263\007\016" +
+      "\252\363\263\007\t/v1/nodes\032\032\312\371\263\007\t\302\371\263\007\004Node\312\371\263\007\007\322\371\263\007\002" +
+      "n-Ba\n\031com.strongdm.api.plumbingB\rNodesPl" +
+      "umbingZ5github.com/strongdm/strongdm-sdk" +
+      "-go/v3/internal/v1;v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16681,13 +17447,13 @@ public final class NodesPlumbing {
     internal_static_v1_Relay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Relay_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", });
+        new java.lang.String[] { "Id", "Name", "State", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", });
     internal_static_v1_Gateway_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_v1_Gateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v1_Gateway_descriptor,
-        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", });
+        new java.lang.String[] { "Id", "Name", "State", "ListenAddress", "BindAddress", "Tags", "GatewayFilter", "Device", "Location", "Version", "Uuid", "ConnectsTo", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.strongdm.api.plumbing.Options.fieldOptions);

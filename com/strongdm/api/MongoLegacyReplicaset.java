@@ -19,31 +19,37 @@ package com.strongdm.api;
 
 public class MongoLegacyReplicaset implements Resource {
   private String authDatabase;
-  /** */
+  /** The authentication database to use. */
   public String getAuthDatabase() {
     return this.authDatabase;
   }
-  /** */
+  /** The authentication database to use. */
   public void setAuthDatabase(String in) {
     this.authDatabase = in;
   }
 
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private boolean connectToReplica;
-  /** */
+  /** Set to connect to a replica instead of the primary node. */
   public boolean getConnectToReplica() {
     return this.connectToReplica;
   }
-  /** */
+  /** Set to connect to a replica instead of the primary node. */
   public void setConnectToReplica(boolean in) {
     this.connectToReplica = in;
   }
@@ -69,11 +75,11 @@ public class MongoLegacyReplicaset implements Resource {
   }
 
   private String hostname;
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public String getHostname() {
     return this.hostname;
   }
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public void setHostname(String in) {
     this.hostname = in;
   }
@@ -99,41 +105,41 @@ public class MongoLegacyReplicaset implements Resource {
   }
 
   private String password;
-  /** */
+  /** The password to authenticate with. */
   public String getPassword() {
     return this.password;
   }
-  /** */
+  /** The password to authenticate with. */
   public void setPassword(String in) {
     this.password = in;
   }
 
   private int port;
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
     return this.port;
   }
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public void setPort(int in) {
     this.port = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String replicaSet;
-  /** */
+  /** The name of the mongo replicaset. */
   public String getReplicaSet() {
     return this.replicaSet;
   }
-  /** */
+  /** The name of the mongo replicaset. */
   public void setReplicaSet(String in) {
     this.replicaSet = in;
   }
@@ -184,21 +190,21 @@ public class MongoLegacyReplicaset implements Resource {
   }
 
   private boolean tlsRequired;
-  /** */
+  /** If set, TLS must be used to connect to this resource. */
   public boolean getTlsRequired() {
     return this.tlsRequired;
   }
-  /** */
+  /** If set, TLS must be used to connect to this resource. */
   public void setTlsRequired(boolean in) {
     this.tlsRequired = in;
   }
 
   private String username;
-  /** */
+  /** The username to authenticate with. */
   public String getUsername() {
     return this.username;
   }
-  /** */
+  /** The username to authenticate with. */
   public void setUsername(String in) {
     this.username = in;
   }

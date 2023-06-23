@@ -39,21 +39,21 @@ public class VaultTokenStore implements SecretStore {
   }
 
   private String namespace;
-  /** */
+  /** The namespace to make requests within */
   public String getNamespace() {
     return this.namespace;
   }
-  /** */
+  /** The namespace to make requests within */
   public void setNamespace(String in) {
     this.namespace = in;
   }
 
   private String serverAddress;
-  /** */
+  /** The URL of the Vault to target */
   public String getServerAddress() {
     return this.serverAddress;
   }
-  /** */
+  /** The URL of the Vault to target */
   public void setServerAddress(String in) {
     this.serverAddress = in;
   }

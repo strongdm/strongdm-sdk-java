@@ -19,21 +19,33 @@ package com.strongdm.api;
 
 public class SQLServerKerberosAD implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String database;
-  /** */
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
   public String getDatabase() {
     return this.database;
   }
-  /** */
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
   public void setDatabase(String in) {
     this.database = in;
   }
@@ -59,11 +71,11 @@ public class SQLServerKerberosAD implements Resource {
   }
 
   private String hostname;
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public String getHostname() {
     return this.hostname;
   }
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public void setHostname(String in) {
     this.hostname = in;
   }
@@ -79,21 +91,33 @@ public class SQLServerKerberosAD implements Resource {
   }
 
   private String keytab;
-  /** */
+  /**
+   * The keytab file in base64 format containing an entry with the principal name (username@realm)
+   * and key version number with which to authenticate.
+   */
   public String getKeytab() {
     return this.keytab;
   }
-  /** */
+  /**
+   * The keytab file in base64 format containing an entry with the principal name (username@realm)
+   * and key version number with which to authenticate.
+   */
   public void setKeytab(String in) {
     this.keytab = in;
   }
 
   private String krbConfig;
-  /** */
+  /**
+   * The Kerberos 5 configuration file (krb5.conf) specifying the Active Directory server (KDC) for
+   * the configured realm.
+   */
   public String getKrbConfig() {
     return this.krbConfig;
   }
-  /** */
+  /**
+   * The Kerberos 5 configuration file (krb5.conf) specifying the Active Directory server (KDC) for
+   * the configured realm.
+   */
   public void setKrbConfig(String in) {
     this.krbConfig = in;
   }
@@ -109,51 +133,59 @@ public class SQLServerKerberosAD implements Resource {
   }
 
   private boolean overrideDatabase;
-  /** */
+  /**
+   * If set, the database configured cannot be changed by users. This setting is not recommended for
+   * most use cases, as some clients will insist their database has changed when it has not, leading
+   * to user confusion.
+   */
   public boolean getOverrideDatabase() {
     return this.overrideDatabase;
   }
-  /** */
+  /**
+   * If set, the database configured cannot be changed by users. This setting is not recommended for
+   * most use cases, as some clients will insist their database has changed when it has not, leading
+   * to user confusion.
+   */
   public void setOverrideDatabase(boolean in) {
     this.overrideDatabase = in;
   }
 
   private int port;
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
     return this.port;
   }
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public void setPort(int in) {
     this.port = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String realm;
-  /** */
+  /** The Active Directory domain (realm) to which the configured username belongs. */
   public String getRealm() {
     return this.realm;
   }
-  /** */
+  /** The Active Directory domain (realm) to which the configured username belongs. */
   public void setRealm(String in) {
     this.realm = in;
   }
 
   private String schema;
-  /** */
+  /** The Schema to use to direct initial requests. */
   public String getSchema() {
     return this.schema;
   }
-  /** */
+  /** The Schema to use to direct initial requests. */
   public void setSchema(String in) {
     this.schema = in;
   }
@@ -169,11 +201,11 @@ public class SQLServerKerberosAD implements Resource {
   }
 
   private String serverSpn;
-  /** */
+  /** The Service Principal Name of the Microsoft SQL Server instance in Active Directory. */
   public String getServerSpn() {
     return this.serverSpn;
   }
-  /** */
+  /** The Service Principal Name of the Microsoft SQL Server instance in Active Directory. */
   public void setServerSpn(String in) {
     this.serverSpn = in;
   }
@@ -214,11 +246,11 @@ public class SQLServerKerberosAD implements Resource {
   }
 
   private String username;
-  /** */
+  /** The username to authenticate with. */
   public String getUsername() {
     return this.username;
   }
-  /** */
+  /** The username to authenticate with. */
   public void setUsername(String in) {
     this.username = in;
   }

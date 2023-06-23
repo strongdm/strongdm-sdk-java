@@ -19,21 +19,33 @@ package com.strongdm.api;
 
 public class SSH implements Resource {
   private boolean allowDeprecatedKeyExchanges;
-  /** */
+  /**
+   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
+   * server.
+   */
   public boolean getAllowDeprecatedKeyExchanges() {
     return this.allowDeprecatedKeyExchanges;
   }
-  /** */
+  /**
+   * Whether deprecated, insecure key exchanges are allowed for use to connect to the target ssh
+   * server.
+   */
   public void setAllowDeprecatedKeyExchanges(boolean in) {
     this.allowDeprecatedKeyExchanges = in;
   }
 
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -59,11 +71,11 @@ public class SSH implements Resource {
   }
 
   private String hostname;
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public String getHostname() {
     return this.hostname;
   }
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public void setHostname(String in) {
     this.hostname = in;
   }
@@ -79,11 +91,11 @@ public class SSH implements Resource {
   }
 
   private String keyType;
-  /** */
+  /** The key type to use e.g. rsa-2048 or ed25519 */
   public String getKeyType() {
     return this.keyType;
   }
-  /** */
+  /** The key type to use e.g. rsa-2048 or ed25519 */
   public void setKeyType(String in) {
     this.keyType = in;
   }
@@ -99,41 +111,47 @@ public class SSH implements Resource {
   }
 
   private int port;
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
     return this.port;
   }
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public void setPort(int in) {
     this.port = in;
   }
 
   private boolean portForwarding;
-  /** */
+  /** Whether port forwarding is allowed through this server. */
   public boolean getPortForwarding() {
     return this.portForwarding;
   }
-  /** */
+  /** Whether port forwarding is allowed through this server. */
   public void setPortForwarding(boolean in) {
     this.portForwarding = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String publicKey;
-  /** */
+  /**
+   * The public key to append to a server's authorized keys. This will be generated after resource
+   * creation.
+   */
   public String getPublicKey() {
     return this.publicKey;
   }
-  /** */
+  /**
+   * The public key to append to a server's authorized keys. This will be generated after resource
+   * creation.
+   */
   public void setPublicKey(String in) {
     this.publicKey = in;
   }
@@ -184,11 +202,11 @@ public class SSH implements Resource {
   }
 
   private String username;
-  /** */
+  /** The username to authenticate with. */
   public String getUsername() {
     return this.username;
   }
-  /** */
+  /** The username to authenticate with. */
   public void setUsername(String in) {
     this.username = in;
   }

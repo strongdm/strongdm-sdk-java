@@ -19,31 +19,43 @@ package com.strongdm.api;
 
 public class SQLServerAzureAD implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String clientId;
-  /** */
+  /** The Azure AD application (client) ID with which to authenticate. */
   public String getClientId() {
     return this.clientId;
   }
-  /** */
+  /** The Azure AD application (client) ID with which to authenticate. */
   public void setClientId(String in) {
     this.clientId = in;
   }
 
   private String database;
-  /** */
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
   public String getDatabase() {
     return this.database;
   }
-  /** */
+  /**
+   * The initial database to connect to. This setting does not by itself prevent switching to
+   * another database after connecting.
+   */
   public void setDatabase(String in) {
     this.database = in;
   }
@@ -69,11 +81,11 @@ public class SQLServerAzureAD implements Resource {
   }
 
   private String hostname;
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public String getHostname() {
     return this.hostname;
   }
-  /** */
+  /** The host to dial to initiate a connection from the egress node to this resource. */
   public void setHostname(String in) {
     this.hostname = in;
   }
@@ -99,51 +111,59 @@ public class SQLServerAzureAD implements Resource {
   }
 
   private boolean overrideDatabase;
-  /** */
+  /**
+   * If set, the database configured cannot be changed by users. This setting is not recommended for
+   * most use cases, as some clients will insist their database has changed when it has not, leading
+   * to user confusion.
+   */
   public boolean getOverrideDatabase() {
     return this.overrideDatabase;
   }
-  /** */
+  /**
+   * If set, the database configured cannot be changed by users. This setting is not recommended for
+   * most use cases, as some clients will insist their database has changed when it has not, leading
+   * to user confusion.
+   */
   public void setOverrideDatabase(boolean in) {
     this.overrideDatabase = in;
   }
 
   private int port;
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public int getPort() {
     return this.port;
   }
-  /** */
+  /** The port to dial to initiate a connection from the egress node to this resource. */
   public void setPort(int in) {
     this.port = in;
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String schema;
-  /** */
+  /** The Schema to use to direct initial requests. */
   public String getSchema() {
     return this.schema;
   }
-  /** */
+  /** The Schema to use to direct initial requests. */
   public void setSchema(String in) {
     this.schema = in;
   }
 
   private String secret;
-  /** */
+  /** The Azure AD client secret (application password) with which to authenticate. */
   public String getSecret() {
     return this.secret;
   }
-  /** */
+  /** The Azure AD client secret (application password) with which to authenticate. */
   public void setSecret(String in) {
     this.secret = in;
   }
@@ -194,11 +214,11 @@ public class SQLServerAzureAD implements Resource {
   }
 
   private String tenantId;
-  /** */
+  /** The Azure AD directory (tenant) ID with which to authenticate. */
   public String getTenantId() {
     return this.tenantId;
   }
-  /** */
+  /** The Azure AD directory (tenant) ID with which to authenticate. */
   public void setTenantId(String in) {
     this.tenantId = in;
   }

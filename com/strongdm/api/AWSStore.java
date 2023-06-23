@@ -39,11 +39,11 @@ public class AWSStore implements SecretStore {
   }
 
   private String region;
-  /** */
+  /** The AWS region to target e.g. us-east-1 */
   public String getRegion() {
     return this.region;
   }
-  /** */
+  /** The AWS region to target e.g. us-east-1 */
   public void setRegion(String in) {
     this.region = in;
   }

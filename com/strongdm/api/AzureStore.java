@@ -58,11 +58,11 @@ public class AzureStore implements SecretStore {
   }
 
   private String vaultUri;
-  /** */
+  /** The URI of the key vault to target e.g. https://myvault.vault.azure.net */
   public String getVaultUri() {
     return this.vaultUri;
   }
-  /** */
+  /** The URI of the key vault to target e.g. https://myvault.vault.azure.net */
   public void setVaultUri(String in) {
     this.vaultUri = in;
   }

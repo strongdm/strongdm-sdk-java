@@ -19,31 +19,37 @@ package com.strongdm.api;
 
 public class AzureCertificate implements Resource {
   private String appId;
-  /** */
+  /** The application ID to authenticate with. */
   public String getAppId() {
     return this.appId;
   }
-  /** */
+  /** The application ID to authenticate with. */
   public void setAppId(String in) {
     this.appId = in;
   }
 
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String clientCertificate;
-  /** */
+  /** The service Principal certificate file, both private and public key included. */
   public String getClientCertificate() {
     return this.clientCertificate;
   }
-  /** */
+  /** The service Principal certificate file, both private and public key included. */
   public void setClientCertificate(String in) {
     this.clientCertificate = in;
   }
@@ -89,11 +95,11 @@ public class AzureCertificate implements Resource {
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
@@ -144,11 +150,11 @@ public class AzureCertificate implements Resource {
   }
 
   private String tenantId;
-  /** */
+  /** The tenant ID to authenticate to. */
   public String getTenantId() {
     return this.tenantId;
   }
-  /** */
+  /** The tenant ID to authenticate to. */
   public void setTenantId(String in) {
     this.tenantId = in;
   }

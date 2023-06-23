@@ -19,21 +19,27 @@ package com.strongdm.api;
 
 public class GoogleGKEUserImpersonation implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String certificateAuthority;
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public String getCertificateAuthority() {
     return this.certificateAuthority;
   }
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public void setCertificateAuthority(String in) {
     this.certificateAuthority = in;
   }
@@ -49,11 +55,11 @@ public class GoogleGKEUserImpersonation implements Resource {
   }
 
   private String endpoint;
-  /** */
+  /** The endpoint to dial. */
   public String getEndpoint() {
     return this.endpoint;
   }
-  /** */
+  /** The endpoint to dial. */
   public void setEndpoint(String in) {
     this.endpoint = in;
   }
@@ -109,11 +115,11 @@ public class GoogleGKEUserImpersonation implements Resource {
   }
 
   private String serviceAccountKey;
-  /** */
+  /** The service account key to authenticate with. */
   public String getServiceAccountKey() {
     return this.serviceAccountKey;
   }
-  /** */
+  /** The service account key to authenticate with. */
   public void setServiceAccountKey(String in) {
     this.serviceAccountKey = in;
   }

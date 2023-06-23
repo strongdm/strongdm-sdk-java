@@ -1560,11 +1560,19 @@ public final class TagsPlumbing {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+     * </pre>
+     *
      * <code>string name = 1 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+     * </pre>
+     *
      * <code>string name = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
@@ -1572,11 +1580,19 @@ public final class TagsPlumbing {
         getNameBytes();
 
     /**
+     * <pre>
+     * The value of this tag.
+     * </pre>
+     *
      * <code>string value = 2 [(.v1.field_options) = { ... }</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
+     * <pre>
+     * The value of this tag.
+     * </pre>
+     *
      * <code>string value = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for value.
      */
@@ -1679,6 +1695,10 @@ public final class TagsPlumbing {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+     * </pre>
+     *
      * <code>string name = 1 [(.v1.field_options) = { ... }</code>
      * @return The name.
      */
@@ -1696,6 +1716,10 @@ public final class TagsPlumbing {
       }
     }
     /**
+     * <pre>
+     * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+     * </pre>
+     *
      * <code>string name = 1 [(.v1.field_options) = { ... }</code>
      * @return The bytes for name.
      */
@@ -1717,6 +1741,10 @@ public final class TagsPlumbing {
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
     /**
+     * <pre>
+     * The value of this tag.
+     * </pre>
+     *
      * <code>string value = 2 [(.v1.field_options) = { ... }</code>
      * @return The value.
      */
@@ -1734,6 +1762,10 @@ public final class TagsPlumbing {
       }
     }
     /**
+     * <pre>
+     * The value of this tag.
+     * </pre>
+     *
      * <code>string value = 2 [(.v1.field_options) = { ... }</code>
      * @return The bytes for value.
      */
@@ -2073,6 +2105,10 @@ public final class TagsPlumbing {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+       * </pre>
+       *
        * <code>string name = 1 [(.v1.field_options) = { ... }</code>
        * @return The name.
        */
@@ -2089,6 +2125,10 @@ public final class TagsPlumbing {
         }
       }
       /**
+       * <pre>
+       * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+       * </pre>
+       *
        * <code>string name = 1 [(.v1.field_options) = { ... }</code>
        * @return The bytes for name.
        */
@@ -2106,6 +2146,10 @@ public final class TagsPlumbing {
         }
       }
       /**
+       * <pre>
+       * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+       * </pre>
+       *
        * <code>string name = 1 [(.v1.field_options) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -2121,6 +2165,10 @@ public final class TagsPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+       * </pre>
+       *
        * <code>string name = 1 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -2131,6 +2179,10 @@ public final class TagsPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The name or key of this tag. Each name can only refer to one value on a tagged entity.
+       * </pre>
+       *
        * <code>string name = 1 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -2149,6 +2201,10 @@ public final class TagsPlumbing {
 
       private java.lang.Object value_ = "";
       /**
+       * <pre>
+       * The value of this tag.
+       * </pre>
+       *
        * <code>string value = 2 [(.v1.field_options) = { ... }</code>
        * @return The value.
        */
@@ -2165,6 +2221,10 @@ public final class TagsPlumbing {
         }
       }
       /**
+       * <pre>
+       * The value of this tag.
+       * </pre>
+       *
        * <code>string value = 2 [(.v1.field_options) = { ... }</code>
        * @return The bytes for value.
        */
@@ -2182,6 +2242,10 @@ public final class TagsPlumbing {
         }
       }
       /**
+       * <pre>
+       * The value of this tag.
+       * </pre>
+       *
        * <code>string value = 2 [(.v1.field_options) = { ... }</code>
        * @param value The value to set.
        * @return This builder for chaining.
@@ -2197,6 +2261,10 @@ public final class TagsPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The value of this tag.
+       * </pre>
+       *
        * <code>string value = 2 [(.v1.field_options) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -2207,6 +2275,10 @@ public final class TagsPlumbing {
         return this;
       }
       /**
+       * <pre>
+       * The value of this tag.
+       * </pre>
+       *
        * <code>string value = 2 [(.v1.field_options) = { ... }</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.

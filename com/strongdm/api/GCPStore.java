@@ -39,11 +39,11 @@ public class GCPStore implements SecretStore {
   }
 
   private String projectId;
-  /** */
+  /** The GCP project ID to target. */
   public String getProjectID() {
     return this.projectId;
   }
-  /** */
+  /** The GCP project ID to target. */
   public void setProjectID(String in) {
     this.projectId = in;
   }

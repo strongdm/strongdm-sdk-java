@@ -19,21 +19,21 @@ package com.strongdm.api;
 
 public class Tag {
   private String name;
-  /** */
+  /** The name or key of this tag. Each name can only refer to one value on a tagged entity. */
   public String getName() {
     return this.name;
   }
-  /** */
+  /** The name or key of this tag. Each name can only refer to one value on a tagged entity. */
   public void setName(String in) {
     this.name = in;
   }
 
   private String value;
-  /** */
+  /** The value of this tag. */
   public String getValue() {
     return this.value;
   }
-  /** */
+  /** The value of this tag. */
   public void setValue(String in) {
     this.value = in;
   }

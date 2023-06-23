@@ -23,11 +23,17 @@ package com.strongdm.api;
  */
 public class AWSConsole implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
@@ -43,11 +49,17 @@ public class AWSConsole implements Resource {
   }
 
   private boolean enableEnvVariables;
-  /** */
+  /**
+   * If true, prefer environment variables to authenticate connection even if EC2 roles are
+   * configured.
+   */
   public boolean getEnableEnvVariables() {
     return this.enableEnvVariables;
   }
-  /** */
+  /**
+   * If true, prefer environment variables to authenticate connection even if EC2 roles are
+   * configured.
+   */
   public void setEnableEnvVariables(boolean in) {
     this.enableEnvVariables = in;
   }
@@ -83,61 +95,73 @@ public class AWSConsole implements Resource {
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String region;
-  /** */
+  /** The AWS region to connect to. */
   public String getRegion() {
     return this.region;
   }
-  /** */
+  /** The AWS region to connect to. */
   public void setRegion(String in) {
     this.region = in;
   }
 
   private String remoteIdentityGroupId;
-  /** */
+  /** The ID of the remote identity group to use for remote identity connections. */
   public String getRemoteIdentityGroupId() {
     return this.remoteIdentityGroupId;
   }
-  /** */
+  /** The ID of the remote identity group to use for remote identity connections. */
   public void setRemoteIdentityGroupId(String in) {
     this.remoteIdentityGroupId = in;
   }
 
   private String remoteIdentityHealthcheckUsername;
-  /** */
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own remote
+   * identity username.
+   */
   public String getRemoteIdentityHealthcheckUsername() {
     return this.remoteIdentityHealthcheckUsername;
   }
-  /** */
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own remote
+   * identity username.
+   */
   public void setRemoteIdentityHealthcheckUsername(String in) {
     this.remoteIdentityHealthcheckUsername = in;
   }
 
   private String roleArn;
-  /** */
+  /** The role to assume after logging in. */
   public String getRoleArn() {
     return this.roleArn;
   }
-  /** */
+  /** The role to assume after logging in. */
   public void setRoleArn(String in) {
     this.roleArn = in;
   }
 
   private String roleExternalId;
-  /** */
+  /**
+   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
+   * provided.
+   */
   public String getRoleExternalId() {
     return this.roleExternalId;
   }
-  /** */
+  /**
+   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
+   * provided.
+   */
   public void setRoleExternalId(String in) {
     this.roleExternalId = in;
   }
@@ -153,21 +177,31 @@ public class AWSConsole implements Resource {
   }
 
   private int sessionExpiry;
-  /** */
+  /**
+   * The length of time in seconds AWS console sessions will live before needing to reauthenticate.
+   */
   public int getSessionExpiry() {
     return this.sessionExpiry;
   }
-  /** */
+  /**
+   * The length of time in seconds AWS console sessions will live before needing to reauthenticate.
+   */
   public void setSessionExpiry(int in) {
     this.sessionExpiry = in;
   }
 
   private String subdomain;
-  /** */
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
   public String getSubdomain() {
     return this.subdomain;
   }
-  /** */
+  /**
+   * Subdomain is the local DNS address. (e.g. app-prod1 turns into
+   * app-prod1.your-org-name.sdm.network)
+   */
   public void setSubdomain(String in) {
     this.subdomain = in;
   }

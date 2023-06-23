@@ -19,31 +19,37 @@ package com.strongdm.api;
 
 public class AmazonEKSInstanceProfile implements Resource {
   private String bindInterface;
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public String getBindInterface() {
     return this.bindInterface;
   }
-  /** Bind interface */
+  /**
+   * The bind interface is the IP address to which the port override of a resource is bound (for
+   * example, 127.0.0.1). It is automatically generated if not provided.
+   */
   public void setBindInterface(String in) {
     this.bindInterface = in;
   }
 
   private String certificateAuthority;
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public String getCertificateAuthority() {
     return this.certificateAuthority;
   }
-  /** */
+  /** The CA to authenticate TLS connections with. */
   public void setCertificateAuthority(String in) {
     this.certificateAuthority = in;
   }
 
   private String clusterName;
-  /** */
+  /** The name of the cluster to connect to. */
   public String getClusterName() {
     return this.clusterName;
   }
-  /** */
+  /** The name of the cluster to connect to. */
   public void setClusterName(String in) {
     this.clusterName = in;
   }
@@ -59,11 +65,11 @@ public class AmazonEKSInstanceProfile implements Resource {
   }
 
   private String endpoint;
-  /** */
+  /** The endpoint to dial. */
   public String getEndpoint() {
     return this.endpoint;
   }
-  /** */
+  /** The endpoint to dial. */
   public void setEndpoint(String in) {
     this.endpoint = in;
   }
@@ -109,61 +115,73 @@ public class AmazonEKSInstanceProfile implements Resource {
   }
 
   private int portOverride;
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public int getPortOverride() {
     return this.portOverride;
   }
-  /** */
+  /** The local port used by clients to connect to this resource. */
   public void setPortOverride(int in) {
     this.portOverride = in;
   }
 
   private String region;
-  /** */
+  /** The AWS region to connect to e.g. us-east-1. */
   public String getRegion() {
     return this.region;
   }
-  /** */
+  /** The AWS region to connect to e.g. us-east-1. */
   public void setRegion(String in) {
     this.region = in;
   }
 
   private String remoteIdentityGroupId;
-  /** */
+  /** The ID of the remote identity group to use for remote identity connections. */
   public String getRemoteIdentityGroupId() {
     return this.remoteIdentityGroupId;
   }
-  /** */
+  /** The ID of the remote identity group to use for remote identity connections. */
   public void setRemoteIdentityGroupId(String in) {
     this.remoteIdentityGroupId = in;
   }
 
   private String remoteIdentityHealthcheckUsername;
-  /** */
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own remote
+   * identity username.
+   */
   public String getRemoteIdentityHealthcheckUsername() {
     return this.remoteIdentityHealthcheckUsername;
   }
-  /** */
+  /**
+   * The username to use for healthchecks, when clients otherwise connect with their own remote
+   * identity username.
+   */
   public void setRemoteIdentityHealthcheckUsername(String in) {
     this.remoteIdentityHealthcheckUsername = in;
   }
 
   private String roleArn;
-  /** */
+  /** The role to assume after logging in. */
   public String getRoleArn() {
     return this.roleArn;
   }
-  /** */
+  /** The role to assume after logging in. */
   public void setRoleArn(String in) {
     this.roleArn = in;
   }
 
   private String roleExternalId;
-  /** */
+  /**
+   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
+   * provided.
+   */
   public String getRoleExternalId() {
     return this.roleExternalId;
   }
-  /** */
+  /**
+   * The external ID to associate with assume role requests. Does nothing if a role ARN is not
+   * provided.
+   */
   public void setRoleExternalId(String in) {
     this.roleExternalId = in;
   }
